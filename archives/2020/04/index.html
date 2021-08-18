@@ -244,6 +244,15 @@
 
           
           
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
           
           
           <li>
@@ -257,10 +266,12 @@
           
           
           
+          
+          
           <li>
-            <a href="/archive/">
+            <a href="/tags/">
               
-              归档
+              标签
               
               
             </a>
@@ -272,17 +283,6 @@
             <a href="/categories/">
               
               分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              标签
               
               
             </a>
@@ -490,9 +490,11 @@
           <li>
             04-17
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
+            <a href="/cn/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
               <span>
                 Hexo-Theme-LiveMyLife
+                
+                -- cn
                 
               </span>
             </a>
@@ -501,11 +503,9 @@
           <li>
             04-17
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
+            <a href="/en/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
               <span>
                 Hexo-Theme-LiveMyLife
-                
-                -- cn
                 
               </span>
             </a>
@@ -636,11 +636,11 @@
 <div class="widget">
   <ul>
     
-    <a href="../../../cn/Hexo-Theme-LiveMyLife/">
+    <a href="../../../en/Hexo-Theme-LiveMyLife/">
       <li>Hexo-Theme-LiveMyLife</li>
     </a>
     
-    <a href="../../../en/Hexo-Theme-LiveMyLife/">
+    <a href="../../../cn/Hexo-Theme-LiveMyLife/">
       <li>Hexo-Theme-LiveMyLife</li>
     </a>
     
@@ -1189,5 +1189,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
