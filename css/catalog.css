@@ -65,6 +65,9 @@
 .toc-nav-link:hover {
   color: color-theme;
 }
+.toc-nav-number {
+  display: none;
+}
 .toc-nav-child {
   margin-left: -1em;
 }

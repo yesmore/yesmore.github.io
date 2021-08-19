@@ -59,7 +59,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="IT blog..."/>
   <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
-  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -244,15 +244,6 @@
 
           
           
-          <li>
-            <a href="/archive/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -265,6 +256,15 @@
           </li>
           
           
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
           
           
           
@@ -312,10 +312,6 @@
       
       <option value="cn"  selected >
         简体中文
-      </option>
-      
-      <option value="tw" >
-        正體中文
       </option>
       
       <option value="en" >
@@ -377,12 +373,12 @@
   <style type="text/css">
     .body--light {
       /* intro-header */
-      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
       --intro-header-background-image-url-post: url('');
       --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
     }
     .body--dark {
-      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
       --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
       --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
     }
@@ -413,7 +409,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
           <div class="site-heading">
-            <h1>快乐码原</h1>
+            <h2 style="font-size: 40px;">快乐码原</h2>
             <!--<hr class="small">-->
             <span class="subheading">What&#39;s up, bro?</span>
           </div>
@@ -488,6 +484,19 @@
         <ul>
           
           <li>
+            08-14
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Algorithm-set＆map/" style="color: #0085a1">
+              <span>
+                【数据结构与算法】集合、字典（JavaScript版详解）
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
             07-21
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="/cn/TypeScript/" style="color: #0085a1">
@@ -522,17 +531,6 @@
             </a>
           </li>
           
-          <li>
-            04-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
-              <span>
-                Hexo-Theme-LiveMyLife
-                
-              </span>
-            </a>
-          </li>
-          
         </ul>
       </div>
       
@@ -557,14 +555,14 @@
         <!-- Visitors -->
 <h5><a href="/">来访者</a></h5>
 
-<div class="widget">
+  <div class="widget">
   <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
+    您是本站第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
   </span>
   <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
+  <!-- <span>
+    总阅读量 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
+  </span> -->
 </div>
 
 
@@ -577,15 +575,23 @@
   <div class="tags">
     
     
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="2">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Algorithm" title="Algorithm" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Algorithm</a>
     
     
     
-    <a href="/tags/#typescript" title="typescript" rel="1">typescript</a>
+    <a href="/tags/#JavaScript" title="JavaScript" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     
     
-    <a href="/tags/#frontEnd" title="frontEnd" rel="1">frontEnd</a>
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Hexo-Theme-LiveMyLife</a>
+    
+    
+    
+    <a href="/tags/#typescript" title="typescript" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> typescript</a>
+    
+    
+    
+    <a href="/tags/#frontEnd" title="frontEnd" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> frontEnd</a>
     
     
   </div>
@@ -664,18 +670,62 @@
 
 <h5><a href="/">最近博文</a></h5>
 <div class="widget">
-  <ul>
+  <ul style="padding-left: 0;">
     
-    <a href="../../../../cn/TypeScript/">
-      <li>TypeScript学习笔记</li>
+    <a href="../../../../cn/Algorithm-set%EF%BC%86map/">
+      <li style="list-style: none;">【数据结构与算法】集合、字典（JavaScript版详解）</li>
     </a>
     
-    <a href="../../../../en/Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
+    <a href="../../../../cn/TypeScript/">
+      <li style="list-style: none;">TypeScript学习笔记</li>
     </a>
     
     <a href="../../../../cn/Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
+      <li style="list-style: none;">Hexo-Theme-LiveMyLife</li>
+    </a>
+    
+  </ul>
+</div>
+
+
+        <hr>
+    
+        <!-- Archives -->
+
+<!-- <h5><a href="/archives/">archives</a></h5> -->
+<h5><a href="/archives/">归档</a></h5>
+<div class="widget">
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li></ul>
+</div>
+
+
+        <hr>
+    
+        <!-- Categories -->
+
+<!-- <h5><a href="/categories/">categories</a></h5> -->
+<h5><a href="/categories/">文章分类</a></h5>
+<div class="widget">
+  <ul style="padding-left: 0;">
+    
+    <a href="/categories/#code">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> code</li>
+    </a>
+    
+    <a href="/categories/#algorithm">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> algorithm</li>
+    </a>
+    
+    <a href="/categories/#Hexo-Theme-LiveMyLife">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo-Theme-LiveMyLife</li>
+    </a>
+    
+    <a href="/categories/#frontend">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> frontend</li>
+    </a>
+    
+    <a href="/categories/#typescript">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> typescript</li>
     </a>
     
   </ul>
@@ -692,44 +742,6 @@
   <li><a href="http://show.aoau.top/" target="_blank">白云轻舍</a></li>
   
 </ul>
-
-
-        <hr>
-    
-        <!-- Archives -->
-
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-    <a href="/categories/#code">
-      <li>code</li>
-    </a>
-    
-    <a href="/categories/#frontend">
-      <li>frontend</li>
-    </a>
-    
-    <a href="/categories/#typescript">
-      <li>typescript</li>
-    </a>
-    
-  </ul>
-</div>
 
 
         <hr>
