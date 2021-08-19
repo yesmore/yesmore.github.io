@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite-url/cn/Algorithm-set%EF%BC%86map/</loc>
+    <loc>https://yesmore.cc/cn/Algorithm-set%EF%BC%86map/</loc>
     <lastmod>2021-08-14</lastmod>
   </url>
   <url>
-    <loc>http://yoursite-url/cn/TypeScript/</loc>
+    <loc>https://yesmore.cc/cn/Algorithm-String/</loc>
+    <lastmod>2021-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/TypeScript/</loc>
     <lastmod>2021-07-21</lastmod>
   </url>
   <url>
-    <loc>http://yoursite-url/cn/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://yesmore.cc/cn/Hexo-Theme-LiveMyLife/</loc>
     <lastmod>2020-04-16</lastmod>
   </url>
 </urlset> 
