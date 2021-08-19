@@ -405,7 +405,6 @@ li.archive-list-item:hover a {
 /* song */
 blockquote{
   border-left: 4px solid #f1e1e7;
- 
   box-shadow: inset -5px 5px 10px #f1e1e7,
               inset 5px -5px 10px #ffffff;
   border-radius: 5px;
@@ -421,9 +420,6 @@ blockquote P{
   text-indent: 0;
   line-height: 26px;
   margin-bottom: 10px;
-}
-.post-container {
-  
 }
 
 .post-container p {
