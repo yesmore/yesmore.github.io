@@ -403,5 +403,41 @@ li.archive-list-item:hover a {
 
 
 /* song */
-
+blockquote{
+  border-left: 4px solid #f1e1e7;
+ 
+  box-shadow: inset -5px 5px 10px #f1e1e7,
+              inset 5px -5px 10px #ffffff;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-indent: 0;
   
+}
+blockquote P{
+  font-size: 16px;
+  text-indent: 0;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.post-container {
+  
+}
+
+.post-container p {
+  /* text-indent: 1.55em; */
+  font-size: 17px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.post-container u {
+  text-decoration: none;
+  font-family: sans-serif;
+  border-bottom: 1px solid rgba(47, 50, 49, .7);
+}
+.post-container code {
+  color: #e9836e;
+  background-color: #f3f3f3;
+}

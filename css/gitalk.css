@@ -1003,6 +1003,7 @@
       -ms-flex: 1;
           flex: 1;
   margin-left: 1.25em;
+
 }
 @media (max-width: 479px) {
   .gt-container .gt-header-comment {
@@ -1017,7 +1018,7 @@
   width: 100%;
   min-height: 5.125em;
   max-height: 15em;
-  border-radius: 5px;
+  border-radius: 5px !important;
   border: 1px solid rgba(0,0,0,0.1);
   font-size: 0.875em;
   word-wrap: break-word;
@@ -1026,6 +1027,7 @@
   outline: none;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+
 }
 .gt-container .gt-header-textarea:hover {
   background-color: #ffffff;
@@ -1131,6 +1133,8 @@
   overflow: auto;
   -webkit-transition: all ease 0.25s;
   transition: all ease 0.25s;
+
+  border-radius: 5px;
 }
 .gt-container .gt-comment-content:hover {
   -webkit-box-shadow: 0 0.625em 3.75em 0 #f4f4f4;
@@ -1146,6 +1150,7 @@
   margin-bottom: 0.5em;
   font-size: 0.875em;
   position: relative;
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
 }
 .gt-container .gt-comment-block-1 {
   float: right;
