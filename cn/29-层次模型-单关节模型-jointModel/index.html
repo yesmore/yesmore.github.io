@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="yoyoyo"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/29-层次模型-单关节模型-jointModel/">
+  <title>
+    
+      【WebGL之巅】29-层次模型-单关节模型 - 快乐码原 | Song
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          <li>
+            <a href="/categories/#算法">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+          <li>
+            <a href="/categories/#爬虫">爬虫</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+              
+            </div>
+            <h2>【WebGL之巅】29-层次模型-单关节模型</h2>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              By Song木头 on
+              2021-08-08
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">26</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 <span class="post-count">5.5k</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>对应《WebGL编程指南》第九章 43-jointModel</p>
+<p>要点：多个简单模型组成的复杂模型、层次结构模型、单关节模型</p>
+<span id="more"></span>
+<h2 id="知识点">知识点</h2>
+<h3 id="一、多个简单模型组成的复杂模型">一、多个简单模型组成的复杂模型</h3>
+<h4 id="1-1-引入">1.1 引入</h4>
+<p>我们已经知道如何平移、旋转简单的模型，比如二维的三角形或三维的立方体。但是，实际用到的很多三维模型，如3D游戏中的人物角色模型等，都是由多个小的立方体模型组成的。</p>
+<p>绘制由多个小部件组成的复杂模型，最关键的问题是<u>如何处理模型的整体移动</u>，以及各个小部件间的相对移动。这一节就来研究这个问题。首先，考虑一下人类的手臂：从肩部到之间，包括上臂、前臂、手掌和手指，如下图所示：<br>
+<img src="/images/jointModel1.png" alt="手臂的结构和可能的运动"></p>
+<p>手臂的每个部分可以围绕关节运动，如上图所示：</p>
+<ul>
+<li>上臂可以绕肩关节旋转运动，并带动前臂、手掌和手指一起运动。</li>
+<li>前臂可以绕肘关节运动，并带动手掌和手指一起运动，但不影响上臂。</li>
+<li>手掌绕腕关节运动，并带到手指一起运动，但不影响上臂和前臂</li>
+<li>手指运动不影响手臂、前臂和手掌</li>
+</ul>
+<p>总之，当手臂的某个部位运动时，位于该部位以下的其他部位会随之一起运动，且位于该部位以上的其他部位不受影响。此外，这里的所有运动，都是围绕某个关节的转动。</p>
+<h4 id="1-2-层次结构模型">1.2 层次结构模型</h4>
+<p>绘制机器人手臂这样一个复杂的模型，最常用的方法就是按照模型中各个部件的<strong>层次关系</strong>，<strong>从高到低逐一绘制</strong>，并在每个关节上应用<strong>模型矩阵</strong>。</p>
+<blockquote>
+<p>注意，三维模型和现实中的人类或机器人不一样，它的部件并<u>没有真正连接在一起</u>。如果直接转动上臂，那么肘部以下的部分，包括前臂、手掌和手指，只会留在原地，这样手臂就断开了。所以，当上臂绕肩关节转动时，你需要在实现”<u>肘部以下部分跟随上臂转动的逻辑</u>&quot;。具体地，上臂绕肩关节转动了多少度，肘部以下部分也应该绕肩关节转动多少度。</p>
+<p>当情况较为简单时，实现”部件A转动带动部件B转动“可以很直接，只要对部件B也施以部件A的旋转矩阵即可。比如，使用模型矩阵使上臂绕肩关节转动30度，然后在绘制肘关节以下的各部位时，为它们施加同一个模型矩阵，也令其绕肩关节转动30度，如下图所示。这样，肘关节以下的部分就能自动跟随上臂转动了。</p>
+</blockquote>
+<p><img src="/images/jointModel2.png" alt="肘部以下部分跟随上臂转动"></p>
+<p>如果情况更复杂一些，比如先使上臂绕肩关节转动30度，然后使前臂绕肘关节转动10度，那么对肘关节以下的部分，你就得先施加上臂绕肩关节转动30度的矩阵，然后再施加前臂绕肘关节转动10度的矩阵。将这两个矩阵相乘，其结果可称为”肘关节模型矩阵“，那么在绘制肘关节以下部分的时候，直接应用这个所谓的”肘关节模型矩阵“作为模型矩阵就可以了。</p>
+<p>按照上述方式编程，三维场景中的肩关节就能影响肘关节，使得上臂的运动带动前臂的运动；反过来，不管前臂如何运动都不会影响上臂。这就与现实中的情况相符合了。</p>
+<h3 id="二、单关节模型">二、单关节模型</h3>
+<h4 id="2-1-层次模型分析">2.1 层次模型分析</h4>
+<p>先来看一个单关节模型的例子。示例程序 <a href="#%E4%BB%A3%E7%A0%81">JoinModel</a> 绘制了一个仅由两个立方体部件组成的机器人手臂，其运行结果如下图左所示；手臂的两个部件为 arm1 与 arm2，arm1 接在 arm2 的上面，如图右所示。你可以把 arm1 想象成上臂，而把 arm2 想象成前臂，而肩关节在最下面。<br>
+<img src="/images/jointModel3.png" alt="jointModel模型中的层次结构"></p>
+<p>运行<a href="#%E6%95%88%E6%9E%9C">程序</a>，用户可以使用左右方向键控制 arm1 水平转动，使用上下方方向键控制 arm2 绕 joint1 关节垂直转动。比如，先按下方向键，arm2 逐渐向前倾斜，然后按右方向键，arm1 向右旋转。</p>
+<p><img src="/images/jointModel4.png" alt="通过方向键控制操作jointModel中的模型"></p>
+<p>arm2 绕 joint1 的转动并不影响 arm1，而 arm1 的转动会带动 arm2 一起转动。</p>
+<h4 id="2-2-程序分析">2.2 程序分析</h4>
+<p>和以前的程序相比，<code>main()</code>函数基本没有变化，主要的变化发生在 <code>initVertexBuffers()</code>函数中，它将 arm1 和 arm2 的数据写入了相应的缓冲区。以前程序中的立方体都是以原点为中心，且边长为2.0；本例为了更好地模拟机器人手臂，使用如下图所示的立方体，原点位于<u>底面中心</u>，底面是边长为3.0的正方向，高度为10.0。<u>将原点置于立方体的底面中心，是为了便于时立方体绕关节转动</u>。arm1 和 arm2 都是用这个立方体。<br>
+<img src="/images/jointModel5.png" alt="用来绘制机器人前臂和上臂的立方体"></p>
+<p>main()函数首先根据<u>可视空间、视点和视线方向</u>计算出了<code>视图投影矩阵 viewProjMatrix</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 计算视图投影矩阵</span></span><br><span class="line"><span class="keyword">var</span> viewProjMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line">viewProjMatrix.setPerspective(<span class="number">50.0</span>, canvas.width / canvas.height, <span class="number">1.0</span>, <span class="number">100.0</span>);</span><br><span class="line">viewProjMatrix.lookAt(<span class="number">20.0</span>, <span class="number">10.0</span>, <span class="number">30.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>);</span><br></pre></td></tr></table></figure>
+<p>然后在键盘事件响应函数中调用 keydown(）函数，通过方向键控制机器人的手臂运动。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注册键盘事件响应函数</span></span><br><span class="line"><span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123; </span><br><span class="line">    keydown(ev, gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>接着定义 <code>keydown()</code>函数本身，以及若干该函数需要用到的全局变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ANGLE_STEP = <span class="number">3.0</span>;    <span class="comment">// 每次按键转动的角度</span></span><br><span class="line"><span class="keyword">var</span> g_arm1Angle = -<span class="number">90.0</span>; <span class="comment">// arm1的当前角度</span></span><br><span class="line"><span class="keyword">var</span> g_joint1Angle = <span class="number">0.0</span>; <span class="comment">// joint1的当前角度(即arm2的角度)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">keydown</span>(<span class="params">ev, gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">switch</span> (ev.keyCode) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">38</span>: <span class="comment">// 上方向键 - joint1绕z轴正向转动</span></span><br><span class="line">      <span class="keyword">if</span> (g_joint1Angle &lt; <span class="number">135.0</span>) g_joint1Angle += ANGLE_STEP;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">40</span>: <span class="comment">// 下方向键 - joint1绕z轴负向转动</span></span><br><span class="line">      <span class="keyword">if</span> (g_joint1Angle &gt; -<span class="number">135.0</span>) g_joint1Angle -= ANGLE_STEP;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">39</span>: <span class="comment">// 右方向键 - arm1绕y轴正向转动</span></span><br><span class="line">      g_arm1Angle = (g_arm1Angle + ANGLE_STEP) % <span class="number">360</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">37</span>: <span class="comment">// 左方向键 - arm1绕y轴负向转动</span></span><br><span class="line">      g_arm1Angle = (g_arm1Angle - ANGLE_STEP) % <span class="number">360</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: <span class="keyword">return</span>; <span class="comment">// Skip drawing at no effective action</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Draw the robot arm</span></span><br><span class="line">  draw(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ANGLE_STEP 常量表示每一次按下按键，arm1 或 joint1 转动的角度，它的值是3.0。g_arm1Angle 变量表示 arm1 的当前角度，g_joint1Angle 变量表示 joint1 的当前角度，如图所示：</p>
+<p><img src="/images/jointModel6.png" alt="g_joint1Angle和g_arm1Angle"></p>
+<p>keydown()函数的任务是，根据按下的是哪个按键，对 g_joint1Angle 或 g_arm1Angle 变量加上或减去常量 ANGLE_STEP 的值。注意，joint1 的转动角度只能在 <code>-135</code>度到 <code>135</code>度之间，这是<u>为了不与 arm1 冲突</u>。最后，draw()函数将整个机器人手臂绘制出来。</p>
+<h4 id="2-3-绘制层次模型（draw-）">2.3 绘制层次模型（draw()）</h4>
+<p><code>draw()</code>函数的任务是绘制机器人手臂。注意，<code>draw()</code>函数和 <code>drawBox()</code>函数用到了全局变量 <code>g_modelMatrix</code> 和 <code>g_mvpMatrix</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 坐标变换矩阵</span></span><br><span class="line"><span class="keyword">var</span> g_modelMatrix = <span class="keyword">new</span> Matrix4(), g_mvpMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params">gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Clear color and depth buffer</span></span><br><span class="line">  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Arm1</span></span><br><span class="line">  <span class="keyword">var</span> arm1Length = <span class="number">10.0</span>; <span class="comment">// Length of arm1</span></span><br><span class="line">  g_modelMatrix.setTranslate(<span class="number">0.0</span>, -<span class="number">12.0</span>, <span class="number">0.0</span>);</span><br><span class="line">  g_modelMatrix.rotate(g_arm1Angle, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>);    <span class="comment">// 绕y轴转</span></span><br><span class="line">  drawBox(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); <span class="comment">// Draw</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Arm2</span></span><br><span class="line">  g_modelMatrix.translate(<span class="number">0.0</span>, arm1Length, <span class="number">0.0</span>); 　　　<span class="comment">// 移至joint1处， 这里用到translate，是在之前的基础上向上平移一个arm1的高度</span></span><br><span class="line">  g_modelMatrix.rotate(g_joint1Angle, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);  <span class="comment">// 绕z轴转</span></span><br><span class="line">  g_modelMatrix.scale(<span class="number">1.3</span>, <span class="number">1.0</span>, <span class="number">1.3</span>); <span class="comment">// 让立方体粗一点</span></span><br><span class="line">  drawBox(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); <span class="comment">// Draw</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>draw()</code>函数内部调用了 <code>drawBox()</code>函数，每调用一次绘制一个部件，先绘制下方较细 arm1，再绘制上方较粗 arm2。</p>
+<p>绘制单个部件的步骤是：</p>
+<ul>
+<li>调用 <code>setTranslate()</code>或 <code>translate()</code>进行平移；</li>
+<li>调用 <code>rotate()</code>进行旋转；</li>
+<li>调用 <code>drawBox()</code>进行绘制。</li>
+</ul>
+<blockquote>
+<p>绘制整个模型时，需要按照各部件的层次顺序，先 arm1 后 arm2，再执行第一步平移，第二步旋转，第三步绘制。</p>
+</blockquote>
+<p>绘制 arm1 的步骤如下：</p>
+<ul>
+<li>首先在模型矩阵<code>g_modelMatrix</code>上调用<code>setTranslate()</code>函数，使之<u>平移（0.0, -12.0, 0.0）到稍下方位置</u>；</li>
+<li>然后调用 rotate(）函数，绕 y 轴旋转 g_arm1Angle 角度；最后调用 drawBox(）函数绘制 arm1。</li>
+</ul>
+<p>接着来绘制 arm2：</p>
+<ul>
+<li>与 arm1 在 joint1 处链接，该处上开始绘制 arm2。</li>
+<li><u>但是此时，模型矩阵还是处于绘制 arm1 的状态，所以得先调用<code>translate()</code>函数沿 y 轴向上平移 arm1 的高度 arm1Length。</u>注意这里调用的是<code>translate()</code>而不是 <code>setTranslate()</code>，因为<u>这次平移是在之前的基础上进行的</u>。</li>
+<li>然后，使用 <code>g_joint1Angle</code> 进行肘关节处的转动，并在 x 和 z 轴稍作拉伸，使前臂看上去粗一些，以便于上臂区分开。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Arm2</span></span><br><span class="line">g_modelMatrix.translate(<span class="number">0.0</span>, arm1Length, <span class="number">0.0</span>); 　　　<span class="comment">// 移至joint1处， 这里用到translate，是在之前的基础上向上平移一个arm1的高度</span></span><br><span class="line">g_modelMatrix.rotate(g_joint1Angle, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);  <span class="comment">// 绕z轴转</span></span><br><span class="line">g_modelMatrix.scale(<span class="number">1.3</span>, <span class="number">1.0</span>, <span class="number">1.3</span>); <span class="comment">// 让立方体粗一点</span></span><br><span class="line">drawBox(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); <span class="comment">// Draw</span></span><br></pre></td></tr></table></figure>
+<p>这样一来，每当 <code>keydown()</code>函数更新了 <code>g_joint1Angle</code> 变量和 <code>g_arm1Angle</code> 变量的值，然后调用 <code>draw()</code>函数进行绘制时，就能绘制处最新状态的机器人手臂，arm1 的位置取决于 <code>g_arm1Angle</code> 变量，而 arm2 的位置取决于 <code>g_joint1Angle</code> 变量。<br>
+<code>drawBox()</code>函数的任务是<u>绘制机器人手臂的某个立方体部件</u>，如上臂或前臂。它首先计算模型视图投影矩阵，传递给 u_MvpMatrix 变量。然后根据模型矩阵计算法向量变换矩阵，传递给 u_NormalMatrix 变量，最后绘制立方体。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 绘制立方体</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawBox</span>(<span class="params">gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 计算视图矩阵并传给u_MvpMatrix</span></span><br><span class="line">  g_mvpMatrix.set(viewProjMatrix);</span><br><span class="line">  g_mvpMatrix.multiply(g_modelMatrix);</span><br><span class="line">  gl.uniformMatrix4fv(u_MvpMatrix, <span class="literal">false</span>, g_mvpMatrix.elements);</span><br><span class="line">  <span class="comment">// 计算法线变换矩阵并传给u_NormalMatrix</span></span><br><span class="line">  g_normalMatrix.setInverseOf(g_modelMatrix);</span><br><span class="line">  g_normalMatrix.transpose();</span><br><span class="line">  gl.uniformMatrix4fv(u_NormalMatrix, <span class="literal">false</span>, g_normalMatrix.elements);</span><br><span class="line">  <span class="comment">// Draw</span></span><br><span class="line">  gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_BYTE, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>绘制层次模型的基本流程就是这样了。虽然本例只有两个立方体和一个链接关节，但是绘制更加复杂的模型，其原理与本节是一致的，要做的只是重复上述步骤而已。</p>
+<h2 id="实例">实例</h2>
+<h4 id="代码">代码</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Vertex shader program</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">  <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;attribute vec4 a_Normal;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;uniform mat4 u_MvpMatrix;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;uniform mat4 u_NormalMatrix;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;  gl_Position = u_MvpMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">  <span class="comment">// Shading calculation to make the arm look three-dimensional</span></span><br><span class="line">  <span class="comment">// 光照计算，使场景更逼真</span></span><br><span class="line">  <span class="string">&#x27;  vec3 lightDirection = normalize(vec3(0.0, 0.5, 0.7));\n&#x27;</span> + <span class="comment">// Light direction</span></span><br><span class="line">  <span class="string">&#x27;  vec4 color = vec4(1.0, 0.4, 0.0, 1.0);\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;  vec3 ambientLight = vec3(0.2, 0.2, 0.2);&#x27;</span>+</span><br><span class="line">  <span class="string">&#x27;  vec3 normal = normalize((u_NormalMatrix * a_Normal).xyz);\n&#x27;</span> +<span class="comment">//对法向量进行归一化</span></span><br><span class="line">  <span class="string">&#x27;  float nDotL = max(dot(normal, lightDirection), 0.0);\n&#x27;</span> +<span class="comment">//计算法向量和光线方向的点积</span></span><br><span class="line">  <span class="comment">//计算漫反射光的颜色</span></span><br><span class="line">  <span class="string">&#x27;  vec3 diffuse = vec3(color) * nDotL;&#x27;</span>+</span><br><span class="line">  <span class="comment">//计算环境光产生的反射颜色</span></span><br><span class="line">  <span class="string">&#x27;vec3 ambient = ambientLight * color.rgb;&#x27;</span>+</span><br><span class="line">  <span class="string">&#x27;v_Color = vec4(diffuse + ambient, color.a);&#x27;</span>+</span><br><span class="line">  <span class="comment">// &#x27;  v_Color = vec4(color.rgb * nDotL + vec3(0.1), color.a);\n&#x27; +//计算环境光产生的反射颜色</span></span><br><span class="line">  <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Fragment shader program</span></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE =</span><br><span class="line">  <span class="string">&#x27;#ifdef GL_ES\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;precision mediump float;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;#endif\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;  gl_FragColor = v_Color;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Retrieve &lt;canvas&gt; element</span></span><br><span class="line">  <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;webgl&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Get the rendering context for WebGL</span></span><br><span class="line">  <span class="keyword">var</span> gl = getWebGLContext(canvas);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Initialize shaders</span></span><br><span class="line">  <span class="keyword">if</span> (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to intialize shaders.&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 设置顶点信息</span></span><br><span class="line">  <span class="keyword">var</span> n = initVertexBuffers(gl);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Set the clear color and enable the depth test</span></span><br><span class="line">  <span class="comment">//gl.clearColor(0.0, 0.0, 0.0, 1.0);</span></span><br><span class="line">  gl.enable(gl.DEPTH_TEST);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 取 u_MvpMatrix 、u_LightColor u_LightDirection u_AmbientLight 变量的存储位置</span></span><br><span class="line">  <span class="keyword">var</span> u_MvpMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_MvpMatrix&#x27;</span>);</span><br><span class="line">  <span class="keyword">var</span> u_NormalMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_NormalMatrix&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 计算视图投影矩阵</span></span><br><span class="line">  <span class="keyword">var</span> viewProjMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line">  viewProjMatrix.setPerspective(<span class="number">50.0</span>, canvas.width / canvas.height, <span class="number">1.0</span>, <span class="number">100.0</span>);</span><br><span class="line">  viewProjMatrix.lookAt(<span class="number">20.0</span>, <span class="number">10.0</span>, <span class="number">30.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 注册键盘事件响应函数</span></span><br><span class="line">  <span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123; </span><br><span class="line">    keydown(ev, gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); </span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  draw(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix);  <span class="comment">// Draw the robot arm</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ANGLE_STEP = <span class="number">3.0</span>;    <span class="comment">// 每次按键转动的角度</span></span><br><span class="line"><span class="keyword">var</span> g_arm1Angle = -<span class="number">90.0</span>; <span class="comment">// arm1的当前角度</span></span><br><span class="line"><span class="keyword">var</span> g_joint1Angle = <span class="number">0.0</span>; <span class="comment">// joint1d的当前角度(即arm2的角度)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">keydown</span>(<span class="params">ev, gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">switch</span> (ev.keyCode) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">38</span>: <span class="comment">// 上方向键 - joint1绕z轴正向转动</span></span><br><span class="line">      <span class="keyword">if</span> (g_joint1Angle &lt; <span class="number">135.0</span>) g_joint1Angle += ANGLE_STEP;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">40</span>: <span class="comment">// 下方向键 - joint1绕z轴负向转动</span></span><br><span class="line">      <span class="keyword">if</span> (g_joint1Angle &gt; -<span class="number">135.0</span>) g_joint1Angle -= ANGLE_STEP;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">39</span>: <span class="comment">// 右方向键 - arm1绕y轴正向转动</span></span><br><span class="line">      g_arm1Angle = (g_arm1Angle + ANGLE_STEP) % <span class="number">360</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">37</span>: <span class="comment">// 左方向键 - arm1绕y轴负向转动</span></span><br><span class="line">      g_arm1Angle = (g_arm1Angle - ANGLE_STEP) % <span class="number">360</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: <span class="keyword">return</span>; <span class="comment">// Skip drawing at no effective action</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Draw the robot arm</span></span><br><span class="line">  draw(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initVertexBuffers</span>(<span class="params">gl</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Vertex coordinates（a cuboid 3.0 in width, 10.0 in height, and 3.0 in length with its origin at the center of its bottom)</span></span><br><span class="line">  <span class="keyword">var</span> vertices = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([</span><br><span class="line">    <span class="number">1.5</span>, <span class="number">10.0</span>, <span class="number">1.5</span>, -<span class="number">1.5</span>, <span class="number">10.0</span>, <span class="number">1.5</span>, -<span class="number">1.5</span>,  <span class="number">0.0</span>, <span class="number">1.5</span>,  <span class="number">1.5</span>,  <span class="number">0.0</span>, <span class="number">1.5</span>, <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">    <span class="number">1.5</span>, <span class="number">10.0</span>, <span class="number">1.5</span>,  <span class="number">1.5</span>,  <span class="number">0.0</span>, <span class="number">1.5</span>,  <span class="number">1.5</span>,  <span class="number">0.0</span>,-<span class="number">1.5</span>,  <span class="number">1.5</span>, <span class="number">10.0</span>,-<span class="number">1.5</span>, <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">    <span class="number">1.5</span>, <span class="number">10.0</span>, <span class="number">1.5</span>,  <span class="number">1.5</span>, <span class="number">10.0</span>,-<span class="number">1.5</span>, -<span class="number">1.5</span>, <span class="number">10.0</span>,-<span class="number">1.5</span>, -<span class="number">1.5</span>, <span class="number">10.0</span>, <span class="number">1.5</span>, <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">   -<span class="number">1.5</span>, <span class="number">10.0</span>, <span class="number">1.5</span>, -<span class="number">1.5</span>, <span class="number">10.0</span>,-<span class="number">1.5</span>, -<span class="number">1.5</span>,  <span class="number">0.0</span>,-<span class="number">1.5</span>, -<span class="number">1.5</span>,  <span class="number">0.0</span>, <span class="number">1.5</span>, <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">   -<span class="number">1.5</span>,  <span class="number">0.0</span>,-<span class="number">1.5</span>,  <span class="number">1.5</span>,  <span class="number">0.0</span>,-<span class="number">1.5</span>,  <span class="number">1.5</span>,  <span class="number">0.0</span>, <span class="number">1.5</span>, -<span class="number">1.5</span>,  <span class="number">0.0</span>, <span class="number">1.5</span>, <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">    <span class="number">1.5</span>,  <span class="number">0.0</span>,-<span class="number">1.5</span>, -<span class="number">1.5</span>,  <span class="number">0.0</span>,-<span class="number">1.5</span>, -<span class="number">1.5</span>, <span class="number">10.0</span>,-<span class="number">1.5</span>,  <span class="number">1.5</span>, <span class="number">10.0</span>,-<span class="number">1.5</span>  <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">  ]);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Normal</span></span><br><span class="line">  <span class="keyword">var</span> normals = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([</span><br><span class="line">    <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,  <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,  <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,  <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">    <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">    <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">   -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">    <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">    <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,  <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,  <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,  <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>  <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">  ]);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Indices of the vertices</span></span><br><span class="line">  <span class="keyword">var</span> indices = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>([</span><br><span class="line">     <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>,   <span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>,    <span class="comment">// front</span></span><br><span class="line">     <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>,   <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>,    <span class="comment">// right</span></span><br><span class="line">     <span class="number">8</span>, <span class="number">9</span>,<span class="number">10</span>,   <span class="number">8</span>,<span class="number">10</span>,<span class="number">11</span>,    <span class="comment">// up</span></span><br><span class="line">    <span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,  <span class="number">12</span>,<span class="number">14</span>,<span class="number">15</span>,    <span class="comment">// left</span></span><br><span class="line">    <span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,  <span class="number">16</span>,<span class="number">18</span>,<span class="number">19</span>,    <span class="comment">// down</span></span><br><span class="line">    <span class="number">20</span>,<span class="number">21</span>,<span class="number">22</span>,  <span class="number">20</span>,<span class="number">22</span>,<span class="number">23</span>     <span class="comment">// back</span></span><br><span class="line">  ]);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Write the vertex property to buffers (coordinates and normals)</span></span><br><span class="line">  <span class="keyword">if</span> (!initArrayBuffer(gl, <span class="string">&#x27;a_Position&#x27;</span>, vertices, gl.FLOAT, <span class="number">3</span>)) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">if</span> (!initArrayBuffer(gl, <span class="string">&#x27;a_Normal&#x27;</span>, normals, gl.FLOAT, <span class="number">3</span>)) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Unbind the buffer object</span></span><br><span class="line">  gl.bindBuffer(gl.ARRAY_BUFFER, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Write the indices to the buffer object</span></span><br><span class="line">  <span class="keyword">var</span> indexBuffer = gl.createBuffer();</span><br><span class="line">  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);</span><br><span class="line">  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> indices.length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initArrayBuffer</span>(<span class="params">gl, attribute, data, type, num</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Create a buffer object</span></span><br><span class="line">  <span class="keyword">var</span> buffer = gl.createBuffer();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Write date into the buffer object</span></span><br><span class="line">  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);</span><br><span class="line">  gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Assign the buffer object to the attribute variable</span></span><br><span class="line">  <span class="keyword">var</span> a_attribute = gl.getAttribLocation(gl.program, attribute);</span><br><span class="line"></span><br><span class="line">  gl.vertexAttribPointer(a_attribute, num, type, <span class="literal">false</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">  <span class="comment">// Enable the assignment of the buffer object to the attribute variable</span></span><br><span class="line">  gl.enableVertexAttribArray(a_attribute);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 坐标变换矩阵</span></span><br><span class="line"><span class="keyword">var</span> g_modelMatrix = <span class="keyword">new</span> Matrix4(), g_mvpMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params">gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Clear color and depth buffer</span></span><br><span class="line">  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Arm1</span></span><br><span class="line">  <span class="keyword">var</span> arm1Length = <span class="number">10.0</span>; <span class="comment">// Length of arm1</span></span><br><span class="line">  g_modelMatrix.setTranslate(<span class="number">0.0</span>, -<span class="number">12.0</span>, <span class="number">0.0</span>);</span><br><span class="line">  g_modelMatrix.rotate(g_arm1Angle, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>);    <span class="comment">// 绕y轴转</span></span><br><span class="line">  drawBox(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); <span class="comment">// Draw</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Arm2</span></span><br><span class="line">  g_modelMatrix.translate(<span class="number">0.0</span>, arm1Length, <span class="number">0.0</span>); 　　　<span class="comment">// 移至joint1处， 这里用到translate，是在之前的基础上向上平移一个arm1的高度</span></span><br><span class="line">  g_modelMatrix.rotate(g_joint1Angle, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);  <span class="comment">// 绕z轴转</span></span><br><span class="line">  g_modelMatrix.scale(<span class="number">1.3</span>, <span class="number">1.0</span>, <span class="number">1.3</span>); <span class="comment">// 拉伸，让立方体粗一点</span></span><br><span class="line">  drawBox(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); <span class="comment">// Draw</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> g_normalMatrix = <span class="keyword">new</span> Matrix4(); <span class="comment">// 法线的旋转矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 绘制立方体</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawBox</span>(<span class="params">gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 计算视图矩阵并传给u_MvpMatrix</span></span><br><span class="line">  g_mvpMatrix.set(viewProjMatrix);</span><br><span class="line">  g_mvpMatrix.multiply(g_modelMatrix);</span><br><span class="line">  gl.uniformMatrix4fv(u_MvpMatrix, <span class="literal">false</span>, g_mvpMatrix.elements);</span><br><span class="line">  <span class="comment">// 计算法线变换矩阵并传给u_NormalMatrix</span></span><br><span class="line">  g_normalMatrix.setInverseOf(g_modelMatrix);</span><br><span class="line">  g_normalMatrix.transpose();</span><br><span class="line">  gl.uniformMatrix4fv(u_NormalMatrix, <span class="literal">false</span>, g_normalMatrix.elements);</span><br><span class="line">  <span class="comment">// Draw</span></span><br><span class="line">  gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_BYTE, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Single joint model<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">&quot;main()&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;webgl&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span>&gt;</span></span><br><span class="line">    Please use a browser that supports &quot;canvas&quot;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="symbol">&amp;larr;</span><span class="symbol">&amp;rarr;</span>: arm1 rotation(y-axis), <span class="symbol">&amp;uarr;</span><span class="symbol">&amp;darr;</span>: joint1 rotation(z-axis)<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/webgl-utils.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/webgl-debug.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/cuon-utils.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/cuon-matrix.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;JointModel.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="效果">效果</h4>
+<blockquote>
+<p>使用左右方向键控制 arm1（下半部分）水平转动，使用上下方方向键控制 arm2（上半部分） 绕 joint1 关节垂直转动</p>
+</blockquote>
+<script src="\lib\webgl-utils.js"></script>
+<script src="\lib\webgl-debug.js"></script>
+<script src="\lib\cuon-utils.js"></script>
+<script src="\lib\cuon-matrix.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>LookAtTriangles</title>
+</head>
+<body onload="main()">
+<div style="margin:0 auto">
+    <canvas id="webgl" width="300" height="300" >
+      Please use the browser supporting "canvas".
+    </canvas>
+</div>
+<script type='text/javascript'>
+// Vertex shader program
+var VSHADER_SOURCE =
+  'attribute vec4 a_Position;\n' +
+  'attribute vec4 a_Normal;\n' +
+  'uniform mat4 u_MvpMatrix;\n' +
+  'uniform mat4 u_NormalMatrix;\n' +
+  'varying vec4 v_Color;\n' +
+  'void main() {\n' +
+  '  gl_Position = u_MvpMatrix * a_Position;\n' +
+  // Shading calculation to make the arm look three-dimensional
+  '  vec3 lightDirection = normalize(vec3(0.0, 0.5, 0.7));\n' + // Light direction
+  '  vec4 color = vec4(1.0, 0.4, 0.0, 1.0);\n' +
+  '  vec3 normal = normalize((u_NormalMatrix * a_Normal).xyz);\n' +
+  '  float nDotL = max(dot(normal, lightDirection), 0.0);\n' +
+  '  v_Color = vec4(color.rgb * nDotL + vec3(0.1), color.a);\n' +
+  '}\n';
+// Fragment shader program
+var FSHADER_SOURCE =
+  '#ifdef GL_ES\n' +
+  'precision mediump float;\n' +
+  '#endif\n' +
+  'varying vec4 v_Color;\n' +
+  'void main() {\n' +
+  '  gl_FragColor = v_Color;\n' +
+  '}\n';
+function main() {
+  // Retrieve <canvas> element
+  var canvas = document.getElementById('webgl');
+  // Get the rendering context for WebGL
+  var gl = getWebGLContext(canvas);
+  if (!gl) {
+    console.log('Failed to get the rendering context for WebGL');
+    return;
+  }
+  // Initialize shaders
+  if (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) {
+    console.log('Failed to intialize shaders.');
+    return;
+  }
+  // 设置顶点信息
+  var n = initVertexBuffers(gl);
+  if (n < 0) {
+    console.log('Failed to set the vertex information');
+    return;
+  }
+  // Set the clear color and enable the depth test
+  //gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.enable(gl.DEPTH_TEST);
+  // Get the storage locations of uniform variables
+  var u_MvpMatrix = gl.getUniformLocation(gl.program, 'u_MvpMatrix');
+  var u_NormalMatrix = gl.getUniformLocation(gl.program, 'u_NormalMatrix');
+  if (!u_MvpMatrix || !u_NormalMatrix) {
+    console.log('Failed to get the storage location');
+    return;
+  }
+  // 计算视图投影矩阵
+  var viewProjMatrix = new Matrix4();
+  viewProjMatrix.setPerspective(50.0, canvas.width / canvas.height, 1.0, 100.0);
+  viewProjMatrix.lookAt(20.0, 10.0, 30.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+  // 注册键盘事件响应函数
+  document.onkeydown = function(ev){ keydown(ev, gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); };
+  draw(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix);  // Draw the robot arm
+}
+var ANGLE_STEP = 3.0;    // 每次按键转动的角度
+var g_arm1Angle = -90.0; // arm1的当前角度
+var g_joint1Angle = 0.0; // joint1d的当前角度(即arm2的角度)
+function keydown(ev, gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix) {
+  switch (ev.keyCode) {
+    case 38: // Up arrow key -> the positive rotation of joint1 around the z-axis
+      if (g_joint1Angle < 135.0) g_joint1Angle += ANGLE_STEP;
+      break;
+    case 40: // Down arrow key -> the negative rotation of joint1 around the z-axis
+      if (g_joint1Angle > -135.0) g_joint1Angle -= ANGLE_STEP;
+      break;
+    case 39: // Right arrow key -> the positive rotation of arm1 around the y-axis
+      g_arm1Angle = (g_arm1Angle + ANGLE_STEP) % 360;
+      break;
+    case 37: // Left arrow key -> the negative rotation of arm1 around the y-axis
+      g_arm1Angle = (g_arm1Angle - ANGLE_STEP) % 360;
+      break;
+    default: return; // Skip drawing at no effective action
+  }
+  // Draw the robot arm
+  draw(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix);
+}
+function initVertexBuffers(gl) {
+  // Vertex coordinates（a cuboid 3.0 in width, 10.0 in height, and 3.0 in length with its origin at the center of its bottom)
+  var vertices = new Float32Array([
+    1.5, 10.0, 1.5, -1.5, 10.0, 1.5, -1.5,  0.0, 1.5,  1.5,  0.0, 1.5, // v0-v1-v2-v3 front
+    1.5, 10.0, 1.5,  1.5,  0.0, 1.5,  1.5,  0.0,-1.5,  1.5, 10.0,-1.5, // v0-v3-v4-v5 right
+    1.5, 10.0, 1.5,  1.5, 10.0,-1.5, -1.5, 10.0,-1.5, -1.5, 10.0, 1.5, // v0-v5-v6-v1 up
+   -1.5, 10.0, 1.5, -1.5, 10.0,-1.5, -1.5,  0.0,-1.5, -1.5,  0.0, 1.5, // v1-v6-v7-v2 left
+   -1.5,  0.0,-1.5,  1.5,  0.0,-1.5,  1.5,  0.0, 1.5, -1.5,  0.0, 1.5, // v7-v4-v3-v2 down
+    1.5,  0.0,-1.5, -1.5,  0.0,-1.5, -1.5, 10.0,-1.5,  1.5, 10.0,-1.5  // v4-v7-v6-v5 back
+  ]);
+  // Normal
+  var normals = new Float32Array([
+    0.0, 0.0, 1.0,  0.0, 0.0, 1.0,  0.0, 0.0, 1.0,  0.0, 0.0, 1.0, // v0-v1-v2-v3 front
+    1.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 0.0, 0.0, // v0-v3-v4-v5 right
+    0.0, 1.0, 0.0,  0.0, 1.0, 0.0,  0.0, 1.0, 0.0,  0.0, 1.0, 0.0, // v0-v5-v6-v1 up
+   -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, // v1-v6-v7-v2 left
+    0.0,-1.0, 0.0,  0.0,-1.0, 0.0,  0.0,-1.0, 0.0,  0.0,-1.0, 0.0, // v7-v4-v3-v2 down
+    0.0, 0.0,-1.0,  0.0, 0.0,-1.0,  0.0, 0.0,-1.0,  0.0, 0.0,-1.0  // v4-v7-v6-v5 back
+  ]);
+  // Indices of the vertices
+  var indices = new Uint8Array([
+     0, 1, 2,   0, 2, 3,    // front
+     4, 5, 6,   4, 6, 7,    // right
+     8, 9,10,   8,10,11,    // up
+    12,13,14,  12,14,15,    // left
+    16,17,18,  16,18,19,    // down
+    20,21,22,  20,22,23     // back
+  ]);
+  // Write the vertex property to buffers (coordinates and normals)
+  if (!initArrayBuffer(gl, 'a_Position', vertices, gl.FLOAT, 3)) return -1;
+  if (!initArrayBuffer(gl, 'a_Normal', normals, gl.FLOAT, 3)) return -1;
+  // Unbind the buffer object
+  gl.bindBuffer(gl.ARRAY_BUFFER, null);
+  // Write the indices to the buffer object
+  var indexBuffer = gl.createBuffer();
+  if (!indexBuffer) {
+    console.log('Failed to create the buffer object');
+    return -1;
+  }
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW);
+  return indices.length;
+}
+function initArrayBuffer(gl, attribute, data, type, num) {
+  // Create a buffer object
+  var buffer = gl.createBuffer();
+  if (!buffer) {
+    console.log('Failed to create the buffer object');
+    return false;
+  }
+  // Write date into the buffer object
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+  // Assign the buffer object to the attribute variable
+  var a_attribute = gl.getAttribLocation(gl.program, attribute);
+  if (a_attribute < 0) {
+    console.log('Failed to get the storage location of ' + attribute);
+    return false;
+  }
+  gl.vertexAttribPointer(a_attribute, num, type, false, 0, 0);
+  // Enable the assignment of the buffer object to the attribute variable
+  gl.enableVertexAttribArray(a_attribute);
+  return true;
+}
+// 坐标变换矩阵
+var g_modelMatrix = new Matrix4(), g_mvpMatrix = new Matrix4();
+function draw(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix) {
+  // Clear color and depth buffer
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  // Arm1
+  var arm1Length = 10.0; // Length of arm1
+  g_modelMatrix.setTranslate(0.0, -12.0, 0.0);
+  g_modelMatrix.rotate(g_arm1Angle, 0.0, 1.0, 0.0);    // Rotate around the y-axis
+  drawBox(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); // Draw
+  // Arm2
+  g_modelMatrix.translate(0.0, arm1Length, 0.0); 　　　// Move to joint1 这里用到translate，是在之前的基础上向上平移一个arm1的高度
+  g_modelMatrix.rotate(g_joint1Angle, 0.0, 0.0, 1.0);  // Rotate around the z-axis
+  g_modelMatrix.scale(1.3, 1.0, 1.3); // 让立方体粗一点
+  drawBox(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix); // Draw
+}
+var g_normalMatrix = new Matrix4(); // Coordinate transformation matrix for normals
+// 绘制立方体
+function drawBox(gl, n, viewProjMatrix, u_MvpMatrix, u_NormalMatrix) {
+  // Calculate the model view project matrix and pass it to u_MvpMatrix
+  g_mvpMatrix.set(viewProjMatrix);
+  g_mvpMatrix.multiply(g_modelMatrix);
+  gl.uniformMatrix4fv(u_MvpMatrix, false, g_mvpMatrix.elements);
+  // Calculate the normal transformation matrix and pass it to u_NormalMatrix
+  g_normalMatrix.setInverseOf(g_modelMatrix);
+  g_normalMatrix.transpose();
+  gl.uniformMatrix4fv(u_NormalMatrix, false, g_normalMatrix.elements);
+  // Draw
+  gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_BYTE, 0);
+}
+    </script>
+    </body>
+    </html>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/30-层次模型-多节点模型-MultiJointModel/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】（完结篇）30-层次模型-多节点模型">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/28-光照-光照原理-点光源-PointLightedCube/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】28-光照-光照原理-点光源">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      ...
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【WebGL之巅】29-层次模型-单关节模型&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/29-层次模型-单关节模型-jointModel/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Sun Aug 08 2021 15:55:54 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">知识点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%A4%9A%E4%B8%AA%E7%AE%80%E5%8D%95%E6%A8%A1%E5%9E%8B%E7%BB%84%E6%88%90%E7%9A%84%E5%A4%8D%E6%9D%82%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">一、多个简单模型组成的复杂模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-1-%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1.1 引入</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-2-%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">1.2 层次结构模型</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%8D%95%E5%85%B3%E8%8A%82%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">二、单关节模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-1-%E5%B1%82%E6%AC%A1%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">2.1 层次模型分析</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-2-%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">2.2 程序分析</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-3-%E7%BB%98%E5%88%B6%E5%B1%82%E6%AC%A1%E6%A8%A1%E5%9E%8B%EF%BC%88draw-%EF%BC%89"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">2.3 绘制层次模型（draw()）</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">实例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">2.0.1.</span> <span class="toc-nav-text">代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-nav-number">2.0.2.</span> <span class="toc-nav-text">效果</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#WebGL" title="WebGL">WebGL</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/西西">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Song木头
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">240.7k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

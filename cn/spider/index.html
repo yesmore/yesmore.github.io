@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="yoyoyo"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/spider/">
+  <title>
+    
+      Python爬虫 - 快乐码原 | Song
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          <li>
+            <a href="/categories/#算法">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+          <li>
+            <a href="/categories/#爬虫">爬虫</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+              
+              <a class="tag" href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+              
+            </div>
+            <h2>Python爬虫</h2>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              By Song木头 on
+              2021-07-21
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">13</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 <span class="post-count">3.6k</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="一、爬虫基础简介">一、爬虫基础简介</h2>
+<span id="more"></span>
+<h3 id="前戏"><strong>前戏</strong></h3>
+<p>​    1.你是否在夜深人静的时候，想看一些会让你更睡不着的图片却苦于没有资源…<br>
+​    2.你是否在节假日出行高峰的时候，想快速抢购火车票成功…<br>
+​    3.你是否在网上购物的时候，想快速且精准的定位到口碑质量最好的商品…</p>
+<p><strong>什么是爬虫</strong>：</p>
+<pre><code>- 通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。
+</code></pre>
+<p><strong>爬虫的价值</strong>：<br>
+- 实际应用<br>
+- 就业</p>
+<p><strong>爬虫究竟是合法还是违法的</strong>？</p>
+<ul>
+<li>在法律中是不被禁止</li>
+<li>具有违法风险</li>
+<li>善意爬虫  恶意爬虫</li>
+</ul>
+<p><strong>爬虫带来的风险可以体现在如下</strong>2方面：<br>
+- 爬虫干扰了被访问网站的正常运营<br>
+- 爬虫抓取了收到法律保护的特定类型的数据或信息</p>
+<p><strong>如何在使用编写爬虫的过程中避免进入局子的厄运呢</strong>？<br>
+- 时常的优化自己的程序，避免干扰被访问网站的正常运行<br>
+- 在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私<br>
+商业机密等敏感内容需要及时停止爬取或传播</p>
+<p><strong>爬虫在使用场景中的分类</strong></p>
+<ul>
+<li>
+<p>通用爬虫：<br>
+抓取系统重要组成部分。抓取的是一整张页面数据。</p>
+</li>
+<li>
+<p>聚焦爬虫：</p>
+</li>
+</ul>
+<p>是建立在通用爬虫的基础之上。抓取的是页面中特定的局部内容。</p>
+<ul>
+<li>增量式爬虫：<br>
+检测网站中数据更新的情况。只会抓取网站中最新更新出来的数据。</li>
+</ul>
+<p><strong>爬虫的矛与盾</strong></p>
+<p><strong>反爬机制</strong><br>
+门户网站，可以通过制定相应的策略或者技术手段，防止爬虫程序进行网站数据的爬取。</p>
+<p><strong>反反爬策略</strong><br>
+爬虫程序可以通过制定相关的策略或者技术手段，破解门户网站中具备的反爬机制，从而可以获取门户网站中相关的数据。</p>
+<p><strong>robots.txt</strong>协议：<br>
+君子协议。规定了网站中哪些数据可以被爬虫爬取哪些数据不可以被爬取。</p>
+<h3 id="http协议"><strong>http</strong>协议</h3>
+<ul>
+<li>
+<p>概念：就是<code>服务器</code>和<code>客户端</code>进行数据交互的一种形式。</p>
+</li>
+<li>
+<p><strong>常用请求头信息</strong></p>
+<ul>
+<li>User-Agent：请求载体的身份标识</li>
+<li>Connection：请求完毕后，是断开连接还是保持连接</li>
+</ul>
+</li>
+<li>
+<p><strong>常用响应头信息</strong></p>
+<ul>
+<li>Content-Type：服务器响应回客户端的数据类型</li>
+</ul>
+</li>
+</ul>
+<p><strong>https</strong>协议：</p>
+<pre><code>- 安全的超文本传输协议
+</code></pre>
+<p><strong>加密方式</strong></p>
+<ul>
+<li>对称秘钥加密<br>
+- 可能被第三方拦截</li>
+<li>非对称秘钥加密<br>
+- 速度慢<br>
+- 公钥可能被篡改</li>
+<li>证书秘钥加密<br>
+- 给公钥数字签名</li>
+</ul>
+<h2 id="二、requests模块">二、requests模块</h2>
+<ul>
+<li>网络请求模块
+<ul>
+<li>urllib模块</li>
+<li><strong>requests模块</strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>requests模块：python中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
+<p>作用：<strong>模拟浏览器发请求</strong>。</p>
+</blockquote>
+<h4 id="使用步骤">使用步骤</h4>
+<blockquote>
+<p>requests模块的编码流程</p>
+</blockquote>
+<ul>
+<li>指定url
+<ul>
+<li>UA伪装</li>
+<li>请求参数的处理</li>
+</ul>
+</li>
+<li>发起请求
+<ul>
+<li>获取响应数据</li>
+</ul>
+</li>
+<li>持久化存储</li>
+</ul>
+<h4 id="环境安装">环境安装</h4>
+<p><code>pip install requests</code></p>
+<h4 id="实战编码">实战编码</h4>
+<ul>
+<li>需求：爬取搜狗首页的页面数据</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python </span></span><br><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment"># - 需求：爬取搜狗首页的页面数据</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># step_1:指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/&#x27;</span></span><br><span class="line">    <span class="comment"># step_2:发起请求</span></span><br><span class="line">    <span class="comment"># get方法会返回一个响应对象</span></span><br><span class="line">    response = requests.get(url=url)</span><br><span class="line">    <span class="comment"># step_3:获取响应数据.text返回的是字符串形式的响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="built_in">print</span>(page_text)</span><br><span class="line">    <span class="comment"># step_4:持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;爬取数据结束！！！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="实战巩固">实战巩固</h4>
+<ul>
+<li>
+<p>需求：爬取搜狗指定词条对应的搜索结果页面（简易网页采集器）</p>
+<ul>
+<li>
+<p><strong>UA检测</strong></p>
+<blockquote>
+<p>UA：User-Agent（请求载体的身份标识）.</p>
+<p>门户网站的服务器会检测对应请求的载体身份标识，如果检测到请求的载体身份标识为某一款浏览器，说明该请求是一个正常的请求。但是，如果检测到请求的载体身份标识不是基于某一款浏览器的，则表示该请求为不正常的请求（爬虫），则服务器端就很有可能拒绝该次请求。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>UA伪装</strong>: 将对应的User-Agent封装到一个字典中</p>
+<blockquote>
+<p>让爬虫对应的请求载体身份标识伪装成某一款浏览器</p>
+</blockquote>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>需求：破解百度翻译(获取翻译结果)</p>
+<ul>
+<li>post请求（携带了参数）</li>
+<li>响应数据是一组json数据</li>
+</ul>
+</li>
+<li>
+<p>需求：爬取豆瓣电影分类排行榜 <a target="_blank" rel="noopener" href="https://movie.douban.com/%E4%B8%AD%E7%9A%84%E7%94%B5%E5%BD%B1%E8%AF%A6%E6%83%85%E6%95%B0%E6%8D%AE">https://movie.douban.com/中的电影详情数据</a></p>
+</li>
+<li>
+<p>作业：爬取肯德基餐厅查询http://www.kfc.com.cn/kfccda/index.aspx中指定地点的餐厅数据</p>
+</li>
+<li>
+<p>需求：爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据<br>
+<a target="_blank" rel="noopener" href="http://scxk.nmpa.gov.cn:81/xk/">http://scxk.nmpa.gov.cn:81/xk/</a></p>
+<ul>
+<li>动态加载数据</li>
+</ul>
+</li>
+<li>
+<p>首页中对应的企业信息数据是通过ajax动态请求到的。</p>
+<pre><code>http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=e6c1aa332b274282b04659a6ea30430a
+http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac8754fe
+</code></pre>
+<ul>
+<li>通过对详情页url的观察发现：
+<ul>
+<li>url的域名都是一样的，只有携带的参数（id）不一样</li>
+<li>id值可以从首页对应的ajax请求到的json串中获取</li>
+<li>域名和id值拼接处一个完整的企业对应的详情页的url</li>
+</ul>
+</li>
+<li>详情页的企业详情数据也是动态加载出来的
+<ul>
+<li><a target="_blank" rel="noopener" href="http://125.35.6.84:81/xk/itownet/portalAction.do?method=getXkzsById">http://125.35.6.84:81/xk/itownet/portalAction.do?method=getXkzsById</a></li>
+<li><a target="_blank" rel="noopener" href="http://125.35.6.84:81/xk/itownet/portalAction.do?method=getXkzsById">http://125.35.6.84:81/xk/itownet/portalAction.do?method=getXkzsById</a></li>
+<li>观察后发现：
+<ul>
+<li>所有的post请求的url都是一样的，只有参数id值是不同。</li>
+<li>如果我们可以批量获取多家企业的id后，就可以将id和url形成一个完整的详情页对应详情数据的ajax请求的url</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、数据解析">三、数据解析</h2>
+<blockquote>
+<p>聚焦爬虫、正则、bs4、xpath</p>
+</blockquote>
+<h4 id="聚焦爬虫">聚焦爬虫</h4>
+<p>定义：爬取页面中指定的页面内容。</p>
+<p>编码流程：</p>
+<ul>
+<li>指定url</li>
+<li>发起请求</li>
+<li>获取响应数据</li>
+<li>数据解析</li>
+<li>持久化存储</li>
+</ul>
+<h4 id="数据解析分类">数据解析分类</h4>
+<ul>
+<li>正则</li>
+<li>bs4</li>
+<li>xpath（***）</li>
+</ul>
+<p><strong>数据解析原理概述</strong></p>
+<ul>
+<li>解析的局部的文本内容都会在<strong>标签之间或者标签对应的属性中进行存储</strong></li>
+<li>1.<strong>进行指定标签的定位</strong></li>
+<li>2.标签或者标签对应的<strong>属性</strong>中存储的<strong>数据</strong>值进行<strong>提取（解析）</strong></li>
+</ul>
+<h5 id="正则解析"><strong>正则解析</strong></h5>
+<p>回顾</p>
+<p><img src="C:%5CUsers%5C86136%5CPictures%5C%E5%AD%A6%E4%B9%A0%5Crep.png" alt="正则表达式"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment">#提取出python</span></span><br><span class="line">key=<span class="string">&quot;javapythonc++php&quot;</span></span><br><span class="line">re.findall(<span class="string">&#x27;python&#x27;</span>,key)[<span class="number">0</span>]</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取出hello world</span></span><br><span class="line">key=<span class="string">&quot;</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">&quot;</span></span><br><span class="line">re.findall(<span class="string">&#x27;</span></span><br><span class="line"><span class="string">(.*)</span></span><br><span class="line"><span class="string">&#x27;</span>,key)[<span class="number">0</span>]</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取170</span></span><br><span class="line">string = <span class="string">&#x27;我喜欢身高为170的女孩&#x27;</span></span><br><span class="line">re.findall(<span class="string">&#x27;\d+&#x27;</span>,string)</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取出http://和https://</span></span><br><span class="line">key=<span class="string">&#x27;http://www.baidu.com and https://boob.com&#x27;</span></span><br><span class="line">re.findall(<span class="string">&#x27;https?://&#x27;</span>,key)</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取出hello</span></span><br><span class="line">key=<span class="string">&#x27;lalalahellohahah&#x27;</span> <span class="comment">#输出hello</span></span><br><span class="line">re.findall(<span class="string">&#x27;&lt;[Hh][Tt][mM][lL]&gt;(.*)&#x27;</span>,key)</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取出hit. </span></span><br><span class="line">key=<span class="string">&#x27;bobo@hit.edu.com&#x27;</span><span class="comment">#想要匹配到hit.</span></span><br><span class="line">re.findall(<span class="string">&#x27;h.*?\.&#x27;</span>,key)</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#匹配sas和saas</span></span><br><span class="line">key=<span class="string">&#x27;saas and sas and saaas&#x27;</span></span><br><span class="line">re.findall(<span class="string">&#x27;sa&#123;1,2&#125;s&#x27;</span>,key)</span><br></pre></td></tr></table></figure>
+<h5 id="bs4进行数据解析"><strong>bs4进行数据解析</strong></h5>
+<pre><code>- 数据解析的原理：
+    - 1.标签定位
+    - 2.提取标签、标签属性中存储的数据值
+</code></pre>
+<ul>
+<li>bs4数据解析的原理：
+<ul>
+<li>1.实例化一个BeautifulSoup对象，并且将页面源码数据加载到该对象中</li>
+<li>2.通过调用BeautifulSoup对象中相关的属性或者方法进行标签定位和数据提取</li>
+</ul>
+</li>
+<li>环境安装：
+<ul>
+<li><code>pip install bs4</code></li>
+<li><code>pip install lxml</code></li>
+</ul>
+</li>
+<li>如何实例化BeautifulSoup对象：
+<ul>
+<li><code>from bs4 import BeautifulSoup</code></li>
+<li>对象的实例化：
+<ul>
+<li>1.将本地的html文档中的数据加载到该对象中<br>
+<code>fp = open('./test.html','r',encoding='utf-8')</code><br>
+<code> soup = BeautifulSoup(fp,'lxml')</code></li>
+<li>2.将互联网上获取的页面源码加载到该对象中<br>
+<code>page_text = response.text</code><br>
+<code> soup = BeatifulSoup(page_text,'lxml')</code></li>
+</ul>
+</li>
+<li>提供的用于数据解析的方法和属性：
+<ul>
+<li><code>soup.tagName</code>:返回的是文档中第一次出现的tagName对应的标签</li>
+<li><code>soup.find()</code>:
+<ul>
+<li><code>find('tagName')</code>:等同于<code>soup.div</code></li>
+<li>属性定位：<br>
+<code>soup.find('div',class_/id/attr='song')</code></li>
+</ul>
+</li>
+<li><code>soup.find_all('tagName')</code>:返回符合要求的所有标签（列表）</li>
+</ul>
+</li>
+<li><code>select</code>：
+<ul>
+<li>select(‘某种选择器（id，class，标签…选择器）’),返回的是一个列表。</li>
+<li>层级选择器：
+<ul>
+<li><code>soup.select('.tang &gt; ul &gt; li &gt; a')</code>：&gt;表示的是一个层级</li>
+<li><code>oup.select('.tang &gt; ul a')</code>：空格表示的多个层级</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>获取标签之间的文本数据：
+<ul>
+<li>soup.a.text/string/get_text()</li>
+<li>text/get_text():可以获取某一个标签中所有的文本内容</li>
+<li>string：只可以获取该标签下面直系的文本内容</li>
+</ul>
+</li>
+<li>获取标签中属性值：
+<ul>
+<li>soup.a[‘href’]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="xpath解析">xpath解析</h5>
+<blockquote>
+<p>最常用且最便捷高效的一种解析方式。通用性。</p>
+</blockquote>
+<ul>
+<li>xpath解析原理：
+<ul>
+<li>1.实例化一个etree的对象，且需要将被解析的页面源码数据加载到该对象中。</li>
+<li>2.调用etree对象中的xpath方法结合着xpath表达式实现标签的定位和内容的捕获。</li>
+</ul>
+</li>
+<li>环境的安装：
+<ul>
+<li>pip install lxml</li>
+</ul>
+</li>
+<li>如何实例化一个etree对象:from lxml import etree
+<ul>
+<li>1.将<strong>本地</strong>的html文档中的源码数据加载到etree对象中：<br>
+etree.parse(filePath)</li>
+<li>2.可以将从<strong>互联网</strong>上获取的源码数据加载到该对象中<br>
+etree.HTML(‘page_text’)</li>
+<li>xpath(‘xpath表达式’)</li>
+</ul>
+</li>
+<li>xpath表达式:
+<ul>
+<li><strong>/</strong>: 表示的是从根节点开始定位。表示的是一个层级。</li>
+<li><strong>//</strong>: 表示的是多个层级。可以表示从任意位置开始定位。</li>
+<li><strong>属性定位</strong>：//div[@class=‘song’] tag[@attrName=“attrValue”]</li>
+<li><strong>索引定位</strong>：//div[@class=“song”]/p[3] 索引是从1开始的。</li>
+<li><strong>取文本</strong>：
+<ul>
+<li>/text() 获取的是标签中直系的文本内容</li>
+<li>//text() 标签中非直系的文本内容（所有的文本内容）</li>
+</ul>
+</li>
+<li><strong>取属性</strong>：<br>
+/@attrName     ==&gt;img/src</li>
+</ul>
+</li>
+</ul>
+<p>作业：<br>
+爬取站长素材中免费简历模板</p>
+<h2 id="四、验证码识别">四、验证码识别</h2>
+<h5 id="验证码和爬虫之间的关系">验证码和爬虫之间的关系</h5>
+<ul>
+<li>反爬机制：验证码.识别验证码图片中的数据，用于模拟登陆操作。</li>
+</ul>
+<h5 id="识别验证码的操作">识别验证码的操作</h5>
+<pre><code>- 人工肉眼识别。（不推荐）
+    - 第三方自动识别（推荐）
+    - 云打码：http://www.yundama.com/demo.html
+</code></pre>
+<ul>
+<li>云打码的使用流程：
+<ul>
+<li>注册：普通和开发者用户</li>
+<li>登录：
+<ul>
+<li>普通用户的登录：查询该用户是否还有剩余的题分</li>
+<li>开发者用户的登录：
+<ul>
+<li>创建一个软件：我的软件-》添加新软件-》录入软件名称-》提交（软件id和秘钥）</li>
+<li>下载示例代码：开发文档-》点此下载：云打码接口DLL-》PythonHTTP示例下载</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="实战：识别古诗文网登录页面中的验证码">实战：识别古诗文网登录页面中的验证码</h5>
+<p>使用打码平台识别验证码的编码流程：</p>
+<ul>
+<li>将验证码图片进行本地下载</li>
+<li>调用平台提供的示例代码进行图片数据识别</li>
+</ul>
+<h2 id="五、request高级">五、request高级</h2>
+<h4 id="模拟登录">模拟登录</h4>
+<ul>
+<li>爬取基于某些用户的用户信息。</li>
+</ul>
+<h4 id="需求1">需求1</h4>
+<blockquote>
+<p>对人人网进行模拟登录。</p>
+</blockquote>
+<ul>
+<li>点击登录按钮之后会发起一个post请求</li>
+<li>post请求中会携带登录之前录入的相关的登录信息（用户名，密码，验证码…）</li>
+<li>验证码：每次请求都会变化</li>
+</ul>
+<h4 id="需求2">需求2</h4>
+<blockquote>
+<p>爬取当前用户的相关的用户信息（个人主页中显示的用户信息）</p>
+</blockquote>
+<h4 id="cookie与session">cookie与session</h4>
+<p>http/https协议特性：无状态。<br>
+没有请求到对应页面数据的原因：<br>
+发起的第二次基于个人主页页面请求的时候，服务器端并不知道该此请求是基于登录状态下的请求。<br>
+cookie：用来让服务器端记录客户端的相关状态。</p>
+<ul>
+<li>手动处理：通过抓包工具获取cookie值，将该值封装到headers中。（不建议）</li>
+<li>自动处理：
+<ul>
+<li>cookie值的来源是哪里？
+<ul>
+<li>模拟登录post请求后，由服务器端创建。</li>
+</ul>
+</li>
+<li><strong>session会话对象</strong>：
+<ul>
+<li>作用：<br>
+1.可以进行请求的发送。<br>
+2.如果请求过程中产生了cookie，则该cookie会被自动存储/携带在该session对象中。</li>
+</ul>
+</li>
+<li>创建一个session对象：session = requests.Session()</li>
+<li>使用session对象进行模拟登录post请求的发送（cookie就会被存储在session中）</li>
+<li>session对象对个人主页对应的get请求进行发送（携带了cookie）</li>
+</ul>
+</li>
+</ul>
+<h4 id="代理">代理</h4>
+<blockquote>
+<p>破解封IP这种反爬机制。</p>
+</blockquote>
+<p>什么是代理：</p>
+<ul>
+<li>代理服务器。</li>
+</ul>
+<p>代理的作用：</p>
+<ul>
+<li>突破自身IP访问的限制。</li>
+<li>隐藏自身真实IP</li>
+</ul>
+<p>代理相关的网站：</p>
+<ul>
+<li>快代理</li>
+<li>西祠代理</li>
+<li><a target="_blank" rel="noopener" href="http://www.goubanjia.com">www.goubanjia.com</a></li>
+</ul>
+<p>代理ip的类型：</p>
+<ul>
+<li>http：应用到http协议对应的url中</li>
+<li>https：应用到https协议对应的url中</li>
+</ul>
+<p>代理ip的匿名度：</p>
+<ul>
+<li>透明：服务器知道该次请求使用了代理，也知道请求对应的真实ip</li>
+<li>匿名：知道使用了代理，不知道真实ip</li>
+<li>高匿：不知道使用了代理，更不知道真实的ip</li>
+</ul>
+<h2 id="六、异步爬虫">六、异步爬虫</h2>
+<p>目的：在爬虫中使用异步实现高性能的数据爬取操作。</p>
+<p>异步爬虫的方式：<br>
+- 1.多线程，多进程（不建议）：<br>
+好处：可以为相关阻塞的操作单独开启线程或者进程，阻塞操作就可以异步执行。<br>
+弊端：无法无限制的开启多线程或者多进程。<br>
+- 2.线程池、进程池（适当的使用）：<br>
+好处：我们可以降低系统对进程或者线程创建和销毁的一个频率，从而很好的降低系统的开销。<br>
+弊端：池中线程或进程的数量是有上限。</p>
+<ul>
+<li>
+<p>3.单线程+异步协程（推荐）：<br>
+<strong>event_loop</strong>：事件循环，相当于一个无限循环，我们可以把一些函数注册到这个事件循环上，<br>
+当满足某些条件的时候，函数就会被循环执行。</p>
+<p><strong>coroutine</strong>：协程对象，我们可以将协程对象注册到事件循环中，它会被事件循环调用。<br>
+我们可以使用 async 关键字来定义一个方法，这个方法在调用时不会立即被执行，而是返回<br>
+一个协程对象。</p>
+<p><strong>task</strong>：任务，它是对协程对象的进一步封装，包含了任务的各个状态。</p>
+<p><strong>future</strong>：代表将来执行或还没有执行的任务，实际上和 task 没有本质区别。</p>
+<p><strong>async</strong> 定义一个协程.</p>
+<p>await 用来挂起阻塞方法的执行。</p>
+</li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/JavaScript-实现动态显示时间效果/" data-toggle="tooltip" data-placement="top" title="Javascript动态显示时间">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/TypeScript/" data-toggle="tooltip" data-placement="top" title="TypeScript学习笔记">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      ...
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Python爬虫&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/spider/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Wed Jul 21 2021 14:42:40 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、爬虫基础简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%89%8D%E6%88%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">前戏</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#http%E5%8D%8F%E8%AE%AE"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">http协议</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81requests%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、requests模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">2.0.1.</span> <span class="toc-nav-text">使用步骤</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.0.2.</span> <span class="toc-nav-text">环境安装</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E6%88%98%E7%BC%96%E7%A0%81"><span class="toc-nav-number">2.0.3.</span> <span class="toc-nav-text">实战编码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E6%88%98%E5%B7%A9%E5%9B%BA"><span class="toc-nav-number">2.0.4.</span> <span class="toc-nav-text">实战巩固</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、数据解析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%81%9A%E7%84%A6%E7%88%AC%E8%99%AB"><span class="toc-nav-number">3.0.1.</span> <span class="toc-nav-text">聚焦爬虫</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%88%86%E7%B1%BB"><span class="toc-nav-number">3.0.2.</span> <span class="toc-nav-text">数据解析分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%AD%A3%E5%88%99%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">3.0.2.1.</span> <span class="toc-nav-text">正则解析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#bs4%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">3.0.2.2.</span> <span class="toc-nav-text">bs4进行数据解析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#xpath%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">3.0.2.3.</span> <span class="toc-nav-text">xpath解析</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、验证码识别</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E9%AA%8C%E8%AF%81%E7%A0%81%E5%92%8C%E7%88%AC%E8%99%AB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-nav-number">4.0.0.1.</span> <span class="toc-nav-text">验证码和爬虫之间的关系</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%AF%86%E5%88%AB%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">4.0.0.2.</span> <span class="toc-nav-text">识别验证码的操作</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%AE%9E%E6%88%98%EF%BC%9A%E8%AF%86%E5%88%AB%E5%8F%A4%E8%AF%97%E6%96%87%E7%BD%91%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E4%B8%AD%E7%9A%84%E9%AA%8C%E8%AF%81%E7%A0%81"><span class="toc-nav-number">4.0.0.3.</span> <span class="toc-nav-text">实战：识别古诗文网登录页面中的验证码</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81request%E9%AB%98%E7%BA%A7"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五、request高级</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95"><span class="toc-nav-number">5.0.1.</span> <span class="toc-nav-text">模拟登录</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%9C%80%E6%B1%821"><span class="toc-nav-number">5.0.2.</span> <span class="toc-nav-text">需求1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%9C%80%E6%B1%822"><span class="toc-nav-number">5.0.3.</span> <span class="toc-nav-text">需求2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#cookie%E4%B8%8Esession"><span class="toc-nav-number">5.0.4.</span> <span class="toc-nav-text">cookie与session</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%A3%E7%90%86"><span class="toc-nav-number">5.0.5.</span> <span class="toc-nav-text">代理</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六、异步爬虫</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Python" title="Python">Python</a>
+            
+            <a class="tag" href="/tags/#爬虫" title="爬虫">爬虫</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/西西">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Song木头
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">240.7k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

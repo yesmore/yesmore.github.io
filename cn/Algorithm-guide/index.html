@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="yoyoyo"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/Algorithm-guide/">
+  <title>
+    
+      【数据结构与算法】数据结构与算法前言、复杂度 - 快乐码原 | Song
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          <li>
+            <a href="/categories/#算法">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+          <li>
+            <a href="/categories/#爬虫">爬虫</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
+              
+            </div>
+            <h2>【数据结构与算法】数据结构与算法前言、复杂度</h2>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              By Song木头 on
+              2021-08-11
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">33</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 <span class="post-count">9.2k</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>要点：数据结构与算法、复杂度、程序运行的效率</p>
+<p><strong>程序 = 数据结构 + 算法</strong></p>
+<span id="more"></span>
+<h2 id="数据结构">数据结构</h2>
+<h3 id="一、数据结构的定义">一、数据结构的定义</h3>
+<p>官方定义：无</p>
+<p>民间定义：</p>
+<ul>
+<li>
+<p>“数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义相关的函数来给出。” — 《数据结构、算法与应用》</p>
+</li>
+<li>
+<p>“数据结构是 ADT（抽象数据类型 Abstract Data Type）的物理实现。” — 《数据结构与算法分析》</p>
+</li>
+<li>
+<p>“数据结构（data structure）是计算机中存储、组织数据的方式。通常情况下，精心选择的数据结构可以带来最优效率的算法。” —中文维基百科</p>
+</li>
+<li>
+<p>从自己角度认识</p>
+<p>在计算机中，存储和组织数据的方式。</p>
+</li>
+</ul>
+<h3 id="二、数据结构在生活中应用">二、数据结构在生活中应用</h3>
+<p>我们知道，计算机中数据量非常庞大，如何以高效的方式组织和存储呢?</p>
+<p>例如：一个庞大的图书馆中存放了大量的书籍，我们不仅仅要把书放进入，还应该在合适的时候能够取出来。</p>
+<p>图书摆放要使得两个相关操作方便实现：</p>
+<ul>
+<li>操作 1：新书怎么插入？</li>
+<li>操作 2：怎么找到某本指定的书？</li>
+</ul>
+<p>图书各种摆放方式：</p>
+<ul>
+<li>
+<p>方法 1：随便放</p>
+<ul>
+<li>操作 1：哪里有空位放哪里。</li>
+<li>操作 2：找某本书，累死。</li>
+</ul>
+</li>
+<li>
+<p>方法 2：按照书名的拼音字母顺序排放</p>
+<ul>
+<li>操作 1：新进一本《阿 Q 正传》， 按照字母顺序找到位置，插入。</li>
+<li>操作 2：二分查找法。</li>
+</ul>
+</li>
+<li>
+<p>方法 3：把书架划分成几块区域，按照类别存放，类别中按照字母顺序</p>
+<ul>
+<li>操作 1：先定类别，二分查找确定位置，移出空位。</li>
+<li>操作 2：先定类别，再二分查找。</li>
+</ul>
+</li>
+</ul>
+<p>结论：</p>
+<ul>
+<li>解决问题方法的效率，根据数据的组织方式有关。</li>
+<li>计算机中存储的数据量相对于图书馆的书籍来说数据量更大，数据更加多。</li>
+<li>以什么样的方式，来存储和组织我们的数据才能在使用数据时更加方便呢?</li>
+<li>这就是数据结构需要考虑的问题。</li>
+</ul>
+<h3 id="三、常见的数据结构">三、常见的数据结构</h3>
+<ul>
+<li>数组（Aarray）</li>
+<li>栈（Stack）</li>
+<li>链表（Linked List）</li>
+<li>图（Graph）</li>
+<li>散列表（Hash）</li>
+<li>队列（Queue）</li>
+<li>树（Tree）</li>
+<li>堆（Heap）</li>
+</ul>
+<blockquote>
+<p>注意：数据结构与算法与语言无关，常见的编程语言都有<strong>直接或间接</strong>的使用上述常见的数据结构。</p>
+</blockquote>
+<h3 id="四、逻辑结构-物理结构的区别用法">四、逻辑结构&amp;物理结构的区别用法</h3>
+<p>按照<strong>视点的不同</strong>，可以把数据结构分为 <em>逻辑结构</em> 和 <em>物理结构</em>：<strong>基本的目标</strong>就是<strong>将数据及其逻辑关系</strong>存储到<strong>计算机的内存中</strong></p>
+<h4 id="4-1-逻辑结构">4.1 逻辑结构</h4>
+<ul>
+<li>
+<p>是指<strong>数据对象</strong>中<strong>数据元素之间</strong>的<strong>相互关系</strong></p>
+</li>
+<li>
+<p><strong>面向问题的</strong></p>
+</li>
+</ul>
+<p>可具体分为以下四种关系：</p>
+<h5 id="A-集合结构">A 集合结构</h5>
+<p>数据元素除了<strong>同属于一个集合</strong>外，它们之间没有其他关系</p>
+<p><img src="/images/algorithm1.png" alt="1"></p>
+<h5 id="B-线性结构">B 线性结构</h5>
+<p>数据元素<strong>之间</strong>是<strong>一对一关系</strong></p>
+<p><img src="/images/algorithm2.png" alt="2"></p>
+<h5 id="C-树型结构">C 树型结构</h5>
+<p>数据元素之<strong>间</strong>呈现<strong>一对多关系</strong></p>
+<p><img src="/images/algorithm3.png" alt="3"></p>
+<h5 id="D-图形结构">D 图形结构</h5>
+<p>数据元素是<strong>多对多关系</strong></p>
+<p><img src="/images/algorithm4.png" alt="4"></p>
+<h4 id="4-2-物理结构">4.2 物理结构</h4>
+<ul>
+<li>
+<p>是指<strong>数据的逻辑结构</strong>在<strong>计算机中</strong>的<strong>存储形式</strong>，因此也称为 <strong>存储结构</strong></p>
+</li>
+<li>
+<p><strong>是面向计算机的</strong></p>
+</li>
+</ul>
+<h5 id="什么是数据">什么是数据</h5>
+<ul>
+<li>
+<p>数据是<strong>数据元素</strong>的<strong>集合</strong></p>
+</li>
+<li>
+<p>那么根据物理结构的定义，<strong>实际</strong>上就是<strong>如何</strong>把<strong>数据元素</strong>存储到<strong>计算机的</strong>存储器中</p>
+</li>
+</ul>
+<h5 id="什么是存储器">什么是存储器</h5>
+<ul>
+<li>存储器主要是<strong>针对内存</strong>而言的，像硬盘，软盘，光盘等<strong>外部存储器</strong>的<strong>数据组织</strong>通常<strong>用文件结构来描述</strong></li>
+</ul>
+<h3 id="五、顺序存储-链式存储的区别用法">五、顺序存储&amp;链式存储的区别用法</h3>
+<blockquote>
+<p>数据的<strong>存储结构</strong>应正确<strong>反映</strong>数据<strong>元素之间</strong>的<strong>逻辑关系</strong></p>
+</blockquote>
+<p>数据元素的<strong>存储结构形式</strong>有两种：<em>顺序存储</em> 和 <em>链式存储</em></p>
+<h4 id="5-1-顺序存储结构">5.1 顺序存储结构</h4>
+<ul>
+<li>
+<p>是把数据元素<strong>存放在</strong>地址连续的存储单元里</p>
+</li>
+<li>
+<p>其数据间的逻辑关系和物理<strong>关系是一致的</strong></p>
+</li>
+</ul>
+<p><img src="/images/algorithm5.png" alt="5"></p>
+<h4 id="5-2-链式存储结构">5.2 链式存储结构</h4>
+<ul>
+<li>
+<p>是把数据元素<strong>存放在任意的存储单元里</strong></p>
+</li>
+<li>
+<p>这组存储单元<strong>可以</strong>是<strong>连续</strong>的</p>
+</li>
+<li>
+<p><strong>也可以</strong>是<strong>不连续</strong>的</p>
+</li>
+</ul>
+<p><img src="/images/algorithm6.png" alt="6"></p>
+<h2 id="算法">算法</h2>
+<h3 id="一、算法（Algorithm）的定义">一、算法（Algorithm）的定义</h3>
+<ul>
+<li>一个有限指令集，每条指令的描述不依赖于语言。</li>
+<li>接收一些输入（有些情况下不需要输入）。</li>
+<li>产生输出。</li>
+<li>一定在有限步骤之后终止。</li>
+</ul>
+<h4 id="1-1-算法的特性：">1.1 算法的特性：</h4>
+<p>1.<strong>有穷性</strong>：算法在执行有限步骤之后，自动结束而不会出现无限循环，并且每一个步骤都在可接受的时间范围内完成。当然这里的有穷并不是纯数学意义的，而是在实际应用中合理的、可以接受的“边界”。你说你写一个算法，计算机需要算上20年，一定会结束，他在数学上是有穷的，媳妇都熬成婆了，算法的意义</p>
+<p>就不大了。</p>
+<p>2.<strong>确定性</strong>：算法的每一个步骤都有确定的含义，不会出现二义性(不会有歧义)。</p>
+<p>3.<strong>可行性</strong>：算法中的所有操作都可以通过已经实现的基本操作运算执行有限次来实现。</p>
+<p>4.<strong>输入</strong>：一个算法有零个或多个输入。当用函数描述算法时，输入往往是通过形参表示的，在它们被调用时，从主调函数获得输入值。</p>
+<p>5.<strong>输出</strong>：一个算法有一个或多个输出，它们是算法进行信息加工后得到的结果，无输出的算法没有任何意义。当用函数描述算法时，输出多用返回值或引用类型的形参表示。</p>
+<h4 id="1-2-算法的设计要求">1.2 算法的设计要求</h4>
+<p>好的算法应该具有<strong>正确性、可读性、健壮性、时间效率高和存储量低</strong>的特征。</p>
+<p>1.<strong>正确性</strong>(Correctness)：能正确的反映问题的需求，能得到正确的答案。</p>
+<p>分以下四个层次：</p>
+<ul>
+<li>
+<p>算法程序没有语法错误；</p>
+</li>
+<li>
+<p>算法程序对n组输入产生正确的结果；</p>
+</li>
+<li>
+<p>算法程序对典型、苛刻、有刁难性的几组输入可以产生正确的结果；</p>
+</li>
+<li>
+<p>算法程序对所有输入产生正确的结果；</p>
+</li>
+</ul>
+<p>但我们不可能逐一的验证所有的输入，因此算法的正确性在大多数情况下都不可能用程序证明，而是用数学方法证明。所以一般情况下我们把层次3作为算法是否正确的标准。</p>
+<p>2.<strong>可读性</strong>(Readability)：算法，首先应便于人们理解和相互交流，其次才是机器可执行性。可读性强的算法有助于人们对算法的理解，而难懂的算法易于隐藏错误，且难于调试和修改。</p>
+<p>3.<strong>健壮性</strong>(Robustness)：当输入的数据非法时，好的算法能适当地做出正确反应或进行相应处理，而不会产生一些莫名其妙的输出结果。【健壮性又叫又名鲁棒性即使用棒子粗鲁地对待他也可以执行类似于Java预料到可能出现的异常并对其进行捕获处理】</p>
+<p>4.(<strong>高效性</strong>)时间效率高和存储量低</p>
+<h4 id="1-3-算法分析">1.3 算法分析</h4>
+<p>算法分析的目的是看算法实际是否可行，并在同一问题存在多个算法时可进行性能上的比较，以便从中挑选出比较优的算法。</p>
+<p>(时间效率)运行时间的长短和(空间效率)占用内存空间的大小是衡量算法好坏的重要因素。</p>
+<p>衡量算法时间效率的方法主要有两类：事后统计法和事前分析估算法。</p>
+<h3 id="二、算法通俗理解">二、算法通俗理解</h3>
+<ul>
+<li>Algorithm 这个单词本意就是解决问题的办法/步骤逻辑。</li>
+<li>数据结构的实现，离不开算法。</li>
+</ul>
+<h3 id="三、算法案例">三、算法案例</h3>
+<p>假如上海和杭州之间有一条高架线，高架线长度是 1,000,000 米，有一天高架线中有其中一米出现了故障，请你想出一种算法，可以快速定位到处问题的地方。</p>
+<ul>
+<li>
+<p>线性查找</p>
+<ul>
+<li>从上海的起点开始一米一米的排查，最终一定能找到出问题的线段。</li>
+<li>但是如果线段在另一头，我们需要排查 1,000,000 次，这是最坏的情况，平均需要 500,000 次。</li>
+</ul>
+</li>
+<li>
+<p>二分查找</p>
+<ul>
+<li>从中间位置开始排查，看一下问题出在上海到中间位置，还是中间到杭州的位置。</li>
+<li>查找对应的问题后，再从中间位置分开，重新锁定一般的路程。</li>
+<li>最坏的情况，需要多少次可以排查完呢? 最坏的情况是 20 次就可以找到出问题的地方。</li>
+<li>怎么计算出来的呢? log(1000000, 2)，以 2 位底，1000000 的对数 ≈ 20。</li>
+</ul>
+</li>
+</ul>
+<p>结论：<br>
+你会发现，解决问题的办法有很多，但是好的算法对比于差的算法，效率天壤之别。</p>
+<h2 id="复杂度">复杂度</h2>
+<h3 id="一、如何衡量程序运行的效率">一、如何衡量程序运行的效率</h3>
+<p>当你在大数据环境中开发代码时，你一定遇到过程序执行好几个小时、甚至好几天的情况，或者是执行过程中电脑几乎死机的情况：</p>
+<ul>
+<li>
+<p>如果这个效率低下的系统是离线的，那么它会让我们的开发周期、测试周期变得很长。</p>
+</li>
+<li>
+<p>如果这个效率低下的系统是在线的，那么它随时具有时间爆炸或者内存爆炸的可能性。</p>
+</li>
+</ul>
+<p>因此，衡量代码的运行效率对于一个工程师而言，是一项非常重要的基本功。本课时我们就来学习程序运行效率相关的度量方法。</p>
+<h3 id="二、复杂度是什么">二、复杂度是什么</h3>
+<h4 id="2-1-定义">2.1 定义</h4>
+<p><strong>复杂度是衡量代码运行效率的重要度量因素</strong>。在介绍复杂度之前，有必要先看一下复杂度和计算机实际任务处理效率的关系，从而了解降低复杂度的必要性。</p>
+<p>计算机通过一个个程序去执行计算任务，也就是对输入数据进行加工处理，并最终得到结果的过程。每个程序都是由代码构成的。可见，编写代码的核心就是要完成计算。但对于同一个计算任务，不同计算方法得到结果的过程复杂程度是不一样的，这对你实际的任务处理效率就有了非常大的影响。</p>
+<p>举个例子，你要在一个在线系统中实时处理数据。假设这个系统平均每分钟会新增 300M 的数据量。如果你的代码不能在 1 分钟内完成对这 300M 数据的处理，那么这个系统就会发生时间爆炸和空间爆炸。表现就是，电脑执行越来越慢，直到死机。因此，我们需要讲究合理的计算方法，去通过尽可能低复杂程度的代码完成计算任务。</p>
+<img src="https://s0.lgstatic.com/i/image/M00/0C/54/CgqCHl7CRGiAe-NpAR0S70dSC2M990.gif" alt="1.gif" data-nodeid="138424">
+<h4 id="2-2-衡量复杂度">2.2 衡量复杂度</h4>
+<p>那提到降低复杂度，我们首先需要知道怎么衡量复杂度。而在实际衡量时，我们通常会围绕以下2 个维度进行。</p>
+<p><strong>首先，这段代码消耗的资源是什么</strong>。一般而言，代码执行过程中会消耗计算时间和计算空间，那需要衡量的就是<strong>时间复杂度</strong>和<strong>空间复杂度</strong>。</p>
+<p>举一个实际生活中的例子。某个十字路口没有建立立交桥时，所有车辆通过红绿灯分批次行驶通过。当大量汽车同时过路口的时候，就会分别消耗大家的时间。但建了立交桥之后，所有车辆都可以同时通过了，因为立交桥的存在，等于是消耗了空间资源，来换取了时间资源。</p>
+<img src="https://s0.lgstatic.com/i/image/M00/0C/55/CgqCHl7CRMaAO_oEAJfz6fjfMNQ403.gif" alt="2.gif" data-nodeid="138434">
+<p><strong>其次，这段代码对于资源的消耗是多少</strong>。我们不会关注这段代码对于资源消耗的绝对量，因为不管是时间还是空间，它们的消耗程度都与输入的数据量高度相关，输入数据少时消耗自然就少。<u>为了更客观地衡量消耗程度，我们通常会关注时间或者空间消耗量与输入数据量之间的关系</u>。</p>
+<h5 id="时间复杂度">时间复杂度</h5>
+<p>定义：时间复杂度所需消耗的时间即<strong>基本操作执行次数</strong></p>
+<h5 id="空间复杂度">空间复杂度</h5>
+<p>定义：算法的空间复杂度<strong>通过计算算法所需的存储空间</strong>实现，<strong>即</strong>运行完一个程序<strong>所需内存的大小</strong></p>
+<h4 id="2-3-计算复杂度">2.3 计算复杂度</h4>
+<p><strong>复杂度是一个关于输入数据量 n 的函数</strong>。假设你的代码复杂度是 f(n)，那么就用个大写字母 <code>O</code> 和括号，把 <code>f(n)</code> 括起来就可以了，即 <code>O(f(n))</code>。例如，O(n) 表示的是，复杂度与计算实例的个数 n <u>线性相关</u>；<code>O(logn)</code> 表示的是，复杂度与计算实例的个数 n 对数相关。</p>
+<p>通常，复杂度的计算方法遵循以下几个原则：</p>
+<ul>
+<li>
+<p>首先，<strong>复杂度与具体的常系数无关</strong>，例如 O(n) 和 O(2n) 表示的是同样的复杂度。我们详细分析下，<u>O(2n) 等于 O(n+n)</u>，也<u>等于 O(n) + O(n)</u>。也就是说，一段 O(n) 复杂度的代码只是先后执行两遍 O(n)，其复杂度是一致的。</p>
+</li>
+<li>
+<p>其次，<strong>多项式级的复杂度相加的时候，选择高者作为结果</strong>，例如 O(n²)+O(n) 和 O(n²) 表示的是同样的复杂度。具体分析一下就是，O(n²)+O(n) = O(n²+n)。随着 n 越来越大，二阶多项式的变化率是要比一阶多项式更大的。因此，只需要通过更大变化率的二阶多项式来表征复杂度就可以了。</p>
+</li>
+</ul>
+<p>值得一提的是，<strong>O(1) 也是表示一个特殊复杂度</strong>，含义为某个任务通过有限可数的资源即可完成。此处有限可数的具体意义是，<strong>与输入数据量 n 无关</strong>。</p>
+<p>例如，你的代码处理 10 条数据需要消耗 5 个单位的时间资源，3 个单位的空间资源。处理 1000 条数据，还是只需要消耗 5 个单位的时间资源，3 个单位的空间资源。那么就能发现资源消耗与输入数据量无关，就是 O(1) 的复杂度。</p>
+<p>为了方便你理解不同计算方法对复杂度的影响，我们来看一个代码任务：对于输入的数组，输出与之逆序的数组。例如，输入 a=[1,2,3,4,5]，输出 [5,4,3,2,1]。</p>
+<p>先看<strong>方法一</strong>，建立并初始化数组 b，得到一个与输入数组等长的全零数组。通过一个 for 循环，从左到右将 a 数组的元素，从右到左地赋值到 b 数组中，最后输出数组 b 得到结果。</p>
+<img src="https://s0.lgstatic.com/i/image/M00/0C/4A/Ciqc1F7CRP6ARwDTAGHL-opG6Bk835.gif" alt="3.gif" data-nodeid="138488">
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s1_1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">    <span class="keyword">int</span> b[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">        b[i] = a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">        b[a.length - i - <span class="number">1</span>] = a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(Arrays.toString(b));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码的输入数据是 a，数据量就等于数组 a 的长度。代码中有两个 for 循环，作用分别是给b 数组初始化和赋值，其执行次数都与输入数据量相等。因此，代码的<strong>时间复杂度</strong>就是 O(n)+O(n)，也就是 O(n)。</p>
+<p>空间方面主要体现在计算过程中，对于存储资源的消耗情况。上面这段代码中，我们定义了一个新的数组 b，它与输入数组 a 的长度相等。因此，空间复杂度就是 O(n)。</p>
+<p><strong>接着我们看一下第二种编码方法</strong>，它定义了缓存变量 tmp，接着通过一个 for 循环，从 0 遍历到a 数组长度的一半（即 len(a)/2）。每次遍历执行的是什么内容？就是交换首尾对应的元素。最后打印数组 a，得到结果。</p>
+<img src="https://s0.lgstatic.com/i/image/M00/0C/4E/Ciqc1F7CR22AIbSuABc0Rwl-t3w666.gif" alt="4.gif" data-nodeid="138504">
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s1_2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">    <span class="keyword">int</span> tmp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (a.length / <span class="number">2</span>); i++) &#123;</span><br><span class="line">        tmp = a[i];</span><br><span class="line">        a[i] = a[a.length - i - <span class="number">1</span>];</span><br><span class="line">        a[a.length - i - <span class="number">1</span>] = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码包含了一个 for 循环，执行的次数是数组长度的一半，时间复杂度变成了 O(n/2)。根据复杂度与具体的常系数无关的性质，这段代码的时间复杂度也就是 <code>O(n)</code>。</p>
+<p>空间方面，我们定义了一个 tmp 变量，它与数组长度无关。也就是说，输入是 5 个元素的数组，需要一个 tmp 变量；输入是 50 个元素的数组，依然只需要一个 tmp 变量。因此，<u>空间复杂度与输入数组长度无关，即 O(1)。</u></p>
+<p>可见，<strong>对于同一个问题，采用不同的编码方法，对时间和空间的消耗是有可能不一样的</strong>。因此，工程师在写代码的时候，一方面要完成任务目标；另一方面，也需要考虑时间复杂度和空间复杂度，以求用尽可能少的时间损耗和尽可能少的空间损耗去完成任务。</p>
+<h3 id="三、时间复杂度与代码结构的关系">三、时间复杂度与代码结构的关系</h3>
+<p>从本质来看，时间复杂度与代码的结构有着非常紧密的关系；而空间复杂度与数据结构的设计有关，关于这一点我们会在下一讲进行详细阐述。接下来我先来系统地讲一下时间复杂度和代码结构的关系。</p>
+<p>例 1，定义了一个数组 a = [1, 4, 3]，查找数组 a 中的最大值，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s1_3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123; <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span> &#125;;</span><br><span class="line">    <span class="keyword">int</span> max_val = -<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[i] &gt; max_val) &#123;</span><br><span class="line">            max_val = a[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(max_val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个例子比较简单，实现方法就是，暂存当前最大值并把所有元素遍历一遍即可。因为代码的结构上需要使用一个 for 循环，对数组所有元素处理一遍，所以时间复杂度为 O(n)。</p>
+<p>例2，下面的代码定义了一个数组 a = [1, 3, 4, 3, 4, 1, 3]，并会在这个数组中查找出现次数最多的那个数字：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s1_4</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123; <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">3</span> &#125;;</span><br><span class="line">    <span class="keyword">int</span> val_max = -<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> time_max = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> time_tmp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">        time_tmp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; a.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[i] == a[j]) &#123;</span><br><span class="line">            time_tmp += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (time_tmp &gt; time_max) &#123;</span><br><span class="line">            time_max = time_tmp;</span><br><span class="line">            val_max = a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(val_max);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码中，我们采用了双层循环的方式计算：第一层循环，我们对数组中的每个元素进行遍历；第二层循环，对于每个元素计算出现的次数，并且通过当前元素次数 time_tmp 和全局最大次数变量 time_max 的大小关系，持续保存出现次数最多的那个元素及其出现次数。由于是双层循环，这段代码在时间方面的消耗就是 n*n 的复杂度，也就是 O(n²)。</p>
+<p>在这里，我们给出一些经验性的结论：</p>
+<ul>
+<li>
+<p>一个<strong>顺序结构</strong>的代码，时间复杂度是 <strong>O(1)</strong>。</p>
+</li>
+<li>
+<p><strong>二分查找</strong>，或者更通用地说是采用分而治之的二分策略，时间复杂度都是 <strong>O(logn)</strong>。这个我们会在后续课程讲到。</p>
+</li>
+<li>
+<p>一个简单的 <strong>for 循环</strong>，时间复杂度是 <strong>O(n)</strong>。</p>
+</li>
+<li>
+<p><strong>两个顺序执行的 for 循环</strong>，时间复杂度是 <strong>O(n)+O(n)=O(2n)</strong>，其实也是 O(n)。</p>
+</li>
+<li>
+<p>两个<strong>嵌套的 for 循环</strong>，时间复杂度是 <strong>O(n²)</strong>。</p>
+</li>
+</ul>
+<p>有了这些基本的结论，再去分析代码的时间复杂度将会轻而易举。</p>
+<h3 id="四、降低时间复杂度的必要性">四、降低时间复杂度的必要性</h3>
+<p>很多新手的工程师，对降低时间复杂度并没有那么强的意识。这主要是在学校或者实验室中，参加的课程作业或者科研项目，普遍都不是实时的、在线的工程环境。</p>
+<p>实际的在线环境中，用户的访问请求可以看作一个流式数据。假设这个数据流中，每个访问的平均时间间隔是 t。如果你的代码无法在 t 时间内处理完单次的访问请求，那么这个系统就会一波未平一波又起，最终被大量积压的任务给压垮。这就要求工程师必须通过优化代码、优化数据结构，来降低时间复杂度。</p>
+<p>为了更好理解，我们来看一些数据。假设某个计算任务需要处理 10 万 条数据。你编写的代码：</p>
+<ul>
+<li>
+<p>如果是 O(n²) 的时间复杂度，那么计算的次数就大概是 100 亿次左右。</p>
+</li>
+<li>
+<p>如果是 O(n)，那么计算的次数就是 10 万 次左右。</p>
+</li>
+<li>
+<p>如果这个工程师再厉害一些，能在 O(log n) 的复杂度下完成任务，那么计算的次数就是 17 次左右（log 100000 = 16.61，计算机通常是二分法，这里的对数可以以 2 为底去估计）。</p>
+</li>
+</ul>
+<p>数字是不是一下子变得很悬殊？通常在小数据集上，时间复杂度的降低在绝对处理时间上没有太多体现。但在当今的大数据环境下，时间复杂度的优化将会带来巨大的系统收益。而这是优秀工程师必须具备的工程开发基本意识。</p>
+<h3 id="五、时间复杂度与空间复杂度的转换">五、时间复杂度与空间复杂度的转换</h3>
+<p>你面试的过程中，常常会遇到考察手写代码的场景，通常面试官会追问：“这段代码的时间复杂度或者空间复杂度，是否还有降低的可能性？”如果没有经过专门的学习或训练，应聘者只能在各种漫无目的的尝试中去寻找答案。</p>
+<p>别忘了，代码效率优化就是要将可行解提高到更优解，最终目标是：<u>要采用尽可能低的时间复杂度和空间复杂度，去完成一段代码的开发</u>。</p>
+<h4 id="5-1-时间昂贵、空间廉价">5.1 时间昂贵、空间廉价</h4>
+<p>一段代码会消耗计算时间、资源空间，从而产生时间复杂度和空间复杂度，那么你是否尝试过将时间复杂度和空间复杂进行下对比呢？其实对比过后，你就会发现一个重要的现象。</p>
+<p><strong>假设一段代码经过优化后，虽然降低了时间复杂度，但依然需要消耗非常高的空间复杂度</strong>。 例如，对于固定数据量的输入，这段代码需要消耗几十 G 的内存空间，很显然普通计算机根本无法完成这样的计算。如果一定要解决的话，一个最简单粗暴的办法就是，购买大量的高性能计算机，来弥补空间性能的不足。</p>
+<p><strong>反过来，假设一段代码经过优化后，依然需要消耗非常高的时间复杂度</strong>。 例如，对于固定数据量的输入，这段代码需要消耗 1 年的时间去完成计算。如果在跑程序的 1 年时间内，出现了断电、断网或者程序抛出异常等预期范围之外的问题，那很可能造成 1 年时间浪费的惨重后果。很显然，用 1 年的时间去跑一段代码，对开发者和运维者而言都是极不友好的。</p>
+<p>这告诉我们一个什么样的现实问题呢？代码效率的瓶颈可能发生在时间或者空间两个方面。如果是缺少计算空间，花钱买服务器就可以了。这是个花钱就能解决的问题。相反，如果是缺少计算时间，只能投入宝贵的人生去跑程序。即使你有再多的钱、再多的服务器，也是毫无用处。相比于空间复杂度，时间复杂度的降低就显得更加重要了。因此，你会发现这样的结论：空间是廉价的，而时间是昂贵的。</p>
+<h4 id="5-2-数据结构连接时空">5.2 数据结构连接时空</h4>
+<p>假定在不限制时间、也不限制空间的情况下，你可以完成某个任务的代码的开发。这就是通常我们所说的<strong>暴力解法</strong>，更是程序优化的起点。</p>
+<p>例如，如果要在 100 以内的正整数中，找到同时满足以下两个条件的最小数字：</p>
+<ul>
+<li>
+<p>能被 3 整除；</p>
+</li>
+<li>
+<p>除 5 余 2。</p>
+</li>
+</ul>
+<p>最暴力的解法就是，从 1 开始到 100，每个数字都做一次判断。如果这个数字满足了上述两个条件，则返回结果。这是一种不计较任何时间复杂度或空间复杂度的、最直观的暴力解法。</p>
+<p>当你有了最暴力的解法后，就需要用上一讲的方法评估当前暴力解法的复杂度了。如果复杂度比较低或者可以接受，那自然万事大吉。可如果暴力解法复杂度比较高的话，那就要考虑采用程序优化的方法去降低复杂度了。</p>
+<p>为了降低复杂度，一个直观的思路是：梳理程序，看其流程中是否有无效的计算或者无效的存储。</p>
+<p>我们需要从时间复杂度和空间复杂度两个维度来考虑。常用的<strong>降低时间复杂度</strong>的方法有<strong>递归、二分法、排序算法、动态规划</strong>等，这些知识我们都会在后续逐一学习。而降低空间复杂度的方法，就要围绕<strong>数据结构</strong>做文章了。</p>
+<p>降低空间复杂度的核心思路就是，<strong>能用低复杂度的数据结构能解决问题，就千万不要用高复杂度的数据结构。</strong></p>
+<p>经过了前面剔除无效计算和存储的处理之后，如果程序在时间和空间等方面的性能依然还有瓶颈，又该怎么办呢？前面我们提到过，空间是廉价的，最不济也是可以通过购买更高性能的计算机进行解决的。然而时间是昂贵的，如果无法降低时间复杂度，那系统的效率就永远无法得到提高。</p>
+<p>这时候，开发者们想到这样的一个解决思路。如果可以通过某种方式，把时间复杂度转移到空间复杂度的话，就可以把无价的东西变成有价了。这种时空转移的思想，在实际生活中也会经常遇到。</p>
+<p>例如，马路上的十字路口，所有车辆在通过红绿灯时需要分批次通行。这样，就消耗了所有车辆的通行时间。如果要降低这里的时间损耗，人们就想到了修建立交桥。修建立交桥后，每个可能的转弯或直行的行进路线，都有专属的一条公路支持。这样，车辆就不需要全部去等待红绿灯分批通行了。最终，实现了用空间换取时间。</p>
+<p>其实，程序开发也是可以借鉴这里的思想的。在程序开发中，连接时间和空间的桥梁就是<strong>数据结构</strong>。对于一个开发任务，如果你能找到一种高效的数据组织方式，采用合理的数据结构的话，那就可以实现时间复杂度的再次降低。同样的，这通常会增加数据的存储量，也就是增加了空间复杂度。</p>
+<p>以上就是程序优化的最核心的思路，也是这个专栏的整体框架。我们简单梳理如下：</p>
+<ul>
+<li>
+<p>第一步，<u>暴力解法</u>。在没有任何时间、空间约束下，完成代码任务的开发。</p>
+</li>
+<li>
+<p>第二步，<u>无效操作处理</u>。将代码中的无效计算、无效存储剔除，降低时间或空间复杂度。</p>
+</li>
+<li>
+<p>第三步，<u>时空转换</u>。设计合理数据结构，完成时间复杂度向空间复杂度的转移。</p>
+</li>
+</ul>
+<h4 id="5-3-降低复杂度的案例">5.3 降低复杂度的案例</h4>
+<p>有了如上的方法论，给出几个例子，帮助你加深理解。</p>
+<p>第 1 个例子，假设有任意多张面额为 2 元、3 元、7 元的货币，现要用它们凑出 100 元，求总共有多少种可能性。假设工程师小明写了下面的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s2_1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= (<span class="number">100</span> / <span class="number">7</span>); i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= (<span class="number">100</span> / <span class="number">3</span>); j++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt;= (<span class="number">100</span> / <span class="number">2</span>); k++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i * <span class="number">7</span> + j * <span class="number">3</span> + k * <span class="number">2</span> == <span class="number">100</span>) &#123;</span><br><span class="line">                    count += <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(count);</span><br><span class="line">&#125;`</span><br></pre></td></tr></table></figure>
+<p>在这段代码中，使用了 3 层的 for 循环。从结构上来看，是很显然的 O( n³ ) 的时间复杂度。然而，仔细观察就会发现，代码中最内层的 for 循环是多余的。因为，当你确定了要用 i 张 7 元和 j 张 3 元时，只需要判断用有限个 2 元能否凑出 100 - 7* i - 3* j 元就可以了。因此，代码改写如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s2_2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= (<span class="number">100</span> / <span class="number">7</span>); i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= (<span class="number">100</span> / <span class="number">3</span>); j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">100</span>-i*<span class="number">7</span>-j*<span class="number">3</span> &gt;= <span class="number">0</span>)&amp;&amp;((<span class="number">100</span>-i*<span class="number">7</span>-j*<span class="number">3</span>) % <span class="number">2</span> == <span class="number">0</span>)) &#123;</span><br><span class="line">                count += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>经过改造后，代码的结构由 3 层 for 循环，变成了 2 层 for 循环。很显然，时间复杂度就变成了O(n²) 。这样的代码改造，就是利用了方法论中的步骤二，将代码中的无效计算、无效存储剔除，降低时间或空间复杂度。</p>
+<p>再看第二个例子。查找出一个数组中，出现次数最多的那个元素的数值。例如，输入数组 a = [1,2,3,4,5,5,6 ] 中，查找出现次数最多的数值。从数组中可以看出，只有 5 出现了 2 次，其余都是 1 次。显然 5 出现的次数最多，则输出 5。</p>
+<p>工程师小明的解决方法是，采用两层的 for 循环完成计算。第一层循环，对数组每个元素遍历。第二层循环，则是对第一层遍历的数字，去遍历计算其出现的次数。这样，全局再同时缓存一个出现次数最多的元素及其次数就可以了。具体代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s2_3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span> &#125;;</span><br><span class="line">    <span class="keyword">int</span> val_max = -<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> time_max = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> time_tmp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">        time_tmp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; a.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[i] == a[j]) &#123;</span><br><span class="line">            time_tmp += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">            <span class="keyword">if</span> (time_tmp &gt; time_max) &#123;</span><br><span class="line">                time_max = time_tmp;</span><br><span class="line">                val_max = a[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(val_max);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这段代码中，小明采用了两层的 for 循环，很显然时间复杂度就是 O(n²)。而且代码中，几乎没有冗余的无效计算。如果还需要再去优化，就要考虑采用一些数据结构方面的手段，来把时间复杂度转移到空间复杂度了。</p>
+<p>我们先想象一下，这个问题能否通过一次 for 循环就找到答案呢？一个直观的想法是，一次循环的过程中，我们同步记录下每个元素出现的次数。最后，再通过查找次数最大的元素，就得到了结果。</p>
+<p>具体而言，定义一个 k-v 结构的字典，用来存放元素-出现次数的 k-v 关系。那么首先通过一次循环，将数组转变为元素-出现次数的一个字典。接下来，再去遍历一遍这个字典，找到出现次数最多的那个元素，就能找到最后的结果了。</p>
+<p>具体代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s2_4</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span> &#125;;</span><br><span class="line">    Map&lt;Integer, Integer&gt; d = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (d.containsKey(a[i])) &#123;</span><br><span class="line">            d.put(a[i], d.get(a[i]) + <span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            d.put(a[i], <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> val_max = -<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> time_max = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (Integer key : d.keySet()) &#123;</span><br><span class="line">        <span class="keyword">if</span> (d.get(key) &gt; time_max) &#123;</span><br><span class="line">            time_max = d.get(key);</span><br><span class="line">            val_max = key;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(val_max);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们来计算下这种方法的时空复杂度。代码结构上，有两个 for 循环。不过，这两个循环不是嵌套关系，而是顺序执行关系。其中，第一个循环实现了数组转字典的过程，也就是 O(n) 的复杂度。第二个循环再次遍历字典找到出现次数最多的那个元素，也是一个 O(n) 的时间复杂度。</p>
+<p>因此，总体的时间复杂度为 O(n) + O(n)，就是 O(2n)，根<strong>据复杂度与具体的常系数无关的原则</strong>，也就是O(n) 的复杂度。空间方面，由于定义了 k-v 字典，其字典元素的个数取决于输入数组元素的个数。因此，空间复杂度增加为 O(n)。</p>
+<p>这段代码的开发，就是借鉴了方法论中的步骤三，通过采用更复杂、高效的数据结构，完成了时空转移，提高了空间复杂度，让时间复杂度再次降低。</p>
+<h3 id="六、总结">六、总结</h3>
+<p>复杂度通常包括时间复杂度和空间复杂度。在具体计算复杂度时需要注意以下几点。</p>
+<p>（1）可以忽略加法常数</p>
+<p><code>O(2n + 3) = O(2n)</code><br>
+（2）与最高次项相乘的常数可忽略</p>
+<p><code>O(2n^2) = O(n^2)</code><br>
+（3） 最高次项的指数大的，函数随着 n 的增长，结果也会变得增长得更快</p>
+<p><code>O(n^3) &gt; O(n^2)</code><br>
+（4）判断一个算法的（时间）效率时，函数中常数和其他次要项常常可以忽略，而更应该关注主项（最高阶项）的阶数</p>
+<p><code>O(2n^2) = O(n^2+3n+1)</code><br>
+<code>O(n^3) &gt; O(n^2)</code></p>
+<p>它与具体的常系数无关，O(n) 和 O(2n) 表示的是同样的复杂度。</p>
+<p>复杂度相加的时候，选择高者作为结果，也就是说 O(n²)+O(n) 和 O(n²) 表示的是同样的复杂度。</p>
+<p>O(1) 也是表示一个特殊复杂度，即任务与算例个数 n 无关。</p>
+<p>复杂度细分为时间复杂度和空间复杂度，其中时间复杂度与代码的结构设计高度相关；空间复杂度与代码中数据结构的选择高度相关。会计算一段代码的时间复杂度和空间复杂度，是工程师的基本功。这项技能你在实际工作中一定会用到，甚至在参加互联网公司面试的时候，也是面试中的必考内容。</p>
+<h3 id="七、练习题">七、练习题</h3>
+<p>1.评估一下，如下的代码片段，时间复杂度是多少？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (m = <span class="number">0</span>; m &lt; n; m++) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.在下面这段代码中，如果要降低代码的执行时间，第 4 行需要做哪些改动呢？如果做出改动后，是否降低了时间复杂度呢？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">s2_2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= (<span class="number">100</span> / <span class="number">7</span>); i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= (<span class="number">100</span> / <span class="number">3</span>); j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">100</span>-i*<span class="number">7</span>-j*<span class="number">3</span> &gt;= <span class="number">0</span>)&amp;&amp;((<span class="number">100</span>-i*<span class="number">7</span>-j*<span class="number">3</span>) % <span class="number">2</span> == <span class="number">0</span>)) &#123;</span><br><span class="line">                count += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>提示，第 4 行代码，j 需要遍历到 33。但很显然，随着 i 的变大，j 并不需要遍历到 33。例如，当 i 为 9 的时候，j 最大也只能取到 12。如果 j 大于 12，则 7<em>9 + 3</em>13 &gt; 100。不过，别忘了，即使是这样，j 的取值范围也是与 n 线性相关的。哪怕是 O(n/2)，其实时间复杂度也并没有变小。</p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/Algorithm-Array/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】JavaScript数组-操作数组方法总结">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/WebSecurity03-XSS/" data-toggle="tooltip" data-placement="top" title="【Web安全扫盲】03-XSS">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      ...
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【数据结构与算法】数据结构与算法前言、复杂度&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/Algorithm-guide/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Wed Aug 11 2021 15:35:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">数据结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">一、数据结构的定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9C%A8%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%BA%94%E7%94%A8"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">二、数据结构在生活中应用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">三、常见的数据结构</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84-%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84%E7%9A%84%E5%8C%BA%E5%88%AB%E7%94%A8%E6%B3%95"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">四、逻辑结构&amp;物理结构的区别用法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-1-%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">4.1 逻辑结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#A-%E9%9B%86%E5%90%88%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.1.1.</span> <span class="toc-nav-text">A 集合结构</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#B-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.1.2.</span> <span class="toc-nav-text">B 线性结构</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#C-%E6%A0%91%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.1.3.</span> <span class="toc-nav-text">C 树型结构</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#D-%E5%9B%BE%E5%BD%A2%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.1.4.</span> <span class="toc-nav-text">D 图形结构</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-2-%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">4.2 物理结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">1.4.2.1.</span> <span class="toc-nav-text">什么是数据</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-nav-number">1.4.2.2.</span> <span class="toc-nav-text">什么是存储器</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8-%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%9A%84%E5%8C%BA%E5%88%AB%E7%94%A8%E6%B3%95"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">五、顺序存储&amp;链式存储的区别用法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-1-%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">5.1 顺序存储结构</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-2-%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">5.2 链式存储结构</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E7%AE%97%E6%B3%95%EF%BC%88Algorithm%EF%BC%89%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">一、算法（Algorithm）的定义</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-1-%E7%AE%97%E6%B3%95%E7%9A%84%E7%89%B9%E6%80%A7%EF%BC%9A"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">1.1 算法的特性：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-2-%E7%AE%97%E6%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%A6%81%E6%B1%82"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">1.2 算法的设计要求</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-3-%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">1.3 算法分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%97%E6%B3%95%E9%80%9A%E4%BF%97%E7%90%86%E8%A7%A3"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">二、算法通俗理解</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E7%AE%97%E6%B3%95%E6%A1%88%E4%BE%8B"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">三、算法案例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">复杂度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%A6%82%E4%BD%95%E8%A1%A1%E9%87%8F%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%95%88%E7%8E%87"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">一、如何衡量程序运行的效率</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">二、复杂度是什么</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-1-%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">2.1 定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-2-%E8%A1%A1%E9%87%8F%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2.2 衡量复杂度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">3.2.2.1.</span> <span class="toc-nav-text">时间复杂度</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">3.2.2.2.</span> <span class="toc-nav-text">空间复杂度</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-3-%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">2.3 计算复杂度</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">三、时间复杂度与代码结构的关系</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E9%99%8D%E4%BD%8E%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">四、降低时间复杂度的必要性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">五、时间复杂度与空间复杂度的转换</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-1-%E6%97%B6%E9%97%B4%E6%98%82%E8%B4%B5%E3%80%81%E7%A9%BA%E9%97%B4%E5%BB%89%E4%BB%B7"><span class="toc-nav-number">3.5.1.</span> <span class="toc-nav-text">5.1 时间昂贵、空间廉价</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-2-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BF%9E%E6%8E%A5%E6%97%B6%E7%A9%BA"><span class="toc-nav-number">3.5.2.</span> <span class="toc-nav-text">5.2 数据结构连接时空</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-3-%E9%99%8D%E4%BD%8E%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="toc-nav-number">3.5.3.</span> <span class="toc-nav-text">5.3 降低复杂度的案例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">六、总结</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%83%E3%80%81%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">七、练习题</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#算法" title="算法">算法</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/西西">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Song木头
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">240.7k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

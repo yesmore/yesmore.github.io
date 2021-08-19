@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="yoyoyo"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/Algorithm-Array/">
+  <title>
+    
+      【数据结构与算法】JavaScript数组-操作数组方法总结 - 快乐码原 | Song
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          <li>
+            <a href="/categories/#算法">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+          <li>
+            <a href="/categories/#爬虫">爬虫</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
+              
+            </div>
+            <h2>【数据结构与算法】JavaScript数组-操作数组方法总结</h2>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              By Song木头 on
+              2021-08-11
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">13</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 <span class="post-count">3.4k</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>要点：JavaScript数组、操作数组的方法</p>
+<span id="more"></span>
+<p>几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。<br>
+数组通常情况下用于存储一系列同一种数据类型的值。<br>
+但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。</p>
+<blockquote>
+<p>汇总：</p>
+<p><strong>不改变原数组的方法(8个):</strong></p>
+<p>ES5：</p>
+<blockquote>
+<p>join、toLocateString、toStrigin、slice、cancat、indexOf、lastIndexOf</p>
+</blockquote>
+<p>ES7：<br>
+includes</p>
+<p><strong>改变原数组的方法(9个):</strong></p>
+<p>ES5:<br>
+a.pop()、a.shift()、a.push()、a.unshift()、a.reverse()、a.splice()、a.sort()<br>
+ES6:<br>
+a.copyWithin() 、a.fill</p>
+<p>对于这些能够改变原数组的方法，要注意避免在循环遍历中改变原数组的选项，比如: 改变数组的长度，导致遍历的长度出现问题。</p>
+<p><strong>遍历方法(12个):</strong></p>
+<p>js中遍历数组并不会改变原始数组的方法总共有12个:</p>
+<p>ES5：<br>
+forEach、every 、some、 fliter、map、reduce、reduceRight、<br>
+ES6：<br>
+find、findIndex、keys、values、entries</p>
+<p><strong>关于遍历：</strong></p>
+<ul>
+<li>遍历的效率</li>
+<li>尽量不要在遍历的时候，修改后面要遍历的值</li>
+<li>尽量不要在遍历的时候修改数组的长度（删除/添加）</li>
+</ul>
+</blockquote>
+<h2 id="创建和初始化数组">创建和初始化数组</h2>
+<p><code>new Array()</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> daysOfWeek = <span class="keyword">new</span> <span class="built_in">Array</span>(</span><br><span class="line">  <span class="string">&quot;Sunday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Monday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Tuesday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Wednesday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Thursday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Friday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Saturday&quot;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p><code>[]</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> daysOfWeek = [</span><br><span class="line">  <span class="string">&quot;Sunday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Monday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Tuesday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Wednesday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Thursday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Friday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Saturday&quot;</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<h2 id="数组常见操作">数组常见操作</h2>
+<h3 id="添加元素">添加元素</h3>
+<h4 id="push-item">push(item)</h4>
+<p>添加一个元素到数组的最后位置（<strong>改变原数组</strong>）</p>
+<h4 id="unshift-item">unshift(item)</h4>
+<p>在数组首位插入一个元素</p>
+<h4 id="splice-index-0-item">splice(index, 0, item)</h4>
+<p>在指定索引位置插入元素（<strong>改变原数组</strong>）</p>
+<blockquote>
+<p>splice() 第二个参数为 0 时，表示插入数据。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">// 在 索引 0 的位置，插入 A</span></span><br><span class="line">myArray.splice(<span class="number">0</span>, <span class="number">0</span>, <span class="string">&quot;A&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray); <span class="comment">//--&gt; [&#x27;A&#x27;, 1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+<h3 id="删除元素">删除元素</h3>
+<h4 id="pop-item">pop(item)</h4>
+<p>删除数组最后的元素。（<strong>改变原数组</strong>）</p>
+<h4 id="shift-item">shift(item)</h4>
+<p>删除数组首位的元素（<strong>改变原数组</strong>）</p>
+<h4 id="unshift">unshift()</h4>
+<p>在数组开始删除一个元素(删且只删除1个),并返回 被删除的元素（<strong>改变原数组</strong>）</p>
+<h4 id="splice-start-number">splice(start, number)</h4>
+<p>删除指定索引位置的元素</p>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="comment">// 删除索引 4 位置起，2 个元素</span></span><br><span class="line">myArray2.splice(<span class="number">4</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray2); <span class="comment">//--&gt; [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+<h3 id="修改元素">修改元素</h3>
+<h4 id="splice-index-number-item">splice(index, number, item)</h4>
+<p>功能：从数组中删除元素、插入元素到数组中或者同时完成这两种操作。</p>
+<p>输入：第一个参数为指定插入或删除的起始位置，第二个参数为要删除的个数。之后的参数表示需要插入到数组中的元素 。如果只有一个参数，默认删除参数后边的所有元素。</p>
+<p>输出：返回一个由删除元素组成的数组。</p>
+<p>注意：新建了一个数组，并修改了原数组</p>
+<p>例1：修改指定索引位置的number个元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray3 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="comment">// 修改 索引 1 的位置的元素为 AA</span></span><br><span class="line">myArray2.splice(<span class="number">1</span>, <span class="number">1</span>, <span class="string">&quot;AA&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray3); <span class="comment">//--&gt; [1, &quot;AA&quot;, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+<p>例2：修改指定索引位置的几个元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray4 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line"><span class="comment">// 在 索引 2 的位置起，修改两个元素为 AA BB</span></span><br><span class="line">myArray2.splice(<span class="number">2</span>, <span class="number">2</span>, <span class="string">&quot;AA&quot;</span>, <span class="string">&quot;BB&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray3); <span class="comment">//--&gt; [1, 2, &quot;AA&quot;, &quot;BB&quot;, 5, 6, 7]</span></span><br></pre></td></tr></table></figure>
+<h4 id="join">join()</h4>
+<p>将数组中所有元素都转化为字符串并连接在一起。</p>
+<h4 id="reverse">reverse()</h4>
+<p>将数组中的元素颠倒顺序。（<strong>改变原数组</strong>）</p>
+<h4 id="concat">concat()</h4>
+<p>数组拼接的功能 ,返回新数组，原数组不受影响。</p>
+<h4 id="slice">slice()</h4>
+<p>截取数组生成新数组，原数组不受影响。（<strong>浅拷贝数组的元素</strong>）</p>
+<p>返回的数组包含第一个参数指定的位置和所有到但不含第二个参数指定位置之间的所有元素。如果为负数，表示相对于数组中最后一个元素的位置。如果只有一个参数，表示到数组末尾。</p>
+<p>参数:</p>
+<p><strong>begin</strong>(可选): 索引数值,接受负值，从该索引处开始提取原数组中的元素,默认值为0。</p>
+<p><strong>end</strong>(可选):索引数值(不包括),接受负值，在该索引处前结束提取原数组元素，默认值为数组末尾(包括最后一个元素)。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> aa = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="built_in">console</span>.log(aa.slice(<span class="number">2</span>)); <span class="comment">//[3,4,5,6]</span></span><br><span class="line"><span class="built_in">console</span>.log(aa.slice(<span class="number">2</span>,<span class="number">8</span>)); <span class="comment">//[3,4,5,6] 超过最大长度，只显示到最后结果</span></span><br><span class="line"><span class="built_in">console</span>.log(aa.slice(<span class="number">2</span>,<span class="number">5</span>)); <span class="comment">//[3,4,5]</span></span><br><span class="line"><span class="built_in">console</span>.log(aa.slice(<span class="number">2</span>,-<span class="number">1</span>)); <span class="comment">//[3,4,5] 相对于倒数第一个之前</span></span><br><span class="line"><span class="built_in">console</span>.log(aa.slice(<span class="number">2</span>,-<span class="number">2</span>)); <span class="comment">//[3,4] 相对于倒数第二个之前</span></span><br><span class="line"><span class="built_in">console</span>.log(aa.slice(<span class="number">3</span>)); <span class="comment">//[4,5,6] 一个参数从第三个到最后</span></span><br><span class="line"><span class="built_in">console</span>.log(aa.slice(-<span class="number">2</span>));<span class="comment">//[5,6] 一个参数负值从倒数第二个到最后</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如上：新数组是浅拷贝的，元素是简单数据类型，改变之后不会互相干扰。</p>
+<p>如果是复杂数据类型(对象,数组)的话，改变其中一个，另外一个也会改变。</p>
+<p>原因在定义上面说过了的：slice()是浅拷贝，对于复杂的数据类型浅拷贝，<strong>拷贝的只是指向原数组的指针</strong>，所以无论改变原数组，还是浅拷贝的数组，都是<strong>改变原数组的数据</strong>。</p>
+</blockquote>
+<h4 id="toString-和toLocaleString">toString()和toLocaleString()</h4>
+<p>将数组的每个元素转化为字符串，并且输入用逗号分隔的字符串列表。功能类似<code>join()</code>;</p>
+<h3 id="遍历数组">遍历数组</h3>
+<h4 id="indexOf">indexOf()</h4>
+<p>定义: 返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。</p>
+<p>语法:</p>
+<p>array.indexOf(searchElement,fromIndex)<br>
+参数:</p>
+<p>searchElement(必须):被查找的元素</p>
+<p>fromIndex(可选):开始查找的位置(不能大于等于数组的长度，返回-1)，接受负值，默认值为0。</p>
+<p>严格相等的搜索:</p>
+<p>数组的indexOf搜索跟字符串的indexOf不一样,数组的indexOf使用严格相等===搜索元素，即数组元素要完全匹配才能搜索成功。</p>
+<blockquote>
+<p>注意：indexOf()不能识别NaN</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=[<span class="string">&#x27;啦啦&#x27;</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">24</span>,<span class="literal">NaN</span>]</span><br><span class="line"><span class="built_in">console</span>.log(a.indexOf(<span class="string">&#x27;啦&#x27;</span>)); <span class="comment">// -1 </span></span><br><span class="line"><span class="built_in">console</span>.log(a.indexOf(<span class="string">&#x27;NaN&#x27;</span>)); <span class="comment">// -1 </span></span><br><span class="line"><span class="built_in">console</span>.log(a.indexOf(<span class="string">&#x27;啦啦&#x27;</span>)); <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<h4 id="lastIndexOf">lastIndexOf()</h4>
+<p>定义: 方法返回指定元素,在数组中的最后一个的索引，如果不存在则返回 -1。（从数组后面往前查找）</p>
+<p>语法:</p>
+<p>arr.lastIndexOf(searchElement,fromIndex)<br>
+参数:</p>
+<p>searchElement(必须): 被查找的元素</p>
+<p>fromIndex(可选): 逆向查找开始位置，默认值数组的长度-1，即查找整个数组。</p>
+<p>关于fromIndex有三个规则:</p>
+<ol>
+<li>正值。如果该值大于或等于数组的长度，则整个数组会被查找。</li>
+<li>负值。将其视为从数组末尾向前的偏移。(比如-2，从数组最后第二个元素开始往前查找)</li>
+<li>负值。其绝对值大于数组长度，则方法返回 -1，即数组不会被查找。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=[<span class="string">&#x27;OB&#x27;</span>,<span class="number">4</span>,<span class="string">&#x27;Koro1&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;Koro1&#x27;</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="string">&#x27;Koro1&#x27;</span>]; <span class="comment">// 数组长度为10</span></span><br><span class="line"><span class="comment">// let b=a.lastIndexOf(&#x27;Koro1&#x27;,4); // 从下标4开始往前找 返回下标2</span></span><br><span class="line"><span class="comment">// let b=a.lastIndexOf(&#x27;Koro1&#x27;,100); // 大于或数组的长度 查找整个数组 返回9</span></span><br><span class="line"><span class="comment">// let b=a.lastIndexOf(&#x27;Koro1&#x27;,-11); // -1 数组不会被查找</span></span><br><span class="line"><span class="keyword">let</span> b=a.lastIndexOf(<span class="string">&#x27;Koro1&#x27;</span>,-<span class="number">9</span>); <span class="comment">// 从第二个元素4往前查找，没有找到 返回-1</span></span><br></pre></td></tr></table></figure>
+<h4 id="sort">sort()</h4>
+<p>默认情况下sort()方法没有传比较函数的话，<strong>默认按字母升序</strong>，如果不是元素不是字符串的话，会调用toString()方法将元素转化为字符串的<strong>Unicode</strong>(万国码)位点，然后再比较字符。所以用默认方法排序数据是有问题的。（<strong>改变原数组</strong>）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">20</span>,<span class="number">10</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>];</span><br><span class="line">arr.sort();<span class="comment">// [1, 10, 2, 20, 3]</span></span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a-b;    <span class="comment">//升序</span></span><br><span class="line">&#125;); <span class="comment">//[1, 2, 3, 10, 20]</span></span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> b-a;    <span class="comment">//降序</span></span><br><span class="line">&#125;); <span class="comment">//[20,10,3,2,1]</span></span><br></pre></td></tr></table></figure>
+<h4 id="forEach">forEach()</h4>
+<p>从头至尾遍历数组，为每个元素调用指定函数</p>
+<p>输入为一个待遍历函数，函数的参数依次为：数组元素、元素的索引、数组本身</p>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>无法中途退出循环，只能用return退出本次回调，进行下一次回调。</li>
+<li>它总是返回 undefined值,即使你return了一个值。</li>
+</ul>
+</blockquote>
+<h4 id="map">map()</h4>
+<p>调用的数组的每一个元素传递给指定的函数，并返回一个新数组 ,<strong>不修改原数组</strong>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> bb= arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x*x;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(bb); <span class="comment">// [4, 9, 16, 25, 36]</span></span><br></pre></td></tr></table></figure>
+<h4 id="filter">filter()</h4>
+<p>过滤功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组。<br>
+可以巧妙的用来去重</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">1</span>];</span><br><span class="line">a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">v,i,self</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> self.indexOf(v) == i;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+<h4 id="every-和some">every()和some()</h4>
+<p>every() 判断数组中每一项都是否满足条件，只有所有项都满足条件，才会返回true。</p>
+<p>some() 判断数组中是否存在满足条件的项，只要有一项满足条件，就会返回true。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">arr.every(<span class="function"><span class="params">x</span>=&gt;</span>x&gt;<span class="number">0</span>);<span class="comment">//return true;</span></span><br><span class="line">arr.every(<span class="function"><span class="params">x</span>=&gt;</span>x&gt;<span class="number">5</span>);<span class="comment">//return false;</span></span><br><span class="line">arr.some(<span class="function"><span class="params">x</span>=&gt;</span>x&gt;<span class="number">5</span>);<span class="comment">//return true;</span></span><br></pre></td></tr></table></figure>
+<h4 id="reduce-和reduceRight">reduce()和reduceRight()</h4>
+<p>reduce() 两个参数：函数和递归的初始值。从数组的第一项开始，逐个遍历到最后</p>
+<p>reduceRight() 从数组的最后一项开始，向前遍历到第一项</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以用reduce快速求数组之和</span></span><br><span class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;); <span class="comment">//10</span></span><br></pre></td></tr></table></figure>
+<h4 id="includes">includes()</h4>
+<p>定义： 返回一个布尔值，表示某个数组是否包含给定的值</p>
+<p>语法：</p>
+<p>array.includes(searchElement,fromIndex=0)<br>
+参数：</p>
+<p>searchElement(必须):被查找的元素</p>
+<p>fromIndex(可选):默认值为0，参数表示搜索的起始位置，接受负值。正值超过数组长度，数组不会被搜索，返回false。负值绝对值超过长数组度，重置从0开始搜索。</p>
+<p>includes方法是为了弥补indexOf方法的缺陷而出现的:</p>
+<ol>
+<li>indexOf方法不能识别NaN</li>
+<li>indexOf方法检查是否包含某个值不够语义化，需要判断是否不等于-1，表达不够直观</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=[<span class="string">&#x27;OB&#x27;</span>,<span class="string">&#x27;Koro1&#x27;</span>,<span class="number">1</span>,<span class="literal">NaN</span>];</span><br><span class="line"><span class="comment">// let b=a.includes(NaN); // true 识别NaN</span></span><br><span class="line"><span class="comment">// let b=a.includes(&#x27;Koro1&#x27;,100); // false 超过数组长度 不搜索</span></span><br><span class="line"><span class="comment">// let b=a.includes(&#x27;Koro1&#x27;,-3); // true 从倒数第三个元素开始搜索 </span></span><br><span class="line"><span class="comment">// let b=a.includes(&#x27;Koro1&#x27;,-100); // true 负值绝对值超过数组长度，搜索整个数组</span></span><br></pre></td></tr></table></figure>
+<h3 id="ES6新增">ES6新增</h3>
+<h4 id="Array-of">Array.of()</h4>
+<p>定义：返回由所有参数值组成的数组，如果没有参数，就返回一个空数组。</p>
+<p>目的：Array.of() 出现的目的是为了解决上述构造器因参数个数不同，导致的行为有差异的问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="built_in">Array</span>.of(<span class="number">3</span>, <span class="number">11</span>, <span class="number">8</span>); <span class="comment">// [3,11,8]</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="built_in">Array</span>.of(<span class="number">3</span>); <span class="comment">// [3]</span></span><br></pre></td></tr></table></figure>
+<h4 id="Arrar-from">Arrar.from()</h4>
+<p>定义：用于将两类对象转为真正的数组（不改变原对象，返回新的数组）。</p>
+<p>参数：</p>
+<p>第一个参数(必需):要转化为真正数组的对象。</p>
+<p>第二个参数(可选): 类似数组的map方法，对每个元素进行处理，将处理后的值放入返回的数组。</p>
+<p>第三个参数(可选): 用来绑定this。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 对象拥有length属性</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="number">0</span>: <span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>: <span class="string">&#x27;b&#x27;</span>, <span class="number">2</span>:<span class="string">&#x27;c&#x27;</span>, <span class="attr">length</span>: <span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>.from(obj); <span class="comment">// [&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;];</span></span><br><span class="line"><span class="comment">// 2. 部署了 Iterator接口的数据结构 比如:字符串、Set、NodeList对象</span></span><br><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>.from(<span class="string">&#x27;hello&#x27;</span>); <span class="comment">// [&#x27;h&#x27;,&#x27;e&#x27;,&#x27;l&#x27;,&#x27;l&#x27;]</span></span><br><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>])); <span class="comment">// [&#x27;a&#x27;,&#x27;b&#x27;]</span></span><br></pre></td></tr></table></figure>
+<h4 id="copyWithin">copyWithin()</h4>
+<p>定义: 在当前数组内部，将指定位置的成员复制到其他位置,并返回这个数组。</p>
+<p>语法:</p>
+<p>array.copyWithin(target, start = 0, end = this.length)<br>
+参数:</p>
+<p>三个参数都是数值，如果不是，会自动转为数值.</p>
+<ol>
+<li>target（必需）：从该位置开始替换数据。如果为负值，表示倒数。</li>
+<li>start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示倒数。</li>
+<li>end（可选）：到该位置前停止读取数据，默认等于数组长度。使用负数可从数组结尾处规定位置。</li>
+</ol>
+<p>浏览器兼容(MDN): chrome 45,Edge 12,Firefox32,Opera 32,Safari 9, IE 不支持</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// -2相当于3号位，-1相当于4号位</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].copyWithin(<span class="number">0</span>, -<span class="number">2</span>, -<span class="number">1</span>)</span><br><span class="line"><span class="comment">// [4, 2, 3, 4, 5]</span></span><br><span class="line"><span class="keyword">var</span> a=[<span class="string">&#x27;OB1&#x27;</span>,<span class="string">&#x27;Koro1&#x27;</span>,<span class="string">&#x27;OB2&#x27;</span>,<span class="string">&#x27;Koro2&#x27;</span>,<span class="string">&#x27;OB3&#x27;</span>,<span class="string">&#x27;Koro3&#x27;</span>,<span class="string">&#x27;OB4&#x27;</span>,<span class="string">&#x27;Koro4&#x27;</span>,<span class="string">&#x27;OB5&#x27;</span>,<span class="string">&#x27;Koro5&#x27;</span>]</span><br><span class="line"><span class="comment">// 2位置开始被替换,3位置开始读取要替换的 5位置前面停止替换</span></span><br><span class="line">a.copyWithin(<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>)</span><br><span class="line"><span class="comment">// [&quot;OB1&quot;,&quot;Koro1&quot;,&quot;Koro2&quot;,&quot;OB3&quot;,&quot;OB3&quot;,&quot;Koro3&quot;,&quot;OB4&quot;,&quot;Koro4&quot;,&quot;OB5&quot;,&quot;Koro5&quot;]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="fill">fill()</h4>
+<p>定义: 使用给定值，填充一个数组。</p>
+<p>参数:</p>
+<p>第一个元素(必须): 要填充数组的值</p>
+<p>第二个元素(可选): 填充的开始位置,默认值为0</p>
+<p>第三个元素(可选)：填充的结束位置，默认是为this.length</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>].fill(<span class="number">7</span>)</span><br><span class="line"><span class="comment">// [7, 7, 7]</span></span><br><span class="line">[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>].fill(<span class="number">7</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment">// [&#x27;a&#x27;, 7, &#x27;c&#x27;]</span></span><br></pre></td></tr></table></figure>
+<h4 id="keys-values-entries">keys()&amp;values()&amp;entries()</h4>
+<p>遍历键名、遍历键值、遍历键名+键值，三个方法都返回一个新的 Array Iterator 对象，对象根据方法不同包含不同的值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array.keys()</span><br><span class="line">array.values()</span><br><span class="line">array.entries()</span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/Algorithm-linearList/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】线性表">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/Algorithm-guide/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】数据结构与算法前言、复杂度">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      ...
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【数据结构与算法】JavaScript数组-操作数组方法总结&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/Algorithm-Array/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Wed Aug 11 2021 19:35:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E7%BB%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">创建和初始化数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">数组常见操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">添加元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#push-item"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">push(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#unshift-item"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">unshift(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-index-0-item"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">splice(index, 0, item)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">删除元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#pop-item"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">pop(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#shift-item"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">shift(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#unshift"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">unshift()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-start-number"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">splice(start, number)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">修改元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-index-number-item"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">splice(index, number, item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#join"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">join()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#reverse"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">reverse()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#concat"><span class="toc-nav-number">2.3.4.</span> <span class="toc-nav-text">concat()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#slice"><span class="toc-nav-number">2.3.5.</span> <span class="toc-nav-text">slice()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#toString-%E5%92%8CtoLocaleString"><span class="toc-nav-number">2.3.6.</span> <span class="toc-nav-text">toString()和toLocaleString()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">遍历数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#indexOf"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">indexOf()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#lastIndexOf"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">lastIndexOf()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#sort"><span class="toc-nav-number">2.4.3.</span> <span class="toc-nav-text">sort()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#forEach"><span class="toc-nav-number">2.4.4.</span> <span class="toc-nav-text">forEach()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#map"><span class="toc-nav-number">2.4.5.</span> <span class="toc-nav-text">map()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#filter"><span class="toc-nav-number">2.4.6.</span> <span class="toc-nav-text">filter()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#every-%E5%92%8Csome"><span class="toc-nav-number">2.4.7.</span> <span class="toc-nav-text">every()和some()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#reduce-%E5%92%8CreduceRight"><span class="toc-nav-number">2.4.8.</span> <span class="toc-nav-text">reduce()和reduceRight()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#includes"><span class="toc-nav-number">2.4.9.</span> <span class="toc-nav-text">includes()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ES6%E6%96%B0%E5%A2%9E"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">ES6新增</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Array-of"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">Array.of()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Arrar-from"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">Arrar.from()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#copyWithin"><span class="toc-nav-number">2.5.3.</span> <span class="toc-nav-text">copyWithin()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#fill"><span class="toc-nav-number">2.5.4.</span> <span class="toc-nav-text">fill()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#keys-values-entries"><span class="toc-nav-number">2.5.5.</span> <span class="toc-nav-text">keys()&amp;values()&amp;entries()</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#算法" title="算法">算法</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/西西">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Song木头
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">240.7k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

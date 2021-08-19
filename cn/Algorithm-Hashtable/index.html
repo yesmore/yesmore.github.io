@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="yoyoyo"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/Algorithm-Hashtable/">
+  <title>
+    
+      【数据结构与算法】哈希表（JavaScript版详解） - 快乐码原 | Song
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          <li>
+            <a href="/categories/#算法">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+          <li>
+            <a href="/categories/#爬虫">爬虫</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
+              
+            </div>
+            <h2>【数据结构与算法】哈希表（JavaScript版详解）</h2>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              By Song木头 on
+              2021-08-14
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">29</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 <span class="post-count">7.7k</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>要点：哈希表详解、JavaScript实现哈希表</p>
+<span id="more"></span>
+<h2 id="一、认识哈希表">一、认识哈希表</h2>
+<h3 id="1-0-前言">1.0 前言</h3>
+<p>1、数组进行<u>插入</u>的时候，效率比较低</p>
+<p>2、数组进行<u>查找</u>的时候：</p>
+<ul>
+<li>如果基于下标 则很快$O(1)$</li>
+<li>如果基于内容去查找，则很低</li>
+</ul>
+<p>3、数组进行删除的时候，效率低</p>
+<p>4、数组进行修改的时候：</p>
+<ul>
+<li>如果基于下标 则很快$O(1)$</li>
+<li>如果基于内容，则很低</li>
+</ul>
+<hr>
+<h4 id="基本原理">基本原理</h4>
+<p>哈希表通常是基于数组实现的</p>
+<p><strong>优势</strong>：插入-删除-查找很快、查找的速度比树还要快、编码比数组简单</p>
+<p><strong>劣势</strong>：key不能重复，数值存放是无序的。</p>
+<p>实现的关键地方：</p>
+<p>数组下标值的转换。通过<strong>哈希函数</strong>实现获取index。</p>
+<ul>
+<li>1.将字符串转换成比较大的数字，这个数字称为hashCode</li>
+<li>2.将大的数字压缩到数组(size)范围之内既index</li>
+</ul>
+<blockquote>
+<p>公式：<br>
+<code>hashCode = hashCode * prime + key.charCodeAt(i);</code>(快速计算）(霍纳法则（又称秦久韶算法）)<br>
+<code>var index = hashCode % size;</code></p>
+<p>prime为质数，且小于数组的容量。</p>
+<p>size为哈希表的长度</p>
+<p>charCodeAt()是JavaScript封装的编码方案，常用。</p>
+</blockquote>
+<h3 id="1-1-哈希表简介">1.1 哈希表简介</h3>
+<p>哈希表（hash table ）是一种根据<strong>关键字</strong><u>直接访问内存存储位置</u>的数据结构，通过哈希表，数据元素的存放位置和数据元素的关键字之间建立起某种对应关系，建立这种对应关系的函数称为哈希函数。</p>
+<p><img src="/images/algorithm19.png" alt="1"></p>
+<hr>
+<h4 id="优势">优势</h4>
+<p>哈希表通常是基于<u>数组</u>实现的，但是相对于数组，它存在更多<strong>优势</strong>：</p>
+<ul>
+<li>哈希表可以提供<u>非常快速</u>的 <strong>插入-删除-查找</strong> 操作。</li>
+<li>无论多少数据，插入和删除值都只需接近常量的时间，即 <strong>O(1)</strong> 的时间复杂度。实际上，只需要几个机器指令即可完成。</li>
+<li>哈希表的速度比树还要快，基本可以瞬间查找到想要的元素。</li>
+<li>哈希表相对于树来说编码要简单得多。</li>
+</ul>
+<h4 id="不足之处">不足之处</h4>
+<ul>
+<li>哈希表中的数据是没有顺序的，所以不能以一种固定的方式（比如从小到大 ）来遍历其中的元素。</li>
+<li>通常情况下，哈希表中的 <code>key</code> 是不允许重复的，不能放置相同的 <code>key</code>，用于保存不同的元素。</li>
+</ul>
+<h4 id="哈希表是什么">哈希表是什么</h4>
+<ul>
+<li>哈希表并不好理解，不像数组、链表和树等可通过图形的形式表示其结构和原理。</li>
+<li>哈希表的结构就是数组，但它<strong>神奇之处在于对下标值的一种变换</strong>，这种变换我们可以称之为<strong>哈希函数</strong>，通过哈希函数可以获取 HashCode。</li>
+</ul>
+<p>通过以下案例了解哈希表：</p>
+<blockquote>
+<p>案例一：公司想要存储 1000 个人的信息，每一个工号对应一个员工的信息。<u>若使用数组，增删数据时比较麻烦</u>；<u>使用链表，获取数据时比较麻烦</u>。有没有一种数据结构，能<strong>把某一员工的姓名转换为它对应的工号，再根据工号查找该员工的完整信息</strong>呢？没错此时就可以使用哈希表的哈希函数来实现。</p>
+</blockquote>
+<blockquote>
+<p>案例二：存储联系人和对应的电话号码：当要查找张三（比如）的号码时，若使用数组：由于不知道存储张三数据对象的下标值，所以查找起来十分麻烦，使用链表时也同样麻烦。而使用哈希表就能<strong>通过哈希函数把张三这个名称转换为它对应的下标值</strong>，再<strong>通过下标值查找</strong>效率就非常高了。</p>
+</blockquote>
+<blockquote>
+<p>案例三：50000个单词的存储</p>
+<p>如果<strong>单词转成数组的下标</strong>，那么要查找某个单词的信息，直接按照下标值一步即可访问到想要的元素。</p>
+</blockquote>
+<p>也就是说：哈希表最后还是基于数据来实现的，只不过哈希表能够<u>通过哈希函数把字符串转化为对应的下标值，建立字符串和下标值的映射关系</u>。</p>
+<h3 id="1-2-认识哈希化">1.2 认识哈希化</h3>
+<h4 id="字母转数字方案讨论">字母转数字方案讨论</h4>
+<h5 id="编码系统">编码系统</h5>
+<p>为了把字符串转化为对应的下标值，需要有一套编码系统，为了方便理解我们创建这样一套编码系统：比如 <u>a 为 1，b 为 2，c 为 3，以此类推 z 为 26，空格为 27</u>（不考虑大写情况）。</p>
+<p>有了编码系统后，将字母转化为数字也有很多种方案：</p>
+<h5 id="方案一：数字相加">方案一：数字相加</h5>
+<p>例如 cats 转化为数字：<code>3 + 1 + 20 + 19 = 43</code>，那么就把 43 作为 cats 单词的下标值储存在数组中；</p>
+<p>但是这种方式会存在这样的问题：很多的单词按照该方式转化为数字后都是 43，比如 was。而在数组中一个下标值只能储存一个数据，所以该方式不合理。</p>
+<h5 id="方案二：幂的连乘">方案二：幂的连乘</h5>
+<p>我们平时使用的大于 10 的数字，就是用幂的连乘来表示它的唯一性的。<br>
+比如： <code>6543 = 6 * 10^3 + 5 * 10^2 + 4 * 10 + 3</code>；这样单词也可以用该种方式来表示：<code>cats = 3 * 27^3 + 1 * 27^2 + 20 * 27 + 17 = 60337</code>。</p>
+<p>虽然该方式可以保证字符的唯一性，但是如果是较长的字符（如 aaaaaaaaaa）所表示的数字就非常大，此时要求很<u>大容量的数组</u>，然而其中却有许多下标值指向的是无效的数据（比如不存在 zxcvvv 这样的单词），造成了<u>数组空间的浪费</u>。</p>
+<p>两种方案总结：</p>
+<ul>
+<li>第一种方案（让数字相加求和）<strong>产生的数组下标太少</strong>。</li>
+<li>第二种方案（与 27 的幂相乘求和）<strong>产生的数组下标又太多</strong>。</li>
+</ul>
+<p>现在需要一种压缩方法，把幂的连乘方案系统中得到的<strong>巨大整数范围压缩到可接受的数组范围中</strong>。可以通过<strong>取余</strong>操作来实现。虽然取余操作得到的结构也有可能重复，但是可以通过其他方式解决。</p>
+<h3 id="1-3-哈希表的构造方法">1.3 哈希表的构造方法</h3>
+<p>假设要存储的数据元素个数是n，设置一个长度为m(m &gt; n)的连续存储单元，分别以每个数据元素的关键字Ki(0&lt;=i&lt;=n-1)为自变量，通过哈希函数hash(Ki)，把Ki映射为内存单元的某个地址hash(Ki),并将数据元素存储在内存单元中。</p>
+<p>从数学的角度看，哈希函数实际上是关键字到内存单元的映射，因此我们希望通过哈希函数通过尽量简单的运算使得哈希函数计算出的哈希地址尽量均匀的被映射到一系列的内存单元中；</p>
+<p><strong>构造哈希函数有三个要点</strong>：</p>
+<ul>
+<li>运算过程要尽量简单高效，以提高哈希表的插入和检索效率；</li>
+<li>哈希函数应该具有较好的散列型，以降低哈希冲突的概率；</li>
+<li><u>哈希函数应具有较大的压缩性</u>，以节省内存。</li>
+</ul>
+<p>常用方法：</p>
+<h4 id="直接地址法">直接地址法</h4>
+<p>直接地址法：以关键字的某个线性函数值为哈希地址，可以表示为hash(K)=aK+C;优点是不会产生冲突，缺点是<u>空间复杂度可能会较高</u>，<u>适用于元素较少</u>的情况。</p>
+<h4 id="除留余数法">除留余数法</h4>
+<p>除留余数法：它是由数据元素关键字除以某个常数所留的余数为哈希地址，该方法计算简单，适用范围广，是经常使用的一种哈希函数，可以表示为：<br>
+<code>hash(K=K mod C)</code>;</p>
+<p>该方法的关键是常数的选取，一般要求是接近或等于哈希表本身的长度，研究理论表明，该常数选素数时效果最好</p>
+<h4 id="数字分析法">数字分析法</h4>
+<p>数字分析法：该方法是取数据元素关键字中某些取值较均匀的数字来作为哈希地址的方法，这样可以尽量避免冲突，但是该方法只适合于所有关键字已知的情况，对于想要设计出更加通用的哈希表并不适用。</p>
+<h4 id="平方求和法">平方求和法</h4>
+<p>平方求和法：对当前字串转化为<code>Unicode</code>值，并求出这个值的平方，去平方值中间的几位为当前数字的hash值，具体取几位要取决于当前哈希表的大小。</p>
+<h4 id="分段求和法">分段求和法</h4>
+<p>分段求和法：根据当前哈希表的位数把所要插入的数值分成若干段，把若干段进行相加，舍去调最高位结果就是这个值的哈希值。</p>
+<h3 id="1-4-哈希表的一些概念">1.4 哈希表的一些概念</h3>
+<h4 id="哈希化">哈希化</h4>
+<p>将<strong>大数字</strong>转化成<strong>数组范围内下标</strong>的过程，称之为哈希化。</p>
+<h4 id="哈希函数">哈希函数</h4>
+<p>我们通常会将单词转化成大数字，把大数字进行哈希化的代码实现放在一个函数中，该函数就称为哈希函数。</p>
+<h4 id="哈希表">哈希表</h4>
+<p><u>对</u><u>最终数据插入的数组进行整个结构的封装</u>，得到的就是哈希表。</p>
+<h3 id="1-5-地址的冲突">1.5 地址的冲突</h3>
+<p>在实际中，<u>经过哈希函数哈希化过后得到的<strong>下标值</strong>可能有重复，这种情况称为冲突</u>，冲突是不可避免的，我们只能解决冲突。</p>
+<p>解决冲突常见的两种方案：<u>链地址法（拉链法）</u>和<u>开放地址法</u>。</p>
+<h4 id="链地址法（拉链法）">链地址法（拉链法）</h4>
+<p>如下图所示，我们将每一个数字都对 <u>10 进行取余</u>操作，则<u>余数的范围 0~9 作为数组的下标值</u>。并且，数组每一个下标值对应的位置存储的不再是一个数字了，而是存储由经过取余操作后得到<u>相同余数的数字组成的数组或链表</u>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.5irlba213e00.png" alt="image"></p>
+<p>这样可以根据下标值获取到整个数组或链表，之后继续在数组或链表中查找就可以了。而且，产生冲突的元素一般不会太多。</p>
+<p>总结：链地址法解决冲突的办法是每个数组单元中存储的不再是单个数据，而是一条链条，这条链条常使用的数据结构为数组或链表，<u>两种数据结构查找的效率相当</u>（因为链条的元素一般不会太多）。</p>
+<h4 id="开放地址法">开放地址法</h4>
+<p>开放地址法的主要工作方式是<u>寻找空白的单元格来放置冲突的数据项</u>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.52qzixg5w4s0.png" alt="image"></p>
+<p>根据探测空白单元格位置方式的不同，可分为三种方法：</p>
+<ul>
+<li>线性探测</li>
+<li>二次探测</li>
+<li>再哈希法</li>
+</ul>
+<h5 id="线性探测">线性探测</h5>
+<p><strong>1、当插入 13 时</strong>：</p>
+<p>经过哈希化（对 10 取余）之后得到的下标值 index=3，但是该位置已经放置了数据 33。而线性探测就是从 <code>index+1</code> 开始向后一个一个来查找合适的位置来放置 13，所谓合适的位置指的是空的位置，如上图中 index=4 的位置就是合适的位置。</p>
+<p><strong>2、当查询 13 时</strong>：</p>
+<p>首先 13 经过哈希化得到 index=3，如果 index=3 的位置存放的数据与需要查询的数据 13 相同，就直接返回；<br>
+不相同时，则线性查找，从 <code>index+1</code> 位置开始一个一个位置地查找数据 13。</p>
+<p><u>查询过程中不会遍历整个哈希表，只要查询到空位置，就停止</u>，因为插入 13 时不会跳过空位置去插入其他位置。</p>
+<p><strong>3、当删除 13 时</strong>：</p>
+<p>删除操作和上述两种情况类似，但需要注意的是，删除一个数据项时，<strong>不能</strong>将该位置下标的内容设置为 <code>null</code>，否则会影响到之后其他的查询操作，<u>因为一遇到为 null 的位置就会停止查找</u>。</p>
+<p>通常删除一个位置的数据项时，我们可以将它进行特殊处理（比如设置为<code>-1</code>），这样在查找时遇到-1 就知道要继续查找。</p>
+<h6 id="线性探测存在的问题——聚集">线性探测存在的问题——聚集</h6>
+<p>线性探测存在一个比较严重的问题，就是<strong>聚集</strong>。</p>
+<p>如哈希表中还没插入任何元素时，插入 23、24、25、26、27，这就意味着下标值为 3、4、5、6、7 的位置都放置了数据，这种<u>一连串填充单元就称为聚集</u>。</p>
+<p>聚集会影响哈希表的性能，无论是插入/查询/删除都会影响。</p>
+<p>比如插入 13 时就会发现，连续的单元 3~7 都不允许插入数据，并且在插入的过程中需要经历多次这种情况。二次探测法可以解决该问题。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.47l36021j8m0.png" alt="image"></p>
+<h5 id="二次探测——解决聚集">二次探测——解决聚集</h5>
+<p>1、上文所说的线性探测存在的问题：</p>
+<p>如果之前的数据是连续插入的，那么新插入的一个数据可能需要探测很长的距离；</p>
+<p>2、二次探测是在线性探测的基础上进行了优化：</p>
+<p>线性探测：我们可以看成是<strong>步长为 1</strong> 的探测，比如从下标值 x 开始，那么线性探测就是按照下标值：x+1、x+2、x+3 等依次探测；</p>
+<p>3、二次探测：<u>对步长进行了优化</u>，比如从下标值 x 开始探测：<code>x+1^2^、x+2^2^、x+3^3^</code> 。这样一次性探测比较长的距离，避免了数据聚集带来的影响。</p>
+<p>4、二次探测存在的问题：</p>
+<p>当插入数据分布性较大的一组数据时，比如：13-163-63-3-213，这种情况会造成步长不一的一种聚集（虽然这种情况出现的概率较线性探测的聚集要小），同样会影响性能。</p>
+<h5 id="再哈希法">再哈希法</h5>
+<p>在开放地址法中寻找空白单元格的最好的解决方式为再哈希化。</p>
+<ul>
+<li>二次探测的步长是<u>固定的</u>：1，4，9，16 依次类推。</li>
+<li>现在需要一种方法：产生一种<u>依赖关键字(数据)的探测序列</u>，而不是每个关键字探测步长都一样。</li>
+<li>这样，<u>不同的关键字即使映射到相同的数组下标，也可以使用不同的探测序列</u>。</li>
+<li>再哈希法的做法为：<u>把关键字用另一个哈希函数，再做一次哈希化</u>，用这次哈希化的结果作为该关键字的步长。</li>
+</ul>
+<p>第二次哈希化需要满足以下两点：</p>
+<ul>
+<li>和第一个哈希函数不同，不然哈希化后的结果仍是原来位置；</li>
+<li>不能输出为 0，否则每次探测都是原地踏步的死循环；</li>
+</ul>
+<p><strong>优秀的哈希函数</strong>：</p>
+<p><code>stepSize = constant - （key % constant）</code></p>
+<blockquote>
+<p>其中 constant 是<u>质数常量</u>，且小于数组的容量；</p>
+<p>例如：<u>stepSize = 5 - （key % 5）</u>，满足需求，并且结果不可能为 0；</p>
+</blockquote>
+<p><strong>哈希化的效率</strong></p>
+<p>哈希表中执行插入和搜索操作效率是非常高的。</p>
+<ul>
+<li>如果没有发生冲突，那么效率就会更高；</li>
+<li>如果发生冲突，存取时间就依赖后来的探测长度；</li>
+<li>平均探测长度以及平均存取时间，取决于<u>填装因子</u>，随着填装因子变大，探测长度会越来越长。</li>
+</ul>
+<h4 id="装填因子">装填因子</h4>
+<p>装填因子表示当前哈希表中<strong>已经包含的数据项</strong>和<strong>整个哈希表长度的比值</strong>；</p>
+<p><strong>装填因子 = 总数据项 / 哈希表长度</strong>；</p>
+<blockquote>
+<p>例当前哈希表中有5项数据，哈希表总长度为10，则填装因子为0.5</p>
+</blockquote>
+<p>开放地址法的装填因子最大为 1，因为只有空白的单元才能放入元素；</p>
+<p>链地址法的装填因子可以大于 1，因为只要愿意，拉链法可以无限延伸下去；</p>
+<h4 id="不同探测方式性能的比较">不同探测方式性能的比较</h4>
+<p><strong>线性探测</strong></p>
+<p>可以看到，随着装填因子的增大，平均探测长度呈指数形式增长，性能较差。实际情况中，最好的装填因子取决于存储效率和速度之间的平衡，随着<u>装填因子变小，存储效率下降，而速度上升</u>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.2pcxv1f720o0.png" alt="image"></p>
+<p><strong>二次探测和再哈希化的性能</strong></p>
+<p>二次探测和再哈希法性能相当，它们的性能比线性探测略好。由下图可知，<u>随着装填因子的变大，平均探测长度呈指数形式增长，需要探测的次数也呈指数形式增长，性能不高</u>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.f06tizypf6g.png" alt="image"></p>
+<p><strong>链地址法的性能</strong></p>
+<p>可以看到随着装填因子的增加，平均探测长度呈<u>线性增长</u>，较为平缓。在开发中使用链地址法较多，比如 Java 中的 HashMap 中使用的就是链地址法。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.45s3ntwwjia0.png" alt="image"></p>
+<h3 id="1-6-哈希函数">1.6 哈希函数</h3>
+<p>哈希表的优势在于它的速度，所以哈希函数不能采用消耗性能较高的复杂算法。提高速度的一个方法是在哈希函数中<u>尽量减少乘法和除法</u>。</p>
+<p>性能高的哈希函数应具备以下<u>两个优点</u>：</p>
+<ul>
+<li>快速的计算；</li>
+<li>均匀的分布；</li>
+</ul>
+<h4 id="快速计算">快速计算</h4>
+<p><strong>霍纳法则</strong>：在中国霍纳法则也叫做<u>秦久韶算法</u>，具体算法为：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.4kz61djvvau0.png" alt="image"></p>
+<p>求多项式的值时，首先计算最内层括号内一次多项式的值，然后由内向外逐层计算一次多项式的值。这种算法把求 n 次多项式 f(x)的值就转化为<strong>求 n 个一次多项式的值</strong>。</p>
+<p><strong>变换之前：</strong></p>
+<ul>
+<li>乘法次数：<code>n(n+1)/2</code> 次；</li>
+<li>$O((N^2+n)/2)=O(N^2)$​</li>
+<li>加法次数：<code>n</code> 次；</li>
+</ul>
+<p><strong>变换之后：</strong></p>
+<ul>
+<li>乘法次数：<code>n</code> 次；$O(N)$</li>
+<li>加法次数：<code>n</code> 次；</li>
+</ul>
+<p>时间复杂度：从变换前的 $O(N^2)$ 降到了 $O(N)$。</p>
+<h4 id="均匀分布">均匀分布</h4>
+<p>在设计哈希表时，我们已经有办法处理映射到相同下标值的情况：<u>链地址法或者开放地址法</u>。但是，<u>为了提高效率</u>，最好的情况还是让数据在哈希表中均匀分布。因此，我们需要在使用常量的地方，尽量使用<strong>质数</strong>。比如：<u>哈希表的长度、N 次幂的底数</u>等。</p>
+<p>Java 中的 HashMap 采用的是链地址法，哈希化采用的是公式为：<code>index = HashCode(key) &amp; (Length-1)</code> 即将数据化为二进制进行与运算，而不是取余运算。这样计算机直接运算二进制数据，效率更高。但是 JavaScript 在进行较大数据的与运算时会出现问题，所以我们使用 JavaScript 实现哈希化时采用取余运算。</p>
+<h2 id="二、封装哈希表">二、封装哈希表</h2>
+<h3 id="2-1-哈希表常见操作">2.1 哈希表常见操作</h3>
+<p><code>put(key, value)</code> 插入或修改操作。</p>
+<p><code>get(key)</code> 获取哈希表中特定位置的元素。</p>
+<p><code>remove(key)</code> 删除哈希表中特定位置的元素。</p>
+<p><code>isEmpty()</code> 如果哈希表中不包含任何元素，返回 <code>trun</code>，如果哈希表长度大于 0 则返回 <code>false</code>。</p>
+<p><code>size()</code> 返回哈希表包含的元素个数。</p>
+<p><code>resize(value)</code> 对哈希表进行扩容操作。</p>
+<h3 id="2-2-哈希函数的简单实现">2.2 哈希函数的简单实现</h3>
+<p>首先使用<u>霍纳法则</u>计算 hashCode 的值，<u>通过取余操作实现哈希化，此处先简单地指定数组的大小。</u></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">hashFn</span>(<span class="params">string, limit = <span class="number">7</span></span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 自己采用的一个质数（无强制要求，质数即可）</span></span><br><span class="line">  <span class="keyword">const</span> PRIME = <span class="number">37</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 1、定义存储 hashCode 的变量</span></span><br><span class="line">  <span class="keyword">let</span> hashCode = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2、使用霍纳法则（秦九韶算法），计算 hashCode 的值</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> string) &#123;</span><br><span class="line">    hashCode = PRIME * hashCode + item.charCodeAt();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3、对 hashCode 取余，并返回</span></span><br><span class="line">  <span class="keyword">return</span> hashCode % limit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>哈希函数测试</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(hashFn(<span class="string">&quot;123&quot;</span>)); <span class="comment">//--&gt; 5</span></span><br><span class="line"><span class="built_in">console</span>.log(hashFn(<span class="string">&quot;abc&quot;</span>)); <span class="comment">//--&gt; 6</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-3-哈希表的实现">2.3 哈希表的实现</h3>
+<h4 id="创建哈希表类">创建哈希表类</h4>
+<p>封装的哈希表的数据结构模型：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.7h3eahcbrvs0.png" alt="image"></p>
+<p>首先创建哈希表类 HashTable，并添加必要的属性和上面实现的哈希函数，再进行其他方法的实现。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HashTable</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.storage = []; <span class="comment">// 哈希表存储数据的变量</span></span><br><span class="line">    <span class="built_in">this</span>.count = <span class="number">0</span>;    <span class="comment">// 当前存放的元素个数</span></span><br><span class="line">    <span class="built_in">this</span>.limit = <span class="number">7</span>;    <span class="comment">// 哈希表长度（初始设为质数 7）</span></span><br><span class="line">    <span class="built_in">this</span>.loadFactor = <span class="built_in">this</span>.count / <span class="built_in">this</span>.limit <span class="comment">// 装填因子</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="put-key-value">put(key,value)</h4>
+<p>哈希表的插入和修改操作是同一个函数：因为，当使用者传入一个 <code>[key, value]</code> 时，如果原来不存在该 key，那么就是插入操作，如果原来已经存在该 key，那么就是修改操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.2a81gwdznn8k.png" alt="image"></p>
+<p>实现思路：</p>
+<ul>
+<li>首先，根据 <code>key</code> 获取索引值 <code>index</code>，目的为将数据插入到 <strong>storage</strong> 的对应位置；</li>
+<li>然后，根据索引值取出 <strong>bucket</strong>，如果 bucket 不存在，先创建 bucket，随后放置在该索引值的位置；</li>
+<li>接着，<u>判断新增还是修改原来的值</u>。如果已经有值了，就修改该值；如果没有，就执行后续操作。</li>
+<li>最后，进行新增数据操作。</li>
+</ul>
+<p>代码实现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// put(key, value) 往哈希表里添加数据</span></span><br><span class="line"><span class="function"><span class="title">put</span>(<span class="params">key, value</span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 1、根据 key 获取要映射到 storage 里面的 index（通过哈希函数获取）</span></span><br><span class="line">  <span class="keyword">const</span> index = hashFn(key, <span class="built_in">this</span>.limit);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2、根据 index 取出对应的 bucket</span></span><br><span class="line">  <span class="keyword">let</span> bucket = <span class="built_in">this</span>.storage[index];</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3、判断是否存在 bucket</span></span><br><span class="line">  <span class="keyword">if</span> (bucket === <span class="literal">undefined</span>) &#123;</span><br><span class="line">    bucket = [];  <span class="comment">// 不存在则创建</span></span><br><span class="line">    <span class="built_in">this</span>.storage[index] = bucket;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 4、判断是插入数据操作还是修改数据操作</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; bucket.length; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> tuple = bucket[i]; <span class="comment">// tuple 的格式：[key, value]</span></span><br><span class="line">    <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123; <span class="comment">// 如果 key 相等，则修改数据</span></span><br><span class="line">      tuple[<span class="number">1</span>] = value;</span><br><span class="line">      <span class="keyword">return</span>; <span class="comment">// 修改完 tuple 里数据，return 终止不再往下执行。</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 5、bucket 新增数据</span></span><br><span class="line">  bucket.push([key, value]); <span class="comment">// bucket 存储元组 tuple，格式为 [key, value]</span></span><br><span class="line">  <span class="built_in">this</span>.count++;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 判断哈希表是否要扩容，若装填因子 &gt; 0.75，则扩容</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">this</span>.count / <span class="built_in">this</span>.limit &gt; <span class="built_in">this</span>.loadFactor) &#123;</span><br><span class="line">    <span class="built_in">this</span>.resize(<span class="built_in">this</span>.getPrime(<span class="built_in">this</span>.limit * <span class="number">2</span>));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="get-key">get(key)</h4>
+<p>实现思路：</p>
+<ul>
+<li>首先，根据 key 通过哈希函数获取它在 <code>storage</code> 中对应的索引值 <code>index</code>。</li>
+<li>然后，根据索引值获取对应的 <code>bucket</code>。</li>
+<li>接着，判断获取到的 <code>bucket</code> 是否为 <code>null</code>，如果为 <code>null</code>，直接返回 <code>null</code>。</li>
+<li>随后，线性遍历 <code>bucket</code> 中每一个 <code>key</code> 是否等于传入的 <code>key</code>。如果等于，直接返回对应的 <code>value</code>。</li>
+<li>最后，遍历完 <code>bucket</code> 后，仍然没有找到对应的 <code>key</code>，直接 <code>return null</code> 即可。</li>
+</ul>
+<p>代码实现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据 get(key) 获取 value</span></span><br><span class="line"><span class="function"><span class="title">get</span>(<span class="params">key</span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> index = hashFn(key, <span class="built_in">this</span>.limit);</span><br><span class="line">  <span class="keyword">const</span> bucket = <span class="built_in">this</span>.storage[index];</span><br><span class="line">  <span class="keyword">if</span> (bucket === <span class="literal">undefined</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> tuple <span class="keyword">of</span> bucket) &#123;</span><br><span class="line">    <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123;</span><br><span class="line">      <span class="keyword">return</span> tuple[<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="remove-key">remove(key)</h4>
+<p>实现思路：</p>
+<ul>
+<li>首先，根据 key 通过哈希函数获取它在 <code>storage</code> 中对应的索引值 <code>index</code>。</li>
+<li>然后，根据索引值获取对应的 <code>bucket</code>。</li>
+<li>接着，判断获取到的 <code>bucket</code> 是否为 <code>null</code>，如果为 <code>null</code>，直接返回 <code>null</code>。</li>
+<li>随后，线性查找 <code>bucket</code>，寻找对应的数据，并且删除。</li>
+<li>最后，依然没有找到，返回 <code>null</code>。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// remove(key) 删除指定 key 的数据</span></span><br><span class="line"><span class="function"><span class="title">remove</span>(<span class="params">key</span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> index = hashFn(key, <span class="built_in">this</span>.limit);</span><br><span class="line">  <span class="keyword">const</span> bucket = <span class="built_in">this</span>.storage[index];</span><br><span class="line">  <span class="keyword">if</span> (bucket === <span class="literal">undefined</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 遍历 bucket，找到对应位置的 tuple，将其删除</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = bucket.length; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> tuple = bucket[i];</span><br><span class="line">    <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123;</span><br><span class="line">      bucket.splice(i, <span class="number">1</span>); <span class="comment">// 删除对应位置的数组项</span></span><br><span class="line">      <span class="built_in">this</span>.count--;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 根据装填因子的大小，判断是否要进行哈希表压缩</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">this</span>.limit &gt; <span class="number">7</span> &amp;&amp; <span class="built_in">this</span>.count / <span class="built_in">this</span>.limit &lt; <span class="built_in">this</span>.minLoadFactor) &#123;</span><br><span class="line">        <span class="built_in">this</span>.resize(<span class="built_in">this</span>.getPrime(<span class="built_in">Math</span>.floor(<span class="built_in">this</span>.limit / <span class="number">2</span>)));</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> tuple;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="isEmpty">isEmpty()</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">isEmpty</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span>.count === <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="size">size()</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">size</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span>.count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三、哈希表的扩容与压缩">三、哈希表的扩容与压缩</h2>
+<h3 id="3-1-扩容原理">3.1 扩容原理</h3>
+<h4 id="为什么需要扩容">为什么需要扩容</h4>
+<p>前面我们在哈希表中使用的是长度为 7 的数组，由于使用的是链地址法，装填因子(loadFactor)可以大于 1，所以这个哈希表可以无限制地插入新数据。</p>
+<p>但是，<u>随着数据量的增多</u>，storage 中每一个 <code>index</code> 对应的 <code>bucket</code> 数组（链表）就会<u>越来越长</u>，这就会造成哈希表效率的降低。</p>
+<h4 id="什么情况下需要扩容">什么情况下需要扩容</h4>
+<p>常见的情况是 <code>loadFactor &gt; 0.75</code> 的时候进行扩容。</p>
+<h4 id="如何进行扩容">如何进行扩容</h4>
+<p>简单的扩容可以直接扩大两倍（关于质数，之后讨论）。</p>
+<p>扩容之后所有的数据项都要进行同步修改。</p>
+<h4 id="实现思路">实现思路</h4>
+<p>首先，定义一个变量，比如 oldStorage 指向原来的 <code>storage</code>。</p>
+<p>然后，创建一个新的容量更大的数组，让 <code>this.storage</code> 指向它。</p>
+<p>最后，将 oldStorage 中的每一个 bucket 中的每一个数据取出来依次添加到 <code>this.storage</code> 指向的新数组中。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.7xrayvjwh2w.png" alt="image"></p>
+<h3 id="3-2-resize-的实现">3.2 resize() 的实现</h3>
+<p>装填因子 = 哈希表中数据 / 哈希表长度</p>
+<blockquote>
+<p><code>loadFactor = count / HashTable.length</code></p>
+</blockquote>
+<p>resize 方法，既可以实现<u>哈希表的扩容</u>，也可以实现<u>哈希表容量的压缩</u>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重新调整哈希表大小，扩容或压缩</span></span><br><span class="line"><span class="function"><span class="title">resize</span>(<span class="params">newLimit</span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 1、保存旧的 storage 数组内容</span></span><br><span class="line">  <span class="keyword">const</span> oldStorage = <span class="built_in">this</span>.storage;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2、重置所有属性</span></span><br><span class="line">  <span class="built_in">this</span>.storage = [];</span><br><span class="line">  <span class="built_in">this</span>.count = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">this</span>.limit = newLimit;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3、遍历 oldStorage，取出所有数据，重新 put 到 this.storage</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> bucket <span class="keyword">of</span> oldStorage) &#123;</span><br><span class="line">    <span class="keyword">if</span> (bucket) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">const</span> b <span class="keyword">of</span> bucket) &#123;</span><br><span class="line">        <span class="built_in">this</span>.put(b[<span class="number">0</span>], b[<span class="number">1</span>]);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通常情况下当装填因子 <code>laodFactor &gt; 0.75</code> 时，对哈希表进行扩容。在哈希表中的<u>添加方法</u>（<a href="#put(key,value)">put方法</a>）中添加如下代码，判断是否需要调用扩容函数进行扩容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断哈希表是否要扩容，若装填因子 &gt; 0.75，则扩容</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">this</span>.count / <span class="built_in">this</span>.limit &gt; <span class="built_in">this</span>.loadFactor) &#123;</span><br><span class="line">  <span class="built_in">this</span>.resize(<span class="built_in">this</span>.getPrime(<span class="built_in">this</span>.limit * <span class="number">2</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当装填因子 <code>laodFactor &lt; 0.25</code> 时，对哈希表容量进行压缩。在哈希表中的<u>删除方法</u>（<a href="#remove(key)">remove方法</a>）中添加如下代码，判断是否需要调用扩容函数进行压缩。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据装填因子的大小，判断是否要进行哈希表压缩</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">this</span>.limit &gt; <span class="number">7</span> &amp;&amp; <span class="built_in">this</span>.count / <span class="built_in">this</span>.limit &lt; <span class="built_in">this</span>.minLoadFactor) &#123;</span><br><span class="line">  <span class="built_in">this</span>.resize(<span class="built_in">this</span>.getPrime(<span class="built_in">Math</span>.floor(<span class="built_in">this</span>.limit / <span class="number">2</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-选择质数作为哈希表容量">3.3 选择质数作为哈希表容量</h3>
+<h4 id="质数判断">质数判断</h4>
+<blockquote>
+<p><strong>1 不是质数</strong></p>
+</blockquote>
+<p><strong>方法一</strong>：针对质数的特点：<u>只能被 1 和 number 整除，不能被 2 ~ (number-1)整除</u>。遍历 2 ~ (num-1) 。</p>
+<p>这种方法虽然能实现质数的判断，但是效率不高。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPrime</span>(<span class="params">number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (number &lt;= <span class="number">1</span>) </span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &lt; number; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (number % i === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>方法二</strong>：只需要<u>遍历 2 ~ num 的平方根</u>即可。该方法性能较好。</p>
+<blockquote>
+<p>对于每个数n，并不需要从2判断到n-1.</p>
+<p>一个数若可以进行因数分解，那么分解时得到的两个数一定是一个小于等于sqrt(n)，一个大于sqrt(n).</p>
+<p>比如16可以被分解，那么是<code>2*8</code>，2小于sqrt(16)；8大于sqrt(16)；而<code>4*4</code>都是等于sqrt(16)；</p>
+<p>所以只需遍历到**等于sqrt(n)**即可。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPrime</span>(<span class="params">number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (number &lt;= <span class="number">1</span> || number === <span class="number">4</span>) </span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">const</span> temp = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.sqrt(number));</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &lt; temp; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (number % i === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="实现扩容或压缩后的哈希表容量为质数">实现扩容或压缩后的哈希表容量为质数</h4>
+<p>实现思路：</p>
+<p>2 倍扩容或压缩之后，通过循环调用 <code>isPrime</code> 判断得到的容量是否为质数，不是则+1，直到是为止。比如原长度：7，2 倍扩容后长度为 14，14 不是质数，<code>14 + 1 = 15</code> 不是质数，<code>15 + 1 = 16</code> 不是质数，<code>16 + 1 = 17</code> 是质数，停止循环，由此得到质数 17。</p>
+<p><strong>第一步</strong>：首先需要为 HashTable 类添加判断质数的 <code>isPrime</code> 方法和获取质数的 <code>getPrime</code> 方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// getPrime(number) 根据传入的 number 获取最临近的质数</span></span><br><span class="line"><span class="function"><span class="title">getPrime</span>(<span class="params">number</span>)</span> &#123;</span><br><span class="line">  <span class="keyword">while</span> (!isPrime(number)) &#123;</span><br><span class="line">    number++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>第二步</strong>：修改添加元素的 <code>put</code> 方法和删除元素的 <code>remove</code> 方法中关于数组扩容的相关操作：</p>
+<p>在 <code>put</code> 方法中添加如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断哈希表是否要扩容，若装填因子 &gt; 0.75，则扩容</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">this</span>.count / <span class="built_in">this</span>.limit &gt; <span class="built_in">this</span>.loadFactor) &#123;</span><br><span class="line">  <span class="built_in">this</span>.resize(<span class="built_in">this</span>.getPrime(<span class="built_in">this</span>.limit * <span class="number">2</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>第三步</strong>：在 <code>remove</code> 方法中添加如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据装填因子的大小，判断是否要进行哈希表压缩</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">this</span>.limit &gt; <span class="number">7</span> &amp;&amp; <span class="built_in">this</span>.count / <span class="built_in">this</span>.limit &lt; <span class="built_in">this</span>.minLoadFactor) &#123;</span><br><span class="line">  <span class="built_in">this</span>.resize(<span class="built_in">this</span>.getPrime(<span class="built_in">Math</span>.floor(<span class="built_in">this</span>.limit / <span class="number">2</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四、哈希表完整实现">四、哈希表完整实现</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HashTable</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.storage = []; <span class="comment">// 哈希表存储数据的变量</span></span><br><span class="line">    <span class="built_in">this</span>.count = <span class="number">0</span>; <span class="comment">// 当前存放的元素个数</span></span><br><span class="line">    <span class="built_in">this</span>.limit = <span class="number">7</span>; <span class="comment">// 哈希表长度（初始设为质数 7）</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 装填因子(已有个数/总个数)</span></span><br><span class="line">    <span class="built_in">this</span>.loadFactor = <span class="number">0.75</span>;</span><br><span class="line">    <span class="built_in">this</span>.minLoadFactor = <span class="number">0.25</span>;</span><br><span class="line">  &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">// 是否为质数</span></span><br><span class="line">  <span class="function"><span class="title">isPrime</span>(<span class="params">number</span>)</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (number &lt;= <span class="number">1</span> || number === <span class="number">4</span>) </span><br><span class="line">          <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      <span class="keyword">const</span> temp = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.sqrt(number));</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &lt; temp; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (number % i === <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 生成质数：根据传入的 number 获取最临近的质数</span></span><br><span class="line">  <span class="function"><span class="title">getPrime</span>(<span class="params">number</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (!isPrime(number)) &#123;</span><br><span class="line">      number++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// put(key, value) 往哈希表里添加数据</span></span><br><span class="line">  <span class="function"><span class="title">put</span>(<span class="params">key, value</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1、根据 key 获取要映射到 storage 里面的 index（通过哈希函数获取）</span></span><br><span class="line">    <span class="keyword">const</span> index = hashFn(key, <span class="built_in">this</span>.limit);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2、根据 index 取出对应的 bucket</span></span><br><span class="line">    <span class="keyword">let</span> bucket = <span class="built_in">this</span>.storage[index];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3、判断是否存在 bucket</span></span><br><span class="line">    <span class="keyword">if</span> (bucket === <span class="literal">undefined</span>) &#123;</span><br><span class="line">      bucket = []; <span class="comment">// 不存在则创建</span></span><br><span class="line">      <span class="built_in">this</span>.storage[index] = bucket;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4、判断是插入数据操作还是修改数据操作</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; bucket.length; i++) &#123;</span><br><span class="line">      <span class="keyword">let</span> tuple = bucket[i]; <span class="comment">// tuple 的格式：[key, value]</span></span><br><span class="line">      <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123;</span><br><span class="line">        <span class="comment">// 如果 key 相等，则修改数据</span></span><br><span class="line">        tuple[<span class="number">1</span>] = value;</span><br><span class="line">        <span class="keyword">return</span>; <span class="comment">// 修改完 tuple 里数据，return 终止，不再往下执行。</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5、bucket 新增数据</span></span><br><span class="line">    bucket.push([key, value]); <span class="comment">// bucket 存储元组 tuple，格式为 [key, value]</span></span><br><span class="line">    <span class="built_in">this</span>.count++;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判断哈希表是否要扩容，若装填因子 &gt; 0.75，则扩容</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.count / <span class="built_in">this</span>.limit &gt; <span class="built_in">this</span>.loadFactor) &#123;</span><br><span class="line">      <span class="built_in">this</span>.resize(<span class="built_in">this</span>.getPrime(<span class="built_in">this</span>.limit * <span class="number">2</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 根据 get(key) 获取 value</span></span><br><span class="line">  <span class="function"><span class="title">get</span>(<span class="params">key</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> index = hashFn(key, <span class="built_in">this</span>.limit);</span><br><span class="line">    <span class="keyword">const</span> bucket = <span class="built_in">this</span>.storage[index];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (bucket === <span class="literal">undefined</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> tuple <span class="keyword">of</span> bucket) &#123;</span><br><span class="line">      <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123;</span><br><span class="line">        <span class="keyword">return</span> tuple[<span class="number">1</span>];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// remove(key) 删除指定 key 的数据</span></span><br><span class="line">  <span class="function"><span class="title">remove</span>(<span class="params">key</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> index = hashFn(key, <span class="built_in">this</span>.limit);</span><br><span class="line">    <span class="keyword">const</span> bucket = <span class="built_in">this</span>.storage[index];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (bucket === <span class="literal">undefined</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历 bucket，找到对应位置的 tuple，将其删除</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = bucket.length; i &lt; len; i++) &#123;</span><br><span class="line">      <span class="keyword">const</span> tuple = bucket[i];</span><br><span class="line">      <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123;</span><br><span class="line">        bucket.splice(i, <span class="number">1</span>); <span class="comment">// 删除对应位置的数组项</span></span><br><span class="line">        <span class="built_in">this</span>.count--;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 根据装填因子的大小，判断是否要进行哈希表压缩</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span>.limit &gt; <span class="number">7</span> &amp;&amp; <span class="built_in">this</span>.count / <span class="built_in">this</span>.limit &lt; <span class="built_in">this</span>.minLoadFactor) &#123;</span><br><span class="line">          <span class="built_in">this</span>.resize(<span class="built_in">this</span>.getPrime(<span class="built_in">Math</span>.floor(<span class="built_in">this</span>.limit / <span class="number">2</span>)));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> tuple;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">isEmpty</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.count === <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">size</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.count;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 重新调整哈希表大小，扩容或压缩</span></span><br><span class="line">  <span class="function"><span class="title">resize</span>(<span class="params">newLimit</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1、保存旧的 storage 数组内容</span></span><br><span class="line">    <span class="keyword">const</span> oldStorage = <span class="built_in">this</span>.storage;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2、重置所有属性</span></span><br><span class="line">    <span class="built_in">this</span>.storage = [];</span><br><span class="line">    <span class="built_in">this</span>.count = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">this</span>.limit = newLimit;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3、遍历 oldStorage，取出所有数据，重新 put 到 this.storage</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> bucket <span class="keyword">of</span> oldStorage) &#123;</span><br><span class="line">      <span class="keyword">if</span> (bucket) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> b <span class="keyword">of</span> bucket) &#123;</span><br><span class="line">          <span class="built_in">this</span>.put(b[<span class="number">0</span>], b[<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/Algorithm-Tree/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】树与二叉树（JavaScript版详解）">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/Algorithm-set＆map/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】集合、字典（JavaScript版详解）">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      ...
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【数据结构与算法】哈希表（JavaScript版详解）&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/Algorithm-Hashtable/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Sat Aug 14 2021 14:32:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E8%AE%A4%E8%AF%86%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、认识哈希表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-0-%E5%89%8D%E8%A8%80"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.0 前言</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">基本原理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-%E5%93%88%E5%B8%8C%E8%A1%A8%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.1 哈希表简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BC%98%E5%8A%BF"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">优势</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%8D%E8%B6%B3%E4%B9%8B%E5%A4%84"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">不足之处</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">哈希表是什么</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-%E8%AE%A4%E8%AF%86%E5%93%88%E5%B8%8C%E5%8C%96"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">1.2 认识哈希化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%95%B0%E5%AD%97%E6%96%B9%E6%A1%88%E8%AE%A8%E8%AE%BA"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">字母转数字方案讨论</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%BC%96%E7%A0%81%E7%B3%BB%E7%BB%9F"><span class="toc-nav-number">1.3.1.1.</span> <span class="toc-nav-text">编码系统</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80%EF%BC%9A%E6%95%B0%E5%AD%97%E7%9B%B8%E5%8A%A0"><span class="toc-nav-number">1.3.1.2.</span> <span class="toc-nav-text">方案一：数字相加</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C%EF%BC%9A%E5%B9%82%E7%9A%84%E8%BF%9E%E4%B9%98"><span class="toc-nav-number">1.3.1.3.</span> <span class="toc-nav-text">方案二：幂的连乘</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-3-%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">1.3 哈希表的构造方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%9C%B0%E5%9D%80%E6%B3%95"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">直接地址法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%99%A4%E7%95%99%E4%BD%99%E6%95%B0%E6%B3%95"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">除留余数法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%95%B0%E5%AD%97%E5%88%86%E6%9E%90%E6%B3%95"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">数字分析法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%B9%B3%E6%96%B9%E6%B1%82%E5%92%8C%E6%B3%95"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">平方求和法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%88%86%E6%AE%B5%E6%B1%82%E5%92%8C%E6%B3%95"><span class="toc-nav-number">1.4.5.</span> <span class="toc-nav-text">分段求和法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-4-%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">1.4 哈希表的一些概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%93%88%E5%B8%8C%E5%8C%96"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">哈希化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">哈希函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-nav-number">1.5.3.</span> <span class="toc-nav-text">哈希表</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-5-%E5%9C%B0%E5%9D%80%E7%9A%84%E5%86%B2%E7%AA%81"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">1.5 地址的冲突</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%93%BE%E5%9C%B0%E5%9D%80%E6%B3%95%EF%BC%88%E6%8B%89%E9%93%BE%E6%B3%95%EF%BC%89"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">链地址法（拉链法）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BC%80%E6%94%BE%E5%9C%B0%E5%9D%80%E6%B3%95"><span class="toc-nav-number">1.6.2.</span> <span class="toc-nav-text">开放地址法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B"><span class="toc-nav-number">1.6.2.1.</span> <span class="toc-nav-text">线性探测</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94%E8%81%9A%E9%9B%86"><span class="toc-nav-number">1.6.2.1.1.</span> <span class="toc-nav-text">线性探测存在的问题——聚集</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BA%8C%E6%AC%A1%E6%8E%A2%E6%B5%8B%E2%80%94%E2%80%94%E8%A7%A3%E5%86%B3%E8%81%9A%E9%9B%86"><span class="toc-nav-number">1.6.2.2.</span> <span class="toc-nav-text">二次探测——解决聚集</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%86%8D%E5%93%88%E5%B8%8C%E6%B3%95"><span class="toc-nav-number">1.6.2.3.</span> <span class="toc-nav-text">再哈希法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A3%85%E5%A1%AB%E5%9B%A0%E5%AD%90"><span class="toc-nav-number">1.6.3.</span> <span class="toc-nav-text">装填因子</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%8D%E5%90%8C%E6%8E%A2%E6%B5%8B%E6%96%B9%E5%BC%8F%E6%80%A7%E8%83%BD%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-nav-number">1.6.4.</span> <span class="toc-nav-text">不同探测方式性能的比较</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-6-%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">1.6 哈希函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E8%AE%A1%E7%AE%97"><span class="toc-nav-number">1.7.1.</span> <span class="toc-nav-text">快速计算</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83"><span class="toc-nav-number">1.7.2.</span> <span class="toc-nav-text">均匀分布</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%B0%81%E8%A3%85%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、封装哈希表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-%E5%93%88%E5%B8%8C%E8%A1%A8%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1 哈希表常见操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2 哈希函数的简单实现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-3-%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3 哈希表的实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E5%93%88%E5%B8%8C%E8%A1%A8%E7%B1%BB"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">创建哈希表类</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#put-key-value"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">put(key,value)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#get-key"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">get(key)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#remove-key"><span class="toc-nav-number">2.3.4.</span> <span class="toc-nav-text">remove(key)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#isEmpty"><span class="toc-nav-number">2.3.5.</span> <span class="toc-nav-text">isEmpty()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#size"><span class="toc-nav-number">2.3.6.</span> <span class="toc-nav-text">size()</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%89%A9%E5%AE%B9%E4%B8%8E%E5%8E%8B%E7%BC%A9"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、哈希表的扩容与压缩</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-1-%E6%89%A9%E5%AE%B9%E5%8E%9F%E7%90%86"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1 扩容原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%89%A9%E5%AE%B9"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">为什么需要扩容</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E9%9C%80%E8%A6%81%E6%89%A9%E5%AE%B9"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">什么情况下需要扩容</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E6%89%A9%E5%AE%B9"><span class="toc-nav-number">3.1.3.</span> <span class="toc-nav-text">如何进行扩容</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="toc-nav-number">3.1.4.</span> <span class="toc-nav-text">实现思路</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-2-resize-%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2 resize() 的实现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-3-%E9%80%89%E6%8B%A9%E8%B4%A8%E6%95%B0%E4%BD%9C%E4%B8%BA%E5%93%88%E5%B8%8C%E8%A1%A8%E5%AE%B9%E9%87%8F"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.3 选择质数作为哈希表容量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%B4%A8%E6%95%B0%E5%88%A4%E6%96%AD"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">质数判断</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%AE%B9%E6%88%96%E5%8E%8B%E7%BC%A9%E5%90%8E%E7%9A%84%E5%93%88%E5%B8%8C%E8%A1%A8%E5%AE%B9%E9%87%8F%E4%B8%BA%E8%B4%A8%E6%95%B0"><span class="toc-nav-number">3.3.2.</span> <span class="toc-nav-text">实现扩容或压缩后的哈希表容量为质数</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%93%88%E5%B8%8C%E8%A1%A8%E5%AE%8C%E6%95%B4%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、哈希表完整实现</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#算法" title="算法">算法</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/西西">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Song木头
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">240.7k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="yoyoyo"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/26-光照-光照原理-平行光-LightedCube/">
+  <title>
+    
+      【WebGL之巅】26-光照-光照原理 - 快乐码原 | Song
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          <li>
+            <a href="/categories/#算法">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+          <li>
+            <a href="/categories/#爬虫">爬虫</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+              
+            </div>
+            <h2>【WebGL之巅】26-光照-光照原理</h2>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              By Song木头 on
+              2021-08-05
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">55</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 <span class="post-count">11.7k</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>对应《WebGL编程指南》第八章 36-LightedCube、37-LightedCube_animation、38-LightedCube_ambient</p>
+<p>要点：光源类型（平行光、点光源光）、反射类型（漫反射、环境反射）、根据光线和表面的方向计算入射角、法向量</p>
+<span id="more"></span>
+<h2 id="知识点">知识点</h2>
+<h3 id="一、光照原理">一、光照原理</h3>
+<h4 id="1-1-引入——着色与阴影">1.1 引入——着色与阴影</h4>
+<p>现实世界中的物体被光纤照射时，会反射一部分光。只有当反射光线进入你的眼睛时，你才能够看到物体并辨认出它的颜色。</p>
+<p>在现实世界中，当光线照射到物体上时，发生了两个重要的现象：</p>
+<ul>
+<li>根据光源和光线方向，物体不同表面的<u>明暗程度</u>变得不一致。</li>
+<li>根据<u>光源</u>和<u>光线方向</u>，物体向地面投下<u>影子</u>。</li>
+</ul>
+<p><img src="/images/LightedCube1.png" alt="明暗差异和阴影"></p>
+<p>明暗差异给了物体立体感。上图中的立方体是纯白的，但是它每个面受到光照程度不同所以能够辨认。</p>
+<p><strong>着色</strong>：根据光照条件重建“物体各表面明暗不一的效果”的过程。</p>
+<p><strong>阴影</strong>：物体向地面投下影子的现象，又被成为阴影。</p>
+<p>在讨论着色过程之前，考虑两件事：</p>
+<ul>
+<li>
+<p>发出光线的光源的类型</p>
+</li>
+<li>
+<p>物体表面如何反射光线</p>
+</li>
+</ul>
+<h4 id="1-2-光源类型">1.2 光源类型</h4>
+<p>真实世界的光主要有两种类型：</p>
+<ul>
+<li><strong>平行光</strong>，类似于自然中的太阳光</li>
+<li><strong>点光源光</strong>，类似于人造灯泡的光</li>
+<li>此外，我们还用<strong>环境光</strong>来模拟真实世界中的非直射光（也就是由光源发出后经过墙壁或其他物体反射后的光）</li>
+</ul>
+<blockquote>
+<p>三维图形学还使用一些其他类型的光，比如用聚合灯光来模拟电筒，车前灯等。</p>
+</blockquote>
+<p><img src="/images/LightedCube2.png" alt="平行光、点光源光、环境光"></p>
+<h5 id="平行光">平行光</h5>
+<p>顾名思义，平行光的光线是互相平行的，<u>平行光具有方向</u>。平行光可以看做是无限远处的光源（比如太阳）发出的光。因为太阳距离地球很远，所以阳光到达地球时可以认为是平行的。平行光很简单，可以用一个方向和一个<u>颜色</u>来定义。</p>
+<blockquote>
+<p>本章节提到的“光的颜色”，实际上已包含光的强度信息。比如标准的白光为(1, 1, 1)，那么两倍于其强度的白光就表示为(2, 2, 2)。</p>
+</blockquote>
+<h5 id="点光源光">点光源光</h5>
+<p>点光源光是<u>从一个点向周围</u>的所有方向发出的光。点光源光可以用来表示现实中的灯泡、火焰等。我们需要指定点光源的<u>位置</u>和<u>颜色</u>。光线的方向将根据点光源的位置和被照射之处的位置计算出来，因为<u>点光源的光线的方向在场景内的不同位置是不同的。</u></p>
+<blockquote>
+<p>实际上点光源的光会衰减，本章教程中为了程序简单并未进行点光源光强的衰减。</p>
+</blockquote>
+<h5 id="环境光">环境光</h5>
+<p>环境光（间接光）是指那些经光源（点光源或平行光源）发出后，被墙壁等物体多次<u>反射</u>，然后照到物体表面上的光。环境光从各个角度照射物体，其强度都是一致的。比如说，在夜间打开冰箱的门，整个厨房都会有些微微亮，这就是环境光的作用。<u>环境光不用指定位置和方向，只需要指定颜色即可</u>。</p>
+<h4 id="1-3-反射类型">1.3 反射类型</h4>
+<p>物体向哪个方向反射光，反射的光是什么颜色，取决于以下两个因素：</p>
+<ul>
+<li>入射光</li>
+<li>物体表面的类型</li>
+</ul>
+<p>入射光的信息包括<u>入射光的方向和颜色</u>，而物体表面的信息包括<u>表面的固有颜色和反射特性。</u></p>
+<p>物体表面反射光线的方式由两种：<strong>漫反射</strong>和<strong>环境反射</strong>。本节的重点是如何很据上述两种信息（入射光和物体表面特性）来计算出反射光的颜色。本节会涉及一些简单的数学计算。</p>
+<h5 id="漫反射">漫反射</h5>
+<p>漫反射是针对<strong>平行光</strong>或<strong>点光源</strong>而言的。漫反射的反射光在各个方向上是均匀的，如下图所示。</p>
+<p><img src="/images/LightedCube3.png" alt="漫反射"></p>
+<p>如果物体表面像镜子一样光滑，那么光线就会以特定的角度反射出去；但是现实中的大部分材质，比如纸张、岩石、塑料等，其表面都是粗糙的，在这种情况下反射光就会以不固定的角度反射出去。漫反射就是针对后一种情况而建立的理想反射模型。</p>
+<p>在漫反射中，反射光的颜色取决于<strong>入射光的颜色</strong>、<strong>表面的基底色</strong>、<strong>入射光与表面形成的入射角</strong>。</p>
+<p><strong>入射角定义</strong>：入射光与表面的法线形成的夹角，用 θ 表示。</p>
+<p>漫反射光的颜色可以根据下式计算得到：</p>
+<p><code>&lt;漫反射光颜色&gt; = &lt;入射光颜色&gt; x &lt;表面基底色&gt; x cosθ</code></p>
+<p>式子中，<code>&lt;入射光颜色&gt;</code>指的是<u>点光源</u>或<u>平行光的颜色</u>，乘法操作是在颜色矢量上<u>逐分量（R、G、B）</u>进行的。因为漫反射光在各个方向上都是”均匀“的，所以从任何角度看上去其<u>强度都相等</u>。</p>
+<p><img src="/images/LightedCube4.png" alt="漫反射光各方向均匀"></p>
+<h5 id="环境反射">环境反射</h5>
+<p>环境反射是针对<u>环境光</u>而言的。</p>
+<p>在环境反射中，<u>反射光的方向可以认为就是入射光的<strong>反方向</strong></u>。由于环境光照射物体的方式就是各方向均匀的、强度相等的，所以<u>反射光也是各向均匀的</u>，如下图所示。我们可以这样来描述它：</p>
+<p><code>&lt;环境反射颜色&gt; = &lt;入射光颜色&gt; x &lt;表面基底色&gt;</code></p>
+<blockquote>
+<p>这里的<code>&lt;入射光颜色&gt;</code>实际上也就是环境光的颜色。</p>
+</blockquote>
+<p><img src="/images/LightedCube5.png" alt="环境反射"></p>
+<h5 id="漫反射-环境反射">漫反射+环境反射</h5>
+<p>当漫反射和环境反射同时存在时，将两者加起来，就会得到物体最终被观察到的颜色：</p>
+<p><code>&lt;表面的反射颜色&gt; = &lt;漫反射光颜色&gt; + &lt;环境反射光颜色&gt;</code></p>
+<blockquote>
+<p>注意，两种反射光并不一定总是存在，也并不一定要按照上述公式来计算。渲染三维模型时，你可以修改这些公式以达到想要的效果。</p>
+</blockquote>
+<p>下面来建立一个示例程序，在合适的位置放置一个光源，对场景进行着色。首先实现平行光下的漫反射。</p>
+<h3 id="二、-平行光下的漫反射">二、 平行光下的漫反射</h3>
+<p>如前所述，漫反射的反射光，其颜色与入射光在入射点的入射角<code>θ</code>有关。平行光入射产生的漫反射光的颜色很容易计算，因为<u>平行光的方向唯一</u>的，对于<u>同一个平面上的所有点，入射角是相同的</u>，根据式子计算平行光入射的漫反射光颜色：</p>
+<p><code>&lt;漫反射光颜色&gt; = &lt;入射光颜色&gt; x &lt;表面基底色&gt; x cosθ</code></p>
+<p>上式用到了三项数据：</p>
+<ul>
+<li>平行入射光的颜色</li>
+<li>表面的基底色</li>
+<li>入射光与表面形成的入射角 θ</li>
+</ul>
+<p>颜色可以用<code>RGB</code>值来表示，比如标准强度的白光颜色就是<code>（1.0, 1.0, 1.0）</code>。物体表面的基底色其实就是”<u>物体本来的颜色</u>“（或者说是”物体在标准白光下的颜色“），按照式子计算反射光颜色时，我们对 RGB 值的三个分量逐个相乘。</p>
+<p>假设入射光是白色<code>（1.0, 1.0, 1.0）</code>，而物体表面的基底色是红色<code>（1.0, 0.0, 0.0）</code>，而入射角 <u>θ 为 0.0（即入射光垂直入射）</u>，根据式子，入射光的红色分量 R 为 1.0，基底色的红色分量 R 为1.0，入射角余弦值 cos θ 为 1.0，那么反射光的红色分量 R 就可以由如下计算得到：</p>
+<p><code>R = 1.0 * 1.0 * 1.0 = 1.0</code></p>
+<p>类似的，我们可以算出绿色分量 G 和蓝色分量 B：</p>
+<p><code>G = 1.0 * 0.0 * 1.0 = 0.0</code></p>
+<p><code>B = 1.0 * 0.0 * 1.0 = 0.0</code></p>
+<p>根据上面的计算，当白光垂直入射到红色物体的表面时，漫反射光的颜色就变成了红色<code>（1.0, 0.0, 0.0）</code>。而如果是红光垂直入射到白色物体的表面时，漫反射光的颜色也会是红色。这两种情况下，物体在观察者看来就是红色的。</p>
+<blockquote>
+<p>那么如果入射角 θ 是 90 度，也就是说入射光与表面平行，一点都没有照射到表面上，在这种情况下会怎样呢？根据我们在现实世界中的经验，物体表面应该完全不反光，看上去是黑的。验证一下：当 θ 是 90 度，cos θ 的值是0，那么根据上面的式子，不管入射光的颜色和物体表面基底色是什么，最后得到的漫反射光颜色都为（0.0, 0.0, 0.0），也就是黑色。</p>
+<p>同样，如果 θ 是60度，也就是斜射平行光斜射到物体表面上，那么该表面应该还是红色的，只不过比垂直入射时暗一些。根据上式，cos θ 是0.5，漫反射光颜色为 （0.5, 0.0, 0.0），即暗红色。</p>
+</blockquote>
+<p>但是我们并不知道入射光 θ 是多少，只知道光线的方向。下面我们就来通过光线和物体表面的方向来计算入射角 θ，将式子中的 θ 换成我们更加熟悉的东西。</p>
+<h4 id="1-5-根据光线和表面的方向计算入射角">1.5 根据光线和表面的方向计算入射角</h4>
+<p>原理：根据入射光的方向和物体表面的朝向，即<strong>法线方向</strong>来计算出入射角。</p>
+<blockquote>
+<p>在创建三维建模的时候，我们无法预先确定光线将以怎样的角度照射到每个表面上。但是，我们可以确定每个表面的朝向。在指定光源的时候，再确定光的方向，就可以用这两项信息来计算处入射角了。</p>
+</blockquote>
+<h5 id="点积运算">点积运算</h5>
+<p>通过计算两个矢量的点积，来计算这两个矢量的夹角余弦值 <code>cosθ</code>。点积运算的使用非常频繁，GLSL ES 内置了点积运算函数。在公式中，我们使用点符号 <code>.</code> 来表示点积运算。这样，cosθ 就可以通过下式计算出来：</p>
+<p><code>cosθ = &lt;光线方向&gt; · &lt;法线方向&gt;</code></p>
+<p>进而计算反射光颜色：</p>
+<p><code>&lt;漫反射光颜色&gt; = &lt;入射光颜色&gt; x &lt;表面基底色&gt; x (&lt;光线方向&gt; · &lt;法线方向&gt;)</code></p>
+<p>注意：</p>
+<ul>
+<li>
+<p>光线方向矢量和表面法线矢量的长度必须为1，否则反射光的颜色就会过暗或过亮将一个矢量的长度调整为1，同时保持方向不变的过程称之为<a href="#%E5%BD%92%E4%B8%80%E5%8C%96">归一化</a>。GLSL ES 提供了内置的归一化函数，你可以直接使用。</p>
+</li>
+<li>
+<p>这里所谓的“光线方向”，实际上是<u>入射方向的反方向</u>，即从入射点指向光源方向，如下图所示。</p>
+</li>
+</ul>
+<p><img src="/images/LightedCube6.png" alt="光线方向"></p>
+<h5 id="归一化">归一化</h5>
+<p>设矢量n为$(nx, ny, nz)$，则其长度为 $|n| = \sqrt {n_x^2 + n_y^2 + n_z^2}$​ ；</p>
+<p>对矢量n进行归一化后的结果是 $(nx/m, ny/m, nz/m)$​​，式中<code>m</code>为<code>n</code>的长度。如矢量(2, 2, 1)的长度为 |n| = sqrt(3)，那么归一化后就是(2/3, 2/3, 1/3)；</p>
+<h5 id="补充：矢量的点乘与叉乘">补充：矢量的点乘与叉乘</h5>
+<p>向量的点乘,也叫向量的内积、数量积，对两个向量执行点乘运算，就是对这两个向量对应位一一相乘之后求和的操作，点乘的结果是一个<u>标量</u>。</p>
+<p>点乘公式：</p>
+<p>设$a =<br>
+\begin{bmatrix}<br>
+a_1, &amp; a_2, &amp; a_3<br>
+\end{bmatrix}<br>
+$，$b =<br>
+\begin{bmatrix}<br>
+b_1, &amp; b_2, &amp; b_3<br>
+\end{bmatrix}<br>
+$，则  $a · b =<br>
+\begin{bmatrix}<br>
+a_1b_1, &amp; a_2b_2, &amp; a_3b_3<br>
+\end{bmatrix}<br>
+$​​</p>
+<p>（要求一维向量a和向量b的行列数相同。）</p>
+<p>点乘几何意义：</p>
+<p>点乘的几何意义是可以用来表征或计算<u>两个向量之间的夹角</u>，以及在b向量在a向量方向上的投影，有公式：$a · b = |a| |b| cosθ$​；​​​</p>
+<p>两个向量的叉乘，又叫向量积、外积、叉积，叉乘的运算结果是一个<u>向量</u>而不是一个标量。并且两个向量的叉积与这两个向量组成的坐标平面垂直。</p>
+<p>叉乘几何意义：</p>
+<p>在三维几何中，向量a和向量b的叉乘结果是一个向量，更为熟知的叫法是法向量，该向量垂直于a和b向量构成的平面。</p>
+<blockquote>
+<p>一般点乘用来判断两个向量是否垂直，也可以用来计算一个向量在某个方向上的投影长度，就像定义一样。</p>
+<p>叉乘更多的是判断某个平面的方向。从这个平面上选两个不共线的向量，叉乘的结果就是这个平面的法向量。</p>
+<p>更多关于叉乘与点乘知识点，请自行复习数学教材或百度。</p>
+</blockquote>
+<h4 id="1-6-法线：表面的朝向">1.6 法线：表面的朝向</h4>
+<h5 id="定义">定义</h5>
+<p>物体表面的朝向，即<u>垂直于表面的方向</u>，又称<strong>法线</strong>或<strong>法向量</strong>。</p>
+<h5 id="表示">表示</h5>
+<p>法向量有三个分量，向量<code>（nx, ny, nz）</code>表示<u>从原点（0, 0, 0）指向点（nx, ny, nz）的方向</u>。比如，向量<code>（1, 0, 0）</code>表示 x 轴正方向，向量（0, 0, 1）表示 z 轴正方向。设计到表面和法向量的问题时，必须考虑以下两点：</p>
+<ul>
+<li>一个表面具有两个法向量</li>
+<li>平面的法向量唯一</li>
+</ul>
+<h5 id="一个表面具有两个法向量">一个表面具有两个法向量</h5>
+<p>每个表面都有两个面，”正面“和”背面“。<u>两个面各自具有一个法向量</u>。比如，垂直与z 轴的 xy平面，其正面的法向量为z负半轴，即（0, 0, -1），而正面的法向量为 x 负半轴，即（0, 0, 1）。</p>
+<p><img src="/images/LightedCube7.png" alt="法向量"></p>
+<p>在三维图形学中，表面的正面和背面取决与绘制表面时的<u>顶点顺序</u>。当你按照v0, v1, v2, v3 的顶点顺序绘制了一个平面（该平面由两个三角形组成，各自绘制顺序是v0，v1，v2和v2，v3，v0），那么当你从正面观察这个表示时，这4个顶点是顺时针的，而你从背面观察该表面，这4个顶点就是逆时针的。如上图，该平面正面的法向量是（0, 0, -1）。</p>
+<h5 id="平面的法向量唯一">平面的法向量唯一</h5>
+<p>由于法向量表示的是方向，与位置无关，所以一个平面只有一个法向量。换句话说，平面的任意一点都具有相同的法向量。</p>
+<p>进一步来说，即使有两个不同的平面，只要其<u>朝向相同</u>（也就是两个平面平行），<u>法向量也相同</u>。比如说，有一个经过点（10, 98, 9）的平面，只要垂直与 Z 轴，它的法向量仍然是（0, 0, 1）和（0, 0, -1），和经过原点并垂直与z轴的平面一样。</p>
+<p><img src="/images/LightedCube8.png" alt="法向量与位置无关"></p>
+<p>下图左显示了<a href="#%E4%BB%A3%E7%A0%811">示例程序</a>中的立方体及每个表面的法向量。比如立方体表面上的法向量表示为 <code>n(0, 1, 0)</code>。</p>
+<p><img src="/images/LightedCube9.png" alt="立方体各表面法向量"></p>
+<p>一旦计算好每个平面的法向量，接下来的任务就是<u>将数据传给着色器程序</u>。以前程序把颜色作为“逐顶点数据”存储在缓冲区中，并传给着色器。对法向量数据也可以这样做。如上图右所示，<u>每个顶点对应3个法向量</u>，就像之前每个顶点都对应3个颜色值一样。</p>
+<blockquote>
+<p>由于立方体各表面垂直相交，所以每个顶点对3个法向量（同时在缓冲区中被拆成3个顶点）。但是，一些表面光滑的物体，通常其每个顶点只对应1个法向量。</p>
+</blockquote>
+<h4 id="1-7-程序分析">1.7 程序分析</h4>
+<h5 id="1-7-1-顶点着色器">1.7.1 顶点着色器</h5>
+<p>顶点着色器实现了：</p>
+<p><code>&lt;漫反射光颜色&gt; = &lt;入射光颜色&gt; x &lt;表面基底色&gt; x (&lt;光线方向&gt; · &lt;法线方向&gt;)</code></p>
+<p>由[1.5](#1.5 根据光线和表面的方向计算入射角)可知计算漫反射光颜色需要：</p>
+<ul>
+<li>入射光颜色</li>
+<li>表面基底色</li>
+<li>入射光方向（归一化）</li>
+<li>表面法线方向（归一化）</li>
+</ul>
+<p>主要代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> + <span class="comment">//表面基底色</span></span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Normal;\n&#x27;</span> + <span class="comment">//法向量</span></span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_MvpMatrix;\n&#x27;</span> + <span class="comment">//光线颜色</span></span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightColor;\n&#x27;</span> + <span class="comment">//归一化的世界坐标（入射光方向）</span></span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightDirection;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = u_MvpMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   vec3 normal = normalize(vec3(a_Normal));\n&#x27;</span> + <span class="comment">//对法向量进行归一化</span></span><br><span class="line">    <span class="string">&#x27;   float nDotL = max(dot(u_LightDirection, normal), 0.0);\n&#x27;</span> + <span class="comment">//计算光线方向和法向量的点积</span></span><br><span class="line">    <span class="string">&#x27;   vec3 diffuse = u_LightColor * vec3(a_Color) * nDotL;\n&#x27;</span> + <span class="comment">//计算漫反射光的颜色</span></span><br><span class="line">    <span class="string">&#x27;   v_Color = vec4(diffuse, a_Color.a);\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h6 id="变量分析">变量分析</h6>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a_Color</td>
+<td>表面基底色</td>
+</tr>
+<tr>
+<td>a_Normal</td>
+<td>表面法线方向</td>
+</tr>
+<tr>
+<td>u_LightColor</td>
+<td>入射光颜色</td>
+</tr>
+<tr>
+<td>u_LightDirection</td>
+<td>归一化的世界坐标（入射光方向）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意，入射光方向 u_LightDirection 是在世界坐标下的，而且在传入着色器前已经在 JS 中归一化了。这样，我们就可以避免在顶点着色器每次执行时都对它进行归一化。</p>
+</blockquote>
+<blockquote>
+<p>关于<a target="_blank" rel="noopener" href="https://freepiao.cn/%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%9D%90%E6%A0%87%E7%B3%BB/">世界坐标系和本地坐标系</a>参考。</p>
+<p>本章节中，光照效果是在世界坐标系下计算的。</p>
+</blockquote>
+<h6 id="计算a-Normal">计算a_Normal</h6>
+<p>有了这些信息，就可以开始在顶点着色器中进行计算了。</p>
+<p>首先对 <code>a_Normal</code> 进行归一化。严格地说，本例通过缓冲区传入的法向量都是已经归一化过的，所以实际上这一步可以略去。但是顶点着色器可不知道传入的矢量是否经过了归一化，而且这里没有节省开销的理由，所以，有这一步总比没有要好：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对法向量进行归一化</span></span><br><span class="line"><span class="string">&#x27;   vec3 normal = normalize(vec3(a_Normal));\n&#x27;</span> + </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>a_Normal</code> 变量是 vec4 类型的，使用前三个分量x、y和 z 表示法线法相，所以我们将这三个分量提取出来进行归一化。对vec3 类型的变量进行归一化不必这样做。本例使用 vec4 类型的 a_Normal 变量是为了方便对下一个示例程序进行扩展。GLSL ES 提供了内置函数 <code>normalize()</code>对矢量参数进行归一化。归一化的结果赋给了 vec3类型的 normal 变量，供之后使用。</p>
+</blockquote>
+<h6 id="计算点积">计算点积</h6>
+<p>接下来，计算<code>点积</code>。光线方向存储在 <code>u_LightDirection变量</code>中，而且已经被归一化了，<u>可以直接使用</u>。法线方向存储在之前进行归一化后的结果 <code>normal变量</code>中。使用 GLSL ES 提供的内置函数 <code>dot()</code>计算两个矢量的点积，该函数接受两个矢量作为参数，返回它们的点积。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 计算光线方向和法向量的点积</span></span><br><span class="line"><span class="string">&#x27;   float nDotL = max(dot(u_LightDirection, normal), 0.0);\n&#x27;</span> + </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果点积大于0，就将点积赋值给 <code>nDotL</code> 变量，如果其小于0，就将0赋给该变量。使用内置函数 <code>max()</code>完成这个任务，<u>将点积和0两者中的较大者赋值给 nDotL。</u></p>
+<p><u>点积值小于0，意味着 <code>cosθ</code> 中的 <code>θ</code> 大于90度</u>。 <code>θ</code>是入射角，也就是<strong>入射反方向(光线方向)<strong>与</strong>表面法向量</strong>的夹角 。 <code>θ</code>大于90度说明光线照射在表面的背面上，此时，将nDotL 赋为 0.0。如下图：</p>
+</blockquote>
+<p><img src="/images/LightedCube11.png" alt="入射角大于90度"></p>
+<h6 id="计算漫反射颜色">计算漫反射颜色</h6>
+<blockquote>
+<p>注意 a_Color 变量即顶点的颜色，被从vec4对象转成了 vec3 对象，因为其第4个分量与式子无关。</p>
+</blockquote>
+<p>实际上，物体<u>表面的透明度</u>确实会影响物体的外观。但这时光照的计算较为复杂，现在暂时认为物体都是不透明的，这样就计算出了漫反射光的颜色 <code>diffuse</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//计算漫反射光的颜色</span></span><br><span class="line"><span class="string">&#x27;   vec3 diffuse = u_LightColor * vec3(a_Color) * nDotL;\n&#x27;</span> + </span><br></pre></td></tr></table></figure>
+<p>然后，将 <code>diffuse</code> 的值赋给 <code>v_Color变量</code>。<code>v_Color</code> 是 <code>vec4</code> 对象，而 <code>diffuse</code> 是 <code>vec3</code> 对象，需要将第4个分量补上为<code>1.0</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;   v_Color = vec4(diffuse, a_Color.a);\n&#x27;</span> +</span><br></pre></td></tr></table></figure>
+<p>顶点着色器运行的结果就是计算出了 <code>v_Color变量</code>，其值取决于<u>顶点的颜色</u>、<u>法线方向</u>、<u>平行光的颜色和方向</u>。v_Color 变量将被传入<u>片元着色器</u>并赋值给 <code>gl_FragColor变量</code>。</p>
+<blockquote>
+<p>本例中的光是<strong>平行光</strong>，所以立方体上同一个面的颜色是<strong>一致</strong>的，没有之前出现的颜色渐变效果。</p>
+</blockquote>
+<h5 id="1-7-2-JS-程序流程">1.7.2 JS 程序流程</h5>
+<p>JS 将光的颜色 <code>u_LightColor</code> 和方向 <code>u_LightDirection</code> 传给顶点着色器。首先用 <code>gl.uniform3f()</code>函数将 u_LightColor 赋值为（1.0, 1.0, 1.0），表示入射光是<u>白光</u>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gl.uniform3f(u_LightColor, <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>); <span class="comment">// 设置光线颜色为白色</span></span><br></pre></td></tr></table></figure>
+<p>下一步是设置光线方向，注意<u>光线方向必须被归一化</u>。cuon-matrix.js 为 vector3 类型提供了 <code>normalize()</code>函数，以实现归一化。该函数的用法非常简单：在你想要进行归一化的 Vector3 对象上调用即可。</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lightDirection = <span class="keyword">new</span> Vector3([<span class="number">0.5</span>, <span class="number">3.0</span>, <span class="number">4.0</span>]);<span class="comment">//设置光线方向（世界坐标系下）</span></span><br><span class="line">lightDirection.normalize();<span class="comment">//归一化</span></span><br><span class="line">gl.uniform3fv(u_LightDirection, lightDirection.elements);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意 JS 和 GLSL ES 对矢量进行归一化的不同之处。</p>
+</blockquote>
+<p>归一化后的光线方向以 <code>Float32Array</code> 类型的形式存储在 <code>lightDirection</code> 对象的 <code>elements属性</code>中，使用<code>gl.uniform3fv()</code>将其<u>分配给着色器中的 u_LightDirection 变量</u>。</p>
+<p>最后，在<code>initVertexBuffers()</code>函数中为每个顶点定义法向量。法向量数据存储在 normals 数组中，然后被 initArrayBuffer()函数传给了顶点着色器的 a_Normal 变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> normals = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([    <span class="comment">// Normal</span></span><br><span class="line">    <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">    <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">    <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">    -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">    <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">    <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>   <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!initArrayBuffer(gl, <span class="string">&#x27;a_Normal&#x27;</span>, normals, <span class="number">3</span>, gl.FLOAT)) 		<span class="keyword">return</span> -<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p><code>initArrayBuffer()</code>函数的作用是<u>将第3个参数指定的数组分配给第2个参数指定的着色器中的变量。</u></p>
+<h3 id="三、环境光下的漫反射">三、环境光下的漫反射</h3>
+<h4 id="3-1-平行光下漫反射的缺陷">3.1 平行光下漫反射的缺陷</h4>
+<p>现在，我们已经成功实现了平行光下的漫反射光。但是结果图和显示中的立方体还是有点不大一样，特别是右侧表面是全黑的，仿佛不存在一样。如果这个立方体动起来，你也许就能看的更清楚一些，试着运行程序 <a href="#%E4%BB%A3%E7%A0%812">Lighted_Cube_animation</a>，如图所示：</p>
+<script src="\lib\webgl-utils.js"></script>
+<script src="\lib\webgl-debug.js"></script>
+<script src="\lib\cuon-utils.js"></script>
+<script src="\lib\cuon-matrix.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>LookAtTriangles</title>
+</head>
+<body onload="main()">
+<canvas id="mywebgl" width="300" height="300">
+  Please use the browser supporting "canvas".
+</canvas>
+<script type='text/javascript'>
+//LightedCube_animation.js
+var VSHADER_SOURCE =
+    'attribute vec4 a_Position;\n' +
+    'attribute vec4 a_Color;\n' +
+    'attribute vec4 a_Normal;\n' +
+    'uniform mat4 u_MvpMatrix;\n' +
+    'uniform mat4 u_NormalMatrix;\n' +
+    'uniform vec3 u_LightDirection;\n' +
+    'varying vec4 v_Color;\n' +
+    'void main() {\n' +
+    '  gl_Position = u_MvpMatrix * a_Position;\n' +
+    '  vec4 normal = u_NormalMatrix * a_Normal;\n' +
+    '  float nDotL = max(dot(u_LightDirection, normalize(normal.xyz)), 0.0);\n' +
+    '  v_Color = vec4(a_Color.xyz * nDotL, a_Color.a);\n' +
+    '}\n';
+var FSHADER_SOURCE=
+    '#ifdef GL_ES\n' +
+    'precision mediump float;\n' +
+    '#endif\n' +
+    'varying vec4 v_Color;\n' +
+    'void main(){\n'+
+    'gl_FragColor = v_Color;\n'+
+    '}\n';
+function main() {
+    var canvas = document.getElementById("mywebgl");
+    if (!canvas) {
+        console.log("Failed to retrieve the <canvas> element");
+        return;
+    }
+    var gl = getWebGLContext(canvas);
+    if (!gl) {
+        console.log("Failed to get the rendering context for WebGL");
+        return;
+    }
+    if (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) {
+        console.log("Failed to initialize shaders.");
+        return;
+    }
+    //设置顶点位置
+    var n = initVertexBuffers(gl);
+    if (n < 0) {
+        console.log('Failed to set the positions of the vertices');
+        return;
+    }
+    // Set the clear color and enable the depth test
+    //gl.clearColor(0, 0, 0, 1);
+    gl.enable(gl.DEPTH_TEST);
+    var u_MvpMatrix = gl.getUniformLocation(gl.program, 'u_MvpMatrix');//模型视图投影矩阵
+    var u_NormalMatrix = gl.getUniformLocation(gl.program, 'u_NormalMatrix');
+    var u_LightDirection = gl.getUniformLocation(gl.program, 'u_LightDirection');
+    if (!u_MvpMatrix || !u_NormalMatrix || !u_LightDirection) {
+        console.log('Failed to get the storage location');
+        return;
+    }
+    var lightDirection = new Vector3([0.5, 3.0, 4.0]);//设置光线方向（世界坐标系下）
+    lightDirection.normalize();//归一化
+    gl.uniform3fv(u_LightDirection, lightDirection.elements);
+    var mvpMatrix = new Matrix4();//视图投影矩阵
+    mvpMatrix.setPerspective(30, canvas.width / canvas.height, 1, 100);
+    mvpMatrix.lookAt(3, 3, 7, 0, 0, 0, 0, 1, 0);
+    var currentAngle = 0.0; //目前的旋转角度
+    var modelMatrix = new Matrix4(); //模型矩阵
+    var vpMatrix = new Matrix4();//模型视图投影矩阵
+    var normalMatrix = new Matrix4();//法线变换矩阵
+    var tick = function () {
+        currentAngle = animate(currentAngle);//更新当前旋转角度
+        //计算模型矩阵
+        modelMatrix.setRotate(currentAngle, 0, 1, 0); //围绕y轴旋转
+        vpMatrix.set(mvpMatrix).multiply(modelMatrix);
+        gl.uniformMatrix4fv(u_MvpMatrix, false, vpMatrix.elements);
+        // Pass the matrix to transform the normal based on the model matrix to u_NormalMatrix
+        normalMatrix.setInverseOf(modelMatrix);
+        normalMatrix.transpose();
+        gl.uniformMatrix4fv(u_NormalMatrix, false, normalMatrix.elements);
+        // Clear color and depth buffer
+        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+        // Draw the cube
+        gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_BYTE, 0);
+        requestAnimationFrame(tick, canvas); // Request that the browser ?calls tick
+    };
+    tick();
+}
+function draw(gl, n, angle, vpMatrix, u_MvpMatrix, u_NormalMatrix) {
+}
+function initVertexBuffers(gl) {
+    // Create a cube
+    //    v6----- v5
+    //   /|      /|
+    //  v1------v0|
+    //  | |     | |
+    //  | |v7---|-|v4
+    //  |/      |/
+    //  v2------v3
+    var vertices = new Float32Array([   // Vertex coordinates
+        1.0, 1.0, 1.0,  -1.0, 1.0, 1.0,  -1.0,-1.0, 1.0,   1.0,-1.0, 1.0,  // v0-v1-v2-v3 front
+        1.0, 1.0, 1.0,   1.0,-1.0, 1.0,   1.0,-1.0,-1.0,   1.0, 1.0,-1.0,  // v0-v3-v4-v5 right
+        1.0, 1.0, 1.0,   1.0, 1.0,-1.0,  -1.0, 1.0,-1.0,  -1.0, 1.0, 1.0,  // v0-v5-v6-v1 up
+        -1.0, 1.0, 1.0,  -1.0, 1.0,-1.0,  -1.0,-1.0,-1.0,  -1.0,-1.0, 1.0,  // v1-v6-v7-v2 left
+        -1.0,-1.0,-1.0,   1.0,-1.0,-1.0,   1.0,-1.0, 1.0,  -1.0,-1.0, 1.0,  // v7-v4-v3-v2 down
+        1.0,-1.0,-1.0,  -1.0,-1.0,-1.0,  -1.0, 1.0,-1.0,   1.0, 1.0,-1.0   // v4-v7-v6-v5 back
+    ]);
+    var colors = new Float32Array([     // Colors
+        1, 0, 0,   1, 0, 0,   1, 0, 0,  1, 0, 0,     // v0-v1-v2-v3 front
+        1, 0, 0,   1, 0, 0,   1, 0, 0,  1, 0, 0,     // v0-v3-v4-v5 right
+        1, 0, 0,   1, 0, 0,   1, 0, 0,  1, 0, 0,     // v0-v5-v6-v1 up
+        1, 0, 0,   1, 0, 0,   1, 0, 0,  1, 0, 0,     // v1-v6-v7-v2 left
+        1, 0, 0,   1, 0, 0,   1, 0, 0,  1, 0, 0,     // v7-v4-v3-v2 down
+        1, 0, 0,   1, 0, 0,   1, 0, 0,  1, 0, 0　    // v4-v7-v6-v5 back
+    ]);
+    var normals = new Float32Array([    // Normal
+        0.0, 0.0, 1.0,   0.0, 0.0, 1.0,   0.0, 0.0, 1.0,   0.0, 0.0, 1.0,  // v0-v1-v2-v3 front
+        1.0, 0.0, 0.0,   1.0, 0.0, 0.0,   1.0, 0.0, 0.0,   1.0, 0.0, 0.0,  // v0-v3-v4-v5 right
+        0.0, 1.0, 0.0,   0.0, 1.0, 0.0,   0.0, 1.0, 0.0,   0.0, 1.0, 0.0,  // v0-v5-v6-v1 up
+        -1.0, 0.0, 0.0,  -1.0, 0.0, 0.0,  -1.0, 0.0, 0.0,  -1.0, 0.0, 0.0,  // v1-v6-v7-v2 left
+        0.0,-1.0, 0.0,   0.0,-1.0, 0.0,   0.0,-1.0, 0.0,   0.0,-1.0, 0.0,  // v7-v4-v3-v2 down
+        0.0, 0.0,-1.0,   0.0, 0.0,-1.0,   0.0, 0.0,-1.0,   0.0, 0.0,-1.0   // v4-v7-v6-v5 back
+    ]);
+    var indices = new Uint8Array([       // Indices of the vertices
+        0, 1, 2,   0, 2, 3,    // front
+        4, 5, 6,   4, 6, 7,    // right
+        8, 9,10,   8,10,11,    // up
+        12,13,14,  12,14,15,    // left
+        16,17,18,  16,18,19,    // down
+        20,21,22,  20,22,23     // back
+    ]);
+    // Write the vertex coordinates and color to the buffer object
+    if (!initArrayBuffer(gl, vertices, 3, gl.FLOAT, 'a_Position'))
+        return -1;
+    if (!initArrayBuffer(gl, colors, 3, gl.FLOAT, 'a_Color'))
+        return -1;
+    if (!initArrayBuffer(gl, normals, 3, gl.FLOAT, 'a_Normal'))
+        return -1;
+    // Create a buffer object
+    var indexBuffer = gl.createBuffer();
+    if (!indexBuffer) {
+        console.log('Failed to create the buffer object');
+        return false;
+    }
+    // Write the indices to the buffer object
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW);
+    return indices.length;
+}
+function initArrayBuffer(gl, data, num, type, attribute) {
+    var buffer = gl.createBuffer();   // Create a buffer object
+    if (!buffer) {
+        console.log('Failed to create the buffer object');
+        return false;
+    }
+    // Write date into the buffer object
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+    // Assign the buffer object to the attribute variable
+    var a_attribute = gl.getAttribLocation(gl.program, attribute);
+    if (a_attribute < 0) {
+        console.log('Failed to get the storage location of ' + attribute);
+        return false;
+    }
+    gl.vertexAttribPointer(a_attribute, num, type, false, 0, 0);
+    // Enable the assignment of the buffer object to the attribute variable
+    gl.enableVertexAttribArray(a_attribute);
+    gl.bindBuffer(gl.ARRAY_BUFFER, null);
+    return true;
+}
+// Rotation angle (degrees/second)
+var ANGLE_STEP = 30.0;
+// Last time that this function was called
+var g_last = Date.now();
+function animate(angle) {
+    // Calculate the elapsed time
+    var now = Date.now();
+    var elapsed = now - g_last;
+    g_last = now;
+    // Update the current rotation angle (adjusted by the elapsed time)
+    var newAngle = angle + (ANGLE_STEP * elapsed) / 1000.0;
+    return newAngle %= 360;
+}
+    </script>
+    </body>
+    </html>
+<p>虽然程序是严格按照式子对场景进行光照的，但经验告诉我们肯定有什么对方不对劲。在现实世界中，光照下物体的各表面的差异不会如此分明：那些背光的面虽然会暗一些，但决不至于黑到看不见的程度。</p>
+<h4 id="3-2-环境光颜色计算">3.2 环境光颜色计算</h4>
+<p>实际上，那些<u>背光的面是被非直射光照亮</u>的（即其他物体，如墙壁的反光等），前面提到的环境光就起到了这部分非直射光的作用，它<u>使场景更加逼真</u>。因为环境光<u>均匀</u>地从各个角度照在物体表面，所以由环境光反射产生的颜色只去取决与<u>光的颜色</u>和<u>表面基底色</u>，使用式子计算后我们再来看一下：</p>
+<p><code>&lt;环境反射光颜色&gt; = &lt;入射光颜色&gt; x &lt;表面基底色&gt;</code></p>
+<p>接下来，向示例程序中加入上式中的环境光所产生的反射光颜色：</p>
+<p><code>&lt;表面的反射颜色&gt; = &lt;漫反射光颜色&gt; + &lt;环境反射光颜色&gt;</code></p>
+<blockquote>
+<p>环境光是由墙壁等其物体反射产生的，所以环境光的强度通常比较弱。假设环境光是较弱的<code>白光（0.2, 0.2, 0.2</code>），而物体表面是<code>红色（1.0, 1.0, 1.0）</code>。根据式子，由环境光反射的光颜色就是<code>暗红色（0.2, 0.0, 0.0）</code>。同样，在蓝色的空间中，环境光为（0.0, 0.0, 0.2），有一个白色的物体，即表面基底色为（1.0, 1.0, 1.0），那么由环境光产生的漫反射光颜色就是淡蓝色（0.0, 0.0, 0.2）。</p>
+</blockquote>
+<h4 id="3-3-程序分析">3.3 程序分析</h4>
+<p>示例程序 <a href="#%E4%BB%A3%E7%A0%813-LightedCube_ambient">LightedCube_ambient</a> 实现了环境光漫反射的效果，如下图左所见。可见，完全没有被平行光照到的表面也不是全黑，而是呈现较暗的颜色，与真实世界更加相符。</p>
+<div style="display: flex;">
+    <img src="/images/LightedCube12.png" alt="LightedCube_ambient"/>
+    <img src="/images/LightedCube10.png" alt="LightedCube"/>
+</div>
+<h5 id="顶点着色器">顶点着色器</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> + <span class="comment">//表面基底色</span></span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Normal;\n&#x27;</span> + <span class="comment">//法向量</span></span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_MvpMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightColor;\n&#x27;</span> + <span class="comment">//光线颜色</span></span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightDirection;\n&#x27;</span> + <span class="comment">//归一化的世界坐标（入射光方向）</span></span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_AmbientLight;\n&#x27;</span> + <span class="comment">//环境光颜色</span></span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = u_MvpMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   vec3 normal = normalize(vec3(a_Normal));\n&#x27;</span> + <span class="comment">//对法向量进行归一化</span></span><br><span class="line">    <span class="string">&#x27;   float nDotL = max(dot(u_LightDirection, normal), 0.0);\n&#x27;</span> + <span class="comment">//计算光线方向和法向量的点积</span></span><br><span class="line">    <span class="string">&#x27;   vec3 diffuse = u_LightColor * vec3(a_Color) * nDotL;\n&#x27;</span> + <span class="comment">//计算漫反射光的颜色</span></span><br><span class="line">    <span class="string">&#x27;   vec3 ambient = u_AmbientLight * vec3(a_Color);\n&#x27;</span> + <span class="comment">//计算环境光产生的反射光颜色</span></span><br><span class="line">    <span class="string">&#x27;   v_Color = vec4(diffuse + ambient, a_Color.a);\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>顶点着色器中新增加了 <code>u_AmbientLight变量</code>用来接收环境光的颜色。使用该变量和表面的基底色 a_Color 计算出反射光的颜色，将其存储在 ambient 变量中。这样我们就即由环境光反射产生的颜色 ambient，又有了由平行光漫反射产生的颜色 diffuse。最后根据式子计算物体的最终颜色并存储在 v_Color 变量中，作为物体表面最终显示处的颜色，和 LightCube 一样。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> u_AmbientLight = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_AmbientLight&#x27;</span>);</span><br><span class="line">gl.uniform3f(u_AmbientLight, <span class="number">0.2</span>, <span class="number">0.2</span>, <span class="number">0.2</span>); <span class="comment">//设置环境光颜色</span></span><br></pre></td></tr></table></figure>
+<h2 id="实例">实例</h2>
+<h4 id="代码1-LightedCube">代码1-LightedCube</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//LightedCube.js</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> + <span class="comment">//表面基底色</span></span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Normal;\n&#x27;</span> + <span class="comment">//法向量</span></span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_MvpMatrix;\n&#x27;</span> + <span class="comment">//光线颜色</span></span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightColor;\n&#x27;</span> + <span class="comment">//归一化的世界坐标（入射光方向）</span></span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightDirection;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = u_MvpMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   vec3 normal = normalize(vec3(a_Normal));\n&#x27;</span> + <span class="comment">//对法向量进行归一化</span></span><br><span class="line">    <span class="string">&#x27;   float nDotL = max(dot(u_LightDirection, normal), 0.0);\n&#x27;</span> + <span class="comment">//计算光线方向和法向量的点积</span></span><br><span class="line">    <span class="string">&#x27;   vec3 diffuse = u_LightColor * vec3(a_Color) * nDotL;\n&#x27;</span> + <span class="comment">//计算漫反射光的颜色</span></span><br><span class="line">    <span class="string">&#x27;   v_Color = vec4(diffuse, a_Color.a);\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE=</span><br><span class="line">    <span class="string">&#x27;#ifdef GL_ES\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;precision mediump float;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;#endif\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   gl_FragColor = v_Color;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&quot;webgl&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!canvas) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to retrieve the &lt;canvas&gt; element&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> gl = getWebGLContext(canvas);</span><br><span class="line">    <span class="keyword">if</span> (!gl) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to get the rendering context for WebGL&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to initialize shaders.&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置顶点位置</span></span><br><span class="line">    <span class="keyword">var</span> n = initVertexBuffers(gl);</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to set the positions of the vertices&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set the clear color and enable the depth test</span></span><br><span class="line">    <span class="comment">// gl.clearColor(0, 0, 0, 1);</span></span><br><span class="line">    gl.enable(gl.DEPTH_TEST);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> u_MvpMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_MvpMatrix&#x27;</span>);<span class="comment">//模型视图投影矩阵</span></span><br><span class="line">    <span class="keyword">var</span> u_LightColor = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_LightColor&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> u_LightDirection = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_LightDirection&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!u_MvpMatrix || !u_LightColor || !u_LightDirection) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to get the storage location&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    gl.uniform3f(u_LightColor, <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>); <span class="comment">//设置光线颜色为白色</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> lightDirection = <span class="keyword">new</span> Vector3([<span class="number">0.5</span>, <span class="number">3.0</span>, <span class="number">4.0</span>]);<span class="comment">//设置光线方向（世界坐标系下）</span></span><br><span class="line">    lightDirection.normalize();<span class="comment">//归一化</span></span><br><span class="line">    gl.uniform3fv(u_LightDirection, lightDirection.elements);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> mvpMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line">    mvpMatrix.setPerspective(<span class="number">30</span>, canvas.width/canvas.height, <span class="number">1</span> ,<span class="number">100</span>);</span><br><span class="line">    mvpMatrix.lookAt(<span class="number">3</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    gl.uniformMatrix4fv(u_MvpMatrix, <span class="literal">false</span>, mvpMatrix.elements);</span><br><span class="line"></span><br><span class="line">    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">    gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_BYTE, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initVertexBuffers</span>(<span class="params">gl</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Create a cube</span></span><br><span class="line">    <span class="comment">//    v6----- v5</span></span><br><span class="line">    <span class="comment">//   /|      /|</span></span><br><span class="line">    <span class="comment">//  v1------v0|</span></span><br><span class="line">    <span class="comment">//  | |     | |</span></span><br><span class="line">    <span class="comment">//  | |v7---|-|v4</span></span><br><span class="line">    <span class="comment">//  |/      |/</span></span><br><span class="line">    <span class="comment">//  v2------v3</span></span><br><span class="line">    <span class="keyword">var</span> vertices = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([   <span class="comment">// Vertex coordinates</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>   <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([     <span class="comment">// Colors</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>　    <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> normals = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([    <span class="comment">// Normal</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>   <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> indices = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>([       <span class="comment">// Indices of the vertices</span></span><br><span class="line">        <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>,   <span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>,    <span class="comment">// front</span></span><br><span class="line">        <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>,   <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>,    <span class="comment">// right</span></span><br><span class="line">        <span class="number">8</span>, <span class="number">9</span>,<span class="number">10</span>,   <span class="number">8</span>,<span class="number">10</span>,<span class="number">11</span>,    <span class="comment">// up</span></span><br><span class="line">        <span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,  <span class="number">12</span>,<span class="number">14</span>,<span class="number">15</span>,    <span class="comment">// left</span></span><br><span class="line">        <span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,  <span class="number">16</span>,<span class="number">18</span>,<span class="number">19</span>,    <span class="comment">// down</span></span><br><span class="line">        <span class="number">20</span>,<span class="number">21</span>,<span class="number">22</span>,  <span class="number">20</span>,<span class="number">22</span>,<span class="number">23</span>     <span class="comment">// back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Write the vertex coordinates and color to the buffer object</span></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, vertices, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Position&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, colors, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Color&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, normals, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Normal&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Create a buffer object</span></span><br><span class="line">    <span class="keyword">var</span> indexBuffer = gl.createBuffer();</span><br><span class="line">    <span class="keyword">if</span> (!indexBuffer) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to create the buffer object&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Write the indices to the buffer object</span></span><br><span class="line">    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);</span><br><span class="line">    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> indices.length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initArrayBuffer</span>(<span class="params">gl, data, num, type, attribute</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> buffer = gl.createBuffer();   <span class="comment">// Create a buffer object</span></span><br><span class="line">    <span class="keyword">if</span> (!buffer) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to create the buffer object&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Write date into the buffer object</span></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);</span><br><span class="line">    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);</span><br><span class="line">    <span class="comment">// Assign the buffer object to the attribute variable</span></span><br><span class="line">    <span class="keyword">var</span> a_attribute = gl.getAttribLocation(gl.program, attribute);</span><br><span class="line">    <span class="keyword">if</span> (a_attribute &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to get the storage location of &#x27;</span> + attribute);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    gl.vertexAttribPointer(a_attribute, num, type, <span class="literal">false</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="comment">// Enable the assignment of the buffer object to the attribute variable</span></span><br><span class="line">    gl.enableVertexAttribArray(a_attribute);</span><br><span class="line"></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;LightedCube&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body onload=<span class="string">&quot;main()&quot;</span>&gt;</span><br><span class="line">&lt;canvas id=<span class="string">&quot;webgl&quot;</span> width=<span class="string">&quot;400&quot;</span> height=<span class="string">&quot;400&quot;</span>&gt;</span><br><span class="line">    Please use the browser supporting <span class="string">&quot;canvas&quot;</span>.</span><br><span class="line">&lt;/canvas&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=<span class="string">&quot;../lib/webgl-utils.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;../lib/webgl-debug.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;../lib/cuon-utils.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;../lib/cuon-matrix.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;LightedCube.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="效果">效果</h5>
+<p><img src="/images/LightedCube10.png" alt="LightedCube"></p>
+<h4 id="代码2-LightedCube-animation">代码2-LightedCube_animation</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//LightedCube_animation.js</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Normal;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_MvpMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_NormalMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightDirection;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;  gl_Position = u_MvpMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;  vec4 normal = u_NormalMatrix * a_Normal;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;  float nDotL = max(dot(u_LightDirection, normalize(normal.xyz)), 0.0);\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;  v_Color = vec4(a_Color.xyz * nDotL, a_Color.a);\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE=</span><br><span class="line">    <span class="string">&#x27;#ifdef GL_ES\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;precision mediump float;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;#endif\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;gl_FragColor = v_Color;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&quot;webgl&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> gl = getWebGLContext(canvas);</span><br><span class="line">    <span class="keyword">if</span> (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to initialize shaders.&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置顶点位置</span></span><br><span class="line">    <span class="keyword">var</span> n = initVertexBuffers(gl);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Set the clear color and enable the depth test</span></span><br><span class="line">    <span class="comment">// gl.clearColor(0, 0, 0, 1);</span></span><br><span class="line">    gl.enable(gl.DEPTH_TEST);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> u_MvpMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_MvpMatrix&#x27;</span>);<span class="comment">//模型视图投影矩阵</span></span><br><span class="line">    <span class="keyword">var</span> u_NormalMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_NormalMatrix&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> u_LightDirection = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_LightDirection&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> lightDirection = <span class="keyword">new</span> Vector3([<span class="number">0.5</span>, <span class="number">3.0</span>, <span class="number">4.0</span>]);<span class="comment">//设置光线方向（世界坐标系下）</span></span><br><span class="line">    lightDirection.normalize();<span class="comment">//归一化</span></span><br><span class="line">    gl.uniform3fv(u_LightDirection, lightDirection.elements);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> mvpMatrix = <span class="keyword">new</span> Matrix4();<span class="comment">//视图投影矩阵</span></span><br><span class="line">    mvpMatrix.setPerspective(<span class="number">30</span>, canvas.width / canvas.height, <span class="number">1</span>, <span class="number">100</span>);</span><br><span class="line">    mvpMatrix.lookAt(<span class="number">3</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> currentAngle = <span class="number">0.0</span>; <span class="comment">//目前的旋转角度</span></span><br><span class="line">    <span class="keyword">var</span> modelMatrix = <span class="keyword">new</span> Matrix4(); <span class="comment">//模型矩阵</span></span><br><span class="line">    <span class="keyword">var</span> vpMatrix = <span class="keyword">new</span> Matrix4();<span class="comment">//模型视图投影矩阵</span></span><br><span class="line">    <span class="keyword">var</span> normalMatrix = <span class="keyword">new</span> Matrix4();<span class="comment">//法线变换矩阵</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> tick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        currentAngle = animate(currentAngle);<span class="comment">//更新当前旋转角度</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//计算模型矩阵</span></span><br><span class="line">        modelMatrix.setRotate(currentAngle, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>); <span class="comment">//围绕y轴旋转</span></span><br><span class="line">        vpMatrix.set(mvpMatrix).multiply(modelMatrix);</span><br><span class="line">        gl.uniformMatrix4fv(u_MvpMatrix, <span class="literal">false</span>, vpMatrix.elements);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Pass the matrix to transform the normal based on the model matrix to u_NormalMatrix</span></span><br><span class="line">        normalMatrix.setInverseOf(modelMatrix);</span><br><span class="line">        normalMatrix.transpose();</span><br><span class="line">        gl.uniformMatrix4fv(u_NormalMatrix, <span class="literal">false</span>, normalMatrix.elements);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Clear color and depth buffer</span></span><br><span class="line">        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Draw the cube</span></span><br><span class="line">        gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_BYTE, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        requestAnimationFrame(tick, canvas); <span class="comment">// Request that the browser ?calls tick</span></span><br><span class="line">    &#125;;</span><br><span class="line">    tick();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params">gl, n, angle, vpMatrix, u_MvpMatrix, u_NormalMatrix</span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initVertexBuffers</span>(<span class="params">gl</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Create a cube</span></span><br><span class="line">    <span class="comment">//    v6----- v5</span></span><br><span class="line">    <span class="comment">//   /|      /|</span></span><br><span class="line">    <span class="comment">//  v1------v0|</span></span><br><span class="line">    <span class="comment">//  | |     | |</span></span><br><span class="line">    <span class="comment">//  | |v7---|-|v4</span></span><br><span class="line">    <span class="comment">//  |/      |/</span></span><br><span class="line">    <span class="comment">//  v2------v3</span></span><br><span class="line">    <span class="keyword">var</span> vertices = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([   <span class="comment">// Vertex coordinates</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>   <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([     <span class="comment">// Colors</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>　    <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> normals = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([    <span class="comment">// Normal</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>   <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> indices = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>([       <span class="comment">// Indices of the vertices</span></span><br><span class="line">        <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>,   <span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>,    <span class="comment">// front</span></span><br><span class="line">        <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>,   <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>,    <span class="comment">// right</span></span><br><span class="line">        <span class="number">8</span>, <span class="number">9</span>,<span class="number">10</span>,   <span class="number">8</span>,<span class="number">10</span>,<span class="number">11</span>,    <span class="comment">// up</span></span><br><span class="line">        <span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,  <span class="number">12</span>,<span class="number">14</span>,<span class="number">15</span>,    <span class="comment">// left</span></span><br><span class="line">        <span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,  <span class="number">16</span>,<span class="number">18</span>,<span class="number">19</span>,    <span class="comment">// down</span></span><br><span class="line">        <span class="number">20</span>,<span class="number">21</span>,<span class="number">22</span>,  <span class="number">20</span>,<span class="number">22</span>,<span class="number">23</span>     <span class="comment">// back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Write the vertex coordinates and color to the buffer object</span></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, vertices, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Position&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, colors, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Color&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, normals, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Normal&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Create a buffer object</span></span><br><span class="line">    <span class="keyword">var</span> indexBuffer = gl.createBuffer();</span><br><span class="line">    <span class="keyword">if</span> (!indexBuffer) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to create the buffer object&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Write the indices to the buffer object</span></span><br><span class="line">    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);</span><br><span class="line">    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> indices.length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initArrayBuffer</span>(<span class="params">gl, data, num, type, attribute</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> buffer = gl.createBuffer();   <span class="comment">// Create a buffer object</span></span><br><span class="line">    <span class="keyword">if</span> (!buffer) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to create the buffer object&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Write date into the buffer object</span></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);</span><br><span class="line">    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);</span><br><span class="line">    <span class="comment">// Assign the buffer object to the attribute variable</span></span><br><span class="line">    <span class="keyword">var</span> a_attribute = gl.getAttribLocation(gl.program, attribute);</span><br><span class="line">    <span class="keyword">if</span> (a_attribute &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to get the storage location of &#x27;</span> + attribute);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    gl.vertexAttribPointer(a_attribute, num, type, <span class="literal">false</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="comment">// Enable the assignment of the buffer object to the attribute variable</span></span><br><span class="line">    gl.enableVertexAttribArray(a_attribute);</span><br><span class="line"></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Rotation angle (degrees/second)</span></span><br><span class="line"><span class="keyword">var</span> ANGLE_STEP = <span class="number">30.0</span>;</span><br><span class="line"><span class="comment">// Last time that this function was called</span></span><br><span class="line"><span class="keyword">var</span> g_last = <span class="built_in">Date</span>.now();</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params">angle</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Calculate the elapsed time</span></span><br><span class="line">    <span class="keyword">var</span> now = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">var</span> elapsed = now - g_last;</span><br><span class="line">    g_last = now;</span><br><span class="line">    <span class="comment">// Update the current rotation angle (adjusted by the elapsed time)</span></span><br><span class="line">    <span class="keyword">var</span> newAngle = angle + (ANGLE_STEP * elapsed) / <span class="number">1000.0</span>;</span><br><span class="line">    <span class="keyword">return</span> newAngle %= <span class="number">360</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="效果：3-1-平行光下漫反射的缺陷-3-1-平行光下漫反射的缺陷">[效果：3.1 平行光下漫反射的缺陷](#3.1 平行光下漫反射的缺陷)</h5>
+<h4 id="代码3-LightedCube-ambient">代码3-LightedCube_ambient</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//LightedCube_ambient.js</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> + <span class="comment">//表面基底色</span></span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Normal;\n&#x27;</span> + <span class="comment">//法向量</span></span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_MvpMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightColor;\n&#x27;</span> + <span class="comment">//光线颜色</span></span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_LightDirection;\n&#x27;</span> + <span class="comment">//归一化的世界坐标（入射光方向）</span></span><br><span class="line">    <span class="string">&#x27;uniform vec3 u_AmbientLight;\n&#x27;</span> + <span class="comment">//环境光颜色</span></span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = u_MvpMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   vec3 normal = normalize(vec3(a_Normal));\n&#x27;</span> + <span class="comment">//对法向量进行归一化</span></span><br><span class="line">    <span class="string">&#x27;   float nDotL = max(dot(u_LightDirection, normal), 0.0);\n&#x27;</span> + <span class="comment">//计算光线方向和法向量的点积</span></span><br><span class="line">    <span class="string">&#x27;   vec3 diffuse = u_LightColor * vec3(a_Color) * nDotL;\n&#x27;</span> + <span class="comment">//计算漫反射光的颜色</span></span><br><span class="line">    <span class="string">&#x27;   vec3 ambient = u_AmbientLight * vec3(a_Color);\n&#x27;</span> + <span class="comment">//计算环境光产生的反射光颜色</span></span><br><span class="line">    <span class="string">&#x27;   v_Color = vec4(diffuse + ambient, a_Color.a);\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE=</span><br><span class="line">    <span class="string">&#x27;#ifdef GL_ES\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;precision mediump float;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;#endif\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   gl_FragColor = v_Color;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&quot;webgl&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!canvas) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to retrieve the &lt;canvas&gt; element&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> gl = getWebGLContext(canvas);</span><br><span class="line">    <span class="keyword">if</span> (!gl) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to get the rendering context for WebGL&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to initialize shaders.&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置顶点位置</span></span><br><span class="line">    <span class="keyword">var</span> n = initVertexBuffers(gl);</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to set the positions of the vertices&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set the clear color and enable the depth test</span></span><br><span class="line">    <span class="comment">// gl.clearColor(0, 0, 0, 1);</span></span><br><span class="line">    gl.enable(gl.DEPTH_TEST);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> u_MvpMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_MvpMatrix&#x27;</span>);<span class="comment">//模型视图投影矩阵</span></span><br><span class="line">    <span class="keyword">var</span> u_LightColor = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_LightColor&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> u_LightDirection = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_LightDirection&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> u_AmbientLight = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_AmbientLight&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!u_MvpMatrix || !u_LightColor || !u_LightDirection || !u_AmbientLight) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to get the storage location&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    gl.uniform3f(u_LightColor, <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>); <span class="comment">//设置光线颜色为白色</span></span><br><span class="line">    gl.uniform3f(u_AmbientLight, <span class="number">0.2</span>, <span class="number">0.2</span>, <span class="number">0.2</span>); <span class="comment">//设置环境光颜色</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> lightDirection = <span class="keyword">new</span> Vector3([<span class="number">0.5</span>, <span class="number">3.0</span>, <span class="number">4.0</span>]);<span class="comment">//设置光线方向（世界坐标系下）</span></span><br><span class="line">    lightDirection.normalize();<span class="comment">//归一化</span></span><br><span class="line">    gl.uniform3fv(u_LightDirection, lightDirection.elements);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> mvpMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line">    mvpMatrix.setPerspective(<span class="number">30</span>, canvas.width/canvas.height, <span class="number">1</span> ,<span class="number">100</span>);</span><br><span class="line">    mvpMatrix.lookAt(<span class="number">3</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    gl.uniformMatrix4fv(u_MvpMatrix, <span class="literal">false</span>, mvpMatrix.elements);</span><br><span class="line"></span><br><span class="line">    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">    gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_BYTE, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initVertexBuffers</span>(<span class="params">gl</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Create a cube</span></span><br><span class="line">    <span class="comment">//    v6----- v5</span></span><br><span class="line">    <span class="comment">//   /|      /|</span></span><br><span class="line">    <span class="comment">//  v1------v0|</span></span><br><span class="line">    <span class="comment">//  | |     | |</span></span><br><span class="line">    <span class="comment">//  | |v7---|-|v4</span></span><br><span class="line">    <span class="comment">//  |/      |/</span></span><br><span class="line">    <span class="comment">//  v2------v3</span></span><br><span class="line">    <span class="keyword">var</span> vertices = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([   <span class="comment">// Vertex coordinates</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>, <span class="number">1.0</span>,  <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>,-<span class="number">1.0</span>,-<span class="number">1.0</span>,  -<span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>,   <span class="number">1.0</span>, <span class="number">1.0</span>,-<span class="number">1.0</span>   <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([     <span class="comment">// Colors</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,     <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,   <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,  <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>　    <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> normals = <span class="keyword">new</span> <span class="built_in">Float32Array</span>([    <span class="comment">// Normal</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,  <span class="comment">// v0-v1-v2-v3 front</span></span><br><span class="line">        <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,   <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="comment">// v0-v3-v4-v5 right</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="comment">// v0-v5-v6-v1 up</span></span><br><span class="line">        -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>,  <span class="comment">// v1-v6-v7-v2 left</span></span><br><span class="line">        <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,   <span class="number">0.0</span>,-<span class="number">1.0</span>, <span class="number">0.0</span>,  <span class="comment">// v7-v4-v3-v2 down</span></span><br><span class="line">        <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>,   <span class="number">0.0</span>, <span class="number">0.0</span>,-<span class="number">1.0</span>   <span class="comment">// v4-v7-v6-v5 back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> indices = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>([       <span class="comment">// Indices of the vertices</span></span><br><span class="line">        <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>,   <span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>,    <span class="comment">// front</span></span><br><span class="line">        <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>,   <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>,    <span class="comment">// right</span></span><br><span class="line">        <span class="number">8</span>, <span class="number">9</span>,<span class="number">10</span>,   <span class="number">8</span>,<span class="number">10</span>,<span class="number">11</span>,    <span class="comment">// up</span></span><br><span class="line">        <span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,  <span class="number">12</span>,<span class="number">14</span>,<span class="number">15</span>,    <span class="comment">// left</span></span><br><span class="line">        <span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,  <span class="number">16</span>,<span class="number">18</span>,<span class="number">19</span>,    <span class="comment">// down</span></span><br><span class="line">        <span class="number">20</span>,<span class="number">21</span>,<span class="number">22</span>,  <span class="number">20</span>,<span class="number">22</span>,<span class="number">23</span>     <span class="comment">// back</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Write the vertex coordinates and color to the buffer object</span></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, vertices, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Position&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, colors, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Color&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initArrayBuffer(gl, normals, <span class="number">3</span>, gl.FLOAT, <span class="string">&#x27;a_Normal&#x27;</span>))</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Create a buffer object</span></span><br><span class="line">    <span class="keyword">var</span> indexBuffer = gl.createBuffer();</span><br><span class="line">    <span class="keyword">if</span> (!indexBuffer) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to create the buffer object&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Write the indices to the buffer object</span></span><br><span class="line">    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);</span><br><span class="line">    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> indices.length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initArrayBuffer</span>(<span class="params">gl, data, num, type, attribute</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> buffer = gl.createBuffer();   <span class="comment">// Create a buffer object</span></span><br><span class="line">    <span class="keyword">if</span> (!buffer) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to create the buffer object&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Write date into the buffer object</span></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);</span><br><span class="line">    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);</span><br><span class="line">    <span class="comment">// Assign the buffer object to the attribute variable</span></span><br><span class="line">    <span class="keyword">var</span> a_attribute = gl.getAttribLocation(gl.program, attribute);</span><br><span class="line">    <span class="keyword">if</span> (a_attribute &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to get the storage location of &#x27;</span> + attribute);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    gl.vertexAttribPointer(a_attribute, num, type, <span class="literal">false</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="comment">// Enable the assignment of the buffer object to the attribute variable</span></span><br><span class="line">    gl.enableVertexAttribArray(a_attribute);</span><br><span class="line"></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="效果-2"><a href="">效果</a></h5>
+<p><img src="/images/LightedCube12.png" alt=""></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/世界坐标系和本地坐标系/" data-toggle="tooltip" data-placement="top" title="世界坐标系和本地坐标系">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/25-三维世界-立方体-HelloCubes/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】25-三维世界-立方体">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      ...
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【WebGL之巅】26-光照-光照原理&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/26-光照-光照原理-平行光-LightedCube/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Thu Aug 05 2021 16:13:59 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">知识点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%85%89%E7%85%A7%E5%8E%9F%E7%90%86"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">一、光照原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-1-%E5%BC%95%E5%85%A5%E2%80%94%E2%80%94%E7%9D%80%E8%89%B2%E4%B8%8E%E9%98%B4%E5%BD%B1"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1.1 引入——着色与阴影</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-2-%E5%85%89%E6%BA%90%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">1.2 光源类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%B9%B3%E8%A1%8C%E5%85%89"><span class="toc-nav-number">1.1.2.1.</span> <span class="toc-nav-text">平行光</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%82%B9%E5%85%89%E6%BA%90%E5%85%89"><span class="toc-nav-number">1.1.2.2.</span> <span class="toc-nav-text">点光源光</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%8E%AF%E5%A2%83%E5%85%89"><span class="toc-nav-number">1.1.2.3.</span> <span class="toc-nav-text">环境光</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-3-%E5%8F%8D%E5%B0%84%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">1.3 反射类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%BC%AB%E5%8F%8D%E5%B0%84"><span class="toc-nav-number">1.1.3.1.</span> <span class="toc-nav-text">漫反射</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%8D%E5%B0%84"><span class="toc-nav-number">1.1.3.2.</span> <span class="toc-nav-text">环境反射</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%BC%AB%E5%8F%8D%E5%B0%84-%E7%8E%AF%E5%A2%83%E5%8F%8D%E5%B0%84"><span class="toc-nav-number">1.1.3.3.</span> <span class="toc-nav-text">漫反射+环境反射</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81-%E5%B9%B3%E8%A1%8C%E5%85%89%E4%B8%8B%E7%9A%84%E6%BC%AB%E5%8F%8D%E5%B0%84"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">二、 平行光下的漫反射</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-5-%E6%A0%B9%E6%8D%AE%E5%85%89%E7%BA%BF%E5%92%8C%E8%A1%A8%E9%9D%A2%E7%9A%84%E6%96%B9%E5%90%91%E8%AE%A1%E7%AE%97%E5%85%A5%E5%B0%84%E8%A7%92"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">1.5 根据光线和表面的方向计算入射角</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%82%B9%E7%A7%AF%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">点积运算</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%BD%92%E4%B8%80%E5%8C%96"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">归一化</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85%EF%BC%9A%E7%9F%A2%E9%87%8F%E7%9A%84%E7%82%B9%E4%B9%98%E4%B8%8E%E5%8F%89%E4%B9%98"><span class="toc-nav-number">1.2.1.3.</span> <span class="toc-nav-text">补充：矢量的点乘与叉乘</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-6-%E6%B3%95%E7%BA%BF%EF%BC%9A%E8%A1%A8%E9%9D%A2%E7%9A%84%E6%9C%9D%E5%90%91"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">1.6 法线：表面的朝向</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.2.2.1.</span> <span class="toc-nav-text">定义</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.2.2.2.</span> <span class="toc-nav-text">表示</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%80%E4%B8%AA%E8%A1%A8%E9%9D%A2%E5%85%B7%E6%9C%89%E4%B8%A4%E4%B8%AA%E6%B3%95%E5%90%91%E9%87%8F"><span class="toc-nav-number">1.2.2.3.</span> <span class="toc-nav-text">一个表面具有两个法向量</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%B9%B3%E9%9D%A2%E7%9A%84%E6%B3%95%E5%90%91%E9%87%8F%E5%94%AF%E4%B8%80"><span class="toc-nav-number">1.2.2.4.</span> <span class="toc-nav-text">平面的法向量唯一</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-7-%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">1.7 程序分析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-7-1-%E9%A1%B6%E7%82%B9%E7%9D%80%E8%89%B2%E5%99%A8"><span class="toc-nav-number">1.2.3.1.</span> <span class="toc-nav-text">1.7.1 顶点着色器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%8F%98%E9%87%8F%E5%88%86%E6%9E%90"><span class="toc-nav-number">1.2.3.1.1.</span> <span class="toc-nav-text">变量分析</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%AE%A1%E7%AE%97a-Normal"><span class="toc-nav-number">1.2.3.1.2.</span> <span class="toc-nav-text">计算a_Normal</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%AE%A1%E7%AE%97%E7%82%B9%E7%A7%AF"><span class="toc-nav-number">1.2.3.1.3.</span> <span class="toc-nav-text">计算点积</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%AE%A1%E7%AE%97%E6%BC%AB%E5%8F%8D%E5%B0%84%E9%A2%9C%E8%89%B2"><span class="toc-nav-number">1.2.3.1.4.</span> <span class="toc-nav-text">计算漫反射颜色</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-7-2-JS-%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B"><span class="toc-nav-number">1.2.3.2.</span> <span class="toc-nav-text">1.7.2 JS 程序流程</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E7%8E%AF%E5%A2%83%E5%85%89%E4%B8%8B%E7%9A%84%E6%BC%AB%E5%8F%8D%E5%B0%84"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">三、环境光下的漫反射</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-1-%E5%B9%B3%E8%A1%8C%E5%85%89%E4%B8%8B%E6%BC%AB%E5%8F%8D%E5%B0%84%E7%9A%84%E7%BC%BA%E9%99%B7"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">3.1 平行光下漫反射的缺陷</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-2-%E7%8E%AF%E5%A2%83%E5%85%89%E9%A2%9C%E8%89%B2%E8%AE%A1%E7%AE%97"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">3.2 环境光颜色计算</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-3-%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">3.3 程序分析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E9%A1%B6%E7%82%B9%E7%9D%80%E8%89%B2%E5%99%A8"><span class="toc-nav-number">1.3.3.1.</span> <span class="toc-nav-text">顶点着色器</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">实例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%811-LightedCube"><span class="toc-nav-number">2.0.1.</span> <span class="toc-nav-text">代码1-LightedCube</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-nav-number">2.0.1.1.</span> <span class="toc-nav-text">效果</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%812-LightedCube-animation"><span class="toc-nav-number">2.0.2.</span> <span class="toc-nav-text">代码2-LightedCube_animation</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%EF%BC%9A3-1-%E5%B9%B3%E8%A1%8C%E5%85%89%E4%B8%8B%E6%BC%AB%E5%8F%8D%E5%B0%84%E7%9A%84%E7%BC%BA%E9%99%B7-3-1-%E5%B9%B3%E8%A1%8C%E5%85%89%E4%B8%8B%E6%BC%AB%E5%8F%8D%E5%B0%84%E7%9A%84%E7%BC%BA%E9%99%B7"><span class="toc-nav-number">2.0.2.1.</span> <span class="toc-nav-text">[效果：3.1 平行光下漫反射的缺陷](#3.1 平行光下漫反射的缺陷)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%813-LightedCube-ambient"><span class="toc-nav-number">2.0.3.</span> <span class="toc-nav-text">代码3-LightedCube_ambient</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C-2"><span class="toc-nav-number">2.0.3.1.</span> <span class="toc-nav-text">效果</span></a></li></ol></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#WebGL" title="WebGL">WebGL</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/西西">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Song木头
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">240.7k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

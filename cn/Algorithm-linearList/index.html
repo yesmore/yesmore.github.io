@@ -245,9 +245,9 @@
           
           
           <li>
-            <a href="/cooperation/">
+            <a href="/archive/">
               
-              合作
+              归档
               
               
             </a>
@@ -256,9 +256,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/tags/">
               
-              归档
+              标签
               
               
             </a>
@@ -338,19 +338,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/bg.png');
-      --intro-header-background-image-url-post: url('/img/header_img/categories_bg.jpg');
-      --intro-header-background-image-url-page: url('//img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/categories_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('/img/header_img/categories_bg.jpg'); */
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
       
     }
 
@@ -375,9 +375,9 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#Algorithm" title="Algorithm"><i class="fa fa-tag" style="color: aqua;"></i> Algorithm</a>
-              
               <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
               
             </div>
             <h2>【数据结构与算法】线性表</h2>
@@ -459,10 +459,10 @@
 
         <p>要点：线性表知识点汇总</p>
 <span id="more"></span>
-<p><img src="algorithm7.png" alt="1"></p>
+<p><img src="/images/algorithm7.png" alt="1"></p>
 <h3 id="一、线性表的定义">一、线性表的定义</h3>
 <p>由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。</p>
-<p><img src="algorithm8.png" alt="2"></p>
+<p><img src="/images/algorithm8.png" alt="2"></p>
 <h3 id="二、线性表的特点">二、线性表的特点</h3>
 <p>1、线性表中元素的个数<code>n(n≥O)</code>定义为线性表的长度，<code>n=O</code>时称为空表。</p>
 <p>2、将非空的线性表(n&gt;O)记作(a1，a2，a3，…，an)；</p>
@@ -488,7 +488,7 @@
 <p>$LOC(a_i) = LOC(a_1) + (i - 1) * c$</p>
 <h4 id="3-5-存取操作时间性能">3.5 存取操作时间性能</h4>
 <p>上述推导公式具体内容如下图所示:</p>
-<p><img src="algorithm9.png" alt="4"></p>
+<p><img src="/images/algorithm9.png" alt="4"></p>
 <p>通过该公式，就可以<strong>随时算出</strong>线性表中<strong>任意位置的地址</strong>；</p>
 <p>不管是第一个还是最后一个，都是相同的时间，<strong>也即</strong>对于线性表<strong>每个位置</strong>的<strong>存入或者取出数据</strong>，对于计算机来说<strong>都是相等的时间</strong>，也就是一个<strong>常数时间</strong>。</p>
 <p>因此，线性表的<strong>存取操作时间性能</strong>为 $O(1)$</p>
@@ -517,14 +517,14 @@
 <p>指针域：存储<strong>下一个</strong>结点的<strong>地址（指针）</strong></p>
 </li>
 </ul>
-<p><img src="algorithm10.png" alt="5"></p>
+<p><img src="/images/algorithm10.png" alt="5"></p>
 <h4 id="4-3-头指针-头结点">4.3 头指针&amp;头结点</h4>
 <p><strong>头结点的数据</strong>域<strong>可以不存储任何信息</strong>，其指针域存储<strong>指向</strong>第一个结点的指针（<strong>即指向头指针</strong>）</p>
 <h5 id="头指针">头指针</h5>
 <p>一般把<strong>链表</strong>中的<strong>第一个结</strong>点称为 <strong>头指针</strong>，其<strong>存储</strong>链表的<strong>第一个数据元素</strong></p>
 <h5 id="头结点">头结点</h5>
 <p>为了能更加方便地对链表进行操作，会在<strong>单链表的第一个结点（即头指针）前</strong>附<strong>设一个结点</strong>，称为 <strong>头结点</strong></p>
-<p><img src="algorithm11.png" alt="6"></p>
+<p><img src="/images/algorithm11.png" alt="6"></p>
 <h4 id="4-4-单链表">4.4 单链表</h4>
 <p>在<strong>线性表的顺序存储结构</strong>（即数组）中，其任意一个元素的存储位置可以通过计算得到，因此其数据读取的<strong>时间复杂度为</strong> $O(1)$</p>
 <h5 id="单链表的时间复杂度">单链表的时间复杂度</h5>
@@ -564,12 +564,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/Algorithm-String/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】字符串（JavaScript版详解）">&larr; Previous Post</a>
+            <a href="/cn/Algorithm-SingleLinkedList/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】单向链表详解">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/cn/TypeScript/" data-toggle="tooltip" data-placement="top" title="TypeScript学习笔记">Next Post &rarr;</a>
+            <a href="/cn/Algorithm-Array/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】JavaScript数组-操作数组方法总结">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -729,9 +729,9 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
-            
             <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#算法" title="算法">算法</a>
             
           </div>
         </section>
@@ -861,7 +861,7 @@
           2021
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
-          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">18k</span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">240.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -912,7 +912,7 @@
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content='.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   

@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="yoyoyo"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/22-三维世界-可视范围-OrthoView/">
+  <title>
+    
+      【WebGL之巅】22-三维世界-可视范围 - 快乐码原 | Song
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          <li>
+            <a href="/categories/#算法">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+          <li>
+            <a href="/categories/#爬虫">爬虫</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+              
+            </div>
+            <h2>【WebGL之巅】22-三维世界-可视范围</h2>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              By Song木头 on
+              2021-08-01
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">22</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 <span class="post-count">4.9k</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>对应《WebGL编程指南》第七章 26-OrthoView、27-LookAtTrianglesWithKeys_ViewVolume</p>
+<p>要点：可视空间（正射类型、透视投影）、可视范围（正射类型）、盒状可视空间</p>
+<span id="more"></span>
+<h2 id="知识点">知识点</h2>
+<h3 id="一、可视范围（正射类型）">一、可视范围（正射类型）</h3>
+<p>​		回顾：在上一节的最后一个示例程序中，当视点在极左或极右的位置时，三角形会缺少一部分。</p>
+<p>​		三角形缺了一角的原因是，我们没有指定<strong>可视范围</strong>，即实际观察得到的区域边界。如前一章所属，WebGL 只显示可视范围内的区域。例中当我们改变视点位置时，三角形的一部分到了可视范围外，所以图中的三角形就缺了一个角。</p>
+<h4 id="1-1-WebGL绘制可视范围内三维对象的方式">1.1 WebGL绘制可视范围内三维对象的方式</h4>
+<p>​		虽然你可以将三维物体放在三维空间中的任何地方，但是<u>只有当它在可视范围内时，WebGL 才会绘制它</u>。事实上，不绘制可视范围外的而对象，是基本的降低程序开销的手段。绘制可视范围外的对象没有意义，即使把它们绘制出来也不会在屏幕上显示。从某种程序上来说，这样也模拟了人类观察物体的方式，如下图所示。我们人类也只能看到眼前的东西，水平视角大约200度左右。总之，WebGL 就是以类似的方式，只绘制可视范围内的三维对象。<br>
+<img src="/images/OrthoView1.png" alt="人类的可视范围"></p>
+<p>​		除了水平和垂直范围内的限制，WebGL 还限制观察者的<u>可视深度，即”能够看多远“</u>。所有这些限制，包括<u>水平视角</u>、<u>垂直视角</u>和<u>可视深度</u>，定义了<strong>可视空间</strong>。由于我们没有显式地指定可视空间，默认的可视深度又不够远，所以三角形的一个角看上去就消失了。</p>
+<h4 id="1-2-可视空间">1.2 可视空间</h4>
+<p>有两类常用的可视空间：</p>
+<ul>
+<li>长方体可视空间，也称盒状空间，由<strong>正射投影</strong>产生。</li>
+<li>四棱锥/金字塔可视空间，由<strong>透视投影</strong>产生。</li>
+</ul>
+<p>​		在透视投影下，产生的三维场景看上去更是有<u>深度感</u>，更加自然，<u>因为我们平时观察真实世界用的也是透视投影</u>。在大多数情况下，比如三维射击类游戏中，我们都应当采用透视投影。相比之下，<u>正射投影的好处是用户可以方便比较场景中物体的大小</u>，这是因为<u>物体看上去的大小与其所在的位置没有关系</u>。在建筑平面图等技术绘图的相关场合，应当使用这种投影。</p>
+<h4 id="1-3-基于正射投影的-u-盒状可视空间-u-的工作原理">1.3 基于正射投影的<u>盒状可视空间</u>的工作原理</h4>
+<p>​		盒状可视空间的形状如下图所示。可视空间由前后两个矩形表面确定，分别称<strong>近裁剪面</strong>和<strong>远裁剪面</strong>。</p>
+<ul>
+<li>
+<p>前者的四个顶点为<code>（right, top,-near）</code>，<code>（-left,top,-near）</code>，<code>（-left,-bottom,-near）</code>，<code>（right,-bottom,-near）</code></p>
+</li>
+<li>
+<p>后者的四个顶点为<code>（right, top,-far）</code>，<code>（-left,top,-far）</code>，<code>（-left,-bottom,-far）</code>，<code>（right,-bottom,-far）</code>。<br>
+<img src="/images/OrthoView2.png" alt="盒状可视空间"></p>
+</li>
+</ul>
+<p>​		<code>&lt;canvas&gt;</code> 上显示的就是可视空间中物体在<strong>近裁剪面</strong>上的投影。如果剪裁面的宽高比和 <code>&lt;canvas&gt;</code> 不一样，那么画面就会被按照 <code>&lt;canvas&gt;</code>的宽高比进行压缩，物体会被扭曲。<u>近裁剪面与远裁剪面之间的盒装空间就是可视空间</u>，只有在此空间内的物体会被显示出来。如果某个物体一部分在可视空间内，一部分在其外，那就只显示空间内的部分。</p>
+<h4 id="1-4-定义盒状可视空间">1.4 定义盒状可视空间</h4>
+<p>cuon-matrix.js 提供的 <code>Matrix4.setOrtho()</code>方法可用来设置投影矩阵，定义盒状可视空间。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>Matrix4.setOrtho(left, right, bottom, top, near, far)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left, right</td>
+<td>指定近裁剪面（也是可视空间的，下同）的左边界和又边界</td>
+</tr>
+<tr>
+<td>bottom,top</td>
+<td>指定近裁剪面的上边界和下边界</td>
+</tr>
+<tr>
+<td>near, far</td>
+<td>指定近裁剪面和远裁剪面的位置，即可视空间的近边界和远边界</td>
+</tr>
+</tbody>
+</table>
+<p>​		我们在这里又用到了<strong>矩阵</strong>。这个矩阵被称为<u>正射投影矩阵</u>。示例程序 OrthoView 将使用这种矩阵定义盒装可视空间，并绘制3个与 LookAtRotatedTriangles 中一样的三角形，由此测试盒装可视空间的效果。LookAtRotatedTriangles 程序将视点放在一个指定的非原点位置上，但本例为方便，直接把视点置于<u>原点处</u>，视线为<u>Z轴负方向</u>。</p>
+<p>​		可视空间如下图所示，<code>near = 0.0，far = 0.5，left = -1.0，right = 1.0，bottom = -1.0，top = 1.0</code>，三角形处于Z轴 <code>0.0 到 -0.4</code> 区间上。<br>
+<img src="/images/OrthoView3.png" alt="正射投影和盒状可视空间"></p>
+<p>​		此外，<a href="#%E4%BB%A3%E7%A0%811">示例程序</a>还允许通过键盘按键修改可视空间的 near 和 far 值。这样我们就能直观地看到这两个值具体对可视空间由什么影响。下面列出了各按键的作用。</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>右方向键</td>
+<td>near提高0.01</td>
+</tr>
+<tr>
+<td>左方向键</td>
+<td>near降低0.01</td>
+</tr>
+<tr>
+<td>上方向键</td>
+<td>far提高0.01</td>
+</tr>
+<tr>
+<td>下方向键</td>
+<td>far降低0.01</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1-5-代码分析">1.5 代码分析</h4>
+<h5 id="1-5-1-实现步骤">1.5.1 实现步骤</h5>
+<p>​		与 LookAtTrainglesWithKeys 类似，本例也定义了 <code>keydown()函数</code>，每当按下按键时，匿名的事件响应函数就会调用 <code>keydown()函数</code>。<code>keydown()函数</code>首先更新 near 和 far 的值，然后调用 <code>draw()函数</code>进行绘制。<code>draw()函数</code>将设置可视空间，更新页面上文本显示的 near 和 far 的值，并绘制3个三角形。最关键的事情是设置可视空间，就发生在 draw()函数中。但是在深入研究前，先来看一下JS如何修改页面上的文本。</p>
+<h5 id="1-5-2-JS-修改-HTML-元素">1.5.2 JS 修改 HTML 元素</h5>
+<p>​		JS 修改 HTML 元素中内容的方法很简单。首先调用 <code>getElementById()</code>并传入元素的 id，获取待修改的HTML 元素。</p>
+<p>​		在示例程序中，我们把下面这个 <code>&lt;p&gt;</code> 元素中的文本改成了“near:0.0, far:0.5”：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id = <span class="string">&quot;nearFar&quot;</span>&gt;The near and far values are displayed here.&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>​		在 OrthoView.js 中，我们调用 getElementById()并传入元素的 id 值 “nearfar” 以获取该元素。如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nf = <span class="built_in">document</span>.getElementById(<span class="string">&quot;nearFar&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>​		一旦 nf 变量获取了 <code>&lt;p&gt;</code> 元素，就可以直接通过其 innerHTML 属性来进行修改，比如，如果你写下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nf.innerHTML = <span class="string">&#x27;Good Morning,Marusyje-san!&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>​		在执行之后，”Good Morning,Marusyje-san!” 这段文本就显示了在页面上。你也可以在文本中加入 HTML 标签，比如<code>‘Good Morning &lt;b&gt;Marisuke&lt;b&gt;-san!’</code>，就会以突出显示“Marisuke”。</p>
+<p>在OrthoView.js 中，可视空间的 near 和 far 的值会存储在全局变量 g_near 和 g_far 中。</p>
+<h5 id="1-5-3-顶点着色器的执行流程">1.5.3 顶点着色器的执行流程</h5>
+<p>​		本例中的顶点着色器与 LookAtTraingles.js 中的几乎一样，只是 uniform 变量变成了 <code>u_ProjMatrix</code>。该变量存储了<strong>可观空间的投影矩阵</strong>，我们将投影矩阵与顶点坐标相乘，再赋值给 gl_Position。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_ProjMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = u_ProjMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_PointSize = 10.0;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   v_Color = a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>​		当键盘的上方向键被按下时，事件响应函数就会执行并调用 keydown()。注意我们将 nf 作为最后一个参数传入，这样 keydown()函数就能够访问并修改 <code>&lt;p&gt;</code> 元素了。keydown()函数最后调用了 draw()函数绘制三角形，这样<u>每次按键后都会重绘整个图形。</u></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注册键盘事件响应函数</span></span><br><span class="line"><span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</span><br><span class="line">    keydown(ev, gl, n, u_ProjMatrix,projMatrix, nf);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>​		keydown()函数首先检查哪个键被按下，然后根据按下的键，修改 g_near 和 g_far 的值，最后调用 draw()函数。注意，这里 <u>g_near 和 g_far 是全局变量，不管是 keydown()还是 draw()函数都可以访问它</u>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 视点与近、远裁剪面的距离</span></span><br><span class="line"><span class="keyword">var</span> g_near = <span class="number">0.0</span>, g_far = <span class="number">0.5</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">keydown</span>(<span class="params">ev, gl, n, u_ProjMatrix, projMatrix, nf</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (ev.keyCode)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">39</span>: g_near += <span class="number">0.01</span>; <span class="keyword">break</span>; <span class="comment">//right</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">37</span>: g_near -= <span class="number">0.01</span>; <span class="keyword">break</span>; <span class="comment">//left</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">38</span>: g_far += <span class="number">0.01</span>; <span class="keyword">break</span>; <span class="comment">//up</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">40</span>: g_far -=<span class="number">0.01</span>; <span class="keyword">break</span>; <span class="comment">//down</span></span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    draw(gl, n, u_ProjMatrix, projMatrix, nf);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​		再看一下 draw()函数，它与 LookAtTriangle.js 中的几乎一样，唯一的区别是它修改了网页上的文本信息。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params">gl, n, u_ProjMatrix, projMatrix, nf</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 使用矩阵设置可视空间</span></span><br><span class="line">    projMatrix.setOrtho(-<span class="number">1</span>, <span class="number">1</span>, -<span class="number">1</span>, <span class="number">1</span>, g_near, g_far);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将投影矩阵传递给u_ProjMatrix变量</span></span><br><span class="line">    gl.uniformMatrix4fv(u_ProjMatrix, <span class="literal">false</span>, projMatrix.elements);</span><br><span class="line"></span><br><span class="line">    gl.clear(gl.COlOR_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// innerHTML在JS是双向功能：获取对象的内容 或 向对象插入内容；</span></span><br><span class="line">    nf.innerHTML = <span class="string">&#x27;near: &#x27;</span> + <span class="built_in">Math</span>.round(g_near * <span class="number">100</span>)/<span class="number">100</span> + <span class="string">&#x27;, far: &#x27;</span> + <span class="built_in">Math</span>.round(g_far * <span class="number">100</span>)/<span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    gl.drawArrays(gl.TRIANGLES, <span class="number">0</span>, n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​		draw()函数计算出可视空间对应的投影矩阵 projMatrix，将其传递给着色器中的 u_ProjMatrix 变量，接着在页面上更新 near 和 far 的值，最后绘制出三角形。</p>
+<h5 id="1-5-4-修改-near-和-far-值">1.5.4 修改 near 和 far 值</h5>
+<p>​		运行程序，按下右方向键逐渐增加near 值，你会看到三角形逐个消失了。</p>
+<div style="display: flex;">
+    <img src="/images/OrthoView4.png"/>
+    <img src="/images/OrthoView5.png"/>
+    <img src="/images/OrthoView6.png"/>
+</div>
+​		默认情况下，near 值为 0.0，此时3个三角形都出现了。当我们首次按下右方向键时，将 near 值增加至 0.01 时，处在最前面的蓝色三角形消失了。这是因为，蓝色三角形就在 XY 平面上，近裁剪面越过了蓝色三角形，使其处在了可视空间外。
+<p><img src="/images/OrthoView7.png" alt="蓝色三角形处于可视空间外"></p>
+<p>​		我们接着继续增大 near 值，当 near 值大于 <code>0.2</code> 时，近裁剪面越过了黄色三角形，使其处在可视空间外。黄色三角形也消失了，视野中只剩下绿色三角形。此时，如果你逐渐减小 near 值使其小于 0.2，黄色的三角形就会重新出现，而如果继续增大 near 值使其大于 0.4，绿色的三角形就会小时，视野中将空无一物，只剩下黑色的背景。</p>
+<p>​		同样，如果你改变 far 的值，也会产生类似的效果。随着 far 值的逐渐减小，当值小于 0.4 时，绿色三角形会首先消失，小于 0.2 时，黄色三角形小时，最终只剩下蓝色三角形。</p>
+<h3 id="二、补上缺掉的角">二、补上缺掉的角</h3>
+<p>​		在 LookAtTrianglesWithKeys 中，当你多次按左或右方向键，处于极左处或极右处观察三角形时，会发现三角形看上去缺了一个角。通过前一节的讨论，我们已经很明确地知道这时因为三角形的一部分处于可视区域之外，被裁剪掉了。这一节，我们就来修改程序，适当地设置可视空间，确保三角形不被裁剪。</p>
+<p>​		从上节中可以看出，三角形中<u>距离视点最远的角被裁剪了</u>。显然，这是由远裁剪面过于接近视点导致，我们<u>只需要将远裁剪面移到距离视点更远的地方</u>。为此，我们可以按照以下的配置来修改可视空间：left = -1.0，right = 1.0，bottom = -1.0，top = 1.0，near = 0.0，far = 2.0。</p>
+<p>​		程序涉及两个矩阵：<u>关于可视空间的正射投影矩阵</u>，以及<u>关于视点与视线的视图矩阵</u>。在顶点着色器中，我们需要用视图矩阵乘以顶点坐标，得到顶点在视图坐标系下的坐标，再左乘正射投影矩阵并赋值给 gl_Position。如下表达式：</p>
+<p><code>&lt;正射投影矩阵&gt;x&lt;视图矩阵&gt;x&lt;顶点坐标&gt;</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_ViewMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_ProjMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = u_ProjMatrix * u_ViewMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_PointSize = 10.0;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   v_Color = a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>​		在计算正射投影矩阵 projMatrix 时，我们将 far 的值从 1.0 改成 2.0，将结果传给了顶点着色器中的 u_ProjMatrix。投影矩阵与顶点无关，所以它是 uniform 变量。运行<a href="#%E6%95%88%E6%9E%9C2">示例程序</a>，然后像之前那样移动视点，你会发现三角形再也不会被裁剪了。</p>
+<h2 id="实例">实例</h2>
+<h4 id="代码1">代码1</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//LookAtTrianglesWithKeys.js</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_ProjMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = u_ProjMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_PointSize = 10.0;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   v_Color = a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE=</span><br><span class="line">    <span class="string">&#x27;precision mediump float;\n&#x27;</span> +<span class="comment">//!!! 需要声明浮点数精度，否则报错No precision specified for (float)</span></span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   gl_FragColor = v_Color;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&quot;webgl&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> gl = getWebGLContext(canvas);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> nf = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;nearFar&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to initialize shaders.&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置顶点位置</span></span><br><span class="line">    <span class="keyword">var</span> n = initVertexBuffers(gl);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> u_ProjMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_ProjMatrix&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置视点、视线、上方向</span></span><br><span class="line">    <span class="keyword">var</span> projMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//注册键盘事件响应函数</span></span><br><span class="line">    <span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</span><br><span class="line">        keydown(ev, gl, n, u_ProjMatrix,projMatrix, nf);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">   draw(gl, n, u_ProjMatrix, projMatrix, nf);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 视点与近、远裁剪面的距离</span></span><br><span class="line"><span class="keyword">var</span> g_near = <span class="number">0.0</span>, g_far = <span class="number">0.5</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">keydown</span>(<span class="params">ev, gl, n, u_ProjMatrix, projMatrix, nf</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (ev.keyCode)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">39</span>: g_near += <span class="number">0.01</span>; <span class="keyword">break</span>; <span class="comment">//right</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">37</span>: g_near -= <span class="number">0.01</span>; <span class="keyword">break</span>; <span class="comment">//left</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">38</span>: g_far += <span class="number">0.01</span>; <span class="keyword">break</span>; <span class="comment">//up</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">40</span>: g_far -=<span class="number">0.01</span>; <span class="keyword">break</span>; <span class="comment">//down</span></span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    draw(gl, n, u_ProjMatrix, projMatrix, nf);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params">gl, n, u_ProjMatrix, projMatrix, nf</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 使用矩阵设置可视空间</span></span><br><span class="line">    projMatrix.setOrtho(-<span class="number">1</span>, <span class="number">1</span>, -<span class="number">1</span>, <span class="number">1</span>, g_near, g_far);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将投影矩阵传递给u_ProjMatrix变量</span></span><br><span class="line">    gl.uniformMatrix4fv(u_ProjMatrix, <span class="literal">false</span>, projMatrix.elements);</span><br><span class="line"></span><br><span class="line">    gl.clear(gl.COlOR_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// innerHTML在JS是双向功能：获取对象的内容 或 向对象插入内容；</span></span><br><span class="line">    nf.innerHTML = <span class="string">&#x27;near: &#x27;</span> + <span class="built_in">Math</span>.round(g_near * <span class="number">100</span>)/<span class="number">100</span> + <span class="string">&#x27;, far: &#x27;</span> + <span class="built_in">Math</span>.round(g_far * <span class="number">100</span>)/<span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    gl.drawArrays(gl.TRIANGLES, <span class="number">0</span>, n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initVertexBuffers</span>(<span class="params">gl</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> verticesColors = <span class="keyword">new</span> <span class="built_in">Float32Array</span>(</span><br><span class="line">        [</span><br><span class="line">            <span class="number">0.0</span>,  <span class="number">0.5</span>,  -<span class="number">0.4</span>,  <span class="number">0.4</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>, <span class="comment">// The back green one</span></span><br><span class="line">            -<span class="number">0.5</span>, -<span class="number">0.5</span>,  -<span class="number">0.4</span>,  <span class="number">0.4</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,</span><br><span class="line">            <span class="number">0.5</span>, -<span class="number">0.5</span>,  -<span class="number">0.4</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span>,</span><br><span class="line"></span><br><span class="line">            <span class="number">0.5</span>,  <span class="number">0.4</span>,  -<span class="number">0.2</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span>, <span class="comment">// The middle yellow one</span></span><br><span class="line">            -<span class="number">0.5</span>,  <span class="number">0.4</span>,  -<span class="number">0.2</span>,  <span class="number">1.0</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,</span><br><span class="line">            <span class="number">0.0</span>, -<span class="number">0.6</span>,  -<span class="number">0.2</span>,  <span class="number">1.0</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,</span><br><span class="line"></span><br><span class="line">            <span class="number">0.0</span>,  <span class="number">0.5</span>,   <span class="number">0.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span>,  <span class="number">1.0</span>,  <span class="comment">// The front blue one</span></span><br><span class="line">            -<span class="number">0.5</span>, -<span class="number">0.5</span>,   <span class="number">0.0</span>,  <span class="number">0.4</span>,  <span class="number">0.8</span>,  <span class="number">1.0</span>,</span><br><span class="line">            <span class="number">0.5</span>, -<span class="number">0.5</span>,   <span class="number">0.0</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span></span><br><span class="line">        ]</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">var</span> n = <span class="number">9</span>; <span class="comment">//点的个数</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建缓冲区对象</span></span><br><span class="line">    <span class="keyword">var</span> verteColorBuffer = gl.createBuffer();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将缓冲区对象保存到目标上</span></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, verteColorBuffer);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//向缓存对象写入数据</span></span><br><span class="line">    gl.bufferData(gl.ARRAY_BUFFER, verticesColors, gl.STATIC_DRAW);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> FSIZE = verticesColors.BYTES_PER_ELEMENT;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> a_Position = gl.getAttribLocation(gl.program, <span class="string">&#x27;a_Position&#x27;</span>);</span><br><span class="line">    <span class="comment">// 将缓冲区对象分配给a_Postion变量</span></span><br><span class="line">    gl.vertexAttribPointer(a_Position, <span class="number">3</span>, gl.FLOAT, <span class="literal">false</span>, FSIZE *<span class="number">6</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="comment">// 连接a_Postion变量与分配给它的缓冲区对象</span></span><br><span class="line">    gl.enableVertexAttribArray(a_Position);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> a_Color = gl.getAttribLocation(gl.program, <span class="string">&#x27;a_Color&#x27;</span>);</span><br><span class="line">    gl.vertexAttribPointer(a_Color, <span class="number">3</span>, gl.FLOAT, <span class="literal">false</span>, FSIZE * <span class="number">6</span>, FSIZE * <span class="number">3</span>);</span><br><span class="line">    gl.enableVertexAttribArray(a_Color);</span><br><span class="line"></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, <span class="literal">null</span>);<span class="comment">// 取消绑定的缓冲区对象</span></span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="效果1">效果1</h5>
+<div style="display: flex;">
+    <img src="/images/OrthoView4.png"/>
+    <img src="/images/OrthoView5.png"/>
+    <img src="/images/OrthoView6.png"/>
+</div>
+<h4 id="代码2">代码2</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//LookAtTrianglesWithKeys_ViewVolume.js</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_ViewMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform mat4 u_ProjMatrix;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = u_ProjMatrix * u_ViewMatrix * a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_PointSize = 10.0;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   v_Color = a_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE=</span><br><span class="line">    <span class="string">&#x27;precision mediump float;\n&#x27;</span> +<span class="comment">//!!! 需要声明浮点数精度，否则报错No precision specified for (float)</span></span><br><span class="line">    <span class="string">&#x27;varying vec4 v_Color;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   gl_FragColor = v_Color;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&quot;webgl&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> gl = getWebGLContext(canvas);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Failed to initialize shaders.&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置顶点位置</span></span><br><span class="line">    <span class="keyword">var</span> n = initVertexBuffers(gl);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> u_ViewMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_ViewMatrix&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置视点、视线、上方向</span></span><br><span class="line">    <span class="keyword">var</span> viewMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//注册键盘事件响应函数</span></span><br><span class="line">    <span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</span><br><span class="line">        keydown(ev, gl, n, u_ViewMatrix,viewMatrix);</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">// 创建指定可视空间的矩阵并传给u_ProjMatrix变量</span></span><br><span class="line">    <span class="keyword">var</span> u_ProjMatrix = gl.getUniformLocation(gl.program, <span class="string">&#x27;u_ProjMatrix&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> projMatrix = <span class="keyword">new</span> Matrix4();</span><br><span class="line">    projMatrix.setOrtho(-<span class="number">1.0</span>, <span class="number">1.0</span>, -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">2.0</span>);</span><br><span class="line">    <span class="comment">//projMatrix.setOrtho(-0.5, 0.5, -0.5, 0.5, 0.0, 2.0);</span></span><br><span class="line">    <span class="comment">//projMatrix.setOrtho(-0.3, 0.3, -1.0, 1.0, 0.0, 2.0);</span></span><br><span class="line">    gl.uniformMatrix4fv(u_ProjMatrix, <span class="literal">false</span>, projMatrix.elements);</span><br><span class="line"></span><br><span class="line">   draw(gl, n, u_ViewMatrix, viewMatrix);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> g_eyeX = <span class="number">0.20</span>, g_eyeY = <span class="number">0.25</span>, g_eyeZ = <span class="number">0.25</span>; <span class="comment">//视点</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">keydown</span>(<span class="params">ev, gl, n, u_ViewMatrix, viewMatrix</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ev.keyCode == <span class="number">39</span>)&#123;   <span class="comment">//按下右键</span></span><br><span class="line">        g_eyeX += <span class="number">0.01</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ev.keyCode == <span class="number">37</span>)&#123; <span class="comment">//按下左键</span></span><br><span class="line">        g_eyeX -= <span class="number">0.01</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    draw(gl, n, u_ViewMatrix, viewMatrix);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params">gl, n, u_ViewMatrix, viewMatrix</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//设置视点和视线</span></span><br><span class="line">    viewMatrix.setLookAt(g_eyeX, g_eyeY, g_eyeZ, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将视图矩阵传递给u_ViewMatrix变量</span></span><br><span class="line">    gl.uniformMatrix4fv(u_ViewMatrix, <span class="literal">false</span>, viewMatrix.elements);</span><br><span class="line"></span><br><span class="line">    gl.clear(gl.COlOR_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">    gl.drawArrays(gl.TRIANGLES, <span class="number">0</span>, n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initVertexBuffers</span>(<span class="params">gl</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> verticesColors = <span class="keyword">new</span> <span class="built_in">Float32Array</span>(</span><br><span class="line">        [</span><br><span class="line">            <span class="number">0.0</span>,  <span class="number">0.5</span>,  -<span class="number">0.4</span>,  <span class="number">0.4</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>, <span class="comment">// The back green one</span></span><br><span class="line">            -<span class="number">0.5</span>, -<span class="number">0.5</span>,  -<span class="number">0.4</span>,  <span class="number">0.4</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,</span><br><span class="line">            <span class="number">0.5</span>, -<span class="number">0.5</span>,  -<span class="number">0.4</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span>,</span><br><span class="line"></span><br><span class="line">            <span class="number">0.5</span>,  <span class="number">0.4</span>,  -<span class="number">0.2</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span>, <span class="comment">// The middle yellow one</span></span><br><span class="line">            -<span class="number">0.5</span>,  <span class="number">0.4</span>,  -<span class="number">0.2</span>,  <span class="number">1.0</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,</span><br><span class="line">            <span class="number">0.0</span>, -<span class="number">0.6</span>,  -<span class="number">0.2</span>,  <span class="number">1.0</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,</span><br><span class="line"></span><br><span class="line">            <span class="number">0.0</span>,  <span class="number">0.5</span>,   <span class="number">0.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span>,  <span class="number">1.0</span>,  <span class="comment">// The front blue one</span></span><br><span class="line">            -<span class="number">0.5</span>, -<span class="number">0.5</span>,   <span class="number">0.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span>,  <span class="number">1.0</span>,</span><br><span class="line">            <span class="number">0.5</span>, -<span class="number">0.5</span>,   <span class="number">0.0</span>,  <span class="number">1.0</span>,  <span class="number">0.4</span>,  <span class="number">0.4</span></span><br><span class="line">        ]</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">var</span> n = <span class="number">9</span>; <span class="comment">//点的个数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建缓冲区对象</span></span><br><span class="line">    <span class="keyword">var</span> verteColorBuffer = gl.createBuffer();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将缓冲区对象保存到目标上</span></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, verteColorBuffer);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//向缓存对象写入数据</span></span><br><span class="line">    gl.bufferData(gl.ARRAY_BUFFER, verticesColors, gl.STATIC_DRAW);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> FSIZE = verticesColors.BYTES_PER_ELEMENT;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> a_Position = gl.getAttribLocation(gl.program, <span class="string">&#x27;a_Position&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将缓冲区对象分配给a_Postion变量</span></span><br><span class="line">    gl.vertexAttribPointer(a_Position, <span class="number">3</span>, gl.FLOAT, <span class="literal">false</span>, FSIZE *<span class="number">6</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="comment">//连接a_Postion变量与分配给它的缓冲区对象</span></span><br><span class="line">    gl.enableVertexAttribArray(a_Position);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> a_Color = gl.getAttribLocation(gl.program, <span class="string">&#x27;a_Color&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    gl.vertexAttribPointer(a_Color, <span class="number">3</span>, gl.FLOAT, <span class="literal">false</span>, FSIZE * <span class="number">6</span>, FSIZE * <span class="number">3</span>);</span><br><span class="line">    gl.enableVertexAttribArray(a_Color);</span><br><span class="line"></span><br><span class="line">    gl.bindBuffer(gl.ARRAY_BUFFER, <span class="literal">null</span>);<span class="comment">//取消绑定的缓冲区对象</span></span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="效果2">效果2</h5>
+<script src="\lib\webgl-utils.js"></script>
+<script src="\lib\webgl-debug.js"></script>
+<script src="\lib\cuon-utils.js"></script>
+<script src="\lib\cuon-matrix.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>LookAtTriangles</title>
+</head>
+<body onload="main()">
+<div>
+    <button id="left">←</button>
+    <button id="right">→</button>
+</div>
+<canvas id="webgl" width="300" height="300">
+  Please use the browser supporting "canvas".
+</canvas>
+<script type='text/javascript'>
+//LookAtTrianglesWithKeys.js
+var VSHADER_SOURCE =
+    'attribute vec4 a_Position;\n' +
+    'attribute vec4 a_Color;\n' +
+    'uniform mat4 u_ViewMatrix;\n' +
+    'uniform mat4 u_ProjMatrix;\n' +
+    'varying vec4 v_Color;\n' +
+    'void main() {\n' +
+    '   gl_Position = u_ProjMatrix * u_ViewMatrix * a_Position;\n' +
+    '   gl_PointSize = 10.0;\n' +
+    '   v_Color = a_Color;\n' +
+    '}\n';
+var FSHADER_SOURCE=
+    'precision mediump float;\n' +
+    'varying vec4 v_Color;\n' +
+    'void main(){\n'+
+    '   gl_FragColor = v_Color;\n'+
+    '}\n';
+function main() {
+    var canvas = document.getElementById("webgl");
+    var gl = getWebGLContext(canvas);
+    if (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) {
+        console.log("Failed to initialize shaders.");
+        return;
+    }
+    //设置顶点位置
+    var n = initVertexBuffers(gl);
+    var u_ViewMatrix = gl.getUniformLocation(gl.program, 'u_ViewMatrix');
+    //设置视点、视线、上方向
+    var viewMatrix = new Matrix4();
+    //注册键盘事件响应函数
+    document.onkeydown = function (ev) {
+        keydown(ev, gl, n, u_ViewMatrix,viewMatrix);
+    };
+    document.onclick = function (ev) {
+        myClick(ev, gl, n, u_ViewMatrix,viewMatrix)
+    }
+    var u_ProjMatrix = gl.getUniformLocation(gl.program, 'u_ProjMatrix');
+    var projMatrix = new Matrix4();
+    projMatrix.setOrtho(-1.0, 1.0, -1.0, 1.0, 0.0, 2.0);
+    gl.uniformMatrix4fv(u_ProjMatrix, false, projMatrix.elements);
+    draw(gl, n, u_ViewMatrix, viewMatrix);
+}
+var g_eyeX = 0.20, g_eyeY = 0.25, g_eyeZ = 0.25; // 视点
+function keydown(ev, gl, n, u_ViewMatrix, viewMatrix) {
+    if(ev.keyCode == 39){   //按下右键
+        g_eyeX += 0.02;
+    }else if(ev.keyCode == 37){ //按下左键
+        g_eyeX -= 0.02;
+    }else {
+        return ;
+    }
+    draw(gl, n, u_ViewMatrix, viewMatrix);
+}
+function myClick(ev, gl, n, u_ViewMatrix,viewMatrix){
+    if(ev.target.id == 'left') {
+        g_eyeX -= 0.02;
+    } else {
+        g_eyeX += 0.02;
+    }
+    draw(gl, n, u_ViewMatrix, viewMatrix);
+}
+function draw(gl, n, u_ViewMatrix, viewMatrix) {
+    //设置视点和视线
+    viewMatrix.setLookAt(g_eyeX, g_eyeY, g_eyeZ, 0, 0, 0, 0, 1, 0);
+    //将视图矩阵传递给u_ViewMatrix变量
+    gl.uniformMatrix4fv(u_ViewMatrix, false, viewMatrix.elements);
+    gl.clear(gl.COlOR_BUFFER_BIT);
+    gl.drawArrays(gl.TRIANGLES, 0, n);
+}
+function initVertexBuffers(gl) {
+    var verticesColors = new Float32Array(
+        [
+            0.0,  0.5,  -0.4,  0.4,  1.0,  0.4, // The back green one
+            -0.5, -0.5,  -0.4,  0.4,  1.0,  0.4,
+            0.5, -0.5,  -0.4,  1.0,  0.4,  0.4,
+            0.5,  0.4,  -0.2,  1.0,  0.4,  0.4, // The middle yellow one
+            -0.5,  0.4,  -0.2,  1.0,  1.0,  0.4,
+            0.0, -0.6,  -0.2,  1.0,  1.0,  0.4,
+            0.0,  0.5,   0.0,  0.4,  0.4,  1.0,  // The front blue one
+            -0.5, -0.5,   0.0,  0.4,  0.4,  1.0,
+            0.5, -0.5,   0.0,  1.0,  0.4,  0.4
+        ]
+    );
+    var n = 9; //点的个数
+    //创建缓冲区对象
+    var verteColorBuffer = gl.createBuffer();
+    //将缓冲区对象保存到目标上
+    gl.bindBuffer(gl.ARRAY_BUFFER, verteColorBuffer);
+    //向缓存对象写入数据
+    gl.bufferData(gl.ARRAY_BUFFER, verticesColors, gl.STATIC_DRAW);
+    var FSIZE = verticesColors.BYTES_PER_ELEMENT;
+    var a_Position = gl.getAttribLocation(gl.program, 'a_Position');
+    //将缓冲区对象分配给a_Postion变量
+    gl.vertexAttribPointer(a_Position, 3, gl.FLOAT, false, FSIZE *6, 0);
+    //连接a_Postion变量与分配给它的缓冲区对象
+    gl.enableVertexAttribArray(a_Position);
+    var a_Color = gl.getAttribLocation(gl.program, 'a_Color');
+    gl.vertexAttribPointer(a_Color, 3, gl.FLOAT, false, FSIZE * 6, FSIZE * 3);
+    gl.enableVertexAttribArray(a_Color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, null);//取消绑定的缓冲区对象
+    return n;}
+    </script>
+    </body>
+    </html>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/Echarts/" data-toggle="tooltip" data-placement="top" title="数据可视化之Echarts学习">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/21-三维世界-绘制三个三角形-LookAtTriangles/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】21-三维世界-绘制三个三角形">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      ...
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【WebGL之巅】22-三维世界-可视范围&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/22-三维世界-可视范围-OrthoView/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Sun Aug 01 2021 16:50:45 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">知识点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%8F%AF%E8%A7%86%E8%8C%83%E5%9B%B4%EF%BC%88%E6%AD%A3%E5%B0%84%E7%B1%BB%E5%9E%8B%EF%BC%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">一、可视范围（正射类型）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-1-WebGL%E7%BB%98%E5%88%B6%E5%8F%AF%E8%A7%86%E8%8C%83%E5%9B%B4%E5%86%85%E4%B8%89%E7%BB%B4%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1.1 WebGL绘制可视范围内三维对象的方式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-2-%E5%8F%AF%E8%A7%86%E7%A9%BA%E9%97%B4"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">1.2 可视空间</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-3-%E5%9F%BA%E4%BA%8E%E6%AD%A3%E5%B0%84%E6%8A%95%E5%BD%B1%E7%9A%84-u-%E7%9B%92%E7%8A%B6%E5%8F%AF%E8%A7%86%E7%A9%BA%E9%97%B4-u-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">1.3 基于正射投影的盒状可视空间的工作原理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-4-%E5%AE%9A%E4%B9%89%E7%9B%92%E7%8A%B6%E5%8F%AF%E8%A7%86%E7%A9%BA%E9%97%B4"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">1.4 定义盒状可视空间</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-5-%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">1.5 代码分析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-5-1-%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">1.1.5.1.</span> <span class="toc-nav-text">1.5.1 实现步骤</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-5-2-JS-%E4%BF%AE%E6%94%B9-HTML-%E5%85%83%E7%B4%A0"><span class="toc-nav-number">1.1.5.2.</span> <span class="toc-nav-text">1.5.2 JS 修改 HTML 元素</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-5-3-%E9%A1%B6%E7%82%B9%E7%9D%80%E8%89%B2%E5%99%A8%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-nav-number">1.1.5.3.</span> <span class="toc-nav-text">1.5.3 顶点着色器的执行流程</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-5-4-%E4%BF%AE%E6%94%B9-near-%E5%92%8C-far-%E5%80%BC"><span class="toc-nav-number">1.1.5.4.</span> <span class="toc-nav-text">1.5.4 修改 near 和 far 值</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E8%A1%A5%E4%B8%8A%E7%BC%BA%E6%8E%89%E7%9A%84%E8%A7%92"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">二、补上缺掉的角</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">实例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%811"><span class="toc-nav-number">2.0.1.</span> <span class="toc-nav-text">代码1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C1"><span class="toc-nav-number">2.0.1.1.</span> <span class="toc-nav-text">效果1</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%812"><span class="toc-nav-number">2.0.2.</span> <span class="toc-nav-text">代码2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C2"><span class="toc-nav-number">2.0.2.1.</span> <span class="toc-nav-text">效果2</span></a></li></ol></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#WebGL" title="WebGL">WebGL</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/西西">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Song木头
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">240.7k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
