@@ -437,3 +437,18 @@ blockquote P{
   color: #e9836e;
   background-color: #f3f3f3;
 }
+
+.highlight {
+  border-radius: 5px;
+  box-shadow:  5px 5px 12px #9b9b9b,
+             -5px -5px 12px #a1a1a1;
+}
+.highlight .gutter pre {
+  background: rgba(63, 62, 62, 0.219);  
+  padding-left: 8px;
+  padding-right: 8px!important;
+}
+.highlight .code span{
+  font-weight: bold;
+  font-size: 14px;
+}
