@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="yoyoyo"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/Algorithm-Graph/">
+  <title>
+    
+      【数据结构与算法】图（JavaScript版详解） - 快乐码原 | Song
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+          
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <li>
+            <a href="/categories">分类</a>
+          </li>
+          <li>
+            <a href="/categories/#算法">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
+              
+            </div>
+            <h2>【数据结构与算法】图（JavaScript版详解）</h2>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              By Song木头 on
+              2021-08-20
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">15</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 <span class="post-count">3.9k</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>要点：图</p>
+<h2 id="图的概念"><a href="#图的概念" class="headerlink" title="图的概念"></a>图的概念</h2><p>在计算机程序设计中，图也是一种非常常见的数据结构，图论其实是一个非常大的话题，在数学上起源于哥尼斯堡七桥问题。</p>
+<h3 id="什么是图？"><a href="#什么是图？" class="headerlink" title="什么是图？"></a>什么是图？</h3><ul>
+<li><p>图是一种与树有些相似的数据结构。</p>
+<ul>
+<li>实际上，在数学的概念上，树是图的一种。</li>
+<li>我们知道树可以用来模拟很多现实的数据结构，比如：家谱/公司组织架构等等。</li>
+</ul>
+</li>
+<li><p>那么图长什么样子呢？或者什么样的数据使用图来模拟更合适呢？</p>
+<ul>
+<li><p>人与人之间的关系网<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.4cdhxz0ereu0.png" alt="image"></p>
+</li>
+<li><p>互联网中的网络关系<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.4ljxyy69a1s0.png" alt="image"></p>
+</li>
+<li><p>广州地铁图<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.46k2cvwmthw0.png" alt="image"></p>
+</li>
+</ul>
+</li>
+<li><p>那么，什么是图呢?</p>
+<ul>
+<li>我们会发现，上面的结点（其实图中叫顶点 Vertex）之间的关系，是不能使用树来表示（几叉树都不可以）。</li>
+<li>这个时候，我们就可以使用<strong>图</strong>来模拟它们。</li>
+</ul>
+</li>
+<li><p>图通常有什么特点呢？</p>
+<ul>
+<li>一组顶点：通常用 V (Vertex) 表示顶点的集合</li>
+<li>一组边：通常用 E (Edge) 表示边的集合</li>
+<li>边是顶点和顶点之间的连线</li>
+<li>边可以是有向的，也可以是无向的。（比如 A —- B，通常表示无向。 A —&gt; B，通常表示有向）</li>
+</ul>
+</li>
+</ul>
+<h3 id="图的术语"><a href="#图的术语" class="headerlink" title="图的术语"></a>图的术语</h3><h4 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h4><ul>
+<li>我们在学习树的时候，树有很多的其他术语，了解这些术语有助于我们更深层次的理解图。</li>
+<li>但是图的术语其实非常多，如果你找一本专门讲图的各个方面的书籍，会发现只是术语就可以占据一个章节。</li>
+<li>这里，这里介绍几个比较常见的术语，某些术语后面用到的时候，再了解，没有用到的，不做赘述。</li>
+<li><p>下面这是个抽象出来的图<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.rr153grdbc0.png" alt="image"></p>
+</li>
+<li><p>顶点</p>
+<ul>
+<li>顶点刚才我们已经介绍过了，表示图中的一个结点。</li>
+<li>比如地铁站中某个站/多个村庄中的某个村庄/互联网中的某台主机/人际关系中的人。</li>
+</ul>
+</li>
+<li><p>边</p>
+<ul>
+<li>边表示顶点和顶点之间的连线。</li>
+<li>比如地铁站中两个站点之间的直接连线, 就是一个边。</li>
+<li>注意：这里的边不要叫做路径，路径有其他的概念，后面会区分。</li>
+</ul>
+</li>
+<li><p>相邻顶点</p>
+<ul>
+<li>由一条边连接在一起的顶点称为相邻顶点。</li>
+<li>比如 <code>0 - 1</code> 是相邻的，<code>0 - 3</code> 是相邻的。<code>0 - 2</code> 是不相邻的。</li>
+</ul>
+</li>
+<li><p>度</p>
+<ul>
+<li>一个顶点的度是相邻顶点的数量</li>
+<li>比如 0 顶点和其他两个顶点相连，0 顶点的度是 2</li>
+<li>比如 1 顶点和其他四个顶点相连，1 顶点的度是 4</li>
+</ul>
+</li>
+<li><p>路径</p>
+<ul>
+<li>路径是顶点 <code>v1</code>，<code>v2</code>…，<code>vn</code> 的一个连续序列, 比如上图中 <code>0 1 5 9</code> 就是一条路径。</li>
+<li>简单路径: 简单路径要求不包含重复的顶点. 比如 <code>0 1 5 9</code> 是一条简单路径。</li>
+<li>回路：第一个顶点和最后一个顶点相同的路径称为回路。比如 <code>0 1 5 6 3 0</code>。</li>
+</ul>
+</li>
+<li><p>无向图</p>
+<ul>
+<li>上面的图就是一张无向图，因为所有的边都没有方向。</li>
+<li>比如 <code>0 - 1</code> 之间有变，那么说明这条边可以保证 <code>0 -&gt; 1</code>，也可以保证 <code>1 -&gt; 0</code>。</li>
+</ul>
+</li>
+<li><p>有向图</p>
+<ul>
+<li>有向图表示的图中的边是有方向的。</li>
+<li>比如 <code>0 -&gt; 1</code>，不能保证一定可以 <code>1 -&gt; 0</code>，要根据方向来定。</li>
+</ul>
+</li>
+</ul>
+<h4 id="无权图和带权图"><a href="#无权图和带权图" class="headerlink" title="无权图和带权图"></a>无权图和带权图</h4><ul>
+<li><p>无权图</p>
+<ul>
+<li>我们上面的图就是一张无权图（边没有携带权重）</li>
+<li>我们上面的图中的边是没有任何意义的，不能收 <code>0 - 1</code> 的边，比 <code>4 - 9</code> 的边更远或者用的时间更长。</li>
+</ul>
+</li>
+<li><p>带权图</p>
+<ul>
+<li>带权图表示边有一定的权重</li>
+<li>这里的权重可以是任意你希望表示的数据：比如距离或者花费的时间或者票价。</li>
+<li>我们来看一张有向和带权的图<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.3q0nj5eq5p80.png" alt="image"></li>
+</ul>
+</li>
+</ul>
+<h3 id="现实建模"><a href="#现实建模" class="headerlink" title="现实建模"></a>现实建模</h3><ul>
+<li><p>对交通流量建模</p>
+<ul>
+<li>顶点可以表示街道的十字路口，边可以表示街道.。</li>
+<li>加权的边可以表示限速或者车道的数量或者街道的距离。</li>
+<li>建模人员可以用这个系统来判定最佳路线以及最可能堵车的街道。</li>
+</ul>
+</li>
+<li><p>对飞机航线建模</p>
+<ul>
+<li>航空公司可以用图来为其飞行系统建模。</li>
+<li>将每个机场看成顶点，将经过两个顶点的每条航线看作一条边。</li>
+<li>加权的边可以表示从一个机场到另一个机场的航班成本，或两个机场间的距离。</li>
+<li>建模人员可以利用这个系统有效的判断从一个城市到另一个城市的最小航行成本。<br>​</li>
+</ul>
+</li>
+</ul>
+<h2 id="二、图的表示"><a href="#二、图的表示" class="headerlink" title="二、图的表示"></a>二、图的表示</h2><p>我们知道一个图包含很多顶点，另外包含顶点和顶点之间的连线（边），这两个都是非常重要的图信息，因此都需要在程序中体现出来。</p>
+<h3 id="顶点表示"><a href="#顶点表示" class="headerlink" title="顶点表示"></a>顶点表示</h3><ul>
+<li><p>顶点的表示相对简单</p>
+<ul>
+<li>上面的顶点，我们抽象成了 1 2 3 4，也可以抽象成 A B C D。在后面的案例中，我们使用 A B C D。</li>
+<li>那么这些 A B C D 我们可以使用一个数组来存储起来(存储所有的顶点)。</li>
+<li>当然，A B C D 有可能还表示其他含义的数据(比如村庄的名字)，这个时候，可以另外创建一个数组，用于存储对应的其他数据。</li>
+</ul>
+</li>
+<li><p>边的表示略微复杂</p>
+<ul>
+<li>因为边是两个顶点之间的关系，所以表示起来会稍微麻烦一些。</li>
+<li>下面是变常见的表示方式。</li>
+</ul>
+</li>
+</ul>
+<h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><ul>
+<li><p>概述</p>
+<ul>
+<li>邻接矩阵让每个节点和一个整数向关联, 该整数作为数组的下标值.</li>
+<li>我们用一个二维数组来表示顶点之间的连接.</li>
+<li>演示<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.66y7l5b21nw0.png" alt="image"></li>
+</ul>
+</li>
+<li><p>图片解析</p>
+<ul>
+<li>在二维数组中，0 表示没有连线，1 表示有连线。</li>
+<li>通过二维数组，我们可以很快的找到一个顶点和哪些顶点有连线。（比如 A 顶点, 只需要 遍历第一行即可）</li>
+<li>另外，A - A，B - B（也就是顶点到自己的连线），通常使用 0 表示。</li>
+</ul>
+</li>
+<li><p>邻接矩阵的问题</p>
+<ul>
+<li><p>如果是一个无向图，邻接矩阵展示出来的二维数组，其实是一个对称图。</p>
+<ul>
+<li>也就是 A -&gt; D 是 1 的时候，对称的位置 D -&gt; 1 一定也是 1。</li>
+<li>那么这种情况下会造成空间的浪费，解决办法需自己去研究下。</li>
+</ul>
+</li>
+<li><p>邻接矩阵还有一个比较严重的问题就是如果图是一个稀疏图</p>
+<ul>
+<li>那么矩阵中将存在大量的 0，这意味着我们浪费了计算机存储空间来表示根本不存在的边。</li>
+<li>而且即使只有一个边，我们也必须遍历一行来找出这个边，也浪费很多时间。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><ul>
+<li><p>概述</p>
+<ul>
+<li>邻接表由图中每个顶点以及和顶点相邻的顶点列表组成。</li>
+<li>这个列表有很多中方式来存储：数组/链表/字典(哈希表)都可以。</li>
+<li>演示<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.3mu1hv8a84u0.png" alt="image"></li>
+</ul>
+</li>
+<li><p>图片解析</p>
+<ul>
+<li>其实图片比较容易理解</li>
+<li>比如我们要表示和 A 顶点有关联的顶点（边），A 和 B/C/D 有边，那么我们可以通过 A 找到 对应的数组/链表/字典，再取出其中的内容就可以啦。</li>
+</ul>
+</li>
+<li><p>邻接表的问题</p>
+<ul>
+<li>邻接表计算“出度”是比较简单的（出度：指向别人的数量, 入度: 指向自己的数量）</li>
+<li>邻接表如果需要计算有向图的“入度”，那么是一件非常麻烦的事情。</li>
+<li>它必须构造一个“逆邻接表”，才能有效的计算“入度”。而临街矩阵会非常简单。</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、图的封装"><a href="#三、图的封装" class="headerlink" title="三、图的封装"></a>三、图的封装</h2><h3 id="创建图类"><a href="#创建图类" class="headerlink" title="创建图类"></a>创建图类</h3><ul>
+<li>先来创建 Graph 类，定义了两个属性：<ul>
+<li><code>vertexes</code> 用于存储所有的顶点，使用一个数组来保存。</li>
+<li><code>adjList</code> adj 是 adjoin 的缩写，邻接的意思。adjList 用于存储所有的边，这里采用邻接表的形式。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Graph</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.vertexes = []; <span class="comment">// 存储顶点</span></span><br><span class="line">    <span class="built_in">this</span>.adjList = <span class="keyword">new</span> Dictionay(); <span class="comment">//存储边信息</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="添加方法"><a href="#添加方法" class="headerlink" title="添加方法"></a>添加方法</h3><ul>
+<li>添加顶点：可以向图中添加一些顶点。<ul>
+<li>将添加的顶点放入到数组中。</li>
+<li>另外，给该顶点创建一个数组<code>[]</code>，该数组用于存储顶点连接的所有的边.（回顾邻接表的实现方式）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加顶点</span></span><br><span class="line"><span class="function"><span class="title">addVertex</span>(<span class="params">val</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 添加点</span></span><br><span class="line">    <span class="built_in">this</span>.vertexes.push(val)</span><br><span class="line">    <span class="comment">// 添加点的关系  采用邻接矩阵法 结构用Map</span></span><br><span class="line">    <span class="built_in">this</span>.adjList.set(val, [])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加边：可以指定顶点和顶点之间的边。<ul>
+<li>添加边需要传入两个顶点，因为边是两个顶点之间的边，边不可能单独存在。</li>
+<li>根据顶点 v 取出对应的数组，将 w 加入到它的数组中。</li>
+<li>根据顶点 w 取出对应的数组，将 v 加入到它的数组中。</li>
+<li>因为这里实现的是无向图，所以边是可以双向的。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加边</span></span><br><span class="line"><span class="function"><span class="title">addEdge</span>(<span class="params">val1, val2</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 添加边需要传入两个顶点, 因为边是两个顶点之间的边, 边不可能单独存在.</span></span><br><span class="line">    <span class="comment">// 这里实现的是无向图, 所以这里不考虑方向问题</span></span><br><span class="line">    <span class="built_in">this</span>.adjList.get(val1).push(val2)</span><br><span class="line">    <span class="built_in">this</span>.adjList.get(val2).push(val1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>toString 方法：为了能够正确的显示图的结果，就是拿出二维数组的每一项。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出图结构</span></span><br><span class="line"><span class="function"><span class="title">toString</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> res = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.vertexes.length; i++) &#123;</span><br><span class="line">        res += <span class="built_in">this</span>.vertexes[i] + <span class="string">&quot;-&gt;&quot;</span></span><br><span class="line">        <span class="keyword">let</span> adj = <span class="built_in">this</span>.adjList.get(<span class="built_in">this</span>.vertexes[i])</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; adj.length; j++) &#123;</span><br><span class="line">            res += adj[j] + <span class="string">&quot;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        res += <span class="string">&quot;\n&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 测试代码</span></span><br><span class="line"><span class="keyword">let</span> graph = <span class="keyword">new</span> Graph();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加顶点</span></span><br><span class="line"><span class="keyword">let</span> myVertexes = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>, <span class="string">&quot;E&quot;</span>, <span class="string">&quot;F&quot;</span>, <span class="string">&quot;G&quot;</span>, <span class="string">&quot;H&quot;</span>, <span class="string">&quot;I&quot;</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; myVertexes.length; i++) &#123;</span><br><span class="line">  graph.addVertex(myVertexes[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加边</span></span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;C&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;D&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;G&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;D&quot;</span>, <span class="string">&quot;G&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;D&quot;</span>, <span class="string">&quot;H&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;B&quot;</span>, <span class="string">&quot;E&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;B&quot;</span>, <span class="string">&quot;F&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;E&quot;</span>, <span class="string">&quot;I&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="四、图的遍历"><a href="#四、图的遍历" class="headerlink" title="四、图的遍历"></a>四、图的遍历</h2><p>和其他数据结构一样，需要通过某种算法来遍历图结构中每一个数据。这样可以保证，在我们需要时，通过这种算法来访问某个顶点的数据以及它对应的边。</p>
+<h3 id="遍历的方式"><a href="#遍历的方式" class="headerlink" title="遍历的方式"></a>遍历的方式</h3><ul>
+<li><p>图的遍历思想<br>图的遍历算法的思想在于必须访问每个第一次访问的节点，并且追踪有哪些顶点还没有被访问到。</p>
+</li>
+<li><p>有两种算法可以对图进行遍历</p>
+<ul>
+<li>广度优先搜索(Breadth-First Search, 简称 BFS)</li>
+<li>深度优先搜索(Depth-First Search, 简称 DFS)</li>
+<li>两种遍历算法，都需要明确指定第一个被访问的顶点。</li>
+</ul>
+</li>
+<li><p>遍历的注意点</p>
+<ul>
+<li>完全探索一个顶点要求我们便查看该顶点的每一条边。</li>
+<li>对于每一条所连接的没有被访问过的顶点，将其标注为被发现的，并将其加进待访问顶点列表中。</li>
+<li>为了保证算法的效率：每个顶点至多访问两次。</li>
+</ul>
+</li>
+<li><p>两种算法的思想</p>
+<ul>
+<li>BFS 基于队列，入队列的顶点先被探索。</li>
+<li>DFS 基于栈，通过将顶点存入栈中，顶点是沿着路径被探索的，存在新的相邻顶点就去访问。</li>
+</ul>
+</li>
+<li><p>为了记录顶点是否被访问过，我们使用三种颜色来反应它们的状态。(或者两种颜色也可以)</p>
+<ul>
+<li><strong>白色</strong>表示该顶点还没有被访问.</li>
+<li><strong>灰色</strong>表示该顶点被访问过, 但并未被探索过.</li>
+<li><strong>黑色</strong>表示该顶点被访问过且被完全探索过.</li>
+<li>初始化颜色代码</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化顶点的颜色</span></span><br><span class="line"><span class="function"><span class="title">_initializeColor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 白色: 表示该顶点还没有被访问.</span></span><br><span class="line">    <span class="comment">// 灰色: 表示该顶点被访问过, 但并未被探索过.</span></span><br><span class="line">    <span class="comment">// 黑色: 表示该顶点被访问过且被完全探索过.</span></span><br><span class="line">    <span class="keyword">let</span> colors = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.vertexes.length; i++) &#123;</span><br><span class="line">        colors[<span class="built_in">this</span>.vertexes[i]] = <span class="string">&quot;white&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> colors</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="广度优先搜索-BFS"><a href="#广度优先搜索-BFS" class="headerlink" title="广度优先搜索(BFS)"></a>广度优先搜索(BFS)</h3><ul>
+<li><p>广度优先搜索算法的思路<br>广度优先算法会从指定的第一个顶点开始遍历图，先访问其所有的相邻点，就像一次访问图的一层。换句话说，就是先宽后深的访问顶点。</p>
+</li>
+<li><p>图解 BFS<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.3vz7fx7tgvs0.png" alt="image"></p>
+</li>
+<li><p>广度优先搜索的实现</p>
+<ol>
+<li>创建一个队列 Q</li>
+<li>将 v 标注为被发现的(灰色), 并将 v 将入队列 Q</li>
+<li>如果 Q 非空, 执行下面的步骤：<ul>
+<li>将 v 从 Q 中取出队列</li>
+<li>将 v 标注为被发现的灰色</li>
+<li>将 v 所有的未被访问过的邻接点（白色），加入到队列中</li>
+<li>将 v 标志为黑色</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>广度优先搜索的代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 广度优先搜索</span></span><br><span class="line"><span class="function"><span class="title">bfs</span>(<span class="params">handle</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1.初始化颜色</span></span><br><span class="line">    <span class="keyword">let</span> color = <span class="built_in">this</span>._initializeColor()</span><br><span class="line">    <span class="comment">// 2. 创建队列</span></span><br><span class="line">    <span class="keyword">let</span> queue = <span class="keyword">new</span> Queue</span><br><span class="line">    <span class="comment">// 3. 将传入的顶点放入队列</span></span><br><span class="line">    queue.enqueue(<span class="built_in">this</span>.vertexes[<span class="number">0</span>])</span><br><span class="line">    <span class="comment">// 4.依赖队列操作数据   队列不为空时一直持续</span></span><br><span class="line">    <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">        <span class="comment">// 4.1 拿到队头</span></span><br><span class="line">        <span class="keyword">let</span> qVal = queue.dequeue()</span><br><span class="line">        <span class="comment">//  4.2 拿到队头所关联（相连）的点并设置为访问中状态（灰色）</span></span><br><span class="line">        <span class="keyword">let</span> qAdj = <span class="built_in">this</span>.adjList.get(qVal)</span><br><span class="line">        color[qVal] = <span class="string">&quot;gray&quot;</span></span><br><span class="line">        <span class="comment">// 4.3 将队头关联的点添加到队尾</span></span><br><span class="line">        <span class="comment">// 这一步是完成bfs的关键，依赖队列的先进先出的特点。</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; qAdj.length; i++) &#123;</span><br><span class="line">            <span class="keyword">let</span> a = qAdj[i]</span><br><span class="line">            <span class="keyword">if</span> (color[a] === <span class="string">&quot;white&quot;</span>) &#123;</span><br><span class="line">                color[a] = <span class="string">&quot;gray&quot;</span></span><br><span class="line">                queue.enqueue(a)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 4.5设置访问完的点为黑色。</span></span><br><span class="line">        color[qVal] = <span class="string">&quot;black&quot;</span></span><br><span class="line">        <span class="keyword">if</span> (handle) [</span><br><span class="line">            handle(qVal)</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用广度优先算法</span></span><br><span class="line"><span class="keyword">let</span> result = <span class="string">&quot;&quot;</span>;</span><br><span class="line">graph.bfs(graph.vertexes[<span class="number">0</span>], <span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">  result += v + <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(result); <span class="comment">// A B C D E F G H I</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="深度优先搜索-DFS"><a href="#深度优先搜索-DFS" class="headerlink" title="深度优先搜索(DFS)"></a>深度优先搜索(DFS)</h3><p>深度优先搜索的思路：</p>
+<ul>
+<li>深度优先搜索算法将会从第一个指定的顶点开始遍历图，沿着路径知道这条路径最后被访问了。</li>
+<li>接着原路回退并探索吓一条路径。</li>
+<li>图解 DFS<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.1bjimck65r8g.png" alt="image"></li>
+</ul>
+<p>深度优先搜索算法的实现：</p>
+<ul>
+<li>广度优先搜索算法我们使用的是队列，这里可以使用栈完成，也可以使用递归。</li>
+<li>方便代码书写，我们还是使用递归(递归本质上就是函数栈的调用)</li>
+<li><p>深度优先搜索算法的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 深度优先搜索</span></span><br><span class="line"><span class="function"><span class="title">dfs</span>(<span class="params">handle</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1.初始化颜色</span></span><br><span class="line">    <span class="keyword">let</span> color = <span class="built_in">this</span>._initializeColor()</span><br><span class="line">    <span class="comment">// 2. 遍历所有顶点，开始访问</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.vertexes.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (color[<span class="built_in">this</span>.vertexes[i]] === <span class="string">&quot;white&quot;</span>) &#123;</span><br><span class="line">            <span class="built_in">this</span>._dfsVisit(<span class="built_in">this</span>.vertexes[i], color, handle)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// dfs的递归方法  这里直接使用函数的调用栈</span></span><br><span class="line"><span class="function"><span class="title">_dfsVisit</span>(<span class="params">val, color, handle</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1. 将颜色设置为访问中</span></span><br><span class="line">    color[val] = <span class="string">&quot;gray&quot;</span></span><br><span class="line">    <span class="comment">// 2. 执行相应的回调</span></span><br><span class="line">    <span class="keyword">if</span> (handle) &#123;</span><br><span class="line">        handle(val)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 3. 拿与该点相邻的点，对每个点操作</span></span><br><span class="line">    <span class="keyword">let</span> adj = <span class="built_in">this</span>.adjList.get(val)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; adj.length; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> w = adj[i]</span><br><span class="line">        <span class="comment">// 如果相邻点未未访问状态，开始访问。</span></span><br><span class="line">        <span class="keyword">if</span> (color[w] === <span class="string">&quot;white&quot;</span>) &#123;</span><br><span class="line">            <span class="built_in">this</span>._dfsVisit(w, color, handle)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 4. 处理完后设置为访问过点。</span></span><br><span class="line">    color[val] = <span class="string">&quot;black&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用深度优先算法</span></span><br><span class="line">result = <span class="string">&quot;&quot;</span>;</span><br><span class="line">graph.dfs(<span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">  result += v + <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 输出深度优先</span></span><br><span class="line"><span class="built_in">console</span>.log(result); <span class="comment">//A B E I F C D G H</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>递归的代码较难理解一些，这副图来帮助理解过程：<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.6z6nkgmevxo0.png" alt="image"></p>
+</li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/ms-HTML＆CSS/" data-toggle="tooltip" data-placement="top" title="前端面试题汇总-HTML＆CSS篇">&larr; 上一篇</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/Algorithm-RedBlackTree/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】红黑树（JavaScript版详解）">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【数据结构与算法】图（JavaScript版详解）&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/Algorithm-Graph/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Fri Aug 20 2021 16:42:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%BE%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">图的概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%EF%BC%9F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">什么是图？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%BE%E7%9A%84%E6%9C%AF%E8%AF%AD"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">图的术语</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9C%AF%E8%AF%AD"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">术语</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%97%A0%E6%9D%83%E5%9B%BE%E5%92%8C%E5%B8%A6%E6%9D%83%E5%9B%BE"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">无权图和带权图</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%8E%B0%E5%AE%9E%E5%BB%BA%E6%A8%A1"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">现实建模</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%9B%BE%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、图的表示</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A1%B6%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">顶点表示</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">邻接矩阵</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%82%BB%E6%8E%A5%E8%A1%A8"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">邻接表</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%9B%BE%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、图的封装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%B1%BB"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">创建图类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">添加方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">测试代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、图的遍历</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%81%8D%E5%8E%86%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">遍历的方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-BFS"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">广度优先搜索(BFS)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-DFS"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">深度优先搜索(DFS)</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#算法" title="算法">算法</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/bai-23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Song木头
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">260.8k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

@@ -9,6 +9,34 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/cn/ms-JSv1/</loc>
+    
+    <lastmod>2021-08-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/cn/ms-HTML%EF%BC%86CSS/</loc>
+    
+    <lastmod>2021-08-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/cn/Algorithm-Graph/</loc>
+    
+    <lastmod>2021-08-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/cn/Algorithm-RedBlackTree/</loc>
+    
+    <lastmod>2021-08-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/404.html</loc>
     
     <lastmod>2021-08-20</lastmod>
@@ -697,6 +725,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <lastmod>2021-08-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/tags/Echarts/</loc>
     <lastmod>2021-08-20</lastmod>
     <changefreq>daily</changefreq>
@@ -826,6 +861,13 @@
   
   <url>
     <loc>https://yesmore.cc/categories/Hexo/</loc>
+    <lastmod>2021-08-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/categories/%E9%9D%A2%E8%AF%95/</loc>
     <lastmod>2021-08-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

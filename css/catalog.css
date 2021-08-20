@@ -19,7 +19,7 @@
   }
 }
 #toc {
-  width: inherit;
+  width: 313.3px;
   line-height: 1em;
   font-size: 0.9em;
   float: left;
@@ -67,6 +67,9 @@
 }
 .toc-nav-number {
   display: none;
+}
+.toc-nav-item {
+  list-style: none;
 }
 .toc-nav-child {
   margin-left: -1em;
