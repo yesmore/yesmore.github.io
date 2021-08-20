@@ -126,7 +126,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -160,7 +160,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -223,9 +223,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -234,9 +234,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -257,6 +257,8 @@
           
           
           
+          
+          
           <li>
             <a href="/tags/">
               
@@ -265,8 +267,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -485,7 +485,7 @@
 <p>显然，在对物体进行不同变化时，法向量的变化情况较为复杂。这时候，数学公式就会派上用场了。</p>
 <h3 id="二、魔法矩阵：逆转置矩阵">二、魔法矩阵：逆转置矩阵</h3>
 <h4 id="2-1-定义">2.1 定义</h4>
-<p>在第4章中曾讨论过，对顶点进行变换的矩阵称为<a target="_blank" rel="noopener" href="https://freepiao.cn/13-%E4%BD%BF%E7%94%A8Matrix4%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2%E5%A4%8D%E5%90%88%E5%8F%98%E6%8D%A2-RotatedTranslatedTriangle/#%E4%B8%80%E3%80%81%E6%A8%A1%E5%9E%8B%E5%8F%98%E6%8D%A2"><strong>模型矩阵</strong></a>。如何计算变换之后的法向量呢？只要将变换之前的法向量乘以模型矩阵的<strong>逆转置矩阵</strong>即可。<u>所谓逆转置矩阵，就是逆矩阵的转置</u>。</p>
+<p>在第4章中曾讨论过，对顶点进行变换的矩阵称为<a href="https://yesmore.cc/cn/13-%E4%BD%BF%E7%94%A8Matrix4%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2%E5%A4%8D%E5%90%88%E5%8F%98%E6%8D%A2-RotatedTranslatedTriangle/#%E4%B8%80%E3%80%81%E6%A8%A1%E5%9E%8B%E5%8F%98%E6%8D%A2"><strong>模型矩阵</strong></a>。如何计算变换之后的法向量呢？只要将变换之前的法向量乘以模型矩阵的<strong>逆转置矩阵</strong>即可。<u>所谓逆转置矩阵，就是逆矩阵的转置</u>。</p>
 <p>逆矩阵的含义是，如果矩阵 M 的逆矩阵是 R，那么 R * M 或 M * R 的结果都是<u>单位矩阵</u>。转置的意思是，将矩阵的<u>行列进行调换</u>。</p>
 <h4 id="2-2-使用规则">2.2 使用规则</h4>
 <p>逆转置矩阵的用法总结如下：</p>
@@ -549,12 +549,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/28-光照-光照原理-点光源-PointLightedCube/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】28-光照-光照原理-点光源">&larr; Previous Post</a>
+            <a href="/cn/28-光照-光照原理-点光源-PointLightedCube/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】28-光照-光照原理-点光源">&larr; 上一篇</a>
           </li>
           
           
           <li class="next">
-            <a href="/cn/世界坐标系和本地坐标系/" data-toggle="tooltip" data-placement="top" title="世界坐标系和本地坐标系">Next Post &rarr;</a>
+            <a href="/cn/世界坐标系和本地坐标系/" data-toggle="tooltip" data-placement="top" title="世界坐标系和本地坐标系">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -565,6 +565,7 @@
 <!-- tip start -->
 <div class="tip">
   <p>
+    Tips: 
     
       Please indicate the source and original author when reprinting or quoting this article.
     
@@ -582,21 +583,21 @@
 
 <div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
   <ul class="list-inline text-center social-share-ul">
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-twitter">
         <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a class="social-share-icon icon-wechat">
         <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
       </a>
     </li>
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-weibo">
         <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-qq">
         <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
@@ -810,15 +811,6 @@
           
 
           
-            <li>
-              <a target="_blank" href="https://twitter.com/bai-23">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          
 
           
 
@@ -828,15 +820,6 @@
 
           
 
-          
-            <li>
-              <a target="_blank" href="http://weibo.com/西西">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
           
 
         </ul>
@@ -893,7 +876,7 @@
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   

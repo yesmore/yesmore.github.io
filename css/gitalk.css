@@ -1201,6 +1201,10 @@
 .gt-container .gt-comment-body {
   color: #333;
 }
+.gt-container .gt-comment-body p {
+  font-size: 15px;
+}
+
 .gt-container .gt-comment-body .email-hidden-toggle a {
   display: inline-block;
   height: 12px;

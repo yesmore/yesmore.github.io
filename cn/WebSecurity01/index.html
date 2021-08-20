@@ -126,7 +126,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -160,7 +160,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -223,9 +223,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -234,9 +234,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -257,6 +257,8 @@
           
           
           
+          
+          
           <li>
             <a href="/tags/">
               
@@ -265,8 +267,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -899,12 +899,12 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/WebSecurity02-environment/" data-toggle="tooltip" data-placement="top" title="【Web安全扫盲】02-靶场：漏洞练习环境搭建">&larr; Previous Post</a>
+            <a href="/cn/WebSecurity02-environment/" data-toggle="tooltip" data-placement="top" title="【Web安全扫盲】02-靶场：漏洞练习环境搭建">&larr; 上一篇</a>
           </li>
           
           
           <li class="next">
-            <a href="/cn/30-层次模型-多节点模型-MultiJointModel/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】（完结篇）30-层次模型-多节点模型">Next Post &rarr;</a>
+            <a href="/cn/30-层次模型-多节点模型-MultiJointModel/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】（完结篇）30-层次模型-多节点模型">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -915,6 +915,7 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 <!-- tip start -->
 <div class="tip">
   <p>
+    Tips: 
     
       Please indicate the source and original author when reprinting or quoting this article.
     
@@ -932,21 +933,21 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 
 <div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
   <ul class="list-inline text-center social-share-ul">
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-twitter">
         <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a class="social-share-icon icon-wechat">
         <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
       </a>
     </li>
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-weibo">
         <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-qq">
         <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
@@ -1160,15 +1161,6 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
           
 
           
-            <li>
-              <a target="_blank" href="https://twitter.com/bai-23">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          
 
           
 
@@ -1178,15 +1170,6 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 
           
 
-          
-            <li>
-              <a target="_blank" href="http://weibo.com/西西">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
           
 
         </ul>
@@ -1243,7 +1226,7 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   

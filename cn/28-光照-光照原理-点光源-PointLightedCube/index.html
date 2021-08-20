@@ -126,7 +126,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -160,7 +160,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -223,9 +223,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -234,9 +234,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -257,6 +257,8 @@
           
           
           
+          
+          
           <li>
             <a href="/tags/">
               
@@ -265,8 +267,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -475,7 +475,7 @@
 <p>与平行光相比，点光源光发出的光，<u>在三维空间的不同位置上其方向也不同</u>，如下图所示。所以，在对点光源光下的物体进行着色时，需要在每个入射点计算点光源光在该处的方向。</p>
 <p><img src="/images/PointLightedCube1.png" alt="点光源光的方向随位置变化"></p>
 <p>前一节根据<u>每个顶点的法向量和平行光入射方向</u>来计算反射光的颜色，这一节还是采用该方法，只不过点光源光的方向不再是恒定不变的，而是根据每个顶点的位置逐一计算。<u>着色器需要知道点光源光自身的所在位置，而不是光的方向</u>。</p>
-<p>示例程序 PointLightedCube 是前一节 <a target="_blank" rel="noopener" href="https://freepiao.cn/26-%E5%85%89%E7%85%A7-%E5%85%89%E7%85%A7%E5%8E%9F%E7%90%86-%E5%B9%B3%E8%A1%8C%E5%85%89-LightedCube/#%E4%BB%A3%E7%A0%813-LightedCube-ambient">LightedCube_ambient</a> 示例程序的点光源光版本，显示了一个点光源下的红色立方体。立方体表面仍然是漫反射，环境光保持不变，程序的效果如下图：</p>
+<p>示例程序 PointLightedCube 是前一节 <a href="https://yesmore.cc/26-%E5%85%89%E7%85%A7-%E5%85%89%E7%85%A7%E5%8E%9F%E7%90%86-%E5%B9%B3%E8%A1%8C%E5%85%89-LightedCube/#%E4%BB%A3%E7%A0%813-LightedCube-ambient">LightedCube_ambient</a> 示例程序的点光源光版本，显示了一个点光源下的红色立方体。立方体表面仍然是漫反射，环境光保持不变，程序的效果如下图：</p>
 <p><img src="/images/PointLightedCube2.png" alt="PointLightedCube"></p>
 <p>旋转示例：</p>
 <script src="\lib\webgl-utils.js"></script>
@@ -736,12 +736,12 @@ function animate(angle) {
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/29-层次模型-单关节模型-jointModel/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】29-层次模型-单关节模型">&larr; Previous Post</a>
+            <a href="/cn/29-层次模型-单关节模型-jointModel/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】29-层次模型-单关节模型">&larr; 上一篇</a>
           </li>
           
           
           <li class="next">
-            <a href="/cn/27-光照-运动物体的光照效果-LightedTranslatedRotatedCube/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】27-光照-运动物体的光照效果">Next Post &rarr;</a>
+            <a href="/cn/27-光照-运动物体的光照效果-LightedTranslatedRotatedCube/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】27-光照-运动物体的光照效果">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -752,6 +752,7 @@ function animate(angle) {
 <!-- tip start -->
 <div class="tip">
   <p>
+    Tips: 
     
       Please indicate the source and original author when reprinting or quoting this article.
     
@@ -769,21 +770,21 @@ function animate(angle) {
 
 <div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
   <ul class="list-inline text-center social-share-ul">
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-twitter">
         <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a class="social-share-icon icon-wechat">
         <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
       </a>
     </li>
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-weibo">
         <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-qq">
         <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
@@ -997,15 +998,6 @@ function animate(angle) {
           
 
           
-            <li>
-              <a target="_blank" href="https://twitter.com/bai-23">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          
 
           
 
@@ -1015,15 +1007,6 @@ function animate(angle) {
 
           
 
-          
-            <li>
-              <a target="_blank" href="http://weibo.com/西西">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
           
 
         </ul>
@@ -1080,7 +1063,7 @@ function animate(angle) {
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   

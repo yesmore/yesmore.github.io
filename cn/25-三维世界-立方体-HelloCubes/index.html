@@ -126,7 +126,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -160,7 +160,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -223,9 +223,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -234,9 +234,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -257,6 +257,8 @@
           
           
           
+          
+          
           <li>
             <a href="/tags/">
               
@@ -265,8 +267,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -473,7 +473,7 @@
 <h2 id="知识点">知识点</h2>
 <h3 id="一、立方体">一、立方体</h3>
 <h4 id="1-1-目的">1.1 目的</h4>
-<p>迄今为止，本教程通过绘制一些简单的三角形，展示了 WebGL 的诸多特性。你对绘制三维对象的基础只是应该已经有了足够的了解。下面，我们就来绘制如下图所示的立方体。其8个顶点的颜色分别为<code>白色、品红色、红色、黄色、绿色、青色、蓝色、黑色</code>。在第5章层提过，为每个顶点定义颜色后，便面上的颜色会根据顶点颜色<a target="_blank" rel="noopener" href="https://freepiao.cn/17-%E9%A2%9C%E8%89%B2%E4%B8%8E%E7%BA%B9%E7%90%86-%E7%BB%98%E5%88%B6%E5%BD%A9%E8%89%B2%E4%B8%8E%E6%B8%90%E5%8F%98%E4%B8%89%E8%A7%92%E5%BD%A2-ColoredTriangle/#%E4%B8%89%E3%80%81varying%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E9%A2%9C%E8%89%B2%E5%86%85%E6%8F%92%E8%BF%87%E7%A8%8B">内插</a>出来，形成一种光滑的渐变效果，新的程序名为 <a href="#%E4%BB%A3%E7%A0%811">HelloCube</a>。<br>
+<p>迄今为止，本教程通过绘制一些简单的三角形，展示了 WebGL 的诸多特性。你对绘制三维对象的基础只是应该已经有了足够的了解。下面，我们就来绘制如下图所示的立方体。其8个顶点的颜色分别为<code>白色、品红色、红色、黄色、绿色、青色、蓝色、黑色</code>。在第5章层提过，为每个顶点定义颜色后，便面上的颜色会根据顶点颜色<a href="https://yesmore.cc/cn/17-%E9%A2%9C%E8%89%B2%E4%B8%8E%E7%BA%B9%E7%90%86-%E7%BB%98%E5%88%B6%E5%BD%A9%E8%89%B2%E4%B8%8E%E6%B8%90%E5%8F%98%E4%B8%89%E8%A7%92%E5%BD%A2-ColoredTriangle/#%E4%B8%89%E3%80%81varying%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E9%A2%9C%E8%89%B2%E5%86%85%E6%8F%92%E8%BF%87%E7%A8%8B">内插</a>出来，形成一种光滑的渐变效果，新的程序名为 <a href="#%E4%BB%A3%E7%A0%811">HelloCube</a>。<br>
 <img src="/images/HelloCubes3.png" alt="示例"></p>
 <p><img src="/images/HelloCubes1.png" alt="顶点坐标"></p>
 <h4 id="1-2-思考与尝试">1.2 思考与尝试</h4>
@@ -553,7 +553,7 @@ count, 指定绘制需要多少个顶点（整数型），顶点着色器执行�
 </blockquote>
 <p>我们需要将<u>顶点索引（三角形列表）</u>写入到缓冲区中，并绑定到   <code>gl.ELEMENT_ARRAY_BUFFER</code> 上，其过程类似于调用 <code>gl.drawArrays()</code>时将顶点坐标写入缓冲区并将其绑定到 <code>gl.ARRAY_BUFFER</code> 上的过程。也就是说，可以继续使用 <code>gl.bindBudder()</code>和 <code>gl.bufferData()</code>来进行上述操作，只不过参数 target 要改为 <code>gl.ELEMENT_ARRAY_BUFFER</code>。</p>
 <blockquote>
-<p>复习：<a target="_blank" rel="noopener" href="https://freepiao.cn/06-%E7%BB%98%E5%88%B6%E4%B8%89%E4%B8%AA%E7%82%B9-MultiPoints/#2-%E5%B0%86%E7%BC%93%E5%86%B2%E5%8C%BA%E5%AF%B9%E8%B1%A1%E4%BF%9D%E5%AD%98%E5%88%B0%E7%9B%AE%E6%A0%87%E4%B8%8A">gl.bindBudder()</a>、<a target="_blank" rel="noopener" href="https://freepiao.cn/06-%E7%BB%98%E5%88%B6%E4%B8%89%E4%B8%AA%E7%82%B9-MultiPoints/#3-%E5%90%91%E7%BC%93%E5%AD%98%E5%AF%B9%E8%B1%A1%E5%86%99%E5%85%A5%E6%95%B0%E6%8D%AE">gl.bufferData()</a></p>
+<p>复习：<a href="https://yesmore.cc/cn/06-%E7%BB%98%E5%88%B6%E4%B8%89%E4%B8%AA%E7%82%B9-MultiPoints/#2-%E5%B0%86%E7%BC%93%E5%86%B2%E5%8C%BA%E5%AF%B9%E8%B1%A1%E4%BF%9D%E5%AD%98%E5%88%B0%E7%9B%AE%E6%A0%87%E4%B8%8A">gl.bindBudder()</a>、<a href="https://yesmore.cc/cn/06-%E7%BB%98%E5%88%B6%E4%B8%89%E4%B8%AA%E7%82%B9-MultiPoints/#3-%E5%90%91%E7%BC%93%E5%AD%98%E5%AF%B9%E8%B1%A1%E5%86%99%E5%85%A5%E6%95%B0%E6%8D%AE">gl.bufferData()</a></p>
 </blockquote>
 <h4 id="1-5-实例程序">1.5 实例程序</h4>
 <p><a href="#%E4%BB%A3%E7%A0%811">代码1</a>与ProjectiveView_mvpMatrix.js一样，使用了金字塔状的可视空间和透视投影变换，着色器部分没有改变。顶点着色器对顶点坐标进行了简单的变换，片元着色器接收varying变量并赋值给gl_FragColor，以对片元进行着色。</p>
@@ -621,12 +621,12 @@ count, 指定绘制需要多少个顶点（整数型），顶点着色器执行�
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/26-光照-光照原理-平行光-LightedCube/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】26-光照-光照原理">&larr; Previous Post</a>
+            <a href="/cn/26-光照-光照原理-平行光-LightedCube/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】26-光照-光照原理">&larr; 上一篇</a>
           </li>
           
           
           <li class="next">
-            <a href="/cn/24-三维世界-对象的前后关系-DepthBuffer/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】24-三维世界-对象的前后关系">Next Post &rarr;</a>
+            <a href="/cn/24-三维世界-对象的前后关系-DepthBuffer/" data-toggle="tooltip" data-placement="top" title="【WebGL之巅】24-三维世界-对象的前后关系">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -637,6 +637,7 @@ count, 指定绘制需要多少个顶点（整数型），顶点着色器执行�
 <!-- tip start -->
 <div class="tip">
   <p>
+    Tips: 
     
       Please indicate the source and original author when reprinting or quoting this article.
     
@@ -654,21 +655,21 @@ count, 指定绘制需要多少个顶点（整数型），顶点着色器执行�
 
 <div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
   <ul class="list-inline text-center social-share-ul">
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-twitter">
         <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a class="social-share-icon icon-wechat">
         <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
       </a>
     </li>
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-weibo">
         <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-qq">
         <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
@@ -882,15 +883,6 @@ count, 指定绘制需要多少个顶点（整数型），顶点着色器执行�
           
 
           
-            <li>
-              <a target="_blank" href="https://twitter.com/bai-23">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          
 
           
 
@@ -900,15 +892,6 @@ count, 指定绘制需要多少个顶点（整数型），顶点着色器执行�
 
           
 
-          
-            <li>
-              <a target="_blank" href="http://weibo.com/西西">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
           
 
         </ul>
@@ -965,7 +948,7 @@ count, 指定绘制需要多少个顶点（整数型），顶点着色器执行�
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   

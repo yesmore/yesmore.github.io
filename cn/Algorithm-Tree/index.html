@@ -126,7 +126,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -160,7 +160,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -223,9 +223,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -234,9 +234,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -257,6 +257,8 @@
           
           
           
+          
+          
           <li>
             <a href="/tags/">
               
@@ -265,8 +267,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -879,17 +879,17 @@
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.3edzg72fx7y0.png" alt="image"></p>
 <p>代码实现：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2、删除的是只有一个子节点的节点</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentNode.right === <span class="literal">null</span>) &#123; <span class="comment">// currentNode 只存在左节点</span></span><br><span class="line">  <span class="comment">//-- 2.1、currentNode 只存在&lt;左节点&gt;的情况</span></span><br><span class="line">  <span class="comment">//---- 2.1.1、currentNode 等于 root</span></span><br><span class="line">  <span class="comment">//---- 2.1.2、parentNode.left 等于 currentNode</span></span><br><span class="line">  <span class="comment">//---- 2.1.3、parentNode.right 等于 currentNode</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentNode === <span class="built_in">this</span>.root) &#123;</span><br><span class="line">    <span class="built_in">this</span>.root = currentNode.left;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (isLeftChild) &#123;</span><br><span class="line">    parentNode.left = currentNode.left;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    parentNode.right = currentNode.left;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentNode.left === <span class="literal">null</span>) &#123; <span class="comment">// currentNode 只存在右节点</span></span><br><span class="line">  <span class="comment">//-- 2.2、currentNode 只存在&lt;右节点&gt;的情况</span></span><br><span class="line">  <span class="comment">//---- 2.1.1 currentNode 等于 root</span></span><br><span class="line">  <span class="comment">//---- 2.1.1 parentNode.left 等于 currentNode</span></span><br><span class="line">  <span class="comment">//---- 2.1.1 parentNode.right 等于 currentNode</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentNode === <span class="built_in">this</span>.root) &#123;</span><br><span class="line">    <span class="built_in">this</span>.root = currentNode.right;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (isLeftChild) &#123;</span><br><span class="line">    parentNode.left = currentNode.right;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    parentNode.right = currentNode.right;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2、删除的是只有一个子节点的节点</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentNode.right === <span class="literal">null</span>) &#123; <span class="comment">// currentNode 只存在左节点</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentNode === <span class="built_in">this</span>.root) &#123;</span><br><span class="line">    <span class="comment">//---- 2.1.1、currentNode 等于 root</span></span><br><span class="line">    <span class="built_in">this</span>.root = currentNode.left;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (isLeftChild) &#123;</span><br><span class="line">   	<span class="comment">//---- 2.1.2、parentNode.left 等于 currentNode</span></span><br><span class="line">    parentNode.left = currentNode.left;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//---- 2.1.3、parentNode.right 等于 currentNode</span></span><br><span class="line">    parentNode.right = currentNode.left;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentNode.left === <span class="literal">null</span>) &#123; <span class="comment">// currentNode 只存在右节点</span></span><br><span class="line">  <span class="comment">//-- 2.2、currentNode 只存在&lt;右节点&gt;的情况</span></span><br><span class="line">  <span class="comment">//---- 2.2.1 currentNode 等于 root</span></span><br><span class="line">  <span class="comment">//---- 2.2.2 parentNode.left 等于 currentNode</span></span><br><span class="line">  <span class="comment">//---- 2.2.3 parentNode.right 等于 currentNode</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentNode === <span class="built_in">this</span>.root) &#123;</span><br><span class="line">    <span class="built_in">this</span>.root = currentNode.right;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (isLeftChild) &#123;</span><br><span class="line">    parentNode.left = currentNode.right;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    parentNode.right = currentNode.right;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <h5 id="情况三：删除的是有两个子节点的节点">情况三：删除的是有两个子节点的节点</h5>
 <p>这种情况十分复杂，首先依据以下二叉搜索树，讨论这样的问题：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.4g0geeyv6ya0.png" alt="image"></p>
 <p><strong>删除节点 9</strong></p>
 <p>在保证删除节点 9 后原二叉树仍为二叉搜索树的前提下，有两种方式：</p>
 <ul>
-<li>方式 1：从节点 9 的左子树中选择一合适的节点替代节点 9，可知节点 8 符合要求；</li>
-<li>方式 2：从节点 9 的右子树中选择一合适的节点替代节点 9，可知节点 10 符合要求；</li>
+<li>方式 1：从节点 9 的<u>左子树</u>中选择一合适的节点替代节点 9，可知节点 8 符合要求；</li>
+<li>方式 2：从节点 9 的<u>右子树</u>中选择一合适的节点替代节点 9，可知节点 10 符合要求；</li>
 </ul>
-<p><img src="algorithm29.png" alt="image"></p>
+<p><img src="/images/algorithm29.png" alt="image"></p>
 <p><strong>删除节点 7</strong></p>
 <p>在保证删除节点 7 后原二叉树仍为二叉搜索树的前提下，也有两种方式：</p>
 <ul>
@@ -957,12 +957,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/Mathjax/" data-toggle="tooltip" data-placement="top" title="Mathjax语法">&larr; Previous Post</a>
+            <a href="/cn/Mathjax/" data-toggle="tooltip" data-placement="top" title="Mathjax语法">&larr; 上一篇</a>
           </li>
           
           
           <li class="next">
-            <a href="/cn/Algorithm-Hashtable/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】哈希表（JavaScript版详解）">Next Post &rarr;</a>
+            <a href="/cn/Algorithm-Hashtable/" data-toggle="tooltip" data-placement="top" title="【数据结构与算法】哈希表（JavaScript版详解）">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -973,6 +973,7 @@
 <!-- tip start -->
 <div class="tip">
   <p>
+    Tips: 
     
       Please indicate the source and original author when reprinting or quoting this article.
     
@@ -990,21 +991,21 @@
 
 <div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
   <ul class="list-inline text-center social-share-ul">
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-twitter">
         <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a class="social-share-icon icon-wechat">
         <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
       </a>
     </li>
-    <li class="social-share-li">
+    <!-- <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-weibo">
         <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
       </a>
-    </li>
+    </li> -->
     <li class="social-share-li">
       <a target="_blank" class="social-share-icon icon-qq">
         <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
@@ -1218,15 +1219,6 @@
           
 
           
-            <li>
-              <a target="_blank" href="https://twitter.com/bai-23">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          
 
           
 
@@ -1236,15 +1228,6 @@
 
           
 
-          
-            <li>
-              <a target="_blank" href="http://weibo.com/西西">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
           
 
         </ul>
@@ -1301,7 +1284,7 @@
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content=',.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   

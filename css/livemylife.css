@@ -429,6 +429,9 @@ blockquote P{
   line-height: 30px;
   margin-bottom: 10px;
 }
+.post-container p img{
+  box-shadow: none!important;
+}
 .post-container u {
   text-decoration: none;
   font-family: sans-serif;
@@ -437,6 +440,14 @@ blockquote P{
 .post-container code {
   color: #e9836e;
   background-color: #f3f3f3;
+}
+.post-container .pager li a{
+  width: 120px;
+  border-radius: 7px;
+  padding: 7px 7px;
+}
+.post-container .tip {
+  margin-top: 30px;
 }
 
 .highlight {
@@ -455,4 +466,10 @@ blockquote P{
 .highlight .code span{
   font-weight: bold;
   font-size: 14px;
+}
+
+/* 预览界面（主页） */
+.container .row .pager li a{
+  border-radius: 7px;
+  padding: 7px 7px;
 }
