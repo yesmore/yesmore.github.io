@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -475,10 +475,10 @@
 <h2 id="知识点">知识点</h2>
 <h3 id="一、点光源">一、点光源</h3>
 <p>与平行光相比，点光源光发出的光，<u>在三维空间的不同位置上其方向也不同</u>，如下图所示。所以，在对点光源光下的物体进行着色时，需要在每个入射点计算点光源光在该处的方向。</p>
-<p><img src="/images/PointLightedCube1.png" alt="点光源光的方向随位置变化"></p>
+<p><img src="PointLightedCube1.png" alt="点光源光的方向随位置变化"></p>
 <p>前一节根据<u>每个顶点的法向量和平行光入射方向</u>来计算反射光的颜色，这一节还是采用该方法，只不过点光源光的方向不再是恒定不变的，而是根据每个顶点的位置逐一计算。<u>着色器需要知道点光源光自身的所在位置，而不是光的方向</u>。</p>
 <p>示例程序 PointLightedCube 是前一节 <a href="https://yesmore.cc/26-%E5%85%89%E7%85%A7-%E5%85%89%E7%85%A7%E5%8E%9F%E7%90%86-%E5%B9%B3%E8%A1%8C%E5%85%89-LightedCube/#%E4%BB%A3%E7%A0%813-LightedCube-ambient">LightedCube_ambient</a> 示例程序的点光源光版本，显示了一个点光源下的红色立方体。立方体表面仍然是漫反射，环境光保持不变，程序的效果如下图：</p>
-<p><img src="/images/PointLightedCube2.png" alt="PointLightedCube"></p>
+<p><img src="PointLightedCube2.png" alt="PointLightedCube"></p>
 <p>旋转示例：</p>
 <script src="\lib\webgl-utils.js"></script>
 <script src="\lib\webgl-debug.js"></script>
@@ -702,11 +702,11 @@ function animate(angle) {
 <h4 id="2-2-问题">2.2 问题</h4>
 <p>运行程序，你会发现效果更加逼真了但是，如果仔细观察还是能发现一个问题：立方体表面有不自然的线条。</p>
 <p>出现该现象的原因在第5章讨论过的<strong>内插</strong>过程中提到过。你应该还记得，WebGL 系统会根据顶点的颜色，内插出表面上每个片元的颜色。实际上，点光源光照射到一个表面上，所产生的效果（即每个片元获得的颜色）与简单使用4个顶点颜色内插出的效果并不完全相同，所以<u>为了使效果更加逼真，我们需要对表面的每一个点，而不仅仅是4个顶点计算光照效果</u>。如果使用一个球体，二者的差异可能会更加明显。<br>
-<img src="/images/PointLightedCube3.png" alt="点光源下的球体"></p>
+<img src="PointLightedCube3.png" alt="点光源下的球体"></p>
 <h3 id="三、逐片元光照">三、逐片元光照</h3>
 <p>乍一听，要在表面的每一点上计算光照产生的颜色，似乎是个不可能完成的任务。但实际上，我们只需要逐片元地进行计算。片元着色器总算要派上用场了。</p>
 <p>示例程序是 <a href="%E4%BB%A3%E7%A0%812">代码2-PointLightedCube_perFragment</a>，效果如下图所示：</p>
-<p><img src="/images/PointLightedCube4.png" alt="PointLightedCube_perFragment"></p>
+<p><img src="PointLightedCube4.png" alt="PointLightedCube_perFragment"></p>
 <p>为了逐片元地计算光照，你需要知道：</p>
 <ul>
 <li>

@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -498,14 +498,14 @@
 <h3 id="一、链表结构">一、链表结构</h3>
 <p>单向链表类似于火车，有一个火车头，火车头会连接一个节点，节点上有乘客，并且这个节点会连接下一个节点，以此类推。</p>
 <h4 id="链表的火车结构">链表的火车结构</h4>
-<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.27xtn3c52zwg.png" alt="链表的火车结构"></p>
+<p><img src="image.27xtn3c52zwg.png" alt="链表的火车结构"></p>
 <h4 id="链表的数据结构">链表的数据结构</h4>
 <p>head 属性指向链表的第一个节点。<br>
 链表中的最后一个节点指向 <code>null</code>。<br>
 当链表中一个节点也没有的时候，head 直接指向 <code>null</code>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.37j1by46a120.png" alt="链表的数据结构"></p>
+<p><img src="image.37j1by46a120.png" alt="链表的数据结构"></p>
 <h4 id="给火车加上数据后的结构">给火车加上数据后的结构</h4>
-<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.664djiie2t80.png" alt="给火车加上数据后的结构"></p>
+<p><img src="image.664djiie2t80.png" alt="给火车加上数据后的结构"></p>
 <h4 id="相关术语">相关术语</h4>
 <p><strong>头指针</strong>：</p>
 <p><u>指链表指向第一个结点的指针</u>，若链表有头结点，则是指向头结点的指针;</p>
@@ -551,12 +551,12 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// append() 往链表尾部追加数据</span></span><br><span class="line"><span class="function"><span class="title">append</span>(<span class="params">data</span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1、创建新节点</span></span><br><span class="line">    <span class="keyword">const</span> newNode = <span class="keyword">new</span> <span class="built_in">this</span>.Node(data);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2、追加新节点</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.length === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 链表长度为 0 时，即只有 head 的时候</span></span><br><span class="line">        <span class="built_in">this</span>.head = newNode;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 链表长度大于 0 时，在最后面添加新节点</span></span><br><span class="line">        <span class="keyword">let</span> currentNode = <span class="built_in">this</span>.head;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 当 currentNode.next 不为空时，</span></span><br><span class="line">        <span class="comment">// 循序依次找最后一个节点，即节点的 next 为 null 时</span></span><br><span class="line">        <span class="keyword">while</span> (currentNode.next !== <span class="literal">null</span>) &#123;</span><br><span class="line">            currentNode = currentNode.next;	<span class="comment">// 继续查找下一个，直到null为止，赋值到currentNode</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 最后一个节点的 next 指向新节点</span></span><br><span class="line">        currentNode.next = newNode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3、追加完新节点后，链表长度 + 1</span></span><br><span class="line">    <span class="built_in">this</span>.length++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="过程图解">过程图解</h5>
 <p>首先让 <code>currentNode</code> 指向第一个节点。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.5iskrdf4nu40.png" alt="image"></p>
+<p><img src="image.5iskrdf4nu40.png" alt="image"></p>
 <p>通过 <code>while</code> 循环使 <code>currentNode</code> 指向最后一个节点，最后通过 <code>currentNode.next = newNode</code>，让最后一个节点指向新节点 <code>newNode</code>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.4mw3bx5g80m0.png" alt="image"></p>
+<p><img src="image.4mw3bx5g80m0.png" alt="image"></p>
 <h5 id="代码测试">代码测试</h5>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> linkedList = <span class="keyword">new</span> LinkedList();</span><br><span class="line"><span class="comment">// 测试 append 方法</span></span><br><span class="line">linkedList.append(<span class="string">&quot;A&quot;</span>);</span><br><span class="line">linkedList.append(<span class="string">&quot;B&quot;</span>);</span><br><span class="line">linkedList.append(<span class="string">&quot;C&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(linkedList);</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.6kx4qbq8e5c.png" alt="image"></p>
+<p><img src="image.6kx4qbq8e5c.png" alt="image"></p>
 <h4 id="实现-toString">实现 toString()</h4>
 <h5 id="代码实现-2">代码实现</h5>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// toString() 链表数据以字符串形式返回</span></span><br><span class="line"><span class="function"><span class="title">toString</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> currentNode = <span class="built_in">this</span>.head;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历所有的节点，拼接为字符串，直到节点为 null</span></span><br><span class="line">    <span class="keyword">while</span> (currentNode) &#123;</span><br><span class="line">        result += currentNode.data + <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        currentNode = currentNode.next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

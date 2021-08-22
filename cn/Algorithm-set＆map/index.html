@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -502,7 +502,7 @@
 <p><strong>交集</strong>：对于给定的两个集合，返回一个包含两个集合中共有元素的新集合。</p>
 <p><strong>差集</strong>：对于给定的两个集合，返回一个包含所有存在于第一个集合且不存在于第二个集合的元素的新集合。</p>
 <p><strong>子集</strong>：验证一个给定集合是否是另一个集合的子集。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.4utjffapm1w0.png" alt="image"></p>
+<p><img src="image.4utjffapm1w0.png" alt="image"></p>
 <h4 id="并集的实现">并集的实现</h4>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// union() 求两个集合的并集</span></span><br><span class="line"><span class="function"><span class="title">union</span>(<span class="params">otherSet</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1、创建一个新集合</span></span><br><span class="line">    <span class="keyword">let</span> unionSet = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2、将当前集合（this）的所有 value，添加到新集合（unionSet）中</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> value <span class="keyword">of</span> <span class="built_in">this</span>.values()) &#123;</span><br><span class="line">        unionSet.add(value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3、将 otherSet 集合的所有 value，添加到新集合（unionSet）中</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> value <span class="keyword">of</span> otherSet.values()) &#123;</span><br><span class="line">        unionSet.add(value); <span class="comment">// add() 已经有重复判断</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> unionSet;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="交集的实现">交集的实现</h4>

@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -602,20 +602,12 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li>
 <p>number</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> decimal: <span class="built_in">number</span> = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">let</span> hex: <span class="built_in">number</span> = <span class="number">0xf00d</span>;</span><br><span class="line"><span class="keyword">let</span> binary: <span class="built_in">number</span> = <span class="number">0b1010</span>;</span><br><span class="line"><span class="keyword">let</span> octal: <span class="built_in">number</span> = <span class="number">0o744</span>;</span><br><span class="line"><span class="keyword">let</span> big: bigint = <span class="number">100n</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>boolean</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> isDone: <span class="built_in">boolean</span> = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>string</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> color: <span class="built_in">string</span> = <span class="string">&quot;blue&quot;</span>;</span><br><span class="line">color = <span class="string">&#x27;red&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> fullName: <span class="built_in">string</span> = <span class="string">`Bob Bobbington`</span>;</span><br><span class="line"><span class="keyword">let</span> age: <span class="built_in">number</span> = <span class="number">37</span>;</span><br><span class="line"><span class="keyword">let</span> sentence: <span class="built_in">string</span> = <span class="string">`Hello, my name is <span class="subst">$&#123;fullName&#125;</span>.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">I&#x27;ll be <span class="subst">$&#123;age + <span class="number">1</span>&#125;</span> years old next month.`</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>字面量</p>
 <ul>
 <li>
@@ -624,13 +616,11 @@
 <li>
 <pre><code class="language-typescript">let color: 'red' | 'blue' | 'black';
 let num: 1 | 2 | 3 | 4 | 5;
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- any</span><br><span class="line"></span><br><span class="line">  - 相当于关闭该变量的ts语法，开发时不建议使用</span><br><span class="line"></span><br><span class="line">  - ```typescript</span><br><span class="line">    <span class="keyword">let</span> d: <span class="attr">any</span> = <span class="number">4</span>;</span><br><span class="line">    <span class="attr">d</span> = &#x27;hello&#x27;;</span><br><span class="line">    <span class="attr">d</span> = <span class="literal">true</span>;</span><br><span class="line">    </span><br><span class="line">    // 声明变量如果不指定类型，则TS解析器会自动判断变量的类型为any （隐式的any）</span><br><span class="line">    <span class="keyword">let</span> d;</span><br><span class="line">    <span class="attr">d</span> = <span class="number">10</span>;</span><br><span class="line">    <span class="attr">d</span> = &#x27;hello&#x27;;</span><br><span class="line">    <span class="attr">d</span> = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">any</span><br><span class="line"></span><br><span class="line">- 相当于关闭该变量的ts语法，开发时不建议使用</span><br><span class="line"></span><br><span class="line">- ```typescript</span><br><span class="line">  <span class="keyword">let</span> d: <span class="attr">any</span> = <span class="number">4</span>;</span><br><span class="line">  <span class="attr">d</span> = &#x27;hello&#x27;;</span><br><span class="line">  <span class="attr">d</span> = <span class="literal">true</span>;</span><br><span class="line">  </span><br><span class="line">  // 声明变量如果不指定类型，则TS解析器会自动判断变量的类型为any （隐式的any）</span><br><span class="line">  <span class="keyword">let</span> d;</span><br><span class="line">  <span class="attr">d</span> = <span class="number">10</span>;</span><br><span class="line">  <span class="attr">d</span> = &#x27;hello&#x27;;</span><br><span class="line">  <span class="attr">d</span> = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
 
 </code></pre>
 </li>
 </ul>
-</li>
-<li>
 <p>unknown</p>
 <ul>
 <li>
@@ -644,57 +634,31 @@ let num: 1 | 2 | 3 | 4 | 5;
 <pre><code class="language-typescript">let notSure: unknown = 4;
 notSure = 'hello';
 // unknown 实际上就是一个类型安全的any
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- <span class="keyword">void</span></span><br><span class="line"></span><br><span class="line">  ```<span class="javascript">typescript</span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> unusable: <span class="keyword">void</span> = <span class="literal">undefined</span>;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">void</span></span><br><span class="line"></span><br><span class="line">```<span class="javascript">typescript</span></span><br><span class="line"><span class="javascript"><span class="keyword">let</span> unusable: <span class="keyword">void</span> = <span class="literal">undefined</span>;</span></span><br></pre></td></tr></table></figure>
 
 </code></pre>
 </li>
 </ul>
-</li>
-<li>
 <p>never</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">message: <span class="built_in">string</span></span>): <span class="title">never</span> </span>&#123;  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(message);&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>object（没啥用）</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj: <span class="built_in">object</span> = &#123;&#125;;</span><br></pre></td></tr></table></figure>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.&#123;&#125; 用来指定对象中可以包含哪些属性// 语法：&#123;属性名:属性值,属性名:属性值&#125;// 在属性名后边加上?，表示属性是可选的let b: &#123;name: string, age?: number&#125;;b = &#123;name: &#x27;孙悟空&#x27;, age: 18&#125;;// 2.[propName: string]: any 表示任意类型的属性let c: &#123;name: string, [propName: string]: any&#125;;c = &#123;name: &#x27;猪八戒&#x27;, age: 18, gender: &#x27;男&#x27;&#125;;/**  3.设置函数结构的类型声明：*       语法：(形参:类型, 形参:类型 ...) =&gt; 返回值* */let d: (a: number ,b: number)=&gt;number;let d = function (n1: string, n2: string): number&#123;   return 10;&#125;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>array</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**   数组的类型声明：*       类型[]*       Array&lt;类型&gt;* */</span><span class="keyword">let</span> list: <span class="built_in">number</span>[] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];<span class="keyword">let</span> list: <span class="built_in">Array</span>&lt;<span class="built_in">number</span>&gt; = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];<span class="comment">// string[] 表示字符串数组let e: string[];// number[] 表示数值数值let f: number[];let g: Array&lt;number&gt;;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>tuple</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**   元组，元组就是固定长度的数组*       语法：[类型, 类型, 类型]* */</span><span class="keyword">let</span> x: [<span class="built_in">string</span>, <span class="built_in">number</span>];x = [<span class="string">&quot;hello&quot;</span>, <span class="number">10</span>]; </span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>enum</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//enum 枚举enum Color &#123;  Red,  Green,  Blue,&#125;let c: Color = Color.Green;enum Color &#123;  Red = 1,  Green,  Blue,&#125;let c: Color = Color.Green;enum Color &#123;  Red = 1,  Green = 2,  Blue = 4,&#125;let c: Color = Color.Green;// 补充let j: &#123; name: string &#125; &amp; &#123; age: number &#125;;// j = &#123;name: &#x27;孙悟空&#x27;, age: 18&#125;;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>类型别名</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> myType = <span class="number">1</span> | <span class="number">2</span> | <span class="number">3</span> | <span class="number">4</span> | <span class="number">5</span>;<span class="keyword">let</span> k: myType;<span class="keyword">let</span> l: myType;<span class="keyword">let</span> m: myType;k = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
 <p>类型断言</p>
-<ul>
-<li>
 <p>有些情况下，变量的类型对于我们来说是很明确，但是TS编译器却并不清楚，此时，<strong>可以通过类型断言来告诉编译器变量的类型</strong>，类比强制转换。</p>
-</li>
-<li>
 <p>断言有两种形式：</p>
-<ul>
-<li>
 <p>第一种</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> someValue: unknown = <span class="string">&quot;this is a string&quot;</span>;<span class="keyword">let</span> strLength: <span class="built_in">number</span> = (someValue <span class="keyword">as</span> <span class="built_in">string</span>).length;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>第二种</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> someValue: unknown = <span class="string">&quot;this is a string&quot;</span>;<span class="keyword">let</span> strLength: <span class="built_in">number</span> = (&lt;<span class="built_in">string</span>&gt;someValue).length;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
 <h2 id="3、编译选项">3、编译选项</h2>
 <h3 id="自动编译文件">自动编译文件</h3>
 <p>编译文件时，使用 <code>-w</code> 指令后，TS编译器会自动监视文件的变化，并在文件发生变化时对文件进行重新编译。</p>
@@ -708,57 +672,27 @@ notSure = 'hello';
 </ul>
 <h4 id="配置选项">配置选项</h4>
 <h5 id="include"><strong>include</strong></h5>
-<ul>
-<li>
 <p>定义希望被编译文件所在的目录</p>
-</li>
-<li>
 <p>默认值：[“**/*”]</p>
-</li>
-<li>
 <p>示例：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;include&quot;:[    &quot;src/**/*&quot;,     &quot;tests/**/*&quot;]// &quot;**&quot;表示任意目录，“*”表示任意文件</span><br></pre></td></tr></table></figure>
-<ul>
-<li>上述示例中，所有src目录和tests目录下的文件都会被编译</li>
-</ul>
-</li>
-</ul>
+<p>上述示例中，所有src目录和tests目录下的文件都会被编译</p>
 <h5 id="exclude"><strong>exclude</strong></h5>
-<ul>
-<li>
 <p>定义需要排除在外的目录</p>
-</li>
-<li>
 <p>默认值：[“node_modules”, “bower_components”, “jspm_packages”]</p>
-</li>
-<li>
 <p>示例：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;exclude&quot;: [&quot;./src/hello/**/*&quot;]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>上述示例中，src下hello目录下的文件都不会被编译</li>
-</ul>
-</li>
-</ul>
+<p>上述示例中，src下hello目录下的文件都不会被编译</p>
 <h5 id="extends"><strong>extends</strong></h5>
-<ul>
-<li>
 <p>定义被继承的配置文件</p>
-</li>
-<li>
 <p>示例：</p>
-<ul>
-<li>
-<pre><code class="language-json">&quot;extends&quot;: &quot;./configs/base&quot;
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 上述示例中，当前配置文件中会自动包含config目录下**base.json**中的所有配置信息</span><br><span class="line"></span><br><span class="line">##### **files**</span><br><span class="line"></span><br><span class="line">- 指定被编译文件的列表，只有需要编译的文件少时才会用到</span><br><span class="line"></span><br><span class="line">- 示例：</span><br><span class="line"></span><br><span class="line">  - ```json</span><br><span class="line">    <span class="string">&quot;files&quot;</span>: [    <span class="string">&quot;core.ts&quot;</span>,    <span class="string">&quot;sys.ts&quot;</span>,    <span class="string">&quot;types.ts&quot;</span>,    <span class="string">&quot;scanner.ts&quot;</span>,    <span class="string">&quot;parser.ts&quot;</span>,    <span class="string">&quot;utilities.ts&quot;</span>,    <span class="string">&quot;binder.ts&quot;</span>,    <span class="string">&quot;checker.ts&quot;</span>,    <span class="string">&quot;tsc.ts&quot;</span>  ]</span><br></pre></td></tr></table></figure>
-
-</code></pre>
-</li>
-<li>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;extends&quot;: &quot;./configs/base&quot;</span><br></pre></td></tr></table></figure>
+<p>上述示例中，当前配置文件中会自动包含config目录下<strong>base.json</strong>中的所有配置信息</p>
+<h5 id="files"><strong>files</strong></h5>
+<p>指定被编译文件的列表，只有需要编译的文件少时才会用到</p>
+<p>示例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;files&quot;: [    &quot;core.ts&quot;,    &quot;sys.ts&quot;,    &quot;types.ts&quot;,    &quot;scanner.ts&quot;,    &quot;parser.ts&quot;,    &quot;utilities.ts&quot;,    &quot;binder.ts&quot;,    &quot;checker.ts&quot;,    &quot;tsc.ts&quot;  ]</span><br></pre></td></tr></table></figure>
 <p>列表中的文件都会被TS编译器所编译</p>
-</li>
-</ul>
-</li>
-</ul>
 <h5 id="compilerOptions"><strong>compilerOptions</strong></h5>
 <ul>
 <li>
@@ -1555,7 +1489,7 @@ notSure = 'hello';
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">第一章 快速入门</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#0%E3%80%81TypeScript%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">0、TypeScript简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81TypeScript-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1、TypeScript 开发环境搭建</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">2、基本类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E"><span class="toc-nav-number">1.3.0.1.</span> <span class="toc-nav-text">类型声明</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD"><span class="toc-nav-number">1.3.0.2.</span> <span class="toc-nav-text">自动类型判断</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-nav-number">1.3.0.3.</span> <span class="toc-nav-text">类型：</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">3、编译选项</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91%E6%96%87%E4%BB%B6"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">自动编译文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">自动编译整个项目</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9"><span class="toc-nav-number">1.4.2.1.</span> <span class="toc-nav-text">配置选项</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#include"><span class="toc-nav-number">1.4.2.1.1.</span> <span class="toc-nav-text">include</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#exclude"><span class="toc-nav-number">1.4.2.1.2.</span> <span class="toc-nav-text">exclude</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#extends"><span class="toc-nav-number">1.4.2.1.3.</span> <span class="toc-nav-text">extends</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#compilerOptions"><span class="toc-nav-number">1.4.2.1.4.</span> <span class="toc-nav-text">compilerOptions</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9"><span class="toc-nav-number">1.4.2.1.4.1.</span> <span class="toc-nav-text">项目选项</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81webpack"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">4、webpack</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5%E3%80%81Babel"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">5、Babel</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">第二章：面向对象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E7%B1%BB%EF%BC%88class%EF%BC%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、类（class）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、面向对象的特点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-nav-number">2.2.0.1.</span> <span class="toc-nav-text">封装</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-nav-number">2.2.0.2.</span> <span class="toc-nav-text">继承</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%87%8D%E5%86%99"><span class="toc-nav-number">2.2.0.3.</span> <span class="toc-nav-text">重写</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81%E6%8E%A5%E5%8F%A3%EF%BC%88Interface%EF%BC%89"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3、接口（Interface）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81%E6%B3%9B%E5%9E%8B%EF%BC%88Generic%EF%BC%89"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">4、泛型（Generic）</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">第一章 快速入门</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#0%E3%80%81TypeScript%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">0、TypeScript简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81TypeScript-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1、TypeScript 开发环境搭建</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">2、基本类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E"><span class="toc-nav-number">1.3.0.1.</span> <span class="toc-nav-text">类型声明</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD"><span class="toc-nav-number">1.3.0.2.</span> <span class="toc-nav-text">自动类型判断</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-nav-number">1.3.0.3.</span> <span class="toc-nav-text">类型：</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">3、编译选项</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91%E6%96%87%E4%BB%B6"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">自动编译文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">自动编译整个项目</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9"><span class="toc-nav-number">1.4.2.1.</span> <span class="toc-nav-text">配置选项</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#include"><span class="toc-nav-number">1.4.2.1.1.</span> <span class="toc-nav-text">include</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#exclude"><span class="toc-nav-number">1.4.2.1.2.</span> <span class="toc-nav-text">exclude</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#extends"><span class="toc-nav-number">1.4.2.1.3.</span> <span class="toc-nav-text">extends</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#files"><span class="toc-nav-number">1.4.2.1.4.</span> <span class="toc-nav-text">files</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#compilerOptions"><span class="toc-nav-number">1.4.2.1.5.</span> <span class="toc-nav-text">compilerOptions</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E9%80%89%E9%A1%B9"><span class="toc-nav-number">1.4.2.1.5.1.</span> <span class="toc-nav-text">项目选项</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81webpack"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">4、webpack</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5%E3%80%81Babel"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">5、Babel</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">第二章：面向对象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E7%B1%BB%EF%BC%88class%EF%BC%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、类（class）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、面向对象的特点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-nav-number">2.2.0.1.</span> <span class="toc-nav-text">封装</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-nav-number">2.2.0.2.</span> <span class="toc-nav-text">继承</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%87%8D%E5%86%99"><span class="toc-nav-number">2.2.0.3.</span> <span class="toc-nav-text">重写</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81%E6%8E%A5%E5%8F%A3%EF%BC%88Interface%EF%BC%89"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3、接口（Interface）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81%E6%B3%9B%E5%9E%8B%EF%BC%88Generic%EF%BC%89"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">4、泛型（Generic）</span></a></li></ol></li></ol>
         
         </div>
       </aside>

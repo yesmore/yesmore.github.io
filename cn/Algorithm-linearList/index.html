@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -471,10 +471,10 @@
 
         <p>要点：线性表知识点汇总</p>
 <span id="more"></span>
-<p><img src="/images/algorithm7.png" alt="1"></p>
+<p><img src="algorithm7.png" alt="1"></p>
 <h3 id="一、线性表的定义">一、线性表的定义</h3>
 <p>由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。</p>
-<p><img src="/images/algorithm8.png" alt="2"></p>
+<p><img src="algorithm8.png" alt="2"></p>
 <h3 id="二、线性表的特点">二、线性表的特点</h3>
 <p>1、线性表中元素的个数<code>n(n≥O)</code>定义为线性表的长度，<code>n=O</code>时称为空表。</p>
 <p>2、将非空的线性表(n&gt;O)记作(a1，a2，a3，…，an)；</p>
@@ -491,7 +491,7 @@
 <h4 id="3-1-定义">3.1 定义</h4>
 <p>是用一段<strong>地址连续的存储单元依次存储</strong>线性表的<strong>数据元</strong></p>
 <h4 id="3-2-顺序存储示意图如下所示">3.2 顺序存储示意图如下所示</h4>
-<p><img src="/images/algorithm5.png" alt="3"></p>
+<p><img src="algorithm5.png" alt="3"></p>
 <h4 id="3-3-编号地址">3.3 编号地址</h4>
 <p><strong>存储器中的每个存储单元都有自己的编号，这个编号称为地址</strong></p>
 <h4 id="3-4-存储位置公式">3.4 存储位置公式</h4>
@@ -500,7 +500,7 @@
 <p>$LOC(a_i) = LOC(a_1) + (i - 1) * c$</p>
 <h4 id="3-5-存取操作时间性能">3.5 存取操作时间性能</h4>
 <p>上述推导公式具体内容如下图所示:</p>
-<p><img src="/images/algorithm9.png" alt="4"></p>
+<p><img src="algorithm9.png" alt="4"></p>
 <p>通过该公式，就可以<strong>随时算出</strong>线性表中<strong>任意位置的地址</strong>；</p>
 <p>不管是第一个还是最后一个，都是相同的时间，<strong>也即</strong>对于线性表<strong>每个位置</strong>的<strong>存入或者取出数据</strong>，对于计算机来说<strong>都是相等的时间</strong>，也就是一个<strong>常数时间</strong>。</p>
 <p>因此，线性表的<strong>存取操作时间性能</strong>为 $O(1)$</p>
@@ -529,14 +529,14 @@
 <p>指针域：存储<strong>下一个</strong>结点的<strong>地址（指针）</strong></p>
 </li>
 </ul>
-<p><img src="/images/algorithm10.png" alt="5"></p>
+<p><img src="algorithm10.png" alt="5"></p>
 <h4 id="4-3-头指针-头结点">4.3 头指针&amp;头结点</h4>
 <p><strong>头结点的数据</strong>域<strong>可以不存储任何信息</strong>，其指针域存储<strong>指向</strong>第一个结点的指针（<strong>即指向头指针</strong>）</p>
 <h5 id="头指针">头指针</h5>
 <p>一般把<strong>链表</strong>中的<strong>第一个结</strong>点称为 <strong>头指针</strong>，其<strong>存储</strong>链表的<strong>第一个数据元素</strong></p>
 <h5 id="头结点">头结点</h5>
 <p>为了能更加方便地对链表进行操作，会在<strong>单链表的第一个结点（即头指针）前</strong>附<strong>设一个结点</strong>，称为 <strong>头结点</strong></p>
-<p><img src="/images/algorithm11.png" alt="6"></p>
+<p><img src="algorithm11.png" alt="6"></p>
 <h4 id="4-4-单链表">4.4 单链表</h4>
 <p>在<strong>线性表的顺序存储结构</strong>（即数组）中，其任意一个元素的存储位置可以通过计算得到，因此其数据读取的<strong>时间复杂度为</strong> $O(1)$</p>
 <h5 id="单链表的时间复杂度">单链表的时间复杂度</h5>

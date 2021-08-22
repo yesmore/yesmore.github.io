@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -474,9 +474,9 @@
 <h3 id="一、概览">一、概览</h3>
 <h4 id="1-1-Why-Web-安全？">1.1 Why Web 安全？</h4>
 <p>随着时代的发展，如今无论是国家还是企业，都十分重视网络安全，各种相关的岗位也随之出现。在拉勾网上搜“Web 安全”就能找到相关的岗位。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0C/Cip5yF_ZrimAa4buAAGDyX9tPm4751.png" alt="招聘信息来源拉勾网" data-nodeid="6336">
+<img src="Cip5yF_ZrimAa4buAAGDyX9tPm4751.png" alt="招聘信息来源拉勾网" data-nodeid="6336">
 <p>根据 HackerOne 的报告数据（下图），71％ 的安全问题都出现在网站上，其次是一些 API 接口，这些接口可能是 Web 的，也有可能是二进制软件的；再往下就是 iOS 与 Android 应用了。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/C7/Cip5yF_a9iqAG5wmAAEiks_na48436.png" alt="HackerOne 的报告数据" data-nodeid="6340">
+<img src="Cip5yF_a9iqAG5wmAAEiks_na48436.png" alt="HackerOne 的报告数据" data-nodeid="6340">
 <p>可以说，网站安全攻防，也就是我们俗称的 Web 安全，占比通常达到了 80％以上。<strong>Web 安全是最受外部黑客关注的目标，也是企业应该重点防御的对象</strong></p>
 <p>尽管 Web 安全如此重要，但我在面试一些渗透测试岗位的<strong>求职者</strong>时，发现多数人要么<strong>只懂得利用，不懂得防御</strong>，要么就是<strong data-nodeid="6365">缺乏实战能力</strong>。</p>
 <p>企业你是想让你来发现和解决安全问题的，如果不懂防御，又如何为企业提供相应的解决方案呢？更何况 Web 安全是一项注重实战的技能，如果缺乏实战能力，到了真被入侵的时候，根本就无法应对。</p>
@@ -492,18 +492,18 @@
 <h4 id="1-3-How-学习web渗透技术">1.3 How 学习web渗透技术</h4>
 <h5 id="Web-所涉及的内容">Web 所涉及的内容</h5>
 <p>一般来说，我们常说的 Web 是指网站，其本义是万维网。这个实际涵盖的内容就很多了，涉及<u>浏览器、服务器运行环境等常出现内存破坏漏洞的应用和系统</u>。但是在安全行业内，我们通常所说的 Web 安全，是指 Web 应用安全，即<u>网站安全，也包含仅提供后端 CGI 服务的应用（供移动 App 调用的，无直接的前端网页），可以简单地分为前端和后端</u>，如下图所示：</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/39/CgqCHl_Zr5-ATUhRAAMpS6Rf1Ck851.png" alt="图片1.png" data-nodeid="9229">
+<img src="CgqCHl_Zr5-ATUhRAAMpS6Rf1Ck851.png" alt="图片1.png" data-nodeid="9229">
 <p>平常行业内所说的二进制安全，通常是指<u>内存破坏漏洞、逆向工程、病毒对抗</u>等涉及二进制数据分析的技术领域。虽然浏览器、Linux 系统等也是 Web 领域中的一个环节，但本课程不涉及二进制安全内容，仍以狭义上的网站安全为主要内容。<br>
 在学习 Web 安全的过程中，有 3 个阶段。</p>
 <h4 id="1-4-三个阶段">1.4 三个阶段</h4>
 <h5 id="阶段一：前端知识学习">阶段一：前端知识学习</h5>
 <p>前端开发主要就是 HTML、CSS、JavaScript 这 3 门语言的学习。在学习前，建议先了解下 HTTP 相关的知识，掌握它的工作原理、请求方法、响应头、状态码、内容类型等等</p>
 <p>学完之后，直接用 Chrome 浏览器的检查器（快捷键 F12 或 Ctrl+Shift+I）里的“Network”标签查看 HTTP 请求与响应包数据，如下图所示：</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0C/Cip5yF_Zr76AWiNtAAQSZ-8_J_I002.png" alt="Chrome 浏览器的 HTTP 请求与响应包数据g" data-nodeid="9247">
+<img src="Cip5yF_Zr76AWiNtAAQSZ-8_J_I002.png" alt="Chrome 浏览器的 HTTP 请求与响应包数据g" data-nodeid="9247">
 <h5 id="阶段二：后端知识学习">阶段二：后端知识学习</h5>
 <p>随着 Node.js 的崛起，很多后端也开始用前端语言 JavaScript 来开发后端功能。Node.js 基于 Chrome V8 提供的 JavaScript 运行环境，非常适合前端工程师作为进军后端开发的阶梯。关于 Node.js 教程的链接在文末的“其他资料”一节中已附上。<br>
 更为传统的后端开发经常是搭配 PHP+MySQL 数据库。以下是 2020 年 W3Tech 对当前 Web 开发技术的调查情况，其结果表明全球 78.8% 的网站使用 PHP 作为服务器后端开发语言。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0D/CgpVE1_Zr9CANWyzAAU-P_qrIcA458.png" alt="2020 年 W3Tech 对当前 Web 开发技术的调查情况" data-nodeid="9288">
+<img src="CgpVE1_Zr9CANWyzAAU-P_qrIcA458.png" alt="2020 年 W3Tech 对当前 Web 开发技术的调查情况" data-nodeid="9288">
 <h5 id="阶段三：漏洞攻防学习">阶段三：漏洞攻防学习</h5>
 <p>Web 漏洞包含哪一些主流的漏洞类型，最佳的参考就是 OWASP Top 10，不过它在 2017 年之后就停止更新维护了。以下是当前的官方统计结果，按顺序排名。</p>
 <ol>
@@ -543,7 +543,7 @@
 </blockquote>
 <h4 id="1-5-学习技巧">1.5 学习技巧</h4>
 <h5 id="面向岗位学习">面向岗位学习</h5>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0D/CgpVE1_Zr-WAMAhNAAFcqtWjIv0666.png" alt="招聘信息">
+<img src="CgpVE1_Zr-WAMAhNAAFcqtWjIv0666.png" alt="招聘信息">
 <p>关键在于“任职要求”，一般招聘信息里面都会有“职位描述”和“任职要求”或“岗位要求”的信息，“任职要求”里面与技术相关要求就是你要学习的方向。比如上图 360 的招聘信息，总结下技术要求就是：<strong>熟悉 Web 漏洞攻防、工具实战、开发能力</strong>。</p>
 <h5 id="面向赏金学习">面向赏金学习</h5>
 <p>当前国内 SRC（安全响应中心）平台早已是企业标配，各家各户有能力的都在自建，没能力没条件的就寄托在第三方漏洞平台上。无论是自建的还是寄托在第三方漏洞平台上的，它们的目的只有一个，那就是收集自家产品漏洞，提高产品安全性，完善自身检测与防御系统，同时避免被公关炒作。<br>
@@ -559,9 +559,9 @@ SRC 平台会给报告者提供奖品或现金奖励，因此长期吸引着大�
 <p>在国外有词叫 Variant Analysis，直译过来叫“变异分析”，意思是通过历史漏洞学习和研究，从而挖掘出类似产品中更多相似的漏洞。尤其是同一款产品下，如果开发写出了一个漏洞，那么在其他地方出现同一类漏洞的概率就比较大。<br>
 乌云网已经成为历史，但其遗留下的漏洞案例是一笔不错的财富。网上也有人搭建了乌云镜像提供相关的漏洞、知识库的检索，你可以点击链接查看。<br>
 HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名叫“Hacktivity”，它提供 RSS 订阅，可以非常方便地关注。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/2E/Ciqc1F_ZsIyAXEQjAANXYn70e8c897.png" alt="图片5.png" data-nodeid="9438">
+<img src="Ciqc1F_ZsIyAXEQjAANXYn70e8c897.png" alt="图片5.png" data-nodeid="9438">
 <p>说到漏洞库就不得不提 Exploit-db，其中有着丰富的漏洞细节和利用代码。2014 年那时还是一个叫 milw00rm 的漏洞库为主流，milw00rm 不再维护后，所有漏洞信息都被并入了 Exploit-db。至今，Exploit-db 还在正常运营，其背后的团队正是打造了著名黑客系统 Kali 的 Offensive-Security 安全公司，是一家专门从事安全培训和渗透测试服务的提供商。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0C/Cip5yF_ZsJiAAv-dAASNGdT-lWY809.png" alt="Exploit-db" data-nodeid="9442">
+<img src="Cip5yF_ZsJiAAv-dAASNGdT-lWY809.png" alt="Exploit-db" data-nodeid="9442">
 <p>这种通过漏洞学习漏洞的方式，除了加深对漏洞的理解，还可以提高漏洞挖掘的产出，是一种十分有效地学习方式。</p>
 <h5 id="面向大牛学习">面向大牛学习</h5>
 <p>在你感兴趣的安全领域里，通常都有一些大牛，你可以去收集他们发表的论文、文章、大会议题，关注他们的微博、公众号、Twitter、GitHub、博客等社交平台账号，去了解他们的技术成长路线。<br>
@@ -659,44 +659,44 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 <p>Burp Suite：集成化的 Web 应用测试工具</p>
 <p>使用 Burp Suite 前需要配置浏览器代理，这样才能将 HTTP/HTTPS 请求转发到 Burp Suite 上进行分析与测试</p>
 <p>在 Chrome 的设置中搜索“代理”会让你选择“打开您计算机的代理设置”，如下图所示：</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0D/Cip5yF_ZsVeACMEcAAIScM5BkEE861.png" alt="Chrome 代理设置" data-nodeid="1758">
+<img src="Cip5yF_ZsVeACMEcAAIScM5BkEE861.png" alt="Chrome 代理设置" data-nodeid="1758">
 <p>打开之后你就可以设置 HTTP/HTTPS 代理为 Burp Suite 的对应端口，默认为 127.0.0.1:8080。下面两张图分别是系统和 Burp Suite 上的代理设置页面：</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0D/Cip5yF_ZsWiAZ9iGAACtiDp2x7A093.png" alt="系统代理设置页面" data-nodeid="1762">
-<img src="https://s0.lgstatic.com/i/image/M00/8A/2F/Ciqc1F_ZsXSAHU-wAAA9V42FWPM054.png" alt="Burp Suite 代理设置页面" data-nodeid="1765">
+<img src="Cip5yF_ZsWiAZ9iGAACtiDp2x7A093.png" alt="系统代理设置页面" data-nodeid="1762">
+<img src="Ciqc1F_ZsXSAHU-wAAA9V42FWPM054.png" alt="Burp Suite 代理设置页面" data-nodeid="1765">
 <p>如果每次使用都要进行这样的配置代理其实还挺麻烦的，毕竟有时也得正常地使用浏览器上网。我在这里推荐个小技巧：你可以使用 Chrome 上的插件“<strong data-nodeid="1771">Proxy SwitchyOmega</strong>”来快速切换代理，如果你用的是 FireFox，那可以使用 FoxyProxy 插件。</p>
 <p>在 Chrome 应用商店中搜索“Proxy SwitchyOmega”并安装它，然后像下图这样配置：</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3A/CgqCHl_ZsX2ANrS4AAEIEgIoD68852.png" alt="Proxy SwitchyOmega 配置" data-nodeid="1775">
+<img src="CgqCHl_ZsX2ANrS4AAEIEgIoD68852.png" alt="Proxy SwitchyOmega 配置" data-nodeid="1775">
 <p>配置完成后你就可以在 Chrome 浏览器右上角的插件栏中点击“Proxy SwitchyOmega”插件图标，选择上面创建的“Burp Suite”情景模式开启代理，若想关闭代理直接选择“系统代理”即可。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0D/Cip5yF_ZsZWAONnTAALKGIyBcc4584.png" alt="Proxy SwitchyOmega 快速代理展示" data-nodeid="1779">
+<img src="Cip5yF_ZsZWAONnTAALKGIyBcc4584.png" alt="Proxy SwitchyOmega 快速代理展示" data-nodeid="1779">
 <p>下图是代理成功后，Burp Suite 拦截到流量的效果图：</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0E/Cip5yF_ZsaKAVGGeAAJbFdx82DU937.png" alt="Burp Suite 代理成功" data-nodeid="1783">
+<img src="Cip5yF_ZsaKAVGGeAAJbFdx82DU937.png" alt="Burp Suite 代理成功" data-nodeid="1783">
 <p>其他更详细的 Burp Suite 功能，你可以参考<a target="_blank" rel="noopener" href="https://portswigger.net/burp/documentation/contents" data-nodeid="1787">Burp Suite Document</a>和<a target="_blank" rel="noopener" href="https://t0data.gitbooks.io/burpsuite/content/" data-nodeid="1791">Burp Suite 实战指南</a>这两份资料学习，此处不再展开。</p>
 <h4 id="Acunetix-WVS">Acunetix WVS</h4>
 <p>Acunetix WVS（Web Vulnerability Scanner）是 Web 漏洞扫描器。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3B/CgqCHl_ZscGAeTzSAAIginYu50Q791.png" alt="Acunetix WVS" data-nodeid="1797">
+<img src="CgqCHl_ZscGAeTzSAAIginYu50Q791.png" alt="Acunetix WVS" data-nodeid="1797">
 <p><strong data-nodeid="1802">WVS 支持登录态扫描，可以登录账号访问需要权限的页面，从而爬取更多 URL，提高漏洞发现率</strong>。这个功能很重要，有些网页的功能全都要求登录，如果没有这一步设置，你什么也扫不到。不过现在很多扫描器也支持登录态扫描了。</p>
 <h4 id="Xray">Xray</h4>
 <p>Xray：Web 漏洞扫描器</p>
 <p>随着 WVS 的没落，国内的长亭科技出了一款叫作 Xray 的漏洞扫描器，现在国内不少白帽子开始使用它。他们会自己开发一些自动化工具去爬虫，然后导入地址到 WVS 和 Xray 扫描（参考资料：<a target="_blank" rel="noopener" href="https://github.com/ox01024/Xray_and_crwlergo_in_server" data-nodeid="1821">Xray_and_crwlergo_in_serve</a>、<a target="_blank" rel="noopener" href="https://github.com/timwhitez/crawlergo_x_XRAY" data-nodeid="1829">crawlergo_x_XRAY</a>），在扫到漏洞后，微信会自动通知。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0E/Cip5yF_Zsc6AaAIpAADD4PGQU64235.png" alt="Xray">
+<img src="Cip5yF_Zsc6AaAIpAADD4PGQU64235.png" alt="Xray">
 <p><strong data-nodeid="1839">Xray 的准确率要比 WVS 高，但漏洞发现率不是很高</strong>，经常扫完后报告是空的，而且 Xray 的扫描速度很慢，还有一定优化的空间。</p>
 <h4 id="Goby">Goby</h4>
 <p>Goby：基于网络空间测绘的漏洞扫描器。</p>
 <p>Goby 是一款国内新出的安全扫描器，它基于网络空间测绘技术进行资产收集，也就是先通过对目标网络的 IT 资产进行规则分析，建立知识库，在发生安全事件时就能直接用于应急响应，这项功能比较适合企业内部。Goby 属于免费的工具，且跨平台支持 Windows、Linux 和 macOS，界面不错，还提供了多个皮肤。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0E/Cip5yF_ZsduADxmJAAQFbh7gdPE888.png" alt="Goby" data-nodeid="1844">
+<img src="Cip5yF_ZsduADxmJAAQFbh7gdPE888.png" alt="Goby" data-nodeid="1844">
 <p><strong data-nodeid="1853">Goby 有个比较实用的功能，那就是支持自定义规则的漏洞扫描框架</strong>。它本身也会收集一些产品的 PoC（概念证明，常被用于验证是否存在漏洞，如下图所示），同时在外部曝光或自主挖掘到漏洞时，借助该框架添加规则，可以快速去扫描相关资产是否存在漏洞，<strong data-nodeid="1854">对于企业应急和个人刷 SRC 平台漏洞是一个神器</strong>。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0E/Cip5yF_ZseWAdqgJAAGCxqkdD48418.png" alt="Goby 收集的 PoC" data-nodeid="1857">
+<img src="Cip5yF_ZseWAdqgJAAGCxqkdD48418.png" alt="Goby 收集的 PoC" data-nodeid="1857">
 <p>Goby 的使用可以参考<a target="_blank" rel="noopener" href="https://cn.gobies.org/docs.html?v=1" data-nodeid="1861">官方文档</a>中的内容。</p>
 <h4 id="SQLMap">SQLMap</h4>
 <p>SQLMap：SQL 注入检测与利用</p>
 <p>SQLMap 无疑是 SQL 注入工具中的王者。在 SQL 注入漏洞检测与利用上，SQLMap 提供了非常全面的功能，哪怕是一些漏洞无法检测到，许多白帽子仍习惯在上面做二次开发，或者利用 tamper 脚本来扩展。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3B/CgqCHl_ZsfSAc3xqAAlj1Wt1MjA788.png" alt="SQLMap">
+<img src="CgqCHl_ZsfSAc3xqAAlj1Wt1MjA788.png" alt="SQLMap">
 <p>后面将会使用此工具学习。详细的使用方法可以从<a target="_blank" rel="noopener" href="http://sqlmap.org/" data-nodeid="1875">官网</a>了解。</p>
 <h4 id="Nmap">Nmap</h4>
 <p>Nmap：网络扫描与主机检测。</p>
 <p>Nmap 有界面版本和命令行版本</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3B/CgqCHl_ZsgKARmaVAAIlxL9iyXY234.png" alt="Nmap 界面版本" data-nodeid="1881">
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3B/CgqCHl_ZshKAJg3QAAgAnpqJC2Y626.png" alt="Nmap 命令行版本" data-nodeid="1884">
+<img src="CgqCHl_ZsgKARmaVAAIlxL9iyXY234.png" alt="Nmap 界面版本" data-nodeid="1881">
+<img src="CgqCHl_ZshKAJg3QAAgAnpqJC2Y626.png" alt="Nmap 命令行版本" data-nodeid="1884">
 <p>很多人只知道 Nmap 可用于端口扫描和主机服务识别，但实际上它远不止如此。Nmap 提供的丰富脚本，大大扩展了它的功能，它可以探测弱口令，甚至是漏洞扫描。Nmap 的功能十分强大，需要你慢慢探索。</p>
 <p>关于 Nmap 详细的使用说明，你可以参考<a target="_blank" rel="noopener" href="https://nmap.org/book/toc.html" data-nodeid="1889">官方文档</a></p>
 <p>在“信息收集”一节中，会使用nmap。</p>
@@ -704,16 +704,16 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 <p>Postman：模拟发包工具</p>
 <p>虽然 Burp Suite 功能强大，但有时会觉得开启代理麻烦，对于能在浏览器上直接完成的，一般都不开 Burp Suite 操作。</p>
 <p>Chrome 上自带的开发者工具可以直接抓包查看：通过在网页右击，选择“检查”即可打开；然后切换到“Network”标签页，操作网页后即可获取到网络请求包，但它不支持拦截修改请求包。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/30/Ciqc1F_ZshyALB-qAAGumg9CRg0315.png" alt="Chrome 抓包" data-nodeid="1896">
+<img src="Ciqc1F_ZshyALB-qAAGumg9CRg0315.png" alt="Chrome 抓包" data-nodeid="1896">
 <p><strong data-nodeid="1901">如果你想直接构造请求去发包，或者用来测试一些网络接口的调用，那使用 Postman 再适合不过了</strong>。安装完 Postman 后，通过 Chrome 标签栏的“应用”即可打开 Postman。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/30/Ciqc1F_ZsiaAL7vJAADOYBSf2OE763.png" alt="Chrome “应用”标签" data-nodeid="1904">
-<img src="https://s0.lgstatic.com/i/image/M00/8A/30/Ciqc1F_ZsjGAYczeAAXvGuO1mGE366.png" alt="Postman" data-nodeid="1907">
+<img src="Ciqc1F_ZsiaAL7vJAADOYBSf2OE763.png" alt="Chrome “应用”标签" data-nodeid="1904">
+<img src="Ciqc1F_ZsjGAYczeAAXvGuO1mGE366.png" alt="Postman" data-nodeid="1907">
 <p>Postman 也支持网络拦截来修改数据包重发，但需要另外安装个插件“Postman Interceptor”，我感觉没有 Burp Suite 来得好用和强大，因此我很少用它。关于 Postman 更多的使用方法，可以参考<a target="_blank" rel="noopener" href="https://learning.postman.com/docs/getting-started/introduction/" data-nodeid="1911">官方文档</a></p>
 <p>对于 Postman 与 Burp Suite，<strong data-nodeid="1926">轻量操作可以选择 Postman</strong>，比如单纯发包测试接口，又懒得配置代理的操作；<strong data-nodeid="1927">如果你需要更多安全测试方面的功能</strong>，比如改包、批量发包测试用来暴力猜解密码或遍历信息，<strong data-nodeid="1928">那么 Burp Suite 无疑是最佳的选择</strong>。</p>
 <h4 id="HackBar">HackBar</h4>
 <p>HackBar：安全测试插件</p>
 <p>HackBar 是一款非常经典的 Web 安全测试插件，最早出现在 FireFox 浏览器中，后来也被移植到了 Chrome。它可以用来构造 GET/POST 请求，自带一些编码解码工具，以及 XSS 和 SQL 注入常用测试用例，能为你在实际测试中提供很大的便利。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0E/Cip5yF_ZskSAMLsBAAFVySz_ctA678.png" alt="HackBar" data-nodeid="1933">
+<img src="Cip5yF_ZskSAMLsBAAFVySz_ctA678.png" alt="HackBar" data-nodeid="1933">
 <p>HackBar 的功能跟 Postman 有些类似，都是用来模拟发包的工具，<strong data-nodeid="1939">但 HackBar 显然是为专业的安全人员开发的，而 Postman 虽然有很多开发在用，但常被用来测试一些网络 API 接口</strong>。</p>
 <p>HackBar 使用非常简单，正如它简洁的界面一样，所有的功能都可以很快上手，用几次基本就熟练了。无论是 HackBar 还是 Postman，你都可以试一下，选择自己顺手的工具即可。不管什么工具，能够帮助你挖到漏洞的都是好工具。</p>
 <h4 id="NC（NetCat）">NC（NetCat）</h4>
@@ -724,12 +724,12 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 <li><strong data-nodeid="1952">发包测试</strong>，有时请求包内容较多，可以放在一个文件里面直接提交（不局限 http/https 这种请求），其他任意端口都支持，所以它要比 postman 和 hackbar 这些发包工具的应用范围要广。</li>
 </ul>
 <p>除此之外 NC 还有其他功能，比如端口扫描、作为代理来端口转发数据，甚至可以在两台主机之间搭建起聊天室。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0F/CgpVE1_ZsmOAJ1y7AADZnpy2HvE117.png" alt="NC" data-nodeid="1956">
+<img src="CgpVE1_ZsmOAJ1y7AADZnpy2HvE117.png" alt="NC" data-nodeid="1956">
 <p>更多 NC 命令参数的使用，可以通过 man nc 命令来查看。</p>
 <h4 id="Metasploit">Metasploit</h4>
 <p>Metasploit：渗透测试平台</p>
 <p>Metasploit 在渗透测试中经常被使用到，它不是一个单纯的工具，而是一个集成各种渗透测试工具的平台，上面有很多漏洞利用工具，还有免杀处理、后门生成与留存、远程控制等很多强大的功能。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0F/CgpVE1_ZsnGAdzeMAADU1Q17564791.png" alt="Metasploit" data-nodeid="1962">
+<img src="CgpVE1_ZsnGAdzeMAADU1Q17564791.png" alt="Metasploit" data-nodeid="1962">
 <p><strong data-nodeid="1968">Metasploit 在主机渗透，甚至是当前移动手机上的渗透测试都可以使用</strong>，所以这里我非常推荐你去好好研究一下 Metasploit 平台的应用。</p>
 <p>国内外已经出版了很多本关于 Metasploit 的书籍，你也可以直接阅读<a target="_blank" rel="noopener" href="https://docs.rapid7.com/metasploit/" data-nodeid="1972">官方文档</a>。</p>
 <h3 id="三、信息收集">三、信息收集</h3>
@@ -750,13 +750,13 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 <p>在功能上非常集全，使用字典爆破、证书透明度、常规检查（域传递、sitemap 文件、robts 文件、内容安全策略 csp 等）、网络爬虫、DNS 数据集、DNS 查询、威胁情报平台、搜索引擎等多种方式，也支持多种文件格式导出。OneForAll 收集到的有效域名很多，但经常会有误报，速度也相对比较慢。</p>
 <p>使用示例如下：</p>
 <p><code>python3 oneforall.py --target lagou.com run</code></p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0F/CgpVE1_Zs8GACtELAAPLVt3Jvzo273.png" alt="OneForAll" data-nodeid="15548">
+<img src="CgpVE1_Zs8GACtELAAPLVt3Jvzo273.png" alt="OneForAll" data-nodeid="15548">
 <h5 id="subDomainsBrute">subDomainsBrute</h5>
 <p>采用暴力猜解域名的方式，速度快、准确度高。但由于是字典猜解方式，仍会存在一定的漏报。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0E/Cip5yF_Zs8mAA8mZAABmufeGtgo263.png" alt="subDomainsBrute 运行效果图" data-nodeid="15555">
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3B/CgqCHl_Zs9CAAyGNAAGHTTFk6E8801.png" alt="subDomainsBrute 爬取的域名结果图" data-nodeid="15558">
+<img src="Cip5yF_Zs8mAA8mZAABmufeGtgo263.png" alt="subDomainsBrute 运行效果图" data-nodeid="15555">
+<img src="CgqCHl_Zs9CAAyGNAAGHTTFk6E8801.png" alt="subDomainsBrute 爬取的域名结果图" data-nodeid="15558">
 <p>同一域名有时会有指向多个 IP 地址情况，因为企业可能采用 CDN 内容分发网络，就近选择网络最好的节点服务器响应用户。因此，有时同一台机器访问同一个域名时，会访问到不同的 IP，比如 <a target="_blank" rel="noopener" href="http://weixin.lagou.com">weixin.lagou.com</a> 就是如此。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/30/Ciqc1F_Zs9iAPsGyAAEeKOg3y5k105.png" alt="同一个域名的不同 IP" data-nodeid="15562">
+<img src="Ciqc1F_Zs9iAPsGyAAEeKOg3y5k105.png" alt="同一个域名的不同 IP" data-nodeid="15562">
 <p>subDomainsBrute 也会将同一域名指向的多个 IP 一并收集起来，但如果超过 10 个 IP 就会放弃收集。</p>
 <p>使用示例如下：<br>
 <code>python3 subDomainsBrute.py lagou.com</code></p>
@@ -764,24 +764,24 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 <p>subfinder 的扫描速度很快，它支持很多第三方 API 接口（需要配置），同时支持多种输出格式，但 subfinder 没有字典爆破域名的功能。</p>
 <p>使用示例如下：<br>
 <code>subfinder -d lagou.com</code></p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/30/Ciqc1F_Zs-yAEoFuAADD99-z4Ik735.png" alt="subfinder" data-nodeid="15572">
+<img src="Ciqc1F_Zs-yAEoFuAADD99-z4Ik735.png" alt="subfinder" data-nodeid="15572">
 <h5 id="ESD">ESD</h5>
 <p>ESD支持域名爆破、DNS 解析、域传递、搜索引擎、证书透明度等多种搜索方式，还支持 zoomeye、censys、fofa、shodan 等网络空间搜索引擎的接口结果收集，这个需要在配置文件中设置 key 或者账密才能使用。</p>
 <p>使用示例如下：<br>
 <code>esd -d lagou.com</code></p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/30/Ciqc1F_Zs_iABcOrAALV9jkN3Zo313.png" alt="Drawing 5.png" data-nodeid="15581">
+<img src="Ciqc1F_Zs_iABcOrAALV9jkN3Zo313.png" alt="Drawing 5.png" data-nodeid="15581">
 <h5 id="Amass">Amass</h5>
 <p>Amass是一款 OWASP 出口的资产搜索工具，除了常规的域名收集方式，它还支持搜索结果可视化，并能从很多网站和 API 收集子域名。另外，它提供了一套类似 Nmap 的脚本引擎，支持用户自定义数据源以扩展搜索范围。它的扫描速度非常慢，但能够收集到非常多的子域名信息。</p>
 <p>以 <a target="_blank" rel="noopener" href="http://lagou.com">lagou.com</a> 为例，它共收集到了 40769 个子域。这数据相当多了，不过里面有不少是跳转到主页 <a target="_blank" rel="noopener" href="http://lagou.com">lagou.com</a> 的，实际没有单独的子域网站，即不同域名指向同一台服务器，或者是直接 302 跳转到主页的情况。这些子域在网站扫描时可以考虑去重，避免重复扫描。</p>
 <p>使用示例如下：</p>
 <p><code>amass enum -o out.txt -d lagou.com</code></p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3C/CgqCHl_ZtAWATELmAAGlhU6Ab50316.png" alt="Drawing 6.png" data-nodeid="15590">
+<img src="CgqCHl_ZtAWATELmAAGlhU6Ab50316.png" alt="Drawing 6.png" data-nodeid="15590">
 <h5 id="DNSDumpster">DNSDumpster</h5>
 <p>DNSDumpster可以在线搜索子域名以及相应的 IP 地址，提供 xlsx 文件导出，以及整个域名映射关系图、IP 分布地图等信息，在展示和准确度上还是不错的。它的搜索速度也很快，但就是子域收集相对少很多。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3C/CgqCHl_ZtA2AdSg9AAJyoGGL9kE009.png" alt="Drawing 7.png" data-nodeid="15597">
+<img src="CgqCHl_ZtA2AdSg9AAJyoGGL9kE009.png" alt="Drawing 7.png" data-nodeid="15597">
 <h5 id="Subdomain-Finder">Subdomain Finder</h5>
 <p>Subdomain Finder支持在线搜索子域名以及相应的 IP 地址。它的扫描速度很快，若没有显示 IP 则代表域名没有绑定有效的网络服务器，或者无法访问该域名。在界面上，它直接提供“Check Status”功能来检测网站的访问状态。该网站上还提供有“Private scan”功能，可以防止扫描时被记录。但它的不足之处在于，扫描结果无法直接导出文件到本地。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0E/Cip5yF_ZtBWAJtG0AAIX71NtOjI255.png" alt="Drawing 8.png" data-nodeid="15604">
+<img src="Cip5yF_ZtBWAJtG0AAIX71NtOjI255.png" alt="Drawing 8.png" data-nodeid="15604">
 <h4 id="3-3-端口服务检测">3.3 端口服务检测</h4>
 <p>在上一讲常用的渗透测试工具中介绍了 Nmap，用它来扫描端口服务就足够了。那我们为什么要做端口服务探测呢？</p>
 <p>近期 FBI 发布紧急警告称，SonarQube 商业化源码审计系统被利用默认弱密码窃取政府内部一些产品源代码。</p>
@@ -805,9 +805,9 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 <p>还有另一种方法就是<strong>查询 C 段 IP</strong>，即同一内网段的服务器。比如 <a target="_blank" rel="noopener" href="http://lagou.com">lagou.com</a> 的 IP 为 106.75.118.232，那它的 C 段 IP 为 106.75.118.1~106.75.118.255，通过攻下同一 C 段的服务器，再间接渗透到目标服务器。</p>
 <p>无论是旁站还是 C 段渗透方式，都是尝试从目标网站的旁路途径去间接渗透目标。在这里我推荐几个在线查询旁站和 C 段的网站，同时提供一些指纹检测信息。</p>
 <h5 id="https-www-webscan-cc"><a target="_blank" rel="noopener" href="https://www.webscan.cc/">https://www.webscan.cc/</a></h5>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/10/CgpVE1_ZtGKACONzAAJroYitakc640.png" alt="The Web of WebScan" data-nodeid="15677">
+<img src="CgpVE1_ZtGKACONzAAJroYitakc640.png" alt="The Web of WebScan" data-nodeid="15677">
 <h5 id="https-chapangzhan-com"><a target="_blank" rel="noopener" href="https://chapangzhan.com/">https://chapangzhan.com/</a></h5>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/0F/Cip5yF_ZtGmAb6vpAAEgG3hQbFE603.png" alt="Drawing 13.png" data-nodeid="15684">
+<img src="Cip5yF_ZtGmAb6vpAAEgG3hQbFE603.png" alt="Drawing 13.png" data-nodeid="15684">
 <h4 id="3-6-WAF-探测">3.6 WAF 探测</h4>
 <p>当网站开启 WAF（<strong>Web 防火墙</strong>）时，很多测试请求都会被拦截，导致无法正常扫描。此时就要分析 WAF 找到绕过的方法，否则很难挖到漏洞。在不知道的情况下，还以为真的没有漏洞，其实有时只是被 WAF 拦截了而已。不过就算挖到了漏洞，利用起来也有一定的门槛。</p>
 <p>因此，在测试前，若发现发包经常测试失败的话，除非网络不通，否则都建议先探测下 WAF。如果存在 WAF 就尝试寻找绕过的方法，再改造测试用例进行重试。</p>
@@ -833,11 +833,11 @@ HackerOne 通常在漏洞修复后的 3 个月会公开漏洞细节，栏目名�
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/lanmaster53/recon-ng">Recon-NG</a> 是一款被动信息收集工具，它可以通过搜索获取 IP 地址、地理位置、用户、邮件地址、密码泄露或者其他敏感信息，最终生成一份完整报告。</li>
 </ul>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/31/Ciqc1F_ZtI6AbSuGAAFRQ7AvPZU584.png" alt="Drawing 15.png" data-nodeid="15735">
+<img src="Ciqc1F_ZtI6AbSuGAAFRQ7AvPZU584.png" alt="Drawing 15.png" data-nodeid="15735">
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/kennbroorg/iKy">iKy</a>能够从 Twitter、GitHub、Skype、Linkedin、Instagram 等社交平台上收集信息，但需要提前设置各平台上的 API KEY，可以输入一个邮箱地址去搜索其上述平台上的关联信息，最后会以可视化效果展示出来，如下图所示。</li>
 </ul>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3C/CgqCHl_ZtJuAMTSAAGHC1Ng-II8825.png" alt="Drawing 16.png" data-nodeid="15742">
+<img src="CgqCHl_ZtJuAMTSAAGHC1Ng-II8825.png" alt="Drawing 16.png" data-nodeid="15742">
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/leebaird/discover">discover</a>综合使用了很多工具，包括 dnsrecon、goofile、whois、recon-ng、dnssy\Nikto 等，它能够收集邮箱地址、雇员名字、主机信息、域名、IP 等一系列信息，最后提供 html 报告。</li>
 </ul>

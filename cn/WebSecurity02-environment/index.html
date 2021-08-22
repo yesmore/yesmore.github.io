@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -482,7 +482,7 @@
 <p>安装完成后，可运行以下命令，若输出“Hello from Docker！”则代表安装成功：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run hello-world</span></span><br><span class="line">Unable to find image &#x27;hello-world:latest&#x27; locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">0e03bdcc26d7: Pull complete </span><br><span class="line">Digest: sha256:4cf9c47f86df71d48364001ede3a4fcd85ae80ce02ebad74156906caff5378bc</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"><span class="meta"> $</span><span class="bash"> docker run -it ubuntu bash</span></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://hub.docker.com/</span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/get-started/</span><br></pre></td></tr></table></figure>
 <h4 id="1-2-Docker-常用命令">1.2 Docker 常用命令</h4>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/AC/Cip5yF_ayluADYpRAAE2DM3MpC8011.png" alt="Lark20201217-105445.png" data-nodeid="17978">
+<img src="Cip5yF_ayluADYpRAAE2DM3MpC8011.png" alt="Lark20201217-105445.png" data-nodeid="17978">
 <h3 id="二、安装-sqli-labs-靶场">二、安装 sqli-labs 靶场</h3>
 <p>sqli-labs 是一款用于学习 SQL 注入的靶场平台，覆盖了各种类型的 SQL 注入，题目共 75 道，按难度划分为 4 页。sqli-labs 靶场的难度循序渐进，对于提高 SQL 注入实战能力有很好的帮助。sqli-labs 靶场的项目开源地址为<a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs" data-nodeid="17983">https://github.com/Audi-1/sqli-labs</a>。</p>
 <p>那如何使用 Docker 快速安装 sqli-labs 呢？首先，搜索 sqli-labs 镜像，挑战 STARS 星标最多的镜像，这里选择“acgpiano/sqli-labs”镜像：</p>
@@ -494,20 +494,20 @@
 <p>各参数含义如下所示：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-d：代表后台运行</span><br><span class="line">-t：为容器分配伪终端</span><br><span class="line">--name：命名容器</span><br><span class="line">-p：指定映射端口，此处将 acgpiano/sqli-labs 的 80 端口映射到本地的 80 端口</span><br><span class="line">--rm：退出时自动移除容器</span><br></pre></td></tr></table></figure>
 <p>现在我们直接访问http://localhost，可以看到 sqli-labs 已经成功运行了。</p>
-<img src="https://s0.lgstatic.com/i/image2/M01/02/12/Cip5yF_ZuAGATUgkAAGVntvgIOM781.png" alt="sqli-labs 成功运行" data-nodeid="17996">
+<img src="Cip5yF_ZuAGATUgkAAGVntvgIOM781.png" alt="sqli-labs 成功运行" data-nodeid="17996">
 <p>最后点击“Setup/reset Database for labs”链接完成数据库的安装：</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/33/Ciqc1F_ZuAmAJIaRAAERioET74I030.png" alt="完成数据库安装" data-nodeid="18000">
+<img src="Ciqc1F_ZuAmAJIaRAAERioET74I030.png" alt="完成数据库安装" data-nodeid="18000">
 <p>到此，sqli-labs 安装结束！</p>
 <h3 id="三、安装-DVWA-靶场">三、安装 DVWA 靶场</h3>
 <p>DVWA（Damn Vulnerable Web Application）是一款比较著名的漏洞靶场，很多 Web 安全的初学者都会拿它来练习，一些高校以及相关书籍里面也会介绍它。DVWA 的项目开源地址为https://github.com/digininja/DVWA。</p>
 <p>DVWA 靶场可以直接通过 Docker 安装：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker pull citizenstig/dvwa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run -d --name dvwa --rm -p80:80 citizenstig/dvwa</span></span><br></pre></td></tr></table></figure>
 <p>安装成功后，打开http://localhost：</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/33/Ciqc1F_ZuBWAJBW5AAFVUYKVo8w698.png" alt="Drawing 2.png" data-nodeid="18016">
+<img src="Ciqc1F_ZuBWAJBW5AAFVUYKVo8w698.png" alt="Drawing 2.png" data-nodeid="18016">
 <p>然后点击“Create/Reset Database”创建数据库，使用默认密码 admin/password 登录，即可正常使用。做题时它能直接提供阅读源码的功能，不过题目相对少一些。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/33/Ciqc1F_ZuByAHaCUAAHUf-R43-Q924.png" alt="Drawing 3.png" data-nodeid="18020">
+<img src="Ciqc1F_ZuByAHaCUAAHUf-R43-Q924.png" alt="Drawing 3.png" data-nodeid="18020">
 <p>上面的 XSS 漏洞默认是安全的，在实际练习时，可以在“DVWA Security“中设置安全等级，即题目的难度等级，共有 4 等，其中 Impossible 代表的是已修复漏洞的情况，可以用来熟悉如何修复漏洞。</p>
-<img src="https://s0.lgstatic.com/i/image/M00/8A/3F/CgqCHl_ZuCOADWKnAAKUKNFpXFI694.png" alt="DVWA 安全等级设置" data-nodeid="18024">
+<img src="CgqCHl_ZuCOADWKnAAKUKNFpXFI694.png" alt="DVWA 安全等级设置" data-nodeid="18024">
 <h3 id="四、安装-Pikachu-靶场">四、安装 Pikachu 靶场</h3>
 <p>Pikachu 也是一款 Web 漏洞靶场，涵盖各种 Web 漏洞类型的练习，也是基于 PHP+MySQL 搭建的平台，是由国人开发的。平台采用中文描述和基本的页面设计，相比 sqli-labs 这种单调的界面还是好看很多的。Pikachu 的项目开源地址为https://github.com/zhuifengshaonianhanlu/pikachu。</p>
 <p>安装 Pikachu 也很简单，通过 Docker 即可快速安装。我们先搜索下镜像：</p>

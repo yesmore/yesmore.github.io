@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -531,7 +531,7 @@
 <h4 id="代码测试">代码测试</h4>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> doublyLinkedList = <span class="keyword">new</span> DoublyLinkedList();</span><br><span class="line"></span><br><span class="line"><span class="comment">// append() 测试</span></span><br><span class="line">doublyLinkedList.append(<span class="string">&quot;ZZ&quot;</span>);</span><br><span class="line">doublyLinkedList.append(<span class="string">&quot;XX&quot;</span>);</span><br><span class="line">doublyLinkedList.append(<span class="string">&quot;CC&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList);</span><br><span class="line"></span><br><span class="line"><span class="comment">// insert() 测试</span></span><br><span class="line">doublyLinkedList.insert(<span class="number">0</span>, <span class="string">&quot;00&quot;</span>);</span><br><span class="line">doublyLinkedList.insert(<span class="number">2</span>, <span class="string">&quot;22&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList);</span><br><span class="line"></span><br><span class="line"><span class="comment">// getData() 测试</span></span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList.getData(<span class="number">1</span>)); <span class="comment">//--&gt; ZZ</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// indexOf() 测试</span></span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList.indexOf(<span class="string">&quot;XX&quot;</span>)); <span class="comment">//--&gt; 3</span></span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList);</span><br><span class="line"></span><br><span class="line"><span class="comment">// removeAt() 测试</span></span><br><span class="line">doublyLinkedList.removeAt(<span class="number">0</span>);</span><br><span class="line">doublyLinkedList.removeAt(<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList);</span><br><span class="line"></span><br><span class="line"><span class="comment">// update() 测试</span></span><br><span class="line">doublyLinkedList.update(<span class="number">0</span>, <span class="string">&quot;111111&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList);</span><br><span class="line"></span><br><span class="line"><span class="comment">// remove() 测试</span></span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList.remove(<span class="string">&quot;111111&quot;</span>));</span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList.remove(<span class="string">&quot;22222&quot;</span>));</span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList);</span><br><span class="line"></span><br><span class="line"><span class="comment">// forwardToString() 测试</span></span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList.forwardToString());</span><br><span class="line"></span><br><span class="line"><span class="comment">// backwardString() 测试</span></span><br><span class="line"><span class="built_in">console</span>.log(doublyLinkedList.backwardString());</span><br></pre></td></tr></table></figure>
 <h3 id="小结">小结</h3>
-<p><img src="/images/algorithm14.png" alt="1"></p>
+<p><img src="algorithm14.png" alt="1"></p>
 <p>链式存储结构的优点：</p>
 <ul>
 <li>
@@ -550,9 +550,9 @@
 <p>存储密度是指结点数据本身占用的空间/结点占用的空间总量</p>
 </li>
 </ul>
-<p><img src="/images/algorithm12.png" alt="2"></p>
+<p><img src="algorithm12.png" alt="2"></p>
 <p>链式存储结构是非随机存取结构。对任一结点的操作都要从头指针依指针链查找到该结点，这增加了算法的复杂度。(对某个结点操作一般要先找到该结点)</p>
-<p><img src="/images/algorithm13.png" alt="3"></p>
+<p><img src="algorithm13.png" alt="3"></p>
 
 
         <hr>

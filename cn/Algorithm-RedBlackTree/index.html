@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -513,7 +513,7 @@
 </ul>
 <h3 id="2-2-左旋转">2.2 左旋转</h3>
 <p>以节点X为根<strong>逆时针</strong>旋转二叉搜索树，使得父节点原来的位置被自己的右子节点替代，左子节点的位置被父节点替代；</p>
-<p><img src="/images/2.png" alt="2"></p>
+<p><img src="2.png" alt="2"></p>
 <p><strong>详解：</strong></p>
 <p>如上图所示，左旋转之后：</p>
 <ul>
@@ -524,10 +524,10 @@
 <li>节点Y的<strong>左子树</strong> b 向<strong>左平移</strong>成为了节点X的<strong>右子树</strong>；</li>
 </ul>
 <p>除此之外，二叉搜索树左旋转之后仍为二叉搜索树：</p>
-<p><img src="/images/3.png" alt="3"></p>
+<p><img src="3.png" alt="3"></p>
 <h3 id="2-3-右旋转">2.3 右旋转</h3>
 <p>以节点X为根<strong>顺时针</strong>旋转二叉搜索树，使得父节点原来的位置被自己的左子节点替代，右子节点的位置被父节点替代；</p>
-<p><img src="/images/4.png" alt="4"></p>
+<p><img src="4.png" alt="4"></p>
 <p><strong>详解：</strong></p>
 <p>如上图所示，右旋转之后：</p>
 <ul>
@@ -538,19 +538,19 @@
 <li>节点Y的<strong>右子树 c 向右平移</strong>成为了节点X的<strong>左子树</strong>；</li>
 </ul>
 <p>除此之外，二叉搜索树右旋转之后仍为二叉搜索树：</p>
-<p><img src="/images/5.png" alt="5"></p>
+<p><img src="5.png" alt="5"></p>
 <h2 id="三、红黑树的插入操作">三、红黑树的插入操作</h2>
 <p>首先需要明确，在保证满足红黑树5条规则的情况下，新插入的节点必然是<strong>红色节点</strong>。</p>
 <p>为了方便说明，规定以下四个节点：新插入节点为<strong>N</strong>（Node），N的父节点为<strong>P</strong>（Parent），P的兄弟节点为<strong>U</strong>（Uncle），U的父节点为<strong>G</strong>（Grandpa），如下图所示：</p>
-<p><img src="/images/6.png" alt="6"></p>
+<p><img src="6.png" alt="6"></p>
 <h3 id="3-1-情况1">3.1 情况1</h3>
 <p>当插入的新节点N位于树的根上时，没有父节点。</p>
 <p>这种情况下，只需要将红色节点变为黑色节点即可满足规则2 。</p>
-<p><img src="/images/7.png" alt="7"></p>
+<p><img src="7.png" alt="7"></p>
 <h3 id="3-2-情况2">3.2 情况2</h3>
 <p>新界点N的父节点P为黑色节点，此时不需要任何变化。</p>
 <p>此时既满足规则4也满足规则5。尽管新节点是红色的，但是新节点N有两个黑色节点NIL，所以通向它的路径上黑色节点的个数依然相等，因此满足规则5 。</p>
-<p><img src="/images/8.png" alt="8"></p>
+<p><img src="8.png" alt="8"></p>
 <h3 id="3-3-情况3">3.3 情况3</h3>
 <p>节点P为红色，节点U也为红色，此时节点G必为黑色，即<strong>父红叔红祖黑</strong>。</p>
 <p>在这种情况下需要：</p>
@@ -560,13 +560,13 @@
 <li>最后将祖父节点G变为红色；</li>
 </ul>
 <p>即变为<strong>父黑叔黑祖红</strong>，如下图所示：</p>
-<p><img src="/images/9.png" alt="9"></p>
+<p><img src="9.png" alt="9"></p>
 <p>可能出现的问题：</p>
 <ul>
 <li>N的祖父节点G的父节点也可能是红色，这就违反了规则4，此时可以通过递归调整节点颜色；</li>
 <li>当递归调整到根节点时就需要旋转了，如下图节点A和节点B所示，具体情况后面会介绍；</li>
 </ul>
-<p><img src="/images/10.png" alt=""></p>
+<p><img src="10.png" alt=""></p>
 <h3 id="3-4-情况4">3.4 情况4</h3>
 <p>节点P是红色节点，节点U是黑色节点，并且节点N为节点P的<strong>左子节点</strong>，此时节点G一定是黑色节点，即<strong>父红叔黑祖黑</strong>。</p>
 <p>在这种情况下需要：</p>
@@ -574,7 +574,7 @@
 <li>先变色：将父节点P变为黑色，将祖父节点G变为红色；</li>
 <li>后旋转：以祖父节点G为根进行右旋转；</li>
 </ul>
-<p><img src="/images/11.png" alt=""></p>
+<p><img src="11.png" alt=""></p>
 <h3 id="3-5-情况5">3.5 情况5</h3>
 <p>节点P是红色节点，节点U是黑色节点，并且节点N为节点P的<strong>右子节点</strong>，此时节点G一定是黑色节点，即<strong>父红叔黑祖黑</strong>。</p>
 <p>在这种情况下需要：</p>
@@ -582,18 +582,18 @@
 <li>先以节点P为根进行左旋转，旋转后如图b所示；</li>
 <li>随后将<strong>红色</strong>节点<strong>P</strong>和<strong>黑色</strong>节点<strong>B</strong>看成一个整体的<strong>红色</strong>节点<strong>N1</strong>，将新插入的<strong>红色</strong>节点<strong>N</strong>看成<strong>红色</strong>节点<strong>P1</strong> 如图c所示。此时整体就转换为了情况4。</li>
 </ul>
-<p><img src="/images/12.png" alt=""></p>
+<p><img src="12.png" alt=""></p>
 <p>接着可以按照情况4进行处理：</p>
 <ul>
 <li>先变色：将N1节点的父节点P1变为黑色，将祖父节点G变为红色；</li>
 <li>后旋转：以祖父节点G为根进行右旋转，旋转后如图 e 所示；</li>
 <li>最后将节点N1和P1变换回来，完成节点N的插入，如图 f 所示；</li>
 </ul>
-<p><img src="/images/13.png" alt=""></p>
+<p><img src="13.png" alt=""></p>
 <h3 id="3-6-案例">3.6 案例</h3>
 <p>在二叉树中依次插入节点：10，9，8，7，6，5，4，3，2，1 。</p>
 <p>如果直接采用普通的二叉搜索树，节点全部插入后是这样的：</p>
-<p><img src="/images/14.png" alt=""></p>
+<p><img src="14.png" alt=""></p>
 <p>是一个严重的<strong>不平衡树</strong>，相当于一个链表，不能体现出二叉搜索树的高效率。而按照红黑树的五条规则插入节点就能最大程度保证搜索二叉树是一棵<strong>平衡树</strong>。以下为过程详解：<strong>为了方便解释省略了部分红黑树的叶子节点（NIL）</strong></p>
 <h4 id="插入10">插入10</h4>
 <p>符合<strong>情况1</strong>：</p>
@@ -601,81 +601,81 @@
 <li>插入节点10；</li>
 <li>将节点10的颜色变为黑色；</li>
 </ul>
-<p><img src="/images/15.png" alt="15"></p>
+<p><img src="15.png" alt="15"></p>
 <h4 id="插入9">插入9</h4>
 <p>符合<strong>情况2</strong>：</p>
 <ul>
 <li>不需要任何变化；</li>
 </ul>
-<p><img src="/images/16.png" alt=""></p>
+<p><img src="16.png" alt=""></p>
 <h4 id="插入8">插入8</h4>
 <blockquote>
 <p>快速判断属于情况3还是情况4的方法：</p>
 <p>从新插入的节点N出发，按图示箭头经过的四个节点，若为<strong>红红黑红</strong>3个红色节点则为情况3，若为<strong>红红黑黑</strong>两个红色节点则为情况4；</p>
 </blockquote>
-<p><img src="/images/17.png" alt=""></p>
+<p><img src="17.png" alt=""></p>
 <p>符合<strong>情况4</strong>：</p>
 <ul>
 <li>父节点9变成黑，祖父节点10变为红；</li>
 <li>以祖父节点为根进行右旋转；</li>
 </ul>
-<p><img src="/images/18.png" alt=""></p>
+<p><img src="18.png" alt=""></p>
 <h4 id="插入7">插入7</h4>
 <p>符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点8和叔节点10变为黑，祖父节点9变为红；</li>
 <li>此时会出现问题：不符合规则2，即根节点不为黑，此时可以把以9为根节点的二叉搜索树当作一个整体作为一个新插入的节点N，而此时又符合情况1，只需要把9变回黑色即可。</li>
 </ul>
-<p><img src="/images/19.png" alt=""></p>
+<p><img src="19.png" alt=""></p>
 <h4 id="插入6">插入6</h4>
 <p>符合<strong>情况4</strong>：</p>
 <ul>
 <li>父节点7变为黑，祖父节点8变为红；</li>
 <li>以祖父节点8为根进行右旋转；</li>
 </ul>
-<p><img src="/images/20.png" alt=""></p>
+<p><img src="20.png" alt=""></p>
 <h4 id="插入5">插入5</h4>
 <p>符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点6和叔节点8变为黑，祖父节点7变为红；</li>
 </ul>
-<p><img src="/images/21.png" alt=""></p>
+<p><img src="21.png" alt=""></p>
 <h4 id="插入4">插入4</h4>
 <p>符合<strong>情况4</strong>：</p>
 <ul>
 <li>父节点5变为黑，祖父节点6变为红；</li>
 <li>以祖父节点6为根进行右旋转；</li>
 </ul>
-<p><img src="/images/22.png" alt=""></p>
+<p><img src="22.png" alt=""></p>
 <h4 id="插入3">插入3</h4>
 <p><strong>第一次变换</strong>：符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点4和叔节点6变为黑，祖父节点5变为红；</li>
 </ul>
 <p>变换之后发现5和7为相连的两个红色节点，于是把以5为根的整个子树看成一个新插入的节点N1，再进行第二次变换。</p>
-<p><img src="/images/23.png" alt=""></p>
+<p><img src="23.png" alt=""></p>
 <p><strong>第二次变换</strong>：符合<strong>情况4</strong>：</p>
 <ul>
 <li>父节点7变为黑，祖父节点9变为红；</li>
 <li>以祖父节点9为根进行右旋转；</li>
 </ul>
-<p><img src="/images/24.png" alt=""></p>
+<p><img src="24.png" alt=""></p>
 <p>最后复原N1得到变换后的红黑树：</p>
-<p><img src="/images/25.png" alt=""></p>
+<p><img src="25.png" alt=""></p>
 <h4 id="插入2">插入2</h4>
 <p>符合<strong>情况4</strong>：</p>
 <ul>
 <li>父节点3变为黑，祖父节点4变为红；</li>
 <li>以祖父节点4为根进行右旋转；</li>
 </ul>
-<p><img src="/images/26.png" alt=""></p>
+<p><img src="26.png" alt=""></p>
 <h4 id="插入1">插入1</h4>
 <p><strong>第一次变换</strong>：符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点2和叔节点4变为黑，祖父节点3变为红；</li>
 </ul>
 <p>变换之后发现3和5为相连的两个红色节点，于是把以3为根的整个子树看成一个新插入的节点N1，再进行第二次变换。</p>
-<p><img src="/images/27.png" alt=""></p>
+<p><img src="27.png" alt=""></p>
 <p><strong>第二次变换</strong>：符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点5和叔节点9变为黑，祖父节点7变为红；即由图 b -&gt; 图 c 。</li>
@@ -685,9 +685,9 @@
 <ul>
 <li>直接将根节点7变为黑色即可。</li>
 </ul>
-<p><img src="/images/28.png" alt=""></p>
+<p><img src="28.png" alt=""></p>
 <p>由此，完成了1~10节点的插入，虽然没有遇到情况5，不过情况5经过左旋转的操作便可转换为情况4，原理一样。如下图所示，将这棵红黑树的叶子节点NIL补全之后，经检验满足红黑树的五条规则，并且基本属于<strong>平衡树</strong>，效率较高。</p>
-<p><img src="/images/29.png" alt="29"></p>
+<p><img src="29.png" alt="29"></p>
 <h2 id="四、红黑树的删除操作">四、红黑树的删除操作</h2>
 <p>红黑树的删除操作结合了复杂的<strong>二叉树的删除操作</strong>和复杂的<strong>红黑树的插入规则</strong>，整体来说难度非常大，篇幅较长，这里暂不进行探讨。</p>
 

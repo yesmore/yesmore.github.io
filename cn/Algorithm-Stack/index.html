@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -529,9 +529,9 @@
 <p>D 答案：65432 进栈，2 出栈，3 出栈，4 出栈，1 进栈出栈，5 出栈，6 出栈。符合入栈顺序。</p>
 </blockquote>
 <h4 id="题目2：">题目2：</h4>
-<p><img src="/images/algorithm15.png" alt="1"></p>
+<p><img src="algorithm15.png" alt="1"></p>
 <h4 id="题目3：">题目3：</h4>
-<p><img src="/images/algorithm16.png" alt="2"></p>
+<p><img src="algorithm16.png" alt="2"></p>
 <h2 id="四、栈结构实现">四、栈结构实现</h2>
 <h3 id="4-1-栈常见的操作">4.1 栈常见的操作</h3>
 <p><code>push()</code> 添加一个新元素到栈顶位置。</p>
@@ -552,7 +552,7 @@
 <h3 id="5-1-进制转换">5.1 进制转换</h3>
 <p>利用栈结构的特点封装实现<strong>十进制转换为二进制</strong>的方法。</p>
 <p>原理：</p>
-<p><img src="/images/algorithm17.png" alt="3"></p>
+<p><img src="algorithm17.png" alt="3"></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dec2bin</span>(<span class="params">dec</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// new 一个 Map，保存余数</span></span><br><span class="line">  <span class="keyword">const</span> stack = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 当不确定循环次数时，使用 while 循环</span></span><br><span class="line">  <span class="keyword">while</span> (dec &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="comment">// 除二取余法</span></span><br><span class="line">    stack.push(dec % <span class="number">2</span>); <span class="comment">// 获取余数，放入栈中</span></span><br><span class="line">    dec = <span class="built_in">Math</span>.floor(dec / <span class="number">2</span>); <span class="comment">// 除数除以二，向下取整</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> binaryString = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="comment">// 不断地从栈中取出元素（0 或 1），并拼接到一起。</span></span><br><span class="line">  <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">    binaryString += stack.pop();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> binaryString;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="测试">测试</h4>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// dec2bin() 测试</span></span><br><span class="line"><span class="built_in">console</span>.log(dec2bin(<span class="number">100</span>)); <span class="comment">//--&gt; 1100100</span></span><br><span class="line"><span class="built_in">console</span>.log(dec2bin(<span class="number">88</span>)); <span class="comment">//--&gt; 1011000</span></span><br></pre></td></tr></table></figure>

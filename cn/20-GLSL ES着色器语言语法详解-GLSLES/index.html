@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -518,9 +518,9 @@
 <p>不能是下表中所列出的关键字</p>
 </li>
 </ul>
-<p><img src="/images/glsles1.jpg" alt="1"></p>
+<p><img src="glsles1.jpg" alt="1"></p>
 <p>​		GLSL ES保留字：</p>
-<p><img src="/images/glsles2.jpg" alt="2"></p>
+<p><img src="glsles2.jpg" alt="2"></p>
 <h4 id="4-2-GLSL-ES是强类型语言">4.2 GLSL ES是强类型语言</h4>
 <p>​	声明变量的方式：&lt;类型&gt; &lt;变量名&gt;，例：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec4</span> a_Position</span><br></pre></td></tr></table></figure>
@@ -1252,7 +1252,7 @@ $​​</p>
 <p>​		下一节涉及的attribute变量、varying变量和uniform变量由于需要在函数外部访问，所以必须声明为全局变量。</p>
 <h3 id="十四、存储限定字">十四、存储限定字</h3>
 <p>​		在GLSL ES中，我们经常使用<code>attriute</code>、<code>varying</code>和<code>uniform</code>限定字来修饰变量，如图所示：</p>
-<p><img src="/images/glsles3.png" alt="3"></p>
+<p><img src="glsles3.png" alt="3"></p>
 <p>​		此外，我们有时也会使用const限定字，它表示着色器中的某个变量使恒定的常量。</p>
 <h4 id="14-1-const">14.1 const</h4>
 <p>特点：</p>
@@ -1266,7 +1266,7 @@ $​​</p>
 <h4 id="14-2-attribute变量">14.2 attribute变量</h4>
 <p>​		attribute变量只能出现在定点着色器中，只能被声明为全局变量，被用来表示<strong>逐顶点</strong>的信息。</p>
 <p>​		顶点着色器中能够容纳的attribute变量的最大数目与设备有关，你可以通过访问内置的全局常量获取该值。但是，支持WebGL环境都支持至少8个attribute变量。如下所示：</p>
-<p><img src="/images/glsles4.png" alt="4"></p>
+<p><img src="glsles4.png" alt="4"></p>
 <blockquote>
 <p><strong>逐顶点</strong>：比如，如果线段两个顶点(4.0, 3.0, 6.0)和(8.0, 3.0 0.0)，这两个坐标就会传递给attribute变量。而线段上的其他点，虽然也被画了出来，但它们不是顶点，坐标未曾传给attribute变量，也未曾被顶点着色器处理过。如果你想要让顶点着色器坐标处理它们，你就需要将它作为一个顶点添加到图像中来。</p>
 </blockquote>
@@ -1281,14 +1281,14 @@ $​​</p>
 <p>​		GLSL ES新引入了精度限定字，<strong>目的是帮助着色器程序提高运行效率，消减内存开支</strong>。使用精度限定字，你就能够<strong>精细地控制程序在效果</strong>和<strong>性能间的平衡</strong>。然而，精度限定字是可选的，如果你不确定，可以使用下面这个适中的默认值：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#ifdef GL_ES</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">mediump</span> <span class="type">float</span>;</span><br><span class="line"><span class="meta">#endif</span></span><br></pre></td></tr></table></figure>
 <p>​		WebGL程序支持三种精度，其限定字分别为highp、mediump、lowp。如下所示：</p>
-<p><img src="/images/glsles5.png" alt="5"></p>
+<p><img src="glsles5.png" alt="5"></p>
 <pre><code>	下面是声明变量精度的几个例子：
 </code></pre>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mediump</span> <span class="type">float</span> size; <span class="comment">//中精度的浮点型变量</span></span><br><span class="line"><span class="keyword">highp</span> <span class="type">vec4</span> position; <span class="comment">//具有高精度浮点型元素的vec4对象</span></span><br><span class="line"><span class="keyword">lowp</span> <span class="type">vec4</span> color; <span class="comment">//具有低精度浮点型元素的vec4对象</span></span><br></pre></td></tr></table></figure>
 <p>​		为每个变量都声明精度很繁琐，我们也可以使用<code>关键字precision</code>来声明着色器的默认精度，并且这行代码必须放在顶点着色器或片元着色器的顶部，格式如下：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// precision 精度限定字 类型名称</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">mediump</span> <span class="type">float</span>;</span><br></pre></td></tr></table></figure>
 <p>​		使用精度限定字一般都只在<strong>片元着色器</strong>中使用，这是因为，除了片元着色器的<code>float</code>类型没有默认精度（需手动指定，否则报错），其他类型都有默认精度。如下是数据类型的默认精度：</p>
-<p><img src="/images/glsles6.png" alt="6"></p>
+<p><img src="glsles6.png" alt="6"></p>
 <p>​		WebGL是否在片元着色器中支持highp精度，取决于具体的设备。如果设备支持，那么着色器就会定义内置宏<code>GL_FRAGMENT_PRECISION_HIGH</code>（见下一节）。</p>
 <h3 id="十六、预处理指令——宏">十六、预处理指令——宏</h3>
 <p>​		GLSL ES支持预处理指令。<strong>预处理指令用来在真正编译之前对代码进行预处理</strong>。都已<code>#</code>号开始。下面就是预定义float类型精度的预处理指令：</p>

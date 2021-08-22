@@ -221,6 +221,8 @@
 
           <!-- 
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -229,8 +231,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -475,7 +475,7 @@
 <h2 id="知识点">知识点</h2>
 <h3 id="一、多节点模型">一、多节点模型</h3>
 <p>这一节将把 JointModel 扩展为 <a href="#%E4%BB%A3%E7%A0%811">MultiJointModel</a>，后者绘制一个具有多个关节的完整的机器人手臂，包括基座 base，上臂 arm1，前臂 arm2，手掌 palm，两根手指 finger1 &amp; finger2，全部可以通过键盘来控制。arm1 和 arm2 的连接关节 joint1 位于 arm1 顶部，arm2 和 palm 的连接关节 joint2 位于 arm2 顶部，finger1 和 finger2 位于 palm 一段，如下图所示：<br>
-<img src="/images/MultiJointModel1.png" alt="MultiJointModel中的层次结构"></p>
+<img src="MultiJointModel1.png" alt="MultiJointModel中的层次结构"></p>
 <p>实现功能：用户可以通过键盘操纵机器人手臂，arm1 和 arm2 的操作和 JointModel 一样，此外，还可以使用 x 和 z 键旋转 Joint2，使用 C 和 V 键旋转 finger1 和 finger2。控制这些小部件旋转角度的全局变量。</p>
 <h4 id="1-1-程序分析">1.1 程序分析</h4>
 <blockquote>
@@ -575,41 +575,41 @@ initShaders()函数的作用是，<u>编译 GLSL ES 代码，创建和初始化�
 <p><strong>着色器对象</strong>：着色器对象管理一个顶点着色器或一个片元着色器。每一个着色器都有一个着色器对象。</p>
 <p><strong>程序对象</strong>：程序对象是管理着色器对象的容器。WebGL 中，一个程序对象必须包含一个顶点着色器和一个片元着色器。</p>
 <p>着色器对象和程序对象间的关系：</p>
-<p><img src="/images/MultiJointModel3.png" alt="着色器对象和程序对象"></p>
+<p><img src="MultiJointModel3.png" alt="着色器对象和程序对象"></p>
 <h4 id="2-2-创建着色器对象（gl-createShader-）">2.2 创建着色器对象（gl.createShader()）</h4>
 <p>所有的着色器对象都必须通过调用 gl.createShader(）来创建。</p>
-<p><img src="/images/MultiJointModel5.png" alt="gl.createShader"></p>
+<p><img src="MultiJointModel5.png" alt="gl.createShader"></p>
 <p>gl.createShader(）函数根据传入的参数创建一个顶点着色器或者片元着色器。如果不再需要这个着色器，可以调用 gl.deleteShader(）函数来删除着色器。</p>
-<p><img src="/images/MultiJointModel6.png" alt="gl.deleteShader"></p>
+<p><img src="MultiJointModel6.png" alt="gl.deleteShader"></p>
 <p>注意，如果着色器对象还在使用，那么 gl.deleteShader(）并不会立刻删除着色器，而是要等到程序对象不再使用该着色器后，才将其删除。</p>
 <h4 id="2-3-指定着色器对象的代码（gk-shaderSource）">2.3 指定着色器对象的代码（gk.shaderSource）</h4>
 <p>通过 gl.shaderSource(）函数向着色器制动 GLSL ES 源代码。在 JS 程序中，源代码以字符串的形式存储。</p>
-<p><img src="/images/MultiJointModel7.png" alt="gl.shaderSource"></p>
+<p><img src="MultiJointModel7.png" alt="gl.shaderSource"></p>
 <h4 id="2-4-编译着色器（gl-compileShader）">2.4 编译着色器（gl.compileShader）</h4>
 <p>向着色器对象传入源代码之后，还需要对其进行编译才能够使用。GLSL ES 语言和 JS 不同而更接近 C 或 C++，在使用之前需要编译成二进制的可执行格式，WebGL 系统真正使用的是这种可执行格式。使用 gl.compileShader(）函数进行编译。注意，如果你通过调用 gl.shaderSource(），用新的代码替换掉了着色器中旧的代码，WebGL 系统中的用旧的代码编译处可执行部分不会被自动替换，你需要手动地重新进行编译。</p>
-<p><img src="/images/MultiJointModel8.png" alt="gl.compileShader"></p>
+<p><img src="MultiJointModel8.png" alt="gl.compileShader"></p>
 <p>当调用 gl.compileShader(）函数时，如果着色器代码中存在错误，那么就会出现编译错误。可以调用 gl.getShaderParameter(）函数来检查着色器的状态。</p>
-<p><img src="/images/MultiJointModel9.png" alt="gl.getShaderParameter"></p>
+<p><img src="MultiJointModel9.png" alt="gl.getShaderParameter"></p>
 <p>调用 gl.getShaderParameter(）并将参数 pname 指定为 gl.COMPILE_STATUS，就可以检查着色器编译是否成功。</p>
 <p>如果编译失败，gl.getShaderParameter(）会返回 false，WebGL 系统会把编译错误的具体内容写入着色器的信息日志，我们可以通过 gl.getShaderInfoLog(）来获取之。</p>
-<p><img src="/images/MultiJointModel10.png" alt="gl.getShaderInfoLog"></p>
+<p><img src="MultiJointModel10.png" alt="gl.getShaderInfoLog"></p>
 <p>虽然日志信息的具体格式依赖于浏览器对 WebGL 的实现，但大多数 WebGL 系统给出的错误信息都会包含代码出错行的行号。比如，如果你试图编译如下这样一个着色器：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> FSHADER_SOURCE = </span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;	gl.FragColor = vec4(1.0,0.0,0.0,1.0);\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/MultiJointModel4.png" alt="错误信息"></p>
+<p><img src="MultiJointModel4.png" alt="错误信息"></p>
 <h4 id="2-5-创建程序对象（gl-createProgram）">2.5 创建程序对象（gl.createProgram）</h4>
 <p>如前所述，程序对象包含了顶点着色器和片元着色器，可以调用 gl.createProgram(）来创建程序对象。事实上，之前使用程序对象，gl.getAttribLocation(）函数和 gl.getUniformLocation(）函数的第1个参数，就是这个程序对象。</p>
-<p><img src="/images/MultiJointModel11.png" alt="gl.createProgram"></p>
+<p><img src="MultiJointModel11.png" alt="gl.createProgram"></p>
 <p>类似地，可以使用 gl.deleteProgram(）函数来删除程序对象。</p>
-<p><img src="/images/MultiJointModel12.png" alt="gl.deleteProgram"></p>
+<p><img src="MultiJointModel12.png" alt="gl.deleteProgram"></p>
 <p>一旦程序对象被创建之后，需要向程序附上两个着色器。</p>
 <h4 id="2-6-为程序对象分配着色器对象（gl-attachShader）">2.6 为程序对象分配着色器对象（gl.attachShader）</h4>
 <p>WebGL 系统要运行起来，必须要有两个着色器：一个顶点着色器和一个片元着色器。可以使用 gl.attachShader(）函数为程序对象分配这两个着色器。</p>
-<p><img src="/images/MultiJointModel13.png" alt="gl.attachShader"></p>
+<p><img src="MultiJointModel13.png" alt="gl.attachShader"></p>
 <p>着色器在附给程序对象前，并不一定要为其指定代码或进行编译。也就是说，把空的着色器赋给程序对象也是可以的。类似的，可以使用 gl.derachShader(）函数来解除分配给程序对象的着色器。</p>
-<p><img src="/images/MultiJointModel14.png" alt="gl.derachShader"></p>
+<p><img src="MultiJointModel14.png" alt="gl.derachShader"></p>
 <h4 id="2-7-连接程序对象（gl-linkProgram）">2.7 连接程序对象（gl.linkProgram）</h4>
 <p>在为程序对象分配了两个着色器对象后，还需要将着色器连接起来。使用 gl.linkProgram(）函数来进行这一步操作。</p>
-<p><img src="/images/MultiJointModel15.png" alt="gl.linkProgram"></p>
+<p><img src="MultiJointModel15.png" alt="gl.linkProgram"></p>
 <p>程序对象进行着色器连接操作，目的是保证：</p>
 <ul>
 <li>
@@ -626,12 +626,12 @@ initShaders()函数的作用是，<u>编译 GLSL ES 代码，创建和初始化�
 </li>
 </ul>
 <p>在着色器连接之后，应当检查是否连接成功。通过调用 gl.getProgramParameters(）函数来实现。<br>
-<img src="/images/MultiJointModel16.png" alt="gl.getProgramParameters"></p>
+<img src="MultiJointModel16.png" alt="gl.getProgramParameters"></p>
 <p>如果程序已经成功连接，我们就得到了一个二进制的可执行模块供 WebGL 系统使用。如果连接失败了，也可以通过调用 gl.getProgramInfoLog(）从信息日志中获取连接错误的信息。</p>
-<p><img src="/images/MultiJointModel17.png" alt="gl.getProgramInfoLog"></p>
+<p><img src="MultiJointModel17.png" alt="gl.getProgramInfoLog"></p>
 <h4 id="2-8-告知-WebGL-系统所使用的程序对象（gl-useProgram）">2.8 告知 WebGL 系统所使用的程序对象（gl.useProgram）</h4>
 <p>最后，通过调用 gl.useProgram(）告知 WebGL 系统绘制时使用哪个程序对象。</p>
-<p><img src="/images/MultiJointModel18.png" alt="gl.useProgram"></p>
+<p><img src="MultiJointModel18.png" alt="gl.useProgram"></p>
 <p>这个函数的存在使得 WebGL 具有了一个强大的特性，那就是在会之前准备多个程序对象，然后在绘制的时候根据需要切换程序对象。</p>
 <p>这样，建立和初始化着色器的任务就算完成了。如你所见，initShaders(）函数隐藏了大量的细节，我们可以放心地使用该函数来创建和初始化着色器，而不必考虑这些细节。本质上，在该函数顺利执行后，顶点着色器和偏远着色器就已经就位了，只需要调用 gl.drawArryas(）或 gl.drawElements(）来使整个 WebGL 系统运行起来。</p>
 <h4 id="2-9-initShaders-）函数的内部流程">2.9 initShaders(）函数的内部流程</h4>

@@ -429,8 +429,10 @@ blockquote P{
   line-height: 30px;
   margin-bottom: 10px;
 }
+.post-container div img,
 .post-container p img{
   box-shadow: none!important;
+  
 }
 .post-container u {
   text-decoration: none;
