@@ -221,8 +221,6 @@
 
           <!-- 
           
-          
-          
           <li>
             <a href="/about/">
               
@@ -234,10 +232,12 @@
           
           
           
+          
+          
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -246,9 +246,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -470,211 +470,152 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>要点：图</p>
-<h2 id="图的概念">图的概念</h2>
-<p>在计算机程序设计中，图也是一种非常常见的数据结构，图论其实是一个非常大的话题，在数学上起源于哥尼斯堡七桥问题。</p>
-<h3 id="什么是图？">什么是图？</h3>
-<ul>
-<li>
-<p>图是一种与树有些相似的数据结构。</p>
+<h2 id="图的概念"><a href="#图的概念" class="headerlink" title="图的概念"></a>图的概念</h2><p>在计算机程序设计中，图也是一种非常常见的数据结构，图论其实是一个非常大的话题，在数学上起源于哥尼斯堡七桥问题。</p>
+<h3 id="什么是图？"><a href="#什么是图？" class="headerlink" title="什么是图？"></a>什么是图？</h3><p>图是一种与树有些相似的数据结构。</p>
 <ul>
 <li>实际上，在数学的概念上，树是图的一种。</li>
 <li>我们知道树可以用来模拟很多现实的数据结构，比如：家谱/公司组织架构等等。</li>
 </ul>
-</li>
-<li>
 <p>那么图长什么样子呢？或者什么样的数据使用图来模拟更合适呢？</p>
-<ul>
-<li>
-<p>人与人之间的关系网<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.4cdhxz0ereu0.png" alt="image"></p>
-</li>
-<li>
-<p>互联网中的网络关系<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.4ljxyy69a1s0.png" alt="image"></p>
-</li>
-<li>
-<p>广州地铁图<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.46k2cvwmthw0.png" alt="image"></p>
-</li>
-</ul>
-</li>
-<li>
+<p>人与人之间的关系网<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.4cdhxz0ereu0.png" alt="image"></p>
+<p>互联网中的网络关系<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.4ljxyy69a1s0.png" alt="image"></p>
+<p>广州地铁图<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.46k2cvwmthw0.png" alt="image"></p>
 <p>那么，什么是图呢?</p>
 <ul>
 <li>我们会发现，上面的结点（其实图中叫顶点 Vertex）之间的关系，是不能使用树来表示（几叉树都不可以）。</li>
 <li>这个时候，我们就可以使用<strong>图</strong>来模拟它们。</li>
 </ul>
-</li>
-<li>
 <p>图通常有什么特点呢？</p>
 <ul>
 <li>一组顶点：通常用 V (Vertex) 表示顶点的集合</li>
 <li>一组边：通常用 E (Edge) 表示边的集合</li>
 <li>边是顶点和顶点之间的连线</li>
-<li>边可以是有向的，也可以是无向的。（比如 A — B，通常表示无向。 A --&gt; B，通常表示有向）</li>
+<li>边可以是有向的，也可以是无向的。（比如 A —- B，通常表示无向。 A —&gt; B，通常表示有向）</li>
 </ul>
+<h3 id="图的术语"><a href="#图的术语" class="headerlink" title="图的术语"></a>图的术语</h3><h4 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h4><ul>
+<li>我们在学习树的时候，树有很多的其他术语，了解这些术语有助于我们更深层次的理解图。</li>
+<li>但是图的术语其实非常多，如果你找一本专门讲图的各个方面的书籍，会发现只是术语就可以占据一个章节。</li>
+<li>这里，这里介绍几个比较常见的术语，某些术语后面用到的时候，再了解，没有用到的，不做赘述。</li>
+<li><p>下面这是个抽象出来的图<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.rr153grdbc0.png" alt="image"></p>
 </li>
-</ul>
-<h3 id="图的术语">图的术语</h3>
-<h4 id="术语">术语</h4>
-<ul>
-<li>
-<p>我们在学习树的时候，树有很多的其他术语，了解这些术语有助于我们更深层次的理解图。</p>
-</li>
-<li>
-<p>但是图的术语其实非常多，如果你找一本专门讲图的各个方面的书籍，会发现只是术语就可以占据一个章节。</p>
-</li>
-<li>
-<p>这里，这里介绍几个比较常见的术语，某些术语后面用到的时候，再了解，没有用到的，不做赘述。</p>
-</li>
-<li>
-<p>下面这是个抽象出来的图<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.rr153grdbc0.png" alt="image"></p>
-</li>
-<li>
-<p>顶点</p>
+<li><p>顶点</p>
 <ul>
 <li>顶点刚才我们已经介绍过了，表示图中的一个结点。</li>
 <li>比如地铁站中某个站/多个村庄中的某个村庄/互联网中的某台主机/人际关系中的人。</li>
 </ul>
 </li>
-<li>
-<p>边</p>
+<li><p>边</p>
 <ul>
 <li>边表示顶点和顶点之间的连线。</li>
 <li>比如地铁站中两个站点之间的直接连线, 就是一个边。</li>
 <li>注意：这里的边不要叫做路径，路径有其他的概念，后面会区分。</li>
 </ul>
 </li>
-<li>
-<p>相邻顶点</p>
+<li><p>相邻顶点</p>
 <ul>
 <li>由一条边连接在一起的顶点称为相邻顶点。</li>
 <li>比如 <code>0 - 1</code> 是相邻的，<code>0 - 3</code> 是相邻的。<code>0 - 2</code> 是不相邻的。</li>
 </ul>
 </li>
-<li>
-<p>度</p>
+<li><p>度</p>
 <ul>
 <li>一个顶点的度是相邻顶点的数量</li>
 <li>比如 0 顶点和其他两个顶点相连，0 顶点的度是 2</li>
 <li>比如 1 顶点和其他四个顶点相连，1 顶点的度是 4</li>
 </ul>
 </li>
-<li>
-<p>路径</p>
+<li><p>路径</p>
 <ul>
 <li>路径是顶点 <code>v1</code>，<code>v2</code>…，<code>vn</code> 的一个连续序列, 比如上图中 <code>0 1 5 9</code> 就是一条路径。</li>
 <li>简单路径: 简单路径要求不包含重复的顶点. 比如 <code>0 1 5 9</code> 是一条简单路径。</li>
 <li>回路：第一个顶点和最后一个顶点相同的路径称为回路。比如 <code>0 1 5 6 3 0</code>。</li>
 </ul>
 </li>
-<li>
-<p>无向图</p>
+<li><p>无向图</p>
 <ul>
 <li>上面的图就是一张无向图，因为所有的边都没有方向。</li>
 <li>比如 <code>0 - 1</code> 之间有变，那么说明这条边可以保证 <code>0 -&gt; 1</code>，也可以保证 <code>1 -&gt; 0</code>。</li>
 </ul>
 </li>
-<li>
-<p>有向图</p>
+<li><p>有向图</p>
 <ul>
 <li>有向图表示的图中的边是有方向的。</li>
 <li>比如 <code>0 -&gt; 1</code>，不能保证一定可以 <code>1 -&gt; 0</code>，要根据方向来定。</li>
 </ul>
 </li>
 </ul>
-<h4 id="无权图和带权图">无权图和带权图</h4>
-<ul>
-<li>
-<p>无权图</p>
+<h4 id="无权图和带权图"><a href="#无权图和带权图" class="headerlink" title="无权图和带权图"></a>无权图和带权图</h4><ul>
+<li><p>无权图</p>
 <ul>
 <li>我们上面的图就是一张无权图（边没有携带权重）</li>
 <li>我们上面的图中的边是没有任何意义的，不能收 <code>0 - 1</code> 的边，比 <code>4 - 9</code> 的边更远或者用的时间更长。</li>
 </ul>
 </li>
-<li>
-<p>带权图</p>
+<li><p>带权图</p>
 <ul>
 <li>带权图表示边有一定的权重</li>
 <li>这里的权重可以是任意你希望表示的数据：比如距离或者花费的时间或者票价。</li>
-<li>我们来看一张有向和带权的图<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.3q0nj5eq5p80.png" alt="image"></li>
+<li>我们来看一张有向和带权的图<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.3q0nj5eq5p80.png" alt="image"></li>
 </ul>
 </li>
 </ul>
-<h3 id="现实建模">现实建模</h3>
-<ul>
-<li>
-<p>对交通流量建模</p>
+<h3 id="现实建模"><a href="#现实建模" class="headerlink" title="现实建模"></a>现实建模</h3><ul>
+<li><p>对交通流量建模</p>
 <ul>
 <li>顶点可以表示街道的十字路口，边可以表示街道.。</li>
 <li>加权的边可以表示限速或者车道的数量或者街道的距离。</li>
 <li>建模人员可以用这个系统来判定最佳路线以及最可能堵车的街道。</li>
 </ul>
 </li>
-<li>
-<p>对飞机航线建模</p>
+<li><p>对飞机航线建模</p>
 <ul>
 <li>航空公司可以用图来为其飞行系统建模。</li>
 <li>将每个机场看成顶点，将经过两个顶点的每条航线看作一条边。</li>
 <li>加权的边可以表示从一个机场到另一个机场的航班成本，或两个机场间的距离。</li>
-<li>建模人员可以利用这个系统有效的判断从一个城市到另一个城市的最小航行成本。<br>
-​</li>
+<li>建模人员可以利用这个系统有效的判断从一个城市到另一个城市的最小航行成本。<br>​</li>
 </ul>
 </li>
 </ul>
-<h2 id="二、图的表示">二、图的表示</h2>
-<p>我们知道一个图包含很多顶点，另外包含顶点和顶点之间的连线（边），这两个都是非常重要的图信息，因此都需要在程序中体现出来。</p>
-<h3 id="顶点表示">顶点表示</h3>
-<ul>
-<li>
-<p>顶点的表示相对简单</p>
+<h2 id="二、图的表示"><a href="#二、图的表示" class="headerlink" title="二、图的表示"></a>二、图的表示</h2><p>我们知道一个图包含很多顶点，另外包含顶点和顶点之间的连线（边），这两个都是非常重要的图信息，因此都需要在程序中体现出来。</p>
+<h3 id="顶点表示"><a href="#顶点表示" class="headerlink" title="顶点表示"></a>顶点表示</h3><ul>
+<li><p>顶点的表示相对简单</p>
 <ul>
 <li>上面的顶点，我们抽象成了 1 2 3 4，也可以抽象成 A B C D。在后面的案例中，我们使用 A B C D。</li>
 <li>那么这些 A B C D 我们可以使用一个数组来存储起来(存储所有的顶点)。</li>
 <li>当然，A B C D 有可能还表示其他含义的数据(比如村庄的名字)，这个时候，可以另外创建一个数组，用于存储对应的其他数据。</li>
 </ul>
 </li>
-<li>
-<p>边的表示略微复杂</p>
+<li><p>边的表示略微复杂</p>
 <ul>
 <li>因为边是两个顶点之间的关系，所以表示起来会稍微麻烦一些。</li>
 <li>下面是变常见的表示方式。</li>
 </ul>
 </li>
 </ul>
-<h3 id="邻接矩阵">邻接矩阵</h3>
-<ul>
-<li>
-<p>概述</p>
+<h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><ul>
+<li><p>概述</p>
 <ul>
 <li>邻接矩阵让每个节点和一个整数向关联, 该整数作为数组的下标值.</li>
 <li>我们用一个二维数组来表示顶点之间的连接.</li>
-<li>演示<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.66y7l5b21nw0.png" alt="image"></li>
+<li>演示<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.66y7l5b21nw0.png" alt="image"></li>
 </ul>
 </li>
-<li>
-<p>图片解析</p>
+<li><p>图片解析</p>
 <ul>
 <li>在二维数组中，0 表示没有连线，1 表示有连线。</li>
 <li>通过二维数组，我们可以很快的找到一个顶点和哪些顶点有连线。（比如 A 顶点, 只需要 遍历第一行即可）</li>
 <li>另外，A - A，B - B（也就是顶点到自己的连线），通常使用 0 表示。</li>
 </ul>
 </li>
-<li>
-<p>邻接矩阵的问题</p>
+<li><p>邻接矩阵的问题</p>
 <ul>
-<li>
-<p>如果是一个无向图，邻接矩阵展示出来的二维数组，其实是一个对称图。</p>
+<li><p>如果是一个无向图，邻接矩阵展示出来的二维数组，其实是一个对称图。</p>
 <ul>
 <li>也就是 A -&gt; D 是 1 的时候，对称的位置 D -&gt; 1 一定也是 1。</li>
 <li>那么这种情况下会造成空间的浪费，解决办法需自己去研究下。</li>
 </ul>
 </li>
-<li>
-<p>邻接矩阵还有一个比较严重的问题就是如果图是一个稀疏图</p>
+<li><p>邻接矩阵还有一个比较严重的问题就是如果图是一个稀疏图</p>
 <ul>
 <li>那么矩阵中将存在大量的 0，这意味着我们浪费了计算机存储空间来表示根本不存在的边。</li>
 <li>而且即使只有一个边，我们也必须遍历一行来找出这个边，也浪费很多时间。</li>
@@ -683,26 +624,21 @@
 </ul>
 </li>
 </ul>
-<h3 id="邻接表">邻接表</h3>
-<ul>
-<li>
-<p>概述</p>
+<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><ul>
+<li><p>概述</p>
 <ul>
 <li>邻接表由图中每个顶点以及和顶点相邻的顶点列表组成。</li>
 <li>这个列表有很多中方式来存储：数组/链表/字典(哈希表)都可以。</li>
-<li>演示<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.3mu1hv8a84u0.png" alt="image"></li>
+<li>演示<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.3mu1hv8a84u0.png" alt="image"></li>
 </ul>
 </li>
-<li>
-<p>图片解析</p>
+<li><p>图片解析</p>
 <ul>
 <li>其实图片比较容易理解</li>
 <li>比如我们要表示和 A 顶点有关联的顶点（边），A 和 B/C/D 有边，那么我们可以通过 A 找到 对应的数组/链表/字典，再取出其中的内容就可以啦。</li>
 </ul>
 </li>
-<li>
-<p>邻接表的问题</p>
+<li><p>邻接表的问题</p>
 <ul>
 <li>邻接表计算“出度”是比较简单的（出度：指向别人的数量, 入度: 指向自己的数量）</li>
 <li>邻接表如果需要计算有向图的“入度”，那么是一件非常麻烦的事情。</li>
@@ -710,21 +646,16 @@
 </ul>
 </li>
 </ul>
-<h2 id="三、图的封装">三、图的封装</h2>
-<h3 id="创建图类">创建图类</h3>
-<ul>
-<li>先来创建 Graph 类，定义了两个属性：
-<ul>
+<h2 id="三、图的封装"><a href="#三、图的封装" class="headerlink" title="三、图的封装"></a>三、图的封装</h2><h3 id="创建图类"><a href="#创建图类" class="headerlink" title="创建图类"></a>创建图类</h3><ul>
+<li>先来创建 Graph 类，定义了两个属性：<ul>
 <li><code>vertexes</code> 用于存储所有的顶点，使用一个数组来保存。</li>
 <li><code>adjList</code> adj 是 adjoin 的缩写，邻接的意思。adjList 用于存储所有的边，这里采用邻接表的形式。</li>
 </ul>
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Graph</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.vertexes = []; <span class="comment">// 存储顶点</span></span><br><span class="line">    <span class="built_in">this</span>.adjList = <span class="keyword">new</span> Dictionay(); <span class="comment">//存储边信息</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="添加方法">添加方法</h3>
-<ul>
-<li>添加顶点：可以向图中添加一些顶点。
-<ul>
+<h3 id="添加方法"><a href="#添加方法" class="headerlink" title="添加方法"></a>添加方法</h3><ul>
+<li>添加顶点：可以向图中添加一些顶点。<ul>
 <li>将添加的顶点放入到数组中。</li>
 <li>另外，给该顶点创建一个数组<code>[]</code>，该数组用于存储顶点连接的所有的边.（回顾邻接表的实现方式）</li>
 </ul>
@@ -732,8 +663,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加顶点</span></span><br><span class="line"><span class="function"><span class="title">addVertex</span>(<span class="params">val</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 添加点</span></span><br><span class="line">    <span class="built_in">this</span>.vertexes.push(val)</span><br><span class="line">    <span class="comment">// 添加点的关系  采用邻接矩阵法 结构用Map</span></span><br><span class="line">    <span class="built_in">this</span>.adjList.set(val, [])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>添加边：可以指定顶点和顶点之间的边。
-<ul>
+<li>添加边：可以指定顶点和顶点之间的边。<ul>
 <li>添加边需要传入两个顶点，因为边是两个顶点之间的边，边不可能单独存在。</li>
 <li>根据顶点 v 取出对应的数组，将 w 加入到它的数组中。</li>
 <li>根据顶点 w 取出对应的数组，将 v 加入到它的数组中。</li>
@@ -744,41 +674,32 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加边</span></span><br><span class="line"><span class="function"><span class="title">addEdge</span>(<span class="params">val1, val2</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 添加边需要传入两个顶点, 因为边是两个顶点之间的边, 边不可能单独存在.</span></span><br><span class="line">    <span class="comment">// 这里实现的是无向图, 所以这里不考虑方向问题</span></span><br><span class="line">    <span class="built_in">this</span>.adjList.get(val1).push(val2)</span><br><span class="line">    <span class="built_in">this</span>.adjList.get(val2).push(val1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>toString 方法：为了能够正确的显示图的结果，就是拿出二维数组的每一项。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出图结构</span></span><br><span class="line"><span class="function"><span class="title">toString</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> res = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.vertexes.length; i++) &#123;</span><br><span class="line">        res += <span class="built_in">this</span>.vertexes[i] + <span class="string">&quot;-&gt;&quot;</span></span><br><span class="line">        <span class="keyword">let</span> adj = <span class="built_in">this</span>.adjList.get(<span class="built_in">this</span>.vertexes[i])</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; adj.length; j++) &#123;</span><br><span class="line">            res += adj[j] + <span class="string">&quot;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        res += <span class="string">&quot;\n&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="测试代码">测试代码</h3>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 测试代码</span></span><br><span class="line"><span class="keyword">let</span> graph = <span class="keyword">new</span> Graph();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加顶点</span></span><br><span class="line"><span class="keyword">let</span> myVertexes = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>, <span class="string">&quot;E&quot;</span>, <span class="string">&quot;F&quot;</span>, <span class="string">&quot;G&quot;</span>, <span class="string">&quot;H&quot;</span>, <span class="string">&quot;I&quot;</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; myVertexes.length; i++) &#123;</span><br><span class="line">  graph.addVertex(myVertexes[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加边</span></span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;C&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;D&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;G&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;D&quot;</span>, <span class="string">&quot;G&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;D&quot;</span>, <span class="string">&quot;H&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;B&quot;</span>, <span class="string">&quot;E&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;B&quot;</span>, <span class="string">&quot;F&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;E&quot;</span>, <span class="string">&quot;I&quot;</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="四、图的遍历">四、图的遍历</h2>
-<p>和其他数据结构一样，需要通过某种算法来遍历图结构中每一个数据。这样可以保证，在我们需要时，通过这种算法来访问某个顶点的数据以及它对应的边。</p>
-<h3 id="遍历的方式">遍历的方式</h3>
-<ul>
-<li>
-<p>图的遍历思想<br>
-图的遍历算法的思想在于必须访问每个第一次访问的节点，并且追踪有哪些顶点还没有被访问到。</p>
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 测试代码</span></span><br><span class="line"><span class="keyword">let</span> graph = <span class="keyword">new</span> Graph();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加顶点</span></span><br><span class="line"><span class="keyword">let</span> myVertexes = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>, <span class="string">&quot;E&quot;</span>, <span class="string">&quot;F&quot;</span>, <span class="string">&quot;G&quot;</span>, <span class="string">&quot;H&quot;</span>, <span class="string">&quot;I&quot;</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; myVertexes.length; i++) &#123;</span><br><span class="line">  graph.addVertex(myVertexes[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加边</span></span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;C&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;A&quot;</span>, <span class="string">&quot;D&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;G&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;D&quot;</span>, <span class="string">&quot;G&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;D&quot;</span>, <span class="string">&quot;H&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;B&quot;</span>, <span class="string">&quot;E&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;B&quot;</span>, <span class="string">&quot;F&quot;</span>);</span><br><span class="line">graph.addEdge(<span class="string">&quot;E&quot;</span>, <span class="string">&quot;I&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="四、图的遍历"><a href="#四、图的遍历" class="headerlink" title="四、图的遍历"></a>四、图的遍历</h2><p>和其他数据结构一样，需要通过某种算法来遍历图结构中每一个数据。这样可以保证，在我们需要时，通过这种算法来访问某个顶点的数据以及它对应的边。</p>
+<h3 id="遍历的方式"><a href="#遍历的方式" class="headerlink" title="遍历的方式"></a>遍历的方式</h3><ul>
+<li><p>图的遍历思想<br>图的遍历算法的思想在于必须访问每个第一次访问的节点，并且追踪有哪些顶点还没有被访问到。</p>
 </li>
-<li>
-<p>有两种算法可以对图进行遍历</p>
+<li><p>有两种算法可以对图进行遍历</p>
 <ul>
 <li>广度优先搜索(Breadth-First Search, 简称 BFS)</li>
 <li>深度优先搜索(Depth-First Search, 简称 DFS)</li>
 <li>两种遍历算法，都需要明确指定第一个被访问的顶点。</li>
 </ul>
 </li>
-<li>
-<p>遍历的注意点</p>
+<li><p>遍历的注意点</p>
 <ul>
 <li>完全探索一个顶点要求我们便查看该顶点的每一条边。</li>
 <li>对于每一条所连接的没有被访问过的顶点，将其标注为被发现的，并将其加进待访问顶点列表中。</li>
 <li>为了保证算法的效率：每个顶点至多访问两次。</li>
 </ul>
 </li>
-<li>
-<p>两种算法的思想</p>
+<li><p>两种算法的思想</p>
 <ul>
 <li>BFS 基于队列，入队列的顶点先被探索。</li>
 <li>DFS 基于栈，通过将顶点存入栈中，顶点是沿着路径被探索的，存在新的相邻顶点就去访问。</li>
 </ul>
 </li>
-<li>
-<p>为了记录顶点是否被访问过，我们使用三种颜色来反应它们的状态。(或者两种颜色也可以)</p>
+<li><p>为了记录顶点是否被访问过，我们使用三种颜色来反应它们的状态。(或者两种颜色也可以)</p>
 <ul>
 <li><strong>白色</strong>表示该顶点还没有被访问.</li>
 <li><strong>灰色</strong>表示该顶点被访问过, 但并未被探索过.</li>
@@ -788,23 +709,16 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化顶点的颜色</span></span><br><span class="line"><span class="function"><span class="title">_initializeColor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 白色: 表示该顶点还没有被访问.</span></span><br><span class="line">    <span class="comment">// 灰色: 表示该顶点被访问过, 但并未被探索过.</span></span><br><span class="line">    <span class="comment">// 黑色: 表示该顶点被访问过且被完全探索过.</span></span><br><span class="line">    <span class="keyword">let</span> colors = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.vertexes.length; i++) &#123;</span><br><span class="line">        colors[<span class="built_in">this</span>.vertexes[i]] = <span class="string">&quot;white&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> colors</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="广度优先搜索-BFS">广度优先搜索(BFS)</h3>
-<ul>
-<li>
-<p>广度优先搜索算法的思路<br>
-广度优先算法会从指定的第一个顶点开始遍历图，先访问其所有的相邻点，就像一次访问图的一层。换句话说，就是先宽后深的访问顶点。</p>
+<h3 id="广度优先搜索-BFS"><a href="#广度优先搜索-BFS" class="headerlink" title="广度优先搜索(BFS)"></a>广度优先搜索(BFS)</h3><ul>
+<li><p>广度优先搜索算法的思路<br>广度优先算法会从指定的第一个顶点开始遍历图，先访问其所有的相邻点，就像一次访问图的一层。换句话说，就是先宽后深的访问顶点。</p>
 </li>
-<li>
-<p>图解 BFS<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.3vz7fx7tgvs0.png" alt="image"></p>
+<li><p>图解 BFS<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.3vz7fx7tgvs0.png" alt="image"></p>
 </li>
-<li>
-<p>广度优先搜索的实现</p>
+<li><p>广度优先搜索的实现</p>
 <ol>
 <li>创建一个队列 Q</li>
 <li>将 v 标注为被发现的(灰色), 并将 v 将入队列 Q</li>
-<li>如果 Q 非空, 执行下面的步骤：
-<ul>
+<li>如果 Q 非空, 执行下面的步骤：<ul>
 <li>将 v 从 Q 中取出队列</li>
 <li>将 v 标注为被发现的灰色</li>
 <li>将 v 所有的未被访问过的邻接点（白色），加入到队列中</li>
@@ -813,42 +727,30 @@
 </li>
 </ol>
 </li>
-<li>
-<p>广度优先搜索的代码</p>
+<li><p>广度优先搜索的代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 广度优先搜索</span></span><br><span class="line"><span class="function"><span class="title">bfs</span>(<span class="params">handle</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1.初始化颜色</span></span><br><span class="line">    <span class="keyword">let</span> color = <span class="built_in">this</span>._initializeColor()</span><br><span class="line">    <span class="comment">// 2. 创建队列</span></span><br><span class="line">    <span class="keyword">let</span> queue = <span class="keyword">new</span> Queue</span><br><span class="line">    <span class="comment">// 3. 将传入的顶点放入队列</span></span><br><span class="line">    queue.enqueue(<span class="built_in">this</span>.vertexes[<span class="number">0</span>])</span><br><span class="line">    <span class="comment">// 4.依赖队列操作数据   队列不为空时一直持续</span></span><br><span class="line">    <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">        <span class="comment">// 4.1 拿到队头</span></span><br><span class="line">        <span class="keyword">let</span> qVal = queue.dequeue()</span><br><span class="line">        <span class="comment">//  4.2 拿到队头所关联（相连）的点并设置为访问中状态（灰色）</span></span><br><span class="line">        <span class="keyword">let</span> qAdj = <span class="built_in">this</span>.adjList.get(qVal)</span><br><span class="line">        color[qVal] = <span class="string">&quot;gray&quot;</span></span><br><span class="line">        <span class="comment">// 4.3 将队头关联的点添加到队尾</span></span><br><span class="line">        <span class="comment">// 这一步是完成bfs的关键，依赖队列的先进先出的特点。</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; qAdj.length; i++) &#123;</span><br><span class="line">            <span class="keyword">let</span> a = qAdj[i]</span><br><span class="line">            <span class="keyword">if</span> (color[a] === <span class="string">&quot;white&quot;</span>) &#123;</span><br><span class="line">                color[a] = <span class="string">&quot;gray&quot;</span></span><br><span class="line">                queue.enqueue(a)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 4.5设置访问完的点为黑色。</span></span><br><span class="line">        color[qVal] = <span class="string">&quot;black&quot;</span></span><br><span class="line">        <span class="keyword">if</span> (handle) [</span><br><span class="line">            handle(qVal)</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>测试代码</p>
+<li><p>测试代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用广度优先算法</span></span><br><span class="line"><span class="keyword">let</span> result = <span class="string">&quot;&quot;</span>;</span><br><span class="line">graph.bfs(graph.vertexes[<span class="number">0</span>], <span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">  result += v + <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(result); <span class="comment">// A B C D E F G H I</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="深度优先搜索-DFS">深度优先搜索(DFS)</h3>
-<p>深度优先搜索的思路：</p>
+<h3 id="深度优先搜索-DFS"><a href="#深度优先搜索-DFS" class="headerlink" title="深度优先搜索(DFS)"></a>深度优先搜索(DFS)</h3><p>深度优先搜索的思路：</p>
 <ul>
 <li>深度优先搜索算法将会从第一个指定的顶点开始遍历图，沿着路径知道这条路径最后被访问了。</li>
 <li>接着原路回退并探索吓一条路径。</li>
-<li>图解 DFS<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.1bjimck65r8g.png" alt="image"></li>
+<li>图解 DFS<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.1bjimck65r8g.png" alt="image"></li>
 </ul>
 <p>深度优先搜索算法的实现：</p>
 <ul>
-<li>
-<p>广度优先搜索算法我们使用的是队列，这里可以使用栈完成，也可以使用递归。</p>
-</li>
-<li>
-<p>方便代码书写，我们还是使用递归(递归本质上就是函数栈的调用)</p>
-</li>
-<li>
-<p>深度优先搜索算法的代码：</p>
+<li>广度优先搜索算法我们使用的是队列，这里可以使用栈完成，也可以使用递归。</li>
+<li>方便代码书写，我们还是使用递归(递归本质上就是函数栈的调用)</li>
+<li><p>深度优先搜索算法的代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 深度优先搜索</span></span><br><span class="line"><span class="function"><span class="title">dfs</span>(<span class="params">handle</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1.初始化颜色</span></span><br><span class="line">    <span class="keyword">let</span> color = <span class="built_in">this</span>._initializeColor()</span><br><span class="line">    <span class="comment">// 2. 遍历所有顶点，开始访问</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.vertexes.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (color[<span class="built_in">this</span>.vertexes[i]] === <span class="string">&quot;white&quot;</span>) &#123;</span><br><span class="line">            <span class="built_in">this</span>._dfsVisit(<span class="built_in">this</span>.vertexes[i], color, handle)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// dfs的递归方法  这里直接使用函数的调用栈</span></span><br><span class="line"><span class="function"><span class="title">_dfsVisit</span>(<span class="params">val, color, handle</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1. 将颜色设置为访问中</span></span><br><span class="line">    color[val] = <span class="string">&quot;gray&quot;</span></span><br><span class="line">    <span class="comment">// 2. 执行相应的回调</span></span><br><span class="line">    <span class="keyword">if</span> (handle) &#123;</span><br><span class="line">        handle(val)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 3. 拿与该点相邻的点，对每个点操作</span></span><br><span class="line">    <span class="keyword">let</span> adj = <span class="built_in">this</span>.adjList.get(val)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; adj.length; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> w = adj[i]</span><br><span class="line">        <span class="comment">// 如果相邻点未未访问状态，开始访问。</span></span><br><span class="line">        <span class="keyword">if</span> (color[w] === <span class="string">&quot;white&quot;</span>) &#123;</span><br><span class="line">            <span class="built_in">this</span>._dfsVisit(w, color, handle)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 4. 处理完后设置为访问过点。</span></span><br><span class="line">    color[val] = <span class="string">&quot;black&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>测试代码</p>
+<li><p>测试代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用深度优先算法</span></span><br><span class="line">result = <span class="string">&quot;&quot;</span>;</span><br><span class="line">graph.dfs(<span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">  result += v + <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 输出深度优先</span></span><br><span class="line"><span class="built_in">console</span>.log(result); <span class="comment">//A B E I F C D G H</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>递归的代码较难理解一些，这副图来帮助理解过程：<br>
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image.6z6nkgmevxo0.png" alt="image"></p>
+<li><p>递归的代码较难理解一些，这副图来帮助理解过程：<br><img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/JavaScript-数据结构与算法/image.6z6nkgmevxo0.png" alt="image"></p>
 </li>
 </ul>
 
@@ -1140,7 +1042,7 @@
           2021
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
-          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">263.4k</span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">263.2k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
