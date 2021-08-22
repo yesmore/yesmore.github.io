@@ -471,63 +471,46 @@
 
         <p>对应《WebGL编程指南》第六章 GLSL ES</p>
 <span id="more"></span>
-<h2 id="总览">总览</h2>
-<p>本章知识点：</p>
+<h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><p>本章知识点：</p>
 <p>1、数据、变量和变量类型</p>
 <p>2、矢量、矩阵、结构体、数组、采样器（纹理）</p>
 <p>3、运算、程序流、函数</p>
 <p>4、attribute、uniform和varying变量</p>
 <p>5、精度限定词</p>
 <p>6、预处理和指令</p>
-<h2 id="回顾">回顾</h2>
-<h3 id="基本着色器代码">基本着色器代码</h3>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//顶点着色器程序</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec2 a_TexCoord;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec2 v_TexCoord;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   v_TexCoord = a_TexCoord;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//片元着色器程序</span></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;#ifdef GL_ES\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;precision mediump float;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;#endif\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform sampler2D u_Sampler0;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform sampler2D u_Sampler1;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec2 v_TexCoord;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   vec4 color0 = texture2D(u_Sampler0, v_TexCoord);\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   vec4 color1 = texture2D(u_Sampler1, v_TexCoord);\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   gl_FragColor = color0 * color1;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="知识点">知识点</h2>
-<h3 id="一、GLSL-ES概述">一、GLSL ES概述</h3>
-<p>​		<code>GLSL ES</code>编程语言是在<code>OpenGL</code>着色器语言（GLSL）基础上，删除和简化一部分功能后形成的。各位看到<code>ES</code>版本应该会想到<code>GLSL ES</code>应用在手机、游戏主机等设备上，这样可以<strong>降低硬件的功耗，同时也能减少性能开销</strong>。</p>
-<p>​		<code>GLSL ES</code>的语法与C语言类似。此外，着色器语言也开始被用来完成一些通用的任务，如图像处理和数据运算（所谓的GPGPU）。</p>
-<h3 id="二、基础语法">二、基础语法</h3>
-<h4 id="2-1-基础">2.1 基础</h4>
-<p>​	 <code>GLSL ES</code>对大小写是敏感的，例如：<code>Niuniu</code>和<code>niuniu</code>这就对应的是两个不同的变量；</p>
-<p>​	 每条语句都要有<code>;</code>结束</p>
-<h4 id="2-2-执行次序">2.2 执行次序</h4>
-<p>​	 每个着色器程序都要有<code>main()</code>函数，就像<code>C语言</code>一样，每个着色器程序都从<code>main</code>开始执行，但是<code>GLSL ES</code>中的<code>main()</code>函数并<strong>不接收任何参数</strong>，并且必须是<code>void</code>类型；</p>
-<p>​	 <code>void</code>表示函数没有返回值，若有返回值，需明确返回值类型。</p>
-<h4 id="2-3-注释">2.3 注释</h4>
-<p>​	 单行注释使用<code>//</code>，多行注释则是<code>/* 注释 */</code>；</p>
-<h3 id="三、数据值类型（数值额布尔值）">三、数据值类型（数值额布尔值）</h3>
-<p><strong>3.1</strong> <code>GLSL ES</code>支持两种数据值类型：</p>
-<p>​	 <strong>数值类型</strong>：<code>GLSL ES</code>支持整数类型和浮点数，没有小数点的值被认定为整数类型，而有小数点的则被认为是浮点数；</p>
-<p>​	 <strong>布尔值类型</strong>：<code>true</code>和<code>false</code>，无需多言。</p>
+<h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><h3 id="基本着色器代码"><a href="#基本着色器代码" class="headerlink" title="基本着色器代码"></a>基本着色器代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//顶点着色器程序</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;attribute vec4 a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;attribute vec2 a_TexCoord;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec2 v_TexCoord;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   gl_Position = a_Position;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;   v_TexCoord = a_TexCoord;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//片元着色器程序</span></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;#ifdef GL_ES\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;precision mediump float;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;#endif\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform sampler2D u_Sampler0;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;uniform sampler2D u_Sampler1;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;varying vec2 v_TexCoord;\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   vec4 color0 = texture2D(u_Sampler0, v_TexCoord);\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   vec4 color1 = texture2D(u_Sampler1, v_TexCoord);\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;   gl_FragColor = color0 * color1;\n&#x27;</span>+</span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="一、GLSL-ES概述"><a href="#一、GLSL-ES概述" class="headerlink" title="一、GLSL ES概述"></a>一、GLSL ES概述</h3><p>​        <code>GLSL ES</code>编程语言是在<code>OpenGL</code>着色器语言（GLSL）基础上，删除和简化一部分功能后形成的。各位看到<code>ES</code>版本应该会想到<code>GLSL ES</code>应用在手机、游戏主机等设备上，这样可以<strong>降低硬件的功耗，同时也能减少性能开销</strong>。</p>
+<p>​        <code>GLSL ES</code>的语法与C语言类似。此外，着色器语言也开始被用来完成一些通用的任务，如图像处理和数据运算（所谓的GPGPU）。</p>
+<h3 id="二、基础语法"><a href="#二、基础语法" class="headerlink" title="二、基础语法"></a>二、基础语法</h3><h4 id="2-1-基础"><a href="#2-1-基础" class="headerlink" title="2.1 基础"></a>2.1 基础</h4><p>​     <code>GLSL ES</code>对大小写是敏感的，例如：<code>Niuniu</code>和<code>niuniu</code>这就对应的是两个不同的变量；</p>
+<p>​     每条语句都要有<code>;</code>结束</p>
+<h4 id="2-2-执行次序"><a href="#2-2-执行次序" class="headerlink" title="2.2 执行次序"></a>2.2 执行次序</h4><p>​     每个着色器程序都要有<code>main()</code>函数，就像<code>C语言</code>一样，每个着色器程序都从<code>main</code>开始执行，但是<code>GLSL ES</code>中的<code>main()</code>函数并<strong>不接收任何参数</strong>，并且必须是<code>void</code>类型；</p>
+<p>​     <code>void</code>表示函数没有返回值，若有返回值，需明确返回值类型。</p>
+<h4 id="2-3-注释"><a href="#2-3-注释" class="headerlink" title="2.3 注释"></a>2.3 注释</h4><p>​     单行注释使用<code>//</code>，多行注释则是<code>/* 注释 */</code>；</p>
+<h3 id="三、数据值类型（数值额布尔值）"><a href="#三、数据值类型（数值额布尔值）" class="headerlink" title="三、数据值类型（数值额布尔值）"></a>三、数据值类型（数值额布尔值）</h3><p><strong>3.1</strong> <code>GLSL ES</code>支持两种数据值类型：</p>
+<p>​     <strong>数值类型</strong>：<code>GLSL ES</code>支持整数类型和浮点数，没有小数点的值被认定为整数类型，而有小数点的则被认为是浮点数；</p>
+<p>​     <strong>布尔值类型</strong>：<code>true</code>和<code>false</code>，无需多言。</p>
 <blockquote>
 <p><code>GLSL ES</code>不支持字符串类型，虽然字符串对三维图形语言来说还是有一定意义的。</p>
 </blockquote>
-<h3 id="四、变量">四、变量</h3>
-<h4 id="4-1-变量名规则">4.1 变量名规则</h4>
-<ul>
-<li>
-<p>只能由<code>a-z</code>、<code>A-Z</code>、<code>0-9</code>以及<code>_</code>组成</p>
+<h3 id="四、变量"><a href="#四、变量" class="headerlink" title="四、变量"></a>四、变量</h3><h4 id="4-1-变量名规则"><a href="#4-1-变量名规则" class="headerlink" title="4.1 变量名规则"></a>4.1 变量名规则</h4><ul>
+<li><p>只能由<code>a-z</code>、<code>A-Z</code>、<code>0-9</code>以及<code>_</code>组成</p>
 </li>
-<li>
-<p>变量名的第一个字符不能为数字</p>
+<li><p>变量名的第一个字符不能为数字</p>
 </li>
-<li>
-<p>不能以<code>gl_</code>、<code>webgl_</code>或<code>_webgl</code>开头，这些前缀已被<code>OpenGL ES</code>保留了</p>
+<li><p>不能以<code>gl_</code>、<code>webgl_</code>或<code>_webgl</code>开头，这些前缀已被<code>OpenGL ES</code>保留了</p>
 </li>
-<li>
-<p>不能是下表中所列出的关键字</p>
+<li><p>不能是下表中所列出的关键字</p>
 </li>
 </ul>
 <p><img src="glsles1.jpg" alt="1"></p>
-<p>​		GLSL ES保留字：</p>
+<p>​        GLSL ES保留字：</p>
 <p><img src="glsles2.jpg" alt="2"></p>
-<h4 id="4-2-GLSL-ES是强类型语言">4.2 GLSL ES是强类型语言</h4>
-<p>​	声明变量的方式：&lt;类型&gt; &lt;变量名&gt;，例：</p>
+<h4 id="4-2-GLSL-ES是强类型语言"><a href="#4-2-GLSL-ES是强类型语言" class="headerlink" title="4.2 GLSL ES是强类型语言"></a>4.2 GLSL ES是强类型语言</h4><p>​    声明变量的方式：&lt;类型&gt; &lt;变量名&gt;，例：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec4</span> a_Position</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>进行赋值操作时，等号左右两侧的数据类型必须一致。</p>
 </blockquote>
-<h3 id="五、基本类型">五、基本类型</h3>
+<h3 id="五、基本类型"><a href="#五、基本类型" class="headerlink" title="五、基本类型"></a>五、基本类型</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -550,10 +533,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明变量</span></span><br><span class="line"><span class="type">float</span> fnumber = <span class="number">1.1</span>;	<span class="comment">// 浮点数</span></span><br><span class="line"><span class="type">int</span> inumber = <span class="number">1</span>;	<span class="comment">// 整型</span></span><br><span class="line"><span class="type">bool</span> blogic = <span class="literal">true</span>;	<span class="comment">// 布尔型</span></span><br></pre></td></tr></table></figure>
-<h4 id="5-1-赋值和类型转换">5.1 赋值和类型转换</h4>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 强制类型转换</span></span><br><span class="line"><span class="type">int</span> fresult = <span class="type">int</span>(fnumber);	<span class="comment">// 去掉小数部分，例如：3.14转换为3</span></span><br><span class="line"><span class="type">bool</span> bresult = <span class="type">int</span>(blogic);	<span class="comment">// true转为1，false转为0</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> iresult = <span class="type">float</span>(inumber);	<span class="comment">// 整型转换为浮点数，例如：3转换为3.0</span></span><br><span class="line">bresult = <span class="type">float</span>(blogic);	<span class="comment">// 布尔型转换为浮点数，true转为1.0，false转为0.0</span></span><br><span class="line"></span><br><span class="line">iresult = <span class="type">bool</span>(inumber);	<span class="comment">// 整型转换为布尔型，0转为false，其余非0数转为true</span></span><br><span class="line">fresult = <span class="type">bool</span>(fnumber);	<span class="comment">// 整型转换为布尔型，0.0转为false，其余非0.0数转为true</span></span><br></pre></td></tr></table></figure>
-<h4 id="5-2-运算符">5.2 运算符</h4>
+<h4 id="5-1-赋值和类型转换"><a href="#5-1-赋值和类型转换" class="headerlink" title="5.1 赋值和类型转换"></a>5.1 赋值和类型转换</h4><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 强制类型转换</span></span><br><span class="line"><span class="type">int</span> fresult = <span class="type">int</span>(fnumber);	<span class="comment">// 去掉小数部分，例如：3.14转换为3</span></span><br><span class="line"><span class="type">bool</span> bresult = <span class="type">int</span>(blogic);	<span class="comment">// true转为1，false转为0</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> iresult = <span class="type">float</span>(inumber);	<span class="comment">// 整型转换为浮点数，例如：3转换为3.0</span></span><br><span class="line">bresult = <span class="type">float</span>(blogic);	<span class="comment">// 布尔型转换为浮点数，true转为1.0，false转为0.0</span></span><br><span class="line"></span><br><span class="line">iresult = <span class="type">bool</span>(inumber);	<span class="comment">// 整型转换为布尔型，0转为false，其余非0数转为true</span></span><br><span class="line">fresult = <span class="type">bool</span>(fnumber);	<span class="comment">// 整型转换为布尔型，0.0转为false，其余非0.0数转为true</span></span><br></pre></td></tr></table></figure>
+<h4 id="5-2-运算符"><a href="#5-2-运算符" class="headerlink" title="5.2 运算符"></a>5.2 运算符</h4><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -567,7 +550,7 @@
 <td>加减乘除</td>
 </tr>
 <tr>
-<td>++  –</td>
+<td>++  —</td>
 <td>自增、自减</td>
 </tr>
 <tr>
@@ -583,7 +566,9 @@
 <td>取反</td>
 </tr>
 <tr>
-<td>&amp;&amp;  ||  ^^</td>
+<td>&amp;&amp;  \</td>
+<td>\</td>
+<td>^^</td>
 <td>逻辑与、或、异或</td>
 </tr>
 <tr>
@@ -592,24 +577,14 @@
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <p><strong>逻辑与（&amp;&amp;）</strong>：只有第一个表达式的计算值为true时才会计算第二个表达式（找错）。</p>
 <p><strong>逻辑或（||）</strong>：只有第一个表达式的计算值为false时才会计算第二个表达式（找对）。</p>
 <p><strong>逻辑异或（^^）</strong>：只有当左右两个表达式中有且仅有一个为true时，运算结果为true，否则为false。</p>
 </blockquote>
-<h3 id="六、矢量和矩阵">六、矢量和矩阵</h3>
-<h4 id="6-1-矢量和矩阵举例">6.1 矢量和矩阵举例</h4>
-<p>矢量 $\begin{pmatrix}<br>
-8 &amp; 3 &amp; 0<br>
-\end{pmatrix}<br>
-$		矩阵$<br>
-\begin{bmatrix}<br>
-8 &amp; 3 &amp; 0 \\<br>
-4 &amp; 3 &amp; 6 \\<br>
-3 &amp; 2 &amp; 6<br>
-\end{bmatrix}<br>
-$​</p>
-<h4 id="6-2-矢量和矩阵的类型">6.2 矢量和矩阵的类型</h4>
+<h3 id="六、矢量和矩阵"><a href="#六、矢量和矩阵" class="headerlink" title="六、矢量和矩阵"></a>六、矢量和矩阵</h3><h4 id="6-1-矢量和矩阵举例"><a href="#6-1-矢量和矩阵举例" class="headerlink" title="6.1 矢量和矩阵举例"></a>6.1 矢量和矩阵举例</h4><p>矢量 $\begin{pmatrix}<br>    8 &amp; 3 &amp; 0<br>\end{pmatrix}<br>$        矩阵$<br>\begin{bmatrix}<br>    8 &amp; 3 &amp; 0 \\<br>    4 &amp; 3 &amp; 6 \\<br>    3 &amp; 2 &amp; 6<br>\end{bmatrix}<br>$​</p>
+<h4 id="6-2-矢量和矩阵的类型"><a href="#6-2-矢量和矩阵的类型" class="headerlink" title="6.2 矢量和矩阵的类型"></a>6.2 矢量和矩阵的类型</h4><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -641,40 +616,25 @@ $​</p>
 </tr>
 </tbody>
 </table>
-<h4 id="6-3-赋值和构造">6.3 赋值和构造</h4>
-<p><strong>6.3.1</strong> 通常使用与数据类型同名的内置构造函数来生成变量，对于vec4类型，就可以使用内置的<code>vec4()</code>函数，如：</p>
+</div>
+<h4 id="6-3-赋值和构造"><a href="#6-3-赋值和构造" class="headerlink" title="6.3 赋值和构造"></a>6.3 赋值和构造</h4><p><strong>6.3.1</strong> 通常使用与数据类型同名的内置构造函数来生成变量，对于vec4类型，就可以使用内置的<code>vec4()</code>函数，如：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec4</span> v4 = <span class="type">vec4</span>(<span class="number">1.0</span>,<span class="number">2.0</span>,<span class="number">3.0</span>,<span class="number">4.0</span>);</span><br></pre></td></tr></table></figure>
 <p><strong>6.3.2</strong> 构造函数</p>
 <p>概念：专门创建指定类型的变量的函数被称为<strong>构造函数</strong>，构造函数的名称和其创建的变量的类型名称总数一致的。</p>
-<h4 id="6-4-矢量构造函数">6.4 矢量构造函数</h4>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec3</span> v3 = <span class="type">vec3</span>(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.5</span>);	<span class="comment">// 将矢量v3设为(1.0, 0.0, 0.5)</span></span><br><span class="line"><span class="type">vec2</span> v2 = <span class="type">vec2</span>(v3);	<span class="comment">// 使用v3的前两个值，将v2设为(1.0, 0.0)</span></span><br><span class="line"><span class="type">vec4</span> v4 = <span class="type">vec4</span>(<span class="number">1.0</span>);	<span class="comment">// 将v4设为(1.0, 1.0, 1.0, 1.0)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 也可以使用多个矢量组合成一个矢量，例如：</span></span><br><span class="line"><span class="type">vec4</span> v4_2 = <span class="type">vec4</span>(v2, v4);	<span class="comment">// 将v4_2设为(1.0, 0.0, 1.0, 1.0)，如果v2没有填满就继续用第二个参数v4中的元素填充</span></span><br></pre></td></tr></table></figure>
-<h4 id="6-5-矩阵构造函数">6.5 矩阵构造函数</h4>
-<p>​		矩阵构造函数的使用方式与矢量构造函数的使用方式类似，但是要保证存储在矩阵中的元素是按照<a target="_blank" rel="noopener" href="https://freepiao.cn/2021/07/26/RotatedTriangle-Matrix/#%E5%88%86%E6%9E%90%E4%BB%A3%E7%A0%812%EF%BC%9A">列主序</a>排列的。下面是使用矩阵构造函数的不同方式。</p>
-<h5 id="6-5-1-方式一">6.5.1 方式一</h5>
-<p>​		使用矩阵构造函数：</p>
+<h4 id="6-4-矢量构造函数"><a href="#6-4-矢量构造函数" class="headerlink" title="6.4 矢量构造函数"></a>6.4 矢量构造函数</h4><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec3</span> v3 = <span class="type">vec3</span>(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.5</span>);	<span class="comment">// 将矢量v3设为(1.0, 0.0, 0.5)</span></span><br><span class="line"><span class="type">vec2</span> v2 = <span class="type">vec2</span>(v3);	<span class="comment">// 使用v3的前两个值，将v2设为(1.0, 0.0)</span></span><br><span class="line"><span class="type">vec4</span> v4 = <span class="type">vec4</span>(<span class="number">1.0</span>);	<span class="comment">// 将v4设为(1.0, 1.0, 1.0, 1.0)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 也可以使用多个矢量组合成一个矢量，例如：</span></span><br><span class="line"><span class="type">vec4</span> v4_2 = <span class="type">vec4</span>(v2, v4);	<span class="comment">// 将v4_2设为(1.0, 0.0, 1.0, 1.0)，如果v2没有填满就继续用第二个参数v4中的元素填充</span></span><br></pre></td></tr></table></figure>
+<h4 id="6-5-矩阵构造函数"><a href="#6-5-矩阵构造函数" class="headerlink" title="6.5 矩阵构造函数"></a>6.5 矩阵构造函数</h4><p>​        矩阵构造函数的使用方式与矢量构造函数的使用方式类似，但是要保证存储在矩阵中的元素是按照<a target="_blank" rel="noopener" href="https://freepiao.cn/2021/07/26/RotatedTriangle-Matrix/#%E5%88%86%E6%9E%90%E4%BB%A3%E7%A0%812%EF%BC%9A">列主序</a>排列的。下面是使用矩阵构造函数的不同方式。</p>
+<h5 id="6-5-1-方式一"><a href="#6-5-1-方式一" class="headerlink" title="6.5.1 方式一"></a>6.5.1 方式一</h5><p>​        使用矩阵构造函数：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">mat4</span> m4 = <span class="type">mat4</span>(<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">4.0</span>,</span><br><span class="line">              <span class="number">5.0</span>, <span class="number">6.0</span>, <span class="number">7.0</span>, <span class="number">8.0</span>,</span><br><span class="line">              <span class="number">9.0</span>, <span class="number">10.0</span>, <span class="number">11.0</span>, <span class="number">12.0</span>,</span><br><span class="line">              <span class="number">13.0</span>, <span class="number">14.0</span>, <span class="number">15.0</span>, <span class="number">16.0</span>);</span><br></pre></td></tr></table></figure>
-<p>上面构造的<code>4 x 4</code>矩阵对应的是：$<br>
-\begin{bmatrix}<br>
-1.0 &amp; 5.0 &amp; 9.0 &amp; 13.0 \\<br>
-2.0 &amp; 6.0 &amp; 10.0 &amp; 14.0 \\<br>
-3.0 &amp; 7.0 &amp; 11.0 &amp; 15.0 \\<br>
-4.0 &amp; 8.0 &amp; 12.0 &amp; 16.0<br>
-\end{bmatrix}<br>
-$</p>
-<h5 id="6-5-2-方式二">6.5.2 方式二</h5>
-<p>​		也可以向矩阵构造函数中传入一个或多个矢量，按照<strong>列主序</strong>使用矢量里的元素值来构造矩阵：</p>
+<p>上面构造的<code>4 x 4</code>矩阵对应的是：$<br>\begin{bmatrix}<br>    1.0 &amp; 5.0 &amp; 9.0 &amp; 13.0 \\<br>    2.0 &amp; 6.0 &amp; 10.0 &amp; 14.0 \\<br>    3.0 &amp; 7.0 &amp; 11.0 &amp; 15.0 \\<br>    4.0 &amp; 8.0 &amp; 12.0 &amp; 16.0<br>\end{bmatrix}<br>$</p>
+<h5 id="6-5-2-方式二"><a href="#6-5-2-方式二" class="headerlink" title="6.5.2 方式二"></a>6.5.2 方式二</h5><p>​        也可以向矩阵构造函数中传入一个或多个矢量，按照<strong>列主序</strong>使用矢量里的元素值来构造矩阵：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec2</span> v2_1 = <span class="type">vec2</span>(<span class="number">1.0</span>, <span class="number">3.0</span>);</span><br><span class="line"><span class="type">vec2</span> v2_2 = <span class="type">vec2</span>(<span class="number">2.0</span>, <span class="number">4.0</span>);</span><br><span class="line"><span class="type">mat2</span> m2_1 = <span class="type">mat2</span>(v2_1, v2_2);</span><br><span class="line"><span class="comment">// ┌1.0 2.0┐</span></span><br><span class="line"><span class="comment">// └3.0 4.0┘</span></span><br><span class="line"></span><br><span class="line"><span class="type">vec4</span> v4 = <span class="type">vec4</span>(<span class="number">1.0</span>, <span class="number">3.0</span>, <span class="number">2.0</span>, <span class="number">4.0</span>);</span><br><span class="line"><span class="type">mat2</span> m2_2 = <span class="type">mat2</span>(v4);</span><br><span class="line"><span class="comment">// ┌1.0 2.0┐</span></span><br><span class="line"><span class="comment">// └3.0 4.0┘</span></span><br></pre></td></tr></table></figure>
-<h5 id="6-5-3-方式三">6.5.3 方式三</h5>
-<p>​		当然使用浮点数和矢量组合的方式来构造矩阵也是可以的：</p>
+<h5 id="6-5-3-方式三"><a href="#6-5-3-方式三" class="headerlink" title="6.5.3 方式三"></a>6.5.3 方式三</h5><p>​        当然使用浮点数和矢量组合的方式来构造矩阵也是可以的：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec2</span> v2 = <span class="type">vec2</span>(<span class="number">2.0</span>, <span class="number">4.0</span>);</span><br><span class="line"><span class="type">mat2</span> m2 = <span class="type">mat2</span>(<span class="number">1.0</span>, <span class="number">3.0</span>, v2);</span><br><span class="line"><span class="comment">// ┌1.0 2.0┐</span></span><br><span class="line"><span class="comment">// └3.0 4.0┘</span></span><br></pre></td></tr></table></figure>
-<h5 id="6-5-4-方式四">6.5.4 方式四</h5>
-<p>​		如果想构造单位矩阵，那么有更简单的方式：</p>
+<h5 id="6-5-4-方式四"><a href="#6-5-4-方式四" class="headerlink" title="6.5.4 方式四"></a>6.5.4 方式四</h5><p>​        如果想构造单位矩阵，那么有更简单的方式：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">mat3</span> m3 = <span class="type">mat3</span>(<span class="number">1.0</span>);</span><br><span class="line"><span class="comment">// ┌1.0 0.0 0.0┐</span></span><br><span class="line"><span class="comment">// |0.0 1.0 0.0 |</span></span><br><span class="line"><span class="comment">// └0.0 0.0 1.0┘</span></span><br><span class="line"></span><br><span class="line"><span class="type">mat4</span> m4 = <span class="type">mat4</span>(<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>)	<span class="comment">// 出错，mat4对象需要16个元素</span></span><br></pre></td></tr></table></figure>
-<h4 id="6-6-访问矢量和矩阵的元素">6.6 访问矢量和矩阵的元素</h4>
-<p>​		为了访问矢量或矩阵中的元素，可以使用<code>.</code>或<code>[]</code>运算符，下面将详细叙述。</p>
-<h5 id="6-6-1-访问矢量元素">6.6.1 访问矢量元素</h5>
-<h6 id="运算符"><code>.</code>运算符</h6>
-<p>​		在矢量变量名后接<code>.</code>运算符，然后接分量名，就可以访问矢量的元素了。<strong>矢量的分量名</strong>如下表：</p>
+<h4 id="6-6-访问矢量和矩阵的元素"><a href="#6-6-访问矢量和矩阵的元素" class="headerlink" title="6.6 访问矢量和矩阵的元素"></a>6.6 访问矢量和矩阵的元素</h4><p>​        为了访问矢量或矩阵中的元素，可以使用<code>.</code>或<code>[]</code>运算符，下面将详细叙述。</p>
+<h5 id="6-6-1-访问矢量元素"><a href="#6-6-1-访问矢量元素" class="headerlink" title="6.6.1 访问矢量元素"></a>6.6.1 访问矢量元素</h5><h6 id="运算符"><a href="#运算符" class="headerlink" title=".运算符"></a><code>.</code>运算符</h6><p>​        在矢量变量名后接<code>.</code>运算符，然后接分量名，就可以访问矢量的元素了。<strong>矢量的分量名</strong>如下表：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -697,36 +657,32 @@ $</p>
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <p>事实上，任何矢量的x、r或s分量都会返回第一个分量</p>
 </blockquote>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec4</span> v4 = <span class="type">vec4</span>(<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// v4.x;</span></span><br><span class="line"><span class="comment">// v4.y;</span></span><br><span class="line"><span class="comment">// v4.r;</span></span><br></pre></td></tr></table></figure>
-<h6 id="混合">混合</h6>
-<p>​		其实，任何矢量的<code>x</code>、<code>r</code>或<code>s</code>都是返回第一个分量值，同理<code>y</code>/<code>g</code>/<code>t</code>返回第二个分量。我们还可以通过下面的方式给其他矢量赋值：</p>
+<h6 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h6><p>​        其实，任何矢量的<code>x</code>、<code>r</code>或<code>s</code>都是返回第一个分量值，同理<code>y</code>/<code>g</code>/<code>t</code>返回第二个分量。我们还可以通过下面的方式给其他矢量赋值：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec4</span> v4 = <span class="type">vec4</span>(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.5</span>);</span><br><span class="line"></span><br><span class="line"><span class="type">vec2</span> v2 = v4.xy;	<span class="comment">// v2 = (0.0, 1.0)	</span></span><br><span class="line"><span class="type">vec2</span> v2 = v4.yx;	<span class="comment">// v2 = (1.0, 0.0)	可逆序</span></span><br><span class="line"><span class="type">vec2</span> v2 = v4.xx;	<span class="comment">// v2 = (0.0, 0.0)	可重复</span></span><br><span class="line"><span class="type">vec3</span> v3 = v4.yzw;	<span class="comment">// v2 = (1.0, 1.0, 0.5)	可跳过</span></span><br><span class="line"><span class="type">vec3</span> v3 = v4.xzw;	<span class="comment">// v2 = (0.0, 1.0, 0.5)	可跳过</span></span><br></pre></td></tr></table></figure>
-<p>​		上面的代码中，将同一个集合的多个分量名共同置于<em>点运算符</em>后，就可以从矢量中同时提取出多个分量，这个过程也称作<strong>混合</strong>。当然，聚合分量名也可以作为<em>赋值表达式</em>的<em>左值</em>：</p>
+<p>​        上面的代码中，将同一个集合的多个分量名共同置于<em>点运算符</em>后，就可以从矢量中同时提取出多个分量，这个过程也称作<strong>混合</strong>。当然，聚合分量名也可以作为<em>赋值表达式</em>的<em>左值</em>：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec4</span> position = <span class="type">vec4</span>(<span class="number">1.0</span>,<span class="number">2.0</span>,<span class="number">3.0</span>,<span class="number">4.0</span>);</span><br><span class="line">position.xw = <span class="type">vec2</span>(<span class="number">5.0</span>, <span class="number">6.0</span>);	<span class="comment">// position=(5.0,2.0,3.0,6.0)</span></span><br></pre></td></tr></table></figure>
-<h5 id="6-6-2-访问矩阵元素">6.6.2 访问矩阵元素</h5>
-<h6 id="运算符-2"><code>[]</code>运算符</h6>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">mat4</span> m4 = <span class="type">mat4</span>(<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">4.0</span>,</span><br><span class="line">              <span class="number">5.0</span>, <span class="number">6.0</span>, <span class="number">7.0</span>, <span class="number">8.0</span>,</span><br><span class="line">              <span class="number">9.0</span>, <span class="number">10.0</span>, <span class="number">11.0</span>, <span class="number">12.0</span>,</span><br><span class="line">              <span class="number">13.0</span>, <span class="number">14.0</span>, <span class="number">15.0</span>, <span class="number">16.0</span>);</span><br></pre></td></tr></table></figure>
-<p>​		访问矩阵中元素可以像我们<code>JS</code>中访问二维数组一样：<code>m4[0][0]</code>，这就获取到了<code>m4</code>中的第一个元素<code>1.0</code>，在前面的介绍中有提到，可以使用矢量创建矩阵，当然我们也可以在矩阵中获取矢量：</p>
+<h5 id="6-6-2-访问矩阵元素"><a href="#6-6-2-访问矩阵元素" class="headerlink" title="6.6.2 访问矩阵元素"></a>6.6.2 访问矩阵元素</h5><h6 id="运算符-1"><a href="#运算符-1" class="headerlink" title="[]运算符"></a><code>[]</code>运算符</h6><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">mat4</span> m4 = <span class="type">mat4</span>(<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">4.0</span>,</span><br><span class="line">              <span class="number">5.0</span>, <span class="number">6.0</span>, <span class="number">7.0</span>, <span class="number">8.0</span>,</span><br><span class="line">              <span class="number">9.0</span>, <span class="number">10.0</span>, <span class="number">11.0</span>, <span class="number">12.0</span>,</span><br><span class="line">              <span class="number">13.0</span>, <span class="number">14.0</span>, <span class="number">15.0</span>, <span class="number">16.0</span>);</span><br></pre></td></tr></table></figure>
+<p>​        访问矩阵中元素可以像我们<code>JS</code>中访问二维数组一样：<code>m4[0][0]</code>，这就获取到了<code>m4</code>中的第一个元素<code>1.0</code>，在前面的介绍中有提到，可以使用矢量创建矩阵，当然我们也可以在矩阵中获取矢量：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec4</span> v4 = m4[<span class="number">0</span>];	<span class="comment">// 第一列元素 (1.0, 2.0, 3.0, 4.0)</span></span><br></pre></td></tr></table></figure>
-<p>​		同样可以使用<em>点操作符</em>获取分量值：</p>
+<p>​        同样可以使用<em>点操作符</em>获取分量值：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> m1_2 = m4[<span class="number">0</span>].x;	<span class="comment">// 将m1_2设置为m4第1列的第1个元素</span></span><br><span class="line">m1_2 = m4[<span class="number">0</span>][<span class="number">1</span>];	<span class="comment">// 将m1_2设置为m4第1列的第2个元素</span></span><br></pre></td></tr></table></figure>
-<h6 id="常量索引值">常量索引值</h6>
-<p>​		在<code>[]</code>中只能出现的索引值必须是<strong>常量索引值</strong>，其定义如下：</p>
+<h6 id="常量索引值"><a href="#常量索引值" class="headerlink" title="常量索引值"></a>常量索引值</h6><p>​        在<code>[]</code>中只能出现的索引值必须是<strong>常量索引值</strong>，其定义如下：</p>
 <ul>
 <li>整型字面量(如0或1)</li>
 <li>用<code>const</code>修饰的全局变量或局部变量，不包括函数参数</li>
 <li>循环索引</li>
 <li>由前述三条的项组成的表达式</li>
 </ul>
-<p>​		下面这个例子就用到了const变量作为访问数组元素的索引：</p>
+<p>​        下面这个例子就用到了const变量作为访问数组元素的索引：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="type">int</span> <span class="keyword">index</span> = <span class="number">0</span> <span class="comment">// 只读</span></span><br><span class="line"><span class="type">vec4</span> v4a = m4[<span class="keyword">index</span>]</span><br><span class="line">    </span><br><span class="line"><span class="type">vec4</span> v4b = m4[<span class="keyword">index</span> + <span class="number">1</span>] <span class="comment">// 表达式索引</span></span><br></pre></td></tr></table></figure>
-<p>​		注意，不能使用未经const修饰的变量作为索引（除非是循环索引）</p>
+<p>​        注意，不能使用未经const修饰的变量作为索引（除非是循环索引）</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="keyword">index</span> = <span class="number">0</span></span><br><span class="line"><span class="type">vec4</span> v4a = m4[<span class="keyword">index</span>] 	<span class="comment">// 错误使用  </span></span><br></pre></td></tr></table></figure>
-<h4 id="6-7-运算">6.7 运算</h4>
-<h5 id="6-7-1-运算符">6.7.1 运算符</h5>
+<h4 id="6-7-运算"><a href="#6-7-运算" class="headerlink" title="6.7 运算"></a>6.7 运算</h4><h5 id="6-7-1-运算符"><a href="#6-7-1-运算符" class="headerlink" title="6.7.1 运算符"></a>6.7.1 运算符</h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -747,7 +703,7 @@ $</p>
 <td></td>
 </tr>
 <tr>
-<td>++  –</td>
+<td>++  —</td>
 <td>自增/减</td>
 <td>适用于vec[234]和mat[234]</td>
 </tr>
@@ -763,93 +719,43 @@ $</p>
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <p>补充：</p>
-<p>​	矢量和矩阵的比较不能使用&lt;、&gt;、&lt;=、&gt;=，应该使用内置函数如lessThan()；</p>
-<p>​	若你想逐一分量比较，可使用内置函数equal()或notEqual()；</p>
-<p>​	当运算赋值操作作用于矢量或矩阵时，实际上是逐分量地对每一个元素进行独立的运算。</p>
+<p>​    矢量和矩阵的比较不能使用&lt;、&gt;、&lt;=、&gt;=，应该使用内置函数如lessThan()；</p>
+<p>​    若你想逐一分量比较，可使用内置函数equal()或notEqual()；</p>
+<p>​    当运算赋值操作作用于矢量或矩阵时，实际上是逐分量地对每一个元素进行独立的运算。</p>
 </blockquote>
-<h5 id="6-7-2-矢量运算">6.7.2 矢量运算</h5>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec2</span> v2_1 = (<span class="number">1.0</span>, <span class="number">2.0</span>);</span><br><span class="line"><span class="type">vec2</span> v2_2 = (<span class="number">0.1</span>, <span class="number">0.2</span>);</span><br><span class="line"><span class="type">float</span> f = <span class="number">0.5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加法</span></span><br><span class="line">v2_1 = v2_1 + v2_2;	<span class="comment">// (1.1, 2.2) → (v2_1.x + v2_2.x, v2_1.y + v2_2.y)</span></span><br><span class="line">v2_1 = v2_1 + f;	<span class="comment">// (1.6, 2.7) → (v2_1.x + f, v2_1.y + f)</span></span><br></pre></td></tr></table></figure>
-<h5 id="6-7-3-矩阵运算">6.7.3 矩阵运算</h5>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义变量</span></span><br><span class="line"><span class="type">mat2</span> m2_1, m2_2;</span><br><span class="line"><span class="type">vec2</span> v2;</span><br><span class="line"><span class="type">float</span> f;</span><br></pre></td></tr></table></figure>
-<h6 id="矩阵和浮点数运算">矩阵和浮点数运算</h6>
-<p>​		矩阵与浮点数的运算发生在每个分量上：</p>
+<h5 id="6-7-2-矢量运算"><a href="#6-7-2-矢量运算" class="headerlink" title="6.7.2 矢量运算"></a>6.7.2 矢量运算</h5><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec2</span> v2_1 = (<span class="number">1.0</span>, <span class="number">2.0</span>);</span><br><span class="line"><span class="type">vec2</span> v2_2 = (<span class="number">0.1</span>, <span class="number">0.2</span>);</span><br><span class="line"><span class="type">float</span> f = <span class="number">0.5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加法</span></span><br><span class="line">v2_1 = v2_1 + v2_2;	<span class="comment">// (1.1, 2.2) → (v2_1.x + v2_2.x, v2_1.y + v2_2.y)</span></span><br><span class="line">v2_1 = v2_1 + f;	<span class="comment">// (1.6, 2.7) → (v2_1.x + f, v2_1.y + f)</span></span><br></pre></td></tr></table></figure>
+<h5 id="6-7-3-矩阵运算"><a href="#6-7-3-矩阵运算" class="headerlink" title="6.7.3 矩阵运算"></a>6.7.3 矩阵运算</h5><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义变量</span></span><br><span class="line"><span class="type">mat2</span> m2_1, m2_2;</span><br><span class="line"><span class="type">vec2</span> v2;</span><br><span class="line"><span class="type">float</span> f;</span><br></pre></td></tr></table></figure>
+<h6 id="矩阵和浮点数运算"><a href="#矩阵和浮点数运算" class="headerlink" title="矩阵和浮点数运算"></a>矩阵和浮点数运算</h6><p>​        矩阵与浮点数的运算发生在每个分量上：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m2_1 + f; <span class="comment">// m2_1[0].x + f; m2_1[0].y + f; m2_1[1].x + f; m2_1[1].y + f;</span></span><br></pre></td></tr></table></figure>
-<h6 id="矩阵右乘矢量">矩阵右乘矢量</h6>
-<p>​	矩阵右乘矢量的结果是矢量，其中每个分量都是原矢量中的对应分量，<strong>乘</strong>上矩阵对应<strong>行</strong>的每个元素的<strong>积的和</strong>。可参考之前的<a target="_blank" rel="noopener" href="https://freepiao.cn/2021/07/26/RotatedTriangle-Matrix/#%E4%B8%80%E3%80%81%E7%9F%A9%E9%98%B5%E5%92%8C%E7%9F%A2%E9%87%8F%E7%9A%84%E4%B9%98%E6%B3%95">矢量乘法实现旋转矩阵</a>。</p>
+<h6 id="矩阵右乘矢量"><a href="#矩阵右乘矢量" class="headerlink" title="矩阵右乘矢量"></a>矩阵右乘矢量</h6><p>​    矩阵右乘矢量的结果是矢量，其中每个分量都是原矢量中的对应分量，<strong>乘</strong>上矩阵对应<strong>行</strong>的每个元素的<strong>积的和</strong>。可参考之前的<a target="_blank" rel="noopener" href="https://freepiao.cn/2021/07/26/RotatedTriangle-Matrix/#%E4%B8%80%E3%80%81%E7%9F%A9%E9%98%B5%E5%92%8C%E7%9F%A2%E9%87%8F%E7%9A%84%E4%B9%98%E6%B3%95">矢量乘法实现旋转矩阵</a>。</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 矩阵右乘矢量</span></span><br><span class="line"><span class="type">vec2</span> v2_result = m2_1 * v2;	</span><br><span class="line"><span class="comment">// v2_result.x = m2_1[0].x * v2.x + m2_1[1].x * v2.y;</span></span><br><span class="line"><span class="comment">// v2_result.y = m2_1[0].y * v2.x + m2_1[1].y * v2.y;</span></span><br></pre></td></tr></table></figure>
-<p>例：$<br>
-\begin{bmatrix}<br>
-1 &amp; 2 &amp; 3 \\<br>
-4 &amp; 1 &amp; 2 \\<br>
-1 &amp; 1 &amp; 2<br>
-\end{bmatrix}<br>
-$​​​​ * $<br>
-\begin{bmatrix}<br>
-2  \\<br>
-3  \\<br>
-1<br>
-\end{bmatrix}$​​​​ = $<br>
-\begin{bmatrix}<br>
-11  \\<br>
-13  \\<br>
-7<br>
-\end{bmatrix}<br>
-$​​​​</p>
-<h6 id="矩阵左乘矢量">矩阵左乘矢量</h6>
-<p>​		结果与右乘不同</p>
+<p>例：$<br>\begin{bmatrix}<br>    1 &amp; 2 &amp; 3 \\<br>    4 &amp; 1 &amp; 2 \\<br>    1 &amp; 1 &amp; 2<br>\end{bmatrix}<br>$​​​​ * $<br>\begin{bmatrix}<br>    2  \\<br>    3  \\<br>    1<br>\end{bmatrix}$​​​​ = $<br>\begin{bmatrix}<br>    11  \\<br>    13  \\<br>    7<br>\end{bmatrix}<br>$​​​​</p>
+<h6 id="矩阵左乘矢量"><a href="#矩阵左乘矢量" class="headerlink" title="矩阵左乘矢量"></a>矩阵左乘矢量</h6><p>​        结果与右乘不同</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 矩阵左乘矢量</span></span><br><span class="line">v2_result = v2 * m2_1;	</span><br><span class="line"><span class="comment">// v2_result.x = v2.x * m2_1[0].x + v2.y * m2_1[0].y;</span></span><br><span class="line"><span class="comment">// v2_result.y = v2.x * m2_1[1].x + v2.y * m2_1[1].y;</span></span><br></pre></td></tr></table></figure>
-<p>例： $<br>
-\begin{bmatrix}<br>
-2  \\<br>
-3  \\<br>
-1<br>
-\end{bmatrix}$​  * $<br>
-\begin{bmatrix}<br>
-1 &amp; 2 &amp; 3 \\<br>
-4 &amp; 1 &amp; 2 \\<br>
-1 &amp; 1 &amp; 2<br>
-\end{bmatrix}<br>
-$​​ = $<br>
-\begin{bmatrix}<br>
-15  \\<br>
-8  \\<br>
-14<br>
-\end{bmatrix}<br>
-$​​</p>
-<h6 id="矩阵与矩阵相乘">矩阵与矩阵相乘</h6>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 矩阵相乘</span></span><br><span class="line"><span class="type">mat2</span> m2_result = m2_1 * m2_2;	</span><br><span class="line"><span class="comment">// m2_result[0].x = m2_1[0].x * m2_2[0].x + m2_1[1].x * m2_2[0].y;</span></span><br><span class="line"><span class="comment">// m2_result[1].x = m2_1[0].x * m2_2[1].x + m2_1[1].x * m2_2[1].y;</span></span><br><span class="line"><span class="comment">// m2_result[0].y = m2_1[0].y * m2_2[0].x + m2_1[1].y * m2_2[0].y;</span></span><br><span class="line"><span class="comment">// m2_result[1].y = m2_1[0].y * m2_2[1].x + m2_1[1].y * m2_2[1].y;</span></span><br><span class="line"></span><br><span class="line">m3a * m3b;  <span class="comment">// m3a[0][0] * m3b[0][0] + m3a[1][0] * m3b[0][1] + m3a[2][0] * m3b[0][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][0] * m3b[1][0] + m3a[1][0] * m3b[1][1] + m3a[2][0] * m3b[1][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][0] * m3b[2][0] + m3a[1][0] * m3b[2][1] + m3a[2][0] * m3b[2][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][1] * m3b[0][0] + m3a[1][1] * m3b[0][1] + m3a[2][1] * m3b[0][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][1] * m3b[1][0] + m3a[1][1] * m3b[1][1] + m3a[2][1] * m3b[1][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][1] * m3b[2][0] + m3a[1][1] * m3b[2][1] + m3a[2][1] * m3b[2][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][2] * m3b[0][0] + m3a[1][2] * m3b[0][1] + m3a[2][2] * m3b[0][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][2] * m3b[1][0] + m3a[1][2] * m3b[1][1] + m3a[2][2] * m3b[1][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][2] * m3b[2][0] + m3a[1][2] * m3b[2][1] + m3a[2][2] * m3b[2][2]</span></span><br></pre></td></tr></table></figure>
-<h3 id="七、结构体">七、结构体</h3>
-<h4 id="7-1-结构体定义">7.1 结构体定义</h4>
-<p>​		在<code>GLSL ES</code>中可以使用<code>struct</code>关键字定义结构体：</p>
+<p>例： $<br>\begin{bmatrix}<br>    2  \\<br>    3  \\<br>    1<br>\end{bmatrix}$​  * $<br>\begin{bmatrix}<br>    1 &amp; 2 &amp; 3 \\<br>    4 &amp; 1 &amp; 2 \\<br>    1 &amp; 1 &amp; 2<br>\end{bmatrix}<br>$​​ = $<br>\begin{bmatrix}<br>    15  \\<br>    8  \\<br>    14<br>\end{bmatrix}<br>$​​</p>
+<h6 id="矩阵与矩阵相乘"><a href="#矩阵与矩阵相乘" class="headerlink" title="矩阵与矩阵相乘"></a>矩阵与矩阵相乘</h6><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 矩阵相乘</span></span><br><span class="line"><span class="type">mat2</span> m2_result = m2_1 * m2_2;	</span><br><span class="line"><span class="comment">// m2_result[0].x = m2_1[0].x * m2_2[0].x + m2_1[1].x * m2_2[0].y;</span></span><br><span class="line"><span class="comment">// m2_result[1].x = m2_1[0].x * m2_2[1].x + m2_1[1].x * m2_2[1].y;</span></span><br><span class="line"><span class="comment">// m2_result[0].y = m2_1[0].y * m2_2[0].x + m2_1[1].y * m2_2[0].y;</span></span><br><span class="line"><span class="comment">// m2_result[1].y = m2_1[0].y * m2_2[1].x + m2_1[1].y * m2_2[1].y;</span></span><br><span class="line"></span><br><span class="line">m3a * m3b;  <span class="comment">// m3a[0][0] * m3b[0][0] + m3a[1][0] * m3b[0][1] + m3a[2][0] * m3b[0][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][0] * m3b[1][0] + m3a[1][0] * m3b[1][1] + m3a[2][0] * m3b[1][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][0] * m3b[2][0] + m3a[1][0] * m3b[2][1] + m3a[2][0] * m3b[2][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][1] * m3b[0][0] + m3a[1][1] * m3b[0][1] + m3a[2][1] * m3b[0][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][1] * m3b[1][0] + m3a[1][1] * m3b[1][1] + m3a[2][1] * m3b[1][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][1] * m3b[2][0] + m3a[1][1] * m3b[2][1] + m3a[2][1] * m3b[2][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][2] * m3b[0][0] + m3a[1][2] * m3b[0][1] + m3a[2][2] * m3b[0][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][2] * m3b[1][0] + m3a[1][2] * m3b[1][1] + m3a[2][2] * m3b[1][2]</span></span><br><span class="line">            <span class="comment">// m3a[0][2] * m3b[2][0] + m3a[1][2] * m3b[2][1] + m3a[2][2] * m3b[2][2]</span></span><br></pre></td></tr></table></figure>
+<h3 id="七、结构体"><a href="#七、结构体" class="headerlink" title="七、结构体"></a>七、结构体</h3><h4 id="7-1-结构体定义"><a href="#7-1-结构体定义" class="headerlink" title="7.1 结构体定义"></a>7.1 结构体定义</h4><p>​        在<code>GLSL ES</code>中可以使用<code>struct</code>关键字定义结构体：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line">struct light &#123;</span><br><span class="line">  <span class="type">vec4</span> color;</span><br><span class="line">  <span class="type">vec3</span> position;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明light类型变量</span></span><br><span class="line">light light_1;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 为了方便，也可以使用这种方式定义并声明一个结构体类型的变量</span></span><br><span class="line">struct light &#123;</span><br><span class="line">  <span class="type">vec4</span> color;</span><br><span class="line">  <span class="type">vec3</span> position;</span><br><span class="line">&#125; light_1;</span><br></pre></td></tr></table></figure>
-<h4 id="7-2-赋值和构造">7.2 赋值和构造</h4>
-<p>​		结构体有标准的构造函数，其名称与结构体一致。构造函数的参数顺序必须与结构体定义中的成员顺序一致。</p>
+<h4 id="7-2-赋值和构造"><a href="#7-2-赋值和构造" class="headerlink" title="7.2 赋值和构造"></a>7.2 赋值和构造</h4><p>​        结构体有标准的构造函数，其名称与结构体一致。构造函数的参数顺序必须与结构体定义中的成员顺序一致。</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">light_1 = light(<span class="type">vec4</span>(<span class="number">0.0</span>,<span class="number">1.0</span>,<span class="number">0.0</span>,<span class="number">1.0</span>), <span class="type">vec3</span>(<span class="number">8.0</span>,<span class="number">3.0</span>,<span class="number">0.0</span>))</span><br></pre></td></tr></table></figure>
-<h4 id="7-3-访问成员">7.3 访问成员</h4>
-<p>​		通过<code>.</code>操作符访问成员变量：</p>
+<h4 id="7-3-访问成员"><a href="#7-3-访问成员" class="headerlink" title="7.3 访问成员"></a>7.3 访问成员</h4><p>​        通过<code>.</code>操作符访问成员变量：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">vec4</span> lcolor = light_1.color;</span><br></pre></td></tr></table></figure>
-<h4 id="7-4-运算符">7.4 运算符</h4>
-<p>​		结构体的成员可参与与其自身类型支持的任何运算，但是结构体本身只支持赋值（=）和比较（==、!=）。</p>
+<h4 id="7-4-运算符"><a href="#7-4-运算符" class="headerlink" title="7.4 运算符"></a>7.4 运算符</h4><p>​        结构体的成员可参与与其自身类型支持的任何运算，但是结构体本身只支持赋值（=）和比较（==、!=）。</p>
 <blockquote>
 <p>赋值和比较运算符不适用于含有数组与纹理成员的结构体</p>
 </blockquote>
-<h3 id="八、数组">八、数组</h3>
-<h4 id="8-1-声明数组">8.1 声明数组</h4>
-<p>​		GLSL ES只支持一维数组，而且数组对象不支持pop()和push()等操作，创建数组时也不需要使用new运算符。声明方式如下：</p>
+<h3 id="八、数组"><a href="#八、数组" class="headerlink" title="八、数组"></a>八、数组</h3><h4 id="8-1-声明数组"><a href="#8-1-声明数组" class="headerlink" title="8.1 声明数组"></a>8.1 声明数组</h4><p>​        GLSL ES只支持一维数组，而且数组对象不支持pop()和push()等操作，创建数组时也不需要使用new运算符。声明方式如下：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> floatArray[<span class="number">4</span>]; <span class="comment">// 声明含有4个浮点数元素的数组</span></span><br><span class="line"><span class="type">vec4</span> vec4Array[<span class="number">2</span>]; <span class="comment">// 声明含有两个vec4对象的数组</span></span><br></pre></td></tr></table></figure>
-<h4 id="8-2-定义数组">8.2 定义数组</h4>
-<p>数组的长度必须是大于0的<strong>整形常量表达式</strong>，如下定义：</p>
+<h4 id="8-2-定义数组"><a href="#8-2-定义数组" class="headerlink" title="8.2 定义数组"></a>8.2 定义数组</h4><p>数组的长度必须是大于0的<strong>整形常量表达式</strong>，如下定义：</p>
 <ul>
-<li>
-<p>整形字面量（0、1）</p>
+<li><p>整形字面量（0、1）</p>
 </li>
-<li>
-<p>用const限定字修饰的全局变量或局部变量，不包含函数参数</p>
+<li><p>用const限定字修饰的全局变量或局部变量，不包含函数参数</p>
 </li>
-<li>
-<p>由上述两条中的项组成的表达式</p>
+<li><p>由上述两条中的项组成的表达式</p>
 <p>因此，下面的代码将会出错：</p>
 </li>
 </ul>
@@ -857,20 +763,18 @@ $​​</p>
 <blockquote>
 <p>注意：不可以用const限定字来修饰数组本身。</p>
 </blockquote>
-<p>​		只有整型常量表达式和uniform变量可以被用作数组的索引值，此外，与js或c不同，数组不能再声明时被一次性地初始化，而必须显式的对每个元素进行初始化。如下：</p>
+<p>​        只有整型常量表达式和uniform变量可以被用作数组的索引值，此外，与js或c不同，数组不能再声明时被一次性地初始化，而必须显式的对每个元素进行初始化。如下：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vec4Array[<span class="number">0</span>] = <span class="type">vec4</span>(<span class="number">4.0</span>,<span class="number">3.0</span>,<span class="number">4.0</span>,<span class="number">9.0</span>)</span><br><span class="line">vec4Array[<span class="number">1</span>] = <span class="type">vec4</span>(<span class="number">1.0</span>,<span class="number">2.0</span>,<span class="number">3.0</span>,<span class="number">4.0</span>)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>数组本身只支持<code>[]</code>运算符，但数组元素能够参与其自身类型支持的任意运算。</p>
 </blockquote>
-<h3 id="九、取样器（纹理）">九、取样器（纹理）</h3>
-<h4 id="9-1-概念">9.1 概念</h4>
-<p>​		我们必须通过取样器（sampler）类型变量访问纹理。有两种基本的取样器类型：<code>sampler2D</code>和<code>samplerCube</code>。<strong>取样器变量只能是uniform变量</strong>，或者需要访问纹理的函数，如texture2D()函数的参数。比如：</p>
+<h3 id="九、取样器（纹理）"><a href="#九、取样器（纹理）" class="headerlink" title="九、取样器（纹理）"></a>九、取样器（纹理）</h3><h4 id="9-1-概念"><a href="#9-1-概念" class="headerlink" title="9.1 概念"></a>9.1 概念</h4><p>​        我们必须通过取样器（sampler）类型变量访问纹理。有两种基本的取样器类型：<code>sampler2D</code>和<code>samplerCube</code>。<strong>取样器变量只能是uniform变量</strong>，或者需要访问纹理的函数，如texture2D()函数的参数。比如：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">uniform</span> smapler2D u_Sampler;</span><br></pre></td></tr></table></figure>
-<p>​		并且，唯一能给取样器变量赋值的就是<em>纹理单元编号</em>，并且必须使用<code>WebGL</code>提供的方法<code>gl.uniform1i()</code>来赋值，比如在之前的文章中我们使用<code>gl.uniform1i(u_Sampler, 0)</code>将纹理单元编号0传给着色器。如：</p>
+<p>​        并且，唯一能给取样器变量赋值的就是<em>纹理单元编号</em>，并且必须使用<code>WebGL</code>提供的方法<code>gl.uniform1i()</code>来赋值，比如在之前的文章中我们使用<code>gl.uniform1i(u_Sampler, 0)</code>将纹理单元编号0传给着色器。如：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gl.uniform1i(u_Sampler, <span class="number">0</span>) <span class="comment">//将纹理单元编号0传给着色器</span></span><br></pre></td></tr></table></figure>
-<h4 id="9-2-规范">9.2 规范</h4>
-<p>​		除了=、==、!=，取样器变量不可以作为操作参数与运算。</p>
-<p>​		取样器类型变量受到着色器支持的纹理单元的最大数量限制，如下表。</p>
+<h4 id="9-2-规范"><a href="#9-2-规范" class="headerlink" title="9.2 规范"></a>9.2 规范</h4><p>​        除了=、==、!=，取样器变量不可以作为操作参数与运算。</p>
+<p>​        取样器类型变量受到着色器支持的纹理单元的最大数量限制，如下表。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -892,57 +796,43 @@ $​​</p>
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <p>mediump是一个精度限定词。</p>
 </blockquote>
-<h3 id="十、程序流程控制：分支和循环">十、程序流程控制：分支和循环</h3>
-<h4 id="10-1-if和if-else语句">10.1 if和if-else语句</h4>
-<p>​		<code>if-else</code>结构用法与C语言和js一致，但<em>没有switch</em>语句</p>
+<h3 id="十、程序流程控制：分支和循环"><a href="#十、程序流程控制：分支和循环" class="headerlink" title="十、程序流程控制：分支和循环"></a>十、程序流程控制：分支和循环</h3><h4 id="10-1-if和if-else语句"><a href="#10-1-if和if-else语句" class="headerlink" title="10.1 if和if-else语句"></a>10.1 if和if-else语句</h4><p>​        <code>if-else</code>结构用法与C语言和js一致，但<em>没有switch</em>语句</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (...) &#123;</span><br><span class="line">   ... </span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (...) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="10-2-for语句">10.2 for语句</h4>
-<p>​		<strong>只支持for循环</strong>，而且<em>只能</em>在初始化表达式（for(;;)中第一个分号前面的位置）中定义循环变量，例如：</p>
+<h4 id="10-2-for语句"><a href="#10-2-for语句" class="headerlink" title="10.2 for语句"></a>10.2 for语句</h4><p>​        <strong>只支持for循环</strong>，而且<em>只能</em>在初始化表达式（for(;;)中第一个分号前面的位置）中定义循环变量，例如：</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for <span class="params">(int <span class="attr">i</span> = 0; i &lt; 10; i++)</span> &#123;</span><br><span class="line">    <span class="string">...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>其他规范：</p>
 <ul>
-<li>
-<p>只允许有一个循环变量，且只能是int或float类型</p>
+<li><p>只允许有一个循环变量，且只能是int或float类型</p>
 </li>
-<li>
-<p>循环表达式必须是以下形式：</p>
-<p>i++、i–、i+=常量表达式、i-=常量表达式</p>
+<li><p>循环表达式必须是以下形式：</p>
+<p>i++、i—、i+=常量表达式、i-=常量表达式</p>
 </li>
-<li>
-<p>条件表达式必须是循环变量与整型常量比较</p>
+<li><p>条件表达式必须是循环变量与整型常量比较</p>
 </li>
-<li>
-<p>在循环体内，循环变量不可被赋值</p>
+<li><p>在循环体内，循环变量不可被赋值</p>
 </li>
 </ul>
-<h4 id="10-3-continue、break、discard语句">10.3 continue、break、discard语句</h4>
-<p>​		只能在for语句中使用continue、break。</p>
+<h4 id="10-3-continue、break、discard语句"><a href="#10-3-continue、break、discard语句" class="headerlink" title="10.3 continue、break、discard语句"></a>10.3 continue、break、discard语句</h4><p>​        只能在for语句中使用continue、break。</p>
 <ul>
-<li>
-<p>continue终止包含该语句的最内层循环和执行循环表达式（递增/递减循环变量），然后执行下一次循环</p>
+<li>continue终止包含该语句的最内层循环和执行循环表达式（递增/递减循环变量），然后执行下一次循环</li>
+<li><p>break终止包含该语句的最内层循环，并不再执行循环</p>
 </li>
-<li>
-<p>break终止包含该语句的最内层循环，并不再执行循环</p>
-</li>
-<li>
-<p>discard只能在片元着色器中使用，表示放弃当前片元，直接处理下一个片元</p>
+<li><p>discard只能在片元着色器中使用，表示放弃当前片元，直接处理下一个片元</p>
 </li>
 </ul>
-<h3 id="十一、函数">十一、函数</h3>
-<h4 id="11-1-声明函数">11.1 声明函数</h4>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回类型 函数名(type0 arg0, ... , typen argn)&#123;</span><br><span class="line">    函数计算</span><br><span class="line">    <span class="keyword">return</span> 返回值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​		如果函数不返回值，那么函数就不需要return语句；也可以将自己定义的结构体类型指定为返回类型，但是结构体的成员不能有数组。</p>
-<p>​		下面这段代码实现了将RGBA颜色值转化为亮度值：</p>
+<h3 id="十一、函数"><a href="#十一、函数" class="headerlink" title="十一、函数"></a>十一、函数</h3><h4 id="11-1-声明函数"><a href="#11-1-声明函数" class="headerlink" title="11.1 声明函数"></a>11.1 声明函数</h4><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回类型 函数名(type0 arg0, ... , typen argn)&#123;</span><br><span class="line">    函数计算</span><br><span class="line">    <span class="keyword">return</span> 返回值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​        如果函数不返回值，那么函数就不需要return语句；也可以将自己定义的结构体类型指定为返回类型，但是结构体的成员不能有数组。</p>
+<p>​        下面这段代码实现了将RGBA颜色值转化为亮度值：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> luma (<span class="type">vec4</span> color) &#123;</span><br><span class="line">    <span class="type">float</span>  r = color.r;</span><br><span class="line">    <span class="type">float</span>  g = color.g;</span><br><span class="line">    <span class="type">float</span>  b = color.b;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0.2126</span> * r + <span class="number">0.7162</span> * g + <span class="number">0.0722</span> * b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line"><span class="keyword">attribute</span> <span class="type">vec4</span> a_Color;</span><br><span class="line"><span class="type">void</span> main() &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="type">float</span> brightness = luma(a_Color)</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="11-2-规范声明">11.2 规范声明</h4>
-<p>​      如果函数定义在其调用之后，那么我们<strong>必须在进行调用之前先声明该函数的规范</strong>（类似C语言）。规范声明不预先告诉WebGL系统函数的参数、参数类型、返回值类型等等。例如：</p>
+<h4 id="11-2-规范声明"><a href="#11-2-规范声明" class="headerlink" title="11.2 规范声明"></a>11.2 规范声明</h4><p>​      如果函数定义在其调用之后，那么我们<strong>必须在进行调用之前先声明该函数的规范</strong>（类似C语言）。规范声明不预先告诉WebGL系统函数的参数、参数类型、返回值类型等等。例如：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> luma(<span class="type">vec4</span>); <span class="comment">// 规范声明</span></span><br><span class="line"></span><br><span class="line">main()&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="type">float</span> brightness = luma(color); <span class="comment">//luma()在定义之前就被调用了</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">float</span> luma(<span class="type">vec4</span> color)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0.2126</span> * color.r + <span class="number">0.7162</span> * color.g + <span class="number">0.0722</span> * color.r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="11-3-参数限定词">11.3 参数限定词</h4>
-<p>​		在GLSL ES中有几个参数限定字控制参数的行为，如下：</p>
+<h4 id="11-3-参数限定词"><a href="#11-3-参数限定词" class="headerlink" title="11.3 参数限定词"></a>11.3 参数限定词</h4><p>​        在GLSL ES中有几个参数限定字控制参数的行为，如下：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">in</span>          值传递，可以省略，默认就是值传递</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">in</span>    值传递，在函数内部无法修改参数</span><br><span class="line"><span class="keyword">out</span>         地址传递</span><br><span class="line"><span class="keyword">inout</span>       地址传递，传入的参数必须已经初始化过了</span><br></pre></td></tr></table></figure>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -974,13 +864,13 @@ $​​</p>
 </tr>
 </tbody>
 </table>
-<p>​		当缺省参数限定词时默认与in一样，看下面in、out的使用示例：</p>
+</div>
+<p>​        当缺省参数限定词时默认与in一样，看下面in、out的使用示例：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="function"><span class="title">luma2</span>(<span class="params"><span class="keyword">in</span> vec3 color, out float brightness</span>)</span> &#123;	</span><br><span class="line">    birghtness = <span class="number">0.2126</span> * color.r + <span class="number">0.7162</span> * color.g + <span class="number">0.0722</span> * color.b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">luma2(color, brightness) </span><br><span class="line"><span class="comment">// 结果存储在brightness中</span></span><br></pre></td></tr></table></figure>
-<p>​		luma2函数本身不返回值，函数返回类型设置为void，第一个参数限定词为in(其实可以省略)，第二个参数brightness限定词为out，用于返回计算结果。</p>
-<h3 id="十二、内置函数">十二、内置函数</h3>
-<p>​		WebGL着色器提供了一系列内置函数，所谓内置函数和内置变量一样，也就是说不用声明，就可以直接调用。比如向量点乘<code>dot()</code>、向量叉乘<code>cross()</code>、两点之间距离<code>distance()</code>等用于数学计算的函数。</p>
-<h4 id="12-1-角度函数和三角函数">12.1 角度函数和三角函数</h4>
-<p>​		WebGL着色器内置函数三角函数，名称和初高中数学写法基本一致，函数参数是角度的弧度值，函数参数数据类型是浮点数<code>float</code>。</p>
+<p>​        luma2函数本身不返回值，函数返回类型设置为void，第一个参数限定词为in(其实可以省略)，第二个参数brightness限定词为out，用于返回计算结果。</p>
+<h3 id="十二、内置函数"><a href="#十二、内置函数" class="headerlink" title="十二、内置函数"></a>十二、内置函数</h3><p>​        WebGL着色器提供了一系列内置函数，所谓内置函数和内置变量一样，也就是说不用声明，就可以直接调用。比如向量点乘<code>dot()</code>、向量叉乘<code>cross()</code>、两点之间距离<code>distance()</code>等用于数学计算的函数。</p>
+<h4 id="12-1-角度函数和三角函数"><a href="#12-1-角度函数和三角函数" class="headerlink" title="12.1 角度函数和三角函数"></a>12.1 角度函数和三角函数</h4><p>​        WebGL着色器内置函数三角函数，名称和初高中数学写法基本一致，函数参数是角度的弧度值，函数参数数据类型是浮点数<code>float</code>。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1023,9 +913,10 @@ $​​</p>
 </tr>
 </tbody>
 </table>
+</div>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//角度为30度，并把角度值转化为弧度值</span></span><br><span class="line"><span class="type">float</span> radian = <span class="built_in">radians</span>(<span class="number">30.0</span>);</span><br><span class="line"><span class="comment">//求解角度余弦值</span></span><br><span class="line"><span class="type">float</span> <span class="built_in">cos</span> = <span class="built_in">cos</span>(radian);</span><br><span class="line"><span class="comment">//求解角度正弦值</span></span><br><span class="line"><span class="type">float</span> <span class="built_in">sin</span> = <span class="built_in">sin</span>(radian);</span><br></pre></td></tr></table></figure>
-<h4 id="12-2-几何函数">12.2 几何函数</h4>
-<p>​		内置函数几何函数主要是与几何相关计算的函数，比如计算两点之间的距离，计算两个向量的叉乘、点乘…</p>
+<h4 id="12-2-几何函数"><a href="#12-2-几何函数" class="headerlink" title="12.2 几何函数"></a>12.2 几何函数</h4><p>​        内置函数几何函数主要是与几何相关计算的函数，比如计算两点之间的距离，计算两个向量的叉乘、点乘…</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1064,9 +955,10 @@ $​​</p>
 </tr>
 </tbody>
 </table>
+</div>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 二维平面：计算(0.5, 0.0)和(0.5, 0.5)两点之间距离</span></span><br><span class="line"><span class="type">float</span> dis2 = <span class="built_in">distance</span>(<span class="type">vec2</span>(<span class="number">0.5</span>, <span class="number">0.0</span>), <span class="type">vec2</span>(<span class="number">0.5</span>, <span class="number">0.5</span>));</span><br><span class="line"><span class="comment">// 3D空间</span></span><br><span class="line"><span class="type">float</span> dis3 = <span class="built_in">distance</span>(<span class="type">vec3</span>(<span class="number">0.5</span>, <span class="number">0.0</span>, <span class="number">0.0</span>), <span class="type">vec3</span>(<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向量归一化，方向不变，长度为1</span></span><br><span class="line"><span class="comment">// 返回值vec3(1.0,0.0,0.0)</span></span><br><span class="line"><span class="type">vec3</span> normal = <span class="built_in">normalize</span>(<span class="type">vec3</span>(<span class="number">3.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 光线方向：u_lightDirection，顶点法向量：normal</span></span><br><span class="line"><span class="comment">// 计算平行光方向向量和顶点法向量的点积</span></span><br><span class="line"><span class="type">float</span> <span class="built_in">dot</span> = <span class="built_in">max</span>(<span class="built_in">dot</span>(u_lightDirection, normal), <span class="number">0.0</span>);</span><br><span class="line"><span class="comment">// 计算反射后的颜色</span></span><br><span class="line"><span class="comment">// 光线颜色：u_lightColor，顶点颜色：a_color</span></span><br><span class="line"><span class="type">vec3</span> reflectedLight = u_lightColor * a_color.rgb * <span class="built_in">dot</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="12-3-指数函数">12.3 指数函数</h4>
-<p>​	着色器常见内置函数可以参考数学或javascript语言。</p>
+<h4 id="12-3-指数函数"><a href="#12-3-指数函数" class="headerlink" title="12.3 指数函数"></a>12.3 指数函数</h4><p>​    着色器常见内置函数可以参考数学或javascript语言。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1105,7 +997,8 @@ $​​</p>
 </tr>
 </tbody>
 </table>
-<h4 id="12-4-通用函数">12.4 通用函数</h4>
+</div>
+<h4 id="12-4-通用函数"><a href="#12-4-通用函数" class="headerlink" title="12.4 通用函数"></a>12.4 通用函数</h4><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1152,20 +1045,20 @@ $​​</p>
 </tr>
 <tr>
 <td>mix(m,n,k)</td>
-<td>线性插值计算,插值区间[m,n],插值系数k，插值计算公式：m*(1-k)+n*k</td>
+<td>线性插值计算,插值区间[m,n],插值系数k，插值计算公式：m<em>(1-k)+n</em>k</td>
 </tr>
 </tbody>
 </table>
+</div>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果两向量v1, v2点积是正数就保留，如果是负数就返回0.0</span></span><br><span class="line"><span class="comment">// 常用于光照计算中，v1表示光线方向，v2表示顶点法线法线，光线背面照射，点积设置为0.0</span></span><br><span class="line"><span class="type">float</span> <span class="built_in">dot</span> = <span class="built_in">max</span>(<span class="built_in">dot</span>(v1, v2), <span class="number">0.0</span>);</span><br></pre></td></tr></table></figure>
-<h4 id="12-5-矩阵函数">12.5 矩阵函数</h4>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mat <span class="built_in">matrixCompMult</span> (mat x, mat y)  </span><br></pre></td></tr></table></figure>
+<h4 id="12-5-矩阵函数"><a href="#12-5-矩阵函数" class="headerlink" title="12.5 矩阵函数"></a>12.5 矩阵函数</h4><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mat <span class="built_in">matrixCompMult</span> (mat x, mat y)  </span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意内置矩阵函数<code>matrixCompMult()</code>不是按照线性代数中的矩阵乘法规则执行的，如果是线性代数中矩阵乘法规则，直接使用乘法符号<code>*</code>就可以，即<code>x*y</code>。</p>
 <p>内置矩阵函数<code>matrixCompMult()</code>的运算规则是同行同列的元素相乘，也就是 <code>x[i][j]</code>和<code>y[i][j]</code>相乘</p>
 </blockquote>
-<h4 id="12-6-向量关系函数">12.6 向量关系函数</h4>
-<p>​		着色器向量关系函数和javascript关系函数类似，区别在于着色器向量关系函数不是直接比较两个数的大小，而是对两个向量的每个元素都进行比较。</p>
-<p>​		比较函数返回值是true或flase。</p>
+<h4 id="12-6-向量关系函数"><a href="#12-6-向量关系函数" class="headerlink" title="12.6 向量关系函数"></a>12.6 向量关系函数</h4><p>​        着色器向量关系函数和javascript关系函数类似，区别在于着色器向量关系函数不是直接比较两个数的大小，而是对两个向量的每个元素都进行比较。</p>
+<p>​        比较函数返回值是true或flase。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1208,8 +1101,9 @@ $​​</p>
 </tr>
 </tbody>
 </table>
-<h4 id="12-7-纹理查询函数">12.7 纹理查询函数</h4>
-<p>​		纹理采用函数主要用于处理WebGL的纹理贴图，根据st坐标从图像上获取像素值。</p>
+</div>
+<h4 id="12-7-纹理查询函数"><a href="#12-7-纹理查询函数" class="headerlink" title="12.7 纹理查询函数"></a>12.7 纹理查询函数</h4><p>​        纹理采用函数主要用于处理WebGL的纹理贴图，根据st坐标从图像上获取像素值。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1244,18 +1138,15 @@ $​​</p>
 </tr>
 </tbody>
 </table>
-<h4 id="12-8-内置函数参数常见形式">12.8 内置函数参数常见形式</h4>
-<p>​		内置函数参数数据类型常见形式：<code>float</code>、<code>vec2</code>、<code>vec3</code>、<code>vec4</code></p>
+</div>
+<h4 id="12-8-内置函数参数常见形式"><a href="#12-8-内置函数参数常见形式" class="headerlink" title="12.8 内置函数参数常见形式"></a>12.8 内置函数参数常见形式</h4><p>​        内置函数参数数据类型常见形式：<code>float</code>、<code>vec2</code>、<code>vec3</code>、<code>vec4</code></p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 角度转弧度</span></span><br><span class="line"><span class="type">float</span> <span class="built_in">radians</span>(<span class="type">float</span> <span class="built_in">degrees</span>)  </span><br><span class="line"><span class="type">vec2</span> <span class="built_in">radians</span>(<span class="type">vec2</span> <span class="built_in">degrees</span>)  </span><br><span class="line"><span class="type">vec3</span> <span class="built_in">radians</span>(<span class="type">vec3</span> <span class="built_in">degrees</span>)  </span><br><span class="line"><span class="comment">// 正弦函数</span></span><br><span class="line"><span class="type">float</span> <span class="built_in">sin</span>(<span class="type">float</span> angle)  </span><br><span class="line"><span class="type">vec4</span> <span class="built_in">sin</span>(<span class="type">vec4</span> angle)  </span><br><span class="line"><span class="comment">// 点乘</span></span><br><span class="line"><span class="type">float</span> <span class="built_in">dot</span>(<span class="type">float</span> x, <span class="type">float</span> y)  </span><br><span class="line"><span class="type">float</span> <span class="built_in">dot</span>(<span class="type">vec3</span> x, <span class="type">vec3</span> y)  </span><br><span class="line"><span class="comment">// 长度</span></span><br><span class="line"><span class="type">float</span> <span class="built_in">length</span>(<span class="type">float</span> x)  </span><br><span class="line"><span class="type">float</span> <span class="built_in">length</span>(<span class="type">vec2</span> x)  </span><br></pre></td></tr></table></figure>
-<h3 id="十三、全局变量和局部变量">十三、全局变量和局部变量</h3>
-<p>​		同Js和C语言，变量声明在函数外面就是全局变量，在函数内部就是局部变量，局部变量只能在函数内部访问。</p>
-<p>​		下一节涉及的attribute变量、varying变量和uniform变量由于需要在函数外部访问，所以必须声明为全局变量。</p>
-<h3 id="十四、存储限定字">十四、存储限定字</h3>
-<p>​		在GLSL ES中，我们经常使用<code>attriute</code>、<code>varying</code>和<code>uniform</code>限定字来修饰变量，如图所示：</p>
+<h3 id="十三、全局变量和局部变量"><a href="#十三、全局变量和局部变量" class="headerlink" title="十三、全局变量和局部变量"></a>十三、全局变量和局部变量</h3><p>​        同Js和C语言，变量声明在函数外面就是全局变量，在函数内部就是局部变量，局部变量只能在函数内部访问。</p>
+<p>​        下一节涉及的attribute变量、varying变量和uniform变量由于需要在函数外部访问，所以必须声明为全局变量。</p>
+<h3 id="十四、存储限定字"><a href="#十四、存储限定字" class="headerlink" title="十四、存储限定字"></a>十四、存储限定字</h3><p>​        在GLSL ES中，我们经常使用<code>attriute</code>、<code>varying</code>和<code>uniform</code>限定字来修饰变量，如图所示：</p>
 <p><img src="glsles3.png" alt="3"></p>
-<p>​		此外，我们有时也会使用const限定字，它表示着色器中的某个变量使恒定的常量。</p>
-<h4 id="14-1-const">14.1 const</h4>
-<p>特点：</p>
+<p>​        此外，我们有时也会使用const限定字，它表示着色器中的某个变量使恒定的常量。</p>
+<h4 id="14-1-const"><a href="#14-1-const" class="headerlink" title="14.1 const"></a>14.1 const</h4><p>特点：</p>
 <ul>
 <li>被<code>const</code>修饰的值不能被改变</li>
 <li>在声明<code>const</code>变量时，需要将<code>const</code>写在类型之前</li>
@@ -1263,51 +1154,41 @@ $​​</p>
 <li>声明之后不能去改变值</li>
 </ul>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="type">int</span> light1 = <span class="number">22649897</span></span><br></pre></td></tr></table></figure>
-<h4 id="14-2-attribute变量">14.2 attribute变量</h4>
-<p>​		attribute变量只能出现在定点着色器中，只能被声明为全局变量，被用来表示<strong>逐顶点</strong>的信息。</p>
-<p>​		顶点着色器中能够容纳的attribute变量的最大数目与设备有关，你可以通过访问内置的全局常量获取该值。但是，支持WebGL环境都支持至少8个attribute变量。如下所示：</p>
+<h4 id="14-2-attribute变量"><a href="#14-2-attribute变量" class="headerlink" title="14.2 attribute变量"></a>14.2 attribute变量</h4><p>​        attribute变量只能出现在定点着色器中，只能被声明为全局变量，被用来表示<strong>逐顶点</strong>的信息。</p>
+<p>​        顶点着色器中能够容纳的attribute变量的最大数目与设备有关，你可以通过访问内置的全局常量获取该值。但是，支持WebGL环境都支持至少8个attribute变量。如下所示：</p>
 <p><img src="glsles4.png" alt="4"></p>
 <blockquote>
 <p><strong>逐顶点</strong>：比如，如果线段两个顶点(4.0, 3.0, 6.0)和(8.0, 3.0 0.0)，这两个坐标就会传递给attribute变量。而线段上的其他点，虽然也被画了出来，但它们不是顶点，坐标未曾传给attribute变量，也未曾被顶点着色器处理过。如果你想要让顶点着色器坐标处理它们，你就需要将它作为一个顶点添加到图像中来。</p>
 </blockquote>
-<h4 id="14-3-uniform变量">14.3 uniform变量</h4>
-<p>​		可以用在顶点着色器和片元着色器中，且必须是<strong>全局变量</strong>。uniform变量是<strong>只读的</strong>，它可以是除了数组或结构体之外的任意类型。<strong>如果顶点着色器和片元着色器中声明了同名的uniform变量，那么它就会被两种着色器共享。</strong></p>
-<p>​		uniform变量包含了“一致”（非逐顶点/逐片元的，各顶点或各片元共用）的数据。比如，变换矩阵就不是逐顶点的，而是所有顶点共用的，所以它在着色器中是uniform变量。</p>
+<h4 id="14-3-uniform变量"><a href="#14-3-uniform变量" class="headerlink" title="14.3 uniform变量"></a>14.3 uniform变量</h4><p>​        可以用在顶点着色器和片元着色器中，且必须是<strong>全局变量</strong>。uniform变量是<strong>只读的</strong>，它可以是除了数组或结构体之外的任意类型。<strong>如果顶点着色器和片元着色器中声明了同名的uniform变量，那么它就会被两种着色器共享。</strong></p>
+<p>​        uniform变量包含了“一致”（非逐顶点/逐片元的，各顶点或各片元共用）的数据。比如，变换矩阵就不是逐顶点的，而是所有顶点共用的，所以它在着色器中是uniform变量。</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">uniform</span> <span class="type">mat4</span> u_ViewMatrix</span><br><span class="line"><span class="keyword">uniform</span> <span class="type">vec3</span> u_LightPosition</span><br></pre></td></tr></table></figure>
-<h4 id="14-4-varying变量">14.4 varying变量</h4>
-<p>​		必须是<strong>全局变量</strong>，它的任务是从顶点着色器向片元着色器传输数据。我们必须在梁总着色器中声明同名、同类型的varying变量。它的类型只能是以下类型：float、vec2、vec3、vec4、mat2、 mat 3、mat4。</p>
+<h4 id="14-4-varying变量"><a href="#14-4-varying变量" class="headerlink" title="14.4 varying变量"></a>14.4 varying变量</h4><p>​        必须是<strong>全局变量</strong>，它的任务是从顶点着色器向片元着色器传输数据。我们必须在梁总着色器中声明同名、同类型的varying变量。它的类型只能是以下类型：float、vec2、vec3、vec4、mat2、 mat 3、mat4。</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">varying</span> <span class="type">vec2</span> v_TexCoord</span><br></pre></td></tr></table></figure>
-<h3 id="十五、精度限定字">十五、精度限定字</h3>
-<p>​		GLSL ES新引入了精度限定字，<strong>目的是帮助着色器程序提高运行效率，消减内存开支</strong>。使用精度限定字，你就能够<strong>精细地控制程序在效果</strong>和<strong>性能间的平衡</strong>。然而，精度限定字是可选的，如果你不确定，可以使用下面这个适中的默认值：</p>
+<h3 id="十五、精度限定字"><a href="#十五、精度限定字" class="headerlink" title="十五、精度限定字"></a>十五、精度限定字</h3><p>​        GLSL ES新引入了精度限定字，<strong>目的是帮助着色器程序提高运行效率，消减内存开支</strong>。使用精度限定字，你就能够<strong>精细地控制程序在效果</strong>和<strong>性能间的平衡</strong>。然而，精度限定字是可选的，如果你不确定，可以使用下面这个适中的默认值：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#ifdef GL_ES</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">mediump</span> <span class="type">float</span>;</span><br><span class="line"><span class="meta">#endif</span></span><br></pre></td></tr></table></figure>
-<p>​		WebGL程序支持三种精度，其限定字分别为highp、mediump、lowp。如下所示：</p>
+<p>​        WebGL程序支持三种精度，其限定字分别为highp、mediump、lowp。如下所示：</p>
 <p><img src="glsles5.png" alt="5"></p>
-<pre><code>	下面是声明变量精度的几个例子：
-</code></pre>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mediump</span> <span class="type">float</span> size; <span class="comment">//中精度的浮点型变量</span></span><br><span class="line"><span class="keyword">highp</span> <span class="type">vec4</span> position; <span class="comment">//具有高精度浮点型元素的vec4对象</span></span><br><span class="line"><span class="keyword">lowp</span> <span class="type">vec4</span> color; <span class="comment">//具有低精度浮点型元素的vec4对象</span></span><br></pre></td></tr></table></figure>
-<p>​		为每个变量都声明精度很繁琐，我们也可以使用<code>关键字precision</code>来声明着色器的默认精度，并且这行代码必须放在顶点着色器或片元着色器的顶部，格式如下：</p>
+<pre><code>     下面是声明变量精度的几个例子：
+</code></pre><figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mediump</span> <span class="type">float</span> size; <span class="comment">//中精度的浮点型变量</span></span><br><span class="line"><span class="keyword">highp</span> <span class="type">vec4</span> position; <span class="comment">//具有高精度浮点型元素的vec4对象</span></span><br><span class="line"><span class="keyword">lowp</span> <span class="type">vec4</span> color; <span class="comment">//具有低精度浮点型元素的vec4对象</span></span><br></pre></td></tr></table></figure>
+<p>​        为每个变量都声明精度很繁琐，我们也可以使用<code>关键字precision</code>来声明着色器的默认精度，并且这行代码必须放在顶点着色器或片元着色器的顶部，格式如下：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// precision 精度限定字 类型名称</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">mediump</span> <span class="type">float</span>;</span><br></pre></td></tr></table></figure>
-<p>​		使用精度限定字一般都只在<strong>片元着色器</strong>中使用，这是因为，除了片元着色器的<code>float</code>类型没有默认精度（需手动指定，否则报错），其他类型都有默认精度。如下是数据类型的默认精度：</p>
+<p>​        使用精度限定字一般都只在<strong>片元着色器</strong>中使用，这是因为，除了片元着色器的<code>float</code>类型没有默认精度（需手动指定，否则报错），其他类型都有默认精度。如下是数据类型的默认精度：</p>
 <p><img src="glsles6.png" alt="6"></p>
-<p>​		WebGL是否在片元着色器中支持highp精度，取决于具体的设备。如果设备支持，那么着色器就会定义内置宏<code>GL_FRAGMENT_PRECISION_HIGH</code>（见下一节）。</p>
-<h3 id="十六、预处理指令——宏">十六、预处理指令——宏</h3>
-<p>​		GLSL ES支持预处理指令。<strong>预处理指令用来在真正编译之前对代码进行预处理</strong>。都已<code>#</code>号开始。下面就是预定义float类型精度的预处理指令：</p>
+<p>​        WebGL是否在片元着色器中支持highp精度，取决于具体的设备。如果设备支持，那么着色器就会定义内置宏<code>GL_FRAGMENT_PRECISION_HIGH</code>（见下一节）。</p>
+<h3 id="十六、预处理指令——宏"><a href="#十六、预处理指令——宏" class="headerlink" title="十六、预处理指令——宏"></a>十六、预处理指令——宏</h3><p>​        GLSL ES支持预处理指令。<strong>预处理指令用来在真正编译之前对代码进行预处理</strong>。都已<code>#</code>号开始。下面就是预定义float类型精度的预处理指令：    </p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#ifdef GL_ES</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">mediump</span> <span class="type">float</span>;</span><br><span class="line"><span class="meta">#endif</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	这段代码检查了是否已经定义了GL_ES宏，如果是，那就执行#ifdef和#endif之间的部分。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-<h4 id="16-1-预处理指令">16.1 预处理指令</h4>
-<p>​		下面是我们在GLSL ES中可能用到的三种预处理指令：</p>
+<h4 id="16-1-预处理指令"><a href="#16-1-预处理指令" class="headerlink" title="16.1 预处理指令"></a>16.1 预处理指令</h4><p>​        下面是我们在GLSL ES中可能用到的三种预处理指令：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#if 条件表达式</span></span><br><span class="line">If 如果条件比倒是为真，执行这里</span><br><span class="line"><span class="meta">#endif</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#ifdef 某宏</span></span><br><span class="line">如果定义了某宏，执行这里</span><br><span class="line"><span class="meta">#endif</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#ifndef 某宏</span></span><br><span class="line">如果没有定义某宏，执行这里</span><br><span class="line"><span class="meta">#endif</span></span><br></pre></td></tr></table></figure>
-<h4 id="16-2-宏定义">16.2 宏定义</h4>
-<p>​		可以使用以下指定进行宏定义：</p>
+<h4 id="16-2-宏定义"><a href="#16-2-宏定义" class="headerlink" title="16.2 宏定义"></a>16.2 宏定义</h4><p>​        可以使用以下指定进行宏定义：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define 宏名 宏内容</span></span><br></pre></td></tr></table></figure>
-<h4 id="16-3-结束宏">16.3 结束宏</h4>
-<p>​		可以使用undef 宏名，结束宏定义。例如：</p>
+<h4 id="16-3-结束宏"><a href="#16-3-结束宏" class="headerlink" title="16.3 结束宏"></a>16.3 结束宏</h4><p>​        可以使用undef 宏名，结束宏定义。例如：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#undef 宏名</span></span><br></pre></td></tr></table></figure>
-<h4 id="16-4-宏分支">16.4 宏分支</h4>
-<p>​		可以使用<code>#else</code>指令配合<code>#ifdef</code>：</p>
+<h4 id="16-4-宏分支"><a href="#16-4-宏分支" class="headerlink" title="16.4 宏分支"></a>16.4 宏分支</h4><p>​        可以使用<code>#else</code>指令配合<code>#ifdef</code>：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define NUM 100</span></span><br><span class="line"><span class="meta">#if NUM == 100</span></span><br><span class="line">如果宏NUM为<span class="number">100</span>，执行这里</span><br><span class="line"><span class="meta">#else</span></span><br><span class="line">否则，执行这里</span><br><span class="line"><span class="meta">#endif</span></span><br></pre></td></tr></table></figure>
-<h4 id="16-5-宏名规范">16.5 宏名规范</h4>
-<p>​		宏的名称可以随意起，只要不和预定义的内置宏相同。</p>
-<p>​		下面是预定义的内置宏：</p>
+<h4 id="16-5-宏名规范"><a href="#16-5-宏名规范" class="headerlink" title="16.5 宏名规范"></a>16.5 宏名规范</h4><p>​        宏的名称可以随意起，只要不和预定义的内置宏相同。</p>
+<p>​        下面是预定义的内置宏：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1326,9 +1207,10 @@ $​​</p>
 </tr>
 </tbody>
 </table>
-<p>​		所以，可以这样使用宏来进行精度限定：</p>
+</div>
+<p>​        所以，可以这样使用宏来进行精度限定：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#ifndef GL_ES</span></span><br><span class="line"><span class="meta">#ifndef GL_FRAGEMENT_PRECISION_HIGH</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">highp</span> <span class="type">float</span>;	<span class="comment">// 支持高精度，限定浮点型为高精度</span></span><br><span class="line"><span class="meta">#else</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">mediump</span> <span class="type">float</span>; <span class="comment">// 不支持高精度，限定浮动型为中精度</span></span><br><span class="line"><span class="meta">#endif</span></span><br><span class="line"><span class="meta">#endif</span></span><br></pre></td></tr></table></figure>
-<p>​	可以使用<code>#version</code>来指定着色器使用的GLSL ES版本：</p>
+<p>​    可以使用<code>#version</code>来指定着色器使用的GLSL ES版本：</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#version number</span></span><br><span class="line">number包括：</span><br><span class="line">    值：<span class="number">100</span>   对应GLSL ES <span class="number">1.00</span></span><br><span class="line">        <span class="number">101</span>	 对应GLSL ES <span class="number">1.01</span></span><br><span class="line">默认<span class="number">100</span></span><br></pre></td></tr></table></figure>
 
 
@@ -1479,7 +1361,7 @@ $​​</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E8%A7%88"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">总览</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9E%E9%A1%BE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">回顾</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9D%80%E8%89%B2%E5%99%A8%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基本着色器代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">知识点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81GLSL-ES%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">一、GLSL ES概述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">二、基础语法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-1-%E5%9F%BA%E7%A1%80"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">2.1 基础</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-2-%E6%89%A7%E8%A1%8C%E6%AC%A1%E5%BA%8F"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2.2 执行次序</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-3-%E6%B3%A8%E9%87%8A"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">2.3 注释</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E6%8D%AE%E5%80%BC%E7%B1%BB%E5%9E%8B%EF%BC%88%E6%95%B0%E5%80%BC%E9%A2%9D%E5%B8%83%E5%B0%94%E5%80%BC%EF%BC%89"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">三、数据值类型（数值额布尔值）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">四、变量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-1-%E5%8F%98%E9%87%8F%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-nav-number">3.4.1.</span> <span class="toc-nav-text">4.1 变量名规则</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-2-GLSL-ES%E6%98%AF%E5%BC%BA%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80"><span class="toc-nav-number">3.4.2.</span> <span class="toc-nav-text">4.2 GLSL ES是强类型语言</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">五、基本类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-1-%E8%B5%8B%E5%80%BC%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-nav-number">3.5.1.</span> <span class="toc-nav-text">5.1 赋值和类型转换</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-2-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-nav-number">3.5.2.</span> <span class="toc-nav-text">5.2 运算符</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E7%9F%A2%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">六、矢量和矩阵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-1-%E7%9F%A2%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E4%B8%BE%E4%BE%8B"><span class="toc-nav-number">3.6.1.</span> <span class="toc-nav-text">6.1 矢量和矩阵举例</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-2-%E7%9F%A2%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.6.2.</span> <span class="toc-nav-text">6.2 矢量和矩阵的类型</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-3-%E8%B5%8B%E5%80%BC%E5%92%8C%E6%9E%84%E9%80%A0"><span class="toc-nav-number">3.6.3.</span> <span class="toc-nav-text">6.3 赋值和构造</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-4-%E7%9F%A2%E9%87%8F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.6.4.</span> <span class="toc-nav-text">6.4 矢量构造函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-5-%E7%9F%A9%E9%98%B5%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.6.5.</span> <span class="toc-nav-text">6.5 矩阵构造函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-5-1-%E6%96%B9%E5%BC%8F%E4%B8%80"><span class="toc-nav-number">3.6.5.1.</span> <span class="toc-nav-text">6.5.1 方式一</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-5-2-%E6%96%B9%E5%BC%8F%E4%BA%8C"><span class="toc-nav-number">3.6.5.2.</span> <span class="toc-nav-text">6.5.2 方式二</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-5-3-%E6%96%B9%E5%BC%8F%E4%B8%89"><span class="toc-nav-number">3.6.5.3.</span> <span class="toc-nav-text">6.5.3 方式三</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-5-4-%E6%96%B9%E5%BC%8F%E5%9B%9B"><span class="toc-nav-number">3.6.5.4.</span> <span class="toc-nav-text">6.5.4 方式四</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-6-%E8%AE%BF%E9%97%AE%E7%9F%A2%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-nav-number">3.6.6.</span> <span class="toc-nav-text">6.6 访问矢量和矩阵的元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-6-1-%E8%AE%BF%E9%97%AE%E7%9F%A2%E9%87%8F%E5%85%83%E7%B4%A0"><span class="toc-nav-number">3.6.6.1.</span> <span class="toc-nav-text">6.6.1 访问矢量元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-nav-number">3.6.6.1.1.</span> <span class="toc-nav-text">.运算符</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%B7%B7%E5%90%88"><span class="toc-nav-number">3.6.6.1.2.</span> <span class="toc-nav-text">混合</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-6-2-%E8%AE%BF%E9%97%AE%E7%9F%A9%E9%98%B5%E5%85%83%E7%B4%A0"><span class="toc-nav-number">3.6.6.2.</span> <span class="toc-nav-text">6.6.2 访问矩阵元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6-2"><span class="toc-nav-number">3.6.6.2.1.</span> <span class="toc-nav-text">[]运算符</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%B8%B8%E9%87%8F%E7%B4%A2%E5%BC%95%E5%80%BC"><span class="toc-nav-number">3.6.6.2.2.</span> <span class="toc-nav-text">常量索引值</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-7-%E8%BF%90%E7%AE%97"><span class="toc-nav-number">3.6.7.</span> <span class="toc-nav-text">6.7 运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-7-1-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-nav-number">3.6.7.1.</span> <span class="toc-nav-text">6.7.1 运算符</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-7-2-%E7%9F%A2%E9%87%8F%E8%BF%90%E7%AE%97"><span class="toc-nav-number">3.6.7.2.</span> <span class="toc-nav-text">6.7.2 矢量运算</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-7-3-%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="toc-nav-number">3.6.7.3.</span> <span class="toc-nav-text">6.7.3 矩阵运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%92%8C%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-nav-number">3.6.7.3.1.</span> <span class="toc-nav-text">矩阵和浮点数运算</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%8F%B3%E4%B9%98%E7%9F%A2%E9%87%8F"><span class="toc-nav-number">3.6.7.3.2.</span> <span class="toc-nav-text">矩阵右乘矢量</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%B7%A6%E4%B9%98%E7%9F%A2%E9%87%8F"><span class="toc-nav-number">3.6.7.3.3.</span> <span class="toc-nav-text">矩阵左乘矢量</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E4%B8%8E%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98"><span class="toc-nav-number">3.6.7.3.4.</span> <span class="toc-nav-text">矩阵与矩阵相乘</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%83%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">七、结构体</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-1-%E7%BB%93%E6%9E%84%E4%BD%93%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">3.7.1.</span> <span class="toc-nav-text">7.1 结构体定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-2-%E8%B5%8B%E5%80%BC%E5%92%8C%E6%9E%84%E9%80%A0"><span class="toc-nav-number">3.7.2.</span> <span class="toc-nav-text">7.2 赋值和构造</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-3-%E8%AE%BF%E9%97%AE%E6%88%90%E5%91%98"><span class="toc-nav-number">3.7.3.</span> <span class="toc-nav-text">7.3 访问成员</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-4-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-nav-number">3.7.4.</span> <span class="toc-nav-text">7.4 运算符</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%AB%E3%80%81%E6%95%B0%E7%BB%84"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">八、数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#8-1-%E5%A3%B0%E6%98%8E%E6%95%B0%E7%BB%84"><span class="toc-nav-number">3.8.1.</span> <span class="toc-nav-text">8.1 声明数组</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#8-2-%E5%AE%9A%E4%B9%89%E6%95%B0%E7%BB%84"><span class="toc-nav-number">3.8.2.</span> <span class="toc-nav-text">8.2 定义数组</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B9%9D%E3%80%81%E5%8F%96%E6%A0%B7%E5%99%A8%EF%BC%88%E7%BA%B9%E7%90%86%EF%BC%89"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">九、取样器（纹理）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#9-1-%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">3.9.1.</span> <span class="toc-nav-text">9.1 概念</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#9-2-%E8%A7%84%E8%8C%83"><span class="toc-nav-number">3.9.2.</span> <span class="toc-nav-text">9.2 规范</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E3%80%81%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%EF%BC%9A%E5%88%86%E6%94%AF%E5%92%8C%E5%BE%AA%E7%8E%AF"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">十、程序流程控制：分支和循环</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#10-1-if%E5%92%8Cif-else%E8%AF%AD%E5%8F%A5"><span class="toc-nav-number">3.10.1.</span> <span class="toc-nav-text">10.1 if和if-else语句</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#10-2-for%E8%AF%AD%E5%8F%A5"><span class="toc-nav-number">3.10.2.</span> <span class="toc-nav-text">10.2 for语句</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#10-3-continue%E3%80%81break%E3%80%81discard%E8%AF%AD%E5%8F%A5"><span class="toc-nav-number">3.10.3.</span> <span class="toc-nav-text">10.3 continue、break、discard语句</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.11.</span> <span class="toc-nav-text">十一、函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#11-1-%E5%A3%B0%E6%98%8E%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.11.1.</span> <span class="toc-nav-text">11.1 声明函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#11-2-%E8%A7%84%E8%8C%83%E5%A3%B0%E6%98%8E"><span class="toc-nav-number">3.11.2.</span> <span class="toc-nav-text">11.2 规范声明</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#11-3-%E5%8F%82%E6%95%B0%E9%99%90%E5%AE%9A%E8%AF%8D"><span class="toc-nav-number">3.11.3.</span> <span class="toc-nav-text">11.3 参数限定词</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.</span> <span class="toc-nav-text">十二、内置函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-1-%E8%A7%92%E5%BA%A6%E5%87%BD%E6%95%B0%E5%92%8C%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.1.</span> <span class="toc-nav-text">12.1 角度函数和三角函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-2-%E5%87%A0%E4%BD%95%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.2.</span> <span class="toc-nav-text">12.2 几何函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-3-%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.3.</span> <span class="toc-nav-text">12.3 指数函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-4-%E9%80%9A%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.4.</span> <span class="toc-nav-text">12.4 通用函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-5-%E7%9F%A9%E9%98%B5%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.5.</span> <span class="toc-nav-text">12.5 矩阵函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-6-%E5%90%91%E9%87%8F%E5%85%B3%E7%B3%BB%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.6.</span> <span class="toc-nav-text">12.6 向量关系函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-7-%E7%BA%B9%E7%90%86%E6%9F%A5%E8%AF%A2%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.7.</span> <span class="toc-nav-text">12.7 纹理查询函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-8-%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%B8%B8%E8%A7%81%E5%BD%A2%E5%BC%8F"><span class="toc-nav-number">3.12.8.</span> <span class="toc-nav-text">12.8 内置函数参数常见形式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.13.</span> <span class="toc-nav-text">十三、全局变量和局部变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E5%AD%98%E5%82%A8%E9%99%90%E5%AE%9A%E5%AD%97"><span class="toc-nav-number">3.14.</span> <span class="toc-nav-text">十四、存储限定字</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-1-const"><span class="toc-nav-number">3.14.1.</span> <span class="toc-nav-text">14.1 const</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-2-attribute%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.14.2.</span> <span class="toc-nav-text">14.2 attribute变量</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-3-uniform%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.14.3.</span> <span class="toc-nav-text">14.3 uniform变量</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-4-varying%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.14.4.</span> <span class="toc-nav-text">14.4 varying变量</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E4%BA%94%E3%80%81%E7%B2%BE%E5%BA%A6%E9%99%90%E5%AE%9A%E5%AD%97"><span class="toc-nav-number">3.15.</span> <span class="toc-nav-text">十五、精度限定字</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E5%85%AD%E3%80%81%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4%E2%80%94%E2%80%94%E5%AE%8F"><span class="toc-nav-number">3.16.</span> <span class="toc-nav-text">十六、预处理指令——宏</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-1-%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4"><span class="toc-nav-number">3.16.1.</span> <span class="toc-nav-text">16.1 预处理指令</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-2-%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">3.16.2.</span> <span class="toc-nav-text">16.2 宏定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-3-%E7%BB%93%E6%9D%9F%E5%AE%8F"><span class="toc-nav-number">3.16.3.</span> <span class="toc-nav-text">16.3 结束宏</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-4-%E5%AE%8F%E5%88%86%E6%94%AF"><span class="toc-nav-number">3.16.4.</span> <span class="toc-nav-text">16.4 宏分支</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-5-%E5%AE%8F%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-nav-number">3.16.5.</span> <span class="toc-nav-text">16.5 宏名规范</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E8%A7%88"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">总览</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9E%E9%A1%BE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">回顾</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9D%80%E8%89%B2%E5%99%A8%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基本着色器代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">知识点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81GLSL-ES%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">一、GLSL ES概述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">二、基础语法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-1-%E5%9F%BA%E7%A1%80"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">2.1 基础</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-2-%E6%89%A7%E8%A1%8C%E6%AC%A1%E5%BA%8F"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2.2 执行次序</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-3-%E6%B3%A8%E9%87%8A"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">2.3 注释</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E6%8D%AE%E5%80%BC%E7%B1%BB%E5%9E%8B%EF%BC%88%E6%95%B0%E5%80%BC%E9%A2%9D%E5%B8%83%E5%B0%94%E5%80%BC%EF%BC%89"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">三、数据值类型（数值额布尔值）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">四、变量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-1-%E5%8F%98%E9%87%8F%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-nav-number">3.4.1.</span> <span class="toc-nav-text">4.1 变量名规则</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-2-GLSL-ES%E6%98%AF%E5%BC%BA%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80"><span class="toc-nav-number">3.4.2.</span> <span class="toc-nav-text">4.2 GLSL ES是强类型语言</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">五、基本类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-1-%E8%B5%8B%E5%80%BC%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-nav-number">3.5.1.</span> <span class="toc-nav-text">5.1 赋值和类型转换</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-2-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-nav-number">3.5.2.</span> <span class="toc-nav-text">5.2 运算符</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E7%9F%A2%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">六、矢量和矩阵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-1-%E7%9F%A2%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E4%B8%BE%E4%BE%8B"><span class="toc-nav-number">3.6.1.</span> <span class="toc-nav-text">6.1 矢量和矩阵举例</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-2-%E7%9F%A2%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.6.2.</span> <span class="toc-nav-text">6.2 矢量和矩阵的类型</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-3-%E8%B5%8B%E5%80%BC%E5%92%8C%E6%9E%84%E9%80%A0"><span class="toc-nav-number">3.6.3.</span> <span class="toc-nav-text">6.3 赋值和构造</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-4-%E7%9F%A2%E9%87%8F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.6.4.</span> <span class="toc-nav-text">6.4 矢量构造函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-5-%E7%9F%A9%E9%98%B5%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.6.5.</span> <span class="toc-nav-text">6.5 矩阵构造函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-5-1-%E6%96%B9%E5%BC%8F%E4%B8%80"><span class="toc-nav-number">3.6.5.1.</span> <span class="toc-nav-text">6.5.1 方式一</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-5-2-%E6%96%B9%E5%BC%8F%E4%BA%8C"><span class="toc-nav-number">3.6.5.2.</span> <span class="toc-nav-text">6.5.2 方式二</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-5-3-%E6%96%B9%E5%BC%8F%E4%B8%89"><span class="toc-nav-number">3.6.5.3.</span> <span class="toc-nav-text">6.5.3 方式三</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-5-4-%E6%96%B9%E5%BC%8F%E5%9B%9B"><span class="toc-nav-number">3.6.5.4.</span> <span class="toc-nav-text">6.5.4 方式四</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-6-%E8%AE%BF%E9%97%AE%E7%9F%A2%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-nav-number">3.6.6.</span> <span class="toc-nav-text">6.6 访问矢量和矩阵的元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-6-1-%E8%AE%BF%E9%97%AE%E7%9F%A2%E9%87%8F%E5%85%83%E7%B4%A0"><span class="toc-nav-number">3.6.6.1.</span> <span class="toc-nav-text">6.6.1 访问矢量元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-nav-number">3.6.6.1.1.</span> <span class="toc-nav-text">.运算符</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%B7%B7%E5%90%88"><span class="toc-nav-number">3.6.6.1.2.</span> <span class="toc-nav-text">混合</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-6-2-%E8%AE%BF%E9%97%AE%E7%9F%A9%E9%98%B5%E5%85%83%E7%B4%A0"><span class="toc-nav-number">3.6.6.2.</span> <span class="toc-nav-text">6.6.2 访问矩阵元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6-1"><span class="toc-nav-number">3.6.6.2.1.</span> <span class="toc-nav-text">[]运算符</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%B8%B8%E9%87%8F%E7%B4%A2%E5%BC%95%E5%80%BC"><span class="toc-nav-number">3.6.6.2.2.</span> <span class="toc-nav-text">常量索引值</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-7-%E8%BF%90%E7%AE%97"><span class="toc-nav-number">3.6.7.</span> <span class="toc-nav-text">6.7 运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-7-1-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-nav-number">3.6.7.1.</span> <span class="toc-nav-text">6.7.1 运算符</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-7-2-%E7%9F%A2%E9%87%8F%E8%BF%90%E7%AE%97"><span class="toc-nav-number">3.6.7.2.</span> <span class="toc-nav-text">6.7.2 矢量运算</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#6-7-3-%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="toc-nav-number">3.6.7.3.</span> <span class="toc-nav-text">6.7.3 矩阵运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%92%8C%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-nav-number">3.6.7.3.1.</span> <span class="toc-nav-text">矩阵和浮点数运算</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%8F%B3%E4%B9%98%E7%9F%A2%E9%87%8F"><span class="toc-nav-number">3.6.7.3.2.</span> <span class="toc-nav-text">矩阵右乘矢量</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%B7%A6%E4%B9%98%E7%9F%A2%E9%87%8F"><span class="toc-nav-number">3.6.7.3.3.</span> <span class="toc-nav-text">矩阵左乘矢量</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E4%B8%8E%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98"><span class="toc-nav-number">3.6.7.3.4.</span> <span class="toc-nav-text">矩阵与矩阵相乘</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%83%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">七、结构体</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-1-%E7%BB%93%E6%9E%84%E4%BD%93%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">3.7.1.</span> <span class="toc-nav-text">7.1 结构体定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-2-%E8%B5%8B%E5%80%BC%E5%92%8C%E6%9E%84%E9%80%A0"><span class="toc-nav-number">3.7.2.</span> <span class="toc-nav-text">7.2 赋值和构造</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-3-%E8%AE%BF%E9%97%AE%E6%88%90%E5%91%98"><span class="toc-nav-number">3.7.3.</span> <span class="toc-nav-text">7.3 访问成员</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-4-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-nav-number">3.7.4.</span> <span class="toc-nav-text">7.4 运算符</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%AB%E3%80%81%E6%95%B0%E7%BB%84"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">八、数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#8-1-%E5%A3%B0%E6%98%8E%E6%95%B0%E7%BB%84"><span class="toc-nav-number">3.8.1.</span> <span class="toc-nav-text">8.1 声明数组</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#8-2-%E5%AE%9A%E4%B9%89%E6%95%B0%E7%BB%84"><span class="toc-nav-number">3.8.2.</span> <span class="toc-nav-text">8.2 定义数组</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B9%9D%E3%80%81%E5%8F%96%E6%A0%B7%E5%99%A8%EF%BC%88%E7%BA%B9%E7%90%86%EF%BC%89"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">九、取样器（纹理）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#9-1-%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">3.9.1.</span> <span class="toc-nav-text">9.1 概念</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#9-2-%E8%A7%84%E8%8C%83"><span class="toc-nav-number">3.9.2.</span> <span class="toc-nav-text">9.2 规范</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E3%80%81%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%EF%BC%9A%E5%88%86%E6%94%AF%E5%92%8C%E5%BE%AA%E7%8E%AF"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">十、程序流程控制：分支和循环</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#10-1-if%E5%92%8Cif-else%E8%AF%AD%E5%8F%A5"><span class="toc-nav-number">3.10.1.</span> <span class="toc-nav-text">10.1 if和if-else语句</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#10-2-for%E8%AF%AD%E5%8F%A5"><span class="toc-nav-number">3.10.2.</span> <span class="toc-nav-text">10.2 for语句</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#10-3-continue%E3%80%81break%E3%80%81discard%E8%AF%AD%E5%8F%A5"><span class="toc-nav-number">3.10.3.</span> <span class="toc-nav-text">10.3 continue、break、discard语句</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.11.</span> <span class="toc-nav-text">十一、函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#11-1-%E5%A3%B0%E6%98%8E%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.11.1.</span> <span class="toc-nav-text">11.1 声明函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#11-2-%E8%A7%84%E8%8C%83%E5%A3%B0%E6%98%8E"><span class="toc-nav-number">3.11.2.</span> <span class="toc-nav-text">11.2 规范声明</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#11-3-%E5%8F%82%E6%95%B0%E9%99%90%E5%AE%9A%E8%AF%8D"><span class="toc-nav-number">3.11.3.</span> <span class="toc-nav-text">11.3 参数限定词</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.</span> <span class="toc-nav-text">十二、内置函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-1-%E8%A7%92%E5%BA%A6%E5%87%BD%E6%95%B0%E5%92%8C%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.1.</span> <span class="toc-nav-text">12.1 角度函数和三角函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-2-%E5%87%A0%E4%BD%95%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.2.</span> <span class="toc-nav-text">12.2 几何函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-3-%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.3.</span> <span class="toc-nav-text">12.3 指数函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-4-%E9%80%9A%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.4.</span> <span class="toc-nav-text">12.4 通用函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-5-%E7%9F%A9%E9%98%B5%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.5.</span> <span class="toc-nav-text">12.5 矩阵函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-6-%E5%90%91%E9%87%8F%E5%85%B3%E7%B3%BB%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.6.</span> <span class="toc-nav-text">12.6 向量关系函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-7-%E7%BA%B9%E7%90%86%E6%9F%A5%E8%AF%A2%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.12.7.</span> <span class="toc-nav-text">12.7 纹理查询函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-8-%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%B8%B8%E8%A7%81%E5%BD%A2%E5%BC%8F"><span class="toc-nav-number">3.12.8.</span> <span class="toc-nav-text">12.8 内置函数参数常见形式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.13.</span> <span class="toc-nav-text">十三、全局变量和局部变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E5%AD%98%E5%82%A8%E9%99%90%E5%AE%9A%E5%AD%97"><span class="toc-nav-number">3.14.</span> <span class="toc-nav-text">十四、存储限定字</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-1-const"><span class="toc-nav-number">3.14.1.</span> <span class="toc-nav-text">14.1 const</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-2-attribute%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.14.2.</span> <span class="toc-nav-text">14.2 attribute变量</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-3-uniform%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.14.3.</span> <span class="toc-nav-text">14.3 uniform变量</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-4-varying%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.14.4.</span> <span class="toc-nav-text">14.4 varying变量</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E4%BA%94%E3%80%81%E7%B2%BE%E5%BA%A6%E9%99%90%E5%AE%9A%E5%AD%97"><span class="toc-nav-number">3.15.</span> <span class="toc-nav-text">十五、精度限定字</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%81%E5%85%AD%E3%80%81%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4%E2%80%94%E2%80%94%E5%AE%8F"><span class="toc-nav-number">3.16.</span> <span class="toc-nav-text">十六、预处理指令——宏</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-1-%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4"><span class="toc-nav-number">3.16.1.</span> <span class="toc-nav-text">16.1 预处理指令</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-2-%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">3.16.2.</span> <span class="toc-nav-text">16.2 宏定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-3-%E7%BB%93%E6%9D%9F%E5%AE%8F"><span class="toc-nav-number">3.16.3.</span> <span class="toc-nav-text">16.3 结束宏</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-4-%E5%AE%8F%E5%88%86%E6%94%AF"><span class="toc-nav-number">3.16.4.</span> <span class="toc-nav-text">16.4 宏分支</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#16-5-%E5%AE%8F%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-nav-number">3.16.5.</span> <span class="toc-nav-text">16.5 宏名规范</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -1619,7 +1501,7 @@ $​​</p>
           2021
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
-          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">264.4k</span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">264.2k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

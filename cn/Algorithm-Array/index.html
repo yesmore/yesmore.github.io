@@ -471,9 +471,7 @@
 
         <p>要点：JavaScript数组、操作数组的方法</p>
 <span id="more"></span>
-<p>几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。<br>
-数组通常情况下用于存储一系列同一种数据类型的值。<br>
-但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。</p>
+<p>几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。<br>数组通常情况下用于存储一系列同一种数据类型的值。<br>但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。</p>
 <blockquote>
 <p>汇总：</p>
 <p><strong>不改变原数组的方法(8个):</strong></p>
@@ -481,20 +479,13 @@
 <blockquote>
 <p>join、toLocateString、toStrigin、slice、cancat、indexOf、lastIndexOf</p>
 </blockquote>
-<p>ES7：<br>
-includes</p>
+<p>ES7：<br>includes</p>
 <p><strong>改变原数组的方法(9个):</strong></p>
-<p>ES5:<br>
-a.pop()、a.shift()、a.push()、a.unshift()、a.reverse()、a.splice()、a.sort()<br>
-ES6:<br>
-a.copyWithin() 、a.fill</p>
+<p>ES5:<br>a.pop()、a.shift()、a.push()、a.unshift()、a.reverse()、a.splice()、a.sort()<br>ES6:<br>a.copyWithin() 、a.fill</p>
 <p>对于这些能够改变原数组的方法，要注意避免在循环遍历中改变原数组的选项，比如: 改变数组的长度，导致遍历的长度出现问题。</p>
 <p><strong>遍历方法(12个):</strong></p>
 <p>js中遍历数组并不会改变原始数组的方法总共有12个:</p>
-<p>ES5：<br>
-forEach、every 、some、 fliter、map、reduce、reduceRight、<br>
-ES6：<br>
-find、findIndex、keys、values、entries</p>
+<p>ES5：<br>forEach、every 、some、 fliter、map、reduce、reduceRight、<br>ES6：<br>find、findIndex、keys、values、entries</p>
 <p><strong>关于遍历：</strong></p>
 <ul>
 <li>遍历的效率</li>
@@ -502,52 +493,32 @@ find、findIndex、keys、values、entries</p>
 <li>尽量不要在遍历的时候修改数组的长度（删除/添加）</li>
 </ul>
 </blockquote>
-<h2 id="创建和初始化数组">创建和初始化数组</h2>
-<p><code>new Array()</code></p>
+<h2 id="创建和初始化数组"><a href="#创建和初始化数组" class="headerlink" title="创建和初始化数组"></a>创建和初始化数组</h2><p><code>new Array()</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> daysOfWeek = <span class="keyword">new</span> <span class="built_in">Array</span>(</span><br><span class="line">  <span class="string">&quot;Sunday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Monday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Tuesday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Wednesday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Thursday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Friday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Saturday&quot;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <p><code>[]</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> daysOfWeek = [</span><br><span class="line">  <span class="string">&quot;Sunday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Monday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Tuesday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Wednesday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Thursday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Friday&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Saturday&quot;</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-<h2 id="数组常见操作">数组常见操作</h2>
-<h3 id="添加元素">添加元素</h3>
-<h4 id="push-item">push(item)</h4>
-<p>添加一个元素到数组的最后位置（<strong>改变原数组</strong>）</p>
-<h4 id="unshift-item">unshift(item)</h4>
-<p>在数组首位插入一个元素</p>
-<h4 id="splice-index-0-item">splice(index, 0, item)</h4>
-<p>在指定索引位置插入元素（<strong>改变原数组</strong>）</p>
+<h2 id="数组常见操作"><a href="#数组常见操作" class="headerlink" title="数组常见操作"></a>数组常见操作</h2><h3 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h3><h4 id="push-item"><a href="#push-item" class="headerlink" title="push(item)"></a>push(item)</h4><p>添加一个元素到数组的最后位置（<strong>改变原数组</strong>）</p>
+<h4 id="unshift-item"><a href="#unshift-item" class="headerlink" title="unshift(item)"></a>unshift(item)</h4><p>在数组首位插入一个元素</p>
+<h4 id="splice-index-0-item"><a href="#splice-index-0-item" class="headerlink" title="splice(index, 0, item)"></a>splice(index, 0, item)</h4><p>在指定索引位置插入元素（<strong>改变原数组</strong>）</p>
 <blockquote>
-<p>splice() 第二个参数为 0 时，表示插入数据。</p>
+<p>splice() 第二个参数为 0 时，表示插入数据。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">// 在 索引 0 的位置，插入 A</span></span><br><span class="line">myArray.splice(<span class="number">0</span>, <span class="number">0</span>, <span class="string">&quot;A&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray); <span class="comment">//--&gt; [&#x27;A&#x27;, 1, 2, 3]</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">// 在 索引 0 的位置，插入 A</span></span><br><span class="line">myArray.splice(<span class="number">0</span>, <span class="number">0</span>, <span class="string">&quot;A&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray); <span class="comment">//--&gt; [&#x27;A&#x27;, 1, 2, 3]</span></span><br></pre></td></tr></table></figure>
-<h3 id="删除元素">删除元素</h3>
-<h4 id="pop-item">pop(item)</h4>
-<p>删除数组最后的元素。（<strong>改变原数组</strong>）</p>
-<h4 id="shift-item">shift(item)</h4>
-<p>删除数组首位的元素（<strong>改变原数组</strong>）</p>
-<h4 id="unshift">unshift()</h4>
-<p>在数组开始删除一个元素(删且只删除1个),并返回 被删除的元素（<strong>改变原数组</strong>）</p>
-<h4 id="splice-start-number">splice(start, number)</h4>
-<p>删除指定索引位置的元素</p>
+<h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><h4 id="pop-item"><a href="#pop-item" class="headerlink" title="pop(item)"></a>pop(item)</h4><p>删除数组最后的元素。（<strong>改变原数组</strong>）</p>
+<h4 id="shift-item"><a href="#shift-item" class="headerlink" title="shift(item)"></a>shift(item)</h4><p>删除数组首位的元素（<strong>改变原数组</strong>）</p>
+<h4 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h4><p>在数组开始删除一个元素(删且只删除1个),并返回 被删除的元素（<strong>改变原数组</strong>）</p>
+<h4 id="splice-start-number"><a href="#splice-start-number" class="headerlink" title="splice(start, number)"></a>splice(start, number)</h4><p>删除指定索引位置的元素</p>
 <p>例如：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="comment">// 删除索引 4 位置起，2 个元素</span></span><br><span class="line">myArray2.splice(<span class="number">4</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray2); <span class="comment">//--&gt; [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
-<h3 id="修改元素">修改元素</h3>
-<h4 id="splice-index-number-item">splice(index, number, item)</h4>
-<p>功能：从数组中删除元素、插入元素到数组中或者同时完成这两种操作。</p>
+<h3 id="修改元素"><a href="#修改元素" class="headerlink" title="修改元素"></a>修改元素</h3><h4 id="splice-index-number-item"><a href="#splice-index-number-item" class="headerlink" title="splice(index, number, item)"></a>splice(index, number, item)</h4><p>功能：从数组中删除元素、插入元素到数组中或者同时完成这两种操作。</p>
 <p>输入：第一个参数为指定插入或删除的起始位置，第二个参数为要删除的个数。之后的参数表示需要插入到数组中的元素 。如果只有一个参数，默认删除参数后边的所有元素。</p>
 <p>输出：返回一个由删除元素组成的数组。</p>
 <p>注意：新建了一个数组，并修改了原数组</p>
-<p>例1：修改指定索引位置的number个元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray3 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="comment">// 修改 索引 1 的位置的元素为 AA</span></span><br><span class="line">myArray2.splice(<span class="number">1</span>, <span class="number">1</span>, <span class="string">&quot;AA&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray3); <span class="comment">//--&gt; [1, &quot;AA&quot;, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
-<p>例2：修改指定索引位置的几个元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray4 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line"><span class="comment">// 在 索引 2 的位置起，修改两个元素为 AA BB</span></span><br><span class="line">myArray2.splice(<span class="number">2</span>, <span class="number">2</span>, <span class="string">&quot;AA&quot;</span>, <span class="string">&quot;BB&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray3); <span class="comment">//--&gt; [1, 2, &quot;AA&quot;, &quot;BB&quot;, 5, 6, 7]</span></span><br></pre></td></tr></table></figure>
-<h4 id="join">join()</h4>
-<p>将数组中所有元素都转化为字符串并连接在一起。</p>
-<h4 id="reverse">reverse()</h4>
-<p>将数组中的元素颠倒顺序。（<strong>改变原数组</strong>）</p>
-<h4 id="concat">concat()</h4>
-<p>数组拼接的功能 ,返回新数组，原数组不受影响。</p>
-<h4 id="slice">slice()</h4>
-<p>截取数组生成新数组，原数组不受影响。（<strong>浅拷贝数组的元素</strong>）</p>
+<p>例1：修改指定索引位置的number个元素<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray3 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="comment">// 修改 索引 1 的位置的元素为 AA</span></span><br><span class="line">myArray2.splice(<span class="number">1</span>, <span class="number">1</span>, <span class="string">&quot;AA&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray3); <span class="comment">//--&gt; [1, &quot;AA&quot;, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure></p>
+<p>例2：修改指定索引位置的几个元素<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myArray4 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line"><span class="comment">// 在 索引 2 的位置起，修改两个元素为 AA BB</span></span><br><span class="line">myArray2.splice(<span class="number">2</span>, <span class="number">2</span>, <span class="string">&quot;AA&quot;</span>, <span class="string">&quot;BB&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray3); <span class="comment">//--&gt; [1, 2, &quot;AA&quot;, &quot;BB&quot;, 5, 6, 7]</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h4><p>将数组中所有元素都转化为字符串并连接在一起。</p>
+<h4 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h4><p>将数组中的元素颠倒顺序。（<strong>改变原数组</strong>）</p>
+<h4 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h4><p>数组拼接的功能 ,返回新数组，原数组不受影响。</p>
+<h4 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h4><p>截取数组生成新数组，原数组不受影响。（<strong>浅拷贝数组的元素</strong>）</p>
 <p>返回的数组包含第一个参数指定的位置和所有到但不含第二个参数指定位置之间的所有元素。如果为负数，表示相对于数组中最后一个元素的位置。如果只有一个参数，表示到数组末尾。</p>
 <p>参数:</p>
 <p><strong>begin</strong>(可选): 索引数值,接受负值，从该索引处开始提取原数组中的元素,默认值为0。</p>
@@ -558,14 +529,10 @@ find、findIndex、keys、values、entries</p>
 <p>如果是复杂数据类型(对象,数组)的话，改变其中一个，另外一个也会改变。</p>
 <p>原因在定义上面说过了的：slice()是浅拷贝，对于复杂的数据类型浅拷贝，<strong>拷贝的只是指向原数组的指针</strong>，所以无论改变原数组，还是浅拷贝的数组，都是<strong>改变原数组的数据</strong>。</p>
 </blockquote>
-<h4 id="toString-和toLocaleString">toString()和toLocaleString()</h4>
-<p>将数组的每个元素转化为字符串，并且输入用逗号分隔的字符串列表。功能类似<code>join()</code>;</p>
-<h3 id="遍历数组">遍历数组</h3>
-<h4 id="indexOf">indexOf()</h4>
-<p>定义: 返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。</p>
+<h4 id="toString-和toLocaleString"><a href="#toString-和toLocaleString" class="headerlink" title="toString()和toLocaleString()"></a>toString()和toLocaleString()</h4><p>将数组的每个元素转化为字符串，并且输入用逗号分隔的字符串列表。功能类似<code>join()</code>;</p>
+<h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><h4 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h4><p>定义: 返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。</p>
 <p>语法:</p>
-<p>array.indexOf(searchElement,fromIndex)<br>
-参数:</p>
+<p>array.indexOf(searchElement,fromIndex)<br>参数:</p>
 <p>searchElement(必须):被查找的元素</p>
 <p>fromIndex(可选):开始查找的位置(不能大于等于数组的长度，返回-1)，接受负值，默认值为0。</p>
 <p>严格相等的搜索:</p>
@@ -574,11 +541,9 @@ find、findIndex、keys、values、entries</p>
 <p>注意：indexOf()不能识别NaN</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=[<span class="string">&#x27;啦啦&#x27;</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">24</span>,<span class="literal">NaN</span>]</span><br><span class="line"><span class="built_in">console</span>.log(a.indexOf(<span class="string">&#x27;啦&#x27;</span>)); <span class="comment">// -1 </span></span><br><span class="line"><span class="built_in">console</span>.log(a.indexOf(<span class="string">&#x27;NaN&#x27;</span>)); <span class="comment">// -1 </span></span><br><span class="line"><span class="built_in">console</span>.log(a.indexOf(<span class="string">&#x27;啦啦&#x27;</span>)); <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
-<h4 id="lastIndexOf">lastIndexOf()</h4>
-<p>定义: 方法返回指定元素,在数组中的最后一个的索引，如果不存在则返回 -1。（从数组后面往前查找）</p>
+<h4 id="lastIndexOf"><a href="#lastIndexOf" class="headerlink" title="lastIndexOf()"></a>lastIndexOf()</h4><p>定义: 方法返回指定元素,在数组中的最后一个的索引，如果不存在则返回 -1。（从数组后面往前查找）</p>
 <p>语法:</p>
-<p>arr.lastIndexOf(searchElement,fromIndex)<br>
-参数:</p>
+<p>arr.lastIndexOf(searchElement,fromIndex)<br>参数:</p>
 <p>searchElement(必须): 被查找的元素</p>
 <p>fromIndex(可选): 逆向查找开始位置，默认值数组的长度-1，即查找整个数组。</p>
 <p>关于fromIndex有三个规则:</p>
@@ -588,11 +553,9 @@ find、findIndex、keys、values、entries</p>
 <li>负值。其绝对值大于数组长度，则方法返回 -1，即数组不会被查找。</li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=[<span class="string">&#x27;OB&#x27;</span>,<span class="number">4</span>,<span class="string">&#x27;Koro1&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;Koro1&#x27;</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="string">&#x27;Koro1&#x27;</span>]; <span class="comment">// 数组长度为10</span></span><br><span class="line"><span class="comment">// let b=a.lastIndexOf(&#x27;Koro1&#x27;,4); // 从下标4开始往前找 返回下标2</span></span><br><span class="line"><span class="comment">// let b=a.lastIndexOf(&#x27;Koro1&#x27;,100); // 大于或数组的长度 查找整个数组 返回9</span></span><br><span class="line"><span class="comment">// let b=a.lastIndexOf(&#x27;Koro1&#x27;,-11); // -1 数组不会被查找</span></span><br><span class="line"><span class="keyword">let</span> b=a.lastIndexOf(<span class="string">&#x27;Koro1&#x27;</span>,-<span class="number">9</span>); <span class="comment">// 从第二个元素4往前查找，没有找到 返回-1</span></span><br></pre></td></tr></table></figure>
-<h4 id="sort">sort()</h4>
-<p>默认情况下sort()方法没有传比较函数的话，<strong>默认按字母升序</strong>，如果不是元素不是字符串的话，会调用toString()方法将元素转化为字符串的<strong>Unicode</strong>(万国码)位点，然后再比较字符。所以用默认方法排序数据是有问题的。（<strong>改变原数组</strong>）</p>
+<h4 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h4><p>默认情况下sort()方法没有传比较函数的话，<strong>默认按字母升序</strong>，如果不是元素不是字符串的话，会调用toString()方法将元素转化为字符串的<strong>Unicode</strong>(万国码)位点，然后再比较字符。所以用默认方法排序数据是有问题的。（<strong>改变原数组</strong>）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">20</span>,<span class="number">10</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>];</span><br><span class="line">arr.sort();<span class="comment">// [1, 10, 2, 20, 3]</span></span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a-b;    <span class="comment">//升序</span></span><br><span class="line">&#125;); <span class="comment">//[1, 2, 3, 10, 20]</span></span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> b-a;    <span class="comment">//降序</span></span><br><span class="line">&#125;); <span class="comment">//[20,10,3,2,1]</span></span><br></pre></td></tr></table></figure>
-<h4 id="forEach">forEach()</h4>
-<p>从头至尾遍历数组，为每个元素调用指定函数</p>
+<h4 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h4><p>从头至尾遍历数组，为每个元素调用指定函数</p>
 <p>输入为一个待遍历函数，函数的参数依次为：数组元素、元素的索引、数组本身</p>
 <blockquote>
 <p>注意：</p>
@@ -601,26 +564,19 @@ find、findIndex、keys、values、entries</p>
 <li>它总是返回 undefined值,即使你return了一个值。</li>
 </ul>
 </blockquote>
-<h4 id="map">map()</h4>
-<p>调用的数组的每一个元素传递给指定的函数，并返回一个新数组 ,<strong>不修改原数组</strong>。</p>
+<h4 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h4><p>调用的数组的每一个元素传递给指定的函数，并返回一个新数组 ,<strong>不修改原数组</strong>。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> bb= arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x*x;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(bb); <span class="comment">// [4, 9, 16, 25, 36]</span></span><br></pre></td></tr></table></figure>
-<h4 id="filter">filter()</h4>
-<p>过滤功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组。<br>
-可以巧妙的用来去重</p>
+<h4 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h4><p>过滤功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组。<br>可以巧妙的用来去重</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">1</span>];</span><br><span class="line">a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">v,i,self</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> self.indexOf(v) == i;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
-<h4 id="every-和some">every()和some()</h4>
-<p>every() 判断数组中每一项都是否满足条件，只有所有项都满足条件，才会返回true。</p>
+<h4 id="every-和some"><a href="#every-和some" class="headerlink" title="every()和some()"></a>every()和some()</h4><p>every() 判断数组中每一项都是否满足条件，只有所有项都满足条件，才会返回true。</p>
 <p>some() 判断数组中是否存在满足条件的项，只要有一项满足条件，就会返回true。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">arr.every(<span class="function"><span class="params">x</span>=&gt;</span>x&gt;<span class="number">0</span>);<span class="comment">//return true;</span></span><br><span class="line">arr.every(<span class="function"><span class="params">x</span>=&gt;</span>x&gt;<span class="number">5</span>);<span class="comment">//return false;</span></span><br><span class="line">arr.some(<span class="function"><span class="params">x</span>=&gt;</span>x&gt;<span class="number">5</span>);<span class="comment">//return true;</span></span><br></pre></td></tr></table></figure>
-<h4 id="reduce-和reduceRight">reduce()和reduceRight()</h4>
-<p>reduce() 两个参数：函数和递归的初始值。从数组的第一项开始，逐个遍历到最后</p>
+<h4 id="reduce-和reduceRight"><a href="#reduce-和reduceRight" class="headerlink" title="reduce()和reduceRight()"></a>reduce()和reduceRight()</h4><p>reduce() 两个参数：函数和递归的初始值。从数组的第一项开始，逐个遍历到最后</p>
 <p>reduceRight() 从数组的最后一项开始，向前遍历到第一项</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以用reduce快速求数组之和</span></span><br><span class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;); <span class="comment">//10</span></span><br></pre></td></tr></table></figure>
-<h4 id="includes">includes()</h4>
-<p>定义： 返回一个布尔值，表示某个数组是否包含给定的值</p>
+<h4 id="includes"><a href="#includes" class="headerlink" title="includes()"></a>includes()</h4><p>定义： 返回一个布尔值，表示某个数组是否包含给定的值</p>
 <p>语法：</p>
-<p>array.includes(searchElement,fromIndex=0)<br>
-参数：</p>
+<p>array.includes(searchElement,fromIndex=0)<br>参数：</p>
 <p>searchElement(必须):被查找的元素</p>
 <p>fromIndex(可选):默认值为0，参数表示搜索的起始位置，接受负值。正值超过数组长度，数组不会被搜索，返回false。负值绝对值超过长数组度，重置从0开始搜索。</p>
 <p>includes方法是为了弥补indexOf方法的缺陷而出现的:</p>
@@ -629,23 +585,18 @@ find、findIndex、keys、values、entries</p>
 <li>indexOf方法检查是否包含某个值不够语义化，需要判断是否不等于-1，表达不够直观</li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=[<span class="string">&#x27;OB&#x27;</span>,<span class="string">&#x27;Koro1&#x27;</span>,<span class="number">1</span>,<span class="literal">NaN</span>];</span><br><span class="line"><span class="comment">// let b=a.includes(NaN); // true 识别NaN</span></span><br><span class="line"><span class="comment">// let b=a.includes(&#x27;Koro1&#x27;,100); // false 超过数组长度 不搜索</span></span><br><span class="line"><span class="comment">// let b=a.includes(&#x27;Koro1&#x27;,-3); // true 从倒数第三个元素开始搜索 </span></span><br><span class="line"><span class="comment">// let b=a.includes(&#x27;Koro1&#x27;,-100); // true 负值绝对值超过数组长度，搜索整个数组</span></span><br></pre></td></tr></table></figure>
-<h3 id="ES6新增">ES6新增</h3>
-<h4 id="Array-of">Array.of()</h4>
-<p>定义：返回由所有参数值组成的数组，如果没有参数，就返回一个空数组。</p>
+<h3 id="ES6新增"><a href="#ES6新增" class="headerlink" title="ES6新增"></a>ES6新增</h3><h4 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of()"></a>Array.of()</h4><p>定义：返回由所有参数值组成的数组，如果没有参数，就返回一个空数组。</p>
 <p>目的：Array.of() 出现的目的是为了解决上述构造器因参数个数不同，导致的行为有差异的问题。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="built_in">Array</span>.of(<span class="number">3</span>, <span class="number">11</span>, <span class="number">8</span>); <span class="comment">// [3,11,8]</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="built_in">Array</span>.of(<span class="number">3</span>); <span class="comment">// [3]</span></span><br></pre></td></tr></table></figure>
-<h4 id="Arrar-from">Arrar.from()</h4>
-<p>定义：用于将两类对象转为真正的数组（不改变原对象，返回新的数组）。</p>
+<h4 id="Arrar-from"><a href="#Arrar-from" class="headerlink" title="Arrar.from()"></a>Arrar.from()</h4><p>定义：用于将两类对象转为真正的数组（不改变原对象，返回新的数组）。</p>
 <p>参数：</p>
 <p>第一个参数(必需):要转化为真正数组的对象。</p>
 <p>第二个参数(可选): 类似数组的map方法，对每个元素进行处理，将处理后的值放入返回的数组。</p>
 <p>第三个参数(可选): 用来绑定this。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 对象拥有length属性</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="number">0</span>: <span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>: <span class="string">&#x27;b&#x27;</span>, <span class="number">2</span>:<span class="string">&#x27;c&#x27;</span>, <span class="attr">length</span>: <span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>.from(obj); <span class="comment">// [&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;];</span></span><br><span class="line"><span class="comment">// 2. 部署了 Iterator接口的数据结构 比如:字符串、Set、NodeList对象</span></span><br><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>.from(<span class="string">&#x27;hello&#x27;</span>); <span class="comment">// [&#x27;h&#x27;,&#x27;e&#x27;,&#x27;l&#x27;,&#x27;l&#x27;]</span></span><br><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>])); <span class="comment">// [&#x27;a&#x27;,&#x27;b&#x27;]</span></span><br></pre></td></tr></table></figure>
-<h4 id="copyWithin">copyWithin()</h4>
-<p>定义: 在当前数组内部，将指定位置的成员复制到其他位置,并返回这个数组。</p>
+<h4 id="copyWithin"><a href="#copyWithin" class="headerlink" title="copyWithin()"></a>copyWithin()</h4><p>定义: 在当前数组内部，将指定位置的成员复制到其他位置,并返回这个数组。</p>
 <p>语法:</p>
-<p>array.copyWithin(target, start = 0, end = this.length)<br>
-参数:</p>
+<p>array.copyWithin(target, start = 0, end = this.length)<br>参数:</p>
 <p>三个参数都是数值，如果不是，会自动转为数值.</p>
 <ol>
 <li>target（必需）：从该位置开始替换数据。如果为负值，表示倒数。</li>
@@ -654,15 +605,13 @@ find、findIndex、keys、values、entries</p>
 </ol>
 <p>浏览器兼容(MDN): chrome 45,Edge 12,Firefox32,Opera 32,Safari 9, IE 不支持</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// -2相当于3号位，-1相当于4号位</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].copyWithin(<span class="number">0</span>, -<span class="number">2</span>, -<span class="number">1</span>)</span><br><span class="line"><span class="comment">// [4, 2, 3, 4, 5]</span></span><br><span class="line"><span class="keyword">var</span> a=[<span class="string">&#x27;OB1&#x27;</span>,<span class="string">&#x27;Koro1&#x27;</span>,<span class="string">&#x27;OB2&#x27;</span>,<span class="string">&#x27;Koro2&#x27;</span>,<span class="string">&#x27;OB3&#x27;</span>,<span class="string">&#x27;Koro3&#x27;</span>,<span class="string">&#x27;OB4&#x27;</span>,<span class="string">&#x27;Koro4&#x27;</span>,<span class="string">&#x27;OB5&#x27;</span>,<span class="string">&#x27;Koro5&#x27;</span>]</span><br><span class="line"><span class="comment">// 2位置开始被替换,3位置开始读取要替换的 5位置前面停止替换</span></span><br><span class="line">a.copyWithin(<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>)</span><br><span class="line"><span class="comment">// [&quot;OB1&quot;,&quot;Koro1&quot;,&quot;Koro2&quot;,&quot;OB3&quot;,&quot;OB3&quot;,&quot;Koro3&quot;,&quot;OB4&quot;,&quot;Koro4&quot;,&quot;OB5&quot;,&quot;Koro5&quot;]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="fill">fill()</h4>
-<p>定义: 使用给定值，填充一个数组。</p>
+<h4 id="fill"><a href="#fill" class="headerlink" title="fill()"></a>fill()</h4><p>定义: 使用给定值，填充一个数组。</p>
 <p>参数:</p>
 <p>第一个元素(必须): 要填充数组的值</p>
 <p>第二个元素(可选): 填充的开始位置,默认值为0</p>
 <p>第三个元素(可选)：填充的结束位置，默认是为this.length</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>].fill(<span class="number">7</span>)</span><br><span class="line"><span class="comment">// [7, 7, 7]</span></span><br><span class="line">[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>].fill(<span class="number">7</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment">// [&#x27;a&#x27;, 7, &#x27;c&#x27;]</span></span><br></pre></td></tr></table></figure>
-<h4 id="keys-values-entries">keys()&amp;values()&amp;entries()</h4>
-<p>遍历键名、遍历键值、遍历键名+键值，三个方法都返回一个新的 Array Iterator 对象，对象根据方法不同包含不同的值</p>
+<h4 id="keys-amp-values-amp-entries"><a href="#keys-amp-values-amp-entries" class="headerlink" title="keys()&amp;values()&amp;entries()"></a>keys()&amp;values()&amp;entries()</h4><p>遍历键名、遍历键值、遍历键名+键值，三个方法都返回一个新的 Array Iterator 对象，对象根据方法不同包含不同的值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array.keys()</span><br><span class="line">array.values()</span><br><span class="line">array.entries()</span><br></pre></td></tr></table></figure>
 
 
@@ -813,7 +762,7 @@ find、findIndex、keys、values、entries</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E7%BB%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">创建和初始化数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">数组常见操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">添加元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#push-item"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">push(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#unshift-item"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">unshift(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-index-0-item"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">splice(index, 0, item)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">删除元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#pop-item"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">pop(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#shift-item"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">shift(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#unshift"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">unshift()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-start-number"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">splice(start, number)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">修改元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-index-number-item"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">splice(index, number, item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#join"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">join()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#reverse"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">reverse()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#concat"><span class="toc-nav-number">2.3.4.</span> <span class="toc-nav-text">concat()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#slice"><span class="toc-nav-number">2.3.5.</span> <span class="toc-nav-text">slice()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#toString-%E5%92%8CtoLocaleString"><span class="toc-nav-number">2.3.6.</span> <span class="toc-nav-text">toString()和toLocaleString()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">遍历数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#indexOf"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">indexOf()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#lastIndexOf"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">lastIndexOf()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#sort"><span class="toc-nav-number">2.4.3.</span> <span class="toc-nav-text">sort()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#forEach"><span class="toc-nav-number">2.4.4.</span> <span class="toc-nav-text">forEach()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#map"><span class="toc-nav-number">2.4.5.</span> <span class="toc-nav-text">map()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#filter"><span class="toc-nav-number">2.4.6.</span> <span class="toc-nav-text">filter()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#every-%E5%92%8Csome"><span class="toc-nav-number">2.4.7.</span> <span class="toc-nav-text">every()和some()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#reduce-%E5%92%8CreduceRight"><span class="toc-nav-number">2.4.8.</span> <span class="toc-nav-text">reduce()和reduceRight()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#includes"><span class="toc-nav-number">2.4.9.</span> <span class="toc-nav-text">includes()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ES6%E6%96%B0%E5%A2%9E"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">ES6新增</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Array-of"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">Array.of()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Arrar-from"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">Arrar.from()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#copyWithin"><span class="toc-nav-number">2.5.3.</span> <span class="toc-nav-text">copyWithin()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#fill"><span class="toc-nav-number">2.5.4.</span> <span class="toc-nav-text">fill()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#keys-values-entries"><span class="toc-nav-number">2.5.5.</span> <span class="toc-nav-text">keys()&amp;values()&amp;entries()</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E7%BB%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">创建和初始化数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">数组常见操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">添加元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#push-item"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">push(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#unshift-item"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">unshift(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-index-0-item"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">splice(index, 0, item)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">删除元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#pop-item"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">pop(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#shift-item"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">shift(item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#unshift"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">unshift()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-start-number"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">splice(start, number)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">修改元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#splice-index-number-item"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">splice(index, number, item)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#join"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">join()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#reverse"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">reverse()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#concat"><span class="toc-nav-number">2.3.4.</span> <span class="toc-nav-text">concat()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#slice"><span class="toc-nav-number">2.3.5.</span> <span class="toc-nav-text">slice()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#toString-%E5%92%8CtoLocaleString"><span class="toc-nav-number">2.3.6.</span> <span class="toc-nav-text">toString()和toLocaleString()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">遍历数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#indexOf"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">indexOf()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#lastIndexOf"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">lastIndexOf()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#sort"><span class="toc-nav-number">2.4.3.</span> <span class="toc-nav-text">sort()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#forEach"><span class="toc-nav-number">2.4.4.</span> <span class="toc-nav-text">forEach()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#map"><span class="toc-nav-number">2.4.5.</span> <span class="toc-nav-text">map()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#filter"><span class="toc-nav-number">2.4.6.</span> <span class="toc-nav-text">filter()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#every-%E5%92%8Csome"><span class="toc-nav-number">2.4.7.</span> <span class="toc-nav-text">every()和some()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#reduce-%E5%92%8CreduceRight"><span class="toc-nav-number">2.4.8.</span> <span class="toc-nav-text">reduce()和reduceRight()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#includes"><span class="toc-nav-number">2.4.9.</span> <span class="toc-nav-text">includes()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ES6%E6%96%B0%E5%A2%9E"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">ES6新增</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Array-of"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">Array.of()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Arrar-from"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">Arrar.from()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#copyWithin"><span class="toc-nav-number">2.5.3.</span> <span class="toc-nav-text">copyWithin()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#fill"><span class="toc-nav-number">2.5.4.</span> <span class="toc-nav-text">fill()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#keys-amp-values-amp-entries"><span class="toc-nav-number">2.5.5.</span> <span class="toc-nav-text">keys()&amp;values()&amp;entries()</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -953,7 +902,7 @@ find、findIndex、keys、values、entries</p>
           2021
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
-          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">264.4k</span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">264.2k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
