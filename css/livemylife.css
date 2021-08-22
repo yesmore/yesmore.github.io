@@ -429,14 +429,14 @@ blockquote P{
   line-height: 30px;
   margin-bottom: 10px;
 }
-.post-container div img,
-.post-container p img{
+.post-container img{
   box-shadow: none!important;
 }
+
 .post-container u {
   text-decoration: none;
   font-family: sans-serif;
-  border-bottom: 1px solid rgba(47, 50, 49, .7);
+  border-bottom: 1px solid rgba(47, 49, 49, 0.7);
 }
 .post-container code {
   color: #e9836e;

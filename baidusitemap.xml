@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yesmore.cc/cn/hexo-livemylife/</loc>
+    <lastmod>2021-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://yesmore.cc/cn/ms-JSv1/</loc>
     <lastmod>2021-08-20</lastmod>
   </url>
@@ -307,9 +311,5 @@
   <url>
     <loc>https://yesmore.cc/cn/centosweb/</loc>
     <lastmod>2020-12-07</lastmod>
-  </url>
-  <url>
-    <loc>https://yesmore.cc/cn/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2020-04-16</lastmod>
   </url>
 </urlset> 

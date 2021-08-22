@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yesmore.cc/cn/hexo-livemylife/</loc>
+    
+    <lastmod>2021-08-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/about/index.html</loc>
     
     <lastmod>2021-08-20</lastmod>
@@ -575,13 +582,6 @@
     
   </url>
   
-  <url>
-    <loc>https://yesmore.cc/cn/Hexo-Theme-LiveMyLife/</loc>
-    
-    <lastmod>2020-04-16</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://yesmore.cc/</loc>
@@ -627,20 +627,6 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Python/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yesmore.cc/tags/%E7%88%AC%E8%99%AB/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yesmore.cc/tags/Web%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
@@ -655,7 +641,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Ajax/</loc>
+    <loc>https://yesmore.cc/tags/Python/</loc>
+    <lastmod>2021-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/tags/%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -663,6 +656,13 @@
   
   <url>
     <loc>https://yesmore.cc/tags/websocket/</loc>
+    <lastmod>2021-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/tags/Ajax/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -718,14 +718,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Hexo/</loc>
+    <loc>https://yesmore.cc/tags/typescript/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/typescript/</loc>
+    <loc>https://yesmore.cc/tags/Hexo/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -783,14 +783,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Python/</loc>
+    <loc>https://yesmore.cc/categories/Web%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Web%E5%AE%89%E5%85%A8/</loc>
+    <loc>https://yesmore.cc/categories/Python/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -860,14 +860,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Hexo/</loc>
+    <loc>https://yesmore.cc/categories/typescript/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/typescript/</loc>
+    <loc>https://yesmore.cc/categories/Hexo/</loc>
     <lastmod>2021-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
