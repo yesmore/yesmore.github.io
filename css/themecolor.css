@@ -51,7 +51,7 @@
   --tag_cloud-color-hovor: white;
   /* img */
   --img-shadow-color: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-  --img-about-shadow-color: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+  --img-about-shadow-color: 5px 5px 10px 5px rgba(78, 78, 78, 0.5);
   /* viewer */
   --viewer-background-color: rgba(0, 0, 0, .5);
   /* toggle-button */
@@ -372,9 +372,12 @@ hr {
 
 /* img */
 .post-container img {
-  box-shadow: var(--img-shadow-color) !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  /* box-shadow: var(--img-shadow-color) !important;
   -moz-box-shadow: var(--img-shadow-color) !important;
-  -webkit-box-shadow: var(--img-shadow-color) !important;
+  -webkit-box-shadow: var(--img-shadow-color) !important; */
 }
 
 .short-about img {

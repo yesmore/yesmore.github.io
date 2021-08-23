@@ -224,9 +224,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -235,9 +235,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -470,7 +470,9 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>要点：二叉树、红黑树</p>
-<h2 id="一、红黑树的五条规则"><a href="#一、红黑树的五条规则" class="headerlink" title="一、红黑树的五条规则"></a>一、红黑树的五条规则</h2><h3 id="1-1-红黑树特性"><a href="#1-1-红黑树特性" class="headerlink" title="1.1 红黑树特性"></a>1.1 红黑树特性</h3><p>红黑树除了符合二叉搜索树的基本规则外，还添加了以下特性：</p>
+<h2 id="一、红黑树的五条规则">一、红黑树的五条规则</h2>
+<h3 id="1-1-红黑树特性">1.1 红黑树特性</h3>
+<p>红黑树除了符合二叉搜索树的基本规则外，还添加了以下特性：</p>
 <ul>
 <li>规则1：<u>节点</u>是<strong>红色或黑色</strong>的；</li>
 <li>规则2：<u>根节点</u>是<strong>黑色</strong>的；</li>
@@ -479,7 +481,8 @@
 <li>规则5：从任一节点到其每个叶子节点的所有路径都包含相同数目的黑色节点；</li>
 </ul>
 <p><img src="1.png" alt="1"></p>
-<h3 id="1-2-红黑树的相对平衡"><a href="#1-2-红黑树的相对平衡" class="headerlink" title="1.2 红黑树的相对平衡"></a>1.2 红黑树的相对平衡</h3><p>前面5条规则的约束确保了以下红黑树的关键特性：</p>
+<h3 id="1-2-红黑树的相对平衡">1.2 红黑树的相对平衡</h3>
+<p>前面5条规则的约束确保了以下红黑树的关键特性：</p>
 <ul>
 <li>从<strong>根到叶子节点</strong>的<strong>最长路径</strong>，不会超过<strong>最短路径</strong>的<strong>两倍</strong>；</li>
 <li>结果就是这棵树<strong>基本</strong>是平衡的；</li>
@@ -493,20 +496,23 @@
 <li><strong>性质5</strong>决定了所有路径上都有相同数目的黑色节点；</li>
 <li>这就表明了没有路径能多于其他任何路径两倍长。</li>
 </ul>
-<h2 id="二、红黑树的三种变换"><a href="#二、红黑树的三种变换" class="headerlink" title="二、红黑树的三种变换"></a>二、红黑树的三种变换</h2><p>插入一个新节点时，有可能树不再平衡，可以通过三种方式的变换使树保持平衡：</p>
+<h2 id="二、红黑树的三种变换">二、红黑树的三种变换</h2>
+<p>插入一个新节点时，有可能树不再平衡，可以通过三种方式的变换使树保持平衡：</p>
 <ul>
 <li><strong>变色</strong></li>
 <li><strong>左旋转</strong></li>
 <li><strong>右旋转</strong></li>
 </ul>
-<h3 id="2-1-变色"><a href="#2-1-变色" class="headerlink" title="2.1 变色"></a>2.1 变色</h3><p>为了重新符合红黑树的规则，需要把<strong>红色</strong>节点变为<strong>黑色</strong>，或者把<strong>黑色</strong>节点变为<strong>红色</strong>；</p>
+<h3 id="2-1-变色">2.1 变色</h3>
+<p>为了重新符合红黑树的规则，需要把<strong>红色</strong>节点变为<strong>黑色</strong>，或者把<strong>黑色</strong>节点变为<strong>红色</strong>；</p>
 <p>插入的<strong>新节点</strong>通常都是<strong>红色节点</strong>：</p>
 <ul>
 <li>当插入的节点为<strong>红色</strong>的时候，大多数情况<strong>不违反</strong>红黑树的任何规则；</li>
-<li>而<strong>插入黑色节点，</strong>必然会导致一条路径上多了一个<strong>黑色节点</strong>，这是很难调整的；</li>
+<li>而<strong>插入黑色节点，<strong>必然会导致一条路径上多了一个</strong>黑色节点</strong>，这是很难调整的；</li>
 <li>红色节点虽然可能导致<strong>红红相连</strong>的情况，但是这种情况可以通过<strong>颜色调换和旋转</strong>来调整；</li>
 </ul>
-<h3 id="2-2-左旋转"><a href="#2-2-左旋转" class="headerlink" title="2.2 左旋转"></a>2.2 左旋转</h3><p>以节点X为根<strong>逆时针</strong>旋转二叉搜索树，使得父节点原来的位置被自己的右子节点替代，左子节点的位置被父节点替代；</p>
+<h3 id="2-2-左旋转">2.2 左旋转</h3>
+<p>以节点X为根<strong>逆时针</strong>旋转二叉搜索树，使得父节点原来的位置被自己的右子节点替代，左子节点的位置被父节点替代；</p>
 <p><img src="2.png" alt="2"></p>
 <p><strong>详解：</strong></p>
 <p>如上图所示，左旋转之后：</p>
@@ -519,7 +525,8 @@
 </ul>
 <p>除此之外，二叉搜索树左旋转之后仍为二叉搜索树：</p>
 <p><img src="3.png" alt="3"></p>
-<h3 id="2-3-右旋转"><a href="#2-3-右旋转" class="headerlink" title="2.3 右旋转"></a>2.3 右旋转</h3><p>以节点X为根<strong>顺时针</strong>旋转二叉搜索树，使得父节点原来的位置被自己的左子节点替代，右子节点的位置被父节点替代；</p>
+<h3 id="2-3-右旋转">2.3 右旋转</h3>
+<p>以节点X为根<strong>顺时针</strong>旋转二叉搜索树，使得父节点原来的位置被自己的左子节点替代，右子节点的位置被父节点替代；</p>
 <p><img src="4.png" alt="4"></p>
 <p><strong>详解：</strong></p>
 <p>如上图所示，右旋转之后：</p>
@@ -532,16 +539,20 @@
 </ul>
 <p>除此之外，二叉搜索树右旋转之后仍为二叉搜索树：</p>
 <p><img src="5.png" alt="5"></p>
-<h2 id="三、红黑树的插入操作"><a href="#三、红黑树的插入操作" class="headerlink" title="三、红黑树的插入操作"></a>三、红黑树的插入操作</h2><p>首先需要明确，在保证满足红黑树5条规则的情况下，新插入的节点必然是<strong>红色节点</strong>。</p>
+<h2 id="三、红黑树的插入操作">三、红黑树的插入操作</h2>
+<p>首先需要明确，在保证满足红黑树5条规则的情况下，新插入的节点必然是<strong>红色节点</strong>。</p>
 <p>为了方便说明，规定以下四个节点：新插入节点为<strong>N</strong>（Node），N的父节点为<strong>P</strong>（Parent），P的兄弟节点为<strong>U</strong>（Uncle），U的父节点为<strong>G</strong>（Grandpa），如下图所示：</p>
 <p><img src="6.png" alt="6"></p>
-<h3 id="3-1-情况1"><a href="#3-1-情况1" class="headerlink" title="3.1 情况1"></a>3.1 情况1</h3><p>当插入的新节点N位于树的根上时，没有父节点。</p>
+<h3 id="3-1-情况1">3.1 情况1</h3>
+<p>当插入的新节点N位于树的根上时，没有父节点。</p>
 <p>这种情况下，只需要将红色节点变为黑色节点即可满足规则2 。</p>
 <p><img src="7.png" alt="7"></p>
-<h3 id="3-2-情况2"><a href="#3-2-情况2" class="headerlink" title="3.2 情况2"></a>3.2 情况2</h3><p>新界点N的父节点P为黑色节点，此时不需要任何变化。</p>
+<h3 id="3-2-情况2">3.2 情况2</h3>
+<p>新界点N的父节点P为黑色节点，此时不需要任何变化。</p>
 <p>此时既满足规则4也满足规则5。尽管新节点是红色的，但是新节点N有两个黑色节点NIL，所以通向它的路径上黑色节点的个数依然相等，因此满足规则5 。</p>
 <p><img src="8.png" alt="8"></p>
-<h3 id="3-3-情况3"><a href="#3-3-情况3" class="headerlink" title="3.3 情况3"></a>3.3 情况3</h3><p>节点P为红色，节点U也为红色，此时节点G必为黑色，即<strong>父红叔红祖黑</strong>。</p>
+<h3 id="3-3-情况3">3.3 情况3</h3>
+<p>节点P为红色，节点U也为红色，此时节点G必为黑色，即<strong>父红叔红祖黑</strong>。</p>
 <p>在这种情况下需要：</p>
 <ul>
 <li>先将父节点P变为黑色；</li>
@@ -556,14 +567,16 @@
 <li>当递归调整到根节点时就需要旋转了，如下图节点A和节点B所示，具体情况后面会介绍；</li>
 </ul>
 <p><img src="10.png" alt=""></p>
-<h3 id="3-4-情况4"><a href="#3-4-情况4" class="headerlink" title="3.4 情况4"></a>3.4 情况4</h3><p>节点P是红色节点，节点U是黑色节点，并且节点N为节点P的<strong>左子节点</strong>，此时节点G一定是黑色节点，即<strong>父红叔黑祖黑</strong>。</p>
+<h3 id="3-4-情况4">3.4 情况4</h3>
+<p>节点P是红色节点，节点U是黑色节点，并且节点N为节点P的<strong>左子节点</strong>，此时节点G一定是黑色节点，即<strong>父红叔黑祖黑</strong>。</p>
 <p>在这种情况下需要：</p>
 <ul>
 <li>先变色：将父节点P变为黑色，将祖父节点G变为红色；</li>
 <li>后旋转：以祖父节点G为根进行右旋转；</li>
 </ul>
 <p><img src="11.png" alt=""></p>
-<h3 id="3-5-情况5"><a href="#3-5-情况5" class="headerlink" title="3.5 情况5"></a>3.5 情况5</h3><p>节点P是红色节点，节点U是黑色节点，并且节点N为节点P的<strong>右子节点</strong>，此时节点G一定是黑色节点，即<strong>父红叔黑祖黑</strong>。</p>
+<h3 id="3-5-情况5">3.5 情况5</h3>
+<p>节点P是红色节点，节点U是黑色节点，并且节点N为节点P的<strong>右子节点</strong>，此时节点G一定是黑色节点，即<strong>父红叔黑祖黑</strong>。</p>
 <p>在这种情况下需要：</p>
 <ul>
 <li>先以节点P为根进行左旋转，旋转后如图b所示；</li>
@@ -577,22 +590,26 @@
 <li>最后将节点N1和P1变换回来，完成节点N的插入，如图 f 所示；</li>
 </ul>
 <p><img src="13.png" alt=""></p>
-<h3 id="3-6-案例"><a href="#3-6-案例" class="headerlink" title="3.6 案例"></a>3.6 案例</h3><p>在二叉树中依次插入节点：10，9，8，7，6，5，4，3，2，1 。</p>
+<h3 id="3-6-案例">3.6 案例</h3>
+<p>在二叉树中依次插入节点：10，9，8，7，6，5，4，3，2，1 。</p>
 <p>如果直接采用普通的二叉搜索树，节点全部插入后是这样的：</p>
 <p><img src="14.png" alt=""></p>
 <p>是一个严重的<strong>不平衡树</strong>，相当于一个链表，不能体现出二叉搜索树的高效率。而按照红黑树的五条规则插入节点就能最大程度保证搜索二叉树是一棵<strong>平衡树</strong>。以下为过程详解：<strong>为了方便解释省略了部分红黑树的叶子节点（NIL）</strong></p>
-<h4 id="插入10"><a href="#插入10" class="headerlink" title="插入10"></a>插入10</h4><p>符合<strong>情况1</strong>：</p>
+<h4 id="插入10">插入10</h4>
+<p>符合<strong>情况1</strong>：</p>
 <ul>
 <li>插入节点10；</li>
 <li>将节点10的颜色变为黑色；</li>
 </ul>
 <p><img src="15.png" alt="15"></p>
-<h4 id="插入9"><a href="#插入9" class="headerlink" title="插入9"></a>插入9</h4><p>符合<strong>情况2</strong>：</p>
+<h4 id="插入9">插入9</h4>
+<p>符合<strong>情况2</strong>：</p>
 <ul>
 <li>不需要任何变化；</li>
 </ul>
 <p><img src="16.png" alt=""></p>
-<h4 id="插入8"><a href="#插入8" class="headerlink" title="插入8"></a>插入8</h4><blockquote>
+<h4 id="插入8">插入8</h4>
+<blockquote>
 <p>快速判断属于情况3还是情况4的方法：</p>
 <p>从新插入的节点N出发，按图示箭头经过的四个节点，若为<strong>红红黑红</strong>3个红色节点则为情况3，若为<strong>红红黑黑</strong>两个红色节点则为情况4；</p>
 </blockquote>
@@ -603,30 +620,35 @@
 <li>以祖父节点为根进行右旋转；</li>
 </ul>
 <p><img src="18.png" alt=""></p>
-<h4 id="插入7"><a href="#插入7" class="headerlink" title="插入7"></a>插入7</h4><p>符合<strong>情况3</strong>：</p>
+<h4 id="插入7">插入7</h4>
+<p>符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点8和叔节点10变为黑，祖父节点9变为红；</li>
 <li>此时会出现问题：不符合规则2，即根节点不为黑，此时可以把以9为根节点的二叉搜索树当作一个整体作为一个新插入的节点N，而此时又符合情况1，只需要把9变回黑色即可。</li>
 </ul>
 <p><img src="19.png" alt=""></p>
-<h4 id="插入6"><a href="#插入6" class="headerlink" title="插入6"></a>插入6</h4><p>符合<strong>情况4</strong>：</p>
+<h4 id="插入6">插入6</h4>
+<p>符合<strong>情况4</strong>：</p>
 <ul>
 <li>父节点7变为黑，祖父节点8变为红；</li>
 <li>以祖父节点8为根进行右旋转；</li>
 </ul>
 <p><img src="20.png" alt=""></p>
-<h4 id="插入5"><a href="#插入5" class="headerlink" title="插入5"></a>插入5</h4><p>符合<strong>情况3</strong>：</p>
+<h4 id="插入5">插入5</h4>
+<p>符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点6和叔节点8变为黑，祖父节点7变为红；</li>
 </ul>
 <p><img src="21.png" alt=""></p>
-<h4 id="插入4"><a href="#插入4" class="headerlink" title="插入4"></a>插入4</h4><p>符合<strong>情况4</strong>：</p>
+<h4 id="插入4">插入4</h4>
+<p>符合<strong>情况4</strong>：</p>
 <ul>
 <li>父节点5变为黑，祖父节点6变为红；</li>
 <li>以祖父节点6为根进行右旋转；</li>
 </ul>
 <p><img src="22.png" alt=""></p>
-<h4 id="插入3"><a href="#插入3" class="headerlink" title="插入3"></a>插入3</h4><p><strong>第一次变换</strong>：符合<strong>情况3</strong>：</p>
+<h4 id="插入3">插入3</h4>
+<p><strong>第一次变换</strong>：符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点4和叔节点6变为黑，祖父节点5变为红；</li>
 </ul>
@@ -640,13 +662,15 @@
 <p><img src="24.png" alt=""></p>
 <p>最后复原N1得到变换后的红黑树：</p>
 <p><img src="25.png" alt=""></p>
-<h4 id="插入2"><a href="#插入2" class="headerlink" title="插入2"></a>插入2</h4><p>符合<strong>情况4</strong>：</p>
+<h4 id="插入2">插入2</h4>
+<p>符合<strong>情况4</strong>：</p>
 <ul>
 <li>父节点3变为黑，祖父节点4变为红；</li>
 <li>以祖父节点4为根进行右旋转；</li>
 </ul>
 <p><img src="26.png" alt=""></p>
-<h4 id="插入1"><a href="#插入1" class="headerlink" title="插入1"></a>插入1</h4><p><strong>第一次变换</strong>：符合<strong>情况3</strong>：</p>
+<h4 id="插入1">插入1</h4>
+<p><strong>第一次变换</strong>：符合<strong>情况3</strong>：</p>
 <ul>
 <li>父节点2和叔节点4变为黑，祖父节点3变为红；</li>
 </ul>
@@ -664,7 +688,8 @@
 <p><img src="28.png" alt=""></p>
 <p>由此，完成了1~10节点的插入，虽然没有遇到情况5，不过情况5经过左旋转的操作便可转换为情况4，原理一样。如下图所示，将这棵红黑树的叶子节点NIL补全之后，经检验满足红黑树的五条规则，并且基本属于<strong>平衡树</strong>，效率较高。</p>
 <p><img src="29.png" alt="29"></p>
-<h2 id="四、红黑树的删除操作"><a href="#四、红黑树的删除操作" class="headerlink" title="四、红黑树的删除操作"></a>四、红黑树的删除操作</h2><p>红黑树的删除操作结合了复杂的<strong>二叉树的删除操作</strong>和复杂的<strong>红黑树的插入规则</strong>，整体来说难度非常大，篇幅较长，这里暂不进行探讨。</p>
+<h2 id="四、红黑树的删除操作">四、红黑树的删除操作</h2>
+<p>红黑树的删除操作结合了复杂的<strong>二叉树的删除操作</strong>和复杂的<strong>红黑树的插入规则</strong>，整体来说难度非常大，篇幅较长，这里暂不进行探讨。</p>
 
 
         <hr>
@@ -862,7 +887,7 @@
 
       
     </div>
-  </div>
+  </div> 
 </article>
 
 
@@ -954,7 +979,7 @@
           2021
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
-          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">264.2k</span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 站点总字数：<span class="post-count">264.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1005,7 +1030,7 @@
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='哈,哈哈,哈哈哈,嘿哈,嘿,嘻,嘻哈,哈,嘿嘿' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
     <!-- Mouseclick -->
   
 
