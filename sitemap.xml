@@ -669,13 +669,6 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Ajax/</loc>
-    <lastmod>2021-08-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yesmore.cc/tags/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2021-08-25</lastmod>
     <changefreq>daily</changefreq>
@@ -691,6 +684,13 @@
   
   <url>
     <loc>https://yesmore.cc/tags/Linux/</loc>
+    <lastmod>2021-08-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/tags/Ajax/</loc>
     <lastmod>2021-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
