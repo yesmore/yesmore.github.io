@@ -438,6 +438,7 @@ blockquote P{
   font-family: sans-serif;
   border-bottom: 1px solid rgba(47, 49, 49, 0.7);
 }
+
 .post-container code {
   color: #e9836e;
   background-color: #f3f3f3;
