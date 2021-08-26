@@ -235,9 +235,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -246,9 +246,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -472,23 +472,17 @@
 <p>Tip：Js面试题，不定期更新。</p>
 <p>当前题数：40道</p>
 </blockquote>
-<h2 id="JS基础篇">JS基础篇</h2>
-<h2 id="1、javascript的typeof返回哪些数据类型">1、javascript的typeof返回哪些数据类型</h2>
-<p><code>object number function boolean underfind string</code></p>
+<h2 id="JS基础篇"><a href="#JS基础篇" class="headerlink" title="JS基础篇"></a>JS基础篇</h2><h2 id="1、javascript的typeof返回哪些数据类型"><a href="#1、javascript的typeof返回哪些数据类型" class="headerlink" title="1、javascript的typeof返回哪些数据类型"></a>1、javascript的typeof返回哪些数据类型</h2><p><code>object number function boolean underfind string</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>;<span class="comment">//object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">isNaN</span>;<span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">isNaN</span>(<span class="number">123</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> [];<span class="comment">//object </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.isARRAY(); es5</span><br><span class="line"></span><br><span class="line">toString.call([]);<span class="comment">//”[object Array]”</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr=[];</span><br><span class="line"></span><br><span class="line">arr.constructor;<span class="comment">//Array</span></span><br></pre></td></tr></table></figure>
-<h2 id="2、例举3种强制类型转换和2种隐式类型转换">2、例举3种强制类型转换和2种隐式类型转换?</h2>
-<p>强制（parseInt,parseFloat,Number()）</p>
+<h2 id="2、例举3种强制类型转换和2种隐式类型转换"><a href="#2、例举3种强制类型转换和2种隐式类型转换" class="headerlink" title="2、例举3种强制类型转换和2种隐式类型转换?"></a>2、例举3种强制类型转换和2种隐式类型转换?</h2><p>强制（parseInt,parseFloat,Number()）</p>
 <p>隐式（==）</p>
 <p>1==”1”//true</p>
 <p>null==undefined//true</p>
-<h2 id="3、split-join-的区别">3、split() /join() 的区别</h2>
-<p>前者是切割成数组的形式，</p>
+<h2 id="3、split-join-的区别"><a href="#3、split-join-的区别" class="headerlink" title="3、split() /join() 的区别"></a>3、split() /join() 的区别</h2><p>前者是切割成数组的形式，</p>
 <p>后者是将数组转换成字符串</p>
-<h2 id="4、数组方法pop-push-unshift-shift">4、数组方法pop() /push() /unshift() /shift()</h2>
-<p>Push()尾部添加 pop()尾部删除</p>
+<h2 id="4、数组方法pop-push-unshift-shift"><a href="#4、数组方法pop-push-unshift-shift" class="headerlink" title="4、数组方法pop() /push() /unshift() /shift()"></a>4、数组方法pop() /push() /unshift() /shift()</h2><p>Push()尾部添加 pop()尾部删除</p>
 <p>Unshift()头部添加 shift()头部删除</p>
-<h2 id="5、事件绑定和普通事件有什么区别">5、事件绑定和普通事件有什么区别</h2>
-<p>传统事件绑定和符合W3C标准的事件绑定有什么区别？</p>
+<h2 id="5、事件绑定和普通事件有什么区别"><a href="#5、事件绑定和普通事件有什么区别" class="headerlink" title="5、事件绑定和普通事件有什么区别"></a>5、事件绑定和普通事件有什么区别</h2><p>传统事件绑定和符合W3C标准的事件绑定有什么区别？</p>
 <p>普通事件:<code>div1.onclick=function()&#123;&#125;</code>;</p>
 <p><code>&lt;button onmouseover=&quot;&quot;&gt;&lt;/button&gt;</code></p>
 <p>1、如果说给同一个元素绑定了两次或者多次相同类型的事件，那么后面的绑定会覆盖前面的绑定</p>
@@ -505,61 +499,47 @@
 <p>事件绑定是指把事件注册到具体的元素之上，普通事件指的是可以用来注册的事件</p>
 <p>普通添加事件的方法不支持添加多个事件，最下面的事件会覆盖上面的，不支持事件冒泡</p>
 <p>而事件绑定（addEventListener）方式添加事件可以添加多个,支持事件冒泡</p>
-<h2 id="6、IE和DOM事件流的区别">6、IE和DOM事件流的区别</h2>
-<p>1.执行顺序不一样、</p>
+<h2 id="6、IE和DOM事件流的区别"><a href="#6、IE和DOM事件流的区别" class="headerlink" title="6、IE和DOM事件流的区别"></a>6、IE和DOM事件流的区别</h2><p>1.执行顺序不一样、</p>
 <p>2.参数不一样</p>
 <p>3.事件加不加on</p>
 <p>4.this指向问题</p>
 <p><strong>IE9</strong>以前：<a target="_blank" rel="noopener" href="http://www.baidu.com/link?url=fVtfIQaNBwj3KUO_767M8Y2AoHQa2q1pSY0iwTzkigv1ue0E8r5tBI4bezzlCu01KrbygrzNAJ-jw5H8FTc-1a">attachEvent(“onclick”)、detachEvent</a>(“onclick”)</p>
 <p><strong>IE9</strong>开始跟DOM事件流是一样的，都是addEventListener</p>
-<h2 id="7、IE和标准下有哪些兼容性的写法">7、IE和标准下有哪些兼容性的写法</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event</span><br><span class="line"><span class="built_in">document</span>.documentElement.clientWidth || <span class="built_in">document</span>.body.clientWidth</span><br><span class="line"><span class="keyword">var</span> target = ev.srcElement||ev.target</span><br></pre></td></tr></table></figure>
-<h2 id="8、call和apply的区别">8、call和apply的区别</h2>
-<p>call和apply相同点：</p>
+<h2 id="7、IE和标准下有哪些兼容性的写法"><a href="#7、IE和标准下有哪些兼容性的写法" class="headerlink" title="7、IE和标准下有哪些兼容性的写法"></a>7、IE和标准下有哪些兼容性的写法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event</span><br><span class="line"><span class="built_in">document</span>.documentElement.clientWidth || <span class="built_in">document</span>.body.clientWidth</span><br><span class="line"><span class="keyword">var</span> target = ev.srcElement||ev.target</span><br></pre></td></tr></table></figure>
+<h2 id="8、call和apply的区别"><a href="#8、call和apply的区别" class="headerlink" title="8、call和apply的区别"></a>8、call和apply的区别</h2><p>call和apply相同点：</p>
 <p>都是为了用一个本不属于一个对象的方法，让这个对象去执行</p>
  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">toString.call([],<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">toString.apply([],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line"><span class="built_in">Object</span>.call(<span class="built_in">this</span>,obj1,obj2,obj3)</span><br><span class="line"><span class="built_in">Object</span>.apply(<span class="built_in">this</span>,<span class="built_in">arguments</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="9、b继承a的方法">9、b继承a的方法</h2>
-<p>考点：继承的多种方式</p>
+<h2 id="9、b继承a的方法"><a href="#9、b继承a的方法" class="headerlink" title="9、b继承a的方法"></a>9、b继承a的方法</h2><p>考点：继承的多种方式</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">b.protoototype=<span class="keyword">new</span> a;</span><br></pre></td></tr></table></figure>
-<h2 id="10、JavaScript-this指针、闭包、作用域">10、JavaScript this指针、闭包、作用域</h2>
-<p>this：指向调用上下文</p>
+<h2 id="10、JavaScript-this指针、闭包、作用域"><a href="#10、JavaScript-this指针、闭包、作用域" class="headerlink" title="10、JavaScript this指针、闭包、作用域"></a>10、JavaScript this指针、闭包、作用域</h2><p>this：指向调用上下文</p>
 <p>闭包：内层作用域可以访问外层作用域的变量</p>
 <p>作用域：定义一个函数就开辟了一个局部作用域，整个js执行环境有一个全局作用域</p>
-<h2 id="11、事件委托是什么">11、事件委托是什么</h2>
-<p>符合W3C标准的事件绑定<code>addEventLisntener /attachEvent</code></p>
+<h2 id="11、事件委托是什么"><a href="#11、事件委托是什么" class="headerlink" title="11、事件委托是什么"></a>11、事件委托是什么</h2><p>符合W3C标准的事件绑定<code>addEventLisntener /attachEvent</code></p>
 <p>让利用事件冒泡的原理，让自己的所触发的事件，让他的父元素代替执行！</p>
-<h2 id="12、闭包是什么，有什么特性，对页面有什么影响">12、闭包是什么，有什么特性，对页面有什么影响</h2>
-<p>闭包就是能够读取其他函数内部变量的函数。</p>
+<h2 id="12、闭包是什么，有什么特性，对页面有什么影响"><a href="#12、闭包是什么，有什么特性，对页面有什么影响" class="headerlink" title="12、闭包是什么，有什么特性，对页面有什么影响"></a>12、闭包是什么，有什么特性，对页面有什么影响</h2><p>闭包就是能够读取其他函数内部变量的函数。</p>
 <p>闭包的缺点：滥用闭包函数会造成内存泄露，因为闭包中引用到的包裹函数中定义的变量都永远不会被释放，所以我们应该在必要的时候，及时释放这个闭包函数</p>
-<h2 id="13、如何阻止事件冒泡和默认事件">13、如何阻止事件冒泡和默认事件</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">e. stopPropagation();<span class="comment">//标准浏览器</span></span><br><span class="line">event.canceBubble=<span class="literal">true</span>;<span class="comment">//ie9之前</span></span><br><span class="line"></span><br><span class="line">阻止默认事件：</span><br><span class="line">为了不让a点击之后跳转，我们就要给他的点击事件进行阻止</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span> </span><br><span class="line">e.preventDefault();</span><br></pre></td></tr></table></figure>
-<h2 id="14、添加-删除-替换-插入到某个接点的方法">14、添加 删除 替换 插入到某个接点的方法</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">obj.appendChild()</span><br><span class="line">obj.insertBefore() <span class="comment">//原生的js中不提供insertAfter();</span></span><br><span class="line">obj.replaceChild()<span class="comment">//替换</span></span><br><span class="line">obj.removeChild()<span class="comment">//删除</span></span><br></pre></td></tr></table></figure>
-<h2 id="15、javascript的本地对象，内置对象和宿主对象">15、javascript的本地对象，内置对象和宿主对象</h2>
-<p>本地对象为array obj regexp等可以new实例化</p>
+<h2 id="13、如何阻止事件冒泡和默认事件"><a href="#13、如何阻止事件冒泡和默认事件" class="headerlink" title="13、如何阻止事件冒泡和默认事件"></a>13、如何阻止事件冒泡和默认事件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">e. stopPropagation();<span class="comment">//标准浏览器</span></span><br><span class="line">event.canceBubble=<span class="literal">true</span>;<span class="comment">//ie9之前</span></span><br><span class="line"></span><br><span class="line">阻止默认事件：</span><br><span class="line">为了不让a点击之后跳转，我们就要给他的点击事件进行阻止</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span> </span><br><span class="line">e.preventDefault();</span><br></pre></td></tr></table></figure>
+<h2 id="14、添加-删除-替换-插入到某个接点的方法"><a href="#14、添加-删除-替换-插入到某个接点的方法" class="headerlink" title="14、添加 删除 替换 插入到某个接点的方法"></a>14、添加 删除 替换 插入到某个接点的方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">obj.appendChild()</span><br><span class="line">obj.insertBefore() <span class="comment">//原生的js中不提供insertAfter();</span></span><br><span class="line">obj.replaceChild()<span class="comment">//替换</span></span><br><span class="line">obj.removeChild()<span class="comment">//删除</span></span><br></pre></td></tr></table></figure>
+<h2 id="15、javascript的本地对象，内置对象和宿主对象"><a href="#15、javascript的本地对象，内置对象和宿主对象" class="headerlink" title="15、javascript的本地对象，内置对象和宿主对象"></a>15、javascript的本地对象，内置对象和宿主对象</h2><p>本地对象为array obj regexp等可以new实例化</p>
 <p>内置对象为gload Math 等不可以实例化的</p>
 <p>宿主为浏览器自带的document,window 等</p>
-<h2 id="16、document-load-和document-ready的区别">16、document load 和document ready的区别</h2>
-<p>Document.onload 是在结构和样式加载完才执行js</p>
+<h2 id="16、document-load-和document-ready的区别"><a href="#16、document-load-和document-ready的区别" class="headerlink" title="16、document load 和document ready的区别"></a>16、document load 和document ready的区别</h2><p>Document.onload 是在结构和样式加载完才执行js</p>
 <p>window.onload：不仅仅要在结构和样式加载完，还要执行完所有的样式、图片这些资源文件，全部加载完才会触发window.onload事件</p>
 <p>Document.ready原生种没有这个方法，jquery中有 $().ready(function)</p>
-<h2 id="17、-和-的不同">17、<code>==</code>和<code>===</code>的不同</h2>
-<p>前者会自动转换类型</p>
+<h2 id="17、-和-的不同"><a href="#17、-和-的不同" class="headerlink" title="17、==和===的不同"></a>17、<code>==</code>和<code>===</code>的不同</h2><p>前者会自动转换类型</p>
 <p>后者不会</p>
 <p>1==”1”</p>
 <p>null==undefined</p>
 <p>===先判断左右两边的数据类型，如果数据类型不一致，直接返回false</p>
-<p>之后才会进行两边值的判断</p>
-<h2 id="18、javascript的同源策略">18、javascript的同源策略</h2>
-<p>一段脚本只能读取来自于同一来源的窗口和文档的属性，这里的同一来源指的是主机名、协议和端口号的组合</p>
+<p>  之后才会进行两边值的判断</p>
+<h2 id="18、javascript的同源策略"><a href="#18、javascript的同源策略" class="headerlink" title="18、javascript的同源策略"></a>18、javascript的同源策略</h2><p>一段脚本只能读取来自于同一来源的窗口和文档的属性，这里的同一来源指的是主机名、协议和端口号的组合</p>
 <p>http,ftp:协议</p>
 <p>主机名；localhost</p>
 <p>端口名：80:http协议的默认端口</p>
 <p>https:默认端口是8083</p>
 <p>同源策略带来的麻烦：ajax在不同域名下的请求无法实现，</p>
 <p>如果说想要请求其他来源的js文件，或者json数据，那么可以通过jsonp来解决</p>
-<h2 id="19、编写一个数组去重的方法">19、编写一个数组去重的方法</h2>
-<p>var arr=[1,1,3,4,2,4,7];</p>
+<h2 id="19、编写一个数组去重的方法"><a href="#19、编写一个数组去重的方法" class="headerlink" title="19、编写一个数组去重的方法"></a>19、编写一个数组去重的方法</h2><p>var arr=[1,1,3,4,2,4,7];</p>
 <p>=&gt;[1,3,4,2,7]</p>
 <p>一个比较简单的实现就是：</p>
 <p>1、 先创建一个空数组，用来保存最终的结果</p>
@@ -567,13 +547,11 @@
 <p>3、 再对每个元素进行二次循环，判断是否有与之相同的元素，如果没有，将把这个元素放到新数组中</p>
 <p>4、 返回这个新数组</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">oSort</span>(<span class="params">arr</span>) </span>&#123;  </span><br><span class="line"> <span class="keyword">var</span> result =&#123;&#125;;</span><br><span class="line"> <span class="keyword">var</span> newArr=[];</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line"> <span class="keyword">if</span>(!result[arr]) &#123;</span><br><span class="line"> newArr.push(arr)</span><br><span class="line"> result[arr]=<span class="number">1</span></span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">return</span> newArr</span><br><span class="line"> &#125;&lt;/arr.length;i++)</span><br></pre></td></tr></table></figure>
-<h2 id="20、JavaScript是一门什么样的语言，它有哪些特点？">20、JavaScript是一门什么样的语言，它有哪些特点？</h2>
-<p>没有标准答案。</p>
+<h2 id="20、JavaScript是一门什么样的语言，它有哪些特点？"><a href="#20、JavaScript是一门什么样的语言，它有哪些特点？" class="headerlink" title="20、JavaScript是一门什么样的语言，它有哪些特点？"></a>20、JavaScript是一门什么样的语言，它有哪些特点？</h2><p>没有标准答案。</p>
 <p>运行环境：浏览器中的JS引擎（v8.。。）</p>
 <p>语言特性：面向对象，动态语言：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//动态语言的特性</span></span><br><span class="line"> <span class="keyword">var</span> *num*=<span class="number">10</span>;<span class="comment">//num是一个数字类型</span></span><br><span class="line"> *num*=<span class="string">&quot;jim&quot;</span>;<span class="comment">//此时num又变成一个字符串类型</span></span><br><span class="line"> <span class="comment">//我们把一个变量用来保存不同数据类型的语言称之为一个动态语言</span></span><br><span class="line"> <span class="comment">//静态语言：c# java c c++</span></span><br><span class="line"> <span class="comment">//静态语言在声明一个变量就已经确定了这个变量的数据类型，</span></span><br><span class="line"> <span class="comment">// 而且在任何时候都不可以改变他的数据类型</span></span><br></pre></td></tr></table></figure>
-<h2 id="21、JavaScript的数据类型都有什么？">21、JavaScript的数据类型都有什么？</h2>
-<p>基本数据类型：String,Boolean,number,undefined,object,Null</p>
+<h2 id="21、JavaScript的数据类型都有什么？"><a href="#21、JavaScript的数据类型都有什么？" class="headerlink" title="21、JavaScript的数据类型都有什么？"></a>21、JavaScript的数据类型都有什么？</h2><p>基本数据类型：String,Boolean,number,undefined,object,Null</p>
 <p>引用数据类型：Object(Array,Date,RegExp,Function)</p>
 <p>那么问题来了，如何判断某变量是否为数组数据类型？</p>
 <p>方法一.判断其是否具有“数组性质”，如slice()方法。可自己给该变量定义slice方法，故有时会失效</p>
@@ -581,37 +559,30 @@
 <p>方法三.方法一二皆有漏洞，在ECMA Script5中定义了新方法Array.isArray(), 保证其兼容性，最好的方法如下：</p>
 <p>toString.call(18);//”[object Number]”</p>
 <p>toString.call(“”);//”[object String]”</p>
-<p>解析这种简单的数据类型直接通过typeof就可以直接判断[<a href="#_msocom_1">张曼莉1]</a></p>
+<p>解析这种简单的数据类型直接通过typeof就可以直接判断<a href="#_msocom_1">[张曼莉1]</a> </p>
 <p>toString.call常用于判断数组、正则这些复杂类型</p>
 <p>toString.call(/[0-9]{10}/)//”[object RegExp]”</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">Array</span>.isArray===<span class="string">&quot;undefined&quot;</span>)&#123;   </span><br><span class="line">   <span class="built_in">Array</span>.isArray = <span class="function"><span class="keyword">function</span>(<span class="params">arg</span>)</span>&#123;     </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(arg)===<span class="string">&quot;[object  Array]&quot;</span>    	&#125;; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="22、已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？-原生">22、已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？(原生)</h2>
-<p>document.getElementById(“ID”).value</p>
-<h2 id="23、希望获取到页面中所有的checkbox怎么做？-原生">23、希望获取到页面中所有的checkbox怎么做？(原生)</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> domList = <span class="built_in">document</span>.getElementsByTagName(‘input’) </span><br><span class="line"><span class="keyword">var</span> checkBoxList = [];<span class="comment">//返回的所有的checkbox  </span></span><br><span class="line"><span class="keyword">var</span> len = domList.length;　　<span class="comment">//缓存到局部变量  </span></span><br><span class="line"><span class="keyword">while</span> (len--) &#123;　　<span class="comment">//使用while的效率会比for循环更高  　　</span></span><br><span class="line">    <span class="keyword">if</span>  (domList[len].type == ‘checkbox’) &#123;    　　		</span><br><span class="line">        checkBoxList.push(domList[len]);  　　</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="24、设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色">24、设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dom =  <span class="built_in">document</span>.getElementById(“ID”);  </span><br><span class="line">dom.innerHTML = “xxxx”  </span><br><span class="line">dom.style.color = “#000”</span><br></pre></td></tr></table></figure>
-<h2 id="25、当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？">25、当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？</h2>
-<p>直接在DOM里绑定事件：<code>&lt;div onclick=&quot;test()&quot;&gt;&lt;/div&gt;</code></p>
+<h2 id="22、已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？-原生"><a href="#22、已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？-原生" class="headerlink" title="22、已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？(原生)"></a>22、已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？(原生)</h2><p>document.getElementById(“ID”).value</p>
+<h2 id="23、希望获取到页面中所有的checkbox怎么做？-原生"><a href="#23、希望获取到页面中所有的checkbox怎么做？-原生" class="headerlink" title="23、希望获取到页面中所有的checkbox怎么做？(原生)"></a>23、希望获取到页面中所有的checkbox怎么做？(原生)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> domList = <span class="built_in">document</span>.getElementsByTagName(‘input’) </span><br><span class="line"><span class="keyword">var</span> checkBoxList = [];<span class="comment">//返回的所有的checkbox  </span></span><br><span class="line"><span class="keyword">var</span> len = domList.length;　　<span class="comment">//缓存到局部变量  </span></span><br><span class="line"><span class="keyword">while</span> (len--) &#123;　　<span class="comment">//使用while的效率会比for循环更高  　　</span></span><br><span class="line">    <span class="keyword">if</span>  (domList[len].type == ‘checkbox’) &#123;    　　		</span><br><span class="line">        checkBoxList.push(domList[len]);  　　</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="24、设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色"><a href="#24、设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色" class="headerlink" title="24、设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色"></a>24、设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dom =  <span class="built_in">document</span>.getElementById(“ID”);  </span><br><span class="line">dom.innerHTML = “xxxx”  </span><br><span class="line">dom.style.color = “#000”</span><br></pre></td></tr></table></figure>
+<h2 id="25、当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？"><a href="#25、当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？" class="headerlink" title="25、当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？"></a>25、当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？</h2><p>直接在DOM里绑定事件：<code>&lt;div onclick=&quot;test()&quot;&gt;&lt;/div&gt;</code></p>
 <p>在JS里通过onclick绑定：xxx.onclick = test</p>
 <p>通过事件添加进行绑定：<code>addEventListener(xxx, ‘click’, test)</code></p>
 <p>那么问题来了，Javascript的事件流模型都有什么？</p>
 <p>“事件冒泡”：事件开始由最具体的元素接受，然后逐级向上传播</p>
 <p>“事件捕捉”：事件由最不具体的节点先接收，然后逐级向下，一直到最具体的</p>
 <p>“DOM事件流”：三个阶段：事件捕捉，目标阶段，事件冒泡</p>
-<h2 id="26、看下列代码输出为何？解释原因。">26、看下列代码输出为何？解释原因。</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  a;  </span><br><span class="line">alert(<span class="keyword">typeof</span>  a); <span class="comment">// “undefined”  </span></span><br><span class="line"><span class="comment">//alert(b);  // 报错   </span></span><br><span class="line">b=<span class="number">10</span>;  </span><br><span class="line">alert(<span class="keyword">typeof</span>  b);<span class="comment">//”number”</span></span><br></pre></td></tr></table></figure>
+<h2 id="26、看下列代码输出为何？解释原因。"><a href="#26、看下列代码输出为何？解释原因。" class="headerlink" title="26、看下列代码输出为何？解释原因。"></a>26、看下列代码输出为何？解释原因。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  a;  </span><br><span class="line">alert(<span class="keyword">typeof</span>  a); <span class="comment">// “undefined”  </span></span><br><span class="line"><span class="comment">//alert(b);  // 报错   </span></span><br><span class="line">b=<span class="number">10</span>;  </span><br><span class="line">alert(<span class="keyword">typeof</span>  b);<span class="comment">//”number”</span></span><br></pre></td></tr></table></figure>
 <p>解释：Undefined是一个只有一个值的数据类型，这个值就是“undefined”，在使用var声明变量但并未对其赋值进行初始化时，这个变量的值就是undefined。而b由于未声明将报错。注意未申明的变量和声明了未赋值的是不一样的。</p>
 <p><strong>undefined</strong>会在以下三种情况下产生：</p>
 <p>1、 一个变量定义了却没有被赋值</p>
 <p>2、 想要获取一个对象上不存在的属性或者方法:</p>
 <p>3、 一个数组中没有被赋值的元素</p>
 <p>注意区分undefined跟not defnied(语法错误)是不一样的</p>
-<h2 id="27、看下列代码-输出什么？解释原因。">27、看下列代码,输出什么？解释原因。</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">null</span>;  </span><br><span class="line">alert(<span class="keyword">typeof</span> a); <span class="comment">//object</span></span><br></pre></td></tr></table></figure>
+<h2 id="27、看下列代码-输出什么？解释原因。"><a href="#27、看下列代码-输出什么？解释原因。" class="headerlink" title="27、看下列代码,输出什么？解释原因。"></a>27、看下列代码,输出什么？解释原因。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">null</span>;  </span><br><span class="line">alert(<span class="keyword">typeof</span> a); <span class="comment">//object</span></span><br></pre></td></tr></table></figure>
 <p>解释：null是一个只有一个值的数据类型，这个值就是null。表示一个空指针对象，所以用typeof检测会返回”object”。</p>
-<h2 id="28、看下列代码-输出什么？解释原因。">28、看下列代码,输出什么？解释原因。</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">undefined</span>;<span class="comment">//此时undefined这个变量的值是undefined  </span></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">null</span>; <span class="comment">// true  </span></span><br><span class="line"><span class="number">1</span> == <span class="literal">true</span>;  <span class="comment">// true  此时会把布尔类型的值转换为数字类型 </span></span><br><span class="line"><span class="literal">true</span>=<span class="number">1</span> <span class="literal">false</span>=<span class="number">0</span>  <span class="number">2</span> == <span class="literal">true</span>;  <span class="comment">// false  </span></span><br><span class="line"><span class="number">0</span> == <span class="literal">false</span>; <span class="comment">// true  </span></span><br><span class="line"><span class="number">0</span> == <span class="string">&#x27;&#x27;</span>;   <span class="comment">//  true  </span></span><br><span class="line"><span class="literal">NaN</span> == <span class="literal">NaN</span>; <span class="comment">// false  </span></span><br><span class="line">[] == <span class="literal">false</span>; <span class="comment">// true  </span></span><br><span class="line">[] == ![];  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h2 id="28、看下列代码-输出什么？解释原因。"><a href="#28、看下列代码-输出什么？解释原因。" class="headerlink" title="28、看下列代码,输出什么？解释原因。"></a>28、看下列代码,输出什么？解释原因。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">undefined</span>;<span class="comment">//此时undefined这个变量的值是undefined  </span></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">null</span>; <span class="comment">// true  </span></span><br><span class="line"><span class="number">1</span> == <span class="literal">true</span>;  <span class="comment">// true  此时会把布尔类型的值转换为数字类型 </span></span><br><span class="line"><span class="literal">true</span>=<span class="number">1</span> <span class="literal">false</span>=<span class="number">0</span>  <span class="number">2</span> == <span class="literal">true</span>;  <span class="comment">// false  </span></span><br><span class="line"><span class="number">0</span> == <span class="literal">false</span>; <span class="comment">// true  </span></span><br><span class="line"><span class="number">0</span> == <span class="string">&#x27;&#x27;</span>;   <span class="comment">//  true  </span></span><br><span class="line"><span class="literal">NaN</span> == <span class="literal">NaN</span>; <span class="comment">// false  </span></span><br><span class="line">[] == <span class="literal">false</span>; <span class="comment">// true  </span></span><br><span class="line">[] == ![];  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <p>·   undefined与null相等，但不恒等（===）</p>
 <p>一个是number一个是string时，会尝试将string转换为number</p>
 <p>尝试将boolean转换为number，0或1</p>
@@ -620,47 +591,33 @@
 <p>那么问题来了，看下面的代码，输出什么，foo的值为什么？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo =  <span class="string">&quot;11&quot;</span>+<span class="number">2</span>-<span class="string">&quot;1&quot;</span>;  </span><br><span class="line"><span class="built_in">console</span>.log(foo);<span class="comment">//111  </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> foo);</span><br></pre></td></tr></table></figure>
 <p>执行完后foo的值为111，foo的类型为number。</p>
-<h2 id="29、看代码给答案。">29、看代码给答案。</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Object</span>();  </span><br><span class="line">a.value = <span class="number">1</span>;  </span><br><span class="line">b = a; </span><br><span class="line">&#123;<span class="attr">value</span>:<span class="number">1</span>&#125;  </span><br><span class="line">b.value = <span class="number">2</span>;  </span><br><span class="line">alert(a.value);<span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+<h2 id="29、看代码给答案。"><a href="#29、看代码给答案。" class="headerlink" title="29、看代码给答案。"></a>29、看代码给答案。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Object</span>();  </span><br><span class="line">a.value = <span class="number">1</span>;  </span><br><span class="line">b = a; </span><br><span class="line">&#123;<span class="attr">value</span>:<span class="number">1</span>&#125;  </span><br><span class="line">b.value = <span class="number">2</span>;  </span><br><span class="line">alert(a.value);<span class="comment">//2</span></span><br></pre></td></tr></table></figure>
 <p>答案：2（考察引用数据类型细节）</p>
-<h2 id="30、已知数组">30、已知数组</h2>
-<p>已知数组var stringArray = [“This”, “is”, “Baidu”, “Campus”]，Alert出”This is Baidu Campus”。</p>
+<h2 id="30、已知数组"><a href="#30、已知数组" class="headerlink" title="30、已知数组"></a>30、已知数组</h2><p>已知数组var stringArray = [“This”, “is”, “Baidu”, “Campus”]，Alert出”This is Baidu Campus”。</p>
 <p>答案：alert(stringArray.join(“ ”))</p>
 <p>已知有字符串foo=”get-element-by-id”,写一个function将其转化成驼峰表示法”getElementById”。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">combo</span>(<span class="params">msg</span>)</span>&#123;    </span><br><span class="line">    <span class="keyword">var</span> arr=msg.split(<span class="string">&quot;-&quot;</span>);<span class="comment">//[get,element,by,id]    </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span>  i=<span class="number">1</span>;i&lt;arr.length;i++)&#123;     </span><br><span class="line">        arr[i]=arr[i].charAt(<span class="number">0</span>).toUpperCase()+arr[i].substr(<span class="number">1</span>,arr[i].length-<span class="number">1</span>);<span class="comment">//Element    </span></span><br><span class="line">    &#125;    </span><br><span class="line">    msg=arr.join(<span class="string">&quot;&quot;</span>);<span class="comment">//msg=”  getElementById”    </span></span><br><span class="line">    <span class="keyword">return</span>  msg; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>(考察基础API)</p>
-<h2 id="31、var-numberArray-3-6-2-4-1-5-（考察基础API）">31、var numberArray = [3,6,2,4,1,5]; （考察基础API）</h2>
-<ol>
-<li>实现对该数组的倒排，输出[5,1,4,2,6,3]</li>
-<li>实现对该数组的降序排列，输出[6,5,4,3,2,1]</li>
-</ol>
+<h2 id="31、var-numberArray-3-6-2-4-1-5-（考察基础API）"><a href="#31、var-numberArray-3-6-2-4-1-5-（考察基础API）" class="headerlink" title="31、var numberArray = [3,6,2,4,1,5]; （考察基础API）"></a>31、var numberArray = [3,6,2,4,1,5]; （考察基础API）</h2><p>1) 实现对该数组的倒排，输出[5,1,4,2,6,3]<br>2) 实现对该数组的降序排列，输出[6,5,4,3,2,1]</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">combo</span>(<span class="params">msg</span>)</span>&#123;    </span><br><span class="line">    <span class="keyword">var</span>  arr=msg.split(<span class="string">&quot;-&quot;</span>);    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span>  i=<span class="number">1</span>;i&lt;arr.length;i++)&#123;     </span><br><span class="line">        arr[i]=arr[i].charAt(<span class="number">0</span>).toUpperCase()+arr[i].substr(<span class="number">1</span>,arr[i].length-<span class="number">1</span>);    &#125;    </span><br><span class="line">    msg=arr.join(<span class="string">&quot;&quot;</span>);    </span><br><span class="line">    <span class="keyword">return</span>  msg;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="32、输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26">32、输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();  <span class="comment">// 获取年，getFullYear()返回4位的数字  </span></span><br><span class="line"><span class="keyword">var</span> year = d.getFullYear();  <span class="comment">// 获取月，**月份比较特殊，0是1月，11是12月**  </span></span><br><span class="line"><span class="keyword">var</span> month = d.getMonth() + <span class="number">1</span>;  <span class="comment">// 变成两位  </span></span><br><span class="line">month = month &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +  month : month;  <span class="comment">// 获取日  </span></span><br><span class="line"><span class="keyword">var</span> day = d.getDate();  day = day &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + day :  day;  alert(year + <span class="string">&#x27;-&#x27;</span> + month + <span class="string">&#x27;-&#x27;</span>  + day);</span><br></pre></td></tr></table></figure>
-<h2 id="33、将字符串">33、将字符串</h2>
-<p>”<code>&lt;tr&gt;&lt;td&gt;&#123;$id&#125;&lt;/td&gt;&lt;td&gt;&#123;$name&#125;&lt;/td&gt;&lt;/tr&gt;</code>”</p>
+<h2 id="32、输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26"><a href="#32、输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26" class="headerlink" title="32、输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26"></a>32、输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();  <span class="comment">// 获取年，getFullYear()返回4位的数字  </span></span><br><span class="line"><span class="keyword">var</span> year = d.getFullYear();  <span class="comment">// 获取月，**月份比较特殊，0是1月，11是12月**  </span></span><br><span class="line"><span class="keyword">var</span> month = d.getMonth() + <span class="number">1</span>;  <span class="comment">// 变成两位  </span></span><br><span class="line">month = month &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +  month : month;  <span class="comment">// 获取日  </span></span><br><span class="line"><span class="keyword">var</span> day = d.getDate();  day = day &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + day :  day;  alert(year + <span class="string">&#x27;-&#x27;</span> + month + <span class="string">&#x27;-&#x27;</span>  + day);</span><br></pre></td></tr></table></figure>
+<h2 id="33、将字符串"><a href="#33、将字符串" class="headerlink" title="33、将字符串"></a>33、将字符串</h2><p>”<code>&lt;tr&gt;&lt;td&gt;&#123;$id&#125;&lt;/td&gt;&lt;td&gt;&#123;$name&#125;&lt;/td&gt;&lt;/tr&gt;</code>”</p>
 <p>中的<code>&#123;$id&#125;</code>替换成10，<code>&#123;$​name&#125;</code>替换成Tony （使用正则表达式）</p>
 <p>答案：<code>”&lt;tr&gt;&lt;td&gt;&#123;$id&#125;&lt;/td&gt;&lt;td&gt;&#123;$id&#125;_&#123;$name&#125;&lt;/td&gt;&lt;/tr&gt;”.replace(/&#123;\$id&#125;/g, ’10′).replace(/&#123;\$name&#125;/g, ‘Tony’)</code>;</p>
-<h2 id="34、字符转义">34、字符转义</h2>
-<p>为了保证页面输出安全，我们经常需要对一些特殊的字符进行转义，请写一个函数escapeHtml，将<code>&lt;, &gt;, &amp;, “</code>进行转义</p>
+<h2 id="34、字符转义"><a href="#34、字符转义" class="headerlink" title="34、字符转义"></a>34、字符转义</h2><p>为了保证页面输出安全，我们经常需要对一些特殊的字符进行转义，请写一个函数escapeHtml，将<code>&lt;, &gt;, &amp;, “</code>进行转义</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">escapeHtml</span>(<span class="params">str</span>) </span>&#123;  <span class="comment">//[&lt;&gt;”&amp;]:中括号中字符只要其中的一个出现就代表满足条件  //给replace第二个参数传递一个回调函数，回调函数中参数就是匹配结果，如果匹配不到就是null  </span></span><br><span class="line">    <span class="keyword">return</span>  str.replace(<span class="regexp">/[&lt;&gt;”&amp;]/g</span>, <span class="function"><span class="keyword">function</span>(<span class="params">match</span>) </span>&#123;    </span><br><span class="line">        <span class="keyword">switch</span>  (match) &#123;     </span><br><span class="line">            <span class="keyword">case</span>  “&lt;”:        </span><br><span class="line">                <span class="keyword">return</span> “&amp;lt;”;    </span><br><span class="line">            <span class="keyword">case</span>  “&gt;”:       </span><br><span class="line">                <span class="keyword">return</span> “&amp;gt;”;    </span><br><span class="line">            <span class="keyword">case</span>  “&amp;”:       </span><br><span class="line">                <span class="keyword">return</span> “&amp;amp;”;   </span><br><span class="line">            <span class="keyword">case</span>  “\””:      </span><br><span class="line">                <span class="keyword">return</span> “&amp;quot;”;    </span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="35、foo-foo-bar-，这行代码是什么意思？为什么要这样写？">35、foo = foo||bar ，这行代码是什么意思？为什么要这样写？</h2>
-<p>这种写法称之为短路表达式</p>
+<h2 id="35、foo-foo-bar-，这行代码是什么意思？为什么要这样写？"><a href="#35、foo-foo-bar-，这行代码是什么意思？为什么要这样写？" class="headerlink" title="35、foo = foo||bar ，这行代码是什么意思？为什么要这样写？"></a>35、foo = foo||bar ，这行代码是什么意思？为什么要这样写？</h2><p>这种写法称之为短路表达式</p>
 <p>答案：if(!foo) foo = bar; //如果foo存在，值不变，否则把bar的值赋给foo。</p>
 <p>短路表达式：作为”&amp;&amp;”和”||”操作符的操作数表达式，这些表达式在进行求值时，只要最终的结果已经可以确定是真或假，求值过程便告终止，这称之为短路求值。</p>
 <p>注意if条件的真假判定，<strong>记住以下是false的情况</strong>：</p>
 <p><strong>空字符串、false、undefined、null、0</strong></p>
-<h2 id="36、看下列代码，将会输出什么-变量声明提升">36、看下列代码，将会输出什么?(变量声明提升)</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="number">1</span>;  </span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    </span><br><span class="line">    <span class="built_in">console</span>.log(foo);    </span><br><span class="line">    <span class="keyword">var</span> foo  = <span class="number">2</span>;   </span><br><span class="line">    <span class="built_in">console</span>.log(foo);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="36、看下列代码，将会输出什么-变量声明提升"><a href="#36、看下列代码，将会输出什么-变量声明提升" class="headerlink" title="36、看下列代码，将会输出什么?(变量声明提升)"></a>36、看下列代码，将会输出什么?(变量声明提升)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="number">1</span>;  </span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    </span><br><span class="line">    <span class="built_in">console</span>.log(foo);    </span><br><span class="line">    <span class="keyword">var</span> foo  = <span class="number">2</span>;   </span><br><span class="line">    <span class="built_in">console</span>.log(foo);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>答案：输出undefined 和 2。上面代码相当于：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="number">1</span>;  </span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    </span><br><span class="line">    <span class="keyword">var</span>  foo;    </span><br><span class="line">    <span class="built_in">console</span>.log(foo);  <span class="comment">//undefined    </span></span><br><span class="line">    foo =  <span class="number">2</span>;   </span><br><span class="line">    <span class="built_in">console</span>.log(foo);  <span class="comment">// 2;    </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>函数声明与变量声明会被JavaScript引擎隐式地提升到当前作用域的顶部，但是只提升名称不会提升赋值部分。</p>
-<h2 id="37、用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。">37、用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iArray = [];   </span><br><span class="line">funtion <span class="function"><span class="title">getRandom</span>(<span class="params">istart,  iend</span>)</span>&#123;      </span><br><span class="line">    <span class="keyword">var</span>  iChoice = istart - iend +<span class="number">1</span>;      </span><br><span class="line">    <span class="keyword">return</span>  <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() *iChoice + istart;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">//Math.random()就是获取0-1之间的随机数（永远获取不到1）  </span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;  </span><br><span class="line">    <span class="keyword">var</span> result= getRandom(<span class="number">10</span>,<span class="number">100</span>);      </span><br><span class="line">    iArray.push(result); </span><br><span class="line">&#125;  </span><br><span class="line">iArray.sort();</span><br></pre></td></tr></table></figure>
-<h2 id="38、把两个数组合并，并删除第二个元素。">38、把两个数组合并，并删除第二个元素。</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array1 = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>]; </span><br><span class="line"><span class="keyword">var</span> bArray = [<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;f&#x27;</span>]; </span><br><span class="line"><span class="keyword">var</span> cArray = array1.concat(bArray);  </span><br><span class="line">cArray.splice(<span class="number">1</span>,<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="39、怎样添加、移除、移动、复制、创建和查找节点（原生JS，实在基础，没细写每一步）">39、怎样添加、移除、移动、复制、创建和查找节点（原生JS，实在基础，没细写每一步）</h2>
-<p>1）创建新节点</p>
+<h2 id="37、用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。"><a href="#37、用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。" class="headerlink" title="37、用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。"></a>37、用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iArray = [];   </span><br><span class="line">funtion <span class="function"><span class="title">getRandom</span>(<span class="params">istart,  iend</span>)</span>&#123;      </span><br><span class="line">    <span class="keyword">var</span>  iChoice = istart - iend +<span class="number">1</span>;      </span><br><span class="line">    <span class="keyword">return</span>  <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() *iChoice + istart;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">//Math.random()就是获取0-1之间的随机数（永远获取不到1）  </span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;  </span><br><span class="line">    <span class="keyword">var</span> result= getRandom(<span class="number">10</span>,<span class="number">100</span>);      </span><br><span class="line">    iArray.push(result); </span><br><span class="line">&#125;  </span><br><span class="line">iArray.sort();</span><br></pre></td></tr></table></figure>
+<h2 id="38、把两个数组合并，并删除第二个元素。"><a href="#38、把两个数组合并，并删除第二个元素。" class="headerlink" title="38、把两个数组合并，并删除第二个元素。"></a>38、把两个数组合并，并删除第二个元素。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array1 = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>]; </span><br><span class="line"><span class="keyword">var</span> bArray = [<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;f&#x27;</span>]; </span><br><span class="line"><span class="keyword">var</span> cArray = array1.concat(bArray);  </span><br><span class="line">cArray.splice(<span class="number">1</span>,<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="39、怎样添加、移除、移动、复制、创建和查找节点（原生JS，实在基础，没细写每一步）"><a href="#39、怎样添加、移除、移动、复制、创建和查找节点（原生JS，实在基础，没细写每一步）" class="headerlink" title="39、怎样添加、移除、移动、复制、创建和查找节点（原生JS，实在基础，没细写每一步）"></a>39、怎样添加、移除、移动、复制、创建和查找节点（原生JS，实在基础，没细写每一步）</h2><p>1）创建新节点</p>
 <p>createDocumentFragment()  //创建一个DOM片段</p>
 <p>createElement()  //创建一个具体的元素</p>
 <p>createTextNode()  //创建一个文本节点</p>
@@ -673,8 +630,7 @@
 <p>getElementsByTagName()  //通过标签名称</p>
 <p>getElementsByName()   //通过元素的Name属性的值</p>
 <p>getElementById()    //通过元素Id，唯一性</p>
-<h2 id="40、URL处理">40、URL处理</h2>
-<p>有这样一个URL：<a target="_blank" rel="noopener" href="http://item.taobao.com/item.htm?a=1&amp;b=2&amp;c=&amp;d=xxx&amp;e">http://item.taobao.com/item.htm?a=1&amp;b=2&amp;c=&amp;d=xxx&amp;e</a></p>
+<h2 id="40、URL处理"><a href="#40、URL处理" class="headerlink" title="40、URL处理"></a>40、URL处理</h2><p>有这样一个URL：<a target="_blank" rel="noopener" href="http://item.taobao.com/item.htm?a=1&amp;b=2&amp;c=&amp;d=xxx&amp;e">http://item.taobao.com/item.htm?a=1&amp;b=2&amp;c=&amp;d=xxx&amp;e</a></p>
 <p>请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，将其按key-value形式返回到一个json结构中，如{a:’1′, b:’2′, c:”, d:’xxx’, e:undefined}。</p>
 <p>答案：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> url = <span class="string">&#x27;http://item.taobao.com/item.htm?a=1&amp;b=2&amp;c=&amp;d=xxx&amp;e&#x27;</span>;</span><br><span class="line">   <span class="keyword">var</span> result = &#123;&#125;;</span><br><span class="line">   url = url.split(<span class="string">&quot;?&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">   <span class="keyword">var</span> map = url.split(<span class="string">&quot;&amp;&quot;</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(map);</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; map.length; i++) &#123;</span><br><span class="line">     <span class="keyword">var</span> arr = map[i].split(<span class="string">&#x27;=&#x27;</span>);</span><br><span class="line">     result[arr[<span class="number">0</span>]] = arr[<span class="number">1</span>];</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
@@ -966,7 +922,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">690.3K</span>
+          站点总字数：<span class="post-count">689.8K</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1432,20 +1388,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-</body>
+	</body>
 </html>
