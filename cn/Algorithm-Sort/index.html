@@ -224,9 +224,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/categories/">
               
-              关于
+              分类
               
               
             </a>
@@ -235,9 +235,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
@@ -258,8 +258,6 @@
           
           
           
-          
-          
           <li>
             <a href="/tags/">
               
@@ -268,6 +266,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -720,9 +720,9 @@
 <p>而冒泡排序即使已经找到最大值，也需要继续移动最大值，直到将它移动到最右边；</p>
 <p><img src="23.png" alt=""></p>
 <h4 id="快速排序的枢纽">快速排序的枢纽</h4>
-<p>**第一种方案：**直接选择第一个元素作为枢纽。但是，当第一个元素就是最小值的情况下，效率不高；</p>
-<p>**第二种方案：**使用随机数。随机数本身十分消耗性能，不推荐；</p>
-<p><strong>优秀的解决方法：<strong>取index为头、中、位的三个数据排序后的中位数；如下图所示，按下标值取出的三个数据为：92，31，0，经排序后变为：0，31，92，取其中的中位数31作为</strong>枢纽</strong>（当（length-1）/2不整除时可向下或向上取整）：</p>
+<p><strong>第一种方案</strong>：直接选择第一个元素作为枢纽。但是，当第一个元素就是最小值的情况下，效率不高；</p>
+<p><strong>第二种方案</strong>：使用随机数。随机数本身十分消耗性能，不推荐；</p>
+<p><strong>优秀的解决方法</strong>：取index为头、中、位的三个数据排序后的中位数；如下图所示，按下标值取出的三个数据为：92，31，0，经排序后变为：0，31，92，取其中的中位数31作为<strong>枢纽</strong>（当（length-1）/2不整除时可向下或向上取整）：</p>
 <p><img src="24.png" alt=""></p>
 <p><strong>实现枢纽选择</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//交换两个位置的数据</span></span><br><span class="line"><span class="keyword">let</span> swap = <span class="function"><span class="keyword">function</span>(<span class="params">arr, m, n</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> temp  = arr[m]</span><br><span class="line">    arr[m] = arr[n]</span><br><span class="line">    arr[n] = temp</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//快速排序</span></span><br><span class="line"><span class="comment">//1.选择枢纽</span></span><br><span class="line"><span class="keyword">let</span> median = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//1.取出中间的位置</span></span><br><span class="line">    <span class="keyword">let</span> center = <span class="built_in">Math</span>.floor(arr.length / <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">let</span> right = arr.length - <span class="number">1</span> </span><br><span class="line">    <span class="keyword">let</span> left = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.判断大小并进行交换</span></span><br><span class="line">    <span class="keyword">if</span> (arr[left] &gt; arr[center]) &#123;</span><br><span class="line">        swap(arr, left, center)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (arr[center] &gt; arr[right])&#123;</span><br><span class="line">        swap(arr, center, right)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (arr[left] &gt; arr[right]) &#123;</span><br><span class="line">        swap(arr, left, right)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//3.返回枢纽</span></span><br><span class="line">    <span class="keyword">return</span> center</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
