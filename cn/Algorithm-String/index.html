@@ -473,86 +473,115 @@
         <p>要点：字符串、常见字符串方法</p>
 <p>先知：</p>
 <span id="more"></span>
-<h3 id="一、串"><a href="#一、串" class="headerlink" title="一、串"></a>一、串</h3><h4 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h4><p>串（string） 是由<strong>零个或多个字符</strong>组成的<strong>有限序列</strong>，又名叫 <strong>字符串</strong></p>
-<h4 id="1-2-串的逻辑结构"><a href="#1-2-串的逻辑结构" class="headerlink" title="1.2 串的逻辑结构"></a>1.2 串的逻辑结构</h4><p>串 的逻辑结构和<u>线性表</u>很相似，不同之处在于串针对的是<u>字符集</u>，也就是串中的元素都是字符。</p>
+<h3 id="一、串">一、串</h3>
+<h4 id="1-1-定义">1.1 定义</h4>
+<p>串（string） 是由<strong>零个或多个字符</strong>组成的<strong>有限序列</strong>，又名叫 <strong>字符串</strong></p>
+<h4 id="1-2-串的逻辑结构">1.2 串的逻辑结构</h4>
+<p>串 的逻辑结构和<u>线性表</u>很相似，不同之处在于串针对的是<u>字符集</u>，也就是串中的元素都是字符。</p>
 <p>因此，对于串的基本操作与线性表是有很大差别的：</p>
 <ul>
-<li><p>线性表更关注的是<u>单个元素</u>的操作，比如查找一个元素，插入或删除一个元素；</p>
+<li>
+<p>线性表更关注的是<u>单个元素</u>的操作，比如查找一个元素，插入或删除一个元素；</p>
 </li>
-<li><p>但串中更多的是<u>查找子串位置</u>，得到指定位置子串，替换子串等操作</p>
+<li>
+<p>但串中更多的是<u>查找子串位置</u>，得到指定位置子串，替换子串等操作</p>
 </li>
 </ul>
-<h4 id="1-3-串的存储结构"><a href="#1-3-串的存储结构" class="headerlink" title="1.3 串的存储结构"></a>1.3 串的存储结构</h4><p><strong>串</strong> 的存储结构<strong>与</strong>线性表<strong>相同</strong>，分为<strong>两种</strong>：</p>
+<h4 id="1-3-串的存储结构">1.3 串的存储结构</h4>
+<p><strong>串</strong> 的存储结构<strong>与</strong>线性表<strong>相同</strong>，分为<strong>两种</strong>：</p>
 <ul>
-<li><p>顺序存储结构</p>
+<li>
+<p>顺序存储结构</p>
 </li>
-<li><p>链式存储结构</p>
+<li>
+<p>链式存储结构</p>
 </li>
 </ul>
-<h5 id="串的顺序存储结构"><a href="#串的顺序存储结构" class="headerlink" title="串的顺序存储结构"></a>串的顺序存储结构</h5><p>串的顺序存储结构是用 <strong>一组地址连续的存储单元</strong> 来存储串中的字符序列。一般是<strong>用定长数组来定义</strong></p>
+<h5 id="串的顺序存储结构">串的顺序存储结构</h5>
+<p>串的顺序存储结构是用 <strong>一组地址连续的存储单元</strong> 来存储串中的字符序列。一般是<strong>用定长数组来定义</strong></p>
 <blockquote>
 <p>由于是定长数组，因此就会存在一个<strong>预定义的最大串长度</strong>；</p>
 <p>一般可以将<strong>实际</strong>的串长度值<strong>保存在</strong>数组 0 下标位置，也可以放在数组最后一个下标位置；</p>
-<p>也有些语言使用在串值后面加一个不计入串长度的<strong>结束标记符（比如<code>\0</code>）</strong>来表示串值得<strong>终结</strong>，这样就<strong>无需使用</strong>数字进行记录</p>
+<p>也有些语言使用在串值后面加一个不计入串长度的<strong>结束标记符（比如<code>\0</code>）<strong>来表示串值得</strong>终结</strong>，这样就<strong>无需使用</strong>数字进行记录</p>
 </blockquote>
-<h5 id="串的链式存储结构"><a href="#串的链式存储结构" class="headerlink" title="串的链式存储结构"></a>串的链式存储结构</h5><p>对于串的链式存储结构，与线性表是相似的；</p>
+<h5 id="串的链式存储结构">串的链式存储结构</h5>
+<p>对于串的链式存储结构，与线性表是相似的；</p>
 <p>但由于串结构的特殊性（结构中的每个元素数据都是一个字符），如果也简单地将每个链结点存储一个字符，就会存在很大的空间浪费；</p>
 <p>因此，一个结点可以考虑存放<u>多个字符</u>，如果最后一个结点未被占满时，可以使用 “#” 或其他非串值字符补全</p>
 <blockquote>
 <p>串的链式存储结构<strong>除了</strong>在链接串与串操作时有一定的<strong>方便之外</strong></p>
 <p>总的来说<strong>不如顺序存储灵活</strong>，性能<strong>也不如</strong>顺序存储结构好</p>
 </blockquote>
-<h3 id="二、JavaScript中的串"><a href="#二、JavaScript中的串" class="headerlink" title="二、JavaScript中的串"></a>二、JavaScript中的串</h3><h4 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h4><p>字符串就是一个或多个排列在一起的字符，放在单引号或双引号之中。</p>
+<h3 id="二、JavaScript中的串">二、JavaScript中的串</h3>
+<h4 id="2-1-定义">2.1 定义</h4>
+<p>字符串就是一个或多个排列在一起的字符，放在单引号或双引号之中。</p>
 <blockquote>
-<p>‘abc’<br>“abc”</p>
+<p>‘abc’<br>
+“abc”</p>
 </blockquote>
 <p>js里的字符串类似于数组，都是一个一个字符拼凑在一起组成的，因此可以用<code>length属性</code>取得字符串的长度</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello&quot;</span></span><br><span class="line">str.length; <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-2-字符串常用的一些方法"><a href="#2-2-字符串常用的一些方法" class="headerlink" title="2.2 字符串常用的一些方法"></a>2.2 字符串常用的一些方法</h4><h5 id="1-charAt"><a href="#1-charAt" class="headerlink" title="1.charAt()"></a>1.charAt()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.charAt(n)</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-字符串常用的一些方法">2.2 字符串常用的一些方法</h4>
+<h5 id="1-charAt">1.charAt()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.charAt(n)</span><br></pre></td></tr></table></figure>
 <p>作用：返回字符串的第 n 个字符，如果不在 0~str.length-1之间，则返回一个空字符串。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;javascript&quot;</span>;</span><br><span class="line">str.charAt(<span class="number">2</span>);  <span class="comment">// &#x27;v&#x27;</span></span><br><span class="line">str.charAt(<span class="number">12</span>); <span class="comment">// &#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<h5 id="2-indexOf"><a href="#2-indexOf" class="headerlink" title="2.indexOf()"></a>2.indexOf()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">indexOf(substr[,start])</span><br></pre></td></tr></table></figure>
+<h5 id="2-indexOf">2.indexOf()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">indexOf(substr[,start])</span><br></pre></td></tr></table></figure>
 <p>作用：返回 substr 在字符串 str 中首次出现的位置,从 start 位置开始查找，如果不存在，则返回 -1。</p>
 <p>start可以是任意整数，默认值为 0。如果 start &lt; 0 则查找整个字符串（如同传进了 0）。如果 start &gt;= str.length，则该方法返回 -1，除非被查找的字符串是一个空字符串，此时返回 str.length.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str =   <span class="string">&quot;javascript&quot;</span>  ;</span><br><span class="line">str.indexOf(<span class="string">&#x27;s&#x27;</span>); <span class="comment">// 1  </span></span><br><span class="line">str.indexOf(  <span class="string">&#x27;s&#x27;</span>  ,<span class="number">6</span>);   <span class="comment">// -1  </span></span><br><span class="line">str.indexOf(  <span class="string">&#x27;&#x27;</span>  ,<span class="number">11</span>);   <span class="comment">// 10  </span></span><br><span class="line">str.indexOf(  <span class="string">&#x27;&#x27;</span>  ,<span class="number">8</span>);   <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
-<h5 id="3-lastIndexOf"><a href="#3-lastIndexOf" class="headerlink" title="3.lastIndexOf()"></a>3.lastIndexOf()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lastIndexOf(substr[,start])</span><br></pre></td></tr></table></figure>
+<h5 id="3-lastIndexOf">3.lastIndexOf()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lastIndexOf(substr[,start])</span><br></pre></td></tr></table></figure>
 <p>作用：返回 substr 在字符串 str 中最后出现的位置,从 start 位置 向前开始查找，如果不存在，则返回 -1。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;lastindex&#x27;</span>.lastIndexOf(  <span class="string">&#x27;a&#x27;</span>  );   <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
-<h5 id="4-substring"><a href="#4-substring" class="headerlink" title="4.substring()"></a>4.substring()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.substring(start[, end])</span><br></pre></td></tr></table></figure>
+<h5 id="4-substring">4.substring()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.substring(start[, end])</span><br></pre></td></tr></table></figure>
 <p>作用：返回从 start 到 end（不包括）之间的字符，start、end均为 非负整数。若结束参数(end)省略，则表示从start位置一直截取到最后。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&#x27;abcdefg&#x27;</span>  ;  str.substring(<span class="number">1</span>, <span class="number">4</span>);   <span class="comment">//&quot;bcd&quot;  </span></span><br><span class="line">str.substring(<span class="number">1</span>);   <span class="comment">// &quot;bcdefg&quot;  </span></span><br><span class="line">str.substring(-<span class="number">1</span>);   <span class="comment">//&quot;abcdefg&quot; 传入负值时会视为0</span></span><br></pre></td></tr></table></figure>
-<h5 id="5-slice"><a href="#5-slice" class="headerlink" title="5.slice()"></a>5.slice()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.slice(start[,end])</span><br></pre></td></tr></table></figure>
+<h5 id="5-slice">5.slice()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.slice(start[,end])</span><br></pre></td></tr></table></figure>
 <p>作用：返回从 start 到 end （不包括）之间的字符，可传负值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&#x27;this is awesome&#x27;</span>  ;  </span><br><span class="line">str.slice(<span class="number">4</span>, -<span class="number">1</span>);   <span class="comment">//&quot; is awesom&quot;</span></span><br></pre></td></tr></table></figure>
-<h5 id="6-substr"><a href="#6-substr" class="headerlink" title="6. substr()"></a>6. substr()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.slice(start[,end])</span><br></pre></td></tr></table></figure>
+<h5 id="6-substr">6. substr()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.slice(start[,end])</span><br></pre></td></tr></table></figure>
 <p>作用：返回 str 中从指定位置开始到指定长度的子字符串，start可为负值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&quot;Just give me a reason&quot;</span>  ;  </span><br><span class="line">str.substr(<span class="number">5</span>, <span class="number">10</span>);   <span class="comment">// &quot;give me a &quot;  </span></span><br><span class="line">str.substr(-<span class="number">4</span>, <span class="number">2</span>);   <span class="comment">// &quot;as&quot;</span></span><br></pre></td></tr></table></figure>
-<h5 id="7-replace"><a href="#7-replace" class="headerlink" title="7. replace()"></a>7. replace()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.replace(regexp|substr, newSubStr|<span class="function"><span class="keyword">function</span>  )</span></span><br></pre></td></tr></table></figure>
+<h5 id="7-replace">7. replace()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.replace(regexp|substr, newSubStr|<span class="function"><span class="keyword">function</span>  )</span></span><br></pre></td></tr></table></figure>
 <p>作用：替换 str 的子字符串</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&quot;do you love me&quot;</span>  ;  </span><br><span class="line">str.replace(  <span class="string">&#x27;love&#x27;</span>  ,  <span class="string">&#x27;hate&#x27;</span>  );   <span class="comment">// &quot;do you hate me&quot;</span></span><br></pre></td></tr></table></figure>
-<h5 id="8-search"><a href="#8-search" class="headerlink" title="8. search()"></a>8. search()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.search(regexp)</span><br></pre></td></tr></table></figure>
+<h5 id="8-search">8. search()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.search(regexp)</span><br></pre></td></tr></table></figure>
 <p>作用：查找 str 与一个正则表达式是否匹配。如果匹配成功，则返回正则表达式在字符串中首次匹配项的<u>索引</u>；否则，返回 <code>-1</code>。如果参数传入的是一个非正则表达式对象，则会使用 new RegExp(obj) 隐式地将其转换为正则表达式对象</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;I love JavaScript!&#x27;</span>  ;  </span><br><span class="line">str.search(<span class="regexp">/java/</span>);   <span class="comment">// -1  </span></span><br><span class="line">str.search(<span class="regexp">/Java/</span>);   <span class="comment">// 7  </span></span><br><span class="line">str.search(<span class="regexp">/java/i</span>);   <span class="comment">// 7  </span></span><br><span class="line">str.search(  <span class="string">&#x27;Java&#x27;</span>  );   <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
-<h5 id="9-match"><a href="#9-match" class="headerlink" title="9. match()"></a>9. match()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.match(regexp)</span><br></pre></td></tr></table></figure>
+<h5 id="9-match">9. match()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.match(regexp)</span><br></pre></td></tr></table></figure>
 <p>作用：返回一个包含匹配结果的数组，如果没有匹配项，则返回 null。如果参数传入的是一个非正则表达式对象，则会使用 new RegExp(obj) 隐式地将其转换为正则表达式对象</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str =   <span class="string">&#x27;Javascript java&#x27;</span>  ;  str.match(<span class="regexp">/Java/</span>);   <span class="comment">// [&quot;Java&quot;]  </span></span><br><span class="line">str.match(<span class="regexp">/Java/gi</span>);   <span class="comment">// [&quot;java&quot;, &quot;Java&quot;]  </span></span><br><span class="line">str.match(<span class="regexp">/ab/g</span>);   <span class="comment">// null</span></span><br></pre></td></tr></table></figure>
-<h5 id="10-split"><a href="#10-split" class="headerlink" title="10. split()"></a>10. split()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.split([separator][, limit])</span><br></pre></td></tr></table></figure>
+<h5 id="10-split">10. split()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.split([separator][, limit])</span><br></pre></td></tr></table></figure>
 <p>= &gt;返回一个数组，分隔符 separator 可以是一个字符串或正则表达式</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&quot;Hello?World!&quot;</span>  ;  str.split();   <span class="comment">// [&quot;Hello?World!&quot;]  </span></span><br><span class="line">str.split(  <span class="string">&#x27;&#x27;</span>  );   <span class="comment">// [&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;, &quot;?&quot;, &quot;W&quot;, &quot;o&quot;, &quot;r&quot;, &quot;l&quot;, &quot;d&quot;, &quot;!&quot;]  </span></span><br><span class="line">str.split(  <span class="string">&#x27;?&#x27;</span>  );   <span class="comment">// [&quot;Hello&quot;, &quot;World!&quot;]  </span></span><br><span class="line">str.split(  <span class="string">&#x27;&#x27;</span>  ,<span class="number">5</span>);   <span class="comment">// [&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]</span></span><br></pre></td></tr></table></figure>
-<h5 id="11-trim"><a href="#11-trim" class="headerlink" title="11. trim()"></a>11. trim()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.trim()</span><br></pre></td></tr></table></figure>
+<h5 id="11-trim">11. trim()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.trim()</span><br></pre></td></tr></table></figure>
 <p>作用：去除 str 开头和结尾处的空白字符，返回 str 的一个副本，不影响字符串本身的值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&#x27; abc &#x27;</span>  ;  </span><br><span class="line">str.trim();   <span class="comment">// &#x27;abc&#x27;  </span></span><br><span class="line"><span class="built_in">console</span>.log(str);   <span class="comment">// &#x27; abc &#x27;</span></span><br></pre></td></tr></table></figure>
-<h5 id="12-toLowerCase"><a href="#12-toLowerCase" class="headerlink" title="12. toLowerCase()"></a>12. toLowerCase()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.toLowerCase()</span><br></pre></td></tr></table></figure>
+<h5 id="12-toLowerCase">12. toLowerCase()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.toLowerCase()</span><br></pre></td></tr></table></figure>
 <p>作用：将 str 转换为<u>小写</u>，并返回 str 的一个副本，不影响字符串本身的值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&#x27;JavaScript&#x27;</span>  ;  </span><br><span class="line">str.toLowerCase();   <span class="comment">// &#x27;javascript&#x27;  </span></span><br><span class="line"><span class="built_in">console</span>.log(str);   <span class="comment">// &#x27;JavaScript&#x27;</span></span><br></pre></td></tr></table></figure>
-<h5 id="13-toUpperCase"><a href="#13-toUpperCase" class="headerlink" title="13. toUpperCase()"></a>13. toUpperCase()</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.toUpperCase()</span><br></pre></td></tr></table></figure>
+<h5 id="13-toUpperCase">13. toUpperCase()</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.toUpperCase()</span><br></pre></td></tr></table></figure>
 <p>作用：将 str 转换为<u>大写</u>，并返回 str 的一个副本，不影响字符串本身的值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&#x27;JavaScript&#x27;</span>  ;  </span><br><span class="line">str.toUpperCase();   <span class="comment">// &#x27;JAVASCRIPT&#x27;  </span></span><br><span class="line"><span class="built_in">console</span>.log(str);   <span class="comment">// &#x27;JavaScript&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="三、JavaScript正则表达式"><a href="#三、JavaScript正则表达式" class="headerlink" title="三、JavaScript正则表达式"></a>三、JavaScript正则表达式</h3><blockquote>
+<h3 id="三、JavaScript正则表达式">三、JavaScript正则表达式</h3>
+<blockquote>
 <p>关于正则匹配详见：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">MDN</a></p>
 </blockquote>
-<h4 id="3-1-元字符"><a href="#3-1-元字符" class="headerlink" title="3.1 元字符"></a>3.1 元字符</h4><p><code>( [ &#123; \ ^ $ | ) ? * + .</code></p>
-<h4 id="3-2-预定义的特殊字符"><a href="#3-2-预定义的特殊字符" class="headerlink" title="3.2 预定义的特殊字符"></a>3.2 预定义的特殊字符</h4><div class="table-container">
+<h4 id="3-1-元字符">3.1 元字符</h4>
+<p><code>( [ &#123; \ ^ $ | ) ? * + .</code></p>
+<h4 id="3-2-预定义的特殊字符">3.2 预定义的特殊字符</h4>
 <table>
 <thead>
 <tr>
@@ -614,16 +643,20 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="3-3-字符类"><a href="#3-3-字符类" class="headerlink" title="3.3 字符类"></a>3.3 字符类</h4><h5 id="简单类"><a href="#简单类" class="headerlink" title="简单类"></a>简单类</h5><p>原则上正则的一个字符对应一个字符，我们可以用[]把它们括起来，让[]这个整体对应一个字符。如</p>
+<h4 id="3-3-字符类">3.3 字符类</h4>
+<h5 id="简单类">简单类</h5>
+<p>原则上正则的一个字符对应一个字符，我们可以用[]把它们括起来，让[]这个整体对应一个字符。如</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="regexp">/ruby/</span>.test(  <span class="string">&quot;ruby&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[abc]/</span>.test(  <span class="string">&quot;a&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[abc]/</span>.test(  <span class="string">&quot;b&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[abc]/</span>.test(  <span class="string">&quot;c&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(  <span class="string">&quot;a bat ,a Cat,a fAt bat ,a faT cat&quot;</span>.match(<span class="regexp">/[bcf]at/gi</span>));  <span class="comment">//bat,Cat,fAt,bat,faT,cat</span></span><br></pre></td></tr></table></figure>
-<h5 id="负向类"><a href="#负向类" class="headerlink" title="负向类"></a>负向类</h5><p>也是在那个括号里做文章，前面加个元字符进行取反，表示匹配不能为括号里面的字符。</p>
+<h5 id="负向类">负向类</h5>
+<p>也是在那个括号里做文章，前面加个元字符进行取反，表示匹配不能为括号里面的字符。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="regexp">/[^abc]/</span>.test(  <span class="string">&quot;a&quot;</span>  ));  <span class="comment">//false  </span></span><br><span class="line">alert(<span class="regexp">/[^abc]/</span>.test(  <span class="string">&quot;b&quot;</span>  ));  <span class="comment">//false  </span></span><br><span class="line">alert(<span class="regexp">/[^abc]/</span>.test(  <span class="string">&quot;6&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[^abc]/</span>.test(  <span class="string">&quot;gg&quot;</span>  ));  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<h5 id="范围类"><a href="#范围类" class="headerlink" title="范围类"></a>范围类</h5><p>还是在那个中括号里面做文章。有时匹配的东西过多，而且类型又相同，全部输入太麻烦，我们可以用它。特征就是在中间加了个横线。</p>
-<h5 id="组合类"><a href="#组合类" class="headerlink" title="组合类"></a>组合类</h5><p>还是在那个中括号里面做文章。允许用中括号匹配不同类型的单个字符。</p>
+<h5 id="范围类">范围类</h5>
+<p>还是在那个中括号里面做文章。有时匹配的东西过多，而且类型又相同，全部输入太麻烦，我们可以用它。特征就是在中间加了个横线。</p>
+<h5 id="组合类">组合类</h5>
+<p>还是在那个中括号里面做文章。允许用中括号匹配不同类型的单个字符。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="regexp">/[a-f]/</span>.test(  <span class="string">&quot;b&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[a-f]/</span>.test(  <span class="string">&quot;k&quot;</span>  ));  <span class="comment">//false  </span></span><br><span class="line">alert(<span class="regexp">/[a-z]/</span>.test(  <span class="string">&quot;h&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[A-Z]/</span>.test(  <span class="string">&quot;gg&quot;</span>  ));  <span class="comment">//false  </span></span><br><span class="line">alert(<span class="regexp">/[^H-Y]/</span>.test(  <span class="string">&quot;G&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[0-9]/</span>.test(  <span class="string">&quot;8&quot;</span>  ));  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[^7-9]/</span>.test(  <span class="string">&quot;6&quot;</span>  ));  <span class="comment">//true</span></span><br><span class="line">alert(<span class="regexp">/[a-m1-5\n]/</span>.test(  <span class="string">&quot;a&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[a-m1-5\n]/</span>.test(  <span class="string">&quot;3&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line"><span class="keyword">var</span>  a =   <span class="string">&quot;\n\        &quot;</span>  </span><br><span class="line">alert(<span class="regexp">/[a-m1-5\n]/</span>.test(a))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[a-m1-5\n]/</span>.test(  <span class="string">&quot;r&quot;</span>  ))  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-<h5 id="预定义类"><a href="#预定义类" class="headerlink" title="预定义类"></a>预定义类</h5><p>还是在那个中括号里面做文章，不过它好像已经走到尽头了。由于是中括号的马甲，因此它们还是对应一个字符。</p>
-<div class="table-container">
+<h5 id="预定义类">预定义类</h5>
+<p>还是在那个中括号里面做文章，不过它好像已经走到尽头了。由于是中括号的马甲，因此它们还是对应一个字符。</p>
 <table>
 <thead>
 <tr>
@@ -635,7 +668,7 @@
 <tbody>
 <tr>
 <td>.</td>
-<td><sup><a href="#fn_\n\r" id="reffn_\n\r">\n\r</a></sup></td>
+<td>[^\n\r]</td>
 <td>除了换行和回车之外的任意字符</td>
 </tr>
 <tr>
@@ -645,7 +678,7 @@
 </tr>
 <tr>
 <td>\D</td>
-<td><sup><a href="#fn_0-9" id="reffn_0-9">0-9</a></sup></td>
+<td>[^0-9]</td>
 <td>非数字字符</td>
 </tr>
 <tr>
@@ -655,7 +688,7 @@
 </tr>
 <tr>
 <td>\S</td>
-<td><sup><a href="#fn_ \t\n\x0B\f\r" id="reffn_ \t\n\x0B\f\r"> \t\n\x0B\f\r</a></sup></td>
+<td>[^ \t\n\x0B\f\r]</td>
 <td>非空白字符</td>
 </tr>
 <tr>
@@ -665,16 +698,15 @@
 </tr>
 <tr>
 <td>\W</td>
-<td><sup><a href="#fn_a-zA-Z_0-9" id="reffn_a-zA-Z_0-9">a-zA-Z_0-9</a></sup></td>
+<td>[^a-zA-Z_0-9]</td>
 <td>非单词字符</td>
 </tr>
 </tbody>
 </table>
-</div>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="regexp">/\d/</span>.test(  <span class="string">&quot;3&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/\d/</span>.test(  <span class="string">&quot;w&quot;</span>  ))  <span class="comment">//false  </span></span><br><span class="line">alert(<span class="regexp">/\D/</span>.test(  <span class="string">&quot;w&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/\w/</span>.test(  <span class="string">&quot;w&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/\w/</span>.test(  <span class="string">&quot;司&quot;</span>  ))  <span class="comment">//false  </span></span><br><span class="line">alert(<span class="regexp">/\W/</span>.test(  <span class="string">&quot;徒&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/\s/</span>.test(  <span class="string">&quot; &quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/\S/</span>.test(  <span class="string">&quot; &quot;</span>  ))  <span class="comment">//false  </span></span><br><span class="line">alert(<span class="regexp">/\S/</span>.test(  <span class="string">&quot;正&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/./</span>.test(  <span class="string">&quot;美&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/./</span>.test(  <span class="string">&quot; &quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line"><span class="keyword">var</span>  a =   <span class="string">&quot;\n\       &quot;</span>  </span><br><span class="line">alert(<span class="regexp">/./</span>.test(a))  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<h4 id="3-4-量词"><a href="#3-4-量词" class="headerlink" title="3.4 量词"></a>3.4 量词</h4><p>由于元字符与特殊字符或字符类或者它们的组合（中括号）甚至它们的马甲（预定义类）都是一对一进行匹配。我们要匹配“司徒正美这个词”，最简单都要/…./，如果长到50多个字符岂不是要死人。因此我们逼切需要一个简单的操作，来处理这数量关系。</p>
+<h4 id="3-4-量词">3.4 量词</h4>
+<p>由于元字符与特殊字符或字符类或者它们的组合（中括号）甚至它们的马甲（预定义类）都是一对一进行匹配。我们要匹配“司徒正美这个词”，最简单都要/…/，如果长到50多个字符岂不是要死人。因此我们逼切需要一个简单的操作，来处理这数量关系。</p>
 <p>简单量词</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -716,7 +748,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="regexp">/..../</span>.test(  <span class="string">&quot;司徒正美&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/司徒正美/</span>.test(  <span class="string">&quot;司徒正美&quot;</span>  ))  <span class="comment">//true </span></span><br><span class="line">alert(<span class="regexp">/[\u4e00-\u9fa5]&#123;4&#125;/</span>.test(  <span class="string">&quot;司徒正美&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[\u4e00-\u9fa5]&#123;4&#125;/</span>.test(  <span class="string">&quot;司徒正美55&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/^[\u4e00-\u9fa5]+$/</span>.test(  <span class="string">&quot;正则表达式&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/^[\u4e00-\u9fa5]+$/</span>.test(  <span class="string">&quot;正则表达式&amp;*@@&quot;</span>  ))  <span class="comment">//false  </span></span><br><span class="line">alert(<span class="regexp">/\d&#123;6&#125;/</span>.test(  <span class="string">&quot;123456&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[ruby]&#123;2&#125;/</span>.test(  <span class="string">&quot;rr&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[ruby]&#123;2&#125;/</span>.test(  <span class="string">&quot;ru&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(<span class="regexp">/[ruby]&#123;2&#125;/</span>.test(  <span class="string">&quot;ry&quot;</span>  ))  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 <p>/[\u4e00-\u9fa5]/用于匹配单个汉字。</p>
 <p>贪婪量词，惰性量词与支配性量词</p>
@@ -724,19 +755,23 @@
 <p>隋性量词，在简单量词后加问号。由于太懒了，先吃了前面第一个字符，如果不饱再捏起多添加一个（发现不匹配，就读下第二个，与最初的组成一个有两个字符串的字符串再尝试匹配，如果再不匹配，再吃一个组成拥有三个字符的字符串……）。其工作方式与贪婪量词相反。</p>
 <p>支配性量词，在简单量词后加加号。上面两种都有个不断尝试的过程，而支配性量词却只尝试一次，不合口味就算了。就像一个出身高贵居支配地位的公主。但你也可以说它是最懒量词。由于javascript不支持，所以它连出场的机会也没有了。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> re1 = <span class="regexp">/.*bbb/g</span>;  <span class="comment">//贪婪  </span></span><br><span class="line"><span class="keyword">var</span> re2 = <span class="regexp">/.*?bbb/g</span>;  <span class="comment">//惰性  </span></span><br><span class="line"><span class="comment">// var re3 = /.*+bbb/g;//支配性,javascript不支持，IE与所有最新的标准浏览器都报错  </span></span><br><span class="line">alert(re1.test(  <span class="string">&quot;abbbaabbbaaabbbb1234&quot;</span>  )+  <span class="string">&quot;&quot;</span>  );  <span class="comment">//true  </span></span><br><span class="line">alert(re1.exec(  <span class="string">&quot;abbbaabbbaaabbbb1234&quot;</span>  )+  <span class="string">&quot;&quot;</span>  );  <span class="comment">//null  </span></span><br><span class="line">alert(  <span class="string">&quot;abbbaabbbaaabbbb1234&quot;</span>  .match(re1)+  <span class="string">&quot;&quot;</span>  );  <span class="comment">//abbbaabbbaaabbbb</span></span><br><span class="line">alert(re2.test(  <span class="string">&quot;abbbaabbbaaabbbb1234&quot;</span>  )+  <span class="string">&quot;&quot;</span>  );  <span class="comment">//true  </span></span><br><span class="line">alert(re2.exec(  <span class="string">&quot;abbbaabbbaaabbbb1234&quot;</span>  )+  <span class="string">&quot;&quot;</span>  );  <span class="comment">//aabbb  </span></span><br><span class="line">alert(  <span class="string">&quot;abbbaabbbaaabbbb1234&quot;</span>  .match(re2)+  <span class="string">&quot;&quot;</span>  );  <span class="comment">//abbb,aabbb,aaabbb</span></span><br></pre></td></tr></table></figure>
-<h4 id="3-5-分组"><a href="#3-5-分组" class="headerlink" title="3.5 分组"></a>3.5 分组</h4><p>到目前为止，我们只能一个字符到匹配，虽然量词的出现，能帮助我们处理一排密紧密相连的同类型字符。但这是不够的，下面该轮到小括号出场了，中括号表示范围内选择，大括号表示重复次数。小括号允许我们重复多个字符。</p>
+<h4 id="3-5-分组">3.5 分组</h4>
+<p>到目前为止，我们只能一个字符到匹配，虽然量词的出现，能帮助我们处理一排密紧密相连的同类型字符。但这是不够的，下面该轮到小括号出场了，中括号表示范围内选择，大括号表示重复次数。小括号允许我们重复多个字符。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分组+量词  </span></span><br><span class="line">alert(<span class="regexp">/(dog)&#123;2&#125;/</span>.test(  <span class="string">&quot;dogdog&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line"><span class="comment">//分组+范围  </span></span><br><span class="line">alert(  <span class="string">&quot;baddad&quot;</span>  .match(<span class="regexp">/([bd]ad?)*/</span>))  <span class="comment">//baddad,dad  </span></span><br><span class="line"><span class="comment">//分组+分组  </span></span><br><span class="line">alert(  <span class="string">&quot;mon and dad&quot;</span>  .match(<span class="regexp">/(mon( and dad)?)/</span>))  <span class="comment">//mon and dad,mon and dad, and dad</span></span><br></pre></td></tr></table></figure>
-<h4 id="3-6-反向引用"><a href="#3-6-反向引用" class="headerlink" title="3.6 反向引用"></a>3.6 反向引用</h4><p>反向引用标识由正则表达式中的匹配组捕获的子字符串。每个反向引用都由一个编号或名称来标识，并通过“\编号”表示法进行引用。</p>
+<h4 id="3-6-反向引用">3.6 反向引用</h4>
+<p>反向引用标识由正则表达式中的匹配组捕获的子字符串。每个反向引用都由一个编号或名称来标识，并通过“\编号”表示法进行引用。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> color =   <span class="string">&quot;#990000&quot;</span>  ;  </span><br><span class="line">/  #(\d+)/.test(color);  </span><br><span class="line">alert(<span class="built_in">RegExp</span>.$1);  <span class="comment">//990000</span></span><br><span class="line">alert(<span class="regexp">/(dog)\1/</span>.test(  <span class="string">&quot;dogdog&quot;</span>  ))  <span class="comment">//true</span></span><br><span class="line"><span class="keyword">var</span> num =   <span class="string">&quot;1234 5678&quot;</span>  ;</span><br><span class="line"><span class="keyword">var</span> newNum = num.replace(<span class="regexp">/(\d&#123;4&#125;) (\d&#123;4&#125;)/</span>,  <span class="string">&quot;$2 $1&quot;</span>  );  </span><br><span class="line">alert(newNum)</span><br></pre></td></tr></table></figure>
-<h4 id="3-7-候选"><a href="#3-7-候选" class="headerlink" title="3.7 候选"></a>3.7 候选</h4><p>继续在分组上做文章。在分组中插入管道符（“|”），把它划分为两个或多个候多项。</p>
+<h4 id="3-7-候选">3.7 候选</h4>
+<p>继续在分组上做文章。在分组中插入管道符（“|”），把它划分为两个或多个候多项。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  reg = <span class="regexp">/(red|black|yellow)!!/</span>;  alert(reg.test(  <span class="string">&quot;red!!&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(reg.test(  <span class="string">&quot;black!!&quot;</span>  ))  <span class="comment">//true  </span></span><br><span class="line">alert(reg.test(  <span class="string">&quot;yellow!!&quot;</span>  ))  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<h4 id="3-8-非捕获性分组"><a href="#3-8-非捕获性分组" class="headerlink" title="3.8 非捕获性分组"></a>3.8 非捕获性分组</h4><p>并不是所有分组都能创建反向引用，有一种特别的分组称之为非捕获性分组，它是不会创建反向引用。反之，就是捕获性分组。要创建一个非捕获性分组，只要在分组的左括号的后面紧跟一个问号与冒号就行了。</p>
+<h4 id="3-8-非捕获性分组">3.8 非捕获性分组</h4>
+<p>并不是所有分组都能创建反向引用，有一种特别的分组称之为非捕获性分组，它是不会创建反向引用。反之，就是捕获性分组。要创建一个非捕获性分组，只要在分组的左括号的后面紧跟一个问号与冒号就行了。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  color =   <span class="string">&quot;#990000&quot;</span>  ;</span><br><span class="line">/  #(?:\d+)/.test(color); </span><br><span class="line">alert(<span class="built_in">RegExp</span>.$1);  <span class="comment">//&quot;&quot;</span></span><br></pre></td></tr></table></figure>
 <p>题目，移除所有标签，只留下innerText!</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> html =   <span class="string">&quot;&lt;p&gt;&lt;a href=&#x27;http://www.cnblogs.com/rubylouvre/&#x27;&gt;Ruby Louvre&lt;/a&gt;by &lt;em&gt;司徒正美&lt;/em&gt;&lt;/p&gt;&quot;</span>  ;  </span><br><span class="line"><span class="keyword">var</span> text = html.replace(<span class="regexp">/&lt;(?:.|\s)*?&gt;/g</span>,   <span class="string">&quot;&quot;</span>  );  </span><br><span class="line">alert(text)</span><br></pre></td></tr></table></figure>
 <p>注意：javascript不存在命名分组</p>
-<h5 id="前瞻"><a href="#前瞻" class="headerlink" title="前瞻"></a>前瞻</h5><p>继续在分组内做文章。前瞻与后瞻其实都属于零宽断言，但javascript不支持后瞻。</p>
-<div class="table-container">
+<h5 id="前瞻">前瞻</h5>
+<p>继续在分组内做文章。前瞻与后瞻其实都属于零宽断言，但javascript不支持后瞻。</p>
 <table>
 <thead>
 <tr>
@@ -773,13 +808,12 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>正向前瞻用来检查接下来的出现的是不是某个特定的字符集。而负向前瞻则是检查接下来的不应该出现的特定字符串集。零宽断言是不会被捕获的。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str1 =   <span class="string">&quot;bedroom&quot;</span>  ;  </span><br><span class="line"><span class="keyword">var</span>  str2 =   <span class="string">&quot;bedding&quot;</span>  ;  </span><br><span class="line"><span class="keyword">var</span>  reBed = <span class="regexp">/(bed(?=room))  /</span><span class="regexp">//</span>在我们捕获bed这个字符串时，抢先去看接下来的字符串是不是room  </span><br><span class="line">alert(reBed.test(str1));  <span class="comment">//true </span></span><br><span class="line">alert(<span class="built_in">RegExp</span>.$1)  <span class="comment">//bed  </span></span><br><span class="line">alert(<span class="built_in">RegExp</span>.$2 ===   <span class="string">&quot;&quot;</span>  )  <span class="comment">//true </span></span><br><span class="line">alert(reBed.test(str2))  <span class="comment">//false</span></span><br><span class="line"><span class="keyword">var</span>  str1 =   <span class="string">&quot;bedroom&quot;</span>  ; </span><br><span class="line"><span class="keyword">var</span>  str2 =   <span class="string">&quot;bedding&quot;</span>  ; </span><br><span class="line"><span class="keyword">var</span>  reBed = <span class="regexp">/(bed(?!room))/</span>   <span class="comment">//要来它后面不能是room  </span></span><br><span class="line">alert(reBed.test(str1))  <span class="comment">//false  </span></span><br><span class="line">alert(reBed.test(str2))  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 <p>题目，移除hr以外的所有标签，只留下innerText!</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  html =   <span class="string">&quot;&lt;p&gt;&lt;a href=&#x27;http://www.cnblogs.com/rubylouvre/&#x27;&gt;Ruby Louvre&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p&gt;by &lt;em&gt;司徒正美&lt;/em&gt;&lt;/p&gt;&quot;</span>  ; </span><br><span class="line"><span class="keyword">var</span>  text = html.replace(<span class="regexp">/&lt;(?!hr)(?:.|\s)*?&gt;/ig</span>,  <span class="string">&quot;&quot;</span>  ) </span><br><span class="line">alert(text)  <span class="comment">//Ruby Louvre&lt;hr/&gt;by 司徒正美</span></span><br></pre></td></tr></table></figure>
-<h5 id="边界"><a href="#边界" class="headerlink" title="边界"></a>边界</h5><p>一个要与字符类合用的东西。</p>
-<div class="table-container">
+<h5 id="边界">边界</h5>
+<p>一个要与字符类合用的东西。</p>
 <table>
 <thead>
 <tr>
@@ -812,15 +846,14 @@
 <tr>
 <td>\B</td>
 <td>非单词边界</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-</div>
 <p>题目，设计一个字符串原型方法，实现首字母大写！</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  a =   <span class="string">&quot;ruby&quot;</span>  ;   </span><br><span class="line"><span class="built_in">String</span>.prototype.capitalize =   <span class="function"><span class="keyword">function</span>  (<span class="params"></span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span>  <span class="built_in">this</span>.replace(<span class="regexp">/^\w/</span>,   <span class="function"><span class="keyword">function</span>  (<span class="params">s</span>) </span>&#123;        </span><br><span class="line">        <span class="keyword">return</span>  s.toUpperCase();       </span><br><span class="line">    &#125;);   </span><br><span class="line">&#125;  </span><br><span class="line">alert(a.capitalize())  <span class="comment">//Ruby</span></span><br></pre></td></tr></table></figure>
 <p>单词边界举例。要匹配的东西的前端或未端不能为英文字母阿拉伯字数字或下横线。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&quot;12w-eefd&amp;efrew&quot;</span>  ;  </span><br><span class="line">alert(str.match(<span class="regexp">/\b\w+\b/g</span>))  <span class="comment">//12w,eefd,efrew</span></span><br></pre></td></tr></table></figure>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -851,12 +884,14 @@
 </tr>
 </tbody>
 </table>
-</div>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  str =   <span class="string">&quot;JS&#x27;s Louvre&quot;</span>  ;  </span><br><span class="line"><span class="keyword">var</span>  reg = <span class="regexp">/\w/g</span>; </span><br><span class="line">alert(reg.exec(str));  <span class="comment">//J  </span></span><br><span class="line">alert(reg.lastIndex);  <span class="comment">//1  </span></span><br><span class="line">alert(reg.exec(str));  <span class="comment">//S  </span></span><br><span class="line">alert(reg.lastIndex);  <span class="comment">//2  </span></span><br><span class="line">alert(reg.exec(str));  <span class="comment">//s  </span></span><br><span class="line">alert(reg.lastIndex);  <span class="comment">//4  </span></span><br><span class="line">alert(reg.exec(str));  <span class="comment">//L  </span></span><br><span class="line">alert(reg.lastIndex);  <span class="comment">//6</span></span><br></pre></td></tr></table></figure>
-<h3 id="四、JavaScript字符串应用"><a href="#四、JavaScript字符串应用" class="headerlink" title="四、JavaScript字符串应用"></a>四、JavaScript字符串应用</h3><h4 id="4-1-回数"><a href="#4-1-回数" class="headerlink" title="4.1 回数"></a>4.1 回数</h4><p>对称数即一个数倒序时，和原数值一样。例如：11，22，111等。</p>
+<h3 id="四、JavaScript字符串应用">四、JavaScript字符串应用</h3>
+<h4 id="4-1-回数">4.1 回数</h4>
+<p>对称数即一个数倒序时，和原数值一样。例如：11，22，111等。</p>
 <p>现在利用所学js知识写一个取某范围内所有对称数的函数。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseToNum</span>(<span class="params">num</span>)</span>&#123; <span class="comment">//将该数值反转，取其反转后的值</span></span><br><span class="line">    	<span class="string">&#x27;use strice&#x27;</span>;</span><br><span class="line">    	<span class="keyword">var</span> num = num;</span><br><span class="line">    	<span class="keyword">var</span> str = num.toString().split(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    	<span class="keyword">var</span> reverseStr = str.reverse().join(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    	<span class="keyword">var</span> reverseNum = <span class="built_in">Number</span>(reverseStr);</span><br><span class="line">    	<span class="keyword">return</span> reverseNum;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">   	<span class="function"><span class="keyword">function</span> <span class="title">isReverse</span>(<span class="params">num</span>)</span>&#123;<span class="comment">//判断该数值是否为对称数</span></span><br><span class="line">    	<span class="string">&#x27;use strice&#x27;</span>;</span><br><span class="line">    	<span class="keyword">var</span> num = num;</span><br><span class="line">    	<span class="keyword">if</span>(num == reverseToNum(num))&#123;</span><br><span class="line">    		<span class="keyword">return</span> num;</span><br><span class="line">    	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">countReverse</span>(<span class="params">num</span>)</span>&#123;<span class="comment">//计算某范围内对称数的总个数，将对称数存入数组并返回</span></span><br><span class="line">    	<span class="string">&#x27;use strice&#x27;</span>;</span><br><span class="line">		<span class="keyword">var</span> num = num;</span><br><span class="line">    	<span class="keyword">var</span> reverseArr = [];</span><br><span class="line">    	<span class="keyword">if</span>(<span class="keyword">typeof</span>(num)!=<span class="string">&#x27;number&#x27;</span>)&#123;</span><br><span class="line">    		alert(<span class="string">&quot;please enter a number&quot;</span>);</span><br><span class="line">    		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">    		alert(<span class="string">&quot;please enter positive integer&quot;</span>);</span><br><span class="line">    		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;=num;++i)&#123;</span><br><span class="line">    		<span class="keyword">if</span>(isReverse(i))&#123;</span><br><span class="line">    			reverseArr.push(i);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> reverseArr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="4-2-首字母转化为大写"><a href="#4-2-首字母转化为大写" class="headerlink" title="4.2 首字母转化为大写"></a>4.2 首字母转化为大写</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toUpCase</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line"><span class="meta">	&#x27;use strict&#x27;</span></span><br><span class="line">	<span class="keyword">var</span> str = str;</span><br><span class="line">	<span class="keyword">var</span> strArr = str.split(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;strArr.length;++i)&#123;</span><br><span class="line">		strArr[i] = strArr[i].charAt(<span class="number">0</span>).toUpperCase() + strArr[i].slice(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> strArr.join(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="4-2-首字母转化为大写">4.2 首字母转化为大写</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toUpCase</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line"><span class="meta">	&#x27;use strict&#x27;</span></span><br><span class="line">	<span class="keyword">var</span> str = str;</span><br><span class="line">	<span class="keyword">var</span> strArr = str.split(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;strArr.length;++i)&#123;</span><br><span class="line">		strArr[i] = strArr[i].charAt(<span class="number">0</span>).toUpperCase() + strArr[i].slice(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> strArr.join(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
         <hr>
@@ -1147,7 +1182,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">689.8K</span>
+          站点总字数：<span class="post-count">690.3K</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1159,6 +1194,7 @@
           |
           <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
         </p>
+        
         
       </div>
     </div>
@@ -1613,5 +1649,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
 </html>

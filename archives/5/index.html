@@ -467,8 +467,10 @@
 要点：【WebGL之巅】17-颜色与纹理-绘制三个不同颜色的顶点、gl.drawArrays、几何形状的装配和光栅化
 
 
-知识点一、几何形状的装配和光栅化在顶点着色器和片元着色器之间，有这样两个步骤：
-​        图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的......
+知识点
+一、几何形状的装配和光栅化
+在顶点着色器和片元着色器之间，有这样两个步骤：
+​		图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的第一个参......
     </div>
   </a>
   
@@ -508,7 +510,9 @@
 要点：绘制三个不同color的点、交错组织
 
 
-知识点一、varying变量12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_Col......
+知识点
+一、varying变量
+12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_C......
     </div>
   </a>
   
@@ -548,11 +552,13 @@
 要点：绘制三个不同size的点、交错组织
 
 
-知识点一、回顾—将顶点坐标传入着色器步骤1.创建缓冲区对象
+知识点
+一、回顾—将顶点坐标传入着色器步骤
+1.创建缓冲区对象
 2.将缓冲区对象绑定到target上
 3.向缓存对象写入数据
 4.将缓冲区对象分配给a_Postion变量(attribute变量)
-5.连接......
+5.......
     </div>
   </a>
   
@@ -593,9 +599,11 @@
 tips：当前页含有动画示例，Tag Cloud可能会失效。
 
 
-知识点一、动画原理基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
+知识点
+一、动画原理
+基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
 为了生成动画，需要两个关键机制：
-​    机制一：在规定时刻反复调用......
+​	机制一：在规定时刻反复调用同......
     </div>
   </a>
   
@@ -635,10 +643,13 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、复合变换
 
 
-步骤1.将三角形沿着X轴平移一段距离
+步骤
+1.将三角形沿着X轴平移一段距离
 2.旋转三角形
-知识点一、模型变换建立下面的等式：
-​    &lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
+知识点
+一、模型变换
+建立下面的等式：
+​	&lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
     </div>
   </a>
   
@@ -678,8 +689,10 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象
 
 
-知识点一、矩阵变换库cuon-matrix.jsOpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
-cuon-matrix.js在其......
+知识点
+一、矩阵变换库cuon-matrix.js
+OpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
+cuon-matrix.js......
     </div>
   </a>
   
@@ -719,8 +732,14 @@ cuon-matrix.js在其......
 要点：矩阵和矢量的乘法、矩阵变换（旋转矩阵、平移矩阵、缩放矩阵）、gl.uniformMatrix4fv
 
 
-知识点一、矩阵和矢量的乘法矩阵示例：
-​    $\begin{bmatrix}​    8 &amp; 3 &amp; 0 \\​    4 &amp; 3 &amp; 6 \\​    3 &a......
+知识点
+一、矩阵和矢量的乘法
+矩阵示例：
+​	$
+\begin{bmatrix}
+​	8 &amp; 3 &amp; 0 \\
+​	4 &amp; 3 &amp; 6 \\
+​	3 &amp; 2 ......
     </div>
   </a>
   
@@ -760,10 +779,13 @@ cuon-matrix.js在其......
 要点：旋转变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
-步骤目的：将三角形逆时针旋转90度
+步骤
+目的：将三角形逆时针旋转90度
 计算90度的正余弦值 → 传给顶点着色器uniform变量
-知识点一、正旋转​    ①描述旋转操作：绕Z轴，逆时针旋转β角度。
-​    ②关于“逆时针”的约定：如果β是正值......
+知识点
+一、正旋转
+​	①描述旋转操作：绕Z轴，逆时针旋转β角度。
+​	②关于“逆时针”的约定：如果β是正值，观察......
     </div>
   </a>
   
@@ -803,14 +825,19 @@ cuon-matrix.js在其......
 要点：平移变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
-目的将一个三角形向上和向右平移0.5个单位
-知识点一、逐顶点操作​    为顶点坐标的每个分量加上一个常量就可以实现
-二、矢量的加法​    方便的矢量相加运算是GLSL ES提供的特性之一
-
+目的
+将一个三角形向上和向右平移0.5个单位
+知识点
+一、逐顶点操作
+​	为顶点坐标的每个分量加上一个常量就可以实现
+二、矢量的加法
+​	方便的矢量相加运算是GLSL ES提供的特性之一
 
 
 
 矢量
+值
+
 ......
     </div>
   </a>
@@ -852,7 +879,8 @@ cuon-matrix.js在其......
 复习：【WebGL之巅】07-绘制三角形
 
 
-实例12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596......
+实例
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859......
     </div>
   </a>
   
@@ -909,9 +937,35 @@ cuon-matrix.js在其......
     您是本站第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
   </span>
   <br />
-  <!-- <span>
+  <span>
     总阅读量 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
-  </span> -->
+  </span>
+  <!-- 网站运行时间的设置 -->
+  <div> 
+    站点已运行 
+    <a href="javascript:;;">
+      <span id="timeDate">载入天数...</span>
+    </a>天
+    <a href="javascript:;;">
+      <span id="times">载入时分秒...</span> 
+    </a>
+  </div>
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt= new Date("07/10/2021 13:14:21");//此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+      document.getElementById("timeDate").innerHTML = dnum;
+      document.getElementById("times").innerHTML = hnum + "h " + mnum + "' " + snum + "''";
+    }
+  setInterval("createtime()",250);
+  </script>
 </div>
 
 
@@ -944,19 +998,19 @@ cuon-matrix.js在其......
     
     
     
-    <a href="/tags/#Python" title="Python" rel="13"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    
-    
-    <a href="/tags/#爬虫" title="爬虫" rel="13"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-    
-    
     <a href="/tags/#Web安全" title="Web安全" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
     
     
     
     <a href="/tags/#知识扫盲" title="知识扫盲" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
+    
+    
+    
+    <a href="/tags/#Python" title="Python" rel="13"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    
+    
+    
+    <a href="/tags/#爬虫" title="爬虫" rel="13"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
     
     
     
@@ -1138,12 +1192,12 @@ cuon-matrix.js在其......
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Math</li>
     </a>
     
-    <a href="/categories/#Python">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
-    </a>
-    
     <a href="/categories/#Web安全">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Web安全</li>
+    </a>
+    
+    <a href="/categories/#Python">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
     </a>
     
     <a href="/categories/#websocket">
@@ -1280,7 +1334,7 @@ cuon-matrix.js在其......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">689.8K</span>
+          站点总字数：<span class="post-count">690.3K</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1292,6 +1346,7 @@ cuon-matrix.js在其......
           |
           <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
         </p>
+        
         
       </div>
     </div>
@@ -1746,5 +1801,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
 </html>
