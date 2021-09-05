@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/cn/Algorithm-twoSum/</loc>
+    
+    <lastmod>2021-09-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/cn/FrontEndAdvanced-HTML&DOM/</loc>
     
     <lastmod>2021-09-05</lastmod>
@@ -641,6 +648,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/tags/LeetCode/</loc>
+    <lastmod>2021-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/tags/Math/</loc>
     <lastmod>2021-09-05</lastmod>
     <changefreq>daily</changefreq>
@@ -683,14 +697,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/websocket/</loc>
+    <loc>https://yesmore.cc/tags/Ajax/</loc>
     <lastmod>2021-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Ajax/</loc>
+    <loc>https://yesmore.cc/tags/websocket/</loc>
     <lastmod>2021-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -725,6 +739,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/tags/Electron/</loc>
+    <lastmod>2021-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/tags/%E5%85%8D%E8%B4%B9Api/</loc>
     <lastmod>2021-09-05</lastmod>
     <changefreq>daily</changefreq>
@@ -733,13 +754,6 @@
   
   <url>
     <loc>https://yesmore.cc/tags/NodeJs/</loc>
-    <lastmod>2021-09-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yesmore.cc/tags/Electron/</loc>
     <lastmod>2021-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -804,6 +818,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/categories/LeetCode/</loc>
+    <lastmod>2021-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/categories/Math/</loc>
     <lastmod>2021-09-05</lastmod>
     <changefreq>daily</changefreq>
@@ -839,14 +860,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/</loc>
+    <loc>https://yesmore.cc/categories/Electron/</loc>
     <lastmod>2021-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Electron/</loc>
+    <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/</loc>
     <lastmod>2021-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
