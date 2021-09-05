@@ -425,10 +425,11 @@ blockquote P{
 
 .post-container p {
   /* text-indent: 1.55em; */
-  font-size: 17px;
-  line-height: 30px;
-  margin-bottom: 10px;
+  font-size: 15px!important;
+  line-height: 30px!important;
+  /* margin: 20px!important; */
 }
+
 .post-container img{
   box-shadow: none!important;
 }
