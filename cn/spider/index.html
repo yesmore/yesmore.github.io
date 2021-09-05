@@ -285,7 +285,7 @@
            -->
           
           <li>
-            <a href="/About">关于</a>
+            <a href="/about">关于</a>
           </li>
           <li>
             <a href="/archives">归档</a>
@@ -422,7 +422,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                3.7k
+                3.6k
               </span> 
               字
             </span>
@@ -485,68 +485,89 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="一、爬虫基础简介"><a href="#一、爬虫基础简介" class="headerlink" title="一、爬虫基础简介"></a>一、爬虫基础简介</h2><span id="more"></span>
-<h3 id="前戏"><a href="#前戏" class="headerlink" title="前戏"></a><strong>前戏</strong></h3><p>​    1.你是否在夜深人静的时候，想看一些会让你更睡不着的图片却苦于没有资源…<br>​    2.你是否在节假日出行高峰的时候，想快速抢购火车票成功…<br>​    3.你是否在网上购物的时候，想快速且精准的定位到口碑质量最好的商品…</p>
+        <h2 id="一、爬虫基础简介">一、爬虫基础简介</h2>
+<span id="more"></span>
+<h3 id="前戏"><strong>前戏</strong></h3>
+<p>​    1.你是否在夜深人静的时候，想看一些会让你更睡不着的图片却苦于没有资源…<br>
+​    2.你是否在节假日出行高峰的时候，想快速抢购火车票成功…<br>
+​    3.你是否在网上购物的时候，想快速且精准的定位到口碑质量最好的商品…</p>
 <p><strong>什么是爬虫</strong>：</p>
 <pre><code>- 通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。
-</code></pre><p><strong>爬虫的价值</strong>：</p>
-<pre><code>- 实际应用
-    - 就业
-</code></pre><p><strong>爬虫究竟是合法还是违法的</strong>？</p>
+</code></pre>
+<p><strong>爬虫的价值</strong>：<br>
+- 实际应用<br>
+- 就业</p>
+<p><strong>爬虫究竟是合法还是违法的</strong>？</p>
 <ul>
 <li>在法律中是不被禁止</li>
 <li>具有违法风险</li>
 <li>善意爬虫  恶意爬虫</li>
 </ul>
-<p><strong>爬虫带来的风险可以体现在如下</strong>2方面：</p>
-<pre><code>- 爬虫干扰了被访问网站的正常运营
-    - 爬虫抓取了收到法律保护的特定类型的数据或信息
-</code></pre><p><strong>如何在使用编写爬虫的过程中避免进入局子的厄运呢</strong>？</p>
-<pre><code>- 时常的优化自己的程序，避免干扰被访问网站的正常运行
-    - 在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私
-    商业机密等敏感内容需要及时停止爬取或传播
-</code></pre><p><strong>爬虫在使用场景中的分类</strong></p>
+<p><strong>爬虫带来的风险可以体现在如下</strong>2方面：<br>
+- 爬虫干扰了被访问网站的正常运营<br>
+- 爬虫抓取了收到法律保护的特定类型的数据或信息</p>
+<p><strong>如何在使用编写爬虫的过程中避免进入局子的厄运呢</strong>？<br>
+- 时常的优化自己的程序，避免干扰被访问网站的正常运行<br>
+- 在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私<br>
+商业机密等敏感内容需要及时停止爬取或传播</p>
+<p><strong>爬虫在使用场景中的分类</strong></p>
 <ul>
-<li><p>通用爬虫：<br>抓取系统重要组成部分。抓取的是一整张页面数据。</p>
+<li>
+<p>通用爬虫：<br>
+抓取系统重要组成部分。抓取的是一整张页面数据。</p>
 </li>
-<li><p>聚焦爬虫：</p>
-<p>是建立在通用爬虫的基础之上。抓取的是页面中特定的局部内容。</p>
-</li>
-<li><p>增量式爬虫：<br>检测网站中数据更新的情况。只会抓取网站中最新更新出来的数据。</p>
+<li>
+<p>聚焦爬虫：</p>
 </li>
 </ul>
+<p>是建立在通用爬虫的基础之上。抓取的是页面中特定的局部内容。</p>
+<ul>
+<li>增量式爬虫：<br>
+检测网站中数据更新的情况。只会抓取网站中最新更新出来的数据。</li>
+</ul>
 <p><strong>爬虫的矛与盾</strong></p>
-<p><strong>反爬机制</strong><br>    门户网站，可以通过制定相应的策略或者技术手段，防止爬虫程序进行网站数据的爬取。</p>
-<p><strong>反反爬策略</strong><br>    爬虫程序可以通过制定相关的策略或者技术手段，破解门户网站中具备的反爬机制，从而可以获取门户网站中相关的数据。</p>
-<p><strong>robots.txt</strong>协议：<br>    君子协议。规定了网站中哪些数据可以被爬虫爬取哪些数据不可以被爬取。</p>
-<h3 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a><strong>http</strong>协议</h3><ul>
-<li>概念：就是<code>服务器</code>和<code>客户端</code>进行数据交互的一种形式。</li>
-<li><strong>常用请求头信息</strong><ul>
+<p><strong>反爬机制</strong><br>
+门户网站，可以通过制定相应的策略或者技术手段，防止爬虫程序进行网站数据的爬取。</p>
+<p><strong>反反爬策略</strong><br>
+爬虫程序可以通过制定相关的策略或者技术手段，破解门户网站中具备的反爬机制，从而可以获取门户网站中相关的数据。</p>
+<p><strong>robots.txt</strong>协议：<br>
+君子协议。规定了网站中哪些数据可以被爬虫爬取哪些数据不可以被爬取。</p>
+<h3 id="http协议"><strong>http</strong>协议</h3>
+<ul>
+<li>
+<p>概念：就是<code>服务器</code>和<code>客户端</code>进行数据交互的一种形式。</p>
+</li>
+<li>
+<p><strong>常用请求头信息</strong></p>
+<ul>
 <li>User-Agent：请求载体的身份标识</li>
 <li>Connection：请求完毕后，是断开连接还是保持连接</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><strong>常用响应头信息</strong></p>
 <ul>
-<li><strong>常用响应头信息</strong><ul>
 <li>Content-Type：服务器响应回客户端的数据类型</li>
 </ul>
 </li>
 </ul>
 <p><strong>https</strong>协议：</p>
 <pre><code>- 安全的超文本传输协议
-</code></pre><p><strong>加密方式</strong></p>
+</code></pre>
+<p><strong>加密方式</strong></p>
 <ul>
-<li>对称秘钥加密<pre><code>  - 可能被第三方拦截
-</code></pre></li>
-<li>非对称秘钥加密<pre><code>  - 速度慢
-  - 公钥可能被篡改
-</code></pre></li>
-<li>证书秘钥加密<pre><code>  - 给公钥数字签名
-</code></pre></li>
+<li>对称秘钥加密<br>
+- 可能被第三方拦截</li>
+<li>非对称秘钥加密<br>
+- 速度慢<br>
+- 公钥可能被篡改</li>
+<li>证书秘钥加密<br>
+- 给公钥数字签名</li>
 </ul>
-<h2 id="二、requests模块"><a href="#二、requests模块" class="headerlink" title="二、requests模块"></a>二、requests模块</h2><ul>
-<li>网络请求模块<ul>
+<h2 id="二、requests模块">二、requests模块</h2>
+<ul>
+<li>网络请求模块
+<ul>
 <li>urllib模块</li>
 <li><strong>requests模块</strong></li>
 </ul>
@@ -556,36 +577,45 @@
 <p>requests模块：python中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
 <p>作用：<strong>模拟浏览器发请求</strong>。</p>
 </blockquote>
-<h4 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h4><blockquote>
+<h4 id="使用步骤">使用步骤</h4>
+<blockquote>
 <p>requests模块的编码流程</p>
 </blockquote>
 <ul>
-<li>指定url<ul>
+<li>指定url
+<ul>
 <li>UA伪装</li>
 <li>请求参数的处理</li>
 </ul>
 </li>
-<li>发起请求<ul>
+<li>发起请求
+<ul>
 <li>获取响应数据</li>
 </ul>
 </li>
 <li>持久化存储</li>
 </ul>
-<h4 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h4><p> <code>pip install requests</code></p>
-<h4 id="实战编码"><a href="#实战编码" class="headerlink" title="实战编码"></a>实战编码</h4><ul>
+<h4 id="环境安装">环境安装</h4>
+<p><code>pip install requests</code></p>
+<h4 id="实战编码">实战编码</h4>
+<ul>
 <li>需求：爬取搜狗首页的页面数据</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python </span></span><br><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment"># - 需求：爬取搜狗首页的页面数据</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># step_1:指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/&#x27;</span></span><br><span class="line">    <span class="comment"># step_2:发起请求</span></span><br><span class="line">    <span class="comment"># get方法会返回一个响应对象</span></span><br><span class="line">    response = requests.get(url=url)</span><br><span class="line">    <span class="comment"># step_3:获取响应数据.text返回的是字符串形式的响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="built_in">print</span>(page_text)</span><br><span class="line">    <span class="comment"># step_4:持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;爬取数据结束！！！&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="实战巩固"><a href="#实战巩固" class="headerlink" title="实战巩固"></a>实战巩固</h4><ul>
-<li><p>需求：爬取搜狗指定词条对应的搜索结果页面（简易网页采集器）</p>
+<h4 id="实战巩固">实战巩固</h4>
 <ul>
-<li><p><strong>UA检测</strong></p>
+<li>
+<p>需求：爬取搜狗指定词条对应的搜索结果页面（简易网页采集器）</p>
+<ul>
+<li>
+<p><strong>UA检测</strong></p>
 <blockquote>
 <p>UA：User-Agent（请求载体的身份标识）.</p>
 <p>门户网站的服务器会检测对应请求的载体身份标识，如果检测到请求的载体身份标识为某一款浏览器，说明该请求是一个正常的请求。但是，如果检测到请求的载体身份标识不是基于某一款浏览器的，则表示该请求为不正常的请求（爬虫），则服务器端就很有可能拒绝该次请求。</p>
 </blockquote>
 </li>
-<li><p><strong>UA伪装</strong>: 将对应的User-Agent封装到一个字典中</p>
+<li>
+<p><strong>UA伪装</strong>: 将对应的User-Agent封装到一个字典中</p>
 <blockquote>
 <p>让爬虫对应的请求载体身份标识伪装成某一款浏览器</p>
 </blockquote>
@@ -593,38 +623,45 @@
 </li>
 </ul>
 </li>
-</ul>
-<ul>
-<li><p>需求：破解百度翻译(获取翻译结果)</p>
+<li>
+<p>需求：破解百度翻译(获取翻译结果)</p>
 <ul>
 <li>post请求（携带了参数）</li>
 <li>响应数据是一组json数据</li>
 </ul>
 </li>
-<li><p>需求：爬取豆瓣电影分类排行榜 <a target="_blank" rel="noopener" href="https://movie.douban.com/中的电影详情数据">https://movie.douban.com/中的电影详情数据</a></p>
+<li>
+<p>需求：爬取豆瓣电影分类排行榜 <a target="_blank" rel="noopener" href="https://movie.douban.com/%E4%B8%AD%E7%9A%84%E7%94%B5%E5%BD%B1%E8%AF%A6%E6%83%85%E6%95%B0%E6%8D%AE">https://movie.douban.com/中的电影详情数据</a></p>
 </li>
-<li><p>作业：爬取肯德基餐厅查询<a target="_blank" rel="noopener" href="http://www.kfc.com.cn/kfccda/index.aspx中指定地点的餐厅数据">http://www.kfc.com.cn/kfccda/index.aspx中指定地点的餐厅数据</a></p>
+<li>
+<p>作业：爬取肯德基餐厅查询http://www.kfc.com.cn/kfccda/index.aspx中指定地点的餐厅数据</p>
 </li>
-<li><p>需求：爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据</p>
-<pre><code>      http://scxk.nmpa.gov.cn:81/xk/
-</code></pre><ul>
+<li>
+<p>需求：爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据<br>
+<a target="_blank" rel="noopener" href="http://scxk.nmpa.gov.cn:81/xk/">http://scxk.nmpa.gov.cn:81/xk/</a></p>
+<ul>
 <li>动态加载数据</li>
 </ul>
 </li>
-<li><p>首页中对应的企业信息数据是通过ajax动态请求到的。</p>
+<li>
+<p>首页中对应的企业信息数据是通过ajax动态请求到的。</p>
 <pre><code>http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=e6c1aa332b274282b04659a6ea30430a
 http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac8754fe
-</code></pre><ul>
-<li>通过对详情页url的观察发现：<ul>
+</code></pre>
+<ul>
+<li>通过对详情页url的观察发现：
+<ul>
 <li>url的域名都是一样的，只有携带的参数（id）不一样</li>
 <li>id值可以从首页对应的ajax请求到的json串中获取</li>
 <li>域名和id值拼接处一个完整的企业对应的详情页的url</li>
 </ul>
 </li>
-<li>详情页的企业详情数据也是动态加载出来的<ul>
+<li>详情页的企业详情数据也是动态加载出来的
+<ul>
 <li><a target="_blank" rel="noopener" href="http://125.35.6.84:81/xk/itownet/portalAction.do?method=getXkzsById">http://125.35.6.84:81/xk/itownet/portalAction.do?method=getXkzsById</a></li>
 <li><a target="_blank" rel="noopener" href="http://125.35.6.84:81/xk/itownet/portalAction.do?method=getXkzsById">http://125.35.6.84:81/xk/itownet/portalAction.do?method=getXkzsById</a></li>
-<li>观察后发现：<ul>
+<li>观察后发现：
+<ul>
 <li>所有的post请求的url都是一样的，只有参数id值是不同。</li>
 <li>如果我们可以批量获取多家企业的id后，就可以将id和url形成一个完整的详情页对应详情数据的ajax请求的url</li>
 </ul>
@@ -634,10 +671,12 @@ http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac87
 </ul>
 </li>
 </ul>
-<h2 id="三、数据解析"><a href="#三、数据解析" class="headerlink" title="三、数据解析"></a>三、数据解析</h2><blockquote>
+<h2 id="三、数据解析">三、数据解析</h2>
+<blockquote>
 <p>聚焦爬虫、正则、bs4、xpath</p>
 </blockquote>
-<h4 id="聚焦爬虫"><a href="#聚焦爬虫" class="headerlink" title="聚焦爬虫"></a>聚焦爬虫</h4><p>定义：爬取页面中指定的页面内容。</p>
+<h4 id="聚焦爬虫">聚焦爬虫</h4>
+<p>定义：爬取页面中指定的页面内容。</p>
 <p>编码流程：</p>
 <ul>
 <li>指定url</li>
@@ -646,124 +685,155 @@ http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac87
 <li>数据解析</li>
 <li>持久化存储</li>
 </ul>
-<h4 id="数据解析分类"><a href="#数据解析分类" class="headerlink" title="数据解析分类"></a>数据解析分类</h4><ul>
+<h4 id="数据解析分类">数据解析分类</h4>
+<ul>
 <li>正则</li>
 <li>bs4</li>
-<li>xpath（<em>*</em>）</li>
+<li>xpath（***）</li>
 </ul>
 <p><strong>数据解析原理概述</strong></p>
 <ul>
-<li>解析的局部的文本内容都会在<strong>标签之间或者标签对应的属性中进行存储</strong><ul>
+<li>解析的局部的文本内容都会在<strong>标签之间或者标签对应的属性中进行存储</strong></li>
 <li>1.<strong>进行指定标签的定位</strong></li>
 <li>2.标签或者标签对应的<strong>属性</strong>中存储的<strong>数据</strong>值进行<strong>提取（解析）</strong></li>
 </ul>
-</li>
-</ul>
-<h5 id="正则解析"><a href="#正则解析" class="headerlink" title="正则解析"></a><strong>正则解析</strong></h5><p>回顾</p>
-<p><img src="C:\Users\86136\Pictures\学习\rep.png" alt="正则表达式"></p>
+<h5 id="正则解析"><strong>正则解析</strong></h5>
+<p>回顾</p>
+<p><img src="C:%5CUsers%5C86136%5CPictures%5C%E5%AD%A6%E4%B9%A0%5Crep.png" alt="正则表达式"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment">#提取出python</span></span><br><span class="line">key=<span class="string">&quot;javapythonc++php&quot;</span></span><br><span class="line">re.findall(<span class="string">&#x27;python&#x27;</span>,key)[<span class="number">0</span>]</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取出hello world</span></span><br><span class="line">key=<span class="string">&quot;</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">&quot;</span></span><br><span class="line">re.findall(<span class="string">&#x27;</span></span><br><span class="line"><span class="string">(.*)</span></span><br><span class="line"><span class="string">&#x27;</span>,key)[<span class="number">0</span>]</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取170</span></span><br><span class="line">string = <span class="string">&#x27;我喜欢身高为170的女孩&#x27;</span></span><br><span class="line">re.findall(<span class="string">&#x27;\d+&#x27;</span>,string)</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取出http://和https://</span></span><br><span class="line">key=<span class="string">&#x27;http://www.baidu.com and https://boob.com&#x27;</span></span><br><span class="line">re.findall(<span class="string">&#x27;https?://&#x27;</span>,key)</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取出hello</span></span><br><span class="line">key=<span class="string">&#x27;lalalahellohahah&#x27;</span> <span class="comment">#输出hello</span></span><br><span class="line">re.findall(<span class="string">&#x27;&lt;[Hh][Tt][mM][lL]&gt;(.*)&#x27;</span>,key)</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#提取出hit. </span></span><br><span class="line">key=<span class="string">&#x27;bobo@hit.edu.com&#x27;</span><span class="comment">#想要匹配到hit.</span></span><br><span class="line">re.findall(<span class="string">&#x27;h.*?\.&#x27;</span>,key)</span><br><span class="line"><span class="comment">########################################################</span></span><br><span class="line"><span class="comment">#匹配sas和saas</span></span><br><span class="line">key=<span class="string">&#x27;saas and sas and saaas&#x27;</span></span><br><span class="line">re.findall(<span class="string">&#x27;sa&#123;1,2&#125;s&#x27;</span>,key)</span><br></pre></td></tr></table></figure>
-<h5 id="bs4进行数据解析"><a href="#bs4进行数据解析" class="headerlink" title="bs4进行数据解析"></a><strong>bs4进行数据解析</strong></h5><pre><code>- 数据解析的原理：
+<h5 id="bs4进行数据解析"><strong>bs4进行数据解析</strong></h5>
+<pre><code>- 数据解析的原理：
     - 1.标签定位
     - 2.提取标签、标签属性中存储的数据值
-</code></pre><ul>
-<li>bs4数据解析的原理：<ul>
+</code></pre>
+<ul>
+<li>bs4数据解析的原理：
+<ul>
 <li>1.实例化一个BeautifulSoup对象，并且将页面源码数据加载到该对象中</li>
 <li>2.通过调用BeautifulSoup对象中相关的属性或者方法进行标签定位和数据提取</li>
 </ul>
 </li>
-<li>环境安装：<ul>
+<li>环境安装：
+<ul>
 <li><code>pip install bs4</code></li>
 <li><code>pip install lxml</code></li>
 </ul>
 </li>
-<li>如何实例化BeautifulSoup对象：<ul>
+<li>如何实例化BeautifulSoup对象：
+<ul>
 <li><code>from bs4 import BeautifulSoup</code></li>
-<li>对象的实例化：<ul>
-<li>1.将本地的html文档中的数据加载到该对象中<pre><code>  `fp = open(&#39;./test.html&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;)`
- ` soup = BeautifulSoup(fp,&#39;lxml&#39;)`
-</code></pre></li>
-<li>2.将互联网上获取的页面源码加载到该对象中<pre><code>  `page_text = response.text`
-</code></pre>  <code>soup = BeatifulSoup(page_text,&#39;lxml&#39;)</code></li>
+<li>对象的实例化：
+<ul>
+<li>1.将本地的html文档中的数据加载到该对象中<br>
+<code>fp = open('./test.html','r',encoding='utf-8')</code><br>
+<code> soup = BeautifulSoup(fp,'lxml')</code></li>
+<li>2.将互联网上获取的页面源码加载到该对象中<br>
+<code>page_text = response.text</code><br>
+<code> soup = BeatifulSoup(page_text,'lxml')</code></li>
 </ul>
 </li>
-<li>提供的用于数据解析的方法和属性：<ul>
+<li>提供的用于数据解析的方法和属性：
+<ul>
 <li><code>soup.tagName</code>:返回的是文档中第一次出现的tagName对应的标签</li>
-<li><code>soup.find()</code>:<ul>
-<li><code>find(&#39;tagName&#39;)</code>:等同于<code>soup.div</code></li>
-<li>属性定位：<br>  <code>soup.find(&#39;div&#39;,class_/id/attr=&#39;song&#39;)</code></li>
+<li><code>soup.find()</code>:
+<ul>
+<li><code>find('tagName')</code>:等同于<code>soup.div</code></li>
+<li>属性定位：<br>
+<code>soup.find('div',class_/id/attr='song')</code></li>
 </ul>
 </li>
-<li><code>soup.find_all(&#39;tagName&#39;)</code>:返回符合要求的所有标签（列表）</li>
+<li><code>soup.find_all('tagName')</code>:返回符合要求的所有标签（列表）</li>
 </ul>
 </li>
-<li><code>select</code>：<ul>
+<li><code>select</code>：
+<ul>
 <li>select(‘某种选择器（id，class，标签…选择器）’),返回的是一个列表。</li>
-<li>层级选择器：<ul>
-<li><code>soup.select(&#39;.tang &gt; ul &gt; li &gt; a&#39;)</code>：&gt;表示的是一个层级</li>
-<li><code>oup.select(&#39;.tang &gt; ul a&#39;)</code>：空格表示的多个层级</li>
+<li>层级选择器：
+<ul>
+<li><code>soup.select('.tang &gt; ul &gt; li &gt; a')</code>：&gt;表示的是一个层级</li>
+<li><code>oup.select('.tang &gt; ul a')</code>：空格表示的多个层级</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>获取标签之间的文本数据：<ul>
+<li>获取标签之间的文本数据：
+<ul>
 <li>soup.a.text/string/get_text()</li>
 <li>text/get_text():可以获取某一个标签中所有的文本内容</li>
 <li>string：只可以获取该标签下面直系的文本内容</li>
 </ul>
 </li>
-<li>获取标签中属性值：<ul>
+<li>获取标签中属性值：
+<ul>
 <li>soup.a[‘href’]</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h5 id="xpath解析"><a href="#xpath解析" class="headerlink" title="xpath解析"></a>xpath解析</h5><blockquote>
+<h5 id="xpath解析">xpath解析</h5>
+<blockquote>
 <p>最常用且最便捷高效的一种解析方式。通用性。</p>
 </blockquote>
 <ul>
-<li>xpath解析原理：<ul>
+<li>xpath解析原理：
+<ul>
 <li>1.实例化一个etree的对象，且需要将被解析的页面源码数据加载到该对象中。</li>
 <li>2.调用etree对象中的xpath方法结合着xpath表达式实现标签的定位和内容的捕获。</li>
 </ul>
 </li>
-<li>环境的安装：<ul>
+<li>环境的安装：
+<ul>
 <li>pip install lxml</li>
 </ul>
 </li>
-<li>如何实例化一个etree对象:from lxml import etree<ul>
-<li>1.将<strong>本地</strong>的html文档中的源码数据加载到etree对象中：<br>  etree.parse(filePath)</li>
-<li>2.可以将从<strong>互联网</strong>上获取的源码数据加载到该对象中<br>  etree.HTML(‘page_text’)</li>
+<li>如何实例化一个etree对象:from lxml import etree
+<ul>
+<li>1.将<strong>本地</strong>的html文档中的源码数据加载到etree对象中：<br>
+etree.parse(filePath)</li>
+<li>2.可以将从<strong>互联网</strong>上获取的源码数据加载到该对象中<br>
+etree.HTML(‘page_text’)</li>
 <li>xpath(‘xpath表达式’)</li>
 </ul>
 </li>
-<li>xpath表达式:<ul>
+<li>xpath表达式:
+<ul>
 <li><strong>/</strong>: 表示的是从根节点开始定位。表示的是一个层级。</li>
 <li><strong>//</strong>: 表示的是多个层级。可以表示从任意位置开始定位。</li>
-<li><strong>属性定位</strong>：//div[@class=’song’] tag[@attrName=”attrValue”]</li>
-<li><strong>索引定位</strong>：//div[@class=”song”]/p[3] 索引是从1开始的。</li>
-<li><strong>取文本</strong>：<ul>
+<li><strong>属性定位</strong>：//div[@class=‘song’] tag[@attrName=“attrValue”]</li>
+<li><strong>索引定位</strong>：//div[@class=“song”]/p[3] 索引是从1开始的。</li>
+<li><strong>取文本</strong>：
+<ul>
 <li>/text() 获取的是标签中直系的文本内容</li>
 <li>//text() 标签中非直系的文本内容（所有的文本内容）</li>
 </ul>
 </li>
-<li><strong>取属性</strong>：<br>  /@attrName     ==&gt;img/src</li>
+<li><strong>取属性</strong>：<br>
+/@attrName     ==&gt;img/src</li>
 </ul>
 </li>
 </ul>
-<p>作业：<br>    爬取站长素材中免费简历模板</p>
-<h2 id="四、验证码识别"><a href="#四、验证码识别" class="headerlink" title="四、验证码识别"></a>四、验证码识别</h2><h5 id="验证码和爬虫之间的关系"><a href="#验证码和爬虫之间的关系" class="headerlink" title="验证码和爬虫之间的关系"></a>验证码和爬虫之间的关系</h5><ul>
+<p>作业：<br>
+爬取站长素材中免费简历模板</p>
+<h2 id="四、验证码识别">四、验证码识别</h2>
+<h5 id="验证码和爬虫之间的关系">验证码和爬虫之间的关系</h5>
+<ul>
 <li>反爬机制：验证码.识别验证码图片中的数据，用于模拟登陆操作。</li>
 </ul>
-<h5 id="识别验证码的操作"><a href="#识别验证码的操作" class="headerlink" title="识别验证码的操作"></a>识别验证码的操作</h5><pre><code>- 人工肉眼识别。（不推荐）
+<h5 id="识别验证码的操作">识别验证码的操作</h5>
+<pre><code>- 人工肉眼识别。（不推荐）
     - 第三方自动识别（推荐）
     - 云打码：http://www.yundama.com/demo.html
-</code></pre><ul>
-<li>云打码的使用流程：<ul>
+</code></pre>
+<ul>
+<li>云打码的使用流程：
+<ul>
 <li>注册：普通和开发者用户</li>
-<li>登录：<ul>
+<li>登录：
+<ul>
 <li>普通用户的登录：查询该用户是否还有剩余的题分</li>
-<li>开发者用户的登录：<ul>
+<li>开发者用户的登录：
+<ul>
 <li>创建一个软件：我的软件-》添加新软件-》录入软件名称-》提交（软件id和秘钥）</li>
 <li>下载示例代码：开发文档-》点此下载：云打码接口DLL-》PythonHTTP示例下载</li>
 </ul>
@@ -773,37 +843,49 @@ http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac87
 </ul>
 </li>
 </ul>
-<h5 id="实战：识别古诗文网登录页面中的验证码"><a href="#实战：识别古诗文网登录页面中的验证码" class="headerlink" title="实战：识别古诗文网登录页面中的验证码"></a>实战：识别古诗文网登录页面中的验证码</h5><p>使用打码平台识别验证码的编码流程：</p>
+<h5 id="实战：识别古诗文网登录页面中的验证码">实战：识别古诗文网登录页面中的验证码</h5>
+<p>使用打码平台识别验证码的编码流程：</p>
 <ul>
 <li>将验证码图片进行本地下载</li>
 <li>调用平台提供的示例代码进行图片数据识别</li>
 </ul>
-<h2 id="五、request高级"><a href="#五、request高级" class="headerlink" title="五、request高级"></a>五、request高级</h2><h4 id="模拟登录"><a href="#模拟登录" class="headerlink" title="模拟登录"></a>模拟登录</h4><ul>
+<h2 id="五、request高级">五、request高级</h2>
+<h4 id="模拟登录">模拟登录</h4>
+<ul>
 <li>爬取基于某些用户的用户信息。</li>
 </ul>
-<h4 id="需求1"><a href="#需求1" class="headerlink" title="需求1"></a>需求1</h4><blockquote>
+<h4 id="需求1">需求1</h4>
+<blockquote>
 <p>对人人网进行模拟登录。</p>
 </blockquote>
 <ul>
-<li>点击登录按钮之后会发起一个post请求<ul>
-<li>post请求中会携带登录之前录入的相关的登录信息（用户名，密码，验证码……）</li>
+<li>点击登录按钮之后会发起一个post请求</li>
+<li>post请求中会携带登录之前录入的相关的登录信息（用户名，密码，验证码…）</li>
 <li>验证码：每次请求都会变化</li>
 </ul>
-</li>
-</ul>
-<h4 id="需求2"><a href="#需求2" class="headerlink" title="需求2"></a>需求2</h4><blockquote>
+<h4 id="需求2">需求2</h4>
+<blockquote>
 <p>爬取当前用户的相关的用户信息（个人主页中显示的用户信息）</p>
 </blockquote>
-<h4 id="cookie与session"><a href="#cookie与session" class="headerlink" title="cookie与session"></a>cookie与session</h4><p>http/https协议特性：无状态。<br>没有请求到对应页面数据的原因：<br>    发起的第二次基于个人主页页面请求的时候，服务器端并不知道该此请求是基于登录状态下的请求。<br>cookie：用来让服务器端记录客户端的相关状态。</p>
+<h4 id="cookie与session">cookie与session</h4>
+<p>http/https协议特性：无状态。<br>
+没有请求到对应页面数据的原因：<br>
+发起的第二次基于个人主页页面请求的时候，服务器端并不知道该此请求是基于登录状态下的请求。<br>
+cookie：用来让服务器端记录客户端的相关状态。</p>
 <ul>
-<li>手动处理：通过抓包工具获取cookie值，将该值封装到headers中。（不建议）<ul>
-<li>自动处理：</li>
-<li>cookie值的来源是哪里？<ul>
+<li>手动处理：通过抓包工具获取cookie值，将该值封装到headers中。（不建议）</li>
+<li>自动处理：
+<ul>
+<li>cookie值的来源是哪里？
+<ul>
 <li>模拟登录post请求后，由服务器端创建。</li>
 </ul>
 </li>
-<li><strong>session会话对象</strong>：<ul>
-<li>作用：<br>  1.可以进行请求的发送。<br>  2.如果请求过程中产生了cookie，则该cookie会被自动存储/携带在该session对象中。</li>
+<li><strong>session会话对象</strong>：
+<ul>
+<li>作用：<br>
+1.可以进行请求的发送。<br>
+2.如果请求过程中产生了cookie，则该cookie会被自动存储/携带在该session对象中。</li>
 </ul>
 </li>
 <li>创建一个session对象：session = requests.Session()</li>
@@ -812,7 +894,8 @@ http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac87
 </ul>
 </li>
 </ul>
-<h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><blockquote>
+<h4 id="代理">代理</h4>
+<blockquote>
 <p>破解封IP这种反爬机制。</p>
 </blockquote>
 <p>什么是代理：</p>
@@ -821,16 +904,14 @@ http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac87
 </ul>
 <p>代理的作用：</p>
 <ul>
-<li>突破自身IP访问的限制。<ul>
+<li>突破自身IP访问的限制。</li>
 <li>隐藏自身真实IP</li>
-</ul>
-</li>
 </ul>
 <p>代理相关的网站：</p>
 <ul>
 <li>快代理</li>
 <li>西祠代理</li>
-<li>www.goubanjia.com</li>
+<li><a target="_blank" rel="noopener" href="http://www.goubanjia.com">www.goubanjia.com</a></li>
 </ul>
 <p>代理ip的类型：</p>
 <ul>
@@ -839,27 +920,31 @@ http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac87
 </ul>
 <p>代理ip的匿名度：</p>
 <ul>
-<li>透明：服务器知道该次请求使用了代理，也知道请求对应的真实ip<ul>
+<li>透明：服务器知道该次请求使用了代理，也知道请求对应的真实ip</li>
 <li>匿名：知道使用了代理，不知道真实ip</li>
 <li>高匿：不知道使用了代理，更不知道真实的ip</li>
 </ul>
-</li>
-</ul>
-<h2 id="六、异步爬虫"><a href="#六、异步爬虫" class="headerlink" title="六、异步爬虫"></a>六、异步爬虫</h2><p>目的：在爬虫中使用异步实现高性能的数据爬取操作。</p>
-<p>异步爬虫的方式：</p>
-<pre><code>- 1.多线程，多进程（不建议）：
-        好处：可以为相关阻塞的操作单独开启线程或者进程，阻塞操作就可以异步执行。
-        弊端：无法无限制的开启多线程或者多进程。
-- 2.线程池、进程池（适当的使用）：
-好处：我们可以降低系统对进程或者线程创建和销毁的一个频率，从而很好的降低系统的开销。
-弊端：池中线程或进程的数量是有上限。
-</code></pre><ul>
-<li><p>3.单线程+异步协程（推荐）：<br>  <strong>event_loop</strong>：事件循环，相当于一个无限循环，我们可以把一些函数注册到这个事件循环上，<br>  当满足某些条件的时候，函数就会被循环执行。</p>
-<p>  <strong>coroutine</strong>：协程对象，我们可以将协程对象注册到事件循环中，它会被事件循环调用。<br>  我们可以使用 async 关键字来定义一个方法，这个方法在调用时不会立即被执行，而是返回<br>  一个协程对象。</p>
-<p>  <strong>task</strong>：任务，它是对协程对象的进一步封装，包含了任务的各个状态。</p>
-<p>  <strong>future</strong>：代表将来执行或还没有执行的任务，实际上和 task 没有本质区别。</p>
-<p>  <strong>async</strong> 定义一个协程.</p>
-<p>  await 用来挂起阻塞方法的执行。</p>
+<h2 id="六、异步爬虫">六、异步爬虫</h2>
+<p>目的：在爬虫中使用异步实现高性能的数据爬取操作。</p>
+<p>异步爬虫的方式：<br>
+- 1.多线程，多进程（不建议）：<br>
+好处：可以为相关阻塞的操作单独开启线程或者进程，阻塞操作就可以异步执行。<br>
+弊端：无法无限制的开启多线程或者多进程。<br>
+- 2.线程池、进程池（适当的使用）：<br>
+好处：我们可以降低系统对进程或者线程创建和销毁的一个频率，从而很好的降低系统的开销。<br>
+弊端：池中线程或进程的数量是有上限。</p>
+<ul>
+<li>
+<p>3.单线程+异步协程（推荐）：<br>
+<strong>event_loop</strong>：事件循环，相当于一个无限循环，我们可以把一些函数注册到这个事件循环上，<br>
+当满足某些条件的时候，函数就会被循环执行。</p>
+<p><strong>coroutine</strong>：协程对象，我们可以将协程对象注册到事件循环中，它会被事件循环调用。<br>
+我们可以使用 async 关键字来定义一个方法，这个方法在调用时不会立即被执行，而是返回<br>
+一个协程对象。</p>
+<p><strong>task</strong>：任务，它是对协程对象的进一步封装，包含了任务的各个状态。</p>
+<p><strong>future</strong>：代表将来执行或还没有执行的任务，实际上和 task 没有本质区别。</p>
+<p><strong>async</strong> 定义一个协程.</p>
+<p>await 用来挂起阻塞方法的执行。</p>
 </li>
 </ul>
 
@@ -1152,7 +1237,7 @@ http://125.35.6.84:81/xk/itownet/portal/dzpz.jsp?id=f63f61fe04684c46a016a45eac87
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">281.2k</span>
+          站点总字数：<span class="post-count">281.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
