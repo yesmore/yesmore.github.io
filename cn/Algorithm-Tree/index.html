@@ -235,9 +235,7 @@
           
           
           <li>
-            <a href="/archive/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -249,6 +247,17 @@
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -276,16 +285,16 @@
            -->
           
           <li>
-            <a href="/about">关于</a>
+            <a href="/About">关于</a>
           </li>
           <li>
             <a href="/archives">归档</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/categories">分类</a>
-          </li>
+          </li> -->
           <li>
-            <a href="/categories/#算法">算法</a>
+            <a href="/algorithms">算法</a>
           </li>
           <li>
             <a href="/categories/#WebGL">WebGL</a>
@@ -406,14 +415,14 @@
             <div class="blank_box"></div>
             <span class="meta">
               阅读时间 <span class="post-count">
-                36
+                37
               </span> 分钟
             </span>
             <div class="blank_box"></div>
             <span class="meta">
               文章共 
               <span class="post-count">
-                8.9k
+                9.4k
               </span> 
               字
             </span>
@@ -478,7 +487,9 @@
 
         <p>要点：树、二叉树、二叉搜索树详解、平衡树</p>
 <span id="more"></span>
-<h2 id="一、树结构"><a href="#一、树结构" class="headerlink" title="一、树结构"></a>一、树结构</h2><h3 id="1-1-什么是树？"><a href="#1-1-什么是树？" class="headerlink" title="1.1 什么是树？"></a>1.1 什么是树？</h3><h4 id="真实的树："><a href="#真实的树：" class="headerlink" title="真实的树："></a>真实的树：</h4><p><img src="image.6pnzzxbinjs0.png" alt="image"></p>
+<h2 id="一、树结构"><a href="#一、树结构" class="headerlink" title="一、树结构"></a>一、树结构</h2><h3 id="1-1-什么是树？"><a href="#1-1-什么是树？" class="headerlink" title="1.1 什么是树？"></a>1.1 什么是树？</h3><h4 id="真实的树"><a href="#真实的树" class="headerlink" title="真实的树"></a>真实的树</h4><p><img src="image.6pnzzxbinjs0.png" alt="image"></p>
+<p>树其实是一种特殊的<code>图</code>，是一种无环连通图，是一种极大无环图，也是一种极小连通图。</p>
+<p>从另一个角度看，树是一种递归的数据结构。而且树的不同表示方法，比如不常用的<code>长子 + 兄弟</code>法，对于 你理解树这种数据结构有着很大用处， 说是一种对树的本质的更深刻的理解也不为过。</p>
 <h3 id="1-2-树的特点及优势"><a href="#1-2-树的特点及优势" class="headerlink" title="1.2 树的特点及优势"></a>1.2 树的特点及优势</h3><p>1、树一般都有一个根，连接着根的是树干；</p>
 <p>2、树干会发生分叉，形成许多树枝，树枝会继续分化成更小的树枝；</p>
 <p>3、树枝的最后是叶子；</p>
@@ -645,9 +656,11 @@
 <li>条件 1：<strong>非空左子树的所有键值小于其根节点的键值</strong>。比如（三）中节点 6 的所有非空左子树的键值都小于 6；</li>
 <li>条件 2：<strong>非空右子树的所有键值大于其根节点的键值</strong>；比如三中节点 6 的所有非空右子树的键值都大于 6；</li>
 <li>条件 3：<strong>左、右子树本身也都是二叉搜索树</strong>；</li>
+<li>条件 4：没有键值相等的节点。</li>
 </ul>
 <p><img src="image.1lhxcdph4vpc.png" alt="image"></p>
 <p>如上图所示，树二和树三符合 3 个条件属于二叉树，树一不满足条件 3 所以不是二叉树。</p>
+<p>二叉查找树有一个性质是： <code>其中序遍历的结果是一个有序数组</code>。</p>
 <p>总结：二叉搜索树的特点主要是<u>较小的值总是保存在左节点上，相对较大的值总是保存在右节点上</u>。这种特点使得二叉搜索树的查询效率非常高，这也就是二叉搜索树中“搜索”的来源。</p>
 <h2 id="四、二叉搜索树应用举例"><a href="#四、二叉搜索树应用举例" class="headerlink" title="四、二叉搜索树应用举例"></a>四、二叉搜索树应用举例</h2><p>下面是一个二叉搜索树：</p>
 <p><img src="image.3l21fsg6qbc0.png" alt="image"></p>
@@ -908,9 +921,23 @@
 <li><p>这就要求树中每个节点左边的子孙节点的个数，应该尽可能地<strong>等于</strong>右边的子孙节点的个数；</p>
 </li>
 </ul>
-<h3 id="常见的平衡树"><a href="#常见的平衡树" class="headerlink" title="常见的平衡树"></a>常见的平衡树</h3><ul>
-<li><strong>AVL 树</strong>：是最早的一种平衡树，它通过在每个节点多存储一个额外的数据来保持树的平衡。由于 AVL 树是平衡树，所以它的时间复杂度也是 <code>O(log n)</code>。<u>但是它的整体效率不如红黑树</u>，开发中比较少用。</li>
-<li><strong>红黑树</strong>：同样通过一些特性来保持树的平衡，时间复杂度也是 <code>O(log n)</code>。进行插入/删除等操作时，性能优于 AVL 树，所以平衡树的应用基本都是红黑树。</li>
+<h3 id="常见的平衡树"><a href="#常见的平衡树" class="headerlink" title="常见的平衡树"></a>常见的平衡树</h3><p>一些数据库引擎内部就是用的这种数据结构，其目标也是将查询的操作降低到 logn（树的深度），可以简单理解为<code>树在数据结构层面构造了二分查找算法</code>。</p>
+<p>基本操作：</p>
+<ul>
+<li>旋转</li>
+<li>插入</li>
+<li>删除</li>
+<li>查询前驱</li>
+<li>查询后继</li>
+</ul>
+<p><strong>AVL 树</strong>：是最早的一种平衡树，它通过在每个节点多存储一个额外的数据来保持树的平衡。由于 AVL 树是平衡树，所以它的时间复杂度也是 <code>O(log n)</code>。<u>但是它的整体效率不如红黑树</u>，开发中比较少用。</p>
+<p><strong>红黑树</strong>：同样通过一些特性来保持树的平衡，时间复杂度也是 <code>O(log n)</code>。进行插入/删除等操作时，性能优于 AVL 树，所以平衡树的应用基本都是红黑树。</p>
+<h2 id="七、字典树（前缀树）"><a href="#七、字典树（前缀树）" class="headerlink" title="七、字典树（前缀树）"></a>七、字典树（前缀树）</h2><p>又称 Trie 树，是一种树形结构。典型应用是用于统计，排序和保存大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。</p>
+<p>它有 3 个基本性质：</p>
+<ul>
+<li>根节点不包含字符，除根节点外每一个节点都只包含一个字符；</li>
+<li>从根节点到某一节点，路径上经过的字符连接起来，为该节点对应的字符串；</li>
+<li>每个节点的所有子节点包含的字符都不相同。</li>
 </ul>
 
 
@@ -1061,7 +1088,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%A0%91%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、树结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%A0%91%EF%BC%9F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 什么是树？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9C%9F%E5%AE%9E%E7%9A%84%E6%A0%91%EF%BC%9A"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">真实的树：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-%E6%A0%91%E7%9A%84%E7%89%B9%E7%82%B9%E5%8F%8A%E4%BC%98%E5%8A%BF"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2 树的特点及优势</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A0%91%E7%BB%93%E6%9E%84%E5%AF%B9%E6%AF%94%E4%BA%8E%E6%95%B0%E7%BB%84-%E9%93%BE%E8%A1%A8-%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">树结构对比于数组&#x2F;链表&#x2F;哈希表的优势</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A0%91%E7%9A%84%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">树的常用术语</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A0%91%E7%BB%93%E6%9E%84%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">树结构的表示方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%9C%80%E6%99%AE%E9%80%9A%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.2.3.1.</span> <span class="toc-nav-text">最普通的表示方法</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%84%BF%E5%AD%90-%E5%85%84%E5%BC%9F%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.3.2.</span> <span class="toc-nav-text">儿子-兄弟表示法</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%84%BF%E5%AD%90-%E5%85%84%E5%BC%9F%E8%A1%A8%E7%A4%BA%E6%B3%95%E6%97%8B%E8%BD%AC"><span class="toc-nav-number">1.2.3.3.</span> <span class="toc-nav-text">儿子-兄弟表示法旋转</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1 二叉树的概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2 二叉树的组成</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-3-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%BA%94%E7%A7%8D%E5%BD%A2%E6%80%81"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3 二叉树的五种形态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-4-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">2.4 二叉树的特性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-5-%E7%89%B9%E6%AE%8A%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">2.5 特殊的二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%8C%E7%BE%8E%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">完美二叉树</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">完全二叉树</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-6-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">2.6 二叉树的数据存储</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84"><span class="toc-nav-number">2.6.1.</span> <span class="toc-nav-text">使用数组</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">2.6.2.</span> <span class="toc-nav-text">使用链表</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、二叉搜索树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、二叉搜索树应用举例</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五、二叉搜索树的封装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-1-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">5.1 二叉搜索树的常见操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-2-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">5.2 插入数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-3-%E9%81%8D%E5%8E%86%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">5.3 遍历数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">5.3.0.1.</span> <span class="toc-nav-text">先序遍历</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">5.3.0.2.</span> <span class="toc-nav-text">中序遍历</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">5.3.0.3.</span> <span class="toc-nav-text">后序遍历</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">5.3.0.4.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-4-%E6%9F%A5%E6%89%BE%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">5.4 查找数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9F%A5%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC%E6%88%96%E6%9C%80%E5%B0%8F%E5%80%BC"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">查找最大值或最小值</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9F%A5%E6%89%BE%E7%89%B9%E5%AE%9A%E5%80%BC"><span class="toc-nav-number">5.4.2.</span> <span class="toc-nav-text">查找特定值</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-5-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">5.5 删除数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80"><span class="toc-nav-number">5.5.1.</span> <span class="toc-nav-text">情况一</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C"><span class="toc-nav-number">5.5.2.</span> <span class="toc-nav-text">情况二</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%89"><span class="toc-nav-number">5.5.3.</span> <span class="toc-nav-text">情况三</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%89%8D%E9%A9%B1-amp-%E5%90%8E%E7%BB%A7"><span class="toc-nav-number">5.5.3.1.</span> <span class="toc-nav-text">前驱&amp;后继</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%8C%E6%95%B4%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">5.5.4.</span> <span class="toc-nav-text">完整实现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-6-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%AE%8C%E6%95%B4%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">5.6 二叉搜索树完整实现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E5%B9%B3%E8%A1%A1%E6%A0%91"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六、平衡树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%91"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">非平衡树</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A0%91%E7%9A%84%E5%B9%B3%E8%A1%A1%E6%80%A7"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">树的平衡性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%B9%B3%E8%A1%A1%E6%A0%91"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">常见的平衡树</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%A0%91%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、树结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%A0%91%EF%BC%9F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 什么是树？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9C%9F%E5%AE%9E%E7%9A%84%E6%A0%91"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">真实的树</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-%E6%A0%91%E7%9A%84%E7%89%B9%E7%82%B9%E5%8F%8A%E4%BC%98%E5%8A%BF"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2 树的特点及优势</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A0%91%E7%BB%93%E6%9E%84%E5%AF%B9%E6%AF%94%E4%BA%8E%E6%95%B0%E7%BB%84-%E9%93%BE%E8%A1%A8-%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">树结构对比于数组&#x2F;链表&#x2F;哈希表的优势</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A0%91%E7%9A%84%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">树的常用术语</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A0%91%E7%BB%93%E6%9E%84%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">树结构的表示方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%9C%80%E6%99%AE%E9%80%9A%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.2.3.1.</span> <span class="toc-nav-text">最普通的表示方法</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%84%BF%E5%AD%90-%E5%85%84%E5%BC%9F%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.3.2.</span> <span class="toc-nav-text">儿子-兄弟表示法</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%84%BF%E5%AD%90-%E5%85%84%E5%BC%9F%E8%A1%A8%E7%A4%BA%E6%B3%95%E6%97%8B%E8%BD%AC"><span class="toc-nav-number">1.2.3.3.</span> <span class="toc-nav-text">儿子-兄弟表示法旋转</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1 二叉树的概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2 二叉树的组成</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-3-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%BA%94%E7%A7%8D%E5%BD%A2%E6%80%81"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3 二叉树的五种形态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-4-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">2.4 二叉树的特性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-5-%E7%89%B9%E6%AE%8A%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">2.5 特殊的二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%8C%E7%BE%8E%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">完美二叉树</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">完全二叉树</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-6-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">2.6 二叉树的数据存储</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84"><span class="toc-nav-number">2.6.1.</span> <span class="toc-nav-text">使用数组</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">2.6.2.</span> <span class="toc-nav-text">使用链表</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、二叉搜索树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、二叉搜索树应用举例</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五、二叉搜索树的封装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-1-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">5.1 二叉搜索树的常见操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-2-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">5.2 插入数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-3-%E9%81%8D%E5%8E%86%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">5.3 遍历数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">5.3.0.1.</span> <span class="toc-nav-text">先序遍历</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">5.3.0.2.</span> <span class="toc-nav-text">中序遍历</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">5.3.0.3.</span> <span class="toc-nav-text">后序遍历</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">5.3.0.4.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-4-%E6%9F%A5%E6%89%BE%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">5.4 查找数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9F%A5%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC%E6%88%96%E6%9C%80%E5%B0%8F%E5%80%BC"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">查找最大值或最小值</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9F%A5%E6%89%BE%E7%89%B9%E5%AE%9A%E5%80%BC"><span class="toc-nav-number">5.4.2.</span> <span class="toc-nav-text">查找特定值</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-5-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">5.5 删除数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80"><span class="toc-nav-number">5.5.1.</span> <span class="toc-nav-text">情况一</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C"><span class="toc-nav-number">5.5.2.</span> <span class="toc-nav-text">情况二</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%89"><span class="toc-nav-number">5.5.3.</span> <span class="toc-nav-text">情况三</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%89%8D%E9%A9%B1-amp-%E5%90%8E%E7%BB%A7"><span class="toc-nav-number">5.5.3.1.</span> <span class="toc-nav-text">前驱&amp;后继</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%8C%E6%95%B4%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">5.5.4.</span> <span class="toc-nav-text">完整实现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-6-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%AE%8C%E6%95%B4%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">5.6 二叉搜索树完整实现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E5%B9%B3%E8%A1%A1%E6%A0%91"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六、平衡树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%91"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">非平衡树</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A0%91%E7%9A%84%E5%B9%B3%E8%A1%A1%E6%80%A7"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">树的平衡性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%B9%B3%E8%A1%A1%E6%A0%91"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">常见的平衡树</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%83%E3%80%81%E5%AD%97%E5%85%B8%E6%A0%91%EF%BC%88%E5%89%8D%E7%BC%80%E6%A0%91%EF%BC%89"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">七、字典树（前缀树）</span></a></li></ol>
         
         </div>
       </aside>
@@ -1202,7 +1229,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">277.5k</span>
+          站点总字数：<span class="post-count">280.6k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

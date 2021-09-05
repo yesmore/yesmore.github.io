@@ -235,9 +235,7 @@
           
           
           <li>
-            <a href="/archive/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -249,6 +247,17 @@
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -276,16 +285,16 @@
            -->
           
           <li>
-            <a href="/about">关于</a>
+            <a href="/About">关于</a>
           </li>
           <li>
             <a href="/archives">归档</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/categories">分类</a>
-          </li>
+          </li> -->
           <li>
-            <a href="/categories/#算法">算法</a>
+            <a href="/algorithms">算法</a>
           </li>
           <li>
             <a href="/categories/#WebGL">WebGL</a>
@@ -413,7 +422,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                2.8k
+                3.1k
               </span> 
               字
             </span>
@@ -504,7 +513,15 @@
 <p>用高层的模块指导特定行为（栈的先进后出特性），划分了不同关注层次，使得思考范围缩小</p>
 <p>更加聚焦于我们致力解决的问题核心，简化了程序设计的问题</p>
 <h2 id="二、程序中的栈结构"><a href="#二、程序中的栈结构" class="headerlink" title="二、程序中的栈结构"></a>二、程序中的栈结构</h2><p><strong>函数调用栈</strong>：A(B(C(D())))：<br>即 A 函数中调用 B，B 调用 C，C 调用 D；在 A 执行的过程中会将 A 压入栈，随后 B 执行时 B 也被压入栈，函数 C 和 D 执行时也会被压入栈。所以当前栈的顺序为：A-&gt;B-&gt;C-&gt;D（栈顶）；函数 D 执行完之后，会弹出栈被释放，弹出栈的顺序为 D-&gt;C-&gt;B-&gt;A;</p>
-<p><strong>递归</strong>：<br>为什么没有停止条件的递归会造成栈溢出？比如函数 A 为递归函数，不断地调用自己（因为函数还没有执行完，不会把函数弹出栈），不停地把相同的函数 A 压入栈，最后造成栈溢出（Queue Overfloat）。</p>
+<p><strong>递归</strong><br>为什么没有停止条件的递归会造成栈溢出？比如函数 A 为递归函数，不断地调用自己（因为函数还没有执行完，不会把函数弹出栈），不停地把相同的函数 A 压入栈，最后造成栈溢出（Queue Overfloat）。</p>
+<p><strong>浏览器中的栈</strong></p>
+<p>栈在很多地方都有着应用，比如大家熟悉的浏览器就有很多栈，其实浏览器的执行栈就是一个基本的栈结构，从数据结构上说，它就是一个栈。 这也就解释了，我们用递归的解法和用循环+栈的解法本质上是差不多的。</p>
+<p>比如如下 JS 代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> b = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(a, b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line">  bar();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
+<p>真正执行的时候，内部大概是这样的：</p>
+<p><img src="007S8ZIlly1ghlugru58jj30v70hi0u8.jpg" alt="basic-data-structure-call-stack"></p>
+<p>栈常见的应用有进制转换，括号匹配，栈混洗，中缀表达式（用的很少），后缀表达式（逆波兰表达式）等。</p>
+<p>合法的栈混洗操作也是一个经典的题目，这其实和合法的括号匹配表达式之间存在着一一对应的关系，也就是说 n 个元素的栈混洗有多少种，n 对括号的合法表达式就有多少种。</p>
 <h2 id="三、练习"><a href="#三、练习" class="headerlink" title="三、练习"></a>三、练习</h2><h4 id="题目1："><a href="#题目1：" class="headerlink" title="题目1："></a>题目1：</h4><p>有 6 个元素 6，5，4，3，2，1 按顺序进栈，问下列哪一个<u>不是合法的出栈顺序</u>？</p>
 <p>A：5 4 3 6 1 2 （√）</p>
 <p>B：4 5 3 2 1 6 （√）</p>
@@ -840,7 +857,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">277.5k</span>
+          站点总字数：<span class="post-count">280.6k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
