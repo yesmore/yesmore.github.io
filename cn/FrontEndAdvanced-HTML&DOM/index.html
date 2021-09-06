@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/archives/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -255,9 +255,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archives/">
               
-              分类
+              归档
               
               
             </a>
@@ -516,13 +516,13 @@
 <h2 id="1-2-性能优化">1.2 性能优化</h2>
 <p>性能优化是前端开发中避不开的问题，性能问题无外乎两方面原因：渲染速度慢、请求时间长。性能优化虽然涉及很多复杂的原因和解决方案，但其实只要通过合理地使用标签，就可以在一定程度上提升渲染速度以及减少请求时间。</p>
 <h3 id="script-标签：调整加载顺序提升渲染速度">script 标签：调整加载顺序提升渲染速度</h3>
-<p>由于浏览器的底层运行机制，渲染引擎在解析 HTML 时，若遇到 script 标签引用文件，则会暂停解析过程，同时通知网络线程加载文件，文件加载后会切换至 JavaScript 引擎来执行对应代码，代码执行完成之后切换至渲染引擎继续渲染页面。</p>
+<p>由于浏览器的底层运行机制，<strong>渲染引擎在解析 HTML 时，若遇到 script 标签引用文件，则会暂停解析过程，同时通知网络线程加载文件，文件加载后会切换至 JavaScript 引擎来执行对应代码，代码执行完成之后切换至渲染引擎继续渲染页面</strong>。</p>
 <p>在这一过程中可以看到，页面渲染过程中包含了请求文件以及执行文件的时间，但页面的首次渲染可能并不依赖这些文件，这些请求和执行文件的动作反而延长了用户看到页面的时间，从而降低了用户体验。</p>
 <p>为了减少这些时间损耗，可以借助 script 标签的 3 个属性来实现。</p>
 <ul>
 <li><strong>async 属性</strong>。立即请求文件，但不阻塞渲染引擎，而是文件加载完毕后阻塞渲染引擎并立即执行文件内容。</li>
 <li><strong>defer 属性</strong>。立即请求文件，但不阻塞渲染引擎，等到解析完 HTML 之后再执行文件内容。</li>
-<li><strong>HTML5 标准 type 属性</strong>，对应值为“module”。让浏览器按照 ECMA Script 6 标准将文件当作模块进行解析，默认阻塞效果同 defer，也可以配合 async 在请求完成后立即执行。</li>
+<li><strong>HTML5 标准 type 属性</strong>，对应值为“module”。让浏览器按照 ECMA Script 6 标准将文件当作模块进行解析，默认阻塞效果同 <strong>defer</strong>，也可以配合 async 在请求完成后立即执行。</li>
 </ul>
 <p>具体效果可以参看下图：</p>
 <p><img src="https://s0.lgstatic.com/i/image/M00/07/0E/Ciqc1F647iiAZx3cAAB1ewBzlh0431.png" alt="1583465393011-810652f489ca6136.png"></p>
@@ -680,7 +680,7 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/Algorithm-twoSum/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】两数之和">&larr; 上一篇</a>
+            <a href="/cn/Algorithm-twoSum/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】1.两数之和">&larr; 上一篇</a>
           </li>
           
           
@@ -961,7 +961,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">282.4k</span>
+          站点总字数：<span class="post-count">283.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

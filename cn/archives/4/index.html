@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/archives/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -255,9 +255,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archives/">
               
-              分类
+              归档
               
               
             </a>
@@ -455,6 +455,86 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/28-光照-光照原理-点光源-PointLightedCube/">
+    <h1 class="post-title">
+      【WebGL之巅】28-光照-光照原理-点光源
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      对应《WebGL编程指南》第八章 40-PointLightedCube、41-PointLightedCube_animation、42-PointLightedCube_perFragment
+要点：点光源光、逐片元光照
+
+知识点
+一、点光源
+与平行光相比，点光源光发出的光，在三维空间的不同位置上其方向也不同，如下图所示。所以，在对点光源光下的物体进行着色时，需要在每个入射点计算点光源光......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-08
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/27-光照-运动物体的光照效果-LightedTranslatedRotatedCube/">
+    <h1 class="post-title">
+      【WebGL之巅】27-光照-运动物体的光照效果
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      对应《WebGL编程指南》第八章 39-LightedTranslatedRotatedCube
+要点：平行光、漫反射+环境反射、魔法矩阵（逆转置矩阵）
+
+知识点
+一、坐标变换引起的法向量变化
+在程序 LightedTranslatedRotatedCube 中，立方体先绕 z 轴顺时针旋转了90度，然后沿着 y 轴平移了0.9个单位。场景中的光照情况与前一节的 LightedCube_am......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-08
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -784,96 +864,6 @@ re......
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/20-GLSL ES着色器语言语法详解-GLSLES/">
-    <h1 class="post-title">
-      【WebGL之巅】20-GLSL ES着色器语言语法详解
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      对应《WebGL编程指南》第六章 GLSL ES
-
-总览
-本章知识点：
-1、数据、变量和变量类型
-2、矢量、矩阵、结构体、数组、采样器（纹理）
-3、运算、程序流、函数
-4、attribute、uniform和varying变量
-5、精度限定词
-6、预处理和指令
-回顾
-基本着色器代码
-1234567891011121314151617181920212223//顶点着色器程序var VSHAD......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/19-颜色与纹理-使用多幅纹理-MultiTexture/">
-    <h1 class="post-title">
-      【WebGL之巅】19-颜色与纹理-使用多幅纹理
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      对应《WebGL编程指南》代码：21-MultiTexture
-要点：纹理映射、多个纹理单元使用
-
-知识点
-一、区别单个纹理单元
-1、片元着色器能够访问两个纹理
-2、最终的片元颜色由两个纹理上的纹素颜色共同决定
-3、initTextures(gl, n)函数创建了两个纹理对象
-12345678910111213141516171819202122232425function initText......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -952,7 +942,7 @@ re......
   <div class="tags">
     
     
-    <a href="/tags/#JavaScript" title="JavaScript" rel="57"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    <a href="/tags/#JavaScript" title="JavaScript" rel="59"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     
     
@@ -964,7 +954,7 @@ re......
     
     
     
-    <a href="/tags/#LeetCode" title="LeetCode" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
+    <a href="/tags/#LeetCode" title="LeetCode" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
     
     
     
@@ -1016,15 +1006,15 @@ re......
     
     
     
-    <a href="/tags/#Electron" title="Electron" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Electron</a>
-    
-    
-    
     <a href="/tags/#免费Api" title="免费Api" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 免费Api</a>
     
     
     
     <a href="/tags/#NodeJs" title="NodeJs" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
+    
+    
+    
+    <a href="/tags/#Electron" title="Electron" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Electron</a>
     
     
     
@@ -1115,24 +1105,24 @@ re......
 <div class="widget">
   <ul style="padding-left: 0;">
     
+    <a href="../../Algorithm-merge-two-sorted-lists/">
+      <li style="list-style: none;">【LeetCode-简单】21.合并两个有序链表</li>
+    </a>
+    
+    <a href="../../Algorithm-validParentheses/">
+      <li style="list-style: none;">【LeetCode-简单】20.有效的括号</li>
+    </a>
+    
     <a href="../../HTML-space/">
       <li style="list-style: none;">HTML空格处理</li>
     </a>
     
     <a href="../../Algorithm-twoSum/">
-      <li style="list-style: none;">【LeetCode-简单】两数之和</li>
+      <li style="list-style: none;">【LeetCode-简单】1.两数之和</li>
     </a>
     
     <a href="../../FrontEndAdvanced-HTML&DOM/">
       <li style="list-style: none;">【前端进阶】重新认识HTML与DOM</li>
-    </a>
-    
-    <a href="../../wordDrawer/">
-      <li style="list-style: none;">wordDrawer：轻量级桌面词典应用软件</li>
-    </a>
-    
-    <a href="../../Algorithm-Sort/">
-      <li style="list-style: none;">【数据结构与算法】五种排序算法（JavaScript版详解）</li>
     </a>
     
   </ul>
@@ -1144,9 +1134,9 @@ re......
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（83） </a></h5>
+<h5><a href="/archives/">归档（85） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1195,12 +1185,12 @@ re......
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#Electron">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
-    </a>
-    
     <a href="/categories/#免费api">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
+    </a>
+    
+    <a href="/categories/#Electron">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
     <a href="/categories/#知识扫盲">
@@ -1325,7 +1315,7 @@ re......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">282.4k</span>
+          站点总字数：<span class="post-count">283.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
