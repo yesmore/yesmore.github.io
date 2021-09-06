@@ -760,6 +760,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/tags/Electron/</loc>
+    <lastmod>2021-09-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/tags/%E5%85%8D%E8%B4%B9Api/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
@@ -768,13 +775,6 @@
   
   <url>
     <loc>https://yesmore.cc/tags/NodeJs/</loc>
-    <lastmod>2021-09-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yesmore.cc/tags/Electron/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -881,14 +881,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/</loc>
+    <loc>https://yesmore.cc/categories/Electron/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Electron/</loc>
+    <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
