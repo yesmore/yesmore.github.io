@@ -221,8 +221,6 @@
 
           <!-- 
           
-          
-          
           <li>
             <a href="/about/">
               
@@ -231,6 +229,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/archives/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -255,9 +255,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archives/">
               
-              分类
+              归档
               
               
             </a>
@@ -463,6 +463,47 @@
   <!-- top end -->
   
 
+  <a href="/cn/11-使用Matrix变换矩阵实现三角形旋转、平移、缩放-RotatedTriangle-Matrix/">
+    <h1 class="post-title">
+      【WebGL之巅】11-使用Matrix变换矩阵实现三角形旋转、平移、缩放
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：12-RotatedTriangle_Matrix
+要点：矩阵和矢量的乘法、矩阵变换（旋转矩阵、平移矩阵、缩放矩阵）、gl.uniformMatrix4fv
+
+
+知识点一、矩阵和矢量的乘法矩阵示例：
+​    $\begin{bmatrix}​    8 &amp; 3 &amp; 0 \\​    4 &amp; 3 &amp; 6 \\​    3 &a......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-26
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/10-仿射变换之旋转三角形-RotatedTriangle/">
     <h1 class="post-title">
       【WebGL之巅】10-仿射变换之旋转三角形
@@ -476,13 +517,10 @@
 要点：旋转变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
-步骤
-目的：将三角形逆时针旋转90度
+步骤目的：将三角形逆时针旋转90度
 计算90度的正余弦值 → 传给顶点着色器uniform变量
-知识点
-一、正旋转
-​	①描述旋转操作：绕Z轴，逆时针旋转β角度。
-​	②关于“逆时针”的约定：如果β是正值，观察......
+知识点一、正旋转​    ①描述旋转操作：绕Z轴，逆时针旋转β角度。
+​    ②关于“逆时针”的约定：如果β是正值......
     </div>
   </a>
   
@@ -522,19 +560,14 @@
 要点：平移变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
-目的
-将一个三角形向上和向右平移0.5个单位
-知识点
-一、逐顶点操作
-​	为顶点坐标的每个分量加上一个常量就可以实现
-二、矢量的加法
-​	方便的矢量相加运算是GLSL ES提供的特性之一
+目的将一个三角形向上和向右平移0.5个单位
+知识点一、逐顶点操作​    为顶点坐标的每个分量加上一个常量就可以实现
+二、矢量的加法​    方便的矢量相加运算是GLSL ES提供的特性之一
+
 
 
 
 矢量
-值
-
 ......
     </div>
   </a>
@@ -576,8 +609,7 @@
 复习：【WebGL之巅】07-绘制三角形
 
 
-实例
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859......
+实例12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596......
     </div>
   </a>
   
@@ -619,8 +651,7 @@
 参考：《WebGL编程指南》p82~84讲解
 
 
-实例
-1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; ......
+实例1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  ......
     </div>
   </a>
   
@@ -661,10 +692,8 @@
 复习：03-绘制一个点_v2_attribute变量
 
 
-绘制步骤
-获取WebGL上下文 → 初始化着色器 → 设置点的坐标信息 → 设置&lt;canvas&gt;背景色 → 清空&lt;canvas&gt; → 绘制
-知识点
-一、缓......
+绘制步骤获取WebGL上下文 → 初始化着色器 → 设置点的坐标信息 → 设置&lt;canvas&gt;背景色 → 清空&lt;canvas&gt; → 绘制
+知识点一、缓冲区......
     </div>
   </a>
   
@@ -704,10 +733,8 @@
 要点：注册js事件、匿名函数、坐标转换、g_points.push()
 
 
-知识点
-一、为何使用匿名函数？
-先看示例：
-1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Positio......
+知识点一、为何使用匿名函数？先看示例：
+1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Position)......
     </div>
   </a>
   
@@ -748,12 +775,11 @@
 
 
 知识点
-
 为何使用匿名函数？
 
 先看示例：
 1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Position);&#125;;
-当你要画一个点时，需要传入三个变......
+当你要画一个点时，需要传入三个变量......
     </div>
   </a>
   
@@ -794,11 +820,8 @@
 
 
 知识点
-
-
-位置信息的传输
-方式1：attribute变量，传输与顶点相关的数据
-方式2：unif......
+位置信息的传输方式1：attribute变量，传输与顶点相关的数据
+方式2：uniform......
     </div>
   </a>
   
@@ -839,7 +862,6 @@
 
 
 步骤
-
 获取&lt;canvas&gt;元素
 获取WebGL上下文
 初始化着色器
@@ -848,65 +870,7 @@
 绘图
 
 知识点
-
-
-着色器
-顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-24
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/01-使用webgl清空绘图区-HellCanvas/">
-    <h1 class="post-title">
-      【WebGL之巅】01-使用webgl清空绘图区
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：01-HelloCanvas
-
-
-步骤
-
-获取&lt;canvas&gt;元素
-获取webgl绘图上下文
-设置背景色
-清空&lt;canvas&gt;
-
-知识点
-
-
-gl.cleanColor()的参数
-
-
-一旦指定了背景色，背景色就会驻存在WebGL系统中，在下次调用clearColor前不会改变
-
-
-若想显示webgl调试错误，在调用getWebGLCo......
+着色器顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是指二维或......
     </div>
   </a>
   
@@ -1004,7 +968,7 @@ gl.cleanColor()的参数
   <div class="tags">
     
     
-    <a href="/tags/#JavaScript" title="JavaScript" rel="56"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    <a href="/tags/#JavaScript" title="JavaScript" rel="57"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     
     
@@ -1167,6 +1131,10 @@ gl.cleanColor()的参数
 <div class="widget">
   <ul style="padding-left: 0;">
     
+    <a href="../../cn/HTML-space/">
+      <li style="list-style: none;">HTML空格处理</li>
+    </a>
+    
     <a href="../../cn/Algorithm-twoSum/">
       <li style="list-style: none;">【LeetCode-简单】两数之和</li>
     </a>
@@ -1183,10 +1151,6 @@ gl.cleanColor()的参数
       <li style="list-style: none;">【数据结构与算法】五种排序算法（JavaScript版详解）</li>
     </a>
     
-    <a href="../../cn/hexo-livemylife/">
-      <li style="list-style: none;">Hexo主题之livemylife个性化构建你的博客</li>
-    </a>
-    
   </ul>
 </div>
 
@@ -1196,9 +1160,9 @@ gl.cleanColor()的参数
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（82） </a></h5>
+<h5><a href="/archives/">归档（83） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1377,7 +1341,7 @@ gl.cleanColor()的参数
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">281.4k</span>
+          站点总字数：<span class="post-count">282.2k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1844,20 +1808,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-</body>
+	</body>
 </html>

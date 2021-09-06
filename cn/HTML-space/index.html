@@ -116,10 +116,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://yesmore.cc/archives/3/">
+  <link rel="canonical" href="https://yesmore.cc/cn/HTML-space/">
   <title>
     
-      快乐码原 | 大Van家
+      HTML空格处理 - 快乐码原 | 大Van家
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -359,18 +359,18 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
-      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
     }
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
       
     }
 
@@ -393,10 +393,49 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h2 style="font-size: 40px;">快乐码原</h2>
-            <!--<hr class="small">-->
-            <span class="subheading">写代码要讲究，用化劲！</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+            </div>
+            <h2>HTML空格处理</h2>
+            <h3 class="subheading" style="font-size: 21px;"></h3>
+            <span class="meta">
+              By 大Van家 on
+              2021-09-06
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                3
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                936
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -437,833 +476,282 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>要点：HTML中使用空格、CSS方式空格</p>
+<h3 id="HTML的5种空格表示"><a href="#HTML的5种空格表示" class="headerlink" title="HTML的5种空格表示"></a>HTML的5种空格表示</h3><p>HTML提供了5种空格实体（space entity），它们拥有不同的宽度，非断行空格（<code>&amp;nbsp;</code>）是常规空格的宽度，可运行于所有主流浏览器。其他几种空格（<code>&amp;ensp; &amp;emsp; &amp;thinsp; &amp;zwnj;&amp;zwj;</code>）在不同浏览器中宽度各异。</p>
+<h4 id="amp-nbsp"><a href="#amp-nbsp" class="headerlink" title="&amp;nbsp;"></a><code>&amp;nbsp;</code></h4><p>不换行空格，全称No-Break Space，它是最常见和我们使用最多的空格，大多数的人可能只接触了&nbsp;，它是按下space键产生的空格。在HTML中，如果你用空格键产生此空格，空格是不会累加的（只算1个）。要使用html实体表示才可累加，该空格占据宽度受字体影响明显而强烈。</p>
+<h4 id="amp-ensp"><a href="#amp-ensp" class="headerlink" title="&amp;ensp;"></a><code>&amp;ensp;</code></h4><p>“半角空格”，全称是En Space，en是字体排印学的计量单位，为em宽度的一半。根据定义，它等同于字体度的一半（如16px字体中就是8px）。名义上是小写字母n的宽度。此空格传承空格家族一贯的特性：透明的，此空格有个相当稳健的特性，</p>
+<blockquote>
+<p>其占据的宽度正好是1/2个中文宽度，而且基本上不受字体影响。</p>
+</blockquote>
+<h4 id="amp-emsp"><a href="#amp-emsp" class="headerlink" title="&amp;emsp;"></a><code>&amp;emsp;</code></h4><p>“全角空格”，全称是Em Space，em是字体排印学的计量单位，相当于当前指定的点数。例如，1 em在16px的字体中就是16px。此空格也传承空格家族一贯的特性：透明的，此空格也有个相当稳健的特性，</p>
+<blockquote>
+<p>其占据的宽度正好是1个中文宽度，而且基本上不受字体影响。</p>
+</blockquote>
+<h4 id="amp-thinsp"><a href="#amp-thinsp" class="headerlink" title="&amp;thinsp;"></a><code>&amp;thinsp;</code></h4><p>窄空格，全称是Thin Space。我们不妨称之为“瘦弱空格”，就是该空格长得比较瘦弱，身体单薄，占据的宽度比较小。它是em之六分之一宽。</p>
+<h4 id="amp-zwnj"><a href="#amp-zwnj" class="headerlink" title="&amp;zwnj;"></a><code>&amp;zwnj;</code></h4><p>零宽不连字，全称是Zero Width Non Joiner，简称“ZWNJ”，是一个不打印字符，放在电子文本的两个字符之间，抑制本来会发生的连字，而是以这两个字符原本的字形来绘制。Unicode中的零宽不连字字符映射为“”（zero width non-joiner，U+200C），HTML字符值引用为： &#8204;</p>
+<h4 id="amp-zwj"><a href="#amp-zwj" class="headerlink" title="&amp;zwj;"></a><code>&amp;zwj;</code></h4><p>零宽连字，全称是Zero Width Joiner，简称“ZWJ”，是一个不打印字符，放在某些需要复杂排版语言（如阿拉伯语、印地语）的两个字符之间，使得这两个本不会发生连字的字符产生了连字效果。零宽连字符的Unicode码位是U+200D (HTML: <code>&amp;#8205;</code>&zwj;）。</p>
+<blockquote>
+<p>此外，浏览器还会把以下字符当作空白进行解析：空格（<code>&amp;#x0020;</code>）、制表位（<code>&amp;#x0009;</code>）、换行（<code>&amp;#x000A;</code>）和回车（<code>&amp;#x000D;</code>）还有（<code>&amp;#12288;</code>）等等。</p>
+</blockquote>
+<h3 id="CSS-的方式空格"><a href="#CSS-的方式空格" class="headerlink" title="CSS 的方式空格"></a>CSS 的方式空格</h3><h4 id="white-space"><a href="#white-space" class="headerlink" title="white-space"></a>white-space</h4><p>CSS中当 white-space 属性取值为pre时，浏览器会保留文本中的空格和换行,例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;white-space:pre&quot;</span>&gt;</span>AA   BB<span class="tag">&lt;<span class="name">div</span>&gt;</span> </span><br></pre></td></tr></table></figure><br>显示效果为： AA  BB</p>
+<blockquote>
+<p>white-space的更多属性参考：<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2018/07/white-space.html">CSS 的空格处理</a></p>
+</blockquote>
+<h4 id="letter-spacing"><a href="#letter-spacing" class="headerlink" title="letter-spacing"></a>letter-spacing</h4><p>CSS的 letter-spacing 属性用于设置文本中字符之间的间隔，例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;letter-spacing:5px;&quot;</span>&gt;</span>欢迎光临！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><br>显示效果为： 欢  迎  光  临  ！</p>
+<h4 id="word-spacing"><a href="#word-spacing" class="headerlink" title="word-spacing"></a>word-spacing</h4><p>CSS的 word-spacing 属性用于设置文本中单词之间的间隔，例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;word-spacing:5px&quot;</span>&gt;</span>Happy new year!<span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br></pre></td></tr></table></figure><br>显示效果为： Happy  new  year! </p>
+<h4 id="text-indent"><a href="#text-indent" class="headerlink" title="text-indent"></a>text-indent</h4><p>text-indent属性用于设置首行缩进，它的取值可以是一个带单位的长度值，浏览器会在段落的首行开始处设置指定长度的空白。比如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;text-indent:2rem&quot;</span>&gt;</span>欢迎光临！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div style="text-indent:2rem">欢迎光临！</div>
+
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/Algorithm-twoSum/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】两数之和">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
     
-
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <!-- Main Content -->
-
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Algorithm-SingleLinkedList/">
-    <h1 class="post-title">
-      【数据结构与算法】单向链表详解
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：单链表详解、JavaScript单链表方法的封装
-
-认识链表一、链表和数组链表和数组一样，可以用于存储一系列的元素，但是链表和数组的实现机制完全不同。
-1.1 数组数组特点：存储多个元素，数组（或列表）可能是最常用的数据结构。
-几乎每一种编程语言都有默认实现数组结构，提供了一个便利的 [] 语法来访问数组元素。
-数组缺点：数组的创建需要申请一段连续的内存空间(一整块内存)，并且大小是固......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-12
+      Please indicate the source and original author when reprinting or quoting this article.
+    
   </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
-    
-  </div>
-  
-
 </div>
-<hr>
+<!-- tip end -->
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
+        <!-- tip end -->
+        
 
-  <a href="/cn/Algorithm-linearList/">
-    <h1 class="post-title">
-      【数据结构与算法】线性表
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：线性表知识点汇总
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-
-一、线性表的定义由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。
-
-二、线性表的特点1、线性表中元素的个数n(n≥O)定义为线性表的长度，n=O时称为空表。
-2、将非空的线性表(n&gt;O)记作(a1，a2，a3，…，an)；
-3、这里的数据元素$a_i (1≤i≤n)$​​​只是个抽象的符号，其具体含义在不同情况下可以不同；
-4、在非空的线性表，有......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Algorithm-Array/">
-    <h1 class="post-title">
-      【数据结构与算法】JavaScript数组-操作数组方法总结
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：JavaScript数组、操作数组的方法
-
-几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。数组通常情况下用于存储一系列同一种数据类型的值。但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。
-
-汇总：
-不改变原数组的方法(8个):
-ES5：
-
-join、toLocateString、toStr......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Algorithm-guide/">
-    <h1 class="post-title">
-      【数据结构与算法】数据结构与算法前言、复杂度
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：数据结构与算法、复杂度、程序运行的效率
-程序 = 数据结构 + 算法 
-
-数据结构一、数据结构的定义官方定义：无
-民间定义：
-
-“数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义相关的函数来给出。” —- 《数据结构、算法与应用》
-“数据结构是 ADT（抽象数据类型 Abstract Data Type）的物理实现。” —- 《数据结构......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/WebSecurity03-XSS/">
-    <h1 class="post-title">
-      【Web安全扫盲】03-XSS
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：XSS
-
-在这些常见的Web 漏洞中，XSS（Cross-site Script，跨站脚本）漏洞无疑是最多见的。根据 HackerOne 漏洞奖励平台发布的 The 2020 Hacker Report，XSS 漏洞类型占所有报告漏洞中的 23％，排名第一。
-
-起源最早的 XSS 漏洞可追溯到 1999 年末，微软安全工程师发现一些网站遭到攻击，网站被插入了一些恶意脚本和图像标签。随后......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web安全" title="Web安全"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
-    
-    <a href="/tags/#知识扫盲" title="知识扫盲"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/WebSecurity02-environment/">
-    <h1 class="post-title">
-      【Web安全扫盲】02-靶场：漏洞练习环境搭建
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：docker、漏洞练习环境搭建、用于学习 Web 漏洞的常见靶
-
-一、安装与使用 Docker 容器以前我们搭建网站，需要在服务器依次安装 Apache、PHP、MySQL 等应用，比较烦琐，而且不同的源还有不同的应用版本，跟系统环境又可能存在兼容性的问题，这就需要手动添加源地址，甚至是自己编译安装。
-后来出现了 XAMPP、PHPStudy 等优秀的 PHP 集成环境，可以非常便捷地......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web安全" title="Web安全"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
-    
-    <a href="/tags/#知识扫盲" title="知识扫盲"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/WebSecurity01/">
-    <h1 class="post-title">
-      【Web安全扫盲】01-概览、常用渗透工具、信息收集
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：web渗透、信息收集、靶场搭建、XSS、SQL注入、CSRF漏洞、SSRF漏洞、XXE漏洞、反序列化漏洞、文件上传漏洞、命令与代码注入、逻辑漏洞、内网渗透、研发安全。
-
-一、概览1.1 Why Web 安全？随着时代的发展，如今无论是国家还是企业，都十分重视网络安全，各种相关的岗位也随之出现。在拉勾网上搜“Web 安全”就能找到相关的岗位。
-
-根据 HackerOne 的报告数据（下图......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web安全" title="Web安全"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
-    
-    <a href="/tags/#知识扫盲" title="知识扫盲"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/30-层次模型-多节点模型-MultiJointModel/">
-    <h1 class="post-title">
-      【WebGL之巅】（完结篇）30-层次模型-多节点模型
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      对应《WebGL编程指南》第九章 44-MultiJointModel、45-MultiJointModel_segment
-要点：层次结构模型、多节点模型
-
-知识点一、多节点模型这一节将把 JointModel 扩展为 MultiJointModel，后者绘制一个具有多个关节的完整的机器人手臂，包括基座 base，上臂 arm1，前臂 arm2，手掌 palm，两根手指 finger1 &......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-08
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/29-层次模型-单关节模型-jointModel/">
-    <h1 class="post-title">
-      【WebGL之巅】29-层次模型-单关节模型
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      对应《WebGL编程指南》第九章 43-jointModel
-要点：多个简单模型组成的复杂模型、层次结构模型、单关节模型
-
-知识点一、多个简单模型组成的复杂模型1.1 引入我们已经知道如何平移、旋转简单的模型，比如二维的三角形或三维的立方体。但是，实际用到的很多三维模型，如3D游戏中的人物角色模型等，都是由多个小的立方体模型组成的。
-绘制由多个小部件组成的复杂模型，最关键的问题是如何处理模型......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-08
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/28-光照-光照原理-点光源-PointLightedCube/">
-    <h1 class="post-title">
-      【WebGL之巅】28-光照-光照原理-点光源
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      对应《WebGL编程指南》第八章 40-PointLightedCube、41-PointLightedCube_animation、42-PointLightedCube_perFragment
-要点：点光源光、逐片元光照
-
-知识点一、点光源与平行光相比，点光源光发出的光，在三维空间的不同位置上其方向也不同，如下图所示。所以，在对点光源光下的物体进行着色时，需要在每个入射点计算点光源光在该......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-08
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    <li class="previous" ">
-      <a href="/archives/2/">&larr; 上一页</a>
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
     </li>
-    
-    
-    <li class="next">
-      <a href="/archives/4/">下一页 &rarr;</a>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
     </li>
-    
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=HTML空格处理&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/HTML-space/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
+</div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
+        <!-- Sharing End -->
+        
+        <hr>
 
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/">来访者</a></h5>
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
 
-  <div class="widget">
-  <span>
-    您是本站第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
-  </span>
-  <br />
-  <span>
-    总阅读量 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
-  </span>
-  <!-- 网站运行时间的设置 -->
-  <div> 
-    站点已战战兢兢运行 
-    <a href="javascript:;;">
-      <strong><span id="timeDate">载入天数...</span></strong>
-    </a>天
-    <!-- <a href="javascript:;;">
-      <strong><span id="times">载入时分秒...</span></strong>
-    </a> -->
-  </div>
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
   <script>
-    var now = new Date();
-    function createtime() {
-      var grt= new Date("07/10/2021 13:14:21");//此处修改你的建站时间或者网站上线时间
-      now.setTime(now.getTime()+250);
-      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-      document.getElementById("timeDate").innerHTML = dnum;
-      document.getElementById("times").innerHTML = hnum + "h " + mnum + "' " + snum + "''";
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Mon Sep 06 2021 14:42:40 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
     }
-  setInterval("createtime()",250);
   </script>
-</div>
+
+  <!-- gitalk end -->
 
 
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
         <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML%E7%9A%845%E7%A7%8D%E7%A9%BA%E6%A0%BC%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">HTML的5种空格表示</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#amp-nbsp"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">&amp;nbsp;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#amp-ensp"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">&amp;ensp;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#amp-emsp"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">&amp;emsp;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#amp-thinsp"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">&amp;thinsp;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#amp-zwnj"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">&amp;zwnj;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#amp-zwj"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">&amp;zwj;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CSS-%E7%9A%84%E6%96%B9%E5%BC%8F%E7%A9%BA%E6%A0%BC"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">CSS 的方式空格</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#white-space"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">white-space</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#letter-spacing"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">letter-spacing</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#word-spacing"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">word-spacing</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#text-indent"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">text-indent</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">标签云</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#JavaScript" title="JavaScript" rel="57"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    
-    
-    <a href="/tags/#WebGL" title="WebGL" rel="32"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-    
-    
-    <a href="/tags/#算法" title="算法" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
-    
-    
-    
-    <a href="/tags/#LeetCode" title="LeetCode" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
-    
-    
-    
-    <a href="/tags/#Math" title="Math" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Math</a>
-    
-    
-    
-    <a href="/tags/#mathjax" title="mathjax" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> mathjax</a>
-    
-    
-    
-    <a href="/tags/#Python" title="Python" rel="13"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    
-    
-    <a href="/tags/#爬虫" title="爬虫" rel="13"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-    
-    
-    <a href="/tags/#Web安全" title="Web安全" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
-    
-    
-    
-    <a href="/tags/#知识扫盲" title="知识扫盲" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
-    
-    
-    
-    <a href="/tags/#websocket" title="websocket" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
-    
-    
-    
-    <a href="/tags/#Ajax" title="Ajax" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Ajax</a>
-    
-    
-    
-    <a href="/tags/#建站指南" title="建站指南" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 建站指南</a>
-    
-    
-    
-    <a href="/tags/#Nginx" title="Nginx" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Nginx</a>
-    
-    
-    
-    <a href="/tags/#Linux" title="Linux" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Linux</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
-    <a href="/tags/#Electron" title="Electron" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Electron</a>
-    
-    
-    
-    <a href="/tags/#免费Api" title="免费Api" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 免费Api</a>
-    
-    
-    
-    <a href="/tags/#NodeJs" title="NodeJs" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
-    
-    
-    
-    <a href="/tags/#Browser" title="Browser" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
-    
-    
-    
-    <a href="/tags/#typescript" title="typescript" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> typescript</a>
-    
-    
-    
-    <a href="/tags/#面试" title="面试" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
-    
-    
-    
-    <a href="/tags/#Echarts" title="Echarts" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Echarts</a>
-    
-    
-    
-    <a href="/tags/#React" title="React" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/avatar.png" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>遍历两次</p>
-    
-
-    <hr>
-    <h5><a href="javascript:;;">Follow me</a></h5>
-    
-    <iframe style="margin-left: 2px;margin-bottom: 10px;" frameborder="0" scrolling="1" width="91px" height="20px"  src="https://ghbtns.com/github-btn.html?user=yesmore&repo=italk-uniapp&type=star&count=true"></iframe>
-    <iframe style="margin-left: 2px;margin-bottom: 10px;" frameborder="0" scrolling="1" width="91px" height="20px"  src="https://ghbtns.com/github-btn.html?user=yesmore&repo=photosapi&type=star&count=true"></iframe>
-    <iframe style="margin-left: 2px;margin-bottom: 10px;" frameborder="0" scrolling="1" width="91px" height="20px"  src="https://ghbtns.com/github-btn.html?user=yesmore&repo=wordDrawer&type=star&count=true"></iframe>
-    <!-- <iframe style="margin-left: 2px;margin-bottom: 10px;" frameborder="0" scrolling="1" width="91px" height="20px"  src="https://ghbtns.com/github-btn.html?user=bai-23&repo=nestJs-vue-videoSite&type=star&count=true"></iframe> -->
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/yesmore">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul style="padding-left: 0;">
-    
-    <a href="../../cn/HTML-space/">
-      <li style="list-style: none;">HTML空格处理</li>
-    </a>
-    
-    <a href="../../cn/Algorithm-twoSum/">
-      <li style="list-style: none;">【LeetCode-简单】两数之和</li>
-    </a>
-    
-    <a href="../../cn/FrontEndAdvanced-HTML&DOM/">
-      <li style="list-style: none;">【前端进阶】重新认识HTML与DOM</li>
-    </a>
-    
-    <a href="../../cn/wordDrawer/">
-      <li style="list-style: none;">wordDrawer：轻量级桌面词典应用软件</li>
-    </a>
-    
-    <a href="../../cn/Algorithm-Sort/">
-      <li style="list-style: none;">【数据结构与算法】五种排序算法（JavaScript版详解）</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Archives -->
-
-<!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（83） </a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<!-- <h5><a href="/categories/">categories</a></h5> -->
-<h5><a href="/categories/">文章分类</a></h5>
-<div class="widget">
-  <ul style="padding-left: 0;">
-    
-    <a href="/categories/#JavaScript">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
-    </a>
-    
-    <a href="/categories/#WebGL">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> WebGL</li>
-    </a>
-    
-    <a href="/categories/#算法">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 算法</li>
-    </a>
-    
-    <a href="/categories/#LeetCode">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
-    </a>
-    
-    <a href="/categories/#Math">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Math</li>
-    </a>
-    
-    <a href="/categories/#Python">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
-    </a>
-    
-    <a href="/categories/#Web安全">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Web安全</li>
-    </a>
-    
-    <a href="/categories/#websocket">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> websocket</li>
-    </a>
-    
-    <a href="/categories/#建站指南">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
-    </a>
-    
-    <a href="/categories/#Electron">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
-    </a>
-    
-    <a href="/categories/#免费api">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
-    </a>
-    
-    <a href="/categories/#知识扫盲">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
-    </a>
-    
-    <a href="/categories/#Nginx">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
-    </a>
-    
-    <a href="/categories/#Hexo">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#Linux">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Linux</li>
-    </a>
-    
-    <a href="/categories/#Browser">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
-    </a>
-    
-    <a href="/categories/#typescript">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> typescript</li>
-    </a>
-    
-    <a href="/categories/#Hexo">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
-    <a href="/categories/#面试">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
-    </a>
-    
-    <a href="/categories/#建站指南">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
-    </a>
-    
-    <a href="/categories/#Echarts">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Echarts</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#React">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
-    </a>
-    
-    <a href="/categories/#JavaScript">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-</div>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
 
 
-    
-  </div>
-</div>
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
@@ -1380,7 +868,7 @@ join、toLocateString、toStr......
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "yesmore";
     let ghPages = gh + ".github.io";
-    let pagePath = "archives/3/index.html";
+    let pagePath = "cn/HTML-space/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
