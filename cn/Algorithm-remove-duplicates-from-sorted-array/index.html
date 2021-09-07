@@ -116,10 +116,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://yesmore.cc/cn/FrontEndAdvanced-/">
+  <link rel="canonical" href="https://yesmore.cc/cn/Algorithm-remove-duplicates-from-sorted-array/">
   <title>
     
-      快乐码原 | 大Van家
+      【LeetCode-简单】26.删除排序数组中的重复项 - 快乐码原 | 大Van家
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -224,7 +224,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -244,9 +246,7 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -359,18 +359,18 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
-      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
     }
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io'); */
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
       
     }
 
@@ -396,8 +396,12 @@
           <div class="post-heading">
             <div class="tags">
               
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#LeetCode" title="LeetCode"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
+              
             </div>
-            <h2></h2>
+            <h2>【LeetCode-简单】26.删除排序数组中的重复项</h2>
             <h3 class="subheading" style="font-size: 21px;"></h3>
             <span class="meta">
               By 大Van家 on
@@ -411,14 +415,14 @@
             <div class="blank_box"></div>
             <span class="meta">
               阅读时间 <span class="post-count">
-                1
+                8
               </span> 分钟
             </span>
             <div class="blank_box"></div>
             <span class="meta">
               文章共 
               <span class="post-count">
-                0
+                2k
               </span> 
               字
             </span>
@@ -481,15 +485,172 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        
+        <p>要点：<a target="_blank" rel="noopener" href="https://github.com/azl397985856/leetcode/blob/master/thinkings/basic-data-structure.md">数组</a>、双指针。</p>
+<h3 id="描述">描述</h3>
+<p>给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
+<p>说明:</p>
+<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
+<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>你可以想象内部操作如下:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝</span></span><br><span class="line">int len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在函数里修改输入数组对于调用者是可见的。</span></span><br><span class="line"><span class="comment">// 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。</span></span><br><span class="line"><span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>示例 1：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">输出：<span class="number">2</span>, nums = [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">2</span> ，并且原数组 nums 的前两个元素被修改为 <span class="number">1</span>, <span class="number">2</span> 。不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+<p>示例 2：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">输出：<span class="number">5</span>, nums = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">5</span> ， 并且原数组 nums 的前五个元素被修改为 <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> 。不需要考虑数组中超出新长度后面的元素</span><br></pre></td></tr></table></figure>
+<p>提示：</p>
+<ul>
+<li>0 &lt;= nums.length &lt;= 3 * 104</li>
+<li>-104 &lt;= nums[i] &lt;= 104</li>
+<li>nums 已按升序排列</li>
+</ul>
+<h3 id="题解">题解</h3>
+<h4 id="复习JavaScript值传递与引用传递">复习JavaScript值传递与引用传递</h4>
+<p>JavaScript有5种基本的数据类型，分别是：布尔、null、undefined、String和Number。这些基本类型在赋值的时候是通过<strong>值传递</strong>的方式。值得注意的是还有另外三种类型: Array、Function和Object，它们通过引用来传递。从底层技术上看，它们三都是对象。</p>
+<p><strong>基本数据类型</strong></p>
+<p>如果一个基本的数据类型绑定到某个变量，我们可以认为该变量包含这个基本数据类型的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+<p>当我们使用<code>=</code>将这些变量赋值到另外的变量，实际上是将对应的<strong>值</strong>拷贝了一份，然后赋值给新的变量。我们把它称作<code>值传递</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = x;</span><br><span class="line"><span class="keyword">var</span> b = y;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(x, y, a, b) <span class="comment">// 10, &#x27;abc&#x27;, 10, &#x27;abc&#x27;</span></span><br></pre></td></tr></table></figure>
+<p><code>a</code>和<code>x</code>都包含10，<code>b</code>和<code>y</code>都包含<code>'abc'</code>，并且它们是完全<strong>独立</strong>的拷贝，互不干涉。如果我们将<code>a</code>的值改变，<code>x</code>不会受到影响。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> a = x;</span><br><span class="line"><span class="keyword">var</span> b = y;</span><br><span class="line">a = <span class="number">5</span>;</span><br><span class="line">b = <span class="string">&#x27;def&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(x, y, a, b); <span class="comment">// 10, &#x27;abc&#x27;, 5, &#x27;def&#x27;</span></span><br></pre></td></tr></table></figure>
+<p><strong>对象</strong></p>
+<p>如果一个变量绑定到一个非基本数据类型(Array, Function, Object)，那么它只记录了一个<strong>内存地址</strong>，该地址存放了具体的数据。注意之前提到指向基本数据类型的变量相当于包含了数据，而现在指向非基本数据类型的变量本身是<strong>不包含数据</strong>的。</p>
+<p>对象在内存中被创建，当我们声明<code>arr = []</code>，我们在内存中创建了一个数组。<code>arr</code>记录的是该内存的地址。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = []; <span class="comment">// (a)</span></span><br><span class="line">arr.push(<span class="number">1</span>); <span class="comment">// (b)</span></span><br></pre></td></tr></table></figure>
+<p>当执行完(a)之后，内存中创建了一个空的数组对象，其内存地址为<code>#001</code>，<code>arr</code>指向该地址。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arr</td>
+<td>#001</td>
+<td>[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>引用传递</strong></p>
+<p>对象是通过引用传递，而不是值传递。也就是说，<u>变量赋值只会将地址传递过去</u>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reference = [<span class="number">1</span>];</span><br><span class="line"><span class="keyword">var</span> refCopy = reference;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reference</td>
+<td>#001</td>
+<td>[1]</td>
+</tr>
+<tr>
+<td>refCopy</td>
+<td>#001</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><code>reference</code>和<code>refCopy</code>指向同一个数组。 如果我们更新<code>reference</code>，<code>refCopy</code>也会受到影响。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reference.push(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(reference, refCopy); <span class="comment">// [1, 2], [1, 2]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reference</td>
+<td>#001</td>
+<td>[1, 2]</td>
+</tr>
+<tr>
+<td>refCopy</td>
+<td>#001</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>引用重新赋值</strong></p>
+<p>如果我们将一个已经赋值的变量重新赋值，那么它将包含新的数据或者引用地址。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">first</span>: <span class="string">&#x27;fundebug.com&#x27;</span>&#125;;</span><br><span class="line">obj = &#123; <span class="attr">second</span>: <span class="string">&#x27;fundebug.cn&#x27;</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(obj) <span class="comment">// &#123; second: &#x27;fundebug.cn&#x27; &#125;</span></span><br></pre></td></tr></table></figure>
+<p><code>obj</code>从指向第一个对象变为指向第二个对象。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>obj</td>
+<td>#001</td>
+<td>{first: ‘<a target="_blank" rel="noopener" href="http://fundebug.com">fundebug.com</a>’}</td>
+</tr>
+<tr>
+<td></td>
+<td>#002</td>
+<td>{second: ‘<a target="_blank" rel="noopener" href="http://fundebug.cn">fundebug.cn</a>’}</td>
+</tr>
+</tbody>
+</table>
+<p>如果一个对象没有被任何变量指向，就如第一个对象(地址为<code>#001</code>)，JavaScript引擎的垃圾回收机制会将该对象销毁并释放内存。</p>
+<p><strong>== 和 ===</strong></p>
+<p>对于<u>引用类型</u>的变量，<code>==</code>和<code>===</code>只会判断引用的<strong>地址</strong>是否相同，而不会判断对象具体里属性以及值是否相同。因此，如果两个变量指向相同的对象，则返回<code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arrRef = [<span class="string">&#x27;Hi!&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> arrRef2 = arrRef;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arrRef === arrRef2); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>如果是不同的对象，<strong>即使</strong>包含相同的属性和值，也会返回<code>false</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="string">&quot;Hi!&quot;</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="string">&quot;Hi!&quot;</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr1 === arr2); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>如果想判断两个不同的对象是否真的相同，一个简单的方法就是将它们<strong>转换为字符串然后判断</strong>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1str = <span class="built_in">JSON</span>.stringify(arr1);</span><br><span class="line"><span class="keyword">var</span> arr2str = <span class="built_in">JSON</span>.stringify(arr2);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr1str === arr2str); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>另一个方法就是<strong>递归地判断每一个属性的值</strong>，直到基本类型位置，然后判断是否相同。</p>
+<p><strong>函数参数</strong></p>
+<p>当我们将基本类型数据传入函数，函数会将这些数据拷贝赋值给函数的参数变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hundred = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> two = <span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">x, y</span>) </span>&#123;    </span><br><span class="line">	<span class="keyword">return</span> x * y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> twoHundred = multiply(hundred, two);</span><br></pre></td></tr></table></figure>
+<p><code>hundred</code>的值拷贝给变量<code>x</code>，<code>two</code>的值拷贝给变量<code>y</code>。</p>
+<p><strong>纯函数</strong></p>
+<p>对于一个函数，给定一个输入，返回一个唯一的输出。除此之外，不会对外部环境产生任何附带影响。我们机会称该函数为纯函数。所有函数内部定义的变量在函数返回之后都被垃圾回收掉。</p>
+<p>但是，如果函数的输入是对象(Array, Function, Object)，那么传入的是一个引用。<strong>对该变量的操作将会影响到原本的对象</strong>。这样的编程手法将产生附带影响，是的代码的逻辑复杂和可读性变低。</p>
+<p>因此，很多数组函数，比如<code>Array.map</code>和<code>Array.filter</code>是以纯函数的形式实现。虽然它们的参数是一个数组变量，但是通过<strong>深度拷贝</strong>并赋值给一个<strong>新的变量</strong>，然后在新的数组上操作，来防止原始数组被更改。</p>
+<p>我们来看一个例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeAgeImpure</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    person.age = <span class="number">25</span>;</span><br><span class="line">    <span class="keyword">return</span> person;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> alex = &#123;</span><br><span class="line">    name: <span class="string">&#x27;Alex&#x27;</span>,</span><br><span class="line">    age: <span class="number">30</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> changedAlex = changeAgeImpure(alex);</span><br><span class="line"><span class="built_in">console</span>.log(alex); <span class="comment">// &#123; name: &#x27;Alex&#x27;, age: 25 &#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(changedAlex); <span class="comment">// &#123; name: &#x27;Alex&#x27;, age: 25 &#125;</span></span><br></pre></td></tr></table></figure>
+<p>在非纯函数<code>changeAgeImpure</code>中，将对象<code>person</code>的<code>age</code>更新并返回。原始的<code>alex</code>对象也被影响，<code>age</code>更新为25。</p>
+<p>让我们来看如何实现一个<strong>纯函数</strong>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeAgePure</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> newPersonObj = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(person));</span><br><span class="line">    newPersonObj.age = <span class="number">25</span>;</span><br><span class="line">    <span class="keyword">return</span> newPersonObj;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> alex = &#123;</span><br><span class="line">    name: <span class="string">&#x27;Alex&#x27;</span>,</span><br><span class="line">    age: <span class="number">30</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> alexChanged = changeAgePure(alex);</span><br><span class="line"><span class="built_in">console</span>.log(alex); <span class="comment">// &#123; name: &#x27;Alex&#x27;, age: 30 &#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(alexChanged); <span class="comment">// &#123; name: &#x27;Alex&#x27;, age: 25 &#125;</span></span><br></pre></td></tr></table></figure>
+<p>我们通过<code>JSON.sringify</code>将对象变为一个<strong>字符串</strong>，然后再通过<code>JSON.parse</code>将字符串变回<strong>对象</strong>。通过该操作会生成一个新的对象。</p>
+<p><strong>面试题思考</strong></p>
+<p>值传递和引用传递经常在面试中被问到，来尝试回答一下如下代码如何输出：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeAgeAndReference</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    person.age = <span class="number">25</span>;</span><br><span class="line">    person = &#123;</span><br><span class="line">        name: <span class="string">&#x27;John&#x27;</span>,</span><br><span class="line">        age: <span class="number">50</span></span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> person;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> personObj1 = &#123;</span><br><span class="line">    name: <span class="string">&#x27;Alex&#x27;</span>,</span><br><span class="line">    age: <span class="number">30</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> personObj2 = changeAgeAndReference(personObj1);</span><br><span class="line"><span class="built_in">console</span>.log(personObj1); <span class="comment">// -&gt; ?</span></span><br><span class="line"><span class="built_in">console</span>.log(personObj2); <span class="comment">// -&gt; ?</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>面试题思考：因为person.age=25是传递值所以影响到personObj1的age值，另一个是构造了一个新函数所以没有影响。</p>
+</blockquote>
+<p>转自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xuniannian/p/9854599.html#top">https://www.cnblogs.com/xuniannian/p/9854599.html#top</a></p>
+<hr>
+
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/cn/Algorithm-merge-two-sorted-lists/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】21.合并两个有序链表">&larr; 上一篇</a>
+          </li>
+          
           
           <li class="next">
-            <a href="/cn/Algorithm-merge-two-sorted-lists/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】21.合并两个有序链表">下一篇 &rarr;</a>
+            <a href="/cn/Algorithm-validParentheses/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】20.有效的括号">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -539,7 +700,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/FrontEndAdvanced-/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【LeetCode-简单】26.删除排序数组中的重复项&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/Algorithm-remove-duplicates-from-sorted-array/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -573,7 +734,7 @@
       repo: 'gitblogv2',
       owner: 'yesmore',
       admin: 'yesmore',
-      id: 'Mon Sep 06 2021 21:10:47 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Mon Sep 06 2021 15:42:25 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -621,6 +782,17 @@
       <!-- Catalog: Tabe of Content -->
       <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">题解</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%A4%8D%E4%B9%A0JavaScript%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">复习JavaScript值传递与引用传递</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
 
 
       <!-- Sidebar Container -->
@@ -637,6 +809,10 @@
             <a href="/tags/">特色标签</a>
           </h5>
           <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
             
           </div>
         </section>
@@ -752,7 +928,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">286.4k</span>
+          站点总字数：<span class="post-count">288.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -826,7 +1002,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "yesmore";
     let ghPages = gh + ".github.io";
-    let pagePath = "cn/FrontEndAdvanced-/";
+    let pagePath = "cn/Algorithm-remove-duplicates-from-sorted-array/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
