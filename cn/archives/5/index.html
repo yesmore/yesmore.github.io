@@ -224,9 +224,7 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -246,7 +244,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -265,10 +265,6 @@
           
           
           
-          
-          
-          
-          
           <li>
             <a href="/tags/">
               
@@ -277,6 +273,10 @@
               
             </a>
           </li>
+          
+          
+          
+          
           
           
           
@@ -474,10 +474,7 @@
       对应《WebGL编程指南》第七章 22-LookAtTriangles、23-LookAtRotatedTriangles、24-LookAtRotatedTriangles_mvMatrix、25-LookAtTrianglesWithKeys
 要点：视点和视线、景深、观察者视图、模型视图矩阵
 
-知识点
-一、立方体由三角形构成
-1.1 深度
-​		之前讨论过，三维物体也是由二维图形（特别是......
+知识点一、立方体由三角形构成1.1 深度​        之前讨论过，三维物体也是由二维图形（......
     </div>
   </a>
   
@@ -514,17 +511,14 @@
     <div class="post-content-preview">
       对应《WebGL编程指南》第六章 GLSL ES
 
-总览
-本章知识点：
+总览本章知识点：
 1、数据、变量和变量类型
 2、矢量、矩阵、结构体、数组、采样器（纹理）
 3、运算、程序流、函数
 4、attribute、uniform和varying变量
 5、精度限定词
 6、预处理和指令
-回顾
-基本着色器代码
-1234567891011121314151617181920212223//顶点着色器程序var VSHAD......
+回顾基本着色器代码1234567891011121314151617181920212223//顶点着色器程序var VSHADER_......
     </div>
   </a>
   
@@ -562,12 +556,10 @@
       对应《WebGL编程指南》代码：21-MultiTexture
 要点：纹理映射、多个纹理单元使用
 
-知识点
-一、区别单个纹理单元
-1、片元着色器能够访问两个纹理
+知识点一、区别单个纹理单元1、片元着色器能够访问两个纹理
 2、最终的片元颜色由两个纹理上的纹素颜色共同决定
 3、initTextures(gl, n)函数创建了两个纹理对象
-12345678910111213141516171819202122232425function initText......
+12345678910111213141516171819202122232425function initTextur......
     </div>
   </a>
   
@@ -605,12 +597,11 @@
       思考：这种网页版的聊天功能应该如何去实现？？
 
 websocket介绍
-
 WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。
 websocket是一种持久协议，http是非持久协议
 
 现在很多网站都有实时推送的需求，比如聊天，客服咨询等
-早期没有websocket时，通过ajax轮询，由于htt......
+早期没有websocket时，通过ajax轮询，由于http......
     </div>
   </a>
   
@@ -647,11 +638,7 @@ websocket是一种持久协议，http是非持久协议
 要点：浏览器渲染原理（简介、渲染机制）、浏览器存储（cookie、LocalStorage、sessionStorage、IndexedDB）
 
 
-浏览器渲染原理
-简介
-引入
-
-
+浏览器渲染原理简介引入
 输入网址进入网页的三个阶段
 
 http请求阶段
@@ -661,20 +648,16 @@ http响应阶段
 
 
 补充
-
-
 进程Process
 
 一个运行的程序/浏览器页面
 
 
-
 线程Thread
-
 
 进程内的子任务
 
-可多个线程同时进行......
+可多个线程同时进行，实际是轮流执行......
     </div>
   </a>
   
@@ -714,11 +697,8 @@ http响应阶段
 要点：纹理映射、纹理坐标
 
 
-知识点
-一、纹理映射
-​		概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
-​		作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA格式编码。
-二、纹理......
+知识点一、纹理映射​        概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
+​        作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA......
     </div>
   </a>
   
@@ -758,10 +738,8 @@ http响应阶段
 要点：【WebGL之巅】17-颜色与纹理-绘制三个不同颜色的顶点、gl.drawArrays、几何形状的装配和光栅化
 
 
-知识点
-一、几何形状的装配和光栅化
-在顶点着色器和片元着色器之间，有这样两个步骤：
-​		图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的第一个参......
+知识点一、几何形状的装配和光栅化在顶点着色器和片元着色器之间，有这样两个步骤：
+​        图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的......
     </div>
   </a>
   
@@ -801,9 +779,7 @@ http响应阶段
 要点：绘制三个不同color的点、交错组织
 
 
-知识点
-一、varying变量
-12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_C......
+知识点一、varying变量12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_Col......
     </div>
   </a>
   
@@ -843,13 +819,11 @@ http响应阶段
 要点：绘制三个不同size的点、交错组织
 
 
-知识点
-一、回顾—将顶点坐标传入着色器步骤
-1.创建缓冲区对象
+知识点一、回顾—将顶点坐标传入着色器步骤1.创建缓冲区对象
 2.将缓冲区对象绑定到target上
 3.向缓存对象写入数据
 4.将缓冲区对象分配给a_Postion变量(attribute变量)
-5.......
+5.连接......
     </div>
   </a>
   
@@ -890,11 +864,9 @@ http响应阶段
 tips：当前页含有动画示例，Tag Cloud可能会失效。
 
 
-知识点
-一、动画原理
-基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
+知识点一、动画原理基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
 为了生成动画，需要两个关键机制：
-​	机制一：在规定时刻反复调用同......
+​    机制一：在规定时刻反复调用......
     </div>
   </a>
   
@@ -1080,11 +1052,11 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
     
     
     
-    <a href="/tags/#前端进阶" title="前端进阶" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
-    
-    
-    
     <a href="/tags/#Echarts" title="Echarts" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Echarts</a>
+    
+    
+    
+    <a href="/tags/#前端进阶" title="前端进阶" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
     
     
     
@@ -1369,7 +1341,7 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">288.4k</span>
+          站点总字数：<span class="post-count">288.5k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
