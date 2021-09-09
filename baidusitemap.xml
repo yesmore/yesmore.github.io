@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Interactive/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-CORS/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Http/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Promise/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-JsInBrowser/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-JsShort/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-reCode/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Execution-sequence/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-JavaScript/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-browser/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/Algorithm-maximum-subarray/</loc>
+    <lastmod>2021-09-09</lastmod>
+  </url>
+  <url>
     <loc>https://yesmore.cc/cn/FrontEndAdvanced-CSS/</loc>
     <lastmod>2021-09-07</lastmod>
   </url>

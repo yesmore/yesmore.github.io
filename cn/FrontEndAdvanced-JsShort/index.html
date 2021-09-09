@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/FrontEndAdvanced-JsShort/">
+  <title>
+    
+      【前端进阶】JavaScript的缺点 - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+          
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <!-- <li>
+            <a href="/categories">分类</a>
+          </li> -->
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+              
+            </div>
+            <h2>【前端进阶】JavaScript的缺点</h2>
+            <h3 class="subheading" style="font-size: 21px;"></h3>
+            <span class="meta">
+              By 大Van家 on
+              2021-09-09
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                12
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                3.3k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>随着前端快速发展，JavaScript 语言的设计缺陷在大型项目中逐渐显露。</p>
+<p>第 10 课时提到的模块问题就是其中之一，但庆幸的是，ES6 模块在原生层面解决了这个问题，不同环境下的兼容性问题也可以由工具转化代码来解决。</p>
+<p>这一课时要提到的<strong>类型问题</strong>，是一个需要依赖第三方规范和工具来解决的缺陷。JavaScript 的类型问题具体表现在下面 3 个方面。</p>
+<p><strong>1.</strong> <strong>类型声明</strong></p>
+<p>前面在第 08 课时中已经提过命名的提升特性，如果某个变量命名提升到全局，那么将是危险的。比如下面的代码，函数 fn 内部使用了一个变量 c，由于忘记使用关键字来声明，结果导致覆盖了全局变量 c。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> c = <span class="number">0</span></span><br><span class="line">...</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">  c = <span class="number">30</span>;</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br></pre></td></tr></table></figure>
+<p><strong>2.</strong> <strong>动态类型</strong></p>
+<p>动态类型是指在运行期间才做数据类型检查的语言，即动态类型语言编程时，不用给任何变量指定数据类型。</p>
+<p>下面是一个简单的例子，定义了一个函数 printId 来返回某个对象的 id 属性。如果我们在调用函数 printId 时要想了解参数 user 的数据结构和返回值类型，只能通过查看源码，或者运行时调试、打印来获取。当函数结构复杂，参数较多时这个过程就会大大降低代码的可维护性。虽然添加注释能在一定程度上缓解问题，但为函数编写注释并不是强制性约束，能否及时同步注释也可能会成为新的问题。</p>
+<p>就函数 printId 本身而言，也无法在编译时校验参数的合法性，只能在运行时添加校验逻辑，这也大大增加了程序出现 bug 的概率。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printId</span>(<span class="params">user</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> user.id</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3.</strong> <strong>弱类型</strong></p>
+<p>弱类型是指一个变量可以被赋予不同数据类型的值。这也是一个既灵活又可怕的特性，编写代码的时候非常方便，不用考虑变量的数据类型，但这也很容易出现 bug，调试起来会变得相当困难。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = []</span><br><span class="line">...</span><br><span class="line">tmp = <span class="literal">null</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">// tmp 到底会变成什么？</span></span><br></pre></td></tr></table></figure>
+<p>为了解决上面 3 个问题，开源社区提供了解决方案——TypeScript。它是基于 JavaScript 的语法糖，也就是说 TypeScript 代码没有单独的运行环境，需要编译成 JavaScript 代码之后才能运行。<br>从它的名字不难看出，它的核心特性是类型“Type”。具体工作原理就是在代码编译阶段进行类型检测，这样就能在代码部署运行之前及时发现问题。</p>
+<h3 id="类型与接口"><a href="#类型与接口" class="headerlink" title="类型与接口"></a>类型与接口</h3><p>TypeScript 让 JavaScript 变成了<strong>静态强类型\</strong>*<em>、变量<strong>需要严格声明的语言，为此定义了两个重要概念：</strong>类型（type）*<em>和**接口（interface）</em></em>。</p>
+<p>TypeScript 在 JavaScript 原生类型的基础上进行了扩展，但为了和基础类型对象进行区分，采用了小写的形式，比如 Number 类型对应的是 number。类型之间可以互相组合形成新的类型。</p>
+<p>一些数据类型在前面第 07 课时中已经提过，这里不再赘述。下面补充一下 TypeScript 扩展的类型。</p>
+<p><strong>1.</strong> <strong>元组</strong></p>
+<p>元组可以看成是具有固定长度的数组，其中数组元素类型可以不同。比如下面的代码声明了一个元组变量 x，x 的第一个元素是字符串，第二个是数字；又比如 react hooks 就是用到了元组类型。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x: [<span class="built_in">string</span>, <span class="built_in">number</span>];</span><br></pre></td></tr></table></figure>
+<p><strong>2.</strong> <strong>枚举</strong></p>
+<p>枚举指的是带有名字的常量，可以分为<strong>数字枚举</strong>、<strong>字符串枚举</strong>和<strong>异构枚举</strong>（字符串和数字的混合）3 种。比较适用于前后端通用的枚举值，比如通过 AJAX 请求获取的数据状态，对于仅在前端使用的枚举值还是推荐使用 Symbol。</p>
+<p>下面是一个异构枚举的例子，定义了数字枚举值 0 和字符串枚举值 “YES”。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">enum</span> example &#123;</span><br><span class="line">    No = <span class="number">0</span>,</span><br><span class="line">    Yes = <span class="string">&quot;YES&quot;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也可以使用 const 修饰符来定义枚举值，通过这种定义方式，TypeScript 会在编译的时候，直接把枚举引用替换成对应的枚举值而非创建枚举对象。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">enum</span> example &#123;</span><br><span class="line">    No = <span class="number">0</span>,</span><br><span class="line">    Yes = <span class="string">&quot;YES&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(example.No)</span><br><span class="line"><span class="comment">// 编译成</span></span><br><span class="line"><span class="keyword">var</span> example;</span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">example</span>) </span>&#123;</span><br><span class="line">    example[example[<span class="string">&quot;No&quot;</span>] = <span class="number">0</span>] = <span class="string">&quot;No&quot;</span>;</span><br><span class="line">    example[<span class="string">&quot;Yes&quot;</span>] = <span class="string">&quot;YES&quot;</span>;</span><br><span class="line">&#125;)(example || (example = &#123;&#125;));</span><br><span class="line"><span class="built_in">console</span>.log(example.No);</span><br><span class="line"><span class="comment">////////////</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">enum</span> example &#123;</span><br><span class="line">    No = <span class="number">0</span>,</span><br><span class="line">    Yes = <span class="string">&quot;YES&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(example.No)</span><br><span class="line"><span class="comment">//  编译成</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0</span> <span class="comment">/* No */</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>3.</strong> <strong>any</strong></p>
+<p>any 类型代表可以是任何一种类型，所以会跳过类型检查，相当于让变量或返回值又变成弱类型。因此建议尽量减少 any 类型的使用。</p>
+<p><strong>4.</strong> <strong>void</strong></p>
+<p>void 表示没有任何类型，常用于描述无返回值的函数。</p>
+<p><strong>5.</strong> <strong>never</strong></p>
+<p>never 类型表示的是那些永不存在的值的类型，对于一些特殊的校验场景比较有用，比如代码的完整性检查。下面的示例代码通过穷举判断变量 u 的值来执行对应逻辑，如果此时变量 u 的可选值新增了字符串 “c”，那么这段代码并不会给出提示告诉开发者还有一种 u 等于字符串 “c” 的场景，但如果增加 never 类型赋值的话在编译时就可以给出提示。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> u: <span class="string">&#x27;a&#x27;</span>|<span class="string">&#x27;b&#x27;</span></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">if</span>(u === <span class="string">&#x27;a&#x27;</span>) &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (u === <span class="string">&#x27;b&#x27;</span>) &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>增加了 never 类型变量赋值：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> u: <span class="string">&#x27;a&#x27;</span>|<span class="string">&#x27;b&#x27;</span>|<span class="string">&#x27;c&#x27;</span></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">if</span>(u === <span class="string">&#x27;a&#x27;</span>) &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (u === <span class="string">&#x27;b&#x27;</span>) &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> trmp: <span class="built_in">never</span> = u <span class="comment">// Type &#x27;&quot;c&quot;&#x27; is not assignable to type &#x27;never&#x27;.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接口的作用和类型非常相似，在大多数情况下可以通用，只存在一些细小的区别（比如同名接口可以自动合并，而类型不能；在编译器中将鼠标悬停在接口上显示的是接口名称，悬停在类型上显示的是字面量类型），最明显的区别还是在写法上。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 声明 */</span></span><br><span class="line"><span class="keyword">interface</span> IA &#123;</span><br><span class="line">  id: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> TA = &#123;</span><br><span class="line">  id: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 继承 */</span></span><br><span class="line"><span class="keyword">interface</span> IA2 <span class="keyword">extends</span> IA &#123;</span><br><span class="line">    name: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> TA2 = TA &amp; &#123; <span class="attr">name</span>: <span class="built_in">string</span> &#125;</span><br><span class="line"><span class="comment">/* 实现 */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="title">implements</span> <span class="title">IA</span> </span>&#123;</span><br><span class="line">    id: <span class="built_in">string</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A2</span> <span class="title">implements</span> <span class="title">TA</span> </span>&#123;</span><br><span class="line">    id: <span class="built_in">string</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类型抽象"><a href="#类型抽象" class="headerlink" title="类型抽象"></a>类型抽象</h3><p><strong>泛型</strong>是对类型的一种抽象，一般用于函数，能让调用者动态地指定部分数据类型。这一点和 any 类型有些像，对于类型的定义具有不确定性，可以指代多种类型，但最大区别在于泛型可以对函数成员或类成员产生约束关系。</p>
+<p>下面代码是 react 的钩子函数 useState 的类型定义，就用到了泛型。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">useState</span>&lt;<span class="title">S</span>&gt;(<span class="params">initialState: S | (() =&gt; S)</span>): [<span class="title">S</span>, <span class="title">Dispatch</span>&lt;<span class="title">SetStateAction</span>&lt;<span class="title">S</span>&gt;&gt;]</span>;</span><br></pre></td></tr></table></figure>
+<p>这段代码中 S 称为<strong>泛型变量</strong>。从这个定义可看出，useState 可以接收任何类型的参数或回调函数，但返回的元组数据第一个值必定和参数类型或者回调函数返回值类型相同，都为 S。<br>如果使用 any 类型来取代泛型，那么我们只能知道允许传入任何参数或回调函数，而无法知道返回值与入参的对应关系。</p>
+<p>在使用泛型的时候，我们可以通过尖括号来手动指定泛型变量的类型，这个指定操作称之为<strong>类型断言，</strong>也可以不指定，让 TypeScript 自行推断类型。比如下面的代码就通过类型断言，将范型变量指定为 string 类型。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [id, setId] = useState&lt;<span class="built_in">string</span>&gt;(<span class="string">&#x27;&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="类型组合"><a href="#类型组合" class="headerlink" title="类型组合"></a>类型组合</h3><p>类型组合就是把现有的多种类型叠加到一起，组合成一种新的类型，具体有两种方式。</p>
+<h4 id="交叉"><a href="#交叉" class="headerlink" title="交叉"></a><strong>交叉</strong></h4><p>交叉就是将多个类型合并为一个类型，操作符为 “&amp;” 。下面的代码定义了一个 Admin 类型，它同时是类型 Student 和类型 Teacher 的交叉类型。 就是说 Admin 类型的对象同时拥有了这 2 种类型的成员。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Admin = Student &amp; Teacher</span><br></pre></td></tr></table></figure>
+<h4 id="联合"><a href="#联合" class="headerlink" title="联合"></a><strong>联合</strong></h4><p>联合就是表示符合多种类型中的任意一个，不同类型通过操作符“|”连接。下面代码定义的类型是 AorB，表示该类型值可以是类型 A，也可以是类型 B。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> A = &#123;</span><br><span class="line">  a: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> B = &#123;</span><br><span class="line">  b: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> AorB = A | B</span><br></pre></td></tr></table></figure>
+<p>对于联合类型 AorB，我们能够确定的是它包含了 A 和 B 中共有的成员。如果我们想确切地了解值是否为类型 A，只能通过检查值的方法是否存在来进行判断。例如，下面的变量 v 属于 AorB 类型，在需要确认其具体类型时，先将变量 v 的类型断言为 A，然后再调用其属性 a 进行判断。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v: AorB</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">if</span> ((&lt;A&gt;v).a) &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  (&lt;B&gt;v).b</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类型引用"><a href="#类型引用" class="headerlink" title="类型引用"></a>类型引用</h3><h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>索引类型的目的是让 TypeScript 编译器检查出使用了动态属性名的类型，需要通过<strong>索引类型查询</strong>和<strong>索引类型访问</strong>来实现。</p>
+<p>下面的示例代码实现了一个简单的函数 getValue ，传入对象和对象属性名获取对应的值。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getValue</span>&lt;<span class="title">T</span>, <span class="title">K</span> <span class="title">extends</span> <span class="title">keyof</span> <span class="title">T</span>&gt;(<span class="params">o: T, name: K</span>): <span class="title">T</span>[<span class="title">K</span>] </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> o[name]; <span class="comment">// o[name] is of type T[K]</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> com = &#123;</span><br><span class="line">    name: <span class="string">&#x27;lagou&#x27;</span>,</span><br><span class="line">    id: <span class="number">123</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> id: <span class="built_in">number</span> = getValue(com, <span class="string">&#x27;id&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> no = getValue(com, <span class="string">&#x27;no&#x27;</span>) <span class="comment">//报错：Argument of type &#x27;&quot;no&quot;&#x27; is not assignable to parameter of type &#x27;&quot;id&quot; | &quot;name&quot;&#x27;.</span></span><br></pre></td></tr></table></figure>
+<p>其中，泛型变量 K 继承了泛型变量 T 的属性名联合，这里的 keyof 就是索引类型查询操作符；返回值 T[K] 就是索引访问操作符的使用方式。</p>
+<p>前面提到的 Pick 类型就是通过索引类型来实现的。</p>
+<h4 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h4><p>映射类型是指从已有类型中创建新的类型。TypeScript 预定义了一些类型，比如最常用的 Pick 和 Omit。</p>
+<p>下面是 Pick 类型的使用示例及源码，可以看到类型 Pick 从类型 task 中选择属性 “title” 和 “description” 生成了新的类型 simpleTask。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Pick&lt;T, K <span class="keyword">extends</span> keyof T&gt; = &#123;</span><br><span class="line">  [P <span class="keyword">in</span> K]: T[P];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">interface</span> task &#123;</span><br><span class="line">  title: <span class="built_in">string</span>;</span><br><span class="line">  description: <span class="built_in">string</span>;</span><br><span class="line">  status: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> simpleTask = Pick&lt;task, <span class="string">&#x27;title&#x27;</span> | <span class="string">&#x27;description&#x27;</span>&gt;<span class="comment">// &#123;title: string;description: string&#125;</span></span><br></pre></td></tr></table></figure>
+<p>类型 Pick 的实现，先用到了索引类型查询，获取了类型 T 的属性名联合 K，然后通过操作符 in 对其进行遍历，同时又用到了索引类型访问来表示属性值。</p>
+<p>由于篇幅所限，更多的预定义类型这里就不一一讲解了，对实现原理感兴趣的同学可以参看其<a target="_blank" rel="noopener" href="https://github.com/microsoft/TypeScript/blob/master/lib/lib.es5.d.ts">源码</a>。</p>
+<h3 id="实践：编写类型声明"><a href="#实践：编写类型声明" class="headerlink" title="实践：编写类型声明"></a>实践：编写类型声明</h3><p>结合上面所说的内容，再通过一个例子来加深理解。我们以第 03 课时的代码 2 的 debounce 函数为例，为这段代码添加类型声明，转换成 TeypScript 语法。</p>
+<p>需要添加类型声明的地方通常是<strong>变量和函数</strong>。</p>
+<p>首先给函数 debounce 添加类型，包括参数类型和返回值类型。参数类型使用泛型变量，在调用函数 debounce 的时候手动指定，泛型变量有 3 个：函数 T 、函数 T 的返回值 U 和 函数 T 的参数 V。</p>
+<p>然后是变量 timeout ，当定时器存在时它的值为 number，定时器不存在时值为 null。</p>
+<p>最后按照之前定义的泛型变量给函数 debounced 和函数 flush 添加类型声明。</p>
+<p>具体代码如下：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> debounce = <span class="xml"><span class="tag">&lt;<span class="name">T</span> <span class="attr">extends</span> <span class="attr">Function</span>, <span class="attr">U</span>, <span class="attr">V</span> <span class="attr">extends</span> <span class="attr">any</span>[]&gt;</span>(func: T, wait: number = 0) =&gt; &#123;</span></span><br><span class="line"><span class="xml">  let timeout: number | null = null</span></span><br><span class="line"><span class="xml">  let args: V</span></span><br><span class="line">  function debounced(...arg: V): Promise&lt;U&gt; &#123;</span><br><span class="line">    args = arg</span><br><span class="line">    if(timeout) &#123;</span><br><span class="line">      clearTimeout(timeout)</span><br><span class="line">      timeout = null</span><br><span class="line">    &#125;</span><br><span class="line">    // 以 Promise 的形式返回函数执行结果</span><br><span class="line">    return new Promise((res, rej) =&gt; &#123;</span><br><span class="line">      timeout = setTimeout(async () =&gt; &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          const result: U = await func.apply(this, args)</span><br><span class="line">          res(result)</span><br><span class="line">        &#125; catch(e) &#123;</span><br><span class="line">          rej(e)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, wait)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  // 允许取消</span><br><span class="line">  function cancel() &#123;</span><br><span class="line">    clearTimeout(timeout)</span><br><span class="line">    timeout = null</span><br><span class="line">  &#125;</span><br><span class="line">  // 允许立即执行</span><br><span class="line">  function flush(): U &#123;</span><br><span class="line">    cancel()</span><br><span class="line">    return func.apply(this, args)</span><br><span class="line">  &#125;</span><br><span class="line">  debounced.cancel = cancel</span><br><span class="line">  debounced.flush = flush</span><br><span class="line">  return debounced</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这一课时重点讲述了如何通过 TypeScript 来解决 JavaScript 的类型问题，TypeScript 在原有的基础类型上进行了扩展，理解 TypeScript 的基本类型并不难，重点需要掌握如何通过泛型来对类型进行抽象，如何通过组合及引用来对已有的类型创建新的类型。</p>
+<p>思考题：TypeScript 能较好地解决编译时类型校验的问题，但无法对运行时的数据（比如通过 AJAX 请求获得的数据）进行校验，你能想到有什么好的方法解决这个问题吗？</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/FrontEndAdvanced-JsInBrowser/" data-toggle="tooltip" data-placement="top" title="【前端进阶】浏览器执行JavaScript过程详解">&larr; 上一篇</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/FrontEndAdvanced-reCode/" data-toggle="tooltip" data-placement="top" title="【前端进阶】复用你的代码">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【前端进阶】JavaScript的缺点&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/FrontEndAdvanced-JsShort/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Thu Sep 09 2021 12:52:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%E4%B8%8E%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">类型与接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%8A%BD%E8%B1%A1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">类型抽象</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%E7%BB%84%E5%90%88"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">类型组合</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BA%A4%E5%8F%89"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">交叉</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%81%94%E5%90%88"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">联合</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%BC%95%E7%94%A8"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">类型引用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%B4%A2%E5%BC%95"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">索引</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%98%A0%E5%B0%84"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">映射</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E8%B7%B5%EF%BC%9A%E7%BC%96%E5%86%99%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">实践：编写类型声明</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">总结</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#前端进阶" title="前端进阶">前端进阶</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">344.5k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/FrontEndAdvanced-JsShort/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	</body>
+</html>

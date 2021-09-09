@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/FrontEndAdvanced-browser/">
+  <title>
+    
+      【前端进阶】浏览器如何渲染页面、浏览器的进程与线程以及浏览器加载网络资源的速度 - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+          
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <!-- <li>
+            <a href="/categories">分类</a>
+          </li> -->
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Browser" title="Browser"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
+              
+              <a class="tag" href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+              
+            </div>
+            <h2>【前端进阶】浏览器如何渲染页面、浏览器的进程与线程以及浏览器加载网络资源的速度</h2>
+            <h3 class="subheading" style="font-size: 21px;"></h3>
+            <span class="meta">
+              By 大Van家 on
+              2021-09-09
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                30
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                8.4k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>要点：浏览器渲染原理、浏览器进程与线程、浏览器加载网络资源的速度</p>
+<h2 id="一、浏览器渲染页面的步骤"><a href="#一、浏览器渲染页面的步骤" class="headerlink" title="一、浏览器渲染页面的步骤"></a>一、浏览器渲染页面的步骤</h2><p>结合代码实例讲解浏览器渲染页面时的流程和步骤。</p>
+<p>先来看一个例子，假如我们在浏览器中输入了一个网址，得到了下面的 html 文件，渲染引擎是怎样通过解析代码生成页面的呢？</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    lagou</span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="从-HTML-到-DOM"><a href="#从-HTML-到-DOM" class="headerlink" title="从 HTML 到 DOM"></a>从 HTML 到 DOM</h3><h4 id="1-字节流解码"><a href="#1-字节流解码" class="headerlink" title="1. 字节流解码"></a>1. 字节流解码</h4><p>对于上面的代码，我们看到的是它的字符形式。而浏览器通过 HTTP 协议接收到的文档内容是字节数据，下图是抓包工具截获的报文截图，报文内容为左侧高亮显示的区域（为了查看方便，该工具将字节数据以十六进制方式显示）。当浏览器得到字节数据后，通过“<a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/parsing.html#encoding-sniffing-algorithm">编码嗅探算法</a>”来确定字符编码，然后根据字符编码将字节流数据进行解码，生成截图右侧的字符数据，也就是我们编写的代码。</p>
+<p>这个把字节数据解码成字符数据的过程称之为“<strong>字节流解码</strong>”。</p>
+<p><img src="CgqCHl7OM8-AJ2jzAABvLLJLW2s663.png" alt="image (4).png"></p>
+<p>我们通过浏览器调试工具查看网络请求时，也是经过了上述操作过程，才能直观地看到字符串。</p>
+<h4 id="2-输入流预处理"><a href="#2-输入流预处理" class="headerlink" title="2. 输入流预处理"></a>2. 输入流预处理</h4><p>通过上一步解码得到的字符流数据在进入解析环节之前还需要进行一些预处理操作。比如将换行符转换成统一的格式，最终生成规范化的字符流数据，这个把字符数据进行统一格式化的过程称之为“<strong>输入流预处理</strong>”。</p>
+<h4 id="3-令牌化"><a href="#3-令牌化" class="headerlink" title="3. 令牌化"></a>3. 令牌化</h4><p>经过前两步的数据解码和预处理，下面就要进入重要的解析步骤了。</p>
+<p>解析包含两步，第一步是<strong>将字符数据转化成令牌（Token）</strong>，第二步是<strong>解析 HTML 生成 DOM 树</strong>。先来说说令牌化，其过程是使用了一种类似状态机的算法，即每次接收一个或多个输入流中的字符；然后根据当前状态和这些字符来更新下一个状态，也就是说在不同的状态下接收同样的字符数据可能会产生不同的结果，比如当接收到“body”字符串时，在标签打开状态会解析成标签，在标签关闭状态则会解析成文本节点。</p>
+<p>这个算法的解析规则较多，在此就不一一列举了，有兴趣的同学可以通过下面这个简单的例子来理解其原理。</p>
+<p>上述 html 代码的标记过程如下：</p>
+<ol>
+<li>初始化为“数据状态”（Data State）；</li>
+<li>匹配到字符 &lt;，状态切换到 “标签打开状态”（Tag Open State）；</li>
+<li>匹配到字符 !，状态切换至 “标签声明打开状态”（Markup Declaration Open State），后续 7 个字符可以组成字符串 DOCTYPE，跳转到 “DOCTYPE 状态”（DOCTYPE State）；</li>
+<li>匹配到字符为空格，当前状态切换至 “DOCTYPE 名称之前状态”（Before DOCTYPE Name State）；</li>
+<li>匹配到字符串 html，创建一个新的 DOCTYPE 标记，标记的名字为 “html” ，然后当前状态切换至 “DOCTYPE 名字状态”（DOCTYPE Name State）；</li>
+<li>匹配到字符 &gt;，跳转到 “数据状态” 并且释放当前的 DOCTYPE 标记；</li>
+<li>匹配到字符 &lt;，切换到 “标签打开状态”；</li>
+<li>匹配到字符 h，创建一个新的起始标签标记，设置标记的标签名为空，当前状态切换至 “标签名称状态”（Tag Name State）；</li>
+<li>从字符 h 开始解析，将解析的字符一个一个添加到创建的起始标签标记的标签名中，直到匹配到字符 &gt;，此时当前状态切换至 “数据状态” 并释放当前标记，当前标记的标签名为 “html” 。</li>
+<li>解析后续的 的方式与 一致，创建并释放对应的起始标签标记，解析完毕后，当前状态处于 “数据状态” ；</li>
+<li>匹配到字符串 “标记” ，针对每一个字符，创建并释放一个对应的字符标记，解析完毕后，当前状态仍然处于 “数据状态” ；</li>
+<li>匹配到字符 &lt;，进入 “标签打开状态” ；</li>
+<li>匹配到字符 /，进入 “结束标签打开状态”（End Tag Open State）；</li>
+<li>匹配到字符 b，创建一个新的结束标签标记，设置标记的标签名为空，当前状态切换至“标签名称状态”（Tag Name State）；</li>
+<li>重新从字符 b 开始解析，将解析的字符一个一个添加到创建的结束标签标记的标签名中，直到匹配到字符 &gt;，此时当前状态切换至 “数据状态” 并释放当前标记，当前标记的标签名为 “body”；</li>
+<li>解析 的方式与 一样；</li>
+<li>所有的 html 标签和文本解析完成后，状态切换至 “数据状态” ，一旦匹配到文件结束标志符（EOF），则释放 EOF 标记。</li>
+</ol>
+<p>最终生成类似下面的令牌结构：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">开始标签:html</span><br><span class="line">  开始标签:head</span><br><span class="line">  结束标签:head</span><br><span class="line">  开始标签:body</span><br><span class="line">    字符串:lagou</span><br><span class="line">  结束标签:body</span><br><span class="line">结束标签:html</span><br></pre></td></tr></table></figure>
+<h4 id="补充-1：遇到-script-标签时的处理"><a href="#补充-1：遇到-script-标签时的处理" class="headerlink" title="补充 1：遇到 script 标签时的处理"></a>补充 1：遇到 script 标签时的处理</h4><p>如果在 HTML 解析过程中遇到 script 标签，则会发生一些变化。</p>
+<p>如果遇到的是内联代码，也就是在 script 标签中直接写代码，那么解析过程会暂停，执行权限会转给 JavaScript 脚本引擎，待 JavaScript 脚本执行完成之后再交由渲染引擎继续解析。有一种情况例外，那就是脚本内容中调用了改变 DOM 结构的 document.write() 函数，此时渲染引擎会回到第二步，将这些代码加入字符流，重新进行解析。</p>
+<p>如果遇到的是外链脚本，那么渲染引擎会按照我们在第 01 课时中所述的，根据标签属性来执行对应的操作。</p>
+<h4 id="4-构建-DOM-树"><a href="#4-构建-DOM-树" class="headerlink" title="4. 构建 DOM 树"></a>4. 构建 DOM 树</h4><p>解析 HTML 的第二步是树构建。</p>
+<p>浏览器在创建解析器的同时会创建一个 Document 对象。在树构建阶段，Document 会作为根节点被不断地修改和扩充。标记步骤产生的令牌会被送到树构建器进行处理。HTML 5 标准中定义了每类令牌对应的 DOM 元素，当树构建器接收到某个令牌时就会创建该令牌对应的 DOM 元素并将该元素插入到 DOM 树中。</p>
+<p>为了纠正元素标签嵌套错位的问题和处理未关闭的元素标签，树构建器创建的新 DOM 元素还会被插入到一个开放元素栈中。</p>
+<p>树构建算法也可以采用状态机的方式来描述，具体我们以步骤 1 的 HTML 代码为例进行举例说明。</p>
+<ol>
+<li>进入初始状态 “initial” 模式；</li>
+<li>树构建器接收到 DOCTYPE 令牌后，树构建器会创建一个 DocumentType 节点附加到 Document 节点上，DocumentType 节点的 name 属性为 DOCTYPE 令牌的名称，切换到 “before html” 模式；</li>
+<li>接收到令牌 html 后，树构建器创建一个 html 元素并将该元素作为 Document 的子节点插入到 DOM 树中和开放元素栈中，切换为 “before head” 模式；</li>
+<li>虽然没有接收到 head 令牌，但仍然会隐式地创建 head 元素并加到 DOM 树和开放元素栈中，切换到“in head”模式；</li>
+<li>将开放元素栈中的 head 元素弹出，进入 “after head”模式；</li>
+<li>接收到 body 令牌后，会创建一个 body 元素插入到 DOM 树中同时压入开放元素栈中，当前状态切换为 “in body” 模式；</li>
+<li>接收到字符令牌，创建 Text 节点，节点值为字符内容“标记”，将 Text 节点作为 body 元素节点插入到 DOM 树中；</li>
+<li>接收到结束令牌 body，将开放元素栈中的 body 元素弹出，切换至 “after body” 模式；</li>
+<li>接收到结束令牌 html，将开放元素栈中的 html 元素弹出，切换至 “after after body” 模式；</li>
+<li>接收到 EOF 令牌，树构建器停止构建，html 文档解析过程完成。</li>
+</ol>
+<p>最终生成下面的 DOM 树结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">              Document</span><br><span class="line">             &#x2F;        \</span><br><span class="line">DocumentType           HTMLHtmlElement</span><br><span class="line">                      &#x2F;               \</span><br><span class="line">       HTMLHeadElement                 HTMLBodyElement</span><br><span class="line">                                              |</span><br><span class="line">                                          TextNode</span><br></pre></td></tr></table></figure>
+<p><img src="CgqCHl7OM-CAQGiGAAFv6uHi6MI573.png" alt="1.png"></p>
+<h4 id="补充-2：从-CSS-到-CSSOM"><a href="#补充-2：从-CSS-到-CSSOM" class="headerlink" title="补充 2：从 CSS 到 CSSOM"></a>补充 2：从 CSS 到 CSSOM</h4><p>渲染引擎除了解析 HTML 之外，也需要解析 CSS。</p>
+<p>CSS 解析的过程与 HTML 解析过程步骤一致，最终也会生成树状结构。</p>
+<p>与 DOM 树不同的是，CSSOM 树的节点具有继承特性，也就是会先继承父节点样式作为当前样式，然后再进行补充或覆盖。下面举例说明。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123; font-size: 12px &#125;</span><br><span class="line">p &#123; font-weight: light &#125;</span><br><span class="line">span &#123; color: blue &#125;</span><br><span class="line">p span &#123; display: none &#125;</span><br><span class="line">img &#123; <span class="keyword">float</span>: left &#125;</span><br></pre></td></tr></table></figure>
+<p>对于上面的代码，会解析生成类似下面结构的 DOM 树：</p>
+<p><img src="Ciqc1F7OM-mAO8T2AAGu2Fxum4w061.png" alt="2.png"></p>
+<p>需要注意的是，上图中的 CSSOM 树并不完整，完整的 CSSOM 树还应当包括浏览器提供的默认样式（也称为“User Agent 样式”）。</p>
+<h3 id="从-DOM-到渲染"><a href="#从-DOM-到渲染" class="headerlink" title="从 DOM 到渲染"></a>从 DOM 到渲染</h3><p>有了 DOM 树和 CSSOM 树之后，渲染引擎就可以开始生成页面了。</p>
+<h4 id="5-构建渲染树"><a href="#5-构建渲染树" class="headerlink" title="5. 构建渲染树"></a>5. 构建渲染树</h4><p>DOM 树包含的结构内容与 CSSOM 树包含的样式规则都是独立的，为了更方便渲染，先需要将它们合并成一棵渲染树。</p>
+<p>这个过程会从 DOM 树的根节点开始遍历，然后在 CSSOM 树上找到每个节点对应的样式。</p>
+<p>遍历过程中会自动忽略那些不需要渲染的节点（比如脚本标记、元标记等）以及不可见的节点（比如设置了“display:none”样式）。同时也会将一些需要显示的伪类元素加到渲染树中。</p>
+<p>对于上面的 HTML 和 CSS 代码，最终生成的渲染树就只有一个 body 节点，样式为 font-size:12px。</p>
+<h4 id="6-布局"><a href="#6-布局" class="headerlink" title="6. 布局"></a>6. 布局</h4><p>生成了渲染树之后，就可以进入布局阶段了，布局就是计算元素的大小及位置。</p>
+<p>计算元素布局是一个比较复杂的操作，因为需要考虑的因素有很多，包括字体大小、换行位置等，这些因素会影响段落的大小和形状，进而影响下一个段落的位置。</p>
+<p>布局完成后会输出对应的“盒模型”，它会精确地捕获每个元素的确切位置和大小，将所有相对值都转换为屏幕上的绝对像素。</p>
+<h4 id="7-绘制"><a href="#7-绘制" class="headerlink" title="7. 绘制"></a>7. 绘制</h4><p>绘制就是将渲染树中的每个节点转换成屏幕上的实际像素的过程。得到布局树这份“施工图”之后，渲染引擎并不能立即绘制，因为还不知道绘制顺序，如果没有弄清楚绘制顺序，那么很可能会导致页面被错误地渲染。</p>
+<p>例如，对于使用 z-index 属性的元素（如遮罩层）如果未按照正确的顺序绘制，则将导致渲染结果和预期不符（失去遮罩作用）。</p>
+<p>所以绘制过程中的第一步就是遍历布局树，生成绘制记录，然后渲染引擎会根据绘制记录去绘制相应的内容。</p>
+<p>对于无动画效果的情况，只需要考虑空间维度，生成不同的图层，然后再把这些图层进行合成，最终成为我们看到的页面。当然这个绘制过程并不是静态不变的，会随着页面滚动不断合成新的图形。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这一课时主要讲解了浏览器渲染引擎生成页面的 7 个步骤，前面 4 个步骤为 DOM 树的生成过程，后面 3 个步骤是利用 DOM 树和 CSSOM 树来渲染页面的过程。我们想要理解和记忆这些过程其实很简单，那就是以数据变化为线索，具体来说数据的变化过程为：</p>
+<p>字节 → 字符 → 令牌 → 树 → 页面</p>
+<p>最后布置一道思考题：在构建渲染树的时候，渲染引擎需要遍历 DOM 树节点并从 CSSOM 树中找到匹配的样式规则，在匹配过程中是通过自上而下还是自下而上的方式呢？为什么？</p>
+<h2 id="二、浏览器的进程与线程"><a href="#二、浏览器的进程与线程" class="headerlink" title="二、浏览器的进程与线程"></a>二、浏览器的进程与线程</h2><p>浏览器作为前端代码运行的环境，也作为前端工程师的底层知识，熟悉它的结构及工作方式，无论是对于开发高性能 Web 应用，还是对于建立完善的前端知识框架，都起着至关重要的作用。这一课时我们就通过学习浏览器中的进程和线程来掌握它的整体架构。</p>
+<h3 id="进程（Process）与线程（Thread）"><a href="#进程（Process）与线程（Thread）" class="headerlink" title="进程（Process）与线程（Thread）"></a>进程（Process）与线程（Thread）</h3><p>我们先来好好梳理一下关于进程和线程的相关概念。<strong>进程</strong>是操作系统进行<strong>资源分配</strong>和调度的基本单位，<strong>线程</strong>是操作系统<strong>进行运算</strong>的最小单位。一个程序至少有一个进程，一个进程至少有一个线程。线程需要由进程来启动和管理。</p>
+<p><img src="CgqCHl75yNOASzO5AABzFfz1nN0731.png" alt="image (7).png"><br>　　Windows 下的进程信息</p>
+<p><img src="Ciqc1F75yOeAKk_WAABFeE0vWT8953.png" alt="image (8).png"><br>　　Linux 下的进程信息</p>
+<p>通常程序需要执行多个任务，比如浏览器需要一边渲染页面一边请求后端数据同时还要响应用户事件，而单线程的进程在同一时间内只能执行一个任务，无法满足多个任务并行执行的需求。要解决这个问题，可以通过 3 种方式来实现：</p>
+<ul>
+<li>多进程</li>
+<li>多线程（同一进程）</li>
+<li>多进程和多线程</li>
+</ul>
+<p>由于第 3 种方式是前两种方式的结合，所以这里只比较多进程和多线程的特点。</p>
+<p>前面提到进程是操作系统资源分配的基本单位，这里隐含的意思就是，不同进程之间的资源是独享的，不可以相互访问。这种特性带来的最大好处就是建立了进程之间的隔离性，避免了多个进程同时操作同一份数据而产生问题。</p>
+<p>而多线程没有分配独立的资源，线程之间数据都是共享的，也就意味着创建线程的成本更小，因为不需要分配额外的存储空间。但线程的数据共享也带来了很多问题：首先是稳定性，进程中任意线程崩溃都会导致整个进程的崩溃，也就是说会“牵连”到进程中的其他线程。安全隐患就更容易理解了，如果有恶意线程启动，可以随意访问进程中的任意资源。</p>
+<p>总而言之，<strong>多线程更轻量，多进程更安全更稳定</strong>。</p>
+<p>有了关于进程和线程的了解，下面以使用率最高的 Chrome 浏览器为例来进行分析，看看浏览器中用到了哪些进程和线程。</p>
+<h3 id="浏览器架构"><a href="#浏览器架构" class="headerlink" title="浏览器架构"></a>浏览器架构</h3><p>通过浏览器的任务管理器（快捷键 Shift + ESC）可以看到，当浏览器打开一个标签页时，启动了下面几个进程。</p>
+<p><img src="Ciqc1F75yPWAcTNpAABoToqDfx4887.png" alt="image (9).png"><br>　　浏览器进程启动图</p>
+<h4 id="浏览器进程"><a href="#浏览器进程" class="headerlink" title="浏览器进程"></a>浏览器进程</h4><p>浏览器的主进程负责界⾯显⽰（地址栏、导航栏、书签等）、处理用户事件、管理⼦进程等。</p>
+<h4 id="GPU-进程"><a href="#GPU-进程" class="headerlink" title="GPU 进程"></a>GPU 进程</h4><p>处理来自其他进程的 GPU 任务，比如来自渲染进程或扩展程序进程的 CSS3 动画效果，来自浏览器进程的界面绘制等。</p>
+<p>在第 06 课时中提到过浏览器渲染页面的过程，在最后一个步骤“绘制”中我们提到了图层的合成，而这个图层的合成操作其实就是交给 GPU 进程来完成的。</p>
+<p>它还有一个重要的特性，那就是可以利用 GPU 硬件来加速渲染，包括 Canvas 绘制、CSS3 转换（Transitions）、CSS3 变换（Transforms）、WebGL 等。具体原理就是如果 DOM 元素使用了这些属性，GPU 进程就会在合成层的时候对它进行单独处理，提升到一个独立的层进行绘制，这样就能避免重新布局和重新绘制。</p>
+<p>下面一段代码利用了 keyframes 来实现一个绕正方形运动的动画效果。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;gpu&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  .gpu &#123;</span><br><span class="line"><span class="css">    <span class="attribute">background-color</span>: darkgreen;</span></span><br><span class="line"><span class="css">    <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>, <span class="number">0</span>);</span></span><br><span class="line"><span class="css">    <span class="attribute">animation</span>: slide <span class="number">3.7s</span> ease-in-out infinite;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="keyword">@keyframes</span> slide &#123;</span></span><br><span class="line">    25% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">250px</span>, <span class="number">0</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">250px</span>, <span class="number">250px</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line">    75% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>, <span class="number">250px</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>通过浏览器性能分析工具来记录整个页面绘制过程，可以看到页面绘制完成后，浏览器没有再进行布局或绘制相关的操作。因此此时元素的绘制工作已经脱离了渲染引擎，交由 GPU 进程来维护。</p>
+<p><img src="CgqCHl75yP6AZbcnAABVpE0iXCY958.png" alt="image (10).png"><br>　　使用 GPU 加速进行渲染图</p>
+<p>为了进行对比，我们再将代码稍稍修改，通过固定定位来修改元素位置。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cpu&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  .cpu &#123;</span><br><span class="line"><span class="css">    <span class="attribute">background-color</span>: darkgreen;</span></span><br><span class="line"><span class="css">    <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">position</span>: fixed;</span></span><br><span class="line"><span class="css">    <span class="attribute">animation</span>: move <span class="number">3.7s</span> ease-in-out infinite;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="keyword">@keyframes</span> move &#123;</span></span><br><span class="line">    25% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">left</span>: <span class="number">250px</span>;</span></span><br><span class="line"><span class="css">      <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">left</span>: <span class="number">250px</span>;</span></span><br><span class="line"><span class="css">      <span class="attribute">top</span>: <span class="number">250px</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">    75% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">      <span class="attribute">top</span>: <span class="number">250px</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>发现页面在循环进行布局和绘制操作。</p>
+<p><img src="Ciqc1F75yQmAeLhpAABTOiBQjDo080.png" alt="image (11).png"><br>　　不使用 GPU 加速进行渲染图</p>
+<p><strong>Network Service 进程</strong></p>
+<p>负责⻚⾯的⽹络资源加载，比如在地址栏输入一个网页地址，网络进程会将请求后得到的资源交给渲染进程处理。本来只是浏览器主进程的一个模块，现在为了将浏览器进程进行“服务化”，被抽取出来，成了一个单独的进程。</p>
+<h4 id="V8-代理解析工具进程"><a href="#V8-代理解析工具进程" class="headerlink" title="V8 代理解析工具进程"></a><strong>V8 代理解析工具进程</strong></h4><p>Chrome 支持使用 JavaScript 来写连接代理服务器脚本，称为 pac 代理脚本。</p>
+<p>由于 pac 代理脚本是用 JavaScript 编写的，要能够解析 pac 代理脚本就必须要用到 JavaScript 脚本引擎，直接在浏览器主进程中引入 JavaScript 引擎并不符合进程“服务化”的设计理念，所以就把这个解析功能独立成一个进程。</p>
+<h4 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h4><p>浏览器会为每个标签页单独启动一个渲染进程，所以它和上述进程不同，并不是唯一的。</p>
+<p>渲染进程的任务是将 HTML、CSS 和 JavaScript 转化为⽤户可以与之交互的网页，每个渲染进程都会启动单独的渲染引擎线程和 JavaScript 引擎线程。关于渲染引擎的工作细节我们在第 06 课时中已经详细讨论过了，JavaScript 引擎线程也在第 12 课时中详细讨论过，这里就不重复讨论了。</p>
+<p>除此之外还包括事件触发线程，负责接收事件，并将回调函数放入 JavaScript 引擎线程的事件队列中，以及负责处理定时任务的定时器线程。</p>
+<p>这种设计保障了程序与系统的安全性，可以通过操作系统提供的权限机制来为每个渲染进程建立一个沙箱运行环境，从而防止恶意破坏用户系统或影响其他标签页的行为。</p>
+<p>同时也保障了渲染进程的稳定性，因为如果某个标签页失去响应，用户可以关掉这个标签页，此时其他标签页依然运行着，可以正常使用。如果所有标签页都运行在同一进程上，那么当某个失去响应，所有标签页都会失去响应。</p>
+<h4 id="扩展程序进程"><a href="#扩展程序进程" class="headerlink" title="扩展程序进程"></a>扩展程序进程</h4><p>主要是负责插件的运⾏，和渲染进程一样，也不是唯一的，浏览器会为每个插件都启动一个进程。这样的设计也是从安全性和稳定性考虑。</p>
+<h4 id="进程的服务化"><a href="#进程的服务化" class="headerlink" title="进程的服务化"></a>进程的服务化</h4><p>Chrome 官方团队在 2016年 提出了<a target="_blank" rel="noopener" href="https://docs.google.com/document/d/15I7sQyQo6zsqXVNAlVd520tdGaS8FCicZHrN0yRu-oU/edit#heading=h.cyhu8vkfrzar">面向服务的设计模型</a>，在系统资源允许的情况下，将浏览器主进程的各种模块拆分成独⽴的服务，每个服务在独立的进程中运行。通过高内聚、低耦合的结构让 Chrome 变得更稳定更安全。</p>
+<p>同时这种设计也具有一定的伸缩性，当运行在资源有限的设备上时，会将这些服务聚合到浏览器主进程中，从而减少内存占用。</p>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>这一课时我们分析了 Chrome 浏览器的架构，至少可以得到以下 3 个启示：</p>
+<ul>
+<li>多进程在稳定性和安全性上有优势，但是资源占用较多；</li>
+<li>对于复杂的应用我们可以采取服务化的设计方式，将功能模块单独拆分成进程来提供服务；</li>
+<li>合理利用 GPU 进程可以加速渲染。</li>
+</ul>
+<p>最后布置一道思考题：说一说你还了解过哪些多进程与多线程设计的应用，它们的结构又是什么样的呢？</p>
+<h2 id="三、浏览器加载网络资源的速度"><a href="#三、浏览器加载网络资源的速度" class="headerlink" title="三、浏览器加载网络资源的速度"></a>三、浏览器加载网络资源的速度</h2><p>想要加快浏览器加载网络资源的速度，可以通过减少响应内容大小，比如使用 gzip 算法压缩响应体内容和 HTTP/2 的压缩头部功能；另一种更通用也更为重要的技术就是<strong>使用缓存</strong>。</p>
+<p>下面两张截图分别是未使用缓存以及使用浏览器默认缓存的请求文件所消耗的时间，可以看出使用缓存之后加载时间大大缩短。</p>
+<p><img src="CgqCHl8MKQyAOi4qAAAqnHUKGOQ421.png" alt="Drawing 0.png"></p>
+<p>从服务端请求文件所消耗的时间</p>
+<p><img src="Ciqc1F8MKRaAVJdKAAAsNYhLc68530.png" alt="Drawing 1.png"></p>
+<p>从缓存中获取文件所消耗的时间</p>
+<p>Web 缓存按存储位置来区分，包括<strong>数据库缓存</strong>、<strong>服务端缓存</strong>、<strong>CDN 缓存</strong>和<strong>浏览器缓存</strong>。这一课时我们着重介绍浏览器缓存。</p>
+<p>浏览器缓存的实现方式主要有两种：HTTP 和 ServiceWorker 。</p>
+<h3 id="HTTP-缓存"><a href="#HTTP-缓存" class="headerlink" title="HTTP 缓存"></a>HTTP 缓存</h3><p>使用缓存最大的问题往往不在于将资源缓存在什么位置或者如何读写资源，而在于如何保证缓存与实际资源一致的同时，提高缓存的命中率。也就是说尽可能地让浏览器从缓存中获取资源，但同时又要保证被使用的缓存与服务端最新的资源保持一致。</p>
+<p>为了达到这个目的，需要制定合适的缓存过期策略（简称“缓存策略”），HTTP 支持的缓存策略有两种：<strong>强制缓存</strong>和<strong>协商缓存</strong>。</p>
+<h4 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a>强制缓存</h4><p>强制缓存是在浏览器加载资源的时候，先直接从缓存中查找请求结果，如果不存在该缓存结果，则直接向服务端发起请求。</p>
+<p><strong>1.</strong> <strong>Expires</strong></p>
+<p>HTTP/1.0 中可以使用响应头部字段 Expires 来设置缓存时间，它对应一个未来的时间戳。客户端第一次请求时，服务端会在响应头部添加 Expires 字段。当浏览器再次发送请求时，先会对比当前时间和 Expires 对应的时间，如果当前时间早于 Expires 时间，那么直接使用缓存；反之，需要再次发送请求。</p>
+<p><img src="https://s0.lgstatic.com/i/image/M00/31/42/Ciqc1F8MKT-AbvemAAAGfctSoow363.png" alt="Drawing 2.png"></p>
+<p>响应头部中的 Expires 信息</p>
+<p>上述 Expires 信息告诉浏览器：在 2020.10.10 日之前，可以直接使用该请求的缓存。但是使用 Expires 响应头时容易产生一个问题，那就是服务端和浏览器的时间很可能不同，因此这个缓存过期时间容易出现偏差。同样的，客户端也可以通过修改系统时间来继续使用缓存或提前让缓存失效。</p>
+<p>为了解决这个问题，HTTP/1.1 提出了 Cache-Control 响应头部字段。</p>
+<p><strong>2.</strong> <strong>Cache-Control</strong></p>
+<p>它的常用值有下面几个：</p>
+<ul>
+<li><strong>no-cache</strong>，表示使用协商缓存，即每次使用缓存前必须向服务端确认缓存资源是否更新；</li>
+<li><strong>no-store</strong>，禁止浏览器以及所有中间缓存存储响应内容；</li>
+<li><strong>public</strong>，公有缓存，表示可以被代理服务器缓存，可以被多个用户共享；</li>
+<li><strong>private</strong>，私有缓存，不能被代理服务器缓存，不可以被多个用户共享；</li>
+<li><strong>max-age</strong>，以秒为单位的数值，表示缓存的有效时间；</li>
+<li><strong>must-revalidate</strong>，当缓存过期时，需要去服务端校验缓存的有效性。</li>
+</ul>
+<p>这几个值可以组合使用，比如像下面这样：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cache-control: <span class="keyword">public</span>, max-age=<span class="number">31536000</span></span><br></pre></td></tr></table></figure>
+<p>告诉浏览器该缓存为公有缓存，有效期 1 年。</p>
+<p>需要注意的是，cache-control 的 max-age 优先级高于 Expires，也就是说如果它们同时出现，浏览器会使用 max-age 的值。</p>
+<p>注意，虽然你可能在其他资料中看到可以使用 meta 标签来设置缓存，比如像下面的形式：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;expires&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Wed, 20 Jun 2021 22:33:00 GMT&quot;</span></span></span><br></pre></td></tr></table></figure>
+<p>但在 HTML5 规范中，并不支持这种方式，所以尽量不要使用 meta 标签来设置缓存。</p>
+<h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><p>协商缓存的更新策略是不再指定缓存的有效时间了，而是浏览器直接发送请求到服务端进行确认缓存是否更新，如果请求响应返回的 HTTP 状态为 304，则表示缓存仍然有效。控制缓存的难题就是从浏览器端转移到了服务端。</p>
+<p><strong>1.</strong> <strong>Last-Modified 和 If-Modified-Since</strong></p>
+<p>服务端要判断缓存有没有过期，只能将双方的资源进行对比。若浏览器直接把资源文件发送给服务端进行比对的话，网络开销太大，而且也会失去缓存的意义，所以显然是不可取的。有一种简单的判断方法，那就是通过响应头部字段 Last-Modified 和请求头部字段 If-Modified-Since 比对双方资源的修改时间。</p>
+<p>具体工作流程如下：</p>
+<ul>
+<li>浏览器第一次请求资源，服务端在返回资源的响应头中加入 Last-Modified 字段，该字段表示这个资源在服务端上的最近修改时间；</li>
+<li>当浏览器再次向服务端请求该资源时，请求头部带上之前服务端返回的修改时间，这个请求头叫 If-Modified-Since；</li>
+<li>服务端再次收到请求，根据请求头 If-Modified-Since 的值，判断相关资源是否有变化，如果没有，则返回 304 Not Modified，并且不返回资源内容，浏览器使用资源缓存值；否则正常返回资源内容，且更新 Last-Modified 响应头内容。</li>
+</ul>
+<p>这种方式虽然能判断缓存是否失效，但也存在两个问题：</p>
+<ul>
+<li><strong>精度问题</strong>，Last-Modified 的时间精度为秒，如果在 1 秒内发生修改，那么缓存判断可能会失效；</li>
+<li><strong>准度问题</strong>，考虑这样一种情况，如果一个文件被修改，然后又被还原，内容并没有发生变化，在这种情况下，浏览器的缓存还可以继续使用，但因为修改时间发生变化，也会重新返回重复的内容。</li>
+</ul>
+<p><strong>2.</strong> <strong>ETag 和 If-None-Match</strong></p>
+<p>为了解决精度问题和准度问题，HTTP 提供了另一种不依赖于修改时间，而依赖于文件哈希值的精确判断缓存的方式，那就是响应头部字段 ETag 和请求头部字段 If-None-Match。</p>
+<p>具体工作流程如下：</p>
+<ul>
+<li>浏览器第一次请求资源，服务端在返响应头中加入 Etag 字段，Etag 字段值为该资源的哈希值；</li>
+<li>当浏览器再次跟服务端请求这个资源时，在请求头上加上 If-None-Match，值为之前响应头部字段 ETag 的值；</li>
+<li>服务端再次收到请求，将请求头 If-None-Match 字段的值和响应资源的哈希值进行比对，如果两个值相同，则说明资源没有变化，返回 304 Not Modified；否则就正常返回资源内容，无论是否发生变化，都会将计算出的哈希值放入响应头部的 ETag 字段中。</li>
+</ul>
+<p>这种缓存比较的方式也会存在一些问题，具体表现在以下两个方面。</p>
+<ul>
+<li><strong>计算成本</strong>。生成哈希值相对于读取文件修改时间而言是一个开销比较大的操作，尤其是对于大文件而言。如果要精确计算则需读取完整的文件内容，如果从性能方面考虑，只读取文件部分内容，又容易判断出错。</li>
+<li><strong>计算误差</strong>。HTTP 并没有规定哈希值的计算方法，所以不同服务端可能会采用不同的哈希值计算方式。这样带来的问题是，同一个资源，在两台服务端产生的 Etag 可能是不相同的，所以对于使用服务器集群来处理请求的网站来说，使用 Etag 的缓存命中率会有所降低。</li>
+</ul>
+<p>需要注意的是，强制缓存的优先级高于协商缓存，在协商缓存中，Etag 优先级比 Last-Modified 高。既然协商缓存策略也存在一些缺陷，那么我们转移到浏览器端看看 ServiceWorker 能不能给我们带来惊喜。</p>
+<h3 id="ServiceWorker"><a href="#ServiceWorker" class="headerlink" title="ServiceWorker"></a>ServiceWorker</h3><p>ServiceWorker 是浏览器在后台独立于网页运行的脚本，也可以这样理解，它是浏览器和服务端之间的代理服务器。ServiceWorker 非常强大，可以实现包括推送通知和后台同步等功能，更多功能还在进一步扩展，但其最主要的功能是<strong>实现离线缓存</strong>。</p>
+<h4 id="1-使用限制"><a href="#1-使用限制" class="headerlink" title="1. 使用限制"></a>1. 使用限制</h4><p>越强大的东西往往越危险，所以浏览器对 ServiceWorker 做了很多限制：</p>
+<ul>
+<li>在 ServiceWorker 中无法直接访问 DOM，但可以通过 postMessage 接口发送的消息来与其控制的页面进行通信；</li>
+<li>ServiceWorker 只能在本地环境下或 HTTPS 网站中使用；</li>
+<li>ServiceWorker 有作用域的限制，一个 ServiceWorker 脚本只能作用于当前路径及其子路径；</li>
+<li>由于 ServiceWorker 属于实验性功能，所以兼容性方面会存在一些问题，具体兼容情况请看下面的截图。</li>
+</ul>
+<p><img src="Ciqc1F8MKYGAMRqhAACGt0bNhOM842.png" alt="Drawing 3.png"></p>
+<p>ServiceWorker 在浏览器中的支持情况</p>
+<h4 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2. 使用方法"></a>2. 使用方法</h4><p>在使用 ServiceWorker 脚本之前先要通过“注册”的方式加载它。常见的注册代码如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="string">&#x27;serviceWorker&#x27;</span> <span class="keyword">in</span> <span class="built_in">window</span>.navigator) &#123;</span><br><span class="line">  <span class="built_in">window</span>.navigator.serviceWorker</span><br><span class="line">    .register(<span class="string">&#x27;./sw.js&#x27;</span>)</span><br><span class="line">    .then(<span class="built_in">console</span>.log)</span><br><span class="line">    .catch(<span class="built_in">console</span>.error)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.warn(<span class="string">&#x27;浏览器不支持 ServiceWorker!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>首先考虑到浏览器的兼容性，判断 window.navigator 中是否存在 serviceWorker 属性，然后通过调用这个属性的 register 函数来告诉浏览器 ServiceWorker 脚本的路径。</p>
+<p>浏览器获取到 ServiceWorker 脚本之后会进行解析，解析完成会进行安装。可以通过监听 “install” 事件来监听安装，但这个事件只会在第一次加载脚本的时候触发。要让脚本能够监听浏览器的网络请求，还需要激活脚本。</p>
+<p>在脚本被激活之后，我们就可以通过监听 fetch 事件来拦截请求并加载缓存的资源了。</p>
+<p>下面是一个利用 ServiceWorker 内部的 caches 对象来缓存文件的示例代码。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> CACHE_NAME = <span class="string">&#x27;ws&#x27;</span></span><br><span class="line"><span class="keyword">let</span> preloadUrls = [<span class="string">&#x27;/index.css&#x27;</span>]</span><br><span class="line"></span><br><span class="line">self.addEventListener(<span class="string">&#x27;install&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">  event.waitUntil(</span><br><span class="line">    caches.open(CACHE_NAME)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">cache</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> cache.addAll(preloadUrls);</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br><span class="line">self.addEventListener(<span class="string">&#x27;fetch&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">  event.respondWith(</span><br><span class="line">    caches.match(event.request)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (response) &#123;</span><br><span class="line">        <span class="keyword">return</span> response;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> caches.open(CACHE_NAME).then(<span class="function"><span class="keyword">function</span> (<span class="params">cache</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">const</span> path = event.request.url.replace(self.location.origin, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">          <span class="keyword">return</span> cache.add(path)</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="params">e</span> =&gt;</span> <span class="built_in">console</span>.error(e))</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>这段代码首先监听 install 事件，在回调函数中调用了 event.waitUntil() 函数并传入了一个 Promise 对象。event.waitUntil 用来监听多个异步操作，包括缓存打开和添加缓存路径。如果其中一个操作失败，则整个 ServiceWorker 启动失败。</p>
+<p>然后监听了 fetch 事件，在回调函数内部调用了函数 event.respondWith() 并传入了一个 Promise 对象，当捕获到 fetch 请求时，会直接返回 event.respondWith 函数中 Promise 对象的结果。</p>
+<p>在这个 Promise 对象中，我们通过 caches.match 来和当前请求对象进行匹配，如果匹配上则直接返回匹配的缓存结果，否则返回该请求结果并缓存。</p>
+<h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><p>缓存是解决性能问题的重要手段，使用缓存的好处很多，除了能让浏览器更快地加载网络资源之外，还会带来其他好处，比如节省网络流量和带宽，以及减少服务端的负担。</p>
+<p>本课时介绍了 HTTP 缓存策略及 ServiceWorker，HTTP 缓存可以分为强制缓存和协商缓存，强制缓存就是在缓存有效期内直接使用浏览器缓存；协商缓存则需要先询问服务端资源是否发生改变，如果未改变再使用浏览器缓存。</p>
+<p>ServiceWorker 可以用来实现离线缓存，主要实现原理是拦截浏览器请求并返回缓存的资源文件。</p>
+<p>最后布置一道思考题：如果要让浏览器不缓存资源，你有哪些实现方式？</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/FrontEndAdvanced-JavaScript/" data-toggle="tooltip" data-placement="top" title="【前端进阶】JavaScript数据类型与JavaScript函数详解">&larr; 上一篇</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/Algorithm-maximum-subarray/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】53. 最大子序和">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【前端进阶】浏览器如何渲染页面、浏览器的进程与线程以及浏览器加载网络资源的速度&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/FrontEndAdvanced-browser/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Thu Sep 09 2021 12:05:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、浏览器渲染页面的步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E-HTML-%E5%88%B0-DOM"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">从 HTML 到 DOM</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E5%AD%97%E8%8A%82%E6%B5%81%E8%A7%A3%E7%A0%81"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1. 字节流解码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E8%BE%93%E5%85%A5%E6%B5%81%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">2. 输入流预处理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-%E4%BB%A4%E7%89%8C%E5%8C%96"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">3. 令牌化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85-1%EF%BC%9A%E9%81%87%E5%88%B0-script-%E6%A0%87%E7%AD%BE%E6%97%B6%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">补充 1：遇到 script 标签时的处理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-%E6%9E%84%E5%BB%BA-DOM-%E6%A0%91"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">4. 构建 DOM 树</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85-2%EF%BC%9A%E4%BB%8E-CSS-%E5%88%B0-CSSOM"><span class="toc-nav-number">1.1.6.</span> <span class="toc-nav-text">补充 2：从 CSS 到 CSSOM</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E-DOM-%E5%88%B0%E6%B8%B2%E6%9F%93"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">从 DOM 到渲染</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-%E6%9E%84%E5%BB%BA%E6%B8%B2%E6%9F%93%E6%A0%91"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">5. 构建渲染树</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">6. 布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-%E7%BB%98%E5%88%B6"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">7. 绘制</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、浏览器的进程与线程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%EF%BC%88Process%EF%BC%89%E4%B8%8E%E7%BA%BF%E7%A8%8B%EF%BC%88Thread%EF%BC%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">进程（Process）与线程（Thread）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">浏览器架构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">浏览器进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#GPU-%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">GPU 进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#V8-%E4%BB%A3%E7%90%86%E8%A7%A3%E6%9E%90%E5%B7%A5%E5%85%B7%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">V8 代理解析工具进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">渲染进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">扩展程序进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%8C%96"><span class="toc-nav-number">2.2.6.</span> <span class="toc-nav-text">进程的服务化</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8A%A0%E8%BD%BD%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90%E7%9A%84%E9%80%9F%E5%BA%A6"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、浏览器加载网络资源的速度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">HTTP 缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">强制缓存</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">协商缓存</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ServiceWorker"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">ServiceWorker</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">1. 使用限制</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2. 使用方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Browser" title="Browser">Browser</a>
+            
+            <a class="tag" href="/tags/#前端进阶" title="前端进阶">前端进阶</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">344.5k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/FrontEndAdvanced-browser/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	</body>
+</html>

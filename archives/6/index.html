@@ -244,6 +244,17 @@
           
           
           <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archives/">
               
               归档
@@ -253,15 +264,6 @@
           </li>
           
           
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
-              
-              
-            </a>
-          </li>
           
           
           
@@ -275,8 +277,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -463,30 +463,24 @@
   <!-- top end -->
   
 
-  <a href="/cn/15-颜色与纹理-将非坐标数据传入顶点着色器-MultiAttributeSize/">
+  <a href="/cn/23-三维世界-可视空间（透视投影）-perspectiveview/">
     <h1 class="post-title">
-      【WebGL之巅】15-颜色与纹理-将非坐标数据传入顶点着色器
+      【WebGL之巅】23-三维世界-可视空间（透视投影）
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：16-MultiAttributeSize、17-MultiAttributeSize_Interleaved
-要点：绘制三个不同size的点、交错组织
+      对应《WebGL编程指南》第七章 28-perspectiveview，29-perspectiveview_mvp，30-perspectiveview_mvpMatrix
+要点：可视空间（透视投影）、模型视图投影矩阵
 
-
-知识点一、回顾—将顶点坐标传入着色器步骤1.创建缓冲区对象
-2.将缓冲区对象绑定到target上
-3.向缓存对象写入数据
-4.将缓冲区对象分配给a_Postion变量(attribute变量)
-5.连接......
+知识点一、可视空间（投影透视）在正射投影的可视空间中，不管三角形与视点的距离是远是近，它由多大，那么画出来就有多大。为了打破这条限制，我们可以使用透视投影可视空间，它将使......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-28
+    2021-08-03
   </p>
   <div class="tags">
     
@@ -507,29 +501,68 @@
   <!-- top end -->
   
 
-  <a href="/cn/14-简单动画-使三角形旋转-RotatingTriangle/">
+  <a href="/cn/Echarts/">
     <h1 class="post-title">
-      【WebGL之巅】14-简单动画-使三角形旋转
+      数据可视化之Echarts学习
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：15-RotatingTriangle
-要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、setRotate方法
-tips：当前页含有动画示例，Tag Cloud可能会失效。
+      ​        应对现在数据可视化的趋势，越来越多企业需要在很多场景(营销数据，生产数据，用户数据)下使用，可视化图表来展示体现数据，让数据更加直观，数据特点更加突出。 
+​        该笔记基于完成一个静态可视化面板项目。预览地址：http://dsj.aoau.top
 
+01-使用技术完成该项目需要具备以下知识：
 
-知识点一、动画原理基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
-为了生成动画，需要两个关键机制：
-​    机制一：在规定时刻反复调用......
+div + css 布局
+flex 布局
+Less
+原生js + ......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-27
+    2021-08-01
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#Echarts" title="Echarts"><i class="fa fa-tag" style="color: aqua;"></i> Echarts</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/22-三维世界-可视范围-OrthoView/">
+    <h1 class="post-title">
+      【WebGL之巅】22-三维世界-可视范围
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      对应《WebGL编程指南》第七章 26-OrthoView、27-LookAtTrianglesWithKeys_ViewVolume
+要点：可视空间（正射类型、透视投影）、可视范围（正射类型）、盒状可视空间
+
+知识点一、可视范围（正射类型）​        回顾：在上一节的最后一个示例程序中，当视点在极左或极右的位置时，三角形会缺少一部分。
+​        三角形缺了一角的原因是，我们没......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-01
   </p>
   <div class="tags">
     
@@ -550,29 +583,24 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
   <!-- top end -->
   
 
-  <a href="/cn/13-使用Matrix4变换矩阵实现三角形复合变换-RotatedTranslatedTriangle/">
+  <a href="/cn/21-三维世界-绘制三个三角形-LookAtTriangles/">
     <h1 class="post-title">
-      【WebGL之巅】13-使用Matrix4变换矩阵实现三角形复合变换
+      【WebGL之巅】21-三维世界-绘制三个三角形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：14-RotatedTranslatedTriangle
-要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、复合变换
+      对应《WebGL编程指南》第七章 22-LookAtTriangles、23-LookAtRotatedTriangles、24-LookAtRotatedTriangles_mvMatrix、25-LookAtTrianglesWithKeys
+要点：视点和视线、景深、观察者视图、模型视图矩阵
 
-
-步骤1.将三角形沿着X轴平移一段距离
-2.旋转三角形
-知识点一、模型变换建立下面的等式：
-​    &lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
+知识点一、立方体由三角形构成1.1 深度​        之前讨论过，三维物体也是由二维图形（......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-27
+    2021-08-01
   </p>
   <div class="tags">
     
@@ -593,27 +621,30 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
   <!-- top end -->
   
 
-  <a href="/cn/12-使用Matrix4变换矩阵实现三角形旋转、平移、缩放-RotatedTriangle-Matrix4/">
+  <a href="/cn/20-GLSL ES着色器语言语法详解-GLSLES/">
     <h1 class="post-title">
-      【WebGL之巅】12-使用Matrix4变换矩阵实现三角形旋转、平移、缩放
+      【WebGL之巅】20-GLSL ES着色器语言语法详解
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：13-RotatedTriangle_Matrix4
-要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象
+      对应《WebGL编程指南》第六章 GLSL ES
 
-
-知识点一、矩阵变换库cuon-matrix.jsOpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
-cuon-matrix.js在其......
+总览本章知识点：
+1、数据、变量和变量类型
+2、矢量、矩阵、结构体、数组、采样器（纹理）
+3、运算、程序流、函数
+4、attribute、uniform和varying变量
+5、精度限定词
+6、预处理和指令
+回顾基本着色器代码1234567891011121314151617181920212223//顶点着色器程序var VSHADER_......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-27
+    2021-07-30
   </p>
   <div class="tags">
     
@@ -634,27 +665,27 @@ cuon-matrix.js在其......
   <!-- top end -->
   
 
-  <a href="/cn/11-使用Matrix变换矩阵实现三角形旋转、平移、缩放-RotatedTriangle-Matrix/">
+  <a href="/cn/19-颜色与纹理-使用多幅纹理-MultiTexture/">
     <h1 class="post-title">
-      【WebGL之巅】11-使用Matrix变换矩阵实现三角形旋转、平移、缩放
+      【WebGL之巅】19-颜色与纹理-使用多幅纹理
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：12-RotatedTriangle_Matrix
-要点：矩阵和矢量的乘法、矩阵变换（旋转矩阵、平移矩阵、缩放矩阵）、gl.uniformMatrix4fv
+      对应《WebGL编程指南》代码：21-MultiTexture
+要点：纹理映射、多个纹理单元使用
 
-
-知识点一、矩阵和矢量的乘法矩阵示例：
-​    $\begin{bmatrix}​    8 &amp; 3 &amp; 0 \\​    4 &amp; 3 &amp; 6 \\​    3 &a......
+知识点一、区别单个纹理单元1、片元着色器能够访问两个纹理
+2、最终的片元颜色由两个纹理上的纹素颜色共同决定
+3、initTextures(gl, n)函数创建了两个纹理对象
+12345678910111213141516171819202122232425function initTextur......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-26
+    2021-07-30
   </p>
   <div class="tags">
     
@@ -675,29 +706,125 @@ cuon-matrix.js在其......
   <!-- top end -->
   
 
-  <a href="/cn/10-仿射变换之旋转三角形-RotatedTriangle/">
+  <a href="/cn/Websocket/">
     <h1 class="post-title">
-      【WebGL之巅】10-仿射变换之旋转三角形
+      WebSocket介绍与实战开发
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      思考：这种网页版的聊天功能应该如何去实现？？
+
+websocket介绍
+WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。
+websocket是一种持久协议，http是非持久协议
+
+现在很多网站都有实时推送的需求，比如聊天，客服咨询等
+早期没有websocket时，通过ajax轮询，由于http......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-30
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#websocket" title="websocket"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/10-Browser/">
+    <h1 class="post-title">
+      浏览器渲染原理及浏览器存储
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-对应《WebGL编程指南》代码：11-RotatedTriangle
-要点：旋转变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
+要点：浏览器渲染原理（简介、渲染机制）、浏览器存储（cookie、LocalStorage、sessionStorage、IndexedDB）
 
 
-步骤目的：将三角形逆时针旋转90度
-计算90度的正余弦值 → 传给顶点着色器uniform变量
-知识点一、正旋转​    ①描述旋转操作：绕Z轴，逆时针旋转β角度。
-​    ②关于“逆时针”的约定：如果β是正值......
+浏览器渲染原理简介引入
+输入网址进入网页的三个阶段
+
+http请求阶段
+http响应阶段
+浏览器渲染阶段
+
+
+
+补充
+进程Process
+
+一个运行的程序/浏览器页面
+
+
+线程Thread
+
+进程内的子任务
+
+可多个线程同时进行，实际是轮流执行......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-26
+    2021-07-30
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#Browser" title="Browser"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/18-颜色与纹理-在矩形表面帖上图像-TexturedQuad/">
+    <h1 class="post-title">
+      【WebGL之巅】18-颜色与纹理-在矩形表面帖上图像
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：20-TexturedQuad
+要点：纹理映射、纹理坐标
+
+
+知识点一、纹理映射​        概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
+​        作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-29
   </p>
   <div class="tags">
     
@@ -718,159 +845,27 @@ cuon-matrix.js在其......
   <!-- top end -->
   
 
-  <a href="/cn/09-仿射变换之平移三角形-TranslatedTriangle/">
+  <a href="/cn/17-颜色与纹理-绘制彩色与渐变三角形-ColoredTriangle/">
     <h1 class="post-title">
-      【WebGL之巅】09-仿射变换之平移三角形
+      【WebGL之巅】17-颜色与纹理-绘制彩色与渐变三角形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-对应《WebGL编程指南》代码：10-TranslatedTriangle
-要点：平移变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
+对应《WebGL编程指南》代码：19-ColoredTriangle
+要点：【WebGL之巅】17-颜色与纹理-绘制三个不同颜色的顶点、gl.drawArrays、几何形状的装配和光栅化
 
 
-目的将一个三角形向上和向右平移0.5个单位
-知识点一、逐顶点操作​    为顶点坐标的每个分量加上一个常量就可以实现
-二、矢量的加法​    方便的矢量相加运算是GLSL ES提供的特性之一
-
-
-
-
-矢量
-......
+知识点一、几何形状的装配和光栅化在顶点着色器和片元着色器之间，有这样两个步骤：
+​        图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-26
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/08-绘制一个矩形-HelloRectangle/">
-    <h1 class="post-title">
-      【WebGL之巅】08-绘制一个矩形
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：08-HelloRectangle
-要点：缓冲区对象、gl.drawArrays()参数
-复习：【WebGL之巅】07-绘制三角形
-
-
-实例12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-25
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/07-绘制三角形-HelloTriangle/">
-    <h1 class="post-title">
-      【WebGL之巅】07-绘制三角形
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：07-HelloTriangle
-要点：缓冲区对象、gl.drawArrays
-复习：【WebGL之巅】06-绘制三个点
-参考：《WebGL编程指南》p82~84讲解
-
-
-实例1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-25
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/06-绘制三个点-MultiPoints/">
-    <h1 class="post-title">
-      【WebGL之巅】06-绘制三个点
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：06-MultiPoints
-要点：缓冲区对象、gl.drawArrays、缓冲区对象向着色器传入多个顶点的数据的5个步骤
-复习：03-绘制一个点_v2_attribute变量
-
-
-绘制步骤获取WebGL上下文 → 初始化着色器 → 设置点的坐标信息 → 设置&lt;canvas&gt;背景色 → 清空&lt;canvas&gt; → 绘制
-知识点一、缓冲区......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-25
+    2021-07-29
   </p>
   <div class="tags">
     
@@ -962,7 +957,7 @@ cuon-matrix.js在其......
   <div class="tags">
     
     
-    <a href="/tags/#JavaScript" title="JavaScript" rel="60"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    <a href="/tags/#JavaScript" title="JavaScript" rel="70"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     
     
@@ -974,7 +969,19 @@ cuon-matrix.js在其......
     
     
     
-    <a href="/tags/#LeetCode" title="LeetCode" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
+    <a href="/tags/#LeetCode" title="LeetCode" rel="5"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
+    
+    
+    
+    <a href="/tags/#Browser" title="Browser" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
+    
+    
+    
+    <a href="/tags/#前端进阶" title="前端进阶" rel="12"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+    
+    
+    
+    <a href="/tags/#HTTP" title="HTTP" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> HTTP</a>
     
     
     
@@ -1038,10 +1045,6 @@ cuon-matrix.js在其......
     
     
     
-    <a href="/tags/#Browser" title="Browser" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
-    
-    
-    
     <a href="/tags/#typescript" title="typescript" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> typescript</a>
     
     
@@ -1055,10 +1058,6 @@ cuon-matrix.js在其......
     
     
     <a href="/tags/#CSS" title="CSS" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> CSS</a>
-    
-    
-    
-    <a href="/tags/#前端进阶" title="前端进阶" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
     
     
     
@@ -1133,24 +1132,24 @@ cuon-matrix.js在其......
 <div class="widget">
   <ul style="padding-left: 0;">
     
-    <a href="../../cn/FrontEndAdvanced-CSS/">
-      <li style="list-style: none;">【前端进阶】CSS布局、代码管理与CSS预处理</li>
+    <a href="../../cn/FrontEndAdvanced-Interactive/">
+      <li style="list-style: none;">【前端进阶】前后端如何交互？</li>
     </a>
     
-    <a href="../../cn/Algorithm-remove-duplicates-from-sorted-array/">
-      <li style="list-style: none;">【LeetCode-简单】26.删除排序数组中的重复项</li>
+    <a href="../../cn/FrontEndAdvanced-CORS/">
+      <li style="list-style: none;">【前端进阶】同源策略以及跨域解决方案详解</li>
     </a>
     
-    <a href="../../cn/Algorithm-merge-two-sorted-lists/">
-      <li style="list-style: none;">【LeetCode-简单】21.合并两个有序链表</li>
+    <a href="../../cn/FrontEndAdvanced-Http/">
+      <li style="list-style: none;">【前端进阶】HTTP详解</li>
     </a>
     
-    <a href="../../cn/Algorithm-validParentheses/">
-      <li style="list-style: none;">【LeetCode-简单】20.有效的括号</li>
+    <a href="../../cn/FrontEndAdvanced-Promise/">
+      <li style="list-style: none;">【前端进阶】手写Promise</li>
     </a>
     
-    <a href="../../cn/HTML-space/">
-      <li style="list-style: none;">HTML空格处理</li>
+    <a href="../../cn/FrontEndAdvanced-JsInBrowser/">
+      <li style="list-style: none;">【前端进阶】浏览器执行JavaScript过程详解</li>
     </a>
     
   </ul>
@@ -1162,9 +1161,9 @@ cuon-matrix.js在其......
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（87） </a></h5>
+<h5><a href="/archives/">归档（98） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1191,6 +1190,10 @@ cuon-matrix.js在其......
     
     <a href="/categories/#LeetCode">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
+    </a>
+    
+    <a href="/categories/#Browser">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
     </a>
     
     <a href="/categories/#Math">
@@ -1347,7 +1350,7 @@ cuon-matrix.js在其......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">299.2k</span>
+          站点总字数：<span class="post-count">344.5k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1814,20 +1817,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-</body>
+	</body>
 </html>

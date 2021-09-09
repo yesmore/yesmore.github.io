@@ -244,6 +244,17 @@
           
           
           <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archives/">
               
               归档
@@ -253,15 +264,6 @@
           </li>
           
           
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
-              
-              
-            </a>
-          </li>
           
           
           
@@ -275,8 +277,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -396,9 +396,9 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#CSS" title="CSS"><i class="fa fa-tag" style="color: aqua;"></i> CSS</a>
-              
               <a class="tag" href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+              
+              <a class="tag" href="/tags/#CSS" title="CSS"><i class="fa fa-tag" style="color: aqua;"></i> CSS</a>
               
             </div>
             <h2>【前端进阶】CSS布局、代码管理与CSS预处理</h2>
@@ -686,7 +686,7 @@
 <p>对比以上两段代码很容易发现，在编译后的样式代码中有很多重复的样式规则。这并不友好，不仅增加了编写样式的复杂度和代码量，连编译后也增加了冗余代码。</p>
 <p>styled-components 只是 CSS in JavaScript 的一种解决方案，其他解决方案还有很多，<a target="_blank" rel="noopener" href="https://github.com/MicheleBertoli/css-in-js">有兴趣的</a><a target="_blank" rel="noopener" href="https://github.com/MicheleBertoli/css-in-js">同学</a><a target="_blank" rel="noopener" href="https://github.com/MicheleBertoli/css-in-js">可以点击这里查阅 GitHub 上的资料学习</a>，上面收录了现有的 CSS in JavaScript 解决方案。</p>
 <h4 id="2-5-总结"><a href="#2-5-总结" class="headerlink" title="2.5 总结"></a>2.5 总结</h4><p>对于样式文件的管理，推荐使用 7-1 模式简化后的目录结构，包括 pages/、components/、abastracts/、base/ 4 个目录。对于样式命名，可以采用 BEM 来命名组件、面向属性的方式来命名公共样式。</p>
-<h3 id="三、手写CSS预处理器"><a href="#三、手写CSS预处理器" class="headerlink" title="三、手写CSS预处理器"></a>三、手写CSS预处理器</h3><h4 id="功能需求"><a href="#功能需求" class="headerlink" title="功能需求"></a>功能需求</h4><p>这一课时我们来写一个 CSS 预处理器，它的功能可以理解为精简版的 <a target="_blank" rel="noopener" href="https://stylus.bootcss.com/">stylus</a>，主要实现的功能有：</p>
+<h3 id="三、手写CSS预处理器"><a href="#三、手写CSS预处理器" class="headerlink" title="三、手写CSS预处理器"></a>三、手写CSS预处理器</h3><h4 id="3-1-功能需求"><a href="#3-1-功能需求" class="headerlink" title="3.1 功能需求"></a>3.1 功能需求</h4><p>这一课时我们来写一个 CSS 预处理器，它的功能可以理解为精简版的 <a target="_blank" rel="noopener" href="https://stylus.bootcss.com/">stylus</a>，主要实现的功能有：</p>
 <ul>
 <li>用空格和换行符替代花括号、冒号和分号；</li>
 <li>支持选择器的嵌套组合；</li>
@@ -699,7 +699,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ib inline-block</span><br><span class="line">$borderColor lightgreen</span><br><span class="line">div</span><br><span class="line">  p</span><br><span class="line">    border 1px solid $borderColor</span><br><span class="line">  color darkkhaki</span><br><span class="line">  .a-b</span><br><span class="line">    background-color lightyellow</span><br><span class="line">    [data]</span><br><span class="line">      padding 15px</span><br><span class="line">      font-size 12px</span><br><span class="line">.d-ib</span><br><span class="line">  display $ib</span><br></pre></td></tr></table></figure>
 <p>像上面这种强制缩进换行的风格应用非常广泛，比如编程语言 Python、HTML 模板 pug、预处理器 Sass（以“.sass”为后缀的文件）。</p>
 <p>这种风格可能有些工程师并不适应，因为缩进空格数不一致就会导致程序解析失败或执行出错。但它也有一些优点，比如格式整齐，省去了花括号等冗余字符，减少了代码量。推荐大家在项目中使用。</p>
-<h4 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h4><p>对预处理器这种能将一种语言（法）转换成另一种语言（法）的程序一般称之为“<strong>编译器</strong>”。我们平常所知的高级语言都离不开编译器，比如 C++、Java、JavaScript。</p>
+<h4 id="3-2-编译器"><a href="#3-2-编译器" class="headerlink" title="3.2 编译器"></a>3.2 编译器</h4><p>对预处理器这种能将一种语言（法）转换成另一种语言（法）的程序一般称之为“<strong>编译器</strong>”。我们平常所知的高级语言都离不开编译器，比如 C++、Java、JavaScript。</p>
 <p>不同语言的编译器的工作流程有些差异，但大体上可以分成三个步骤：解析（Parsing）、转换（Transformation）及代码生成（Code Generation）。</p>
 <h5 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h5><p>解析步骤一般分为两个阶段：<strong>词法分析</strong>和<strong>语法分析</strong>。</p>
 <p>词法分析就是将接收到的源代码转换成令牌（Token），完成这个过程的函数或工具被称之为<strong>词法分析器</strong>（Tokenizer 或 Lexer）。</p>
@@ -713,7 +713,7 @@
 <p>代码生成有几种不同的工作方式，有些编译器将会重用之前生成的令牌，有些会创建独立代码</p>
 <p>表示，以便于线性地输出代码。但是接下来我们还是着重于使用之前生成好的 AST。</p>
 <p>代码生成器必须知道如何“打印”转换后的 AST 中所有类型的节点，然后递归地调用自身，直到所有代码都被打印到一个很长的字符串中。</p>
-<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><p>学习了编译器相关知识之后，我们再来按照上述步骤编写代码。</p>
+<h4 id="3-3-代码实现"><a href="#3-3-代码实现" class="headerlink" title="3.3 代码实现"></a>3.3 代码实现</h4><p>学习了编译器相关知识之后，我们再来按照上述步骤编写代码。</p>
 <h5 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h5><p>在进行词法分析之前，首先要考虑字符串可以被拆分成多少种类型的令牌，然后再确定令牌的判断条件及解析方式。</p>
 <p>通过分析源代码，可以将字符串分为变量、变量值、选择器、属性、属性值 5 种类型。但其中属性值和变量可以合并成一类进行处理，为了方便后面语法分析，变量可以拆分成变量定义和变量引用。</p>
 <p>由于缩进会对语法分析产生影响（样式规则缩进空格数决定了属于哪个选择器），所以也要加入令牌对象。</p>
@@ -754,12 +754,16 @@
 <h5 id="代码生成-1"><a href="#代码生成-1" class="headerlink" title="代码生成"></a>代码生成</h5><p>有了新的“抽象语法数组”，生成目标代码就只需要通过 map 操作对数组进行遍历，然后将选择器、属性、值拼接成字符串返回即可。</p>
 <p>具体代码如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generate</span>(<span class="params">nodes</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> nodes.map(<span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> rules = n.rules.reduce(<span class="function">(<span class="params">acc, item</span>) =&gt;</span> acc += <span class="string">`<span class="subst">$&#123;item.property&#125;</span>:<span class="subst">$&#123;item.value&#125;</span>;`</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;n.selector&#125;</span> &#123;<span class="subst">$&#123;rules&#125;</span>&#125;`</span></span><br><span class="line">  &#125;).join(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>这一课时动手实践了一个简单的 CSS 预处理器，希望你能更好地掌握 CSS 工具预处理器的基本原理，同时也希望通过这个实现过程带你跨入编译器的大门。编译器属于大家日用而不知的重要工具，像 webpack、Babel这些著名工具以及 JavaScript 引擎都用到了它。</p>
+<h4 id="3-4-总结"><a href="#3-4-总结" class="headerlink" title="3.4 总结"></a>3.4 总结</h4><p>这一课时动手实践了一个简单的 CSS 预处理器，希望你能更好地掌握 CSS 工具预处理器的基本原理，同时也希望通过这个实现过程带你跨入编译器的大门。编译器属于大家日用而不知的重要工具，像 webpack、Babel这些著名工具以及 JavaScript 引擎都用到了它。</p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/Algorithm-maximum-subarray/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】53. 最大子序和">&larr; 上一篇</a>
+          </li>
           
           
           <li class="next">
@@ -900,7 +904,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81CSS%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、CSS布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-1-%E5%8D%95%E5%88%97%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 单列布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-2-2-%E5%88%97%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2 2 列布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-3-3-%E5%88%97%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">1.3 3 列布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-4-%E5%B8%83%E5%B1%80%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">1.4 布局实现</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-5-%E5%BB%B6%E4%BC%B81%EF%BC%9A%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E7%9A%84%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">1.5 延伸1：垂直方向的布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-6-%E5%BB%B6%E4%BC%B82%EF%BC%9A%E6%A1%86%E6%9E%B6%E4%B8%AD%E6%A0%85%E6%A0%BC%E5%B8%83%E5%B1%80%E7%9A%84%E5%88%97%E6%95%B0"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">1.6 延伸2：框架中栅格布局的列数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-7-%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">1.7 总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81CSS%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、CSS代码文件管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-1-%E5%A6%82%E4%BD%95%E7%BB%84%E7%BB%87%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1 如何组织样式文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">开源项目中的样式文件</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">样式文件管理模式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-2-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%A0%B7%E5%BC%8F%E5%86%B2%E7%AA%81"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2 如何避免样式冲突</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%89%8B%E5%8A%A8%E5%91%BD%E5%90%8D"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">手动命名</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%B7%A5%E5%85%B7%E5%91%BD%E5%90%8D"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">工具命名</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-3-%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E5%A4%8D%E7%94%A8%E6%A0%B7%E5%BC%8F"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3 如何高效复用样式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-4-%E5%BB%B6%E4%BC%B8%EF%BC%9A%E5%80%BC%E5%BE%97%E5%85%B3%E6%B3%A8%E7%9A%84-CSS-in-JavaScript"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">2.4 延伸：值得关注的 CSS in JavaScript</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-5-%E6%80%BB%E7%BB%93"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">2.5 总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%89%8B%E5%86%99CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、手写CSS预处理器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">功能需求</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">编译器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">解析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%BD%AC%E6%8D%A2"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">转换</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">代码生成</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">代码实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">词法分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-nav-number">3.3.2.</span> <span class="toc-nav-text">语法分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%BD%AC%E6%8D%A2-1"><span class="toc-nav-number">3.3.3.</span> <span class="toc-nav-text">转换</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90-1"><span class="toc-nav-number">3.3.4.</span> <span class="toc-nav-text">代码生成</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81CSS%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、CSS布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-1-%E5%8D%95%E5%88%97%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 单列布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-2-2-%E5%88%97%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2 2 列布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-3-3-%E5%88%97%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">1.3 3 列布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-4-%E5%B8%83%E5%B1%80%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">1.4 布局实现</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-5-%E5%BB%B6%E4%BC%B81%EF%BC%9A%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E7%9A%84%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">1.5 延伸1：垂直方向的布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-6-%E5%BB%B6%E4%BC%B82%EF%BC%9A%E6%A1%86%E6%9E%B6%E4%B8%AD%E6%A0%85%E6%A0%BC%E5%B8%83%E5%B1%80%E7%9A%84%E5%88%97%E6%95%B0"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">1.6 延伸2：框架中栅格布局的列数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-7-%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">1.7 总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81CSS%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、CSS代码文件管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-1-%E5%A6%82%E4%BD%95%E7%BB%84%E7%BB%87%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1 如何组织样式文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">开源项目中的样式文件</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">样式文件管理模式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-2-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%A0%B7%E5%BC%8F%E5%86%B2%E7%AA%81"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2 如何避免样式冲突</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%89%8B%E5%8A%A8%E5%91%BD%E5%90%8D"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">手动命名</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%B7%A5%E5%85%B7%E5%91%BD%E5%90%8D"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">工具命名</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-3-%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E5%A4%8D%E7%94%A8%E6%A0%B7%E5%BC%8F"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3 如何高效复用样式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-4-%E5%BB%B6%E4%BC%B8%EF%BC%9A%E5%80%BC%E5%BE%97%E5%85%B3%E6%B3%A8%E7%9A%84-CSS-in-JavaScript"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">2.4 延伸：值得关注的 CSS in JavaScript</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-5-%E6%80%BB%E7%BB%93"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">2.5 总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%89%8B%E5%86%99CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、手写CSS预处理器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-1-%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1 功能需求</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-2-%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2 编译器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">解析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%BD%AC%E6%8D%A2"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">转换</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">代码生成</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-3-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.3 代码实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">词法分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-nav-number">3.3.2.</span> <span class="toc-nav-text">语法分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%BD%AC%E6%8D%A2-1"><span class="toc-nav-number">3.3.3.</span> <span class="toc-nav-text">转换</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90-1"><span class="toc-nav-number">3.3.4.</span> <span class="toc-nav-text">代码生成</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-4-%E6%80%BB%E7%BB%93"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">3.4 总结</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -923,9 +927,9 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#CSS" title="CSS">CSS</a>
-            
             <a class="tag" href="/tags/#前端进阶" title="前端进阶">前端进阶</a>
+            
+            <a class="tag" href="/tags/#CSS" title="CSS">CSS</a>
             
           </div>
         </section>
@@ -1041,7 +1045,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">299.2k</span>
+          站点总字数：<span class="post-count">344.5k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1508,20 +1512,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-</body>
+	</body>
 </html>
