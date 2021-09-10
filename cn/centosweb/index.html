@@ -235,15 +235,6 @@
           
           
           <li>
-            <a href="/algorithms/">
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/archives/">
               
               归档
@@ -253,6 +244,13 @@
           </li>
           
           
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
           
           
           
@@ -264,6 +262,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -491,7 +491,7 @@
 <p>更新：【Windows+Nginx+Natapp零成本搭建web服务器】教程即将上线 。</p>
 </blockquote>
 <span id="more"></span>
-<p>一、 <strong>技术栈</strong></p>
+<p> 一、 <strong>技术栈</strong></p>
 <blockquote>
 <ul>
 <li><em>虚拟机</em>：当然是选择 Linux 系统，本人使用的是 centos7 版本。</li>
@@ -502,16 +502,14 @@
 <hr>
 <p>二、<strong>步骤</strong></p>
 <ol>
-<li>
-<p><strong>Linux系统安装与配置</strong></p>
+<li><p><strong>Linux系统安装与配置</strong></p>
 <blockquote>
 <p><em>安装linux虚拟机就跳过吧，网上一大把，当然最好是Centos系统哦。</em></p>
 </blockquote>
 </li>
 </ol>
 <ul>
-<li>配置<br>
-由于是自己创建的虚拟机，需要手动打开80端口，重新配置防火墙，以及切换源。下面开始吧。</li>
+<li>配置<br>由于是自己创建的虚拟机，需要手动打开80端口，重新配置防火墙，以及切换源。下面开始吧。</li>
 </ul>
 <p><strong>a.切换阿里源</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">备份：mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo</span><br><span class="line">清理缓存：yum clean all</span><br><span class="line">生成缓存：yum makecache</span><br></pre></td></tr></table></figure>
@@ -519,8 +517,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service <span class="comment">#停止firewall</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service <span class="comment">#禁止firewall开机启动</span></span><br><span class="line">yum install iptables-services <span class="comment">#安装iptables防火墙</span></span><br><span class="line">yum install iptables-services <span class="comment">#安装iptables防火墙</span></span><br></pre></td></tr></table></figure>
 <p><strong>c.开启80端口</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/iptables <span class="comment">#编辑防火墙配置文件</span></span><br><span class="line">按i进入文本编辑模式</span><br><span class="line">找到：</span><br><span class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT</span><br><span class="line">在该行下面添加：</span><br><span class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT</span><br><span class="line">保存退出：先按ESC，再输入【:wq!】输入括号里的内容。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="code￼3"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart iptables.service <span class="comment">#重启防火墙使配置生效</span></span><br><span class="line">systemctl <span class="built_in">enable</span> iptables.service <span class="comment">#设置防火墙开机启动</span></span><br><span class="line">firewall-cmd --query-port=80/tcp <span class="comment">#查询端口是否开启</span></span><br></pre></td></tr></table></figure></h2>
-<p><strong>2. 配置Nginx服务器</strong></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart iptables.service <span class="comment">#重启防火墙使配置生效</span></span><br><span class="line">systemctl <span class="built_in">enable</span> iptables.service <span class="comment">#设置防火墙开机启动</span></span><br><span class="line">firewall-cmd --query-port=80/tcp <span class="comment">#查询端口是否开启</span></span><br></pre></td></tr></table></figure></h2><p><strong>2. 配置Nginx服务器</strong></p>
 <blockquote>
 <p><em>简介</em>：Nginx是一个http服务器。是一个使用c语言开发的高性能的http服务器及反向代理服务器。Nginx是一款高性能的http 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器。由俄罗斯的程序设计师Igor Sysoev所开发，官方测试nginx能够支支撑5万并发链接，并且cpu、内存等资源消耗却非常低，运行非常稳定。</p>
 </blockquote>
@@ -533,26 +530,21 @@
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  _;</span><br><span class="line">    <span class="comment">#root /usr/local/nginx/xxx/;      # 修改1：xxx为静态页面根目录，index.html文件放在xxx下面</span></span><br><span class="line">    <span class="comment">#index index.html;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#charset koi8-r;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /usr/local/nginx/xxx/;	<span class="comment"># 修改2</span></span><br><span class="line">        index  index.html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#error_page  404              /404.html;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># redirect server error pages to the static page /50x.html</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    error_page   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /<span class="number">50</span>x.html;</span><br><span class="line">    location = /<span class="number">50</span>x.html &#123;</span><br><span class="line">        root   html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./nginx -s reload 	<span class="comment">#重启</span></span><br><span class="line"></span><br><span class="line">ps aux|grep nginx	<span class="comment">#查询nginx进程</span></span><br><span class="line"></span><br><span class="line">./nginx -s stop		<span class="comment">#停止</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>到这里，就可以实现内网之间的访问了，通过ifconfig查询桥接模式下的内网地址，在本机搜索即可进入网站。但是，做好网站只有自己能看还挺不爽的，接下来就是让别人可以访问的操作辽~</p>
+<p>  到这里，就可以实现内网之间的访问了，通过ifconfig查询桥接模式下的内网地址，在本机搜索即可进入网站。但是，做好网站只有自己能看还挺不爽的，接下来就是让别人可以访问的操作辽~</p>
 </blockquote>
 <hr>
-<p>​</p>
+<p>​    </p>
 <p><strong>3.Natapp实现内网穿透</strong></p>
 <blockquote>
 <p><em>简介</em>：内网穿透简单来说就是将内网外网通过natapp隧道打通,让内网的数据让外网可以获取。比如常用的办公室软件等，一般在办公室或家里，通过拨号上网，这样办公软件只有在本地的局域网之内才能访问，那么问题来了，如果是手机上，或者公司外地的办公人员，如何访问到办公软件呢？这就需要natapp内网穿透工具了。运行natapp隧道之后，natapp会分配一个专属域名/端口,办公软件就已经在公网上了,在外地的办公人员可以在任何地方愉快的访问办公软件了~</p>
-</blockquote>
-<blockquote>
-<p>emmm一句话：<a target="_blank" rel="noopener" href="http://xn--192-yn9dthj1at5mm5dt31i2m1bmoxa.168.xxx.xxx">别人可以访问你的192.168.xxx.xxx</a><br>
-Natapp网址：<a target="_blank" rel="noopener" href="https://natapp.cn/">点这里</a></p>
+<p>emmm一句话：别人可以访问你的192.168.xxx.xxx<br>Natapp网址：<a target="_blank" rel="noopener" href="https://natapp.cn/">点这里</a></p>
 </blockquote>
 <p><strong>a.购买隧道</strong></p>
-<p>注册账号<br>
-<img src="20201207104539729.png" alt="在这里插入图片描述"></p>
+<p>注册账号<br><img src="20201207104539729.png" alt="在这里插入图片描述"></p>
 <p>登录，购买隧道（免费版）</p>
 <p>选择web隧道协议</p>
 <p><img src="20201207104746667.png" alt="在这里插入图片描述"></p>
-<p>获取authtoken，启动时需要用<br>
-<img src="2020120710531049.png" alt="在这里插入图片描述"></p>
+<p>获取authtoken，启动时需要用<br><img src="2020120710531049.png" alt="在这里插入图片描述"></p>
 <p><strong>b.下载客户端</strong></p>
 <blockquote>
 <p>Linux可直接wget</p>
@@ -711,7 +703,7 @@ Natapp网址：<a target="_blank" rel="noopener" href="https://natapp.cn/">点�
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#code%EF%BF%BC3"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1
 2
 3
 systemctl restart iptables.service #重启防火墙使配置生效
@@ -860,7 +852,7 @@ firewall-cmd --query-port&#x3D;80&#x2F;tcp #查询端口是否开启
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">397.3k</span>
+          站点总字数：<span class="post-count">397.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

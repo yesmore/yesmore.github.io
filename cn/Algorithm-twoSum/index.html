@@ -235,15 +235,6 @@
           
           
           <li>
-            <a href="/algorithms/">
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/archives/">
               
               归档
@@ -253,6 +244,13 @@
           </li>
           
           
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
           
           
           
@@ -264,6 +262,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -422,7 +422,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                641
+                638
               </span> 
               字
             </span>
@@ -486,8 +486,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>要点：两数之和</p>
-<h3 id="描述">描述</h3>
-<p>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 <strong>和为目标值</strong> <em><code>target</code></em> 的那 <strong>两个</strong> 整数，并返回它们的数组下标。</p>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 <strong>和为目标值</strong> <em><code>target</code></em> 的那 <strong>两个</strong> 整数，并返回它们的数组下标。</p>
 <p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
 <p>你可以按任意顺序返回答案。</p>
 <p><strong>示例 1：</strong></p>
@@ -503,12 +502,9 @@
 <li><code>-109 &lt;= target &lt;= 109</code></li>
 <li><strong>只会存在一个有效答案</strong></li>
 </ul>
-<p>**进阶：**你可以想出一个时间复杂度小于 <code>O(n2)</code> 的算法吗？</p>
-<h3 id="解题">解题</h3>
-<h4 id="方法一：暴力解法">方法一：暴力解法</h4>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j=<span class="number">0</span>; j &lt; i; j++)&#123;</span><br><span class="line">      <span class="keyword">if</span> ((nums[j]+nums[i]) == target) <span class="keyword">return</span> [i, j]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h5 id="效率">效率</h5>
-<ul>
+<p><strong>进阶：</strong>你可以想出一个时间复杂度小于 <code>O(n2)</code> 的算法吗？</p>
+<h3 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h3><h4 id="方法一：暴力解法"><a href="#方法一：暴力解法" class="headerlink" title="方法一：暴力解法"></a>方法一：暴力解法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j=<span class="number">0</span>; j &lt; i; j++)&#123;</span><br><span class="line">      <span class="keyword">if</span> ((nums[j]+nums[i]) == target) <span class="keyword">return</span> [i, j]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h5><ul>
 <li>55/55 cases passed (100 ms)</li>
 <li>Your runtime beats 50.77 % of javascript submissions</li>
 <li>Your memory usage beats 69.06 % of javascript submissions (38.6 MB)</li>
@@ -516,20 +512,15 @@
 <p>时间复杂度：$O(N^2)$</p>
 <p>空间复杂度：$O(1)$</p>
 <hr>
-<h4 id="方法二：Map">方法二：Map</h4>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++ ) &#123;</span><br><span class="line">    <span class="keyword">const</span> diff = target - nums[i]</span><br><span class="line">    <span class="keyword">if</span> (map.has(diff))</span><br><span class="line">      <span class="keyword">return</span> [map.get(diff), i]</span><br><span class="line">    map.set(nums[i], i)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h5 id="解析">解析</h5>
-<h6 id="关键点">关键点</h6>
-<ul>
+<h4 id="方法二：Map"><a href="#方法二：Map" class="headerlink" title="方法二：Map"></a>方法二：Map</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++ ) &#123;</span><br><span class="line">    <span class="keyword">const</span> diff = target - nums[i]</span><br><span class="line">    <span class="keyword">if</span> (map.has(diff))</span><br><span class="line">      <span class="keyword">return</span> [map.get(diff), i]</span><br><span class="line">    map.set(nums[i], i)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h5><h6 id="关键点"><a href="#关键点" class="headerlink" title="关键点"></a>关键点</h6><ul>
 <li>求和转换为求差</li>
 <li>借助 Map 结构将数组中每个元素及其索引相互对应</li>
 <li>以空间换时间，将查找时间从 O(N) 降低到 O(1)</li>
 </ul>
-<h6 id="ES6对象：Map">ES6对象：<strong>Map</strong></h6>
-<p><code>Map</code>是一组键值对的结构，具有极快的查找速度。</p>
+<h6 id="ES6对象：Map"><a href="#ES6对象：Map" class="headerlink" title="ES6对象：Map"></a>ES6对象：<strong>Map</strong></h6><p><code>Map</code>是一组键值对的结构，具有极快的查找速度。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>([[<span class="string">&#x27;Michael&#x27;</span>, <span class="number">95</span>], [<span class="string">&#x27;Bob&#x27;</span>, <span class="number">75</span>], [<span class="string">&#x27;Tracy&#x27;</span>, <span class="number">85</span>]]);</span><br><span class="line"></span><br><span class="line">m.get(<span class="string">&#x27;Michael&#x27;</span>); <span class="comment">// 95</span></span><br><span class="line">m.set(<span class="string">&#x27;Adam&#x27;</span>, <span class="number">67</span>); <span class="comment">// 添加新的key-value</span></span><br><span class="line">m.has(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// 是否存在key &#x27;Adam&#x27;: true</span></span><br><span class="line">m.delete(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// 删除key &#x27;Adam&#x27;</span></span><br></pre></td></tr></table></figure>
-<h5 id="效率-2">效率</h5>
-<ul>
+<h5 id="效率-1"><a href="#效率-1" class="headerlink" title="效率"></a>效率</h5><ul>
 <li>55/55 cases passed (64 ms)</li>
 <li>Your runtime beats 97.8 % of javascript submissions</li>
 <li>Your memory usage beats 36.62 % of javascript submissions (39.9 MB)</li>
@@ -537,10 +528,8 @@
 <p>时间复杂度：$O(N)$</p>
 <p>空间复杂度：$O(N)$</p>
 <hr>
-<h4 id="方法三：hash">方法三：hash</h4>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> hash = &#123;&#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> n = nums[i]</span><br><span class="line">    <span class="keyword">if</span> (hash[target - n] !== <span class="literal">undefined</span>) </span><br><span class="line">      <span class="keyword">return</span> [hash[target-n], i]</span><br><span class="line">    hash[n] = i</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> []</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h5 id="效率-3">效率</h5>
-<ul>
+<h4 id="方法三：hash"><a href="#方法三：hash" class="headerlink" title="方法三：hash"></a>方法三：hash</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> hash = &#123;&#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> n = nums[i]</span><br><span class="line">    <span class="keyword">if</span> (hash[target - n] !== <span class="literal">undefined</span>) </span><br><span class="line">      <span class="keyword">return</span> [hash[target-n], i]</span><br><span class="line">    hash[n] = i</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> []</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="效率-2"><a href="#效率-2" class="headerlink" title="效率"></a>效率</h5><ul>
 <li>55/55 cases passed (104 ms)</li>
 <li>Your runtime beats 47.92 % of javascript submissions</li>
 <li>Your memory usage beats 67.84 % of javascript submissions (38.6 MB)</li>
@@ -696,7 +685,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E9%A2%98"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">解题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E6%9A%B4%E5%8A%9B%E8%A7%A3%E6%B3%95"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">方法一：暴力解法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E7%8E%87"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">效率</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9AMap"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">方法二：Map</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">解析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-nav-number">2.2.1.1.</span> <span class="toc-nav-text">关键点</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#ES6%E5%AF%B9%E8%B1%A1%EF%BC%9AMap"><span class="toc-nav-number">2.2.1.2.</span> <span class="toc-nav-text">ES6对象：Map</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E7%8E%87-2"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">效率</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%89%EF%BC%9Ahash"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">方法三：hash</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E7%8E%87-3"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">效率</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E9%A2%98"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">解题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E6%9A%B4%E5%8A%9B%E8%A7%A3%E6%B3%95"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">方法一：暴力解法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E7%8E%87"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">效率</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9AMap"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">方法二：Map</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">解析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-nav-number">2.2.1.1.</span> <span class="toc-nav-text">关键点</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#ES6%E5%AF%B9%E8%B1%A1%EF%BC%9AMap"><span class="toc-nav-number">2.2.1.2.</span> <span class="toc-nav-text">ES6对象：Map</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E7%8E%87-1"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">效率</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%89%EF%BC%9Ahash"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">方法三：hash</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%95%88%E7%8E%87-2"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">效率</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -837,7 +826,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">397.3k</span>
+          站点总字数：<span class="post-count">397.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
