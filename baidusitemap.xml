@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Micro-frontend/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-ServerLess/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Programming/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Design-Pattern/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Nodejs/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-XSS-CSRF-ClickJacking/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-performance-optimization/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Compile/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://yesmore.cc/cn/FrontEndAdvanced-Components/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  <url>
     <loc>https://yesmore.cc/cn/FrontEndAdvanced-Interactive/</loc>
     <lastmod>2021-09-09</lastmod>
   </url>

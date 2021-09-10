@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/FrontEndAdvanced-Compile/">
+  <title>
+    
+      【前端进阶】从Webpack源码分析代码编译流程以及合理搭建前端项目 - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+          
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <!-- <li>
+            <a href="/categories">分类</a>
+          </li> -->
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+              
+              <a class="tag" href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+              
+            </div>
+            <h2>【前端进阶】从Webpack源码分析代码编译流程以及合理搭建前端项目</h2>
+            <h3 class="subheading" style="font-size: 21px;"></h3>
+            <span class="meta">
+              By 大Van家 on
+              2021-09-10
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                21
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                5.6k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>要点：</p>
+<h2 id="Webpack源码解析">Webpack源码解析</h2>
+<p>Node.js 的出现，越来越多前端自动化工具涌现出来，包括早期的 Grunt、Gulp 以及现在流行的 webpack。随着这些工具的功能愈发强大，其重要性也在不断提升，成熟的框架都已经将这些工具封装成专用的命令行工具，比如 angular-cli 和 vue-cli。这一课时我们将继续承接前面课程的“硬核”风格，通过分析 webpack(5.0.0-beta.23) 的源码来深入理解其原理。</p>
+<p>webpack 有两个执行入口，分别是通过命令行调用的 bin/webpack.js，以及直接在代码中引用的 lib/webpack.js。我们避开命令参数解析以及进程调用的过程来分析 lib/webpack.js，下面是部分源码（省去了数组型配置及 watch 功能）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/webpack.js </span></span><br><span class="line"><span class="keyword">const</span> webpack = (<span class="function">(<span class="params"> options, callback </span>) =&gt;</span> &#123; </span><br><span class="line">  validateSchema(webpackOptionsSchema, options); </span><br><span class="line">  <span class="keyword">let</span> compiler; </span><br><span class="line">  compiler = createCompiler(options); </span><br><span class="line">  <span class="keyword">if</span> (callback) &#123; </span><br><span class="line">    compiler.run(<span class="function">(<span class="params">err, stats</span>) =&gt;</span> &#123; </span><br><span class="line">      compiler.close(<span class="function"><span class="params">err2</span> =&gt;</span> &#123; </span><br><span class="line">        callback(err || err2, stats); </span><br><span class="line">      &#125;); </span><br><span class="line">    &#125;); </span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">return</span> compiler; </span><br><span class="line">&#125;); </span><br></pre></td></tr></table></figure>
+<p>从源码中可以看到，webpack() 函数内部有 3 个重要的操作：<strong>校验配置项</strong>、<strong>创建编译器</strong>、<strong>执行编译</strong>。</p>
+<h3 id="一、校验配置项">一、校验配置项</h3>
+<p>校验配置项是通过调用 validateSchema() 函数来实现的，这个函数的内部其实是调用的 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/schema-utils">schema-utils</a> 模块的 validate () 函数 ，validate() 函数支持通过 JSONSchema 规则来校验 json 对象。这些 JSONSchema 规则保存在 schemas/WebpackOptions.json 文件中，对应代码中的 webpackOptionsSchema 变量。</p>
+<p>这里简单介绍一下 JSONSchema，它是通过 JSON 文件来描述 JSON 文件 ，可以用来校验 JSON 对象、生成 mock 数据及描述 JSON 对象结构。下面是一个对 output 参数的部分校验规则。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Output&quot;</span>: &#123; </span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Options affecting the output of the compilation. `output` options tell webpack how to write the compiled files to disk.&quot;</span>, </span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;object&quot;</span>, </span><br><span class="line">  <span class="string">&quot;properties&quot;</span>: &#123; </span><br><span class="line">     ... </span><br><span class="line">    <span class="string">&quot;path&quot;</span>: &#123; </span><br><span class="line">      <span class="string">&quot;$ref&quot;</span>: <span class="string">&quot;#/definitions/Path&quot;</span> </span><br><span class="line">    &#125; </span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br><span class="line">... </span><br><span class="line"><span class="string">&quot;definitions&quot;</span>: &#123; </span><br><span class="line"> <span class="string">&quot;Path&quot;</span>: &#123; </span><br><span class="line">    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;The output directory as **absolute path** (required).&quot;</span>, </span><br><span class="line">    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;string&quot;</span> </span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>从 “type”: “object” 可以看到 Output 是一个对象，它拥有属性 Path，而这个 P ath 类型定义在 definitions 对象的 Path 属性中，通过 “type”: “string” 可以看到，它是一个字符串类型。WebpackOptions.json 文件内容比较多，有 3000 多行，这里就不多介绍了，有兴趣的同学可以仔细研究。</p>
+<p>一句话概括，validateSchema() 函数通过 JSONSchema 对 options 进行校验，如果不符合配置规则，则退出并在控制台输出格式化的错误信息。这样就能避免因为选项参数不正确而导致程序运行出错。</p>
+<h3 id="二、创建编译器">二、创建编译器</h3>
+<p>创建编译器操作是在 compiler.compile() 函数中调用 createCompiler() 函数来实现的，该函数会返回一个 Compiler 实例。createCompiler() 函数源码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/webpack.js </span></span><br><span class="line"><span class="keyword">const</span> createCompiler = <span class="function"><span class="params">rawOptions</span> =&gt;</span> &#123; </span><br><span class="line">  <span class="keyword">const</span> options = getNormalizedWebpackOptions(rawOptions); </span><br><span class="line">  applyWebpackOptionsBaseDefaults(options); </span><br><span class="line">  <span class="keyword">const</span> compiler = <span class="keyword">new</span> Compiler(options.context); </span><br><span class="line">  compiler.options = options; </span><br><span class="line">  <span class="keyword">new</span> NodeEnvironmentPlugin(&#123; </span><br><span class="line">    infrastructureLogging: options.infrastructureLogging </span><br><span class="line">  &#125;).apply(compiler); </span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(options.plugins)) &#123; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> plugin <span class="keyword">of</span> options.plugins) &#123; </span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> plugin === <span class="string">&quot;function&quot;</span>) &#123; </span><br><span class="line">        plugin.call(compiler, compiler); </span><br><span class="line">      &#125; <span class="keyword">else</span> &#123; </span><br><span class="line">        plugin.apply(compiler); </span><br><span class="line">      &#125; </span><br><span class="line">    &#125; </span><br><span class="line">  &#125; </span><br><span class="line">  applyWebpackOptionsDefaults(options); </span><br><span class="line">  compiler.hooks.environment.call(); </span><br><span class="line">  compiler.hooks.afterEnvironment.call(); </span><br><span class="line">  <span class="keyword">new</span> WebpackOptionsApply().process(options, compiler); </span><br><span class="line">  compiler.hooks.initialize.call(); </span><br><span class="line">  <span class="keyword">return</span> compiler; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>在 createCompiler() 函数内部可以看到，首先会通过 getNormalizedWebpackOptions() 函数将默认的配置参数与自定义的配置参数 rawOptions 进行合成，赋值给变量 options。applyWebpackOptionsBaseDefaults() 函数则将程序当前执行路径赋值给 options.context 属性。</p>
+<p>经过以上处理之后，变量 options 才会作为参数传递给类 Compiler 来生成实例。在构造函数中，实例的很多属性进行了初始化操作，其中比较重要的是 hooks 属性。下面是截取的部分源码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/Compiler.js </span></span><br><span class="line"><span class="function"><span class="title">constructor</span>(<span class="params">context</span>)</span> &#123; </span><br><span class="line">    <span class="built_in">this</span>.hooks = <span class="built_in">Object</span>.freeze(&#123; </span><br><span class="line">      initialize: <span class="keyword">new</span> SyncHook([]), </span><br><span class="line">      shouldEmit: <span class="keyword">new</span> SyncBailHook([<span class="string">&quot;compilation&quot;</span>]), </span><br><span class="line">      done: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;stats&quot;</span>]), </span><br><span class="line">      afterDone: <span class="keyword">new</span> SyncHook([<span class="string">&quot;stats&quot;</span>]), </span><br><span class="line">      additionalPass: <span class="keyword">new</span> AsyncSeriesHook([]), </span><br><span class="line">      beforeRun: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;compiler&quot;</span>]), </span><br><span class="line">      run: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;compiler&quot;</span>]), </span><br><span class="line">      emit: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;compilation&quot;</span>]), </span><br><span class="line">      assetEmitted: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;file&quot;</span>, <span class="string">&quot;info&quot;</span>]), </span><br><span class="line">      afterEmit: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;compilation&quot;</span>]), </span><br><span class="line">      thisCompilation: <span class="keyword">new</span> SyncHook([<span class="string">&quot;compilation&quot;</span>, <span class="string">&quot;params&quot;</span>]), </span><br><span class="line">      compilation: <span class="keyword">new</span> SyncHook([<span class="string">&quot;compilation&quot;</span>, <span class="string">&quot;params&quot;</span>]), </span><br><span class="line">      normalModuleFactory: <span class="keyword">new</span> SyncHook([<span class="string">&quot;normalModuleFactory&quot;</span>]), </span><br><span class="line">      contextModuleFactory: <span class="keyword">new</span> SyncHook([<span class="string">&quot;contextModuleFactory&quot;</span>]), </span><br><span class="line">      beforeCompile: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;params&quot;</span>]), </span><br><span class="line">      compile: <span class="keyword">new</span> SyncHook([<span class="string">&quot;params&quot;</span>]), </span><br><span class="line">      make: <span class="keyword">new</span> AsyncParallelHook([<span class="string">&quot;compilation&quot;</span>]), </span><br><span class="line">      finishMake: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;compilation&quot;</span>]), </span><br><span class="line">      afterCompile: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;compilation&quot;</span>]), </span><br><span class="line">      watchRun: <span class="keyword">new</span> AsyncSeriesHook([<span class="string">&quot;compiler&quot;</span>]), </span><br><span class="line">      failed: <span class="keyword">new</span> SyncHook([<span class="string">&quot;error&quot;</span>]), </span><br><span class="line">      invalid: <span class="keyword">new</span> SyncHook([<span class="string">&quot;filename&quot;</span>, <span class="string">&quot;changeTime&quot;</span>]), </span><br><span class="line">      watchClose: <span class="keyword">new</span> SyncHook([]), </span><br><span class="line">      infrastructureLog: <span class="keyword">new</span> SyncBailHook([<span class="string">&quot;origin&quot;</span>, <span class="string">&quot;type&quot;</span>, <span class="string">&quot;args&quot;</span>]), </span><br><span class="line">      environment: <span class="keyword">new</span> SyncHook([]), </span><br><span class="line">      afterEnvironment: <span class="keyword">new</span> SyncHook([]), </span><br><span class="line">      afterPlugins: <span class="keyword">new</span> SyncHook([<span class="string">&quot;compiler&quot;</span>]), </span><br><span class="line">      afterResolvers: <span class="keyword">new</span> SyncHook([<span class="string">&quot;compiler&quot;</span>]), </span><br><span class="line">      entryOption: <span class="keyword">new</span> SyncBailHook([<span class="string">&quot;context&quot;</span>, <span class="string">&quot;entry&quot;</span>]) </span><br><span class="line">    &#125;); </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>为了防止 hooks 属性被修改，这里使用 Object.freeze() 函数来创建对象。简单介绍一下 object.freeze() 函数，它可以冻结一个对象。一个被冻结的对象再也不能被修改了；冻结了一个对象则不能向这个对象添加新的属性，不能删除已有属性，不能修改该对象已有属性的可枚举性、可配置性、可写性，以及不能修改已有属性的值。此外，冻结一个对象后该对象的原型也不能被修改。</p>
+<p>这里一共创建了 4 种类型的钩子（hook），它们的名称和作用如下：</p>
+<ul>
+<li><strong>SyncHook（同步钩子）</strong>，当钩子触发时，会依次调用钩子队列中的回调函数；</li>
+<li><strong>SyncBailHook（同步钩子）</strong>，当钩子触发时，会依次调用钩子队列中的回调函数，如果遇到有返回值的函数则停止继续调用；</li>
+<li><strong>AsyncSeriesHook（异步串行钩子）</strong>，如果钩子队列中有异步回调函数，则会等其执行完成后再执行剩余的回调函数；</li>
+<li><strong>AsyncParallelHook（异步并行钩子）</strong>，可以异步执行钩子队列中的所有异步回调函数。</li>
+</ul>
+<p>下面一段代码是钩子函数的简单用法。通过 new 关键字创建钩子实例，然后调用 tap() 函数来监听钩子，向 hook 的钩子队列中添加一个回调函数 。 当执行 hook.call() 函数时，会依次调用队列中的回调函数，并将参数传递给这些回调函数 。 需要注意的是， 参数的数量必须与实例化的数组长度一致。在下面的例子中，只能传递 1 个参数。</p>
+<p>tapable 模块提供了十多种钩子，这里就不一一详细介绍了，我们只要知道它实现了一些特殊的订阅机制即可，对钩子有兴趣的同学可以参看其 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/tapable">文档</a>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; SyncHook &#125; = <span class="built_in">require</span>(<span class="string">&#x27;tapable&#x27;</span>); </span><br><span class="line"><span class="keyword">const</span> hook = <span class="keyword">new</span> SyncHook([<span class="string">&#x27;whatever&#x27;</span>]); </span><br><span class="line">hook.tap(<span class="string">&#x27;1&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">arg1</span>) </span>&#123; </span><br><span class="line">  <span class="built_in">console</span>.log(arg1); </span><br><span class="line">&#125;); </span><br><span class="line">hook.call(<span class="string">&#x27;lagou&#x27;</span>); </span><br></pre></td></tr></table></figure>
+<p>接着继续往下看，会发现这样一行代码。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/webpack.js </span></span><br><span class="line"><span class="keyword">new</span> NodeEnvironmentPlugin(&#123; </span><br><span class="line">  infrastructureLogging: options.infrastructureLogging </span><br><span class="line">&#125;).apply(compiler); </span><br></pre></td></tr></table></figure>
+<p>这种调用插件（plugin）的 apply() 函数的写法在 webpack 中很常见，主要作用就是监听 compiler 钩子事件，或者说是向钩子队列中插入一个回调函数，当对应的钩子事件触发时调用。</p>
+<p>钩子初始化完成后会调用 3 个钩子事件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/webpack.js </span></span><br><span class="line">compiler.hooks.environment.call(); </span><br><span class="line">compiler.hooks.afterEnvironment.call(); </span><br><span class="line"><span class="keyword">new</span> WebpackOptionsApply().process(options, compiler); </span><br><span class="line">compiler.hooks.initialize.call(); </span><br></pre></td></tr></table></figure>
+<p>其中，process() 函数会根据不同的执行环境引入一些默认的插件并调用它的 apply() 函数，比如 Node 环境下会引入下面的插件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/WebpackOptionsApply.js </span></span><br><span class="line"><span class="keyword">const</span> NodeTemplatePlugin = <span class="built_in">require</span>(<span class="string">&quot;./node/NodeTemplatePlugin&quot;</span>); </span><br><span class="line"><span class="keyword">const</span> ReadFileCompileWasmPlugin = <span class="built_in">require</span>(<span class="string">&quot;./node/ReadFileCompileWasmPlugin&quot;</span>); </span><br><span class="line"><span class="keyword">const</span> ReadFileCompileAsyncWasmPlugin = <span class="built_in">require</span>(<span class="string">&quot;./node/ReadFileCompileAsyncWasmPlugin&quot;</span>); </span><br><span class="line"><span class="keyword">const</span> NodeTargetPlugin = <span class="built_in">require</span>(<span class="string">&quot;./node/NodeTargetPlugin&quot;</span>); </span><br><span class="line"><span class="keyword">new</span> NodeTemplatePlugin(&#123; </span><br><span class="line">  asyncChunkLoading: options.target === <span class="string">&quot;async-node&quot;</span> </span><br><span class="line">&#125;).apply(compiler); </span><br><span class="line"><span class="keyword">new</span> ReadFileCompileWasmPlugin(&#123; </span><br><span class="line">  mangleImports: options.optimization.mangleWasmImports </span><br><span class="line">&#125;).apply(compiler); </span><br><span class="line"><span class="keyword">new</span> ReadFileCompileAsyncWasmPlugin().apply(compiler); </span><br><span class="line"><span class="keyword">new</span> NodeTargetPlugin().apply(compiler); </span><br><span class="line"><span class="keyword">new</span> LoaderTargetPlugin(<span class="string">&quot;node&quot;</span>).apply(compiler); </span><br></pre></td></tr></table></figure>
+<p>至此，编译器已经创建完成。小结一下创建编译器步骤的主要逻辑，首先会将配置参数进行修改，比如加入一些默认配置项；然后创建一个编译器实例 compiler，这个实例的构造函数会初始化一些钩子；最后就是调用插件的 apply() 函数来监听钩子，同时也会主动触发一些钩子事件。</p>
+<h3 id="三、执行编译">三、执行编译</h3>
+<p>调用 compiler.compile() 函数标志着进入编译阶段，该阶段非常依赖钩子， 代码跳跃比较大，理解起来会有一定难度 。下面是 compile() 函数的部分代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/Compiler.js </span></span><br><span class="line"><span class="function"><span class="title">compile</span>(<span class="params">callback</span>)</span> &#123; </span><br><span class="line">  <span class="keyword">const</span> params = <span class="built_in">this</span>.newCompilationParams(); </span><br><span class="line">  <span class="built_in">this</span>.hooks.beforeCompile.callAsync(params, <span class="function"><span class="params">err</span> =&gt;</span> &#123; </span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">return</span> callback(err); </span><br><span class="line">    <span class="built_in">this</span>.hooks.compile.call(params); </span><br><span class="line">    <span class="keyword">const</span> compilation = <span class="built_in">this</span>.newCompilation(params); </span><br><span class="line">    <span class="built_in">this</span>.hooks.make.callAsync(compilation, <span class="function"><span class="params">err</span> =&gt;</span> &#123; </span><br><span class="line">    &#125;) </span><br><span class="line">  &#125;) </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>首先是触发了 compiler.hooks.compile 钩子，触发后，一些插件将进行初始化操作，为编译做好准备，比如 LoaderTargetPlugin 插件将会加载需要的加载器。</p>
+<p>调用 newCompilation() 函数则会创建了一个 Compilation 实例。注意，这里的 Compilation 和前面创建的 Compiler 是有区别的：Compiler 是全局唯一的，包含了配置参数、加载器、插件这些信息，它会一直存在 webpack 的生命周期中；而 Compilation 包含了当前模块的信息，只是代表一次编译过程。</p>
+<p>在创建 compilation 完成后会触发 compiler.hooks.thisCompilation 钩子和 compiler.hooks.compilation，激活 JavaScriptModulesPlugin 插件的监听函数，从而加载 JavaScript 的解析模块 acorn 。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/Compiler.j s </span></span><br><span class="line">newCompilation(params) &#123; </span><br><span class="line">  <span class="keyword">const</span> compilation = <span class="keyword">this</span>.createCompilation(); </span><br><span class="line">  compilation.fileTimestamps = <span class="keyword">this</span>.fileTimestamps; </span><br><span class="line">  compilation.contextTimestamps = <span class="keyword">this</span>.contextTimestamps; </span><br><span class="line">  compilation.name = <span class="keyword">this</span>.name; </span><br><span class="line">  compilation.records = <span class="keyword">this</span>.records; </span><br><span class="line">  compilation.compilationDependencies = params.compilationDependencies; </span><br><span class="line">  <span class="keyword">this</span>.hooks.thisCompilation.call(compilation, params); </span><br><span class="line">  <span class="keyword">this</span>.hooks.compilation.call(compilation, params); </span><br><span class="line">  <span class="keyword">return</span> compilation; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>在 compiler.compile() 函数中触发 compiler.hooks.make 钩子标志着编译操作正式开始。那么哪些函数监听了 make 钩子呢？通过搜索代码可以发现有 7 个插件监听了它。</p>
+<p><img src="CgqCHl8tItSAI1KMAABz6uawvig252.png" alt="image (2).png"></p>
+<p>监听了 make 钩子的插件</p>
+<p>其中 EntryPlugin 插件负责分析入口文件，下面是截取的部分代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib/EntryPlugin.js </span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EntryPlugin</span> </span>&#123; </span><br><span class="line">  <span class="function"><span class="title">apply</span>(<span class="params">compiler</span>)</span> &#123; </span><br><span class="line">    compiler.hooks.make.tapAsync(<span class="string">&quot;EntryPlugin&quot;</span>, <span class="function">(<span class="params">compilation, callback</span>) =&gt;</span> &#123; </span><br><span class="line">    	<span class="keyword">const</span> &#123; entry, options, context &#125; = <span class="built_in">this</span>; </span><br><span class="line">    	<span class="keyword">const</span> dep = EntryPlugin.createDependency(entry, options); </span><br><span class="line">        <span class="comment">// 开始入口解析 </span></span><br><span class="line">    	compilation.addEntry(context, dep, options, <span class="function"><span class="params">err</span> =&gt;</span> &#123; </span><br><span class="line">    		callback(err); </span><br><span class="line">    	&#125;); </span><br><span class="line">    &#125;); </span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>EntryPlugin 插件中调用了 compilation 对象的 addEntry() 函数，该函数中又调用了 _addEntryItem() 函数将入口模块添加到模块依赖列表中，部分源码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">_addEntryItem</span>(<span class="params">context, entry, target, options, callback</span>)</span> &#123; </span><br><span class="line">  <span class="built_in">this</span>.addModuleChain(context, entry, <span class="function">(<span class="params">err, <span class="built_in">module</span></span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="keyword">if</span> (err) &#123; </span><br><span class="line">      <span class="built_in">this</span>.hooks.failedEntry.call(entry, options, err); </span><br><span class="line">      <span class="keyword">return</span> callback(err); </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="built_in">this</span>.hooks.succeedEntry.call(entry, options, <span class="built_in">module</span>); </span><br><span class="line">    <span class="keyword">return</span> callback(<span class="literal">null</span>, <span class="built_in">module</span>); </span><br><span class="line">  &#125;); </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>在 addModuleChain() 函数中会调用 compilation 的 handleModuleCreation() 函数，该函数代码比较多，其中会调用 compilation 的 buildModule() 函数来构建模块。</p>
+<p>模块构建完成过后，通过 acorn 生成模块代码的抽象语法树，根据抽象语法树分析这个模块是否还有依赖的模块，如果有则继续解析每个依赖的模块，直到所有依赖解析完成，最后合并生成输出文件。这个过程和前面几讲提到的编译器执行过程类似，就不再赘述了。</p>
+<h3 id="四、总结">四、总结</h3>
+<p>这一课时从源码层面分析了 webpack 的工作原理，webpack 的执行过程大体上可以分为 3 个步骤，包括：检验配置项、创建编译器、执行编译。</p>
+<p>在 检验 配置项时使用了 JSONSchema 来校验配置参数。在创建编译器时，用到了 tapable 模块提供的钩子机制，通过触发适当的钩子事件来让对应的插件进行初始化。</p>
+<p>在执行编译阶段，以 compiler.hooks.make 钩子事件为起始点，触发入口文件的解析工作，并调用加载器对资源进行处理，然后构建成抽象语法树，将最终的抽象语法树转换成目标文件并输出到配置项指定的目录。</p>
+<p>最后布置一道思考题：尝试一下 tapable 模块的各种钩子事件，分析比较一下它们的使用区别。</p>
+<h2 id="合理搭建项目">合理搭建项目</h2>
+<p>通过上一课时的学习，我们分析了前端构建工具 webpack 的底层原理，在理解原理之后再来探索构建工具的具体应用——如何合理搭建前端项目。当然，前端项目搭建并不只是使用构建工具这么简单，本课时我们将从项目组织、代码规范 2 个方面来进行分析。</p>
+<h3 id="一、项目组织">一、项目组织</h3>
+<p>考虑这样一个场景，在开发项目 projectA 的时候，发现其中的 codeX 也可以用于项目 projectB，最简单直接的处理方式就是把 codeX 的代码直接复制到 projectB 下，按照“三次原则”（三次原则是指同一段代码被使用到 3 次时再考虑抽象）这种处理方式没什么问题。但如果此时项目 projectC 和 projectD 也会用到 codeX，那么这种方式维护起来会很麻烦。</p>
+<p>有经验的工程师会想到将 codeX 发布成模块，作为依赖模块引入所需的项目中。此时对于 codeX 会涉及两种组织代码的方式：<strong>multirepo</strong> 和 <strong>monorepo</strong>。</p>
+<h4 id="multirepo">multirepo</h4>
+<p>multirepo 就是将项目中的模块拆分出来，放在不同的仓库中进行独立管理。例如，用于 Node.js 的 Web 框架 <a target="_blank" rel="noopener" href="https://github.com/koajs/koa">Koa</a>，它依赖的模块 <a target="_blank" rel="noopener" href="https://github.com/koajs/convert">koa-convert</a> 和 <a target="_blank" rel="noopener" href="https://github.com/koajs/compose">koa-compose</a> 分别拆分成了两个仓库进行管理。</p>
+<p>这种方式的好处是保证仓库的独立性，方便不同团队维护对应的仓库代码，可以根据团队情况选择擅长的工具、工作流等。</p>
+<p>但这种方式也会存在一些问题，具体如下。</p>
+<ul>
+<li><strong>开发调试及版本更新效率低下</strong>。比如在仓库 A 用到的仓库 B 中发现了一个 bug，就必须到仓库 B 里修复它、打包、发版本，然后再回到仓库 A 继续工作。在不同的仓库间，你不仅需要处理不同的代码、工具，甚至是不同的工作流程；还有，你只能去问维护这个仓库的人，能不能为你做出改变，然后等着他们去解决。</li>
+<li><strong>团队技术选型分散</strong>。不同的库实现风格可能存在较大差异（比如有的库依赖 Vue，有的依赖 React），还有可能会采用不同的测试库及校验规则，维护起来比较困难。</li>
+</ul>
+<p>而 monorepo 方式恰好就能解决这些问题。</p>
+<h4 id="monorepo">monorepo</h4>
+<p>monorepo 就是将所有相关的模块放在同一个项目仓库中。这种方式在管理上会更加方便，项目所有代码可以使用统一的规范及构建、测试、发布流程。</p>
+<p>很多著名的开源项目都采取了这种管理方式，比如开源项目 babel，它依赖的模块都放在了 packages 目录下。</p>
+<p><img src="CgqCHl8yWpuAcwJgAAAqnGP7ZbA995.png" alt="image (9).png"></p>
+<p>babel 的依赖模块</p>
+<p>通过查看 babel 项目，发现根目录下有一个 lerna.json 的配置文件，这是开源工具 <a target="_blank" rel="noopener" href="https://github.com/lerna/lerna">lerna</a>的配置文件。lerna 是一个用于管理带有多个包的 JavaScript 项目工具，用 lerna 管理的项目会有 3 个文件目录：packages 目录、learna.json 文件和 package.json 文件。通过 lerna 命令行工具在初始化项目的时候就可以创建它们。</p>
+<p>lerna 支持两种模式，分别是 Fixed/Locked 和 Independent 模式。</p>
+<p>Fixed/Locked 模式为默认模式，babel 采用的就是这种模式，该模式的特点是，开发者执行 lerna publish 后，lerna 会在 lerna.json 中找到指定 version 版本号。如果这一次发布包含某个项目的更新，那么会自动更新 version 版本号。对于各个项目相关联的场景，这样的模式非常有利，任何一个项目大版本升级，其他项目的大版本号也会更新。</p>
+<p>Independent 模式顾名思义，各个项目都是相互独立。开发者需要独立管理多个包的版本更新。也就是说，我们可以具体到更新每个包的版本。每次发布，lerna 会配合 Git，检查相关包文件的变动，只发布有改动的 package。</p>
+<p>虽然众多开源项目采用了 monorepo，但它也并不是最完美的代码组织方式，也会带来一些问题，比如由于将多个模块集中在一个仓库中会导致仓库体积变大，目录结构也会变得更复杂。而 monorepo 也需要额外的工具来管理各个模块，这意味着相对 multirepo 而言会有一定的学习成本。</p>
+<h3 id="二、代码规范">二、代码规范</h3>
+<p>什么样的代码才是好代码？不同的工程师可能给出不同的答案，比如：</p>
+<ul>
+<li>少用全局变量</li>
+<li>高内聚、低耦合</li>
+<li>遵循单一原则</li>
+<li>拥有注释说明</li>
+</ul>
+<p>切换角度思考会帮助我们得到更全面的答案：从人的角度考虑，维护代码的开发者会不断地变更；从时间的角度考虑，代码会不断地被修改。我们可以总结一个最简单实用的答案：风格一致。 “风格一致”就是让参与项目开发的工程师形成一种开发上的契约，从而降低维护成本。要达到这个目的，我们可以从代码编写和代码管理两个方向入手，分别对应编写规范和提交规范。</p>
+<h4 id="编写规范">编写规范</h4>
+<p>网上关于 HTML、JavaScript、CSS 编写规范（也称编写风格）之类的文档资料很多，一般大型互联网公司都会制定自己的编写规范，比如 <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/jsguide.html">Google 的 JavaScript 风格指南</a>、 <a target="_blank" rel="noopener" href="https://github.com/airbnb/javascript">Airbnb 风格指南</a>，而对应的工具也不少。以 JavaScript 为例，比如 JSLint、JSHint、JSCS、ESLint 等多种规则校验工具。</p>
+<p>不管我们在团队中制定怎样的编写规范，只要把握好下面 3 个核心原则，就能制定出合理的编写规范。</p>
+<ul>
+<li><strong>可执行</strong>。制定编写规范首先要保证的就是规范的可执行性。制定好规范如果只能靠工程师的自觉性去执行，靠代码审核去检查，那么执行效率会很低。所以建议编写规范中的每一条规则都能有对应的校验工具规则与之对应。</li>
+<li><strong>可配置</strong>。代码的可读性有时候是一个比较主观的问题，比如空格缩进问题，有的工程师认为 2 个空格缩进可以查看更多代码内容，而有的会认为 4 个空格缩进层次感更强。使用具有丰富配置项的代码校验工具就可以很轻松地解决这些分歧。</li>
+<li><strong>可扩展</strong>。这一点也是对于校验工具的要求，即当校验工具的已有配置规则无法支持项目需求时，可以自行编写插件来扩展校验规则。</li>
+</ul>
+<p>最常用的 ESlint 就可以满足可配置、可扩展的原则，它的核心功能是通过一个叫 verify() 的函数来实现的，该函数有两个必传参数：要验证的源码文本和一个配置对象（通过准备好的配置文件加命令行操作会生成配置）。该函数首先使用解析器生成抽象语法树（AST），同时为规则中所有的选择器添加监听事件，在触发时执行；然后从上到下遍历 AST。在每个节点触发与该节点类型同名的一个事件（即 “Identifier”“WithStatement” 等），监听函数校验完相关的代码之后把不符合规则的问题推送到 lintingProblems 数组中返回。</p>
+<h4 id="提交规范">提交规范</h4>
+<p>虽然在开发过程中，每次在使用 Git 提交代码时都会编写提交消息（Commit Message），但提交规范仍然是一个很容易被忽视的点。而良好的提交规范和编写规范一样，也能较大地提升代码的可维护性，一方面能保证在代码回退时能快速找到对应的提交记录，另一方面也可以直接将提交消息生成修改日志（Change Log）。</p>
+<p><img src="CgqCHl8yWsqAN-CGAAHUx-NKShw605.png" alt="image (10).png"></p>
+<p>Angular 的提交日志</p>
+<p>虽然 Git 自带 template 功能，这个功能可以定义一个提交消息的模板文件，然后通过 git config 命令指向这个模板文件。这样在每次提交的时候就会使用默认的编辑器打开一个模板文件，编辑对应信息后保存即可。但不具有强制性，推荐使用工具 <a target="_blank" rel="noopener" href="https://commitlint.js.org/#/">@commitlint/cli</a> 和 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/husky">husky</a>。commitlint 可以设置提交消息模板并校验，而 husky 可以设置 pre-commit 钩子，在提交代码时调用 commitlint 进行强制校验，避免生成不符合规范的提交消息。</p>
+<p>下面的 husky 配置文件会在提交之前执行命令 npm test，在生成提交消息时执行 commitlint。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .huskyrc </span></span><br><span class="line">&#123; </span><br><span class="line"><span class="attr">&quot;hooks&quot;</span>: &#123; </span><br><span class="line"><span class="attr">&quot;pre-commit&quot;</span>: <span class="string">&quot;npm test&quot;</span>, </span><br><span class="line"><span class="attr">&quot;commit-msg&quot;</span>: <span class="string">&quot;commitlint&quot;</span> </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>从上面的例子可以看到，husky 同构监听 git 钩子，不仅可以校验提交消息，还可以调用自定义的 npm 脚本进行代码校验或执行测试代码。随着项目不断增大，对整个项目上运行 lint 或 test 会变得非常耗时，我们一般只想对更改的文件进行检查，这时候可以借助 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/lint-staged">lint-staged</a>。</p>
+<p>下面是 Vue 的 lint-staged 相关配置。它表示对于 js 后缀的文件执行 eslint --fix 命令来校验和修复代码 ，通过之后再进行 git add 添加到暂存区。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json </span></span><br><span class="line">&#123; </span><br><span class="line">... </span><br><span class="line"><span class="string">&quot;lint-staged&quot;</span>: &#123; </span><br><span class="line"><span class="string">&quot;*.js&quot;</span>: [ </span><br><span class="line"><span class="string">&quot;eslint --fix&quot;</span>, </span><br><span class="line"><span class="string">&quot;git add&quot;</span> </span><br><span class="line">] </span><br><span class="line">&#125;, </span><br><span class="line">... </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h3 id="三、总结">三、总结</h3>
+<p>这一课时站在前端工程的角度，从项目组织和代码规范两个方面分析了如何搭建可维护性的前端项目。</p>
+<ul>
+<li>在项目组织上，对于相关性低的模块可以采用 multirepo 方式进行独立管理，相关度高的模块则可以采用 monorepo 方式对其进行集中管理。</li>
+<li>在制定代码规范时，对于编写规范，尽量做到可执行、可配置、可扩展，对于提交规范，可以选择适当的工具，比如 commitlint、husky 来保证提交消息的规范化和可读性。</li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/FrontEndAdvanced-performance-optimization/" data-toggle="tooltip" data-placement="top" title="【前端进阶】前端性能优化">&larr; 上一篇</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/FrontEndAdvanced-Components/" data-toggle="tooltip" data-placement="top" title="【前端进阶】“组件”概念、前端路由、组件通信之状态管理详解">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【前端进阶】从Webpack源码分析代码编译流程以及合理搭建前端项目&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/FrontEndAdvanced-Compile/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Fri Sep 10 2021 08:25:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Webpack%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Webpack源码解析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%A0%A1%E9%AA%8C%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">一、校验配置项</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%9B%E5%BB%BA%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">二、创建编译器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%89%A7%E8%A1%8C%E7%BC%96%E8%AF%91"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">三、执行编译</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">四、总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%88%E7%90%86%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">合理搭建项目</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E9%A1%B9%E7%9B%AE%E7%BB%84%E7%BB%87"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">一、项目组织</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#multirepo"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">multirepo</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#monorepo"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">monorepo</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">二、代码规范</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">编写规范</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">提交规范</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">三、总结</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#前端进阶" title="前端进阶">前端进阶</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">382.8k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/FrontEndAdvanced-Compile/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
+</html>
