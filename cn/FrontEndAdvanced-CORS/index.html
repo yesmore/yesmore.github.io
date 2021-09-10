@@ -221,26 +221,6 @@
 
           <!-- 
           
-          <li>
-            <a href="/algorithms/">
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -255,9 +235,29 @@
           
           
           <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -488,7 +488,8 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>要点：同源策略、跨域解决方案</p>
-<h3 id="浏览器的同源策略（Same-Origin-Policy）"><a href="#浏览器的同源策略（Same-Origin-Policy）" class="headerlink" title="浏览器的同源策略（Same Origin Policy）"></a>浏览器的同源策略（Same Origin Policy）</h3><p>源（Origin）是由 URL 中协议、主机名（域名 domain）以及端口共同组成的部分。在下面的网址中，源由协议 https、主机名 kaiwu.lagou.com 和默认端口 443 共同组成。</p>
+<h3 id="浏览器的同源策略（Same-Origin-Policy）">浏览器的同源策略（Same Origin Policy）</h3>
+<p>源（Origin）是由 URL 中协议、主机名（域名 domain）以及端口共同组成的部分。在下面的网址中，源由协议 https、主机名 <a target="_blank" rel="noopener" href="http://kaiwu.lagou.com">kaiwu.lagou.com</a> 和默认端口 443 共同组成。</p>
 <p><img src="CioPOWBZVeWATe0uAAAhcRPjM7k018.png" alt="3.png"></p>
 <p>URL 中的源</p>
 <p>如果两个 URL 的源相同，我们就称之为<strong>同源</strong>。下面的 3 个 URL 和示例 URL 都是不同的源。</p>
@@ -499,13 +500,15 @@
 </ul>
 <p>而下面 2 个网址和示例 URL 都是同源。</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://kaiwu.lagou.com/course/courseInfo.htm?courseId=288#/sale：请求参数不同。">https://kaiwu.lagou.com/course/courseInfo.htm?courseId=288#/sale：请求参数不同。</a></li>
+<li><a target="_blank" rel="noopener" href="https://kaiwu.lagou.com/course/courseInfo.htm?courseId=288#/sale%EF%BC%9A%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%8D%E5%90%8C%E3%80%82">https://kaiwu.lagou.com/course/courseInfo.htm?courseId=288#/sale：请求参数不同。</a></li>
 <li><a target="_blank" rel="noopener" href="https://kaiwu.lagou.com/course/courseInfo.htm?courseId=288#/sale">https://kaiwu.lagou.com</a>：URL 路径不同。</li>
 </ul>
 <p>当一个源访问另一个源的资源时就会产生<strong>跨源</strong>。同源策略就是用来限制其中一些跨源访问的，包括访问 iframe 中的页面、其他页面的 cookie 访问以及发送 AJAX 请求。最常见的跨源场景是域名不同，即常说的“跨域”。<strong>本课时也按照约定俗成的说法，用“跨域”来指代“跨源”</strong>。</p>
 <p>同源策略在保障安全的同时也带来了不少问题，比如 iframe 中的子页面与父页面无法通信，浏览器与其他服务端无法交互数据。所以我们需要一些跨域方案来解决这些问题。</p>
-<h3 id="请求跨域解决方案"><a href="#请求跨域解决方案" class="headerlink" title="请求跨域解决方案"></a>请求跨域解决方案</h3><p>对于浏览器请求跨域，常用的有下面 4 种方法。</p>
-<h4 id="跨域资源共享"><a href="#跨域资源共享" class="headerlink" title="跨域资源共享"></a>跨域资源共享</h4><p>跨域资源共享（CORS，Cross-Origin Resource Sharing）是浏览器为 AJAX 请求设置的一种跨域机制，让其可以在服务端允许的情况下进行跨域访问。主要通过 HTTP 响应头来告诉浏览器服务端是否允许当前域的脚本进行跨域访问。</p>
+<h3 id="请求跨域解决方案">请求跨域解决方案</h3>
+<p>对于浏览器请求跨域，常用的有下面 4 种方法。</p>
+<h4 id="跨域资源共享">跨域资源共享</h4>
+<p>跨域资源共享（CORS，Cross-Origin Resource Sharing）是浏览器为 AJAX 请求设置的一种跨域机制，让其可以在服务端允许的情况下进行跨域访问。主要通过 HTTP 响应头来告诉浏览器服务端是否允许当前域的脚本进行跨域访问。</p>
 <p>跨域资源共享将 AJAX 请求分成了两类：简单请求和非简单请求。其中<strong>简单请求</strong>符合下面 2 个特征。</p>
 <ul>
 <li>请求方法为 GET、POST、HEAD。</li>
@@ -525,7 +528,8 @@
 <p>在服务端收到预检请求后，除了在响应头部添加 Access-Control-Allow-Origin 字段之外，至少还会添加 Access-Control-Allow-Methods 字段来告诉浏览器服务端允许的请求方法，并返回 204 状态码。</p>
 <p>在上面的例子中，服务端还根据浏览器的 Access-Control-Request-Headers 字段回应了一个 Access-Control-Allow-Headers 字段，来告诉浏览器服务端允许的请求头部字段。</p>
 <p>浏览器得到预检请求响应的头部字段之后，会判断当前请求服务端是否在服务端许可范围之内，如果在则继续发送跨域请求，反之则直接报错。</p>
-<h4 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h4><p>JSONP（JSON with Padding）的大概意思就是用 JSON 数据来填充，怎么填充呢？结合它的实现方式可以知道，就是把 JSON 数填充到一个回调函数中。这种比较 hack 的方式，依赖的是 script 标签跨域引用 js 文件不会受到浏览器同源策略的限制。</p>
+<h4 id="JSONP">JSONP</h4>
+<p>JSONP（JSON with Padding）的大概意思就是用 JSON 数据来填充，怎么填充呢？结合它的实现方式可以知道，就是把 JSON 数填充到一个回调函数中。这种比较 hack 的方式，依赖的是 script 标签跨域引用 js 文件不会受到浏览器同源策略的限制。</p>
 <p>下面以一个具体例子来讲解它的具体实现方式。</p>
 <p>假设我们要在 <a target="_blank" rel="noopener" href="http://ww.a.com">http://ww.a.com</a> 中向 <a target="_blank" rel="noopener" href="http://www.b.com">http://www.b.com</a> 请求数据。</p>
 <p>1.全局声明一个用来处理返回值的函数 fn，该函数参数为请求的返回结果。</p>
@@ -543,12 +547,14 @@
 <li>请求过程无法终止，导致弱网络下处理超时请求比较麻烦；</li>
 <li>无法捕获服务端返回的异常信息。</li>
 </ul>
-<h4 id="Websocket"><a href="#Websocket" class="headerlink" title="Websocket"></a>Websocket</h4><p>Websocket 是 HTML5 规范提出的一个应用层的全双工协议，适用于浏览器与服务器进行实时通信场景。</p>
+<h4 id="Websocket">Websocket</h4>
+<p>Websocket 是 HTML5 规范提出的一个应用层的全双工协议，适用于浏览器与服务器进行实时通信场景。</p>
 <p>什么叫全双工呢？</p>
 <p>这是通信传输的一个术语，这里的“工”指的是通信方向，“双工”是指从客户端到服务端，以及从服务端到客户端两个方向都可以通信，“全”指的是通信双方可以同时向对方发送数据。与之相对应的还有半双工和单工，半双工指的是双方可以互相向对方发送数据，但双方不能同时发送，单工则指的是数据只能从一方发送到另一方。</p>
 <p>下面是一段简单的示例代码。在 a 网站直接创建一个 WebSocket 连接，连接到 b 网站即可，然后调用 WebScoket 实例 ws 的 send() 函数向服务端发送消息，监听实例 ws 的 onmessage 事件得到响应内容。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> WebSocket(<span class="string">&quot;ws://b.com&quot;</span>);</span><br><span class="line">ws.onopen = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ws.send(...);</span></span><br><span class="line">&#125;</span><br><span class="line">ws.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// console.log(e.data);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="代理转发"><a href="#代理转发" class="headerlink" title="代理转发"></a>代理转发</h4><p>跨域是为了突破浏览器的同源策略限制，既然同源策略只存在于浏览器，那可以换个思路，在服务端进行跨域，比如设置代理转发。这种在服务端设置的代理称为“<strong>反向代理</strong>”，对于用户而言是无感知的。</p>
+<h4 id="代理转发">代理转发</h4>
+<p>跨域是为了突破浏览器的同源策略限制，既然同源策略只存在于浏览器，那可以换个思路，在服务端进行跨域，比如设置代理转发。这种在服务端设置的代理称为“<strong>反向代理</strong>”，对于用户而言是无感知的。</p>
 <p>另一种在客户端使用的代理称为“<strong>正向代理</strong>”，主要用来代理客户端发送请求，用户使用时必须配置代理服务器的网址，比如常用的 VPN 工具就属于正向代理。</p>
 <p>代理转发实现起来非常简单，在当前被访问的服务器配置一个请求转发规则就行了。</p>
 <p>下面的代码是 webpack-dev-server 配置代理的示例代码。当浏览器发起前缀为 /api 的请求时都会被转发到 <a target="_blank" rel="noopener" href="http://localhost:3000">http://localhost:3000</a> 这个网址，然后将响应结果返回给浏览器。对于浏览器而言还是请求当前网站，但实际上已经被服务端转发。</p>
@@ -556,8 +562,10 @@
 <p>在 Nginx 服务器上配置同样的转发规则也非常简单，下面是示例配置。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location /api &#123;</span><br><span class="line">    proxy_pass   http:<span class="comment">//localhost:3000;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通过 location 指令匹配路径，然后通过 proxy_pass 指令指向代理地址即可。</p>
-<h3 id="页面跨域解决方案"><a href="#页面跨域解决方案" class="headerlink" title="页面跨域解决方案"></a>页面跨域解决方案</h3><p>除了浏览器请求跨域之外，页面之间也会有跨域需求，例如使用 iframe 时父子页面之间进行通信。</p>
-<h4 id="postMessage"><a href="#postMessage" class="headerlink" title="postMessage"></a>postMessage</h4><p>HTML5 推出了一个新的函数 postMessage() 用来实现父子页面之间通信，而且不论这两个页面是否同源。</p>
+<h3 id="页面跨域解决方案">页面跨域解决方案</h3>
+<p>除了浏览器请求跨域之外，页面之间也会有跨域需求，例如使用 iframe 时父子页面之间进行通信。</p>
+<h4 id="postMessage">postMessage</h4>
+<p>HTML5 推出了一个新的函数 postMessage() 用来实现父子页面之间通信，而且不论这两个页面是否同源。</p>
 <p>举例来说，如果父页面 <a target="_blank" rel="noopener" href="https://lagou.com">https://lagou.com</a> 要向子页面 <a target="_blank" rel="noopener" href="https://kaiwu.lagou.com">https://kaiwu.lagou.com</a> 发消息，可以通过下面的代码实现。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// https://lagou.com</span></span><br><span class="line"><span class="keyword">var</span> child = <span class="built_in">window</span>.open(<span class="string">&#x27;https://kaiwu.lagou.com&#x27;</span>);</span><br><span class="line">child.postMessage(<span class="string">&#x27;hi&#x27;</span>, <span class="string">&#x27;https://kaiwu.lagou.com&#x27;</span>);</span><br></pre></td></tr></table></figure>
 <p>上面的代码通过 window.open() 函数打开了子页面，然后调用 child.postMessage() 函数发送了字符串数据“hi”给子页面。</p>
@@ -565,11 +573,13 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// https://kaiwu.lagou.com</span></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">&#x27;message&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.data);</span><br><span class="line">&#125;,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
 <p>同样的，父页面也可以监听“message”事件来接收子页面发送的数据。子页面发送数据时则要通过 window.opener 对象来调用 postMessage() 函数。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// https://kaiwu.lagou.com</span></span><br><span class="line"><span class="built_in">window</span>.opener.postMessage(<span class="string">&#x27;hello&#x27;</span>, <span class="string">&#x27;https://lagou.com&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<h4 id="改域"><a href="#改域" class="headerlink" title="改域"></a>改域</h4><p>对于主域名相同，子域名不同的情况，可以通过修改 document.domain 的值来进行跨域。如果将其设置为其当前域的父域，则这个较短的父域将用于后续源检查。</p>
-<p>比如，有一个页面，它的地址是 <a target="_blank" rel="noopener" href="https://www.lagou.com/parent.html，在这个页面里面有一个">https://www.lagou.com/parent.html，在这个页面里面有一个</a> iframe，其 src 是 <a target="_blank" rel="noopener" href="http://kaiwu.lagou.com/child.html。">http://kaiwu.lagou.com/child.html。</a></p>
+<h4 id="改域">改域</h4>
+<p>对于主域名相同，子域名不同的情况，可以通过修改 document.domain 的值来进行跨域。如果将其设置为其当前域的父域，则这个较短的父域将用于后续源检查。</p>
+<p>比如，有一个页面，它的地址是 <a target="_blank" rel="noopener" href="https://www.lagou.com/parent.html%EF%BC%8C%E5%9C%A8%E8%BF%99%E4%B8%AA%E9%A1%B5%E9%9D%A2%E9%87%8C%E9%9D%A2%E6%9C%89%E4%B8%80%E4%B8%AA">https://www.lagou.com/parent.html，在这个页面里面有一个</a> iframe，其 src 是 <a target="_blank" rel="noopener" href="http://kaiwu.lagou.com/child.html%E3%80%82">http://kaiwu.lagou.com/child.html。</a></p>
 <p>这时只要把 <a target="_blank" rel="noopener" href="http://www.lagou.com/parent.html">http://www.lagou.com/parent.html</a> 和 <a target="_blank" rel="noopener" href="http://kaiwu.lagou.com/child.html">http://kaiwu.lagou.com/child.html</a> 这两个页面的 document.domain 都设成相同的域名，那么父子页面之间就可以进行跨域通信了，同时还可以共享 cookie。</p>
-<p>但要注意的是，只能把 document.domain 设置成更高级的父域才有效果，例如在 <a target="_blank" rel="noopener" href="http://kaiwu.lagou.com/child.html">http://kaiwu.lagou.com/child.html</a> 中可以将 document.domain 设置成 lagou.com。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>本课时介绍了浏览器的同源策略，并分别从请求跨域与页面跨域两个方向介绍了几种常用的跨域方案。</p>
+<p>但要注意的是，只能把 document.domain 设置成更高级的父域才有效果，例如在 <a target="_blank" rel="noopener" href="http://kaiwu.lagou.com/child.html">http://kaiwu.lagou.com/child.html</a> 中可以将 document.domain 设置成 <a target="_blank" rel="noopener" href="http://lagou.com">lagou.com</a>。</p>
+<h3 id="总结">总结</h3>
+<p>本课时介绍了浏览器的同源策略，并分别从请求跨域与页面跨域两个方向介绍了几种常用的跨域方案。</p>
 <p>对于请求跨域，包括跨域资源共享、JSONP、Websocket、代理转发 4 种方式，推荐优先使用代理转发和跨域资源共享。对于页面跨域，包括 postMessage 和改域 2 种方式，使用频率没有请求跨域那么高，记住 2 种方式实现原理就好。</p>
 <p>最后布置一道思考题：说一说你还知道浏览器的哪些安全策略？</p>
 
@@ -864,7 +874,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">382.6k</span>
+          站点总字数：<span class="post-count">382.8k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
