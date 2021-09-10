@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/OS-digui/">
+  <title>
+    
+      【OS】二、不支持递归的程序语言如何实现递归程序 - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+          
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <!-- <li>
+            <a href="/categories">分类</a>
+          </li> -->
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#操作系统" title="操作系统"><i class="fa fa-tag" style="color: aqua;"></i> 操作系统</a>
+              
+            </div>
+            <h2>【OS】二、不支持递归的程序语言如何实现递归程序</h2>
+            <h3 class="subheading" style="font-size: 21px;"></h3>
+            <span class="meta">
+              By 大Van家 on
+              2021-09-10
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                17
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                4.9k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p><strong>一道非常不错的面试题：不支持递归的程序语言如何实现递归程序？</strong></p>
+<p>之所以说这道题好，是因为：</p>
+<ul>
+<li>首先，它不是纯粹考概念和死记硬背，求职者在回答问题之前需要进行一定的思考；</li>
+<li>其次，这道题目可以继续深挖，比如可以让求职者具体写一个程序，就变成了一道编程题；</li>
+<li>最后，这道题目有实战意义，它背后考察的是求职者的编程功底。</li>
+</ul>
+<p>为了弄清楚这道题目，你需要对程序有一个更深层次的认识，不仅仅停留在指令的执行层面，而是要灵活使用指令，去实现更加复杂的功能。</p>
+<h3 id="for-循环如何被执行">for 循环如何被执行</h3>
+<p>首先，我们来看 for 循环是如何实现的。</p>
+<p>下面是一个求 1 加到 100 的 Java 程序，请你思考如何将它转换为指令：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">1</span>, s = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">  s+=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>指令是简单的，像积木一样，程序是复杂的，像房子一样。我们将简单的事情组合，然后去完成复杂的事情，这就是程序员每天在做的。在这个过程中，你会产生思考，比如如何排列组合，如何搭积木，才能更快更准地完成项目？所以这也是训练思维的一个过程。</p>
+<p>经过思考，如果按照顺序执行上面的程序，则需要很多指令，因为 for 循环可以执行 1 次，也可以执行 100W 次，还可以执行无数次。因此，指令的设计者提供了一种 <code>jump</code> 类型的指令，让你可以在程序间跳跃，比如:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">loop:</span><br><span class="line">  jump loop</span><br></pre></td></tr></table></figure>
+<p>这就实现了一个无限循环，程序执行到 <code>jumploop</code> 的时候，就会跳回 <code>loop</code> 标签。</p>
+<p>用这种方法，我们可以将 <code>for</code> 循环用底层的指令实现：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># <span class="keyword">var</span> i = <span class="number">1</span>, s = <span class="number">0</span></span><br><span class="line"># 对应 Java 代码，我们首先将 <span class="number">1</span> 和 <span class="number">0</span> 存储到两个地址</span><br><span class="line"># 这两个地址我们用 $i 和 $s 表示</span><br><span class="line">store #<span class="number">1</span> -&gt; $i <span class="comment">// 将数字 1 存入i的地址</span></span><br><span class="line">store #<span class="number">0</span> -&gt; $s <span class="comment">// 将数字 0 存入 s 的地址</span></span><br><span class="line"># 接下来循环要开始了，我们在这里预留一个 loop 标签</span><br><span class="line"># loop 是一个自定义标签，它代表指令的相对位置</span><br><span class="line"># 后续我们可以用 jump 指令跳转回这个位置实现循环</span><br><span class="line">loop: # 循环标签</span><br><span class="line"></span><br><span class="line"># <span class="keyword">for</span> ... i &lt;= <span class="number">100</span></span><br><span class="line"># 接下来我们开始实现循环控制</span><br><span class="line"># 我们先首先 i &lt;= <span class="number">100</span>的比较</span><br><span class="line"># 我们先将变量 i 的地址，也就是 $i 导入寄存器 R0</span><br><span class="line">load $i -&gt; R0</span><br><span class="line"># 然后我们用 cmp 比较指令 R0 和数字 <span class="number">100</span></span><br><span class="line">cmp R0 #<span class="number">100</span> <span class="comment">// 比较 R0 和数字 100</span></span><br><span class="line"># 注意指令不会有返回值，它会进行计算，然后改变机器的状态（也就是寄存器）</span><br><span class="line"># 比较后，有几个特殊的寄存器会保存比较结果</span><br><span class="line"># 然后我们用 ja（jump above）, 如果比较结果 R0 比 <span class="number">100</span> 大</span><br><span class="line"># 那么我们就跳转到 end 标签，实现循环的跳出</span><br><span class="line">ja end </span><br><span class="line">nop</span><br><span class="line"># 如果 R0&lt;=<span class="number">100</span>，那么ja end 没有生效，这时我们处理 s+=i</span><br><span class="line"># 首先我们把变量 s 所在地址的数据导入寄存器 R1</span><br><span class="line">load $s -&gt; R1</span><br><span class="line"># 然后我们把寄存器R0和R1加和，把结果存储寄存器 R2</span><br><span class="line">add R0 R1 R2 </span><br><span class="line"># 这时，我们把寄存器 R2 的值存入变量 s 所在的地址</span><br><span class="line">store R2 -&gt; $s</span><br><span class="line"># 刚才我们完成了一次循环</span><br><span class="line"># 我们还需要维护变量 i 的自增</span><br><span class="line"># 现在 i 的值在 R0 中，我们首先将整数 <span class="number">1</span> 叠加到 R0 上</span><br><span class="line">add R0 #<span class="number">1</span> R0</span><br><span class="line"># 再把 R0 的值存入i所在的内存地址</span><br><span class="line">store R0 -&gt; $i</span><br><span class="line"># 这时我们的循环体已经全部执行完成，我们需要调转回上面 loop 标签所在的位置</span><br><span class="line"># 继续循环</span><br><span class="line">jump loop</span><br><span class="line">nop</span><br><span class="line">end:</span><br></pre></td></tr></table></figure>
+<p>通过上面的方法，我们成功将 for 循环的程序转换成了指令，然后再将它们编码成二进制，就可以存储到内存中了。</p>
+<p>讲到这里，我要强调几个事情：</p>
+<ol>
+<li>jump 指令直接操作 PC 指针，但是很多 CPU 会抢先执行下一条指令，因此通常我们在 jump 后面要跟随一条 nop 指令，让 CPU 空转一个周期，避免 jump 下面的指令被执行。<strong>是不是到了微观世界，和你所认识的程序还不太一样</strong>？</li>
+<li>上面我写指令的时候用到了 add/store 这些指令，它们叫作助记符，是帮助你记忆的。整体这段程序，我们就称作汇编程序。</li>
+<li>因为不同的机器助记符也不一样，所以你不用太关注我用的是什么汇编语言，也不用去记忆这些指令。当你拿到指定芯片的时候，直接去查阅芯片的说明书就可以了。</li>
+<li>虽然不同 CPU 的指令不一样，但也是有行业标准的。现在使用比较多的是 RISC（精简指令集）和 CISC（复杂指令集）。比如目前Inte 和 AMD 家族主要使用 CISC 指令集，ARM 和 MIPS 等主要使用RISC 指令集。</li>
+</ol>
+<h3 id="条件控制程序">条件控制程序</h3>
+<p>条件控制程序有两种典型代表，一种是 <code>if-else</code> ，另一种是 <code>switch-case</code> 。 总体来说， <code>if-else</code> 翻译成指令，是比较简单的，你需要用跳转指令和比较指令处理它的跳转逻辑。</p>
+<p>当然，它们的使用场景不同，这块我不展开了。在这里我主要想跟你说说，它们的内部实现是不一样的。<code>if-else</code> 是一个自上向下的执行逻辑， <code>switch-case</code>是一种精确匹配算法。比如你有 1000 个 case，如果用 <code>if-else</code> 你需要一个个比较，最坏情况下需要比较 <code>999</code> 次；而如果用 <code>switch-case</code> ，就不需要一个个比较，通过算法就可以直接定位到对应的<code>case</code> 。</p>
+<p>举个具体的例子，比如一个根据数字返回星期的程序。如果用<code>if-else</code>，那么你需要这样做：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(week == <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;周一&quot;</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(week == <span class="number">2</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;周二&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+<p>如果用 <code>switch-case</code> 的逻辑，你可能会这样计算：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">跳转位置=当前PC + <span class="number">4</span>*(week * <span class="number">2</span> - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>你不用太关心上面的数学关系，我只是举一个例子告诉你， <code>switch-case</code> 实现更多是依赖数学关系，直接算出 case 所在指令的位置，而不是一行行执行和比较。</p>
+<h3 id="函数">函数</h3>
+<p>了解了循环和条件判断，我们再来看看函数是如何被执行的。函数的执行过程必须深入到底层，也会涉及一种叫作栈的数据结构。</p>
+<p>下面是一段 C 程序，传入两个参数，然后返回两个参数的和：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="title">add</span>(<span class="params">int a, int b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我先不说具体的解决方案，希望你可以先自己思考。其实到这里，你已经学了不少知识了。下面我们一起分析一下，一种思考的方向是：</p>
+<ol>
+<li>通过观察，我们发现函数的参数 a,b 本质是内存中的数据，因此需要给它们分配内存地址。</li>
+<li>函数返回值也是内存中的数据，也就是返回值也需要分配内存地址。</li>
+<li>调用函数其实就是跳转到函数体对应的指令所在的位置，因此函数名可以用一个标签，调用时，就用 <code>jump</code> 指令跟这个标签。</li>
+</ol>
+<p>比如上面函数进行了<code>a+b</code>的运算，我们可以这样构造指令：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先我们定义一个叫作add的标签</span></span><br><span class="line"><span class="attr">add:</span></span><br><span class="line"><span class="comment"># 然后我们将a和b所在地址中的数据都导入寄存器</span></span><br><span class="line"><span class="string">load</span> <span class="string">$a</span> <span class="string">-&gt;</span> <span class="string">R0</span></span><br><span class="line"><span class="string">load</span> <span class="string">$b</span> <span class="string">-&gt;</span> <span class="string">R1</span></span><br><span class="line"><span class="comment"># 然后我们将寄存器求和，并将结果回写到返回地址</span></span><br><span class="line"><span class="string">add</span> <span class="string">R0</span> <span class="string">R1</span> <span class="string">R2</span></span><br><span class="line"><span class="string">store</span> <span class="string">R2</span> <span class="string">-&gt;</span> <span class="string">$r</span></span><br></pre></td></tr></table></figure>
+<p>当我们需要调用这个函数的时候，我们就构造下面这样的指令：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jump add</span><br></pre></td></tr></table></figure>
+<p>细心的同学可能已经发现，这里有 2 个问题还没有解决：</p>
+<ol>
+<li>参数如何传递给函数？</li>
+<li>返回值如何传递给调用者？</li>
+</ol>
+<p>为了解决这 2 个问题，我们就需要用到前面提到的一个叫作栈的数据结构。栈的英文是 Stack，意思是码放整齐的一堆东西。首先在调用方，我们将参数传递给栈；然后在函数执行过程中，我们从栈中取出参数。</p>
+<p><img src="Ciqc1F9h5mWAGqrjAABpcF79u8M632.png" alt="Lark20200916-181251.png"></p>
+<p>函数执行过程中，先将执行结果写入栈中，然后在返回前把之前压入的参数出栈，调用方再从栈中取出执行结果。</p>
+<p><img src="CgqCHl9h5m2ALcHaAABs3s6zJkQ202.png" alt="Lark20200916-181255.png"></p>
+<p>将参数传递给 Stack 的过程，叫作压栈。取出结果的过程，叫作出栈。栈就好像你书桌上的一摞书，压栈就是把参数放到书上面，出栈就是把顶部的书拿下来。</p>
+<p>因为栈中的每个数据大小都一样，所以在函数执行的过程中，我们可以通过参数的个数和参数的序号去计算参数在栈中的位置。</p>
+<p>接下来我们来看看函数执行的整体过程：假设要计算 11 和 15 的和，我们首先在内存中开辟一块单独的空间，也就是栈。</p>
+<p><img src="Ciqc1F9h5nWAFY-ZAAAwk_1T41E731.png" alt="Drawing 2.png"></p>
+<p>就如前面所讲，栈的使用方法是不断往上堆数据，所以需要一个栈指针（Stack Pointer， SP）指向栈顶（也就是下一个可以写入的位置）。每次将数据写入栈时，就把数据写到栈指针指向的位置，然后将 SP 的值增加。</p>
+<p>为了提高效率，我们通常会用一个特殊的寄存器来存储栈指针，这个寄存器就叫作 Stack Pointer，在大多数芯片中都有这个特殊的寄存器。一开始，SP 指向 0x100 位置，而 0x100 位置还没有数据。</p>
+<ul>
+<li><strong>压栈参数11</strong></li>
+</ul>
+<p>接下来我们开始传参，我们先将 11 压栈，之所以称作压栈（ Push)，就好像我们把数据 11 堆在内存中一样。模拟压栈的过程是下面两条指令：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">store #11 -&gt; $SP // 将11存入SP指向的地址0x100</span><br><span class="line">add SP, <span class="number">4</span>, SP  <span class="comment">// 栈指针增加4（32位机器）</span></span><br></pre></td></tr></table></figure>
+<p>第一条 store 指令将 SP 寄存器指向的内存地址设置为常数 11。</p>
+<p>第二条指令将栈指针自增 4。</p>
+<p>这里用美元符号代表将 11 存入的是 SP 寄存器指向的内存地址，这是一次间接寻址。存入后，栈指针不是自增 1 而是自增了 4，因为我在这里给你讲解时，用的是一个 32 位宽的 CPU 。如果是 64 位宽的 CPU，那么栈指针就需要自增 8。</p>
+<p>压栈完成后，内存变成下图中所示的样子。11 被写入内存，并且栈指针指向了 0x104 位置。</p>
+<p><img src="Ciqc1F9h5n-APEFtAAAy3ahEVnE846.png" alt="Drawing 3.png"></p>
+<ul>
+<li><strong>压栈参数15</strong></li>
+</ul>
+<p>然后我们用同样的方法将参数 15 压栈。</p>
+<p><img src="CgqCHl9h5oWAejVOAAA-DX72fJI426.png" alt="Drawing 4.png"></p>
+<p>压栈后，11 和 15 都被放入了对应的内存位置，并且栈指针指向了 0x108。</p>
+<ul>
+<li><strong>将返回值压栈</strong></li>
+</ul>
+<p>接下来，我们将返回值压栈。到这里你可能会问，返回值还没有计算呢，怎么就压栈了？其实这相当于一个占位，后面我们会改写这个地址。</p>
+<p><img src="CgqCHl9h5o2ARmc3AABEUYqLaKo705.png" alt="Drawing 5.png"></p>
+<ul>
+<li><strong>调用函数</strong></li>
+</ul>
+<p>当我们完成了上面的压栈后，就开始调用函数，一种简单的做法是用 jump 指令直接跳转到函数的标签，比如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jump add</span><br></pre></td></tr></table></figure>
+<p>这个时候，要加和在栈中的数据 11 和 15，我们可以利用 SP 指针寻找数据。11 距离当前 SP 指针差 3 个位置，15 距离 SP 指针差 2 个位置。这种寻址方式是一种复合的寻址方式，是间接 + 偏移量寻址。</p>
+<p>我们可以用下面的代码完成将 11 和 15 导入寄存器的过程：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">load $(SP - <span class="number">12</span>) -&gt; R0</span><br><span class="line">load $(SP - <span class="number">8</span>) -&gt; R1</span><br></pre></td></tr></table></figure>
+<p>然后进行加和，将结果存入 R2。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load R0 R1 R2</span><br></pre></td></tr></table></figure>
+<p>最后我们可以再次利用数学关系将结果写入返回值所在的位置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store R2 -&gt; $(SP-<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>上面我们用到了一种间接寻址的方式来进行加和运算，也就是利用 SP 中的地址做加减法操作内存。</p>
+<p>经过函数调用的结果如下图所示，运算结果 26 已经被写入了返回值的位置：</p>
+<p><img src="Ciqc1F9h5pWAQ-8nAABHqkFWy4k580.png" alt="Drawing 6.png"></p>
+<ul>
+<li><strong>发现-解决问题</strong></li>
+</ul>
+<p>一个好的解决方案，也会面临问题。现在我们就遇到了麻烦：</p>
+<ol>
+<li>函数计算完成，这时应该跳转回去。可是我们没有记录函数调用前 PC 指针的位置，因此这里需要改进，我们需要存储函数调用前的 PC 指针方便调用后恢复。</li>
+<li>栈不可以被无限使用，11和 15 作为参数，计算出了结果 26，那么它们就可以清空了。如果用调整栈指针的方式去清空，我们就会先清空 26。此时就会出现顺序问题，因此我们需要调整压栈的顺序。</li>
+</ol>
+<p>具体顺序你可以看下图。首先，我们将函数参数和返回值换位，这样在清空数据的时候，就会先清空参数，再清空返回值。</p>
+<p><img src="CgqCHl_lhT6AP75kAAD-cUrMUNg773.png" alt="Lark20201225-140329.png"></p>
+<p>然后我们在调用函数前，还需要将返回地址压栈。这样在函数计算完成前，就能跳转回对应的返回地址。翻译成指令，就是下面这样：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">## 压栈返回值</span><br><span class="line">add SP, <span class="number">4</span>  -&gt; SP </span><br><span class="line"></span><br><span class="line"># 计算返回地址</span><br><span class="line"># 我们需要跳转到清理堆栈那行，也就是<span class="number">16</span>行</span><br><span class="line">MOV PC+<span class="number">4</span>*(参数个数*<span class="number">2</span>+<span class="number">1</span>) -&gt; SP</span><br><span class="line"></span><br><span class="line"># 压栈参数的程序</span><br><span class="line">……</span><br><span class="line"></span><br><span class="line"># 执行函数，计算返回值</span><br><span class="line">call function</span><br><span class="line"></span><br><span class="line"># 清理堆栈</span><br><span class="line">add SP, -(参数个数+<span class="number">1</span>)*<span class="number">4</span>， SP</span><br></pre></td></tr></table></figure>
+<h3 id="递归函数如何被执行">递归函数如何被执行</h3>
+<p>我们刚刚使用了栈解决了函数的调用问题。但是这个方案究竟合不合理，还需要用更复杂的情况来验证。</p>
+<p>如下所示，我们给出一个递归函数，请你判断是否可以用上面的方法执行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="title">sum</span>(<span class="params">int n</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(n == <span class="number">1</span>) &#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;</span><br><span class="line">  <span class="keyword">return</span> n + sum(n-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>递归的时候，我们每次执行函数都形成一个如下所示的栈结构：</p>
+<p><img src="CgqCHl_lhQKAIVTlAAD-cUrMUNg043.png" alt="Lark20201225-140329.png"></p>
+<p>比如执行 sum(100)，我们就会形成一个复杂的栈，第一次调用 n = 100，第二次递归调用 n = 99：</p>
+<p><img src="CgqCHl9kbw6AEGmQAADNH1dIS2Q053.png" alt="1.png"></p>
+<p>它们堆在了一起，就形成了一个很大的栈，简化一下就是这样的一个模型，如下所示：</p>
+<p><img src="Ciqc1F9kcBCAalP8AACq_zc_LfM551.png" alt="2.png"></p>
+<p>到这里，递归消耗了更多空间，但是也保证了中间计算的独立性。当递归执行到 100 次的时候，就会执行下面的语句：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(n == <span class="number">1</span>) &#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;</span><br></pre></td></tr></table></figure>
+<p>于是触发第 99 次递归执行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">2</span> + sum(<span class="number">1</span>) <span class="comment">// sum(1) = 1</span></span><br></pre></td></tr></table></figure>
+<p>上面程序等价于<code>return 3</code>，接着再触发第 98 次递归的执行，然后是第 97 次，最终触发到第一次函数调用返回结果。</p>
+<p>由此可见，栈这种结构同样适合递归的计算。事实上，计算机编程语言就是用这种结构来实现递归函数。</p>
+<h3 id="类型（class）如何实现">类型（class）如何实现</h3>
+<p>按照我们之前已经学习到的知识：</p>
+<ul>
+<li>变量是一个内存地址，所以只需要分配内存就好了；</li>
+<li>循环控制可以用跳转加判断实现；</li>
+<li>条件控制也可以用跳转加判断实现，只不过如果是 <code>switch-case</code> 还需要一定的数学计算；</li>
+<li>函数调用需要压栈参数、返回值和返回地址。</li>
+</ul>
+<p>最后，我们来说说类型是如何实现的，也就是很多语言都支持的 class 如何被翻译成指令。其实 class 实现非常简单，首先一个 class 会分成两个部分，一部分是数据（也称作属性），另一部分是函数（也称作方法）。</p>
+<p><img src="Ciqc1F9h5rmANakFAACFALCOZaU910.png" alt="Lark20200916-181235.png"></p>
+<p>class 有一个特殊的方法叫作构造函数，它会为 class 分配内存。构造函数执行的时候，开始扫描类型定义中所有的属性和方法。</p>
+<ul>
+<li>如果遇到属性，就为属性分配内存地址；</li>
+<li>如果遇到方法，方法本身需要存到正文段（也就是程序所在的内存区域），再将方法的值设置为方法指令所在的内存地址。</li>
+</ul>
+<p>当我们调用一个 class 方法的时候，本质上是执行了一个函数，因此和函数调用是一致的：</p>
+<ol>
+<li>首先把返回值和返回地址压栈；</li>
+<li>然后压栈参数；</li>
+<li>最后执行跳转。</li>
+</ol>
+<p>这里有一个小问题，有时候 class 的方法会用到<code>this</code> ，这其实并不复杂，你仔细想想， <code>this</code>指针不就是构造函数创建的一个指向 class 实例的地址吗？那么，有一种简单的实现，就是我们可以把 <code>this</code> 作为函数的第一个参数压栈。这样，类型的函数就可以访问类型的成员了，而类型也就可以翻译成指令了。</p>
+<h3 id="总结">总结</h3>
+<p>下面我们做一个简单的总结：</p>
+<ol>
+<li>我们写的程序需要翻译成指令才能被执行，在 03 课时中我们提到过，这个翻译工具叫作编译器。</li>
+<li>平时你编程做的事情，用机器指令也能做，所以从计算能力上来说它们是等价的，最终这种计算能力又和图灵机是等价的。如果一个语言的能力和图灵机等价，我们就说这个语言是图灵完备的语言。现在市面上的绝大多数语言都是图灵完备的语言，但也有一些不是，比如 HTML、正则表达式和 SQL 等。</li>
+<li>我们通过汇编语言构造高级程序；通过高级程序构造自己的业务逻辑，这些都是工程能力的一种体现。</li>
+</ol>
+<p>那么通过这节课的学习，你现在可以来回答本节关联的面试题目：<strong>一个程序语言如果不支持递归函数的话，该如何实现递归算法？</strong></p>
+<p>老规矩，请你先在脑海里思考问题的答案，并把你的思考写在留言区，然后再来看我接下来的分析。</p>
+<p><strong>【解析】</strong> 思路如下：</p>
+<ul>
+<li>我们需要用到一个栈（其实用数组就可以）；</li>
+<li>我们还需要一个栈指针，支持寄存器的编程语言能够直接用寄存器，而不支持直接用寄存器的编程语言，比如 Java，我们可以用一个变量；</li>
+<li>然后我们可以实现压栈、出栈的操作，并按照上面学习的函数调用方法操作我们的栈。</li>
+</ul>
+<h3 id="思考题">思考题</h3>
+<p>最后我给你出一道常见的白板面试题，也是一道经典的面试题目。<strong>假设你使用的程序语言不支持递归程序，如果要求用栈来模拟下面这个斐波那契求第n项的程序，应该如何转换成等价的基于栈的非递归实现</strong>？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="title">fib</span>(<span class="params">int n</span>)</span> &#123;</span><br><span class="line"> <span class="keyword">if</span>(n == <span class="number">1</span> || n == <span class="number">2</span>) &#123; <span class="keyword">return</span> n; &#125;</span><br><span class="line">  <span class="keyword">return</span> fib(n-<span class="number">1</span>) + fib(n-<span class="number">2</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/OS-storage/" data-toggle="tooltip" data-placement="top" title="【OS】三、存储器分级策略">&larr; 上一篇</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/OS-32VS64/" data-toggle="tooltip" data-placement="top" title="【OS】一、相比32位，64位的优势是什么？">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【OS】二、不支持递归的程序语言如何实现递归程序&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/OS-digui/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Fri Sep 10 2021 12:20:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#for-%E5%BE%AA%E7%8E%AF%E5%A6%82%E4%BD%95%E8%A2%AB%E6%89%A7%E8%A1%8C"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">for 循环如何被执行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E7%A8%8B%E5%BA%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">条件控制程序</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E5%A6%82%E4%BD%95%E8%A2%AB%E6%89%A7%E8%A1%8C"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">递归函数如何被执行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E5%9E%8B%EF%BC%88class%EF%BC%89%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">类型（class）如何实现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">总结</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%9D%E8%80%83%E9%A2%98"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">思考题</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#操作系统" title="操作系统">操作系统</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">397.3k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/OS-digui/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
+</html>
