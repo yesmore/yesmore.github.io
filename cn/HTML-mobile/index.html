@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/HTML-mobile/">
+  <title>
+    
+      前端之移动端适配详解 - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+          
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <!-- <li>
+            <a href="/categories">分类</a>
+          </li> -->
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#mobile" title="mobile"><i class="fa fa-tag" style="color: aqua;"></i> mobile</a>
+              
+              <a class="tag" href="/tags/#HTML" title="HTML"><i class="fa fa-tag" style="color: aqua;"></i> HTML</a>
+              
+            </div>
+            <h2>前端之移动端适配详解</h2>
+            <h3 class="subheading" style="font-size: 21px;"></h3>
+            <span class="meta">
+              By 大Van家 on
+              2021-09-11
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                16
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                4.5k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="一、相关概念">一、相关概念</h2>
+<p>​		在学习移动端之前，我们先来学习一些基础的概念和专有名词，这些知识会在以后的面试、工作沟通中经常用到。</p>
+<h3 id="屏幕相关">屏幕相关</h3>
+<h4 id="1-屏幕大小">1.屏幕大小</h4>
+<p>​			指屏幕的对角线长度，单位是英寸(inch)。常见尺寸有： 3.5寸、4.7寸、5.0寸、5.5寸、6.0寸等。</p>
+<p><strong><span style="color:red">备注：1英寸(inch) = 2.54厘米(cm)</span></strong></p>
+<p><img src="https://s1.ax1x.com/2020/06/27/NyZQbQ.png" alt=""></p>
+<h4 id="2-屏幕分辨率">2.屏幕分辨率</h4>
+<p>​			指屏幕在：横向、纵向上所拥有的<strong>物理像素点</strong>总数。一般表示用 n * m 表示。</p>
+<p>​			例如： iPhone 6 的屏幕分辨率为 750 * 1334</p>
+<ul>
+<li>​	注意点:
+<ul>
+<li><span style="color:red"><strong>屏幕分辨率是一个固定值，屏幕生产出来就确定了，无法修改！！</strong></span></li>
+<li>屏幕分辨率、显示分辨率是两个概念，系统设置中可以修改的是：显示分辨率。</li>
+<li>显示分辨率是设备当前所用到的物理像素点数，也可以说：屏幕分辨率 &gt;= 显示分辨率。</li>
+</ul>
+</li>
+</ul>
+<p><strong>常见手机分辨率</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">型号</th>
+<th style="text-align:center">分辨率（物理像素点总和）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">IPhone 3G / 3GS</td>
+<td style="text-align:center">320 * 480</td>
+</tr>
+<tr>
+<td style="text-align:center">IPhone 4 / 4s</td>
+<td style="text-align:center">640 * 960</td>
+</tr>
+<tr>
+<td style="text-align:center">IPhone 5 / 5s</td>
+<td style="text-align:center">640 * 1136</td>
+</tr>
+<tr>
+<td style="text-align:center"><span style='color:red'><strong>IPhone 6 / 7 / 8</strong></span></td>
+<td style="text-align:center"><strong><span style='color:red'>750 * 1334</span></strong></td>
+</tr>
+<tr>
+<td style="text-align:center">IPhone 6p / 7p / 8p</td>
+<td style="text-align:center">1242 x 2208</td>
+</tr>
+<tr>
+<td style="text-align:center">IPhone X</td>
+<td style="text-align:center">1125 * 2436</td>
+</tr>
+<tr>
+<td style="text-align:center">华为 P30</td>
+<td style="text-align:center">1080 * 2340</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-屏幕密度">3.屏幕密度</h4>
+<p>​        又称：屏幕像素密度，是指屏幕上每英寸里包含的物理像素点个数，单位是 ppi （pixels per inch），其实这里还有另一个单位 dpi（dots per inch），两个值的计算方式都一样，只是使用的场景不同。 ppi主要用来衡量屏幕，dpi 用来衡量打印机等。</p>
+<img src="https://s1.ax1x.com/2020/06/27/NyZ1Ej.png" style="zoom: 25%;" />
+<h3 id="像素相关">像素相关</h3>
+<h4 id="1-物理像素">1.物理像素</h4>
+<p>​		又称：设备像素，物理像素是一个长度单位，单位是px，1个物理像素就是屏幕上的一个物理成像点，就是屏幕中一个微小的发光物理元器件（可简单理解为超级微小的灯泡），是屏幕能显示的最小粒度。<span style="color:red">它由屏幕制造商决定，屏幕生产后无法修改。</span>例如 iPhone 6 的横向上拥有的物理像素为750、纵向上拥有的物理像素为1334 ，我们也可以用：750* 1334表示。</p>
+<p>物理像素图示：</p>
+ <img src="https://s1.ax1x.com/2020/06/27/NyZr5R.jpg" style="zoom:150%;" />
+<h4 id="2-css-像素">2. css 像素</h4>
+<p>​		又称： 逻辑像素，css像素是一个抽象的长度单位，单位也是px，它是为 Web 开发者创造的，用来精确的度量Web 页面上的内容大小。我们在编写css、js、less中所使用的都是css像素（可以理解为：“程序员像素”）；</p>
+<p>思考：我代码中所写的1px（css像素），到了屏幕上到底对应几个物理像素呢？是1个css像素就对应1个物理像素(“发光的灯泡”)吗？要探讨这个对应关系，就要学习接下来的新概念：设备独立像素。</p>
+<h4 id="3-设备独立像素">3.设备独立像素</h4>
+<p>设备独立像素简称 DIP 或 DP（device-independent pixel），又称：屏幕密度无关像素。</p>
+<blockquote>
+<p>引言： 在没出现【高清屏】的年代，1个css像素对应1个物理像素，但自从【高清屏】问世，二者就不再是1对1的关系了。苹果公司在2010年推出了一种新的显示标准：<strong>在屏幕尺寸不变的前提下</strong>，把更多的物理像素点<strong>压缩</strong>至一块屏幕里，这样分辨率就会更高，显示效果就会更佳细腻。苹果将这种屏幕称为：<strong>Retina 屏幕（又名：视网膜屏幕）</strong>，与此同时推出了配备这种屏幕的划时代数码产品——iPhone4。</p>
+</blockquote>
+<img src="https://user-gold-cdn.xitu.io/2020/6/28/172fb94cfb4331fb?w=488&h=367&f=webp&s=10234" style="zoom:80%;" /> 
+<p>我们来看一个场景：</p>
+<p>​	程序员写了：width = 2px，height = 2px 的盒子，若1个css像素直接对应1个物理像素，由于iPhone3G/S 与iPhone4屏幕尺寸相同，但iPhone4的屏幕能容纳下更多的物理像素点，所以iPhone4的物理像素点比iPhone3G/S小很多，那么理论上这个盒子在iPhone4屏幕上也就会比iPhone3G/S屏幕上小很多，而事实是iPhone3G/S 和 iPhone4下这个盒子是一样大的！！！，只不过 iPhone4更加细腻、清晰。如何做到的呢？这就要靠设备独立像素。</p>
+<p><strong>对比：iPhone3G/S 与 iPhone4的成像效果：</strong></p>
+ <img src="https://s1.ax1x.com/2020/06/28/NRIEo4.png" style="zoom:80%;" />
+<img src="https://s1.ax1x.com/2020/06/28/NRIXX6.jpg" style="zoom: 50%;" />
+<p><span style="color:#ee0b41">设备独立像素的出现，使得即使在【<strong>高清屏</strong>】下，（例如苹果的Retina屏），也可以让元素有正常的尺寸，让代码不受到设备的影响，它是设备厂商根据屏幕特性设置的，无法更改。</span></p>
+<p><strong>设备独立像素 与 物理像素关系</strong></p>
+<ul>
+<li>普通屏幕下 1 个设备独立像素 对应 1 个物理像素</li>
+<li>高清屏幕下 1 个设备独立像素 对应 N 个物理像素</li>
+</ul>
+<p><strong>设备独立像素 与 css像素关系</strong></p>
+<ul>
+<li>在无缩放的情况下（标准情况）：1css像素 = 1设备独立像素</li>
+</ul>
+<h4 id="4-像素比">4.像素比</h4>
+<p>​	像素比（dpr）: 单一方向上设备【物理像素】和【设备独立像素】的比例。即：<strong>dpr = 物理像素 / 设备独立像素</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.devicePixelRatio</span><br></pre></td></tr></table></figure>
+<p>几款手机的屏幕像素参数，<a target="_blank" rel="noopener" href="https://uiiiuiii.com/screen/">点击这里查看更多</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">型号</th>
+<th style="text-align:center">分辨率（物理像素点总和）</th>
+<th style="text-align:center">设备独立像素(dip或dp)</th>
+<th style="text-align:center">像素比(dpr)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">IPhone 3GS</td>
+<td style="text-align:center">320 * 480</td>
+<td style="text-align:center">320 * 480</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">IPhone 4 / 4s</td>
+<td style="text-align:center">640 * 960</td>
+<td style="text-align:center">320 * 480</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">IPhone 5 / 5s</td>
+<td style="text-align:center">640 * 1136</td>
+<td style="text-align:center">320 * 568</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><span style='color:red'><strong>IPhone 6 / 7 / 8</strong></span></td>
+<td style="text-align:center"><strong><span style='color:red'>750 * 1334</span></strong></td>
+<td style="text-align:center"><strong><span style='color:red'>375 * 667</span></strong></td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">IPhone 6p / 7p / 8p</td>
+<td style="text-align:center">1242 x 2208</td>
+<td style="text-align:center">414 * 736</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">IPhone X</td>
+<td style="text-align:center">1125 * 2436</td>
+<td style="text-align:center">375 * 812</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">HUAWEI P10</td>
+<td style="text-align:center">1080 x 1920</td>
+<td style="text-align:center">360 x 640</td>
+<td style="text-align:center">3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="5-像素之间的关系">5.像素之间的关系</h4>
+<p>在不考虑缩放的情况下（理想状态下）：</p>
+<p>​	普通屏(dpr = 1)：1css像素  = 1设备独立像素  = 1物理像素<br>
+​	高清屏(dpr = 2)：1css像素  = 1设备独立像素  = 2物理像素<br>
+​	高清屏(dpr = 3)：1css像素  = 1设备独立像素  = 3物理像素</p>
+<p>​	程序员写了一个width为100px的盒子，那么：</p>
+<p>​		1.代表100个css像素。</p>
+<p>​		2.若用户不进行缩放，则对应100个设备独立像素。</p>
+<p>​		3.在dpr为2的设备上，这100个css像素占据了100*2=200个物理像素（横向）。</p>
+<p><strong>描述一下你的屏幕：</strong></p>
+<p>​	现在以iPhone6为例，我们描述一下屏幕（横向上）:</p>
+<ol>
+<li>物理像素：750px</li>
+<li>设备独立像素：375px</li>
+<li>css像素：375px</li>
+</ol>
+<h3 id="图片高清显示">图片高清显示</h3>
+<h4 id="位图像素">位图像素</h4>
+<p>位图和矢量图</p>
+<ul>
+<li>
+<p>位图，又称点阵图像或栅格图像，是由n个的像素点组成的。放大后会失真。(常见有：png、jpeg、jpg、gif)</p>
+<p>一般使用：PhotoShop等软件进行编辑</p>
+</li>
+<li>
+<p>矢量图，又称为面向对象图像或绘图图像，在数学上定义为一系列由线连接的点，放大后不会失真。（常见：svg）</p>
+<p>一般使用：Adobe Illustrator，Sketch等软件进行编辑</p>
+</li>
+</ul>
+<p>位图像素也是一个长度单位，位图像素可以理解为位图中的一个“小格子”，是位图的最小单元。</p>
+<img src="http://yanxuan.nosdn.127.net/e3806cdf0166598c91224acbc390971b.png" style="zoom: 67%;" />
+<blockquote>
+<p><span style="color:red">注意：1个位图像素对应1个物理像素，图片才能得到完美清晰的展示。</span></p>
+<p>具体编码时借助媒体查询：@media screen and (-webkit-min-device-pixel-ratio:x)</p>
+</blockquote>
+<h3 id="视口相关">视口相关</h3>
+<h4 id="pc端视口">pc端视口</h4>
+<p>​        在pc端，视口的默认宽度和浏览器窗口的宽度一致。在 css 标准文档中，pc端视口也被称为：初始包含块，它是所有 css 百分比宽度推算的根源，在pc端可通过如下几种方式获取宽度：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;最干净的显示区域&#x27;</span>,<span class="built_in">document</span>.documentElement.clientWidth);<span class="comment">//常用</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;最干净的显示区域+滚动条&#x27;</span>,<span class="built_in">window</span>.innerWidth);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;最干净的显示区域+滚动条+浏览器边框&#x27;</span>,<span class="built_in">window</span>.outerWidth);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;与浏览器无关，当前设备显示分辨率横向的值&#x27;</span>,screen.width);</span><br></pre></td></tr></table></figure>
+<h4 id="移动端视口">移动端视口</h4>
+<p>​	在移动端,浏览器厂商面临着一个比较大的问题,他们如何将数以万计甚至可以说是数以亿计的pc端网页完整的呈现在移动端设备上，并且不会出现横向滚动条呢？那就要引出移动端的三个概念：<strong>1.布局视口、2.视觉视口、3. 理想视口</strong></p>
+<h5 id="1-布局视口">1. 布局视口</h5>
+<p>​	早期的时候我们这样做：pc端网页宽度一般都为：960px ~ 1024px 这个范围，就算超出了该范围，960px ~ 1024px这个区域也依然是版心的位置，浏览器厂商针对移动端设备设计了一个容器，先用这个容器去承装pc端的网页，这容器的宽度一般是**<span style='color:red'>980px</span><strong>，不同的设备可能有所差异，但相差并不大；随后将这个容器</strong>等比例压缩**到与手机等宽，这样就可以保证没有滚动条且能完整呈现页面，但是这样做依然有问题：网页内容被压缩的太小，严重影响用户体验。</p>
+<p>移动端获取布局视口方式：<code>document.documentElement.clientWidth </code></p>
+<p><span style='color:red'><strong>注意：布局视口经过压缩后，横向的宽度用css像素表达就不再是375px了，而是980px</strong></span></p>
+ <img src="https://s1.ax1x.com/2020/06/28/NRoBg1.png" style="zoom: 50%;" />
+<h5 id="2-视觉视口">2.视觉视口</h5>
+<p>​	视觉视口就是用户可见的区域，它的绝对宽度永远和设备屏幕一样宽，但是这个宽度里所包含的css像素值是变化的，例如：一般手机会将980个css像素放入视觉视口中，而ipad Pro会将1024个css像素放入视觉视口中。</p>
+<p>移动端获取视觉视口方式：<code>window.innerWidth</code>，不过在Android2、Opera mini 、UC8 中无法正确获取。（一般不通过代码看视觉视口）</p>
+ <img src="https://s1.ax1x.com/2020/06/28/NR7QO0.png" style="zoom: 50%;" />
+<p><strong>描述一下你的屏幕：</strong></p>
+<p>现在以iPhone6为例，我们描述一下屏幕（横向上）:</p>
+<ol>
+<li>物理像素：750px</li>
+<li>设备独立像素：375px</li>
+<li><span style='color:red'><strong>css像素：980px</strong></span></li>
+</ol>
+<h5 id="3-理想视口标准">3.理想视口标准</h5>
+<p>与屏幕（设备独立像素）等宽的布局视口，称之为理想视口，所以也可以说理想视口是一种标准：让布局视口宽度 与 屏幕等宽（设备独立像素），靠meta标签实现。</p>
+<p>理想视口的特点：</p>
+<blockquote>
+<ul>
+<li>布局视口和屏幕等宽，以iPhone6为例，符合理想视口标准之后：设备独立像素：375px，<strong>布局视口宽度：375px。</strong></li>
+<li>用户不需要缩放、滚动就能看到网站的全部内容。</li>
+<li>要为移动端设备单独设计一个移动端网站。</li>
+</ul>
+</blockquote>
+<p>设置理想视口的具体方法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>【总结】：</strong></p>
+<p>不写<code>meta</code>标签（不符合理想视口标准）：</p>
+<blockquote>
+<ol>
+<li>描述屏幕：物理像素：750px 、设备独立像素：375px、css像素：980px。</li>
+<li>优点：元素在不同设备上，呈现效果几乎一样，因都是通过布局容器等比缩放的，例如200宽的盒子：200/980</li>
+<li>缺点：元素太小，页面文字不清楚，用户体验不好。</li>
+</ol>
+</blockquote>
+<p>写<code>meta</code>标签（符合理想视口标准）：</p>
+<blockquote>
+<ol>
+<li>
+<p>描述屏幕：物理像素：750px 、设备独立像素：375px、<span style='color:red'>css像素：375px</span>。</p>
+</li>
+<li>
+<p>优点：</p>
+<ol>
+<li>
+<p>页面清晰展现，内容不再小到难以观察，用户体验较好。</p>
+</li>
+<li>
+<p>更清晰的像素关系：布局视口 = 视觉视口 = 设备独立像素 = 375px。</p>
+</li>
+<li>
+<p>更清晰的dpr，即dpr = 物理像素/设备独立像素  =  物理像素/css像素。</p>
+<p>例如：dpr=2的设备，1 * 1 css像素  =  1 * 1 设备独立像素 = 2 * 2 物理像素</p>
+</li>
+</ol>
+</li>
+<li>
+<p>缺点：同一个元素，在不同屏幕（设备）上，呈现效果不一样，例如375宽的盒子： 375/375 和 375/414 (不是等比显示)</p>
+</li>
+<li>
+<p>解决缺点：做适配。</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="span-style-color-blue-缩放-span"><span style='color:blue'>缩放</span></h3>
+<h4 id="PC-端">PC 端</h4>
+<p>放大时</p>
+<ul>
+<li>视口变小</li>
+<li>元素的 css 像素值不变，但一个css像素所占面积变大了。</li>
+</ul>
+<p>缩小时</p>
+<ul>
+<li>视口变大</li>
+<li>元素的 css 像素值不变，但一个css像素所占面积变小了。</li>
+</ul>
+<h4 id="移动端">移动端</h4>
+<p>放大时</p>
+<ul>
+<li>布局视口不变</li>
+<li>视觉视口变小</li>
+</ul>
+<p>缩小时</p>
+<ul>
+<li>布局视口不变</li>
+<li>视觉视口变大</li>
+</ul>
+<p><span style="color:#ee0b41">注意：移动端缩放不会影响页面布局，因为缩放的时候，布局视口视口没有变化，简记：移动端的缩放没有改变布局视口的任何东西！</span></p>
+<h2 id="二、viewport">二、viewport</h2>
+<p>meta-viewport 标签是苹果公司在 2007 年引进的，用于移动端布局视口的控制。</p>
+<p>使用示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width,initial-scale=1.0&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>viewport 相关选项</p>
+<ol>
+<li>width  布局视口的宽度</li>
+<li>initial-scale  【系统】初始缩放比例</li>
+<li>maximum-scale 允许【用户】缩放的最大比例</li>
+<li>minimum-scale  允许【用户】缩放的最小比例</li>
+<li>user-scalable  是否允许用户缩放</li>
+<li>viewport-fit 设置为cover值可以解决刘海屏的留白问题</li>
+</ol>
+<h4 id="1-width">1. width</h4>
+<p><span style="color:#ee0b41">width值可以是设备宽度标识 device-width，也可以是具体值，但有些安卓手机是不支持具体值，IOS全系列都支持。</span></p>
+<h4 id="2-initial-scale">2. initial-scale</h4>
+<ol>
+<li>
+<p>initial-scale 为页面初始化时的显示比例。</p>
+</li>
+<li>
+<p>initial-scale = 屏幕宽度(设备独立像素)  /  布局视口宽度。</p>
+</li>
+<li>
+<p>只写initial-scale = 1.0 也可以实现完美视口，但为了良好的兼容性，width=device-width, initial-scale=1.0一般一起写。</p>
+</li>
+</ol>
+<h4 id="3-maximum-scale">3. maximum-scale</h4>
+<ol>
+<li>
+<p>设置允许用户最大缩放比例，苹果浏览器 safari 不认识该属性</p>
+</li>
+<li>
+<p>maximum-scale = 屏幕宽度(设备独立像素) / 视觉视口宽度值</p>
+</li>
+</ol>
+<h4 id="4-minimum-scale">4. minimum-scale</h4>
+<ol>
+<li>
+<p>设置允许用户最小缩放比例。</p>
+</li>
+<li>
+<p>minimum-scale = 屏幕宽度(设备独立像素) / 视觉视口宽度值</p>
+</li>
+</ol>
+<h4 id="5-user-scalable">5. user-scalable</h4>
+<p>​	是否允许用户通过手指缩放页面。苹果浏览器 safari 不认识该属性</p>
+<h4 id="6-viewport-fit">6.viewport-fit</h4>
+<p>​	设置为 cover 可以解决『刘海屏』的留白问题</p>
+ <img src="https://user-gold-cdn.xitu.io/2020/6/29/172fcf06533e7d14?w=898&h=596&f=png&s=221794" style="zoom:50%;" />
+<h2 id="三、适配">三、适配</h2>
+<p><strong>一、为什么要做适配？</strong><br>
+由于移动端设备的屏幕尺寸大小不一，会出现：同一个元素，在两个不同的手机上显示效果不一样（比例不同）。要想让同一个元素在不同设备上，显示效果一样，就需要适配，<strong>无论采用何种适配方式，中心原则永远是：</strong><span style="color:#ee0b41"><strong>等比</strong></span>！。</p>
+<p>主流的适配方式有三种：</p>
+<ul>
+<li>viewport 适配</li>
+<li>rem 适配（主流方式，几乎完美适配）</li>
+<li>vw适配</li>
+</ul>
+<h3 id="1-viewport-适配">1.viewport 适配</h3>
+<ul>
+<li>方法：拿到设计稿之后，设置布局视口宽度为设计稿宽度，然后直接按照设计稿给宽高进行布局即可。</li>
+<li>优点：不用复杂的计算，直接使用图稿上标注的px值</li>
+<li>缺点：
+<ul>
+<li>不能使用完整的meta标签，会导致在某些安卓手机上有兼容性问题。</li>
+<li>不希望适配的东西，例如边框，也强制参与了适配</li>
+<li>图片会失真</li>
+</ul>
+</li>
+</ul>
+<h3 id="span-style-color-ee0b41-2-rem适配-span"><span style="color:#ee0b41">2.rem适配</span></h3>
+<h4 id="em-和-rem">em 和 rem</h4>
+<p>em 和 rem 都是 css 中的长度单位。而且两个都是相对长度单位，不过两个有点区别</p>
+<ul>
+<li>em 相对的是父级元素的字体大小</li>
+<li>rem 相对的是根元素的字体大小</li>
+</ul>
+<p>rem适配的原理：编写样式时统一使用rem为单位，在不同设备上动态调整根字体大小</p>
+<h4 id="具体方案">具体方案</h4>
+<h5 id="方案一">方案一</h5>
+<p>淘宝、百度的移动端页面用的此方案</p>
+<ol>
+<li>设置完美视口</li>
+<li><span style="color:#ee0b41">通过js设置根字体大小 = *<em>( 当前设备横向独立像素值 <em>100) / 设计稿宽度</em></em></span></li>
+<li><span style="color:#ee0b41">编写样式时，直接以rem为单位，值为：<strong>设计值 / 100</strong> </span></li>
+<li>增加 JS 代码进行实时适配</li>
+</ol>
+<p>优势：编写样式时直接挪动小数点即可。</p>
+<h5 id="方法二">方法二</h5>
+<p>搜狐、唯品会的移动端页面用的此方案</p>
+<ol>
+<li>设置完美视口</li>
+<li><span style="color:#ee0b41">通过js设置根字体大小  = <strong>当前设备横向独立像素值 / 10</strong> </span></li>
+<li><span style="color:#ee0b41">编写样式时，直接以rem为单位，值为：<strong>设计值 / (设计稿宽度 / 10)</strong></span></li>
+<li>增加 JS 代码进行实时适配</li>
+</ol>
+<h3 id="3-vw适配-百分比">3.vw适配(百分比)</h3>
+<p>vw和vh是两个相对单位</p>
+<ul>
+<li>1vw = 等于布局视口宽度的1%</li>
+<li>1vh = 等于布局视口高度的1%</li>
+</ul>
+<p>不过vw和vh有一定的兼容性问题：详见：<a target="_blank" rel="noopener" href="https://www.caniuse.com/#search=vw">这里</a></p>
+<h3 id="4-1物理像素边框">4.1物理像素边框</h3>
+<p>高清屏幕下 1px 对应更多的物理像素，所以 1 像素边框看起来比较粗，使用媒查询：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">-webkit-min-device-pixel-ratio</span>:<span class="number">2</span>)&#123;</span><br><span class="line">    <span class="selector-id">#demo</span>&#123;</span><br><span class="line">        <span class="attribute">border</span>: <span class="number">0.5px</span> solid black;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四、移动端事件">四、移动端事件</h2>
+<h3 id="事件类型">事件类型</h3>
+<p>移动端事件列表</p>
+<ul>
+<li>touchstart   元素上触摸开始时触发</li>
+<li>touchmove   元素上触摸移动时触发</li>
+<li>touchend   手指从元素上离开时触发</li>
+<li>touchcancel   触摸被打断时触发</li>
+</ul>
+<p>这几个事件最早出现于IOS safari中，为了向开发人员转达一些特殊的信息。</p>
+<h3 id="应用场景">应用场景</h3>
+<ul>
+<li>
+<p>touchstart 事件可用于元素触摸的交互，比如页面跳转，标签页切换</p>
+</li>
+<li>
+<p>touchmove 事件可用于页面的滑动特效，网页游戏，画板</p>
+</li>
+<li>
+<p>touchend 事件主要跟 touchmove 事件结合使用</p>
+</li>
+<li>
+<p>touchcancel 使用率不高</p>
+</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>touchmove 事件触发后，即使手指离开了元素，touchmove 事件也会持续触发</li>
+<li>触发 touchmove 与 touchend 事件，一定要先触发 touchstart</li>
+<li><span style="color:#ee0b41">事件的作用在于实现移动端的界面交互</span></li>
+</ul>
+<h3 id="点击穿透">点击穿透</h3>
+<p><span style="color:#ee0b41">        touch 事件结束后会默认触发元素的 click 事件</span>，如没有设置完美视口，则事件触发的时间间隔为 300ms 左右，如设置完美视口则时间间隔为 30ms 左右（备注：具体的时间也看设备的特性）。</p>
+<p>​       如果 touch 事件隐藏了元素，则 click 动作将作用到新的元素上，触发新元素的 click 事件或页面跳转，此现象称为点击穿透</p>
+<h4 id="解决方法一">解决方法一</h4>
+<p>阻止默认行为</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//阻止默认行为</span></span><br><span class="line">node.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line">	e.preventDefault(); </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="解决方法二">解决方法二</h4>
+<p>使背后元素不具备click特性，用touchXxxx代替click</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">banner_img.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    location.href = <span class="string">&#x27;http://www.baidu.com&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="解决方案三">解决方案三</h4>
+<p>让背后的元素暂时失去click事件，300毫秒左右再复原</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#anode</span>&#123;</span><br><span class="line">  <span class="attribute">pointer-events</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>,<span class="function">(<span class="params">event</span>)=&gt;</span>&#123;</span><br><span class="line">    shade.style.display =  <span class="string">&#x27;none&#x27;</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        anode.style.pointerEvents = <span class="string">&#x27;auto&#x27;</span></span><br><span class="line">    &#125;,<span class="number">500</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="解决方案四">解决方案四</h4>
+<p>让隐藏的元素延迟300毫秒左右再隐藏</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>,<span class="function">(<span class="params">event</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    	shade.style.display =  <span class="string">&#x27;none&#x27;</span></span><br><span class="line">    &#125;,<span class="number">300</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/OS-storage/" data-toggle="tooltip" data-placement="top" title="【OS】三、存储器分级策略">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=前端之移动端适配详解&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/HTML-mobile/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Sat Sep 11 2021 10:52:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、相关概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B1%8F%E5%B9%95%E7%9B%B8%E5%85%B3"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">屏幕相关</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E5%B1%8F%E5%B9%95%E5%A4%A7%E5%B0%8F"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1.屏幕大小</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">2.屏幕分辨率</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-%E5%B1%8F%E5%B9%95%E5%AF%86%E5%BA%A6"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">3.屏幕密度</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%83%8F%E7%B4%A0%E7%9B%B8%E5%85%B3"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">像素相关</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E7%89%A9%E7%90%86%E5%83%8F%E7%B4%A0"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">1.物理像素</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-css-%E5%83%8F%E7%B4%A0"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">2. css 像素</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-%E8%AE%BE%E5%A4%87%E7%8B%AC%E7%AB%8B%E5%83%8F%E7%B4%A0"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">3.设备独立像素</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-%E5%83%8F%E7%B4%A0%E6%AF%94"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">4.像素比</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-%E5%83%8F%E7%B4%A0%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-nav-number">1.2.5.</span> <span class="toc-nav-text">5.像素之间的关系</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%BE%E7%89%87%E9%AB%98%E6%B8%85%E6%98%BE%E7%A4%BA"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">图片高清显示</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%8D%E5%9B%BE%E5%83%8F%E7%B4%A0"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">位图像素</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%86%E5%8F%A3%E7%9B%B8%E5%85%B3"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">视口相关</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#pc%E7%AB%AF%E8%A7%86%E5%8F%A3"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">pc端视口</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%A7%86%E5%8F%A3"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">移动端视口</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-%E5%B8%83%E5%B1%80%E8%A7%86%E5%8F%A3"><span class="toc-nav-number">1.4.2.1.</span> <span class="toc-nav-text">1. 布局视口</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-%E8%A7%86%E8%A7%89%E8%A7%86%E5%8F%A3"><span class="toc-nav-number">1.4.2.2.</span> <span class="toc-nav-text">2.视觉视口</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-%E7%90%86%E6%83%B3%E8%A7%86%E5%8F%A3%E6%A0%87%E5%87%86"><span class="toc-nav-number">1.4.2.3.</span> <span class="toc-nav-text">3.理想视口标准</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#span-style-color-blue-%E7%BC%A9%E6%94%BE-span"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">缩放</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#PC-%E7%AB%AF"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">PC 端</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">移动端</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81viewport"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、viewport</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-width"><span class="toc-nav-number">2.0.1.</span> <span class="toc-nav-text">1. width</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-initial-scale"><span class="toc-nav-number">2.0.2.</span> <span class="toc-nav-text">2. initial-scale</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-maximum-scale"><span class="toc-nav-number">2.0.3.</span> <span class="toc-nav-text">3. maximum-scale</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-minimum-scale"><span class="toc-nav-number">2.0.4.</span> <span class="toc-nav-text">4. minimum-scale</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-user-scalable"><span class="toc-nav-number">2.0.5.</span> <span class="toc-nav-text">5. user-scalable</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-viewport-fit"><span class="toc-nav-number">2.0.6.</span> <span class="toc-nav-text">6.viewport-fit</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E9%80%82%E9%85%8D"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、适配</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-viewport-%E9%80%82%E9%85%8D"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1.viewport 适配</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#span-style-color-ee0b41-2-rem%E9%80%82%E9%85%8D-span"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2.rem适配</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#em-%E5%92%8C-rem"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">em 和 rem</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%85%B7%E4%BD%93%E6%96%B9%E6%A1%88"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">具体方案</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80"><span class="toc-nav-number">3.2.2.1.</span> <span class="toc-nav-text">方案一</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-nav-number">3.2.2.2.</span> <span class="toc-nav-text">方法二</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-vw%E9%80%82%E9%85%8D-%E7%99%BE%E5%88%86%E6%AF%94"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.vw适配(百分比)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-1%E7%89%A9%E7%90%86%E5%83%8F%E7%B4%A0%E8%BE%B9%E6%A1%86"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">4.1物理像素边框</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%BA%8B%E4%BB%B6"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、移动端事件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">事件类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">应用场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%82%B9%E5%87%BB%E7%A9%BF%E9%80%8F"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">点击穿透</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">解决方法一</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">解决方法二</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%89"><span class="toc-nav-number">4.3.3.</span> <span class="toc-nav-text">解决方案三</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%9B%9B"><span class="toc-nav-number">4.3.4.</span> <span class="toc-nav-text">解决方案四</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#mobile" title="mobile">mobile</a>
+            
+            <a class="tag" href="/tags/#HTML" title="HTML">HTML</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">401.8k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/HTML-mobile/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
+</html>
