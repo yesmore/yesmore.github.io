@@ -491,8 +491,7 @@
 <li>最后，这道题目有实战意义，它背后考察的是求职者的编程功底。</li>
 </ul>
 <p>为了弄清楚这道题目，你需要对程序有一个更深层次的认识，不仅仅停留在指令的执行层面，而是要灵活使用指令，去实现更加复杂的功能。</p>
-<h3 id="for-循环如何被执行">for 循环如何被执行</h3>
-<p>首先，我们来看 for 循环是如何实现的。</p>
+<h3 id="for-循环如何被执行"><a href="#for-循环如何被执行" class="headerlink" title="for 循环如何被执行"></a>for 循环如何被执行</h3><p>首先，我们来看 for 循环是如何实现的。</p>
 <p>下面是一个求 1 加到 100 的 Java 程序，请你思考如何将它转换为指令：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">1</span>, s = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">  s+=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>指令是简单的，像积木一样，程序是复杂的，像房子一样。我们将简单的事情组合，然后去完成复杂的事情，这就是程序员每天在做的。在这个过程中，你会产生思考，比如如何排列组合，如何搭积木，才能更快更准地完成项目？所以这也是训练思维的一个过程。</p>
@@ -509,16 +508,14 @@
 <li>因为不同的机器助记符也不一样，所以你不用太关注我用的是什么汇编语言，也不用去记忆这些指令。当你拿到指定芯片的时候，直接去查阅芯片的说明书就可以了。</li>
 <li>虽然不同 CPU 的指令不一样，但也是有行业标准的。现在使用比较多的是 RISC（精简指令集）和 CISC（复杂指令集）。比如目前Inte 和 AMD 家族主要使用 CISC 指令集，ARM 和 MIPS 等主要使用RISC 指令集。</li>
 </ol>
-<h3 id="条件控制程序">条件控制程序</h3>
-<p>条件控制程序有两种典型代表，一种是 <code>if-else</code> ，另一种是 <code>switch-case</code> 。 总体来说， <code>if-else</code> 翻译成指令，是比较简单的，你需要用跳转指令和比较指令处理它的跳转逻辑。</p>
+<h3 id="条件控制程序"><a href="#条件控制程序" class="headerlink" title="条件控制程序"></a>条件控制程序</h3><p>条件控制程序有两种典型代表，一种是 <code>if-else</code> ，另一种是 <code>switch-case</code> 。 总体来说， <code>if-else</code> 翻译成指令，是比较简单的，你需要用跳转指令和比较指令处理它的跳转逻辑。</p>
 <p>当然，它们的使用场景不同，这块我不展开了。在这里我主要想跟你说说，它们的内部实现是不一样的。<code>if-else</code> 是一个自上向下的执行逻辑， <code>switch-case</code>是一种精确匹配算法。比如你有 1000 个 case，如果用 <code>if-else</code> 你需要一个个比较，最坏情况下需要比较 <code>999</code> 次；而如果用 <code>switch-case</code> ，就不需要一个个比较，通过算法就可以直接定位到对应的<code>case</code> 。</p>
 <p>举个具体的例子，比如一个根据数字返回星期的程序。如果用<code>if-else</code>，那么你需要这样做：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(week == <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;周一&quot;</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(week == <span class="number">2</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;周二&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
 <p>如果用 <code>switch-case</code> 的逻辑，你可能会这样计算：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">跳转位置=当前PC + <span class="number">4</span>*(week * <span class="number">2</span> - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 <p>你不用太关心上面的数学关系，我只是举一个例子告诉你， <code>switch-case</code> 实现更多是依赖数学关系，直接算出 case 所在指令的位置，而不是一行行执行和比较。</p>
-<h3 id="函数">函数</h3>
-<p>了解了循环和条件判断，我们再来看看函数是如何被执行的。函数的执行过程必须深入到底层，也会涉及一种叫作栈的数据结构。</p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>了解了循环和条件判断，我们再来看看函数是如何被执行的。函数的执行过程必须深入到底层，也会涉及一种叫作栈的数据结构。</p>
 <p>下面是一段 C 程序，传入两个参数，然后返回两个参数的和：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="title">add</span>(<span class="params">int a, int b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这里我先不说具体的解决方案，希望你可以先自己思考。其实到这里，你已经学了不少知识了。下面我们一起分析一下，一种思考的方向是：</p>
@@ -594,8 +591,7 @@
 <p><img src="CgqCHl_lhT6AP75kAAD-cUrMUNg773.png" alt="Lark20201225-140329.png"></p>
 <p>然后我们在调用函数前，还需要将返回地址压栈。这样在函数计算完成前，就能跳转回对应的返回地址。翻译成指令，就是下面这样：</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">## 压栈返回值</span><br><span class="line">add SP, <span class="number">4</span>  -&gt; SP </span><br><span class="line"></span><br><span class="line"># 计算返回地址</span><br><span class="line"># 我们需要跳转到清理堆栈那行，也就是<span class="number">16</span>行</span><br><span class="line">MOV PC+<span class="number">4</span>*(参数个数*<span class="number">2</span>+<span class="number">1</span>) -&gt; SP</span><br><span class="line"></span><br><span class="line"># 压栈参数的程序</span><br><span class="line">……</span><br><span class="line"></span><br><span class="line"># 执行函数，计算返回值</span><br><span class="line">call function</span><br><span class="line"></span><br><span class="line"># 清理堆栈</span><br><span class="line">add SP, -(参数个数+<span class="number">1</span>)*<span class="number">4</span>， SP</span><br></pre></td></tr></table></figure>
-<h3 id="递归函数如何被执行">递归函数如何被执行</h3>
-<p>我们刚刚使用了栈解决了函数的调用问题。但是这个方案究竟合不合理，还需要用更复杂的情况来验证。</p>
+<h3 id="递归函数如何被执行"><a href="#递归函数如何被执行" class="headerlink" title="递归函数如何被执行"></a>递归函数如何被执行</h3><p>我们刚刚使用了栈解决了函数的调用问题。但是这个方案究竟合不合理，还需要用更复杂的情况来验证。</p>
 <p>如下所示，我们给出一个递归函数，请你判断是否可以用上面的方法执行：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="title">sum</span>(<span class="params">int n</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(n == <span class="number">1</span>) &#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;</span><br><span class="line">  <span class="keyword">return</span> n + sum(n-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>递归的时候，我们每次执行函数都形成一个如下所示的栈结构：</p>
@@ -610,8 +606,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">2</span> + sum(<span class="number">1</span>) <span class="comment">// sum(1) = 1</span></span><br></pre></td></tr></table></figure>
 <p>上面程序等价于<code>return 3</code>，接着再触发第 98 次递归的执行，然后是第 97 次，最终触发到第一次函数调用返回结果。</p>
 <p>由此可见，栈这种结构同样适合递归的计算。事实上，计算机编程语言就是用这种结构来实现递归函数。</p>
-<h3 id="类型（class）如何实现">类型（class）如何实现</h3>
-<p>按照我们之前已经学习到的知识：</p>
+<h3 id="类型（class）如何实现"><a href="#类型（class）如何实现" class="headerlink" title="类型（class）如何实现"></a>类型（class）如何实现</h3><p>按照我们之前已经学习到的知识：</p>
 <ul>
 <li>变量是一个内存地址，所以只需要分配内存就好了；</li>
 <li>循环控制可以用跳转加判断实现；</li>
@@ -632,8 +627,7 @@
 <li>最后执行跳转。</li>
 </ol>
 <p>这里有一个小问题，有时候 class 的方法会用到<code>this</code> ，这其实并不复杂，你仔细想想， <code>this</code>指针不就是构造函数创建的一个指向 class 实例的地址吗？那么，有一种简单的实现，就是我们可以把 <code>this</code> 作为函数的第一个参数压栈。这样，类型的函数就可以访问类型的成员了，而类型也就可以翻译成指令了。</p>
-<h3 id="总结">总结</h3>
-<p>下面我们做一个简单的总结：</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>下面我们做一个简单的总结：</p>
 <ol>
 <li>我们写的程序需要翻译成指令才能被执行，在 03 课时中我们提到过，这个翻译工具叫作编译器。</li>
 <li>平时你编程做的事情，用机器指令也能做，所以从计算能力上来说它们是等价的，最终这种计算能力又和图灵机是等价的。如果一个语言的能力和图灵机等价，我们就说这个语言是图灵完备的语言。现在市面上的绝大多数语言都是图灵完备的语言，但也有一些不是，比如 HTML、正则表达式和 SQL 等。</li>
@@ -647,8 +641,7 @@
 <li>我们还需要一个栈指针，支持寄存器的编程语言能够直接用寄存器，而不支持直接用寄存器的编程语言，比如 Java，我们可以用一个变量；</li>
 <li>然后我们可以实现压栈、出栈的操作，并按照上面学习的函数调用方法操作我们的栈。</li>
 </ul>
-<h3 id="思考题">思考题</h3>
-<p>最后我给你出一道常见的白板面试题，也是一道经典的面试题目。<strong>假设你使用的程序语言不支持递归程序，如果要求用栈来模拟下面这个斐波那契求第n项的程序，应该如何转换成等价的基于栈的非递归实现</strong>？</p>
+<h3 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h3><p>最后我给你出一道常见的白板面试题，也是一道经典的面试题目。<strong>假设你使用的程序语言不支持递归程序，如果要求用栈来模拟下面这个斐波那契求第n项的程序，应该如何转换成等价的基于栈的非递归实现</strong>？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="title">fib</span>(<span class="params">int n</span>)</span> &#123;</span><br><span class="line"> <span class="keyword">if</span>(n == <span class="number">1</span> || n == <span class="number">2</span>) &#123; <span class="keyword">return</span> n; &#125;</span><br><span class="line">  <span class="keyword">return</span> fib(n-<span class="number">1</span>) + fib(n-<span class="number">2</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         <hr>
@@ -937,7 +930,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">401.8k</span>
+          站点总字数：<span class="post-count">401.6k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

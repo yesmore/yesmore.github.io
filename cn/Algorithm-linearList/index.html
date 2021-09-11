@@ -488,103 +488,72 @@
         <p>要点：线性表知识点汇总</p>
 <span id="more"></span>
 <p><img src="algorithm7.png" alt="1"></p>
-<h3 id="一、线性表的定义">一、线性表的定义</h3>
-<p>由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。</p>
+<h3 id="一、线性表的定义"><a href="#一、线性表的定义" class="headerlink" title="一、线性表的定义"></a>一、线性表的定义</h3><p>由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。</p>
 <p><img src="algorithm8.png" alt="2"></p>
-<h3 id="二、线性表的特点">二、线性表的特点</h3>
-<p>1、线性表中元素的个数<code>n(n≥O)</code>定义为线性表的长度，<code>n=O</code>时称为空表。</p>
+<h3 id="二、线性表的特点"><a href="#二、线性表的特点" class="headerlink" title="二、线性表的特点"></a>二、线性表的特点</h3><p>1、线性表中元素的个数<code>n(n≥O)</code>定义为线性表的长度，<code>n=O</code>时称为空表。</p>
 <p>2、将非空的线性表(n&gt;O)记作(a1，a2，a3，…，an)；</p>
 <p>3、这里的数据元素$a_i (1≤i≤n)$​​​只是个抽象的符号，其具体含义在不同情况下可以不同；</p>
 <p>4、在非空的线性表，有且仅有一个开始结点$a_1$​,它没有直接前趋，而仅有一个直接后继；</p>
 <p>5、有且仅有一个终端结点$a_n$,它没有直接后继，而仅有一个直接前趋$a_n-1$​；</p>
 <p>6、其余的内部结点$a_i$​,(2&lt;i&lt;n-1)都有且仅有一个直接前趋$a_i-1$​和一个直接后继$a_i+1$​​ 。</p>
 <blockquote>
-<p>线性表的例子:</p>
+<p>线性表的例子: </p>
 <p>26个英文字母的字母表：(A, B, C, …，Z)；学生信息表；12星座。</p>
 <p>同一线性表中的元素必定具有相同的特性，数据元素之间关系是线性的。</p>
 </blockquote>
-<h3 id="三、线性表的顺序存储结构">三、线性表的顺序存储结构</h3>
-<h4 id="3-1-定义">3.1 定义</h4>
-<p>是用一段<strong>地址连续的存储单元依次存储</strong>线性表的<strong>数据元</strong></p>
-<h4 id="3-2-顺序存储示意图如下所示">3.2 顺序存储示意图如下所示</h4>
-<p><img src="algorithm5.png" alt="3"></p>
-<h4 id="3-3-编号地址">3.3 编号地址</h4>
-<p><strong>存储器中的每个存储单元都有自己的编号，这个编号称为地址</strong></p>
-<h4 id="3-4-存储位置公式">3.4 存储位置公式</h4>
-<p>每个数据元素，不管它是整型，实型还是字符型，它<strong>都是需要</strong>占用一定的存储单元空间的。</p>
+<h3 id="三、线性表的顺序存储结构"><a href="#三、线性表的顺序存储结构" class="headerlink" title="三、线性表的顺序存储结构"></a>三、线性表的顺序存储结构</h3><h4 id="3-1-定义"><a href="#3-1-定义" class="headerlink" title="3.1 定义"></a>3.1 定义</h4><p>是用一段<strong>地址连续的存储单元依次存储</strong>线性表的<strong>数据元</strong></p>
+<h4 id="3-2-顺序存储示意图如下所示"><a href="#3-2-顺序存储示意图如下所示" class="headerlink" title="3.2 顺序存储示意图如下所示"></a>3.2 顺序存储示意图如下所示</h4><p><img src="algorithm5.png" alt="3"></p>
+<h4 id="3-3-编号地址"><a href="#3-3-编号地址" class="headerlink" title="3.3 编号地址"></a>3.3 编号地址</h4><p><strong>存储器中的每个存储单元都有自己的编号，这个编号称为地址</strong></p>
+<h4 id="3-4-存储位置公式"><a href="#3-4-存储位置公式" class="headerlink" title="3.4 存储位置公式"></a>3.4 存储位置公式</h4><p>每个数据元素，不管它是整型，实型还是字符型，它<strong>都是需要</strong>占用一定的存储单元空间的。</p>
 <p>假设占用的是 <strong>c 个存储单元</strong>，那么对于线性表的<strong>第 i 个数据元素</strong> $a_i$​ 的<strong>存储位置</strong>都可以由 $a_1$​ 推导算出：</p>
 <p>$LOC(a_i) = LOC(a_1) + (i - 1) * c$</p>
-<h4 id="3-5-存取操作时间性能">3.5 存取操作时间性能</h4>
-<p>上述推导公式具体内容如下图所示:</p>
+<h4 id="3-5-存取操作时间性能"><a href="#3-5-存取操作时间性能" class="headerlink" title="3.5 存取操作时间性能"></a>3.5 存取操作时间性能</h4><p>上述推导公式具体内容如下图所示: </p>
 <p><img src="algorithm9.png" alt="4"></p>
 <p>通过该公式，就可以<strong>随时算出</strong>线性表中<strong>任意位置的地址</strong>；</p>
 <p>不管是第一个还是最后一个，都是相同的时间，<strong>也即</strong>对于线性表<strong>每个位置</strong>的<strong>存入或者取出数据</strong>，对于计算机来说<strong>都是相等的时间</strong>，也就是一个<strong>常数时间</strong>。</p>
 <p>因此，线性表的<strong>存取操作时间性能</strong>为 $O(1)$</p>
-<h4 id="3-6-随机存储结构">3.6 随机存储结构</h4>
-<p>我们通常将<strong>存取操作</strong>具备<strong>常数性能</strong>（$O(1)$）的<strong>存储结构</strong>称为随机存储结构</p>
-<h4 id="3-7-时间复杂度">3.7 时间复杂度</h4>
-<h5 id="对于存取操作">对于存取操作</h5>
-<p>线性表的顺序存储结构，对于<strong>存取操作</strong>，其<strong>时间复杂度</strong>为 $O(1)$​，因为<strong>元素位置</strong>可以<strong>直接计算得到</strong></p>
-<h5 id="对于插入和删除操作">对于<strong>插入和删除</strong>操作</h5>
-<p>对于<strong>插入和删除</strong>操作，其<strong>时间复杂度</strong>为 $O(n)$，因为插入或删除后，需要<strong>移动其余元素</strong></p>
-<h4 id="3-8-使用场景">3.8 使用场景</h4>
-<p>线性表顺序存储结构<strong>比较适用于</strong>元素<strong>存取操作</strong>较多，<strong>增删操作较少</strong>的场景</p>
-<h3 id="四、线性表的链式存储结构">四、线性表的链式存储结构</h3>
-<blockquote>
+<h4 id="3-6-随机存储结构"><a href="#3-6-随机存储结构" class="headerlink" title="3.6 随机存储结构"></a>3.6 随机存储结构</h4><p>我们通常将<strong>存取操作</strong>具备<strong>常数性能</strong>（$O(1)$）的<strong>存储结构</strong>称为随机存储结构</p>
+<h4 id="3-7-时间复杂度"><a href="#3-7-时间复杂度" class="headerlink" title="3.7 时间复杂度"></a>3.7 时间复杂度</h4><h5 id="对于存取操作"><a href="#对于存取操作" class="headerlink" title="对于存取操作"></a>对于存取操作</h5><p>线性表的顺序存储结构，对于<strong>存取操作</strong>，其<strong>时间复杂度</strong>为 $O(1)$​，因为<strong>元素位置</strong>可以<strong>直接计算得到</strong></p>
+<h5 id="对于插入和删除操作"><a href="#对于插入和删除操作" class="headerlink" title="对于插入和删除操作"></a>对于<strong>插入和删除</strong>操作</h5><p>对于<strong>插入和删除</strong>操作，其<strong>时间复杂度</strong>为 $O(n)$，因为插入或删除后，需要<strong>移动其余元素</strong></p>
+<h4 id="3-8-使用场景"><a href="#3-8-使用场景" class="headerlink" title="3.8 使用场景"></a>3.8 使用场景</h4><p>线性表顺序存储结构<strong>比较适用于</strong>元素<strong>存取操作</strong>较多，<strong>增删操作较少</strong>的场景</p>
+<h3 id="四、线性表的链式存储结构"><a href="#四、线性表的链式存储结构" class="headerlink" title="四、线性表的链式存储结构"></a>四、线性表的链式存储结构</h3><blockquote>
 <p>参考：<a target="_blank" rel="noopener" href="https://freepiao.cn/Algorithm-SingleLinkedList/">单链表详解</a>、<a target="_blank" rel="noopener" href="https://freepiao.cn/Algorithm-DoubleLinkedList/">双向链表详解</a></p>
 </blockquote>
-<h4 id="4-1-什么是链表">4.1 什么是链表</h4>
-<p><strong>一个或多个结点</strong>组合而成的数据结构称为链表</p>
-<h4 id="4-2-结点">4.2 结点</h4>
-<p><strong>结点</strong> 一般由<strong>两部分</strong>内容构成：</p>
+<h4 id="4-1-什么是链表"><a href="#4-1-什么是链表" class="headerlink" title="4.1 什么是链表"></a>4.1 什么是链表</h4><p><strong>一个或多个结点</strong>组合而成的数据结构称为链表</p>
+<h4 id="4-2-结点"><a href="#4-2-结点" class="headerlink" title="4.2 结点"></a>4.2 结点</h4><p><strong>结点</strong> 一般由<strong>两部分</strong>内容构成：</p>
 <ul>
-<li>
-<p>数据域：存储<strong>真实数据元素</strong></p>
+<li><p>数据域：存储<strong>真实数据元素</strong></p>
 </li>
-<li>
-<p>指针域：存储<strong>下一个</strong>结点的<strong>地址（指针）</strong></p>
+<li><p>指针域：存储<strong>下一个</strong>结点的<strong>地址（指针）</strong></p>
 </li>
 </ul>
 <p><img src="algorithm10.png" alt="5"></p>
-<h4 id="4-3-头指针-头结点">4.3 头指针&amp;头结点</h4>
-<p><strong>头结点的数据</strong>域<strong>可以不存储任何信息</strong>，其指针域存储<strong>指向</strong>第一个结点的指针（<strong>即指向头指针</strong>）</p>
-<h5 id="头指针">头指针</h5>
-<p>一般把<strong>链表</strong>中的<strong>第一个结</strong>点称为 <strong>头指针</strong>，其<strong>存储</strong>链表的<strong>第一个数据元素</strong></p>
-<h5 id="头结点">头结点</h5>
-<p>为了能更加方便地对链表进行操作，会在<strong>单链表的第一个结点（即头指针）前</strong>附<strong>设一个结点</strong>，称为 <strong>头结点</strong></p>
+<h4 id="4-3-头指针-amp-头结点"><a href="#4-3-头指针-amp-头结点" class="headerlink" title="4.3 头指针&amp;头结点"></a>4.3 头指针&amp;头结点</h4><p><strong>头结点的数据</strong>域<strong>可以不存储任何信息</strong>，其指针域存储<strong>指向</strong>第一个结点的指针（<strong>即指向头指针</strong>）</p>
+<h5 id="头指针"><a href="#头指针" class="headerlink" title="头指针"></a>头指针</h5><p>一般把<strong>链表</strong>中的<strong>第一个结</strong>点称为 <strong>头指针</strong>，其<strong>存储</strong>链表的<strong>第一个数据元素</strong></p>
+<h5 id="头结点"><a href="#头结点" class="headerlink" title="头结点"></a>头结点</h5><p>为了能更加方便地对链表进行操作，会在<strong>单链表的第一个结点（即头指针）前</strong>附<strong>设一个结点</strong>，称为 <strong>头结点</strong></p>
 <p><img src="algorithm11.png" alt="6"></p>
-<h4 id="4-4-单链表">4.4 单链表</h4>
-<p>在<strong>线性表的顺序存储结构</strong>（即数组）中，其任意一个元素的存储位置可以通过计算得到，因此其数据读取的<strong>时间复杂度为</strong> $O(1)$</p>
-<h5 id="单链表的时间复杂度">单链表的时间复杂度</h5>
-<h6 id="对于存取操作-2">对于存取操作</h6>
-<p>对于单链表结构，假设需要获取第 i 个元素，则必须从第一个结点开始依次进行遍历，直到达到第 i 个结点。因此，对于单链表结构而言，其数据元素读取的<strong>时间复杂度</strong>为 $O(n)$</p>
-<h6 id="对于插入和删除操作-2">对于<strong>插入和删除</strong>操作</h6>
-<p>对单链表结构来说，对其任意一个位置进行增删操作，其<strong>时间复杂度</strong>为 $O(n)$</p>
+<h4 id="4-4-单链表"><a href="#4-4-单链表" class="headerlink" title="4.4 单链表"></a>4.4 单链表</h4><p>在<strong>线性表的顺序存储结构</strong>（即数组）中，其任意一个元素的存储位置可以通过计算得到，因此其数据读取的<strong>时间复杂度为</strong> $O(1)$</p>
+<h5 id="单链表的时间复杂度"><a href="#单链表的时间复杂度" class="headerlink" title="单链表的时间复杂度"></a>单链表的时间复杂度</h5><h6 id="对于存取操作-1"><a href="#对于存取操作-1" class="headerlink" title="对于存取操作"></a>对于存取操作</h6><p>对于单链表结构，假设需要获取第 i 个元素，则必须从第一个结点开始依次进行遍历，直到达到第 i 个结点。因此，对于单链表结构而言，其数据元素读取的<strong>时间复杂度</strong>为 $O(n)$</p>
+<h6 id="对于插入和删除操作-1"><a href="#对于插入和删除操作-1" class="headerlink" title="对于插入和删除操作"></a>对于<strong>插入和删除</strong>操作</h6><p>对单链表结构来说，对其任意一个位置进行增删操作，其<strong>时间复杂度</strong>为 $O(n)$</p>
 <p><strong>因为</strong>需要先进行<strong>遍历找到目标元素</strong>，对头指针的增删操作其<strong>时间复杂度</strong>为 $O(1)$</p>
-<h4 id="4-5-线性表和单链表比较">4.5 线性表和单链表比较</h4>
-<p>如果只对一个元素进行增删操作，两种结构并不存在优劣之分，但如果针对多个数据进行增删，由于线性表每一次增删都需要移动 n-i 个元素，即<strong>每个元素</strong>的操作都为 $O(n)$</p>
+<h4 id="4-5-线性表和单链表比较"><a href="#4-5-线性表和单链表比较" class="headerlink" title="4.5 线性表和单链表比较"></a>4.5 线性表和单链表比较</h4><p>如果只对一个元素进行增删操作，两种结构并不存在优劣之分，但如果针对多个数据进行增删，由于线性表每一次增删都需要移动 n-i 个元素，即<strong>每个元素</strong>的操作都为 $O(n)$</p>
 <p>而单链表只在<strong>第一次</strong>遍历定位目标元素时为$O(n)$，<strong>对后续元素</strong>的增删只需简单地赋值移动指针即可，其时间复杂度为 $O(1)$</p>
 <blockquote>
 <p>总结：对于<strong>插入或删除数据越频繁</strong>的操作，<strong>单链表</strong>的效率就越明显</p>
 </blockquote>
-<h4 id="4-6-循环链表">4.6 循环链表</h4>
-<p>将单链表中的<strong>终端结点</strong>的<strong>指针端</strong>由空指针<strong>改为指向头结点</strong>，就使整个单链表形成一个环；</p>
+<h4 id="4-6-循环链表"><a href="#4-6-循环链表" class="headerlink" title="4.6 循环链表"></a>4.6 循环链表</h4><p>将单链表中的<strong>终端结点</strong>的<strong>指针端</strong>由空指针<strong>改为指向头结点</strong>，就使整个单链表形成一个环；</p>
 <p>这种头尾相接的单链表称为单循环链表，简称 <strong>循环链表</strong>（circular linked list）</p>
 <blockquote>
 <p>循环链表<strong>不一定需要头结点</strong></p>
 </blockquote>
-<h4 id="4-7-单链表和循环链表的区别">4.7 单链表和循环链表的区别</h4>
-<p>为了使空链表与非空链表**处理一致，我们通常设一个头结点（**循环链表不一定需要头结点）</p>
+<h4 id="4-7-单链表和循环链表的区别"><a href="#4-7-单链表和循环链表的区别" class="headerlink" title="4.7 单链表和循环链表的区别"></a>4.7 单链表和循环链表的区别</h4><p>为了使空链表与非空链表<strong>处理一致，我们通常设一个头结点（</strong>循环链表不一定需要头结点）</p>
 <p>主要差异<strong>就在于循环的判断条件上</strong></p>
-<h5 id="单链表判断条件">单链表判断条件</h5>
-<p>尾结点是否<strong>指向空</strong>：</p>
+<h5 id="单链表判断条件"><a href="#单链表判断条件" class="headerlink" title="单链表判断条件"></a>单链表判断条件</h5><p>尾结点是否<strong>指向空</strong>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p-&gt;next = NULL</span><br></pre></td></tr></table></figure>
-<h5 id="循环链表判断条件">循环链表判断条件</h5>
-<p>当前结点是否指<strong>向头结点</strong>：</p>
+<h5 id="循环链表判断条件"><a href="#循环链表判断条件" class="headerlink" title="循环链表判断条件"></a>循环链表判断条件</h5><p>当前结点是否指<strong>向头结点</strong>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p-&gt;next = head</span><br></pre></td></tr></table></figure>
 <p>是则当前结点为尾结点</p>
-<h4 id="4-8-双向链表">4.8 双向链表</h4>
-<p>双向链表（double linked list）：在单链表的每个结点中，再设置一个<strong>指向其前驱结点的指针域</strong></p>
+<h4 id="4-8-双向链表"><a href="#4-8-双向链表" class="headerlink" title="4.8 双向链表"></a>4.8 双向链表</h4><p>双向链表（double linked list）：在单链表的每个结点中，再设置一个<strong>指向其前驱结点的指针域</strong></p>
 
 
         <hr>
@@ -734,7 +703,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、线性表的定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、线性表的特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、线性表的顺序存储结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-1-%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1 定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-2-%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%A4%BA%E6%84%8F%E5%9B%BE%E5%A6%82%E4%B8%8B%E6%89%80%E7%A4%BA"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2 顺序存储示意图如下所示</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-3-%E7%BC%96%E5%8F%B7%E5%9C%B0%E5%9D%80"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.3 编号地址</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-4-%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE%E5%85%AC%E5%BC%8F"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">3.4 存储位置公式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-5-%E5%AD%98%E5%8F%96%E6%93%8D%E4%BD%9C%E6%97%B6%E9%97%B4%E6%80%A7%E8%83%BD"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">3.5 存取操作时间性能</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-6-%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">3.6 随机存储结构</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-7-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">3.7 时间复杂度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%AD%98%E5%8F%96%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">3.7.1.</span> <span class="toc-nav-text">对于存取操作</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">3.7.2.</span> <span class="toc-nav-text">对于插入和删除操作</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-8-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">3.8 使用场景</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、线性表的链式存储结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-1-%E4%BB%80%E4%B9%88%E6%98%AF%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">4.1 什么是链表</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-2-%E7%BB%93%E7%82%B9"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">4.2 结点</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-3-%E5%A4%B4%E6%8C%87%E9%92%88-%E5%A4%B4%E7%BB%93%E7%82%B9"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">4.3 头指针&amp;头结点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%A4%B4%E6%8C%87%E9%92%88"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">头指针</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%A4%B4%E7%BB%93%E7%82%B9"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">头结点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-4-%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">4.4 单链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">4.4.1.</span> <span class="toc-nav-text">单链表的时间复杂度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%AD%98%E5%8F%96%E6%93%8D%E4%BD%9C-2"><span class="toc-nav-number">4.4.1.1.</span> <span class="toc-nav-text">对于存取操作</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C-2"><span class="toc-nav-number">4.4.1.2.</span> <span class="toc-nav-text">对于插入和删除操作</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-5-%E7%BA%BF%E6%80%A7%E8%A1%A8%E5%92%8C%E5%8D%95%E9%93%BE%E8%A1%A8%E6%AF%94%E8%BE%83"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">4.5 线性表和单链表比较</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-6-%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">4.6 循环链表</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-7-%E5%8D%95%E9%93%BE%E8%A1%A8%E5%92%8C%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">4.7.</span> <span class="toc-nav-text">4.7 单链表和循环链表的区别</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6"><span class="toc-nav-number">4.7.1.</span> <span class="toc-nav-text">单链表判断条件</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6"><span class="toc-nav-number">4.7.2.</span> <span class="toc-nav-text">循环链表判断条件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-8-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">4.8.</span> <span class="toc-nav-text">4.8 双向链表</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、线性表的定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、线性表的特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、线性表的顺序存储结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-1-%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1 定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-2-%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%A4%BA%E6%84%8F%E5%9B%BE%E5%A6%82%E4%B8%8B%E6%89%80%E7%A4%BA"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2 顺序存储示意图如下所示</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-3-%E7%BC%96%E5%8F%B7%E5%9C%B0%E5%9D%80"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.3 编号地址</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-4-%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE%E5%85%AC%E5%BC%8F"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">3.4 存储位置公式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-5-%E5%AD%98%E5%8F%96%E6%93%8D%E4%BD%9C%E6%97%B6%E9%97%B4%E6%80%A7%E8%83%BD"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">3.5 存取操作时间性能</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-6-%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">3.6 随机存储结构</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-7-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">3.7 时间复杂度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%AD%98%E5%8F%96%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">3.7.1.</span> <span class="toc-nav-text">对于存取操作</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">3.7.2.</span> <span class="toc-nav-text">对于插入和删除操作</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-8-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">3.8 使用场景</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、线性表的链式存储结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-1-%E4%BB%80%E4%B9%88%E6%98%AF%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">4.1 什么是链表</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-2-%E7%BB%93%E7%82%B9"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">4.2 结点</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-3-%E5%A4%B4%E6%8C%87%E9%92%88-amp-%E5%A4%B4%E7%BB%93%E7%82%B9"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">4.3 头指针&amp;头结点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%A4%B4%E6%8C%87%E9%92%88"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">头指针</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%A4%B4%E7%BB%93%E7%82%B9"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">头结点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-4-%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">4.4 单链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-nav-number">4.4.1.</span> <span class="toc-nav-text">单链表的时间复杂度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%AD%98%E5%8F%96%E6%93%8D%E4%BD%9C-1"><span class="toc-nav-number">4.4.1.1.</span> <span class="toc-nav-text">对于存取操作</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C-1"><span class="toc-nav-number">4.4.1.2.</span> <span class="toc-nav-text">对于插入和删除操作</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-5-%E7%BA%BF%E6%80%A7%E8%A1%A8%E5%92%8C%E5%8D%95%E9%93%BE%E8%A1%A8%E6%AF%94%E8%BE%83"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">4.5 线性表和单链表比较</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-6-%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">4.6 循环链表</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-7-%E5%8D%95%E9%93%BE%E8%A1%A8%E5%92%8C%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">4.7.</span> <span class="toc-nav-text">4.7 单链表和循环链表的区别</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6"><span class="toc-nav-number">4.7.1.</span> <span class="toc-nav-text">单链表判断条件</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6"><span class="toc-nav-number">4.7.2.</span> <span class="toc-nav-text">循环链表判断条件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-8-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">4.8.</span> <span class="toc-nav-text">4.8 双向链表</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -875,7 +844,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">401.8k</span>
+          站点总字数：<span class="post-count">401.6k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
