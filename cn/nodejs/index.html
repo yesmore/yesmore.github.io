@@ -489,13 +489,17 @@
 <p>nodejs基础知识笔记</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="Node介绍"><a href="#Node介绍" class="headerlink" title="Node介绍"></a>Node介绍</h1><h2 id="为什么要学习Node-js"><a href="#为什么要学习Node-js" class="headerlink" title="为什么要学习Node.js"></a>为什么要学习Node.js</h2><ul>
-<li>企业需求<ul>
+<h1>Node介绍</h1>
+<h2 id="为什么要学习Node-js">为什么要学习Node.js</h2>
+<ul>
+<li>企业需求
+<ul>
 <li>具有服务端开发经验更改</li>
 <li>front-end</li>
 <li>back-end</li>
 <li>全栈开发工程师</li>
-<li>基本的网站开发能力<ul>
+<li>基本的网站开发能力
+<ul>
 <li>服务端</li>
 <li>前端</li>
 <li>运维部署</li>
@@ -505,13 +509,16 @@
 </ul>
 </li>
 </ul>
-<p><img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20200317114503403.png" alt="image-20200317114503403"></p>
-<h2 id="Node-js是什么"><a href="#Node-js是什么" class="headerlink" title="Node.js是什么"></a>Node.js是什么</h2><ul>
+<p><img src="C:%5CUsers%5CA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200317114503403.png" alt="image-20200317114503403"></p>
+<h2 id="Node-js是什么">Node.js是什么</h2>
+<ul>
 <li>Node.js是JavaScript 运行时</li>
 <li>通俗易懂的讲，Node.js是JavaScript的运行平台</li>
 <li>Node.js既不是语言，也不是框架，它是一个平台</li>
-<li>浏览器中的JavaScript<ul>
-<li>EcmaScript<ul>
+<li>浏览器中的JavaScript
+<ul>
+<li>EcmaScript
+<ul>
 <li>基本语法</li>
 <li>if</li>
 <li>var</li>
@@ -524,10 +531,12 @@
 <li>Dom</li>
 </ul>
 </li>
-<li>Node.js中的JavaScript<ul>
+<li>Node.js中的JavaScript
+<ul>
 <li>没有Bom，Dom</li>
 <li>EcmaScript</li>
-<li>在Node中这个JavaScript执行环境为JavaScript提供了一些服务器级别的API<ul>
+<li>在Node中这个JavaScript执行环境为JavaScript提供了一些服务器级别的API
+<ul>
 <li>例如文件的读写</li>
 <li>网络服务的构建</li>
 <li>网络通信</li>
@@ -536,36 +545,42 @@
 </li>
 </ul>
 </li>
-<li>构建与Chrome的V8引擎之上<ul>
+<li>构建与Chrome的V8引擎之上
+<ul>
 <li>代码只是具有特定格式的字符串</li>
 <li>引擎可以认识它，帮你解析和执行</li>
 <li>Google Chrome的V8引擎是目前公认的解析执行JavaScript代码最快的</li>
 <li>Node.js的作者把Google Chrome中的V8引擎移植出来，开发了一个独立的JavaScript运行时环境</li>
 </ul>
 </li>
-<li>Node.js uses an envent-driven,non-blocking I/O mode that makes it lightweight and efficent.<ul>
-<li>envent-driven    事件驱动</li>
+<li>Node.js uses an envent-driven,non-blocking I/O mode that makes it lightweight and efficent.
+<ul>
+<li>envent-driven	事件驱动</li>
 <li>non-blocking I/O mode   非阻塞I/O模型（异步）</li>
 <li>ightweight and efficent.   轻量和高效</li>
 </ul>
 </li>
-<li>Node.js package ecosystem,npm,is the larget scosystem of open sourcr libraries in the world<ul>
+<li>Node.js package ecosystem,npm,is the larget scosystem of open sourcr libraries in the world
+<ul>
 <li>npm 是世界上最大的开源生态系统</li>
 <li>绝大多数JavaScript相关的包都存放在npm上，这样做的目的是为了让开发人员更方便的去下载使用</li>
 <li>npm install jquery</li>
 </ul>
 </li>
 </ul>
-<h2 id="Node能做什么"><a href="#Node能做什么" class="headerlink" title="Node能做什么"></a>Node能做什么</h2><ul>
+<h2 id="Node能做什么">Node能做什么</h2>
+<ul>
 <li>web服务器后台</li>
-<li>命令行工具<ul>
+<li>命令行工具
+<ul>
 <li>npm(node)</li>
 <li>git(c语言)</li>
 <li>hexo（node）</li>
 <li>…</li>
 </ul>
 </li>
-<li>对于前端工程师来讲，接触最多的是它的命令行工具<ul>
+<li>对于前端工程师来讲，接触最多的是它的命令行工具
+<ul>
 <li>自己写的很少，主要是用别人第三方的</li>
 <li>webpack</li>
 <li>gulp</li>
@@ -573,41 +588,51 @@
 </ul>
 </li>
 </ul>
-<h1 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h1><h2 id="安装Node环境"><a href="#安装Node环境" class="headerlink" title="安装Node环境"></a>安装Node环境</h2><ul>
+<h1>起步</h1>
+<h2 id="安装Node环境">安装Node环境</h2>
+<ul>
 <li>查看Node环境的版本号</li>
 <li>下载：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
-<li>安装：<ul>
+<li>安装：
+<ul>
 <li>傻瓜式安装，一路<code>next</code></li>
 <li>安装过再次安装会升级</li>
 </ul>
 </li>
-<li>确认Node环境是否安装成功<ul>
+<li>确认Node环境是否安装成功
+<ul>
 <li>查看node的版本号：<code>node --version</code></li>
 <li>或者<code>node -v</code></li>
 </ul>
 </li>
 <li>配置环境变量</li>
 </ul>
-<h2 id="解析执行JavaScript"><a href="#解析执行JavaScript" class="headerlink" title="解析执行JavaScript"></a>解析执行JavaScript</h2><ol>
+<h2 id="解析执行JavaScript">解析执行JavaScript</h2>
+<ol>
 <li>创建编写JavaScript脚本文件</li>
 <li>打开终端，定位脚本文件的所属目录</li>
 <li>输入<code>node  文件名</code>执行对应的文件</li>
 </ol>
 <p>注意：文件名不要用<code>node.js</code>来命名，也就是说除了<code>node</code>这个名字随便起，最好不要使用中文。</p>
-<h2 id="文件的读写"><a href="#文件的读写" class="headerlink" title="文件的读写"></a>文件的读写</h2><p>文件读取:</p>
+<h2 id="文件的读写">文件的读写</h2>
+<p>文件读取:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//浏览器中的JavaScript是没有文件操作能力的</span></span><br><span class="line"><span class="comment">//但是Node中的JavaScript具有文件操作能力</span></span><br><span class="line"><span class="comment">//fs是file-system的简写，就是文件系统的意思</span></span><br><span class="line"><span class="comment">//在Node中如果想要进行文件的操作就必须引用fs这个核心模块</span></span><br><span class="line"><span class="comment">//在fs这个和兴模块中，就提供了人所有文件操作相关的API</span></span><br><span class="line"><span class="comment">//例如 fs.readFile就是用来读取文件的</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  1.使用fs核心模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.读取文件</span></span><br><span class="line">fs.readFile(<span class="string">&#x27;./data/a.txt&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(err)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;文件读取失败&#x27;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>文件写入：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  1.使用fs核心模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.将数据写入文件</span></span><br><span class="line">fs.writeFile(<span class="string">&#x27;./data/a.txt&#x27;</span>,<span class="string">&#x27;我是文件写入的信息&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(err)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;文件写入失败&#x27;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><p>服务器：</p>
+<h2 id="http">http</h2>
+<p>服务器：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.加载http核心模块</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.使用http.createServer()创建一个web服务器</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.服务器要做的事儿</span></span><br><span class="line"><span class="comment">// 提供服务：对数据服务</span></span><br><span class="line"><span class="comment">// 发请求</span></span><br><span class="line"><span class="comment">//	接收请求</span></span><br><span class="line"><span class="comment">//	处理请求</span></span><br><span class="line"><span class="comment">//	反馈（发送响应）</span></span><br><span class="line"><span class="comment">//	当客户端请求过来，就会自动触发服务器的request请求事件，然后执行第二个参数：回调处理函数</span></span><br><span class="line">server.on(<span class="string">&#x27;request&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;收到客户的请求了&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.绑定端口号，启动服务</span></span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;runing...&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="Node中的模块系统"><a href="#Node中的模块系统" class="headerlink" title="Node中的模块系统"></a>Node中的模块系统</h1><p>使用Node编写应用程序主要就是在使用：</p>
+<h1>Node中的模块系统</h1>
+<p>使用Node编写应用程序主要就是在使用：</p>
 <ul>
-<li><p>EcmaScript语言</p>
+<li>
+<p>EcmaScript语言</p>
 <ul>
 <li>和浏览器一样，在Node中没有Bom和Dom</li>
 </ul>
 </li>
-<li><p>核心模块</p>
+<li>
+<p>核心模块</p>
 <ul>
 <li>文件操作的fs</li>
 <li>http服务操作的http</li>
@@ -616,98 +641,119 @@
 <li>os操作系统信息</li>
 </ul>
 </li>
-<li>第三方模块<ul>
+<li>
+<p>第三方模块</p>
+<ul>
 <li>art-template</li>
 <li>必须通过npm来下载才可以使用</li>
 </ul>
 </li>
-<li>自己写的模块<ul>
+<li>
+<p>自己写的模块</p>
+<ul>
 <li>自己创建的文件</li>
 </ul>
 </li>
 </ul>
-<h2 id="什么是模块化"><a href="#什么是模块化" class="headerlink" title="什么是模块化"></a>什么是模块化</h2><ul>
+<h2 id="什么是模块化">什么是模块化</h2>
+<ul>
 <li>文件作用域(模块是独立的，在不同的文件使用必须要重新引用)【在node中没有全局作用域，它是文件模块作用域】</li>
-<li>通信规则<ul>
+<li>通信规则
+<ul>
 <li>加载require</li>
 <li>导出exports</li>
 </ul>
 </li>
 </ul>
-<h2 id="CommonJS模块规范"><a href="#CommonJS模块规范" class="headerlink" title="CommonJS模块规范"></a>CommonJS模块规范</h2><p>在Node中的JavaScript还有一个重要的概念，模块系统。</p>
+<h2 id="CommonJS模块规范">CommonJS模块规范</h2>
+<p>在Node中的JavaScript还有一个重要的概念，模块系统。</p>
 <ul>
-<li><p>模块作用域</p>
+<li>
+<p>模块作用域</p>
 </li>
-<li><p>使用require方法来加载模块</p>
+<li>
+<p>使用require方法来加载模块</p>
 </li>
-<li><p>使用exports接口对象来导出模板中的成员</p>
-<h3 id="加载require"><a href="#加载require" class="headerlink" title="加载require"></a>加载<code>require</code></h3><p>语法：</p>
+<li>
+<p>使用exports接口对象来导出模板中的成员</p>
+<h3 id="加载require">加载<code>require</code></h3>
+<p>语法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 自定义变量名 = require(<span class="string">&#x27;模块&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p>作用：</p>
 <ul>
 <li>执行被加载模块中的代码</li>
 <li>得到被加载模块中的<code>exports</code>导出接口对象</li>
 </ul>
-<h3 id="导出exports"><a href="#导出exports" class="headerlink" title="导出exports"></a>导出<code>exports</code></h3><ul>
-<li><p>Node中是模块作用域，默认文件中所有的成员只在当前模块有效</p>
+<h3 id="导出exports">导出<code>exports</code></h3>
+<ul>
+<li>
+<p>Node中是模块作用域，默认文件中所有的成员只在当前模块有效</p>
 </li>
-<li><p>对于希望可以被其他模块访问到的成员，我们需要把这些公开的成员都挂载到<code>exports</code>接口对象中就可以了</p>
+<li>
+<p>对于希望可以被其他模块访问到的成员，我们需要把这些公开的成员都挂载到<code>exports</code>接口对象中就可以了</p>
 <p>导出多个成员（必须在对象中）：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.a = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">exports</span>.b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;bbb&#x27;</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">exports</span>.c = &#123;</span><br><span class="line">    foo:<span class="string">&quot;bar&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">exports</span>.d = <span class="string">&#x27;hello&#x27;</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>导出单个成员（拿到的就是函数，字符串）：
-
+<p>导出单个成员（拿到的就是函数，字符串）：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="string">&#x27;hello&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-以下情况会覆盖：
-
+<p>以下情况会覆盖：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"><span class="comment">//后者会覆盖前者</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x+y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-也可以通过以下方法来导出多个成员：
-
+<p>也可以通过以下方法来导出多个成员：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    foo = <span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">    add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x+y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</code></pre><h2 id="模块原理"><a href="#模块原理" class="headerlink" title="模块原理"></a>模块原理</h2><p>exports和<code>module.exports</code>的一个引用：</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="模块原理">模块原理</h2>
+<p>exports和<code>module.exports</code>的一个引用：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">exports</span> === <span class="built_in">module</span>.exports);	<span class="comment">//trueexports.foo = &#x27;bar&#x27;;//等价于module.exports.foo = &#x27;bar&#x27;;</span></span><br></pre></td></tr></table></figure>
 <p><code>当给exports重新赋值后，exports！= module.exports.</code></p>
 <p><code>最终return的是module.exports,无论exports中的成员是什么都没用。</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">真正去使用的时候：	导出单个成员：<span class="built_in">exports</span>.xxx = xxx 或者 modeule.exports = xxx;	导出多个成员：<span class="built_in">module</span>.exports = &#123;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引用服务var http = require(&#x27;http&#x27;);var fs = require(&#x27;fs&#x27;);// 引用模板var template = require(&#x27;art-template&#x27;);// 创建服务var server = http.createServer();// 公共路径var wwwDir = &#x27;D:/app/www&#x27;;server.on(&#x27;request&#x27;, function (req, res) &#123;    var url = req.url;    // 读取文件    fs.readFile(&#x27;./template-apche.html&#x27;, function (err, data) &#123;        if (err) &#123;            return res.end(&#x27;404 Not Found&#x27;);        &#125;        fs.readdir(wwwDir, function (err, files) &#123;            if (err) &#123;                return res.end(&#x27;Can not find www Dir.&#x27;)            &#125;            // 使用模板引擎解析替换data中的模板字符串            // 去xmpTempleteList.html中编写模板语法            var htmlStr = template.render(data.toString(), &#123;                 title: &#x27;D:/app/www/ 的索引&#x27;,                files:files             &#125;);            // 发送响应数据            res.end(htmlStr);        &#125;)    &#125;)&#125;);server.listen(3000, function () &#123;    console.log(&#x27;running....&#x27;);&#125;)</span></span><br></pre></td></tr></table></figure>
+<h2 id="总结">总结</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引用服务var http = require(&#x27;http&#x27;);var fs = require(&#x27;fs&#x27;);// 引用模板var template = require(&#x27;art-template&#x27;);// 创建服务var server = http.createServer();// 公共路径var wwwDir = &#x27;D:/app/www&#x27;;server.on(&#x27;request&#x27;, function (req, res) &#123;    var url = req.url;    // 读取文件    fs.readFile(&#x27;./template-apche.html&#x27;, function (err, data) &#123;        if (err) &#123;            return res.end(&#x27;404 Not Found&#x27;);        &#125;        fs.readdir(wwwDir, function (err, files) &#123;            if (err) &#123;                return res.end(&#x27;Can not find www Dir.&#x27;)            &#125;            // 使用模板引擎解析替换data中的模板字符串            // 去xmpTempleteList.html中编写模板语法            var htmlStr = template.render(data.toString(), &#123;                 title: &#x27;D:/app/www/ 的索引&#x27;,                files:files             &#125;);            // 发送响应数据            res.end(htmlStr);        &#125;)    &#125;)&#125;);server.listen(3000, function () &#123;    console.log(&#x27;running....&#x27;);&#125;)</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>jQuery中的each 和 原生JavaScript方法forEach的区别：	提供源头：    	原生js是es5提供的（不兼容IE8）,        jQuery的each是jQuery第三方库提供的（如果要使用需要用<span class="number">2</span>以下的版本也就是<span class="number">1.</span>版本）,它的each方法主要用来遍历jQuery实例对象（伪数组）,同时也可以做低版本forEach的替代品,jQuery的实例对象不能使用forEach方法，如果想要使用必须转为数组（[].slice.call(jQuery实例对象)）才能使用<span class="number">2.</span>模块中导出多个成员和导出单个成员<span class="number">3.301</span>和<span class="number">302</span>的区别：	<span class="number">301</span>永久重定向,浏览器会记住    <span class="number">302</span>临时重定向<span class="number">4.</span><span class="built_in">exports</span>和<span class="built_in">module</span>.exports的区别:	每个模块中都有一个<span class="built_in">module</span>对象    <span class="built_in">module</span>对象中有一个<span class="built_in">exports</span>对象    我们可以把需要导出的成员都挂载到<span class="built_in">module</span>.exports接口对象中	也就是<span class="string">`module.exports.xxx = xxx`</span>的方式    但是每次写太多了就很麻烦，所以Node为了简化代码，就在每一个模块中都提供了一个成员叫<span class="string">`exports`</span>    <span class="string">`exports === module.exports`</span>结果为<span class="literal">true</span>,所以完全可以<span class="string">`exports.xxx = xxx`</span>    当一个模块需要导出单个成员的时候必须使用<span class="string">`module.exports = xxx`</span>的方式，=,使用<span class="string">`exports = xxx`</span>不管用,因为每个模块最终<span class="keyword">return</span>的是<span class="built_in">module</span>.exports,而<span class="built_in">exports</span>只是<span class="built_in">module</span>.exports的一个引用,所以<span class="string">`exports`</span>即使重新赋值,也不会影响<span class="string">`module.exports`</span>。    有一种赋值方式比较特殊：<span class="string">`exports = module.exports`</span>这个用来新建立引用关系的。    </span><br></pre></td></tr></table></figure>
-<h1 id="require的加载规则"><a href="#require的加载规则" class="headerlink" title="require的加载规则"></a>require的加载规则</h1><ul>
-<li><p>核心模块</p>
+<h1>require的加载规则</h1>
+<ul>
+<li>
+<p>核心模块</p>
 <ul>
 <li>模块名</li>
 </ul>
 </li>
-<li><p>第三方模块</p>
+<li>
+<p>第三方模块</p>
 <ul>
 <li>模块名</li>
 </ul>
 </li>
-<li><p>用户自己写的</p>
+<li>
+<p>用户自己写的</p>
 <ul>
 <li>路径</li>
 </ul>
 </li>
 </ul>
-<h2 id="require的加载规则："><a href="#require的加载规则：" class="headerlink" title="require的加载规则："></a>require的加载规则：</h2><ul>
-<li><p>优先从缓存加载</p>
+<h2 id="require的加载规则：">require的加载规则：</h2>
+<ul>
+<li>
+<p>优先从缓存加载</p>
 </li>
-<li><p>判断模块标识符</p>
+<li>
+<p>判断模块标识符</p>
 <ul>
 <li>核心模块</li>
 <li>自己写的模块（路径形式的模块）</li>
-<li>第三方模块（node_modules）<ul>
+<li>第三方模块（node_modules）
+<ul>
 <li>第三方模块的标识就是第三方模块的名称（不可能有第三方模块和核心模块的名字一致）</li>
-<li>npm<ul>
+<li>npm
+<ul>
 <li>开发人员可以把写好的框架库发布到npm上</li>
 <li>使用者通过npm命令来下载</li>
 </ul>
 </li>
-<li>使用方式：<code>var 名称 = require(&#39;npm install【下载包】 的包名&#39;)</code><ul>
+<li>使用方式：<code>var 名称 = require('npm install【下载包】 的包名')</code>
+<ul>
 <li>node_modules/express/package.json main</li>
 <li>如果package.json或者main不成立，则查找被选择项：index.js</li>
 <li>如果以上条件都不满足，则继续进入上一级目录中的node_modules按照上面的规则依次查找，直到当前文件所属此盘根目录都找不到最后报错</li>
@@ -719,63 +765,77 @@
 </li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果非路径形式的标识// 路径形式的标识：    // ./  当前目录 不可省略    // ../  上一级目录  不可省略    //  /xxx也就是D:/xxx    // 带有绝对路径几乎不用（D:/a/foo.js）// 首位表示的是当前文件模块所属磁盘根目录// require(&#x27;./a&#x27;); // 核心模块// 核心模块本质也是文件，核心模块文件已经被编译到了二进制文件中了，我们只需要按照名字来加载就可以了require(&#x27;fs&#x27;); // 第三方模块// 凡是第三方模块都必须通过npm下载（npm i node_modules），使用的时候就可以通过require(&#x27;包名&#x27;)来加载才可以使用// 第三方包的名字不可能和核心模块的名字是一样的// 既不是核心模块，也不是路径形式的模块//      先找到当前文所述目录的node_modules//      然后找node_modules/art-template目录//      node_modules/art-template/package.json//      node_modules/art-template/package.json中的main属性//      main属性记录了art-template的入口模块//      然后加载使用这个第三方包//      实际上最终加载的还是文件//      如果package.json不存在或者mian指定的入口模块不存在//      则node会自动找该目录下的index.js//      也就是说index.js是一个备选项，如果main没有指定，则加载index.js文件//              // 如果条件都不满足则会进入上一级目录进行查找// 注意：一个项目只有一个node_modules，放在项目根目录中，子目录可以直接调用根目录的文件var template = require(&#x27;art-template&#x27;);</span></span><br></pre></td></tr></table></figure>
-<h2 id="模块标识符中的-和文件操作路径中的"><a href="#模块标识符中的-和文件操作路径中的" class="headerlink" title="模块标识符中的/和文件操作路径中的/"></a>模块标识符中的<code>/</code>和文件操作路径中的<code>/</code></h2><p>文件操作路径：</p>
+<h2 id="模块标识符中的-和文件操作路径中的">模块标识符中的<code>/</code>和文件操作路径中的<code>/</code></h2>
+<p>文件操作路径：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 咱们所使用的所有文件操作的API都是异步的// 就像ajax请求一样// 读取文件// 文件操作中 ./ 相当于当前模块所处磁盘根目录// ./index.txt    相对于当前目录// /index.txt    相对于当前目录// /index.txt   绝对路径,当前文件模块所处根目录// d:express/index.txt   绝对路径fs.readFile(&#x27;./index.txt&#x27;,function(err,data)&#123;    if(err)&#123;       return  console.log(&#x27;读取失败&#x27;);    &#125;    console.log(data.toString());&#125;)</span></span><br></pre></td></tr></table></figure>
 <p>模块操作路径：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在模块加载中，相对路径中的./不能省略// 这里省略了.也是磁盘根目录require(&#x27;./index&#x27;)(&#x27;hello&#x27;)</span></span><br></pre></td></tr></table></figure>
-<h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><ul>
+<h1>npm</h1>
+<ul>
 <li>node package manage(node包管理器)</li>
-<li>通过npm命令安装jQuery包（npm install —save jquery），在安装时加上—save会主动生成说明书文件信息（将安装文件的信息添加到package.json里面）</li>
+<li>通过npm命令安装jQuery包（npm install --save jquery），在安装时加上–save会主动生成说明书文件信息（将安装文件的信息添加到package.json里面）</li>
 </ul>
-<h3 id="npm网站"><a href="#npm网站" class="headerlink" title="npm网站"></a>npm网站</h3><blockquote>
-<p>​    npmjs.com    网站   是用来搜索npm包的</p>
+<h3 id="npm网站">npm网站</h3>
+<blockquote>
+<p>​	<a target="_blank" rel="noopener" href="http://npmjs.com">npmjs.com</a>	网站   是用来搜索npm包的</p>
 </blockquote>
-<h3 id="npm命令行工具"><a href="#npm命令行工具" class="headerlink" title="npm命令行工具"></a>npm命令行工具</h3><p>npm是一个命令行工具，只要安装了node就已经安装了npm。</p>
+<h3 id="npm命令行工具">npm命令行工具</h3>
+<p>npm是一个命令行工具，只要安装了node就已经安装了npm。</p>
 <p>npm也有版本概念，可以通过<code>npm --version</code>来查看npm的版本</p>
 <p>升级npm(自己升级自己)：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --<span class="built_in">global</span> npm</span><br></pre></td></tr></table></figure>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li>npm init(生成package.json说明书文件)<ul>
+<h3 id="常用命令">常用命令</h3>
+<ul>
+<li>npm init(生成package.json说明书文件)
+<ul>
 <li>npm init -y(可以跳过向导，快速生成)</li>
 </ul>
 </li>
-<li>npm install<ul>
+<li>npm install
+<ul>
 <li>一次性把dependencies选项中的依赖项全部安装</li>
 <li>简写（npm i）</li>
 </ul>
 </li>
-<li>npm install 包名<ul>
+<li>npm install 包名
+<ul>
 <li>只下载</li>
 <li>简写（npm i 包名）</li>
 </ul>
 </li>
-<li>npm install —save 包名<ul>
+<li>npm install --save 包名
+<ul>
 <li>下载并且保存依赖项（package.json文件中的dependencies选项）</li>
 <li>简写（npm i  包名）</li>
 </ul>
 </li>
-<li>npm uninstall 包名<ul>
+<li>npm uninstall 包名
+<ul>
 <li>只删除，如果有依赖项会依然保存</li>
 <li>简写（npm un 包名）</li>
 </ul>
 </li>
-<li>npm uninstall —save 包名<ul>
+<li>npm uninstall --save 包名
+<ul>
 <li>删除的同时也会把依赖信息全部删除</li>
 <li>简写（npm un 包名）</li>
 </ul>
 </li>
-<li>npm help<ul>
+<li>npm help
+<ul>
 <li>查看使用帮助</li>
 </ul>
 </li>
-<li>npm 命令 —help<ul>
-<li>查看具体命令的使用帮助（npm uninstall —help）</li>
+<li>npm 命令 --help
+<ul>
+<li>查看具体命令的使用帮助（npm uninstall --help）</li>
 </ul>
 </li>
 </ul>
-<h3 id="解决npm被墙问题"><a href="#解决npm被墙问题" class="headerlink" title="解决npm被墙问题"></a>解决npm被墙问题</h3><p>npm存储包文件的服务器在国外，有时候会被墙，速度很慢，所以需要解决这个问题。</p>
+<h3 id="解决npm被墙问题">解决npm被墙问题</h3>
+<p>npm存储包文件的服务器在国外，有时候会被墙，速度很慢，所以需要解决这个问题。</p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/NPM?from=tnpm淘宝的开发团队把npm在国内做了一个镜像（也就是一个备份）。">https://developer.aliyun.com/mirror/NPM?from=tnpm淘宝的开发团队把npm在国内做了一个镜像（也就是一个备份）。</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/NPM?from=tnpm%E6%B7%98%E5%AE%9D%E7%9A%84%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E6%8A%8Anpm%E5%9C%A8%E5%9B%BD%E5%86%85%E5%81%9A%E4%BA%86%E4%B8%80%E4%B8%AA%E9%95%9C%E5%83%8F%EF%BC%88%E4%B9%9F%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AA%E5%A4%87%E4%BB%BD%EF%BC%89%E3%80%82">https://developer.aliyun.com/mirror/NPM?from=tnpm淘宝的开发团队把npm在国内做了一个镜像（也就是一个备份）。</a></p>
 </blockquote>
 <p>安装淘宝的cnpm：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org;</span></span><br></pre></td></tr></table></figure>
@@ -787,7 +847,8 @@
 <p>但是每次手动加参数就很麻烦，所以我们可以把这个选项加入到配置文件中：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://npm.taobao.org;#查看npm配置信息npm config list;</span><br></pre></td></tr></table></figure>
 <p>只要经过上面的配置命令，则以后所有的<code>npm install</code>都会通过淘宝的服务器来下载</p>
-<h1 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h1><p>每一个项目都要有一个<code>package.json</code>文件（包描述文件，就像产品的说明书一样）</p>
+<h1>package.json</h1>
+<p>每一个项目都要有一个<code>package.json</code>文件（包描述文件，就像产品的说明书一样）</p>
 <p>这个文件可以通过<code>npm init</code>自动初始化出来</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\code\node中的模块系统&gt;npm initThis utility will walk you through creating a package.json file.It only covers the most common items, and tries to guess sensible defaults.See <span class="string">`npm help json`</span> <span class="keyword">for</span> definitive documentation on these fieldsand exactly what they <span class="keyword">do</span>.Use <span class="string">`npm install &lt;pkg&gt;`</span> afterwards to install a package andsave it <span class="keyword">as</span> a dependency <span class="keyword">in</span> the package.json file.Press ^C at any time to quit.package name: (node中的模块系统)Sorry, name can only contain URL-friendly characters.package name: (node中的模块系统) clsversion: (<span class="number">1.0</span><span class="number">.0</span>)description: 这是一个测试项目entry point: (main.js)test command:git repository:keywords:author: xiaochenlicense: (ISC)About to write to D:\code\node中的模块系统\package.json:&#123;  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;cls&quot;</span>,  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;这是一个测试项目&quot;</span>,  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,  <span class="string">&quot;scripts&quot;</span>: &#123;    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>  &#125;,  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;xiaochen&quot;</span>,  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>&#125;Is <span class="built_in">this</span> OK? (yes) yes</span><br></pre></td></tr></table></figure>
 <p>对于目前来讲，最有用的是<code>dependencies</code>选项，可以用来帮助我们保存第三方包的依赖信息。</p>
@@ -796,17 +857,20 @@
 <li>建议每个项目的根目录下都有一个<code>package.json</code>文件</li>
 <li>建议执行<code>npm install 包名</code>的时候都加上<code>--save</code>选项，目的是用来保存依赖信息</li>
 </ul>
-<h2 id="package-json和package-lock-json"><a href="#package-json和package-lock-json" class="headerlink" title="package.json和package-lock.json"></a>package.json和package-lock.json</h2><p>npm 5以前是不会有<code>package-lock.json</code>这个文件</p>
+<h2 id="package-json和package-lock-json">package.json和package-lock.json</h2>
+<p>npm 5以前是不会有<code>package-lock.json</code>这个文件</p>
 <p>npm5以后才加入这个文件</p>
 <p>当你安装包的时候，npm都会生成或者更新<code>package-lock.json</code>这个文件</p>
 <ul>
 <li>npm5以后的版本安装都不要加<code>--save</code>参数，它会自动保存依赖信息</li>
 <li>当你安装包的时候，会自动创建或者更新<code>package-lock.json</code>文件</li>
-<li><code>package-lock.json</code>这个文件会包含<code>node_modules</code>中所有包的信息（版本，下载地址。。。）<ul>
+<li><code>package-lock.json</code>这个文件会包含<code>node_modules</code>中所有包的信息（版本，下载地址。。。）
+<ul>
 <li>这样的话重新<code>npm install</code>的时候速度就可以提升</li>
 </ul>
 </li>
-<li>从文件来看，有一个<code>lock</code>称之为锁<ul>
+<li>从文件来看，有一个<code>lock</code>称之为锁
+<ul>
 <li>这个<code>lock</code>使用来锁版本的</li>
 <li>如果项目依赖了<code>1.1.1</code>版本</li>
 <li>如果你重新install其实会下载最细版本，而不是<code>1.1.1</code></li>
@@ -814,14 +878,16 @@
 </ul>
 </li>
 </ul>
-<h2 id="path路径操作模块"><a href="#path路径操作模块" class="headerlink" title="path路径操作模块"></a>path路径操作模块</h2><blockquote>
+<h2 id="path路径操作模块">path路径操作模块</h2>
+<blockquote>
 <p>参考文档：<a target="_blank" rel="noopener" href="https://nodejs.org/docs/latest-v13.x/api/path.html">https://nodejs.org/docs/latest-v13.x/api/path.html</a></p>
 </blockquote>
 <ul>
 <li>path.basename：获取路径的文件名，默认包含扩展名</li>
 <li>path.dirname：获取路径中的目录部分</li>
 <li>path.extname：获取一个路径中的扩展名部分</li>
-<li>path.parse：把路径转换为对象<ul>
+<li>path.parse：把路径转换为对象
+<ul>
 <li>root：根路径</li>
 <li>dir：目录</li>
 <li>base：包含后缀名的文件名</li>
@@ -830,15 +896,19 @@
 </ul>
 </li>
 <li>path.join：拼接路径</li>
-<li>path.isAbsolute：判断一个路径是否为绝对路径<img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20200315150610001.png" alt="image-20200315150610001"></li>
+<li>path.isAbsolute：判断一个路径是否为绝对路径<img src="C:%5CUsers%5CA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200315150610001.png" alt="image-20200315150610001"></li>
 </ul>
-<h1 id="Node中的其它成员-dirname-filename"><a href="#Node中的其它成员-dirname-filename" class="headerlink" title="Node中的其它成员(dirname,filename)"></a>Node中的其它成员(<strong>dirname,</strong>filename)</h1><p>在每个模块中，除了<code>require</code>,<code>exports</code>等模块相关的API之外，还有两个特殊的成员：</p>
+<h1>Node中的其它成员(__dirname,__filename)</h1>
+<p>在每个模块中，除了<code>require</code>,<code>exports</code>等模块相关的API之外，还有两个特殊的成员：</p>
 <ul>
-<li><p><code>__dirname</code>，是一个成员，可以用来<strong>动态</strong>获取当前文件模块所属目录的绝对路径</p>
+<li>
+<p><code>__dirname</code>，是一个成员，可以用来<strong>动态</strong>获取当前文件模块所属目录的绝对路径</p>
 </li>
-<li><p><code>__filename</code>，可以用来<strong>动态</strong>获取当前文件的绝对路径（包含文件名）</p>
+<li>
+<p><code>__filename</code>，可以用来<strong>动态</strong>获取当前文件的绝对路径（包含文件名）</p>
 </li>
-<li><p><code>__dirname</code>和<code>filename</code>是不受执行node命令所属路径影响的</p>
+<li>
+<p><code>__dirname</code>和<code>filename</code>是不受执行node命令所属路径影响的</p>
 </li>
 </ul>
 <p>==在文件操作中，使用相对路径是不可靠的，因为node中文件操作的路径被设计为相对于执行node命令所处的路径。==（node  xxx.js）</p>
@@ -848,38 +918,54 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);<span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);<span class="comment">// console.log(__dirname + &#x27;a.txt&#x27;);// path.join方法会将文件操作中的相对路径都统一的转为动态的绝对路径fs.readFile(path.join(__dirname + &#x27;/a.txt&#x27;),&#x27;utf8&#x27;,function(err,data)&#123;	if(err)&#123;		throw err	&#125;	console.log(data);&#125;);</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>补充：模块中的路径标识和这里的路径没关系，不受影响（就是相对于文件模块）</p>
+</blockquote>
+<blockquote>
 <p><strong>注意：</strong></p>
 <p><strong>模块中的路径标识和文件操作中的相对路径标识不一致</strong></p>
 <p><strong>模块中的路径标识就是相对于当前文件模块，不受node命令所处路径影响</strong></p>
 </blockquote>
-<h1 id="Express（快速的）"><a href="#Express（快速的）" class="headerlink" title="Express（快速的）"></a>Express（快速的）</h1><p>作者：Tj</p>
+<h1>Express（快速的）</h1>
+<p>作者：Tj</p>
 <p>原生的http在某些方面表现不足以应对我们的开发需求，所以就需要使用框架来加快我们的开发效率，框架的目的就是提高效率，让我们的代码高度统一。</p>
 <p>在node中有很多web开发框架。主要学习express</p>
 <ul>
-<li><p><code>http://expressjs.com/</code>,其中主要封装的是http。</p>
+<li>
+<p><code>http://expressjs.com/</code>,其中主要封装的是http。</p>
 </li>
-<li><p>```javascript<br>// 1 安装// 2 引包var express = require(‘express’);// 3 创建服务器应用程序//      也就是原来的http.createServer();var app = express();// 公开指定目录// 只要通过这样做了，就可以通过/public/xx的方式来访问public目录中的所有资源// 在Express中开放资源就是一个API的事app.use(‘/public/‘,express.static(‘/public/‘));//模板引擎在Express中开放模板也是一个API的事// 当服务器收到get请求 / 的时候，执行回调处理函数app.get(‘/‘,function(req,res){    res.send(‘hello express’);})// 相当于server.listenapp.listen(3000,function(){    console.log(‘app is runing at port 3000’);})</p>
+<li>
+<pre><code class="language-javascript">// 1 安装// 2 引包var express = require('express');// 3 创建服务器应用程序//      也就是原来的http.createServer();var app = express();// 公开指定目录// 只要通过这样做了，就可以通过/public/xx的方式来访问public目录中的所有资源// 在Express中开放资源就是一个API的事app.use('/public/',express.static('/public/'));//模板引擎在Express中开放模板也是一个API的事// 当服务器收到get请求 / 的时候，执行回调处理函数app.get('/',function(req,res)&#123;    res.send('hello express');&#125;)// 相当于server.listenapp.listen(3000,function()&#123;    console.log('app is runing at port 3000');&#125;)
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">### 学习Express</span><br><span class="line"></span><br><span class="line">#### 起步</span><br><span class="line"></span><br><span class="line">##### 安装：![image<span class="number">-20200310123723079</span>](C:\Users\A\AppData\Roaming\Typora\typora-user-images\image<span class="number">-20200310123723079.</span>png)</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">cnpm install express</span><br></pre></td></tr></table></figure>
+
+</code></pre>
 </li>
 </ul>
-<h5 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world:"></a>hello world:<img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20200310124850557.png" alt="image-20200310124850557"></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入expressvar express = require(&#x27;express&#x27;);// 1. 创建appvar app = express();//  2. app.get(&#x27;/&#x27;,function(req,res)&#123;    // 1    // res.write(&#x27;Hello&#x27;);    // res.write(&#x27;World&#x27;);    // res.end()    // 2    // res.end(&#x27;hello world&#x27;);    // 3    res.send(&#x27;hello world&#x27;);&#125;)app.listen(3000,function()&#123;    console.log(&#x27;express app is runing...&#x27;);&#125;)</span></span><br></pre></td></tr></table></figure>
-<h5 id="基本路由"><a href="#基本路由" class="headerlink" title="基本路由"></a>基本路由</h5><p>路由：</p>
+<h5 id="hello-world-image-20200310124850557">hello world:<img src="C:%5CUsers%5CA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200310124850557.png" alt="image-20200310124850557"></h5>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入expressvar express = require(&#x27;express&#x27;);// 1. 创建appvar app = express();//  2. app.get(&#x27;/&#x27;,function(req,res)&#123;    // 1    // res.write(&#x27;Hello&#x27;);    // res.write(&#x27;World&#x27;);    // res.end()    // 2    // res.end(&#x27;hello world&#x27;);    // 3    res.send(&#x27;hello world&#x27;);&#125;)app.listen(3000,function()&#123;    console.log(&#x27;express app is runing...&#x27;);&#125;)</span></span><br></pre></td></tr></table></figure>
+<h5 id="基本路由">基本路由</h5>
+<p>路由：</p>
 <ul>
-<li><p>请求方法</p>
+<li>
+<p>请求方法</p>
 </li>
-<li><p>请求路径</p>
+<li>
+<p>请求路径</p>
 </li>
-<li>请求处理函数</li>
+<li>
+<p>请求处理函数</p>
+</li>
 </ul>
 <p>get:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当你以get方法请求/的时候，执行对应的处理函数app.get(&#x27;/&#x27;,function(req,res)&#123;    res.send(&#x27;hello world&#x27;);&#125;)</span></span><br></pre></td></tr></table></figure>
 <p>post:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当你以post方法请求/的时候，执行对应的处理函数app.post(&#x27;/&#x27;,function(req,res)&#123;    res.send(&#x27;hello world&#x27;);&#125;)</span></span><br></pre></td></tr></table></figure>
-<h5 id="Express静态服务API"><a href="#Express静态服务API" class="headerlink" title="Express静态服务API"></a>Express静态服务API</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.use不仅仅是用来处理静态资源的，还可以做很多工作(body-parser的配置)app.use(express.static(&#x27;public&#x27;));app.use(express.static(&#x27;files&#x27;));app.use(&#x27;/stataic&#x27;,express.static(&#x27;public&#x27;));</span></span><br></pre></td></tr></table></figure>
+<h5 id="Express静态服务API">Express静态服务API</h5>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.use不仅仅是用来处理静态资源的，还可以做很多工作(body-parser的配置)app.use(express.static(&#x27;public&#x27;));app.use(express.static(&#x27;files&#x27;));app.use(&#x27;/stataic&#x27;,express.static(&#x27;public&#x27;));</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入expressvar express = require(&#x27;express&#x27;);// 创建appvar app = express();// 开放静态资源// 1.当以/public/开头的时候，去./public/目录中找对应资源// 访问：http://127.0.0.1:3000/public/login.htmlapp.use(&#x27;/public/&#x27;,express.static(&#x27;./public/&#x27;)); // 2.当省略第一个参数的时候，可以通过省略/public的方式来访问// 访问：http://127.0.0.1:3000/login.html// app.use(express.static(&#x27;./public/&#x27;));   // 3.访问：http://127.0.0.1:3000/a/login.html// a相当于public的别名// app.use(&#x27;/a/&#x27;,express.static(&#x27;./public/&#x27;)); //  app.get(&#x27;/&#x27;,function(req,res)&#123;    res.end(&#x27;hello world&#x27;);&#125;);app.listen(3000,function()&#123;    console.log(&#x27;express app is runing...&#x27;);&#125;);</span></span><br></pre></td></tr></table></figure>
-<h5 id="在Express中配置使用art-templete模板引擎"><a href="#在Express中配置使用art-templete模板引擎" class="headerlink" title="在Express中配置使用art-templete模板引擎"></a>在Express中配置使用<code>art-templete</code>模板引擎</h5><ul>
+<h5 id="在Express中配置使用art-templete模板引擎">在Express中配置使用<code>art-templete</code>模板引擎</h5>
+<ul>
 <li><a target="_blank" rel="noopener" href="https://aui.github.io/art-template/">art-template官方文档</a></li>
-<li>在node中，有很多第三方模板引擎都可以使用，不是只有<code>art-template</code><ul>
+<li>在node中，有很多第三方模板引擎都可以使用，不是只有<code>art-template</code>
+<ul>
 <li>还有ejs，jade（pug），handlebars，nunjucks</li>
 </ul>
 </li>
@@ -892,9 +978,12 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;    <span class="comment">// express默认会去views目录找index.html    res.render(&#x27;index.html&#x27;,&#123;           title:&#x27;hello world&#x27;         &#125;);&#125;)</span></span><br></pre></td></tr></table></figure>
 <p>如果希望修改默认的<code>views</code>视图渲染存储目录，可以：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一个参数views千万不要写错app.set(&#x27;views&#x27;,目录路径);</span></span><br></pre></td></tr></table></figure>
-<h5 id="在Express中获取表单请求数据"><a href="#在Express中获取表单请求数据" class="headerlink" title="在Express中获取表单请求数据"></a>在Express中获取表单请求数据</h5><h6 id="获取get请求数据："><a href="#获取get请求数据：" class="headerlink" title="获取get请求数据："></a>获取get请求数据：</h6><p>Express内置了一个api，可以直接通过<code>req.query</code>来获取数据</p>
+<h5 id="在Express中获取表单请求数据">在Express中获取表单请求数据</h5>
+<h6 id="获取get请求数据：">获取get请求数据：</h6>
+<p>Express内置了一个api，可以直接通过<code>req.query</code>来获取数据</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过requery方法获取用户输入的数据// req.query只能拿到get请求的数据 var comment = req.query;</span></span><br></pre></td></tr></table></figure>
-<h6 id="获取post请求数据："><a href="#获取post请求数据：" class="headerlink" title="获取post请求数据："></a>获取post请求数据：</h6><p>在Express中没有内置获取表单post请求体的api，这里我们需要使用一个第三方包<code>body-parser</code>来获取数据。</p>
+<h6 id="获取post请求数据：">获取post请求数据：</h6>
+<p>在Express中没有内置获取表单post请求体的api，这里我们需要使用一个第三方包<code>body-parser</code>来获取数据。</p>
 <p>安装：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save body-parser;</span><br></pre></td></tr></table></figure>
 <p>配置：</p>
@@ -902,7 +991,8 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)<span class="comment">// 引包var bodyParser = require(&#x27;body-parser&#x27;)var app = express()// 配置body-parser// 只要加入这个配置，则在req请求对象上会多出来一个属性：body// 也就是说可以直接通过req.body来获取表单post请求数据// parse application/x-www-form-urlencodedapp.use(bodyParser.urlencoded(&#123; extended: false &#125;))// parse application/jsonapp.use(bodyParser.json())</span></span><br></pre></td></tr></table></figure>
 <p>使用：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;  res.setHeader(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;text/plain&#x27;</span>)  res.write(<span class="string">&#x27;you posted:\n&#x27;</span>)  <span class="comment">// 可以通过req.body来获取表单请求数据  res.end(JSON.stringify(req.body, null, 2))&#125;)</span></span><br></pre></td></tr></table></figure>
-<h3 id="在Express中配置使用express-session插件操作"><a href="#在Express中配置使用express-session插件操作" class="headerlink" title="在Express中配置使用express-session插件操作"></a>在Express中配置使用<code>express-session</code>插件操作</h3><blockquote>
+<h3 id="在Express中配置使用express-session插件操作">在Express中配置使用<code>express-session</code>插件操作</h3>
+<blockquote>
 <p>参考文档：<a target="_blank" rel="noopener" href="https://github.com/expressjs/session">https://github.com/expressjs/session</a></p>
 </blockquote>
 <p>安装：</p>
@@ -913,25 +1003,29 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读//添加Session数据//session就是一个对象req.session.foo = &#x27;bar&#x27;;//写//获取session数据req.session.foo//删req.session.foo = null;delete req.session.foo</span></span><br></pre></td></tr></table></figure>
 <p>提示：</p>
 <p>默认Session数据时内存储数据，服务器一旦重启，真正的生产环境会把Session进行持久化存储。</p>
-<h3 id="利用Express实现ADUS项目"><a href="#利用Express实现ADUS项目" class="headerlink" title="利用Express实现ADUS项目"></a>利用Express实现ADUS项目</h3><h4 id="模块化思想"><a href="#模块化思想" class="headerlink" title="模块化思想"></a>模块化思想</h4><p>模块如何划分:</p>
+<h3 id="利用Express实现ADUS项目">利用Express实现ADUS项目</h3>
+<h4 id="模块化思想">模块化思想</h4>
+<p>模块如何划分:</p>
 <ul>
 <li>模块职责要单一</li>
 </ul>
 <p>javascript模块化：</p>
 <ul>
 <li>Node 中的 CommonJS</li>
-<li>浏览器中的：<ul>
-<li>AMD    require.js</li>
+<li>浏览器中的：
+<ul>
+<li>AMD	require.js</li>
 <li>CMD     sea.js</li>
 </ul>
 </li>
 <li>es6中增加了官方支持</li>
 </ul>
-<h4 id="起步-1"><a href="#起步-1" class="headerlink" title="起步"></a>起步</h4><ul>
+<h4 id="起步">起步</h4>
+<ul>
 <li>初始化</li>
 <li>模板处理</li>
 </ul>
-<h4 id="路由设计"><a href="#路由设计" class="headerlink" title="路由设计"></a>路由设计</h4><div class="table-container">
+<h4 id="路由设计">路由设计</h4>
 <table>
 <thead>
 <tr>
@@ -987,26 +1081,44 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="提取路由模块"><a href="#提取路由模块" class="headerlink" title="提取路由模块"></a>提取路由模块</h4><p>router.js:</p>
+<h4 id="提取路由模块">提取路由模块</h4>
+<p>router.js:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** * router.js路由模块 * 职责： *      处理路由 *      根据不同的请求方法+请求路径设置具体的请求函数 * 模块职责要单一，我们划分模块的目的就是增强代码的可维护性，提升开发效率 */</span><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);<span class="comment">// Express专门提供了一种更好的方式// 专门用来提供路由的var express = require(&#x27;express&#x27;);// 1 创建一个路由容器var router = express.Router();// 2 把路由都挂载到路由容器中router.get(&#x27;/students&#x27;, function(req, res) &#123;    // res.send(&#x27;hello world&#x27;);    // readFile的第二个参数是可选的，传入utf8就是告诉他把读取到的文件直接按照utf8编码，直接转成我们认识的字符    // 除了这样来转换，也可以通过data.toString（）来转换    fs.readFile(&#x27;./db.json&#x27;, &#x27;utf8&#x27;, function(err, data) &#123;        if (err) &#123;            return res.status(500).send(&#x27;Server error.&#x27;)        &#125;        // 读取到的文件数据是string类型的数据        // console.log(data);        // 从文件中读取到的数据一定是字符串，所以一定要手动转换成对象        var students = JSON.parse(data).students;        res.render(&#x27;index.html&#x27;, &#123;            // 读取文件数据            students:students        &#125;)    &#125;)&#125;);router.get(&#x27;/students/new&#x27;,function(req,res)&#123;    res.render(&#x27;new.html&#x27;)&#125;);router.get(&#x27;/students/edit&#x27;,function(req,res)&#123;    &#125;);router.post(&#x27;/students/edit&#x27;,function(req,res)&#123;    &#125;);router.get(&#x27;/students/delete&#x27;,function(req,res)&#123;    &#125;);// 3 把router导出module.exports = router;</span></span><br></pre></td></tr></table></figure>
 <p>app.js:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> router = <span class="built_in">require</span>(<span class="string">&#x27;./router&#x27;</span>);<span class="comment">// router(app);// 把路由容器挂载到app服务中// 挂载路由app.use(router);</span></span><br></pre></td></tr></table></figure>
-<h4 id="设计操作数据的API文件模块"><a href="#设计操作数据的API文件模块" class="headerlink" title="设计操作数据的API文件模块"></a>设计操作数据的API文件模块</h4><p>es6中的find和findIndex：</p>
+<h4 id="设计操作数据的API文件模块">设计操作数据的API文件模块</h4>
+<p>es6中的find和findIndex：</p>
 <p>find接受一个方法作为参数，方法内部返回一个条件</p>
 <p>find会便利所有的元素，执行你给定的带有条件返回值的函数</p>
 <p>符合该条件的元素会作为find方法的返回值</p>
-<p>如果遍历结束还没有符合该条件的元素，则返回undefined<img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20200313103810731.png" alt="image-20200313103810731"></p>
+<p>如果遍历结束还没有符合该条件的元素，则返回undefined<img src="C:%5CUsers%5CA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313103810731.png" alt="image-20200313103810731"></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** * student.js * 数据操作文件模块 * 职责：操作文件中的数据，只处理数据，不关心业务 */</span><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>); <span class="comment">/**  * 获取所有学生列表  * return []  */</span><span class="built_in">exports</span>.find = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    &#125; <span class="comment">/**  * 获取添加保存学生  */</span><span class="built_in">exports</span>.save = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;        &#125;<span class="comment">/** * 更新学生 */</span><span class="built_in">exports</span>.update = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;        &#125; <span class="comment">/** * 删除学生 */</span><span class="built_in">exports</span>.delete = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;        &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ul>
-<li>处理模板</li>
-<li>配置静态开放资源</li>
-<li>配置模板引擎</li>
-<li>简单的路由，/studens渲染静态页出来</li>
-<li>路由设计</li>
-<li>提取路由模块</li>
-<li>由于接下来的一系列业务操作都需要处理文件数据，所以我们需要封装Student.js’</li>
-<li>先写好student.js文件结构<ul>
+<h4 id="步骤">步骤</h4>
+<ul>
+<li>
+<p>处理模板</p>
+</li>
+<li>
+<p>配置静态开放资源</p>
+</li>
+<li>
+<p>配置模板引擎</p>
+</li>
+<li>
+<p>简单的路由，/studens渲染静态页出来</p>
+</li>
+<li>
+<p>路由设计</p>
+</li>
+<li>
+<p>提取路由模块</p>
+</li>
+<li>
+<p>由于接下来的一系列业务操作都需要处理文件数据，所以我们需要封装Student.js’</p>
+</li>
+<li>
+<p>先写好student.js文件结构</p>
+<ul>
 <li>查询所有学生列别哦的API</li>
 <li>findById</li>
 <li>save</li>
@@ -1014,10 +1126,12 @@
 <li>deleteById</li>
 </ul>
 </li>
-<li><p>实现具体功能</p>
+<li>
+<p>实现具体功能</p>
 <ul>
 <li>通过路由收到请求</li>
-<li>接受请求中的参数（get，post）<ul>
+<li>接受请求中的参数（get，post）
+<ul>
 <li>req.query</li>
 <li>req.body</li>
 </ul>
@@ -1026,7 +1140,8 @@
 <li>根据操作结果给客户端发送请求</li>
 </ul>
 </li>
-<li><p>业务功能顺序</p>
+<li>
+<p>业务功能顺序</p>
 <ul>
 <li>列表</li>
 <li>添加</li>
@@ -1035,22 +1150,27 @@
 </ul>
 </li>
 </ul>
-<h4 id="子模板和模板的继承（模板引擎高级语法）【include，extend，block】"><a href="#子模板和模板的继承（模板引擎高级语法）【include，extend，block】" class="headerlink" title="子模板和模板的继承（模板引擎高级语法）【include，extend，block】"></a>子模板和模板的继承（模板引擎高级语法）【include，extend，block】</h4><p>注意:</p>
+<h4 id="子模板和模板的继承（模板引擎高级语法）【include，extend，block】">子模板和模板的继承（模板引擎高级语法）【include，extend，block】</h4>
+<p>注意:</p>
 <p>模板页：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh&quot;&gt;&lt;head&gt;	&lt;meta charset=&quot;UTF-8&quot;&gt;	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;	&lt;title&gt;模板页&lt;/title&gt;	&lt;link rel=&quot;stylesheet&quot; href=&quot;/node_modules/bootstrap/dist/css/bootstrap.css&quot;/&gt;	&#123;&#123; block &#x27;head&#x27; &#125;&#125;&#123;&#123; /block &#125;&#125;&lt;/head&gt;&lt;body&gt;	&lt;!-- 通过include导入公共部分 --&gt;	&#123;&#123;include &#x27;./header.html&#x27;&#125;&#125;		&lt;!-- 留一个位置 让别的内容去填充 --&gt;	&#123;&#123; block  &#x27;content&#x27; &#125;&#125;		&lt;h1&gt;默认内容&lt;/h1&gt;	&#123;&#123; /block &#125;&#125;		&lt;!-- 通过include导入公共部分 --&gt;	&#123;&#123;include &#x27;./footer.html&#x27;&#125;&#125;		&lt;!-- 公共样式 --&gt;	&lt;script src=&quot;/node_modules/jquery/dist/jquery.js&quot; &gt;&lt;/script&gt;	&lt;script src=&quot;/node_modules/bootstrap/dist/js/bootstrap.js&quot; &gt;&lt;/script&gt;	&#123;&#123; block &#x27;script&#x27; &#125;&#125;&#123;&#123; /block &#125;&#125;&lt;/body&gt;&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <p>模板的继承：</p>
-<p>​    header页面：</p>
+<p>​	header页面：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;&quot;</span>&gt;	<span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>公共的头部<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>​    footer页面：</p>
+<p>​	footer页面：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;&quot;</span>&gt;	<span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>公共的底部<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p>模板页的使用：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 继承(extend:延伸，扩展)模板也layout.html --&gt;&lt;!-- 把layout.html页面的内容都拿进来作为index.html页面的内容 --&gt;&#123;&#123;extend <span class="string">&#x27;./layout.html&#x27;</span>&#125;&#125;&lt;!-- 向模板页面填充新的数据 --&gt;&lt;!-- 填充后就会替换掉layout页面content中的数据 --&gt;&lt;!-- style样式方面的内容 --&gt;&#123;&#123; block <span class="string">&#x27;head&#x27;</span> &#125;&#125;	&lt;style type=<span class="string">&quot;text/css&quot;</span>&gt;		body&#123;			background-color: skyblue;		&#125;	&lt;<span class="regexp">/style&gt;&#123;&#123; /</span>block &#125;&#125;&#123;&#123; block <span class="string">&#x27;content&#x27;</span> &#125;&#125;	&lt;div id=<span class="string">&quot;&quot;</span>&gt;		<span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Index页面的内容<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>	&lt;<span class="regexp">/div&gt;&#123;&#123; /</span>block &#125;&#125;&lt;!-- js部分的内容 --&gt;&#123;&#123; block <span class="string">&#x27;script&#x27;</span> &#125;&#125;	&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;			&lt;<span class="regexp">/script&gt;&#123;&#123; /</span>block &#125;&#125;</span><br></pre></td></tr></table></figure>
 <p>最终的显示效果：</p>
-<p><img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20200316134759517.png" alt="image-20200316134759517"></p>
-<h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><h2 id="关系型和非关系型数据库"><a href="#关系型和非关系型数据库" class="headerlink" title="关系型和非关系型数据库"></a>关系型和非关系型数据库</h2><h3 id="关系型数据库（表就是关系，或者说表与表之间存在关系）。"><a href="#关系型数据库（表就是关系，或者说表与表之间存在关系）。" class="headerlink" title="关系型数据库（表就是关系，或者说表与表之间存在关系）。"></a>关系型数据库（表就是关系，或者说表与表之间存在关系）。</h3><ul>
+<p><img src="C:%5CUsers%5CA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200316134759517.png" alt="image-20200316134759517"></p>
+<h1>MongoDB</h1>
+<h2 id="关系型和非关系型数据库">关系型和非关系型数据库</h2>
+<h3 id="关系型数据库（表就是关系，或者说表与表之间存在关系）。">关系型数据库（表就是关系，或者说表与表之间存在关系）。</h3>
+<ul>
 <li>所有的关系型数据库都需要通过<code>sql</code>语言来操作</li>
 <li>所有的关系型数据库在操作之前都需要设计表结构</li>
-<li>而且数据表还支持约束<ul>
+<li>而且数据表还支持约束
+<ul>
 <li>唯一的</li>
 <li>主键</li>
 <li>默认值</li>
@@ -1058,10 +1178,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="非关系型数据库"></a>非关系型数据库</h3><ul>
+<h3 id="非关系型数据库">非关系型数据库</h3>
+<ul>
 <li>非关系型数据库非常的灵活</li>
 <li>有的关系型数据库就是key-value对儿</li>
-<li>但MongDB是长得最像关系型数据库的非关系型数据库<ul>
+<li>但MongDB是长得最像关系型数据库的非关系型数据库
+<ul>
 <li>数据库 -》 数据库</li>
 <li>数据表 -》 集合（数组）</li>
 <li>表记录 -》文档对象</li>
@@ -1073,112 +1195,148 @@
 <ul>
 <li>也就是说你可以任意的往里面存数据，没有结构性这么一说</li>
 </ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li><p>下载</p>
+<h2 id="安装">安装</h2>
+<ul>
+<li>
+<p>下载</p>
 <ul>
 <li>下载地址：<a target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">https://www.mongodb.com/download-center/community</a></li>
 </ul>
 </li>
-<li><p>安装</p>
+<li>
+<p>安装</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i mongoose</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>配置环境变量</p>
+<li>
+<p>配置环境变量</p>
 </li>
-<li><p>最后输入<code>mongod --version</code>测试是否安装成功</p>
+<li>
+<p>最后输入<code>mongod --version</code>测试是否安装成功</p>
 </li>
 </ul>
-<h2 id="启动和关闭数据库"><a href="#启动和关闭数据库" class="headerlink" title="启动和关闭数据库"></a>启动和关闭数据库</h2><p>启动：</p>
+<h2 id="启动和关闭数据库">启动和关闭数据库</h2>
+<p>启动：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mongodb 默认使用执行mongod 命令所处盘符根目录下的/data/db作为自己的数据存储目录<span class="comment"># 所以在第一次执行该命令之前先自己手动新建一个 /data/dbmongod# 开启服务net start mongodb</span></span></span><br></pre></td></tr></table></figure>
 <p>如果想要修改默认的数据存储目录，可以：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --dbpath = 数据存储目录路径</span><br></pre></td></tr></table></figure>
 <p>停止：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在开启服务的控制台，直接Ctrl+C;或者直接关闭开启服务的控制台。</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20200314101047100.png" alt="image-20200314101047100"></p>
-<h2 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h2><p>连接：</p>
+<p><img src="C:%5CUsers%5CA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200314101047100.png" alt="image-20200314101047100"></p>
+<h2 id="连接数据库">连接数据库</h2>
+<p>连接：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 该命令默认连接本机的 MongoDB 服务mongo</span><br></pre></td></tr></table></figure>
 <p>退出：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 在连接状态输入 exit 退出连接exit</span><br></pre></td></tr></table></figure>
-<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><ul>
-<li><code>show dbs</code><ul>
+<h2 id="基本命令">基本命令</h2>
+<ul>
+<li><code>show dbs</code>
+<ul>
 <li>查看数据库列表(数据库中的所有数据库)</li>
 </ul>
 </li>
-<li><code>db</code><ul>
+<li><code>db</code>
+<ul>
 <li>查看当前连接的数据库</li>
 </ul>
 </li>
-<li><code>use 数据库名称</code><ul>
+<li><code>use 数据库名称</code>
+<ul>
 <li>切换到指定的数据库，（如果没有会新建）</li>
 </ul>
 </li>
-<li><code>show collections</code><ul>
+<li><code>show collections</code>
+<ul>
 <li>查看当前目录下的所有数据表</li>
 </ul>
 </li>
-<li><code>db.表名.find()</code><ul>
+<li><code>db.表名.find()</code>
+<ul>
 <li>查看表中的详细信息</li>
 </ul>
 </li>
 </ul>
-<h2 id="在Node中如何操作MongoDB数据库"><a href="#在Node中如何操作MongoDB数据库" class="headerlink" title="在Node中如何操作MongoDB数据库"></a>在Node中如何操作MongoDB数据库</h2><h3 id="使用官方的MongoDB包来操作"><a href="#使用官方的MongoDB包来操作" class="headerlink" title="使用官方的MongoDB包来操作"></a>使用官方的<code>MongoDB</code>包来操作</h3><blockquote>
-<p>​    <a target="_blank" rel="noopener" href="http://mongodb.github.io/node-mongodb-native/">http://mongodb.github.io/node-mongodb-native/</a></p>
+<h2 id="在Node中如何操作MongoDB数据库">在Node中如何操作MongoDB数据库</h2>
+<h3 id="使用官方的MongoDB包来操作">使用官方的<code>MongoDB</code>包来操作</h3>
+<blockquote>
+<p>​	<a target="_blank" rel="noopener" href="http://mongodb.github.io/node-mongodb-native/">http://mongodb.github.io/node-mongodb-native/</a></p>
 </blockquote>
-<h3 id="使用第三方包mongoose来操作MongoDB数据库"><a href="#使用第三方包mongoose来操作MongoDB数据库" class="headerlink" title="使用第三方包mongoose来操作MongoDB数据库"></a>使用第三方包<code>mongoose</code>来操作MongoDB数据库</h3><p>​    第三方包：<code>mongoose</code>基于MongoDB官方的<code>mongodb</code>包再一次做了封装，名字叫<code>mongoose</code>，是WordPress项目团队开发的。</p>
-<h2 id="学习指南（步骤）"><a href="#学习指南（步骤）" class="headerlink" title="学习指南（步骤）"></a>学习指南（步骤）</h2><p>官方学习文档：<a target="_blank" rel="noopener" href="https://mongoosejs.com/docs/index.html">https://mongoosejs.com/docs/index.html</a></p>
-<h3 id="设计Scheme-发布Model-创建表"><a href="#设计Scheme-发布Model-创建表" class="headerlink" title="设计Scheme 发布Model (创建表)"></a>设计Scheme 发布Model (创建表)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.引包// 注意：按照后才能require使用var mongoose = require(&#x27;mongoose&#x27;);// 拿到schema图表var Schema = mongoose.Schema;// 2.连接数据库// 指定连接数据库后不需要存在，当你插入第一条数据库后会自动创建数据库mongoose.connect(&#x27;mongodb://localhost/test&#x27;);// 3.设计集合结构（表结构）// 用户表var userSchema = new Schema(&#123;	username: &#123; //姓名		type: String,		require: true //添加约束，保证数据的完整性，让数据按规矩统一	&#125;,	password: &#123;		type: String,		require: true	&#125;,	email: &#123;		type: String	&#125;&#125;);// 4.将文档结构发布为模型// mongoose.model方法就是用来将一个架构发布为 model// 		第一个参数：传入一个大写名词单数字符串用来表示你的数据库的名称// 					mongoose 会自动将大写名词的字符串生成 小写复数 的集合名称// 					例如 这里会变成users集合名称// 		第二个参数：架构// 	返回值：模型构造函数var User = mongoose.model(&#x27;User&#x27;, userSchema);</span></span><br></pre></td></tr></table></figure>
-<h3 id="添加数据（增）"><a href="#添加数据（增）" class="headerlink" title="添加数据（增）"></a>添加数据（增）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5.通过模型构造函数对User中的数据进行操作var user = new User(&#123;	username: &#x27;admin&#x27;,	password: &#x27;123456&#x27;,	email: &#x27;xiaochen@qq.com&#x27;&#125;);user.save(function(err, ret) &#123;	if (err) &#123;		console.log(&#x27;保存失败&#x27;);	&#125; else &#123;		console.log(&#x27;保存成功&#x27;);		console.log(ret);	&#125;&#125;);</span></span><br></pre></td></tr></table></figure>
-<h3 id="删除（删）"><a href="#删除（删）" class="headerlink" title="删除（删）"></a>删除（删）</h3><p>根据条件删除所有：</p>
+<h3 id="使用第三方包mongoose来操作MongoDB数据库">使用第三方包<code>mongoose</code>来操作MongoDB数据库</h3>
+<p>​	第三方包：<code>mongoose</code>基于MongoDB官方的<code>mongodb</code>包再一次做了封装，名字叫<code>mongoose</code>，是WordPress项目团队开发的。</p>
+<h2 id="学习指南（步骤）">学习指南（步骤）</h2>
+<p>官方学习文档：<a target="_blank" rel="noopener" href="https://mongoosejs.com/docs/index.html">https://mongoosejs.com/docs/index.html</a></p>
+<h3 id="设计Scheme-发布Model-创建表">设计Scheme 发布Model (创建表)</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.引包// 注意：按照后才能require使用var mongoose = require(&#x27;mongoose&#x27;);// 拿到schema图表var Schema = mongoose.Schema;// 2.连接数据库// 指定连接数据库后不需要存在，当你插入第一条数据库后会自动创建数据库mongoose.connect(&#x27;mongodb://localhost/test&#x27;);// 3.设计集合结构（表结构）// 用户表var userSchema = new Schema(&#123;	username: &#123; //姓名		type: String,		require: true //添加约束，保证数据的完整性，让数据按规矩统一	&#125;,	password: &#123;		type: String,		require: true	&#125;,	email: &#123;		type: String	&#125;&#125;);// 4.将文档结构发布为模型// mongoose.model方法就是用来将一个架构发布为 model// 		第一个参数：传入一个大写名词单数字符串用来表示你的数据库的名称// 					mongoose 会自动将大写名词的字符串生成 小写复数 的集合名称// 					例如 这里会变成users集合名称// 		第二个参数：架构// 	返回值：模型构造函数var User = mongoose.model(&#x27;User&#x27;, userSchema);</span></span><br></pre></td></tr></table></figure>
+<h3 id="添加数据（增）">添加数据（增）</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5.通过模型构造函数对User中的数据进行操作var user = new User(&#123;	username: &#x27;admin&#x27;,	password: &#x27;123456&#x27;,	email: &#x27;xiaochen@qq.com&#x27;&#125;);user.save(function(err, ret) &#123;	if (err) &#123;		console.log(&#x27;保存失败&#x27;);	&#125; else &#123;		console.log(&#x27;保存成功&#x27;);		console.log(ret);	&#125;&#125;);</span></span><br></pre></td></tr></table></figure>
+<h3 id="删除（删）">删除（删）</h3>
+<p>根据条件删除所有：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.remove(&#123;	<span class="attr">username</span>: <span class="string">&#x27;xiaoxiao&#x27;</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err, ret</span>) </span>&#123;	<span class="keyword">if</span> (err) &#123;		<span class="built_in">console</span>.log(<span class="string">&#x27;删除失败&#x27;</span>);	&#125; <span class="keyword">else</span> &#123;		<span class="built_in">console</span>.log(<span class="string">&#x27;删除成功&#x27;</span>);		<span class="built_in">console</span>.log(ret);	&#125;&#125;);</span><br></pre></td></tr></table></figure>
 <p>根据条件删除一个：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Model.findOneAndRemove(conditions,[options],[callback]);</span><br></pre></td></tr></table></figure>
 <p>根据id删除一个：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.findByIdAndRemove(id,[options],[callback]);</span><br></pre></td></tr></table></figure>
-<h3 id="更新（改）"><a href="#更新（改）" class="headerlink" title="更新（改）"></a>更新（改）</h3><p>更新所有：</p>
+<h3 id="更新（改）">更新（改）</h3>
+<p>更新所有：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.remove(conditions,doc,[options],[callback]);</span><br></pre></td></tr></table></figure>
 <p>根据指定条件更新一个：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.FindOneAndUpdate([conditions],[update],[options],[callback]);</span><br></pre></td></tr></table></figure>
 <p>根据id更新一个：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 更新	根据id来修改表数据User.findByIdAndUpdate(&#x27;5e6c5264fada77438c45dfcd&#x27;, &#123;	username: &#x27;junjun&#x27;&#125;, function(err, ret) &#123;	if (err) &#123;		console.log(&#x27;更新失败&#x27;);	&#125; else &#123;		console.log(&#x27;更新成功&#x27;);	&#125;&#125;);</span></span><br></pre></td></tr></table></figure>
-<h3 id="查询（查）"><a href="#查询（查）" class="headerlink" title="查询（查）"></a>查询（查）</h3><p>查询所有：</p>
+<h3 id="查询（查）">查询（查）</h3>
+<p>查询所有：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询所有User.find(function(err,ret)&#123;	if(err)&#123;		console.log(&#x27;查询失败&#x27;);	&#125;else&#123;		console.log(ret);	&#125;&#125;);</span></span><br></pre></td></tr></table></figure>
 <p>条件查询所有：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据条件查询User.find(&#123; username:&#x27;xiaoxiao&#x27; &#125;,function(err,ret)&#123;	if(err)&#123;		console.log(&#x27;查询失败&#x27;);	&#125;else&#123;		console.log(ret);	&#125;&#125;);</span></span><br></pre></td></tr></table></figure>
 <p>条件查询单个：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 按照条件查询单个，查询出来的数据是一个对象（&#123;&#125;）// 没有条件查询使用findOne方法，查询的是表中的第一条数据User.findOne(&#123;	username: &#x27;xiaoxiao&#x27;&#125;, function(err, ret) &#123;	if (err) &#123;		console.log(&#x27;查询失败&#x27;);	&#125; else &#123;		console.log(ret);	&#125;&#125;);</span></span><br></pre></td></tr></table></figure>
-<h1 id="使用Node操作MySQL数据库"><a href="#使用Node操作MySQL数据库" class="headerlink" title="使用Node操作MySQL数据库"></a>使用Node操作MySQL数据库</h1><p>文档：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/mysql">https://www.npmjs.com/package/mysql</a></p>
+<h1>使用Node操作MySQL数据库</h1>
+<p>文档：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/mysql">https://www.npmjs.com/package/mysql</a></p>
 <p>安装：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save  mysql</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入mysql包var mysql      = require(&#x27;mysql&#x27;);// 创建连接var connection = mysql.createConnection(&#123;  host     : &#x27;localhost&#x27;,	//本机  user     : &#x27;me&#x27;,		//账号root  password : &#x27;secret&#x27;,	//密码12345  database : &#x27;my_db&#x27;	//数据库名&#125;); // 连接数据库	（打开冰箱门）connection.connect(); //执行数据操作	（把大象放到冰箱）connection.query(&#x27;SELECT * FROM `users` &#x27;, function (error, results, fields) &#123;  if (error) throw error;//抛出异常阻止代码往下执行  // 没有异常打印输出结果  console.log(&#x27;The solution is: &#x27;,results);&#125;);//关闭连接	（关闭冰箱门）connection.end();</span></span><br></pre></td></tr></table></figure>
-<h1 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h1><h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><p>不成立的情况下：</p>
+<h1>异步编程</h1>
+<h2 id="回调函数">回调函数</h2>
+<p>不成立的情况下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x,y</span>)</span>&#123;    <span class="built_in">console</span>.log(<span class="number">1</span>);    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;        <span class="built_in">console</span>.log(<span class="number">2</span>);        <span class="keyword">var</span> ret = x + y;        <span class="keyword">return</span> ret;    &#125;,<span class="number">1000</span>);    <span class="built_in">console</span>.log(<span class="number">3</span>);    <span class="comment">//到这里执行就结束了，不会i等到前面的定时器，所以直接返回了默认值 undefined&#125;console.log(add(2,2));// 结果是 1 3 undefined 4</span></span><br></pre></td></tr></table></figure>
 <p>使用回调函数解决：</p>
 <p>回调函数：通过一个函数，获取函数内部的操作。（根据输入得到输出结果）</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ret;<span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x,y,callback</span>)</span>&#123;    <span class="comment">// callback就是回调函数    // var x = 10;    // var y = 20;    // var callback = function(ret)&#123;console.log(ret);&#125;    console.log(1);    setTimeout(function()&#123;        var ret = x + y;        callback(ret);    &#125;,1000);    console.log(3);&#125;add(10,20,function(ret)&#123;    console.log(ret);&#125;);</span></span><br></pre></td></tr></table></figure>
 <p>注意：</p>
-<p>​    凡是需要得到一个函数内部异步操作的结果（setTimeout,readFile,writeFile,ajax,readdir）</p>
-<p>​    这种情况必须通过   回调函数 (异步API都会伴随着一个回调函数)</p>
+<p>​	凡是需要得到一个函数内部异步操作的结果（setTimeout,readFile,writeFile,ajax,readdir）</p>
+<p>​	这种情况必须通过   回调函数 (异步API都会伴随着一个回调函数)</p>
 <p>ajax:</p>
 <p>基于原生XMLHttpRequest封装get方法：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oReq = <span class="keyword">new</span> XMLHttpRequest();<span class="comment">// 当请求加载成功要调用指定的函数oReq.onload = function()&#123;    console.log(oReq.responseText);&#125;oReq.open(&quot;GET&quot;, &quot;请求路径&quot;,true);oReq.send();</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params">url,callback</span>)</span>&#123;    <span class="keyword">var</span> oReq = <span class="keyword">new</span> XMLHttpRequest();    <span class="comment">// 当请求加载成功要调用指定的函数    oReq.onload = function()&#123;        //console.log(oReq.responseText);        callback(oReq.responseText);    &#125;    oReq.open(&quot;GET&quot;, url,true);    oReq.send();&#125;get(&#x27;data.json&#x27;,function(data)&#123;    console.log(data);&#125;);</span></span><br></pre></td></tr></table></figure>
-<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><p>callback  hell（回调地狱）:</p>
+<h2 id="Promise">Promise</h2>
+<p>callback  hell（回调地狱）:</p>
 <p>文件的读取无法判断执行顺序（文件的执行顺序是依据文件的大小来决定的）(异步api无法保证文件的执行顺序)</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);fs.readFile(<span class="string">&#x27;./data/a.text&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;	<span class="keyword">if</span>(err)&#123;		<span class="comment">// 1 读取失败直接打印输出读取失败		return console.log(&#x27;读取失败&#x27;);		// 2 抛出异常		// 		阻止程序的执行		// 		把错误信息打印到控制台		throw err;	&#125;	console.log(data);&#125;);fs.readFile(&#x27;./data/b.text&#x27;,&#x27;utf8&#x27;,function(err,data)&#123;	if(err)&#123;		// 1 读取失败直接打印输出读取失败		return console.log(&#x27;读取失败&#x27;);		// 2 抛出异常		// 		阻止程序的执行		// 		把错误信息打印到控制台		throw err;	&#125;	console.log(data);&#125;);</span></span><br></pre></td></tr></table></figure>
 <p>通过回调嵌套的方式来保证顺序：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);fs.readFile(<span class="string">&#x27;./data/a.text&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;	<span class="keyword">if</span>(err)&#123;		<span class="comment">// 1 读取失败直接打印输出读取失败		return console.log(&#x27;读取失败&#x27;);		// 2 抛出异常		// 		阻止程序的执行		// 		把错误信息打印到控制台		throw err;	&#125;	console.log(data);	fs.readFile(&#x27;./data/b.text&#x27;,&#x27;utf8&#x27;,function(err,data)&#123;		if(err)&#123;			// 1 读取失败直接打印输出读取失败			return console.log(&#x27;读取失败&#x27;);			// 2 抛出异常			// 		阻止程序的执行			// 		把错误信息打印到控制台			throw err;		&#125;		console.log(data);		fs.readFile(&#x27;./data/a.text&#x27;,&#x27;utf8&#x27;,function(err,data)&#123;			if(err)&#123;				// 1 读取失败直接打印输出读取失败				return console.log(&#x27;读取失败&#x27;);				// 2 抛出异常				// 		阻止程序的执行				// 		把错误信息打印到控制台				throw err;			&#125;			console.log(data);		&#125;);	&#125;);&#125;);</span></span><br></pre></td></tr></table></figure>
 <p>为了解决以上编码方式带来的问题（回调地狱嵌套），所以在EcmaScript6新增了一个API:</p>
 <ul>
-<li>Promise：承诺，保证     (深度变长度)</li>
-<li><p>Promise本身不是异步的，但往往都是内部封装一个异步任务</p>
+<li>
+<p>Promise：承诺，保证     (深度变长度)</p>
 </li>
-<li><p>Promise 容器：存放了一个异步任务，有两种状态（Pending）：</p>
+<li>
+<p>Promise本身不是异步的，但往往都是内部封装一个异步任务</p>
+</li>
+<li>
+<p>Promise 容器：存放了一个异步任务，有两种状态（Pending）：</p>
 <ul>
-<li><p>Resolved：解决</p>
+<li>
+<p>Resolved：解决</p>
 </li>
-<li><p>Rejected：失败</p>
+<li>
+<p>Rejected：失败</p>
 </li>
-<li>两种状态只能变成其中一种</li>
-<li>容器一旦创建，就开始执行里面的代码</li>
+<li>
+<p>两种状态只能变成其中一种</p>
+</li>
+<li>
+<p>容器一旦创建，就开始执行里面的代码</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -1192,24 +1350,33 @@
 <p>注册：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.findOne(&#123;<span class="attr">username</span>:<span class="string">&#x27;admin&#x27;</span>&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;    <span class="keyword">if</span>(user)&#123;        <span class="built_in">console</span>.log(<span class="string">&#x27;用户已存在&#x27;</span>)    &#125; <span class="keyword">else</span> &#123;        <span class="keyword">new</span> User(&#123;             <span class="attr">username</span>:<span class="string">&#x27;aaa&#x27;</span>,             <span class="attr">password</span>:<span class="string">&#x27;123&#x27;</span>,             <span class="attr">email</span>:<span class="string">&#x27;fffff&#x27;</span>        &#125;).save(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;            <span class="built_in">console</span>.log(<span class="string">&#x27;注册成功&#x27;</span>);        &#125;)    &#125;&#125;)</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.findOne(&#123;    <span class="attr">username</span>:<span class="string">&#x27;admin&#x27;</span>&#125;)    .then(<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;        <span class="keyword">if</span>(user)&#123;            <span class="comment">// 用户已经存在不能注册            console.log(&#x27;用户已存在&#x27;);        &#125;        else&#123;            // 用户不存在可以注册            return new User(&#123;                username:&#x27;aaa&#x27;,                password:&#x27;123&#x27;,                email:&#x27;fffff&#x27;            &#125;).save();        &#125;    &#125;)    .then(funciton(ret)&#123;		console.log(&#x27;注册成功&#x27;);    &#125;)</span></span><br></pre></td></tr></table></figure>
-<h2 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h2><p>async函数</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="修改完代码自动重启"><a href="#修改完代码自动重启" class="headerlink" title="修改完代码自动重启"></a>修改完代码自动重启</h2><p>我们在这里可以使用一个第三方命名行工具：<code>nodemon</code>来帮助我们解决频繁修改代码重启服务器的问题。</p>
+<h2 id="Generator">Generator</h2>
+<p>async函数</p>
+<h1>其他</h1>
+<h2 id="修改完代码自动重启">修改完代码自动重启</h2>
+<p>我们在这里可以使用一个第三方命名行工具：<code>nodemon</code>来帮助我们解决频繁修改代码重启服务器的问题。</p>
 <p><code>nodemon</code>是一个基于Node.js开发的一个第三方命令行工具，我们使用的时候需要独立安装：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#在任意目录执行该命令都可以#也就是说，所有需要 --global安装的包都可以在任意目录执行npm install --global nodemonnpm install -g nodemon#如果安装不成功的话，可以使用cnpm安装cnpm install -g nodemon</span><br></pre></td></tr></table></figure>
 <p>安装完毕之后使用：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js#使用nodemonnodemon app.js</span><br></pre></td></tr></table></figure>
 <p>只要是通过<code>nodemon</code>启动的服务，则他会监视你的文件变化，当文件发生变化的时候，会自动帮你重启服务器。</p>
-<h2 id="封装异步API"><a href="#封装异步API" class="headerlink" title="封装异步API"></a>封装异步API</h2><p>回调函数：获取异步操作的结果</p>
+<h2 id="封装异步API">封装异步API</h2>
+<p>回调函数：获取异步操作的结果</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">callback</span>)</span>&#123;    <span class="comment">// var callback = funtion(data)&#123; console.log(data); &#125;	setTimeout(function()&#123;        var data = &#x27;hello&#x27;;        callback(data);    &#125;,1000);&#125;// 如果需要获取一个函数中异步操作的结果，则必须通过回调函数的方式来获取fn(function(data)&#123;    console.log(data);&#125;)</span></span><br></pre></td></tr></table></figure>
-<h2 id="数组的遍历方法，都是对函数作为一种参数"><a href="#数组的遍历方法，都是对函数作为一种参数" class="headerlink" title="数组的遍历方法，都是对函数作为一种参数"></a>数组的遍历方法，都是对函数作为一种参数</h2><h2 id="EcmaScript-6"><a href="#EcmaScript-6" class="headerlink" title="EcmaScript 6"></a>EcmaScript 6</h2><blockquote>
+<h2 id="数组的遍历方法，都是对函数作为一种参数">数组的遍历方法，都是对函数作为一种参数</h2>
+<h2 id="EcmaScript-6">EcmaScript 6</h2>
+<blockquote>
 <p>参考文档：<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/">https://es6.ruanyifeng.com/</a></p>
 </blockquote>
-<h1 id="项目案例"><a href="#项目案例" class="headerlink" title="项目案例"></a>项目案例</h1><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.├- app.js				项目入口├- controllers/├- models/				存储数据模型（mongoose）	﹂ comment.js			评论数据模型	﹂ topic.js				话题数据模型	﹂ user.js				用户数据模型├- node_modules/		第三方包├- package.json		包描述文件├- package-lock.json	第三方包版本锁定文件├- public/				公共静态资源	﹂ css/					样式资源        · login.css		  		· main.css 		· markdown-github.css 		· setting.css	﹂ img/					媒体资源    ﹂ js/					脚本├- routes/				路由文件    ﹂ session.js			﹂ topic.js┖- views/				存储视图目录    ﹂ _layouts/        · home.html				主页面    ﹂ _partials/		公共模板        · header.html			公共头部模板		· footer.html			公共页脚模板		· settings-nav.html		公共设置导航条模板    ﹂ settings/        · admin.html		· profile.html    ﹂ topic/			操作页面        · edit.html				 编辑		· new.html				 添加        · show.html				 展示    ﹂ index.html		内容主体	﹂ login.html		登陆页面	﹂ register.html	注册页面</span><br></pre></td></tr></table></figure>
-<h2 id="模板页"><a href="#模板页" class="headerlink" title="模板页"></a>模板页</h2><ul>
+<h1>项目案例</h1>
+<h2 id="目录结构">目录结构</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.├- app.js				项目入口├- controllers/├- models/				存储数据模型（mongoose）	﹂ comment.js			评论数据模型	﹂ topic.js				话题数据模型	﹂ user.js				用户数据模型├- node_modules/		第三方包├- package.json		包描述文件├- package-lock.json	第三方包版本锁定文件├- public/				公共静态资源	﹂ css/					样式资源        · login.css		  		· main.css 		· markdown-github.css 		· setting.css	﹂ img/					媒体资源    ﹂ js/					脚本├- routes/				路由文件    ﹂ session.js			﹂ topic.js┖- views/				存储视图目录    ﹂ _layouts/        · home.html				主页面    ﹂ _partials/		公共模板        · header.html			公共头部模板		· footer.html			公共页脚模板		· settings-nav.html		公共设置导航条模板    ﹂ settings/        · admin.html		· profile.html    ﹂ topic/			操作页面        · edit.html				 编辑		· new.html				 添加        · show.html				 展示    ﹂ index.html		内容主体	﹂ login.html		登陆页面	﹂ register.html	注册页面</span><br></pre></td></tr></table></figure>
+<h2 id="模板页">模板页</h2>
+<ul>
 <li>子模板</li>
 <li>模板继承</li>
 </ul>
-<h2 id="路由设计-1"><a href="#路由设计-1" class="headerlink" title="路由设计"></a>路由设计</h2><div class="table-container">
+<h2 id="路由设计-2">路由设计</h2>
 <table>
 <thead>
 <tr>
@@ -1276,24 +1443,31 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="模型设计"><a href="#模型设计" class="headerlink" title="模型设计"></a>模型设计</h2><h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><h2 id="步骤-1"><a href="#步骤-1" class="headerlink" title="步骤"></a>步骤</h2><ul>
+<h2 id="模型设计">模型设计</h2>
+<h2 id="功能实现">功能实现</h2>
+<h2 id="步骤-2">步骤</h2>
+<ul>
 <li>创建目录结构</li>
-<li>整合静态页-模板页<ul>
+<li>整合静态页-模板页
+<ul>
 <li>include</li>
 <li>block</li>
 <li>extend</li>
 </ul>
 </li>
 <li>设计用户登陆，退出，注册的路由</li>
-<li>用户注册<ul>
+<li>用户注册
+<ul>
 <li>先处理客户端页面的内容（表单控件的name，收集表单数据，发起请求）</li>
-<li>服务端<ul>
+<li>服务端
+<ul>
 <li>获取从客户端收到的数据</li>
-<li>操作数据库<ul>
+<li>操作数据库
+<ul>
 <li>如果有错，发送500告诉客户端服务器错了‘</li>
 <li>其他的根据业务发送不同的响应数据</li>
 </ul>
@@ -1305,7 +1479,9 @@
 <li>登录</li>
 <li>退出</li>
 </ul>
-<h1 id="Express中间件"><a href="#Express中间件" class="headerlink" title="Express中间件"></a>Express中间件</h1><h2 id="中间件的概念"><a href="#中间件的概念" class="headerlink" title="中间件的概念"></a>中间件的概念</h2><blockquote>
+<h1>Express中间件</h1>
+<h2 id="中间件的概念">中间件的概念</h2>
+<blockquote>
 <p>参考文档：<a target="_blank" rel="noopener" href="http://expressjs.com/en/guide/using-middleware.html">http://expressjs.com/en/guide/using-middleware.html</a></p>
 </blockquote>
 <p>中间件：把很复杂的事情分割成单个，然后依次有条理的执行。就是一个中间处理环节，有输入，有输出。</p>
@@ -1314,11 +1490,14 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);<span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);<span class="keyword">var</span> cookie = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/cookie&#x27;</span>);<span class="keyword">var</span> query = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/query&#x27;</span>);<span class="keyword">var</span> postBody = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/post-body&#x27;</span>);<span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;	<span class="comment">// 解析请求地址中的get参数	// var obj = url.parse(req.url,true);	// req.query = obj.query;	query(req,res);	//中间件		// 解析请求地址中的post参数	req.body = &#123;		foo:&#x27;bar&#x27;	&#125;&#125;);if(req.url === &#x27;xxx&#x27;)&#123;	// 处理请求	...&#125;server.listen(3000,function()&#123;	console.log(&#x27;3000 runing...&#x27;);&#125;);</span></span><br></pre></td></tr></table></figure>
 <p>同一个请求对象所经过的中间件都是同一个请求对象和响应对象。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);<span class="keyword">var</span> app = express();app.get(<span class="string">&#x27;/abc&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;	<span class="comment">// 同一个请求的req和res是一样的，	// 可以前面存储下面调用	console.log(&#x27;/abc&#x27;);	// req.foo = &#x27;bar&#x27;;	req.body = &#123;		name:&#x27;xiaoxiao&#x27;,		age:18	&#125;	next();&#125;);app.get(&#x27;/abc&#x27;,function(req,res,next)&#123;	// console.log(req.foo);	console.log(req.body);	console.log(&#x27;/abc&#x27;);&#125;);app.listen(3000, function() &#123;	console.log(&#x27;app is running at port 3000.&#x27;);&#125;);</span></span><br></pre></td></tr></table></figure>
-<h2 id="中间件的分类"><a href="#中间件的分类" class="headerlink" title="中间件的分类:"></a>中间件的分类:</h2><h3 id="1-1-应用程序级别的中间件"><a href="#1-1-应用程序级别的中间件" class="headerlink" title="1.1 应用程序级别的中间件"></a>1.1 应用程序级别的中间件</h3><p>万能匹配（不关心任何请求路径和请求方法的中间件）：</p>
+<h2 id="中间件的分类">中间件的分类:</h2>
+<h3 id="1-1-应用程序级别的中间件">1.1 应用程序级别的中间件</h3>
+<p>万能匹配（不关心任何请求路径和请求方法的中间件）：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;    <span class="built_in">console</span>.log(<span class="string">&#x27;Time&#x27;</span>,<span class="built_in">Date</span>.now());    next();&#125;);</span><br></pre></td></tr></table></figure>
 <p>关心请求路径和请求方法的中间件：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="string">&#x27;/a&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;    <span class="built_in">console</span>.log(<span class="string">&#x27;Time&#x27;</span>,<span class="built_in">Date</span>.now());    next();&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="路由级别的中间件"><a href="#路由级别的中间件" class="headerlink" title="路由级别的中间件"></a>路由级别的中间件</h3><p>严格匹配请求路径和请求方法的中间件</p>
+<h3 id="路由级别的中间件">路由级别的中间件</h3>
+<p>严格匹配请求路径和请求方法的中间件</p>
 <p>get:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;	res.send(<span class="string">&#x27;get&#x27;</span>);&#125;);</span><br></pre></td></tr></table></figure>
 <p>post：</p>
@@ -1327,19 +1506,24 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.put(<span class="string">&#x27;/user&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;	res.send(<span class="string">&#x27;put&#x27;</span>);&#125;);</span><br></pre></td></tr></table></figure>
 <p>delete:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.delete(<span class="string">&#x27;/delete&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;	res.send(<span class="string">&#x27;delete&#x27;</span>);&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="总"><a href="#总" class="headerlink" title="总"></a>总</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);<span class="keyword">var</span> app = express();<span class="comment">// 中间件：处理请求，本质就是个函数// 在express中，对中间件有几种分类// 1 不关心任何请求路径和请求方法的中间件// 也就是说任何请求都会进入这个中间件// 中间件本身是一个方法，该方法接收三个参数// Request 请求对象// Response 响应对象// next 下一个中间件// // 全局匹配中间件// app.use(function(req, res, next) &#123;// 	console.log(&#x27;1&#x27;);// 	// 当一个请求进入中间件后// 	// 如果需要请求另外一个方法则需要使用next（）方法// 	next();// 	// next是一个方法，用来调用下一个中间件//  // 注意：next（）方法调用下一个方法的时候，也会匹配（不是调用紧挨着的哪一个）// &#125;);// app.use(function(req, res, next) &#123;// 	console.log(&#x27;2&#x27;);// &#125;);// // 2 关心请求路径的中间件// // 以/xxx开头的中间件// app.use(&#x27;/a&#x27;,function(req, res, next) &#123;// 	console.log(req.url);// &#125;);// 3 严格匹配请求方法和请求路径的中间件app.get(&#x27;/&#x27;,function()&#123;	console.log(&#x27;/&#x27;);&#125;);app.post(&#x27;/a&#x27;,function()&#123;	console.log(&#x27;/a&#x27;);&#125;);app.listen(3000, function() &#123;	console.log(&#x27;app is running at port 3000.&#x27;);&#125;);</span></span><br></pre></td></tr></table></figure>
-<h2 id="错误处理中间件"><a href="#错误处理中间件" class="headerlink" title="错误处理中间件"></a>错误处理中间件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">err,req,res,next</span>)</span>&#123;    <span class="built_in">console</span>.error(err,stack);    res.status(<span class="number">500</span>).send(<span class="string">&#x27;Something broke&#x27;</span>);&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="总">总</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);<span class="keyword">var</span> app = express();<span class="comment">// 中间件：处理请求，本质就是个函数// 在express中，对中间件有几种分类// 1 不关心任何请求路径和请求方法的中间件// 也就是说任何请求都会进入这个中间件// 中间件本身是一个方法，该方法接收三个参数// Request 请求对象// Response 响应对象// next 下一个中间件// // 全局匹配中间件// app.use(function(req, res, next) &#123;// 	console.log(&#x27;1&#x27;);// 	// 当一个请求进入中间件后// 	// 如果需要请求另外一个方法则需要使用next（）方法// 	next();// 	// next是一个方法，用来调用下一个中间件//  // 注意：next（）方法调用下一个方法的时候，也会匹配（不是调用紧挨着的哪一个）// &#125;);// app.use(function(req, res, next) &#123;// 	console.log(&#x27;2&#x27;);// &#125;);// // 2 关心请求路径的中间件// // 以/xxx开头的中间件// app.use(&#x27;/a&#x27;,function(req, res, next) &#123;// 	console.log(req.url);// &#125;);// 3 严格匹配请求方法和请求路径的中间件app.get(&#x27;/&#x27;,function()&#123;	console.log(&#x27;/&#x27;);&#125;);app.post(&#x27;/a&#x27;,function()&#123;	console.log(&#x27;/a&#x27;);&#125;);app.listen(3000, function() &#123;	console.log(&#x27;app is running at port 3000.&#x27;);&#125;);</span></span><br></pre></td></tr></table></figure>
+<h2 id="错误处理中间件">错误处理中间件</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">err,req,res,next</span>)</span>&#123;    <span class="built_in">console</span>.error(err,stack);    res.status(<span class="number">500</span>).send(<span class="string">&#x27;Something broke&#x27;</span>);&#125;);</span><br></pre></td></tr></table></figure>
 <p>配置使用404中间件：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 放在最后，如果前面没有任何中间件能匹配处理，则进入这个404app.use(function(req,res)&#123;    res.render(&#x27;404.html&#x27;);&#125;);</span></span><br></pre></td></tr></table></figure>
 <p>配置全局错误处理中间件:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;	fs.readFile(<span class="string">&#x27;.a/bc&#x27;</span>, <span class="function"><span class="title">funtion</span>(<span class="params"></span>)</span> &#123;		<span class="keyword">if</span> (err) &#123;        	<span class="comment">// 当调用next()传参后，则直接进入到全局错误处理中间件方法中（4个参数）        	// 当发生全局错误的时候，我们可以调用next传递错误对象        	// 然后被全局错误处理中间件匹配到并进行处理        	// 就不需要每处理一次业务都要判断err			next(err);		&#125;	&#125;)&#125;);//全局错误处理中间件app.use(function(err,req,res,next)&#123;    res.status(500).json(&#123;        err_code:500,        message:err.message    &#125;);&#125;);</span></span><br></pre></td></tr></table></figure>
-<h2 id="内置中间件"><a href="#内置中间件" class="headerlink" title="内置中间件"></a>内置中间件</h2><ul>
-<li>express.static(提供静态文件)<ul>
+<h2 id="内置中间件">内置中间件</h2>
+<ul>
+<li>express.static(提供静态文件)
+<ul>
 <li><a target="_blank" rel="noopener" href="http://expressjs.com/en/starter/static-files.html#serving-static-files-in-express">http://expressjs.com/en/starter/static-files.html#serving-static-files-in-express</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="第三方中间件"><a href="#第三方中间件" class="headerlink" title="第三方中间件"></a>第三方中间件</h2><blockquote>
+<h2 id="第三方中间件">第三方中间件</h2>
+<blockquote>
 <p>参考文档：<a target="_blank" rel="noopener" href="http://expressjs.com/en/resources/middleware.html">http://expressjs.com/en/resources/middleware.html</a></p>
 </blockquote>
 <ul>
@@ -1351,12 +1535,15 @@
 <li>server-static</li>
 <li>session</li>
 </ul>
-<h1 id="项目2-0"><a href="#项目2-0" class="headerlink" title="项目2.0"></a>项目2.0</h1><h2 id="目录结构-1"><a href="#目录结构-1" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.├- app.js	项目入口├- controllers/├- models/	存储数据模型（mongoose）	﹂ comment.js	评论数据模型	﹂ topic.js		话题数据模型	﹂ user.js		用户数据模型├- node_modules/ 第三方包├- package.json	 包描述文件├- package-lock.json	第三方包版本锁定文件├- public/	公共静态资源	﹂ css/	样式资源        · login.css		  		· main.css 		· markdown-github.css 		· setting.css	﹂ img/	媒体资源    ﹂ js/	脚本资源├- routes/	路由文件    ﹂ session.js			﹂ topic.js┖- views/	存储视图目录    ﹂ _layouts/        · home.html	主页面    ﹂ _partials/		公共模板        · header.html	公共头部模板		· footer.html	公共页脚模板		· settings-nav.html	共设置导航条模板    ﹂ settings/        · admin.html		· profile.html    ﹂ topic/			操作页面        · edit.html	编辑		· new.html	添加        · show.html	展示    ﹂ index.html 内容主体	﹂ login.html 登陆页面	﹂ register.html	注册页面</span><br></pre></td></tr></table></figure>
-<h2 id="模板页-1"><a href="#模板页-1" class="headerlink" title="模板页"></a>模板页</h2><ul>
+<h1>项目2.0</h1>
+<h2 id="目录结构-2">目录结构</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.├- app.js	项目入口├- controllers/├- models/	存储数据模型（mongoose）	﹂ comment.js	评论数据模型	﹂ topic.js		话题数据模型	﹂ user.js		用户数据模型├- node_modules/ 第三方包├- package.json	 包描述文件├- package-lock.json	第三方包版本锁定文件├- public/	公共静态资源	﹂ css/	样式资源        · login.css		  		· main.css 		· markdown-github.css 		· setting.css	﹂ img/	媒体资源    ﹂ js/	脚本资源├- routes/	路由文件    ﹂ session.js			﹂ topic.js┖- views/	存储视图目录    ﹂ _layouts/        · home.html	主页面    ﹂ _partials/		公共模板        · header.html	公共头部模板		· footer.html	公共页脚模板		· settings-nav.html	共设置导航条模板    ﹂ settings/        · admin.html		· profile.html    ﹂ topic/			操作页面        · edit.html	编辑		· new.html	添加        · show.html	展示    ﹂ index.html 内容主体	﹂ login.html 登陆页面	﹂ register.html	注册页面</span><br></pre></td></tr></table></figure>
+<h2 id="模板页-2">模板页</h2>
+<ul>
 <li>子模板</li>
 <li>模板继承</li>
 </ul>
-<h2 id="路由设计-2"><a href="#路由设计-2" class="headerlink" title="路由设计"></a>路由设计</h2><div class="table-container">
+<h2 id="路由设计-3">路由设计</h2>
 <table>
 <thead>
 <tr>
@@ -1423,86 +1610,115 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="模型设计-1"><a href="#模型设计-1" class="headerlink" title="模型设计"></a>模型设计</h2><h4 id="阶段一"><a href="#阶段一" class="headerlink" title="阶段一"></a>阶段一</h4><ul>
-<li><p>页面设计</p>
+<h2 id="模型设计-2">模型设计</h2>
+<h4 id="阶段一">阶段一</h4>
+<ul>
+<li>
+<p>页面设计</p>
 <ul>
 <li>一体页</li>
 </ul>
 </li>
 <li></li>
 </ul>
-<h2 id="功能实现-1"><a href="#功能实现-1" class="headerlink" title="功能实现"></a>功能实现</h2><h1 id="NodeJS2-0"><a href="#NodeJS2-0" class="headerlink" title="NodeJS2.0"></a>NodeJS2.0</h1><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="命令行窗口"><a href="#命令行窗口" class="headerlink" title="命令行窗口"></a>命令行窗口</h3><ul>
-<li>cmd、终端、shell、dos</li>
-<li><p>常用指令</p>
+<h2 id="功能实现-2">功能实现</h2>
+<h1>NodeJS2.0</h1>
+<h2 id="补充">补充</h2>
+<h3 id="命令行窗口">命令行窗口</h3>
 <ul>
-<li><p>dir</p>
+<li>
+<p>cmd、终端、shell、dos</p>
+</li>
+<li>
+<p>常用指令</p>
+<ul>
+<li>
+<p>dir</p>
 <ul>
 <li>列出当前文件夹下所有文件</li>
 </ul>
 </li>
-<li><p>cd</p>
+<li>
+<p>cd</p>
 </li>
-<li><p>md  目录名</p>
+<li>
+<p>md  目录名</p>
 <ul>
 <li>创建文件夹</li>
 </ul>
 </li>
-<li><p>rd  目录名</p>
+<li>
+<p>rd  目录名</p>
 <ul>
 <li>删除文件夹</li>
 </ul>
 </li>
-<li><p>文件名</p>
+<li>
+<p>文件名</p>
 <ul>
 <li>打开文件</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>环境变量</p>
+<li>
+<p>环境变量</p>
 <ul>
-<li>即windows系统的变量</li>
-<li><p>path</p>
+<li>
+<p>即windows系统的变量</p>
+</li>
+<li>
+<p>path</p>
 <ul>
-<li><p>系统寻找文件的顺序（dos）</p>
+<li>
+<p>系统寻找文件的顺序（dos）</p>
 <ul>
 <li>当前目录下</li>
 <li>→环境变量path</li>
 </ul>
 </li>
-<li><p>类似作用域链</p>
+<li>
+<p>类似作用域链</p>
 </li>
 </ul>
 </li>
-<li><p>修改环境变量后需要重启dos</p>
+<li>
+<p>修改环境变量后需要重启dos</p>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h3><ul>
-<li><p>进程</p>
+<h3 id="进程与线程">进程与线程</h3>
 <ul>
-<li><p>负责为程序的运行提供必备的环境</p>
+<li>
+<p>进程</p>
+<ul>
+<li>
+<p>负责为程序的运行提供必备的环境</p>
 <ul>
 <li>相当于工厂车间</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>线程</p>
+<li>
+<p>线程</p>
 <ul>
-<li><p>计算机中最小的计算单位，负责执行进程中的程序</p>
+<li>
+<p>计算机中最小的计算单位，负责执行进程中的程序</p>
 <ul>
 <li>相当于车间里的工人</li>
 </ul>
 </li>
-<li><p>单线程</p>
+<li>
+<p>单线程</p>
 </li>
-<li><p>多线程</p>
+<li>
+<p>多线程</p>
 <ul>
 <li>并发问题</li>
 </ul>
@@ -1510,50 +1726,69 @@
 </ul>
 </li>
 </ul>
-<h3 id="关于性能"><a href="#关于性能" class="headerlink" title="关于性能"></a>关于性能</h3><ul>
-<li>客户端</li>
-<li><p>服务器端</p>
+<h3 id="关于性能">关于性能</h3>
 <ul>
-<li>多线程</li>
-<li><p>nodejs</p>
+<li>
+<p>客户端</p>
+</li>
+<li>
+<p>服务器端</p>
+<ul>
+<li>
+<p>多线程</p>
+</li>
+<li>
+<p>nodejs</p>
 <ul>
 <li>单线程</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>数据库</p>
+<li>
+<p>数据库</p>
 <ul>
 <li>通过磁盘调用操作数据库</li>
 </ul>
 </li>
 </ul>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<h2 id="简介">简介</h2>
+<h3 id="定义">定义</h3>
+<ul>
 <li>nodejs是能在服务器端运行js的开放源代码、跨平台的js运行环境</li>
 </ul>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<h3 id="特点">特点</h3>
+<ul>
 <li>采用Google开发的V8引擎运行js代码</li>
 <li>单线程服务器</li>
 <li>使用事件驱动</li>
 <li>非阻塞</li>
 <li>异步I/O模型</li>
 </ul>
-<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
-<li><p>web服务API</p>
+<h3 id="作用">作用</h3>
+<ul>
+<li>
+<p>web服务API</p>
 <ul>
 <li>REST</li>
 </ul>
 </li>
-<li><p>实时多人游戏</p>
+<li>
+<p>实时多人游戏</p>
 </li>
 </ul>
-<h3 id="关于node版本"><a href="#关于node版本" class="headerlink" title="关于node版本"></a>关于node版本</h3><ul>
+<h3 id="关于node版本">关于node版本</h3>
+<ul>
 <li>奇数为开发版，偶数为稳定版</li>
 </ul>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="使用node执行js文件"><a href="#使用node执行js文件" class="headerlink" title="使用node执行js文件"></a>使用node执行js文件</h3><ul>
-<li><p>进入当前文件所在目录</p>
+<h2 id="操作">操作</h2>
+<h3 id="使用node执行js文件">使用node执行js文件</h3>
 <ul>
-<li><p>快捷方法</p>
+<li>
+<p>进入当前文件所在目录</p>
+<ul>
+<li>
+<p>快捷方法</p>
 <ul>
 <li>在文件地址栏输入 cmd</li>
 <li>node 文件名</li>
@@ -1561,23 +1796,29 @@
 </li>
 </ul>
 </li>
-<li><p>在编译器终端</p>
+<li>
+<p>在编译器终端</p>
 <ul>
 <li>node 文件名</li>
 </ul>
 </li>
-<li><p>编译器直接run</p>
+<li>
+<p>编译器直接run</p>
 </li>
 </ul>
-<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><ul>
-<li><p>特点</p>
+<h2 id="模块化">模块化</h2>
+<h3 id="简介-2">简介</h3>
+<ul>
+<li>
+<p>特点</p>
 <ul>
 <li>大化小</li>
 <li>避免耦合</li>
 <li>增加复用</li>
 </ul>
 </li>
-<li><p>ES标准缺陷</p>
+<li>
+<p>ES标准缺陷</p>
 <ul>
 <li>没有模块系统（ES5）</li>
 <li>标准库较少</li>
@@ -1586,11 +1827,16 @@
 </ul>
 </li>
 </ul>
-<h3 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h3><ul>
-<li><p>简介</p>
+<h3 id="CommonJS规范">CommonJS规范</h3>
 <ul>
-<li>弥补当前js没有标准的缺陷</li>
-<li><p>对模块的定义</p>
+<li>
+<p>简介</p>
+<ul>
+<li>
+<p>弥补当前js没有标准的缺陷</p>
+</li>
+<li>
+<p>对模块的定义</p>
 <ul>
 <li>模块引用</li>
 <li>模块定义</li>
@@ -1599,141 +1845,184 @@
 </li>
 </ul>
 </li>
-<li><p>定义模块</p>
+<li>
+<p>定义模块</p>
 <ul>
 <li>创建js文件</li>
 <li>在node中一个js文件就是一个模块</li>
 </ul>
 </li>
-<li><p>模块标识</p>
+<li>
+<p>模块标识</p>
 <ul>
-<li><p>定义</p>
+<li>
+<p>定义</p>
 <ul>
 <li>找到模块的方式</li>
 <li>使用require引入外部模块时，使用的就是模块标识，通过模块标识来找到指定的标识</li>
 </ul>
 </li>
-<li><p>模块分类</p>
+<li>
+<p>模块分类</p>
 <ul>
-<li><p>核心模块</p>
+<li>
+<p>核心模块</p>
 <ul>
-<li>由node引擎提供的模块</li>
-<li><p>模块标识</p>
+<li>
+<p>由node引擎提供的模块</p>
+</li>
+<li>
+<p>模块标识</p>
 <ul>
 <li>模块名</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>文件模块</p>
+<li>
+<p>文件模块</p>
 <ul>
-<li>由用户自己创建的模块</li>
-<li><p>模块标识</p>
-<ul>
-<li>文件路径</li>
-</ul>
+<li>
+<p>由用户自己创建的模块</p>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>引用模块</p>
-<ul>
-<li><p>require（）</p>
-<ul>
-<li><p>参数</p>
+<li>
+<p>模块标识</p>
 <ul>
 <li>文件路径</li>
 </ul>
 </li>
-<li><p>注意</p>
-<ul>
-<li>相对路径必须以  ./或 ../开头</li>
 </ul>
 </li>
-<li><p>返回值</p>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>引用模块</p>
+<ul>
+<li>
+<p>require（）</p>
+<ul>
+<li>
+<p>参数</p>
+<ul>
+<li>文件路径</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>相对路径必须以  ./或 …/开头</li>
+</ul>
+</li>
+<li>
+<p>返回值</p>
 <ul>
 <li>该函数会返回一个对象，该对象代表引入的模块</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>在node中，每一个文件中的js代码都是独立运行在一个函数中且传入了5个实参，而不是全局作用域</p>
+<li>
+<p>在node中，每一个文件中的js代码都是独立运行在一个函数中且传入了5个实参，而不是全局作用域</p>
 <ul>
-<li>所以一个模块中的变量和函数在其他模块中无法访问</li>
-<li>console.log(arguments)//证明一个模块的确是运行在函数里</li>
-<li><p>arguments.callee</p>
+<li>
+<p>所以一个模块中的变量和函数在其他模块中无法访问</p>
+</li>
+<li>
+<p>console.log(arguments)//证明一个模块的确是运行在函数里</p>
+</li>
+<li>
+<p>arguments.callee</p>
 <ul>
 <li>该属性保存的是当前正在执行的函数对象</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>node执行模块中的代码时</p>
+<li>
+<p>node执行模块中的代码时</p>
 <ul>
-<li><p>最顶部添加</p>
+<li>
+<p>最顶部添加</p>
 <ul>
-<li>function (exports, require, module, <strong>filename, </strong>dirname) {</li>
+<li>function (exports, require, module, __filename, __dirname) {</li>
 </ul>
 </li>
-<li><p>最底部添加</p>
+<li>
+<p>最底部添加</p>
 <ul>
 <li>}</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>五个参数</p>
+<li>
+<p>五个参数</p>
 <ul>
-<li><p>exports</p>
+<li>
+<p>exports</p>
 <ul>
-<li>该对象用来向外部暴露属性或方法</li>
-<li><p>语法</p>
+<li>
+<p>该对象用来向外部暴露属性或方法</p>
+</li>
+<li>
+<p>语法</p>
 <ul>
 <li>exports . x</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>require</p>
+<li>
+<p>require</p>
 <ul>
 <li>函数，用来引入外部的模块</li>
 </ul>
 </li>
-<li><p>module</p>
+<li>
+<p>module</p>
 <ul>
-<li>代表的是当前模块本身</li>
-<li><p>exports就是module的属性</p>
+<li>
+<p>代表的是当前模块本身</p>
+</li>
+<li>
+<p>exports就是module的属性</p>
 <ul>
 <li>即module . exports = exports，本质相同</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>__filename</p>
+<li>
+<p>__filename</p>
 <ul>
 <li>当前文件完整路径</li>
 </ul>
 </li>
-<li><p>__dirname</p>
+<li>
+<p>__dirname</p>
 <ul>
 <li>当前模块所在文件夹的完整路径</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>关于</p>
+<li>
+<p>关于</p>
 <ul>
-<li><p>module .exports</p>
+<li>
+<p>module .exports</p>
 <ul>
-<li><p>批量导入</p>
+<li>
+<p>批量导入</p>
 <ul>
-<li>module.exports = {<br>}</li>
+<li>module.exports = {<br>
+}</li>
 </ul>
 </li>
-<li><p>可以通过 . 的形式，也可以直接赋值</p>
+<li>
+<p>可以通过 . 的形式，也可以直接赋值</p>
 <ul>
 <li>module.exports = { }</li>
 <li>model.exports . xxx = xxx</li>
@@ -1741,14 +2030,17 @@
 </li>
 </ul>
 </li>
-<li><p>exports</p>
+<li>
+<p>exports</p>
 <ul>
-<li><p>通过exports只能使用 . 的方式向外暴露内部变量</p>
+<li>
+<p>通过exports只能使用 . 的方式向外暴露内部变量</p>
 <ul>
 <li>exports . xxx = xxx</li>
 </ul>
 </li>
-<li><p>改变量，不是改对象</p>
+<li>
+<p>改变量，不是改对象</p>
 </li>
 </ul>
 </li>
@@ -1756,15 +2048,18 @@
 </li>
 </ul>
 </li>
-<li><p>global</p>
+<li>
+<p>global</p>
 <ul>
-<li><p>定义</p>
+<li>
+<p>定义</p>
 <ul>
 <li>node的全局对象，与window类似</li>
 <li>在全局中创建的变量/函数都会作为global的属性/方法保存</li>
 </ul>
 </li>
-<li><p>创建</p>
+<li>
+<p>创建</p>
 <ul>
 <li>去掉var</li>
 </ul>
@@ -1772,42 +2067,56 @@
 </ul>
 </li>
 </ul>
-<h2 id="包package"><a href="#包package" class="headerlink" title="包package"></a>包package</h2><h3 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h3><ul>
-<li><p>规范的模块</p>
+<h2 id="包package">包package</h2>
+<h3 id="简介-3">简介</h3>
+<ul>
+<li>
+<p>规范的模块</p>
 <ul>
 <li>将一组相关的模块组合到一起</li>
 </ul>
 </li>
-<li><p>本质：文件夹</p>
+<li>
+<p>本质：文件夹</p>
 </li>
 </ul>
-<h3 id="CommonJS的包规范组成"><a href="#CommonJS的包规范组成" class="headerlink" title="CommonJS的包规范组成"></a>CommonJS的包规范组成</h3><ul>
-<li><p>包结构</p>
+<h3 id="CommonJS的包规范组成">CommonJS的包规范组成</h3>
 <ul>
-<li>用于组织包中的各种文件（压缩文件）</li>
-<li><p>规范目录组成</p>
+<li>
+<p>包结构</p>
 <ul>
-<li><p>package.json</p>
+<li>
+<p>用于组织包中的各种文件（压缩文件）</p>
+</li>
+<li>
+<p>规范目录组成</p>
+<ul>
+<li>
+<p>package.json</p>
 <ul>
 <li>描述文件（说明书）</li>
 </ul>
 </li>
-<li><p>bin</p>
+<li>
+<p>bin</p>
 <ul>
 <li>可执行二进制文件</li>
 </ul>
 </li>
-<li><p>lib</p>
+<li>
+<p>lib</p>
 <ul>
 <li>js代码</li>
 </ul>
 </li>
-<li><p>doc</p>
+<li>
+<p>doc</p>
 <ul>
 <li>文档</li>
 </ul>
 </li>
-<li><p>test</p>
+<li>
+<p>test</p>
 <ul>
 <li>单元测试</li>
 </ul>
@@ -1816,10 +2125,14 @@
 </li>
 </ul>
 </li>
-<li><p>包描述文件</p>
+<li>
+<p>包描述文件</p>
 <ul>
-<li>表达非代码的相关信息，放在包的根目录下</li>
-<li><p>package.json</p>
+<li>
+<p>表达非代码的相关信息，放在包的根目录下</p>
+</li>
+<li>
+<p>package.json</p>
 <ul>
 <li>name、version、description…</li>
 <li>不能写注释</li>
@@ -1828,78 +2141,96 @@
 </ul>
 </li>
 </ul>
-<h3 id="npm-1"><a href="#npm-1" class="headerlink" title="npm"></a>npm</h3><ul>
-<li><p>简介</p>
+<h3 id="npm">npm</h3>
+<ul>
+<li>
+<p>简介</p>
 <ul>
 <li>Node Package Manager包管理工具</li>
 <li>CommonJS包规范是理论，npm是其实践之一</li>
 </ul>
 </li>
-<li><p>功能</p>
+<li>
+<p>功能</p>
 <ul>
 <li>帮助node完成第三方模块的发布、安装和依赖等</li>
 </ul>
 </li>
-<li><p>命令</p>
+<li>
+<p>命令</p>
 <ul>
-<li><p>npm -v</p>
+<li>
+<p>npm -v</p>
 <ul>
 <li>查npm版本</li>
 </ul>
 </li>
-<li><p>npm -version</p>
+<li>
+<p>npm -version</p>
 <ul>
 <li>所有模块版本</li>
 </ul>
 </li>
-<li><p>npm search 包名</p>
+<li>
+<p>npm search 包名</p>
 <ul>
 <li>搜索包</li>
 </ul>
 </li>
-<li><p>npm init</p>
+<li>
+<p>npm init</p>
 <ul>
 <li>初始化，创建package.json文件</li>
 </ul>
 </li>
-<li><p>npm remove / r 包名</p>
+<li>
+<p>npm remove / r 包名</p>
 <ul>
 <li>删除包</li>
 </ul>
 </li>
-<li><p>npm install / i 包名</p>
+<li>
+<p>npm install / i 包名</p>
 <ul>
 <li>安装包</li>
 </ul>
 </li>
-<li><p>npm install 包名  —save </p>
+<li>
+<p>npm install 包名  --save</p>
 <ul>
 <li>安装包并添加到依赖</li>
 <li>将包版本直接添加到package.json文件的dependencies中</li>
 </ul>
 </li>
-<li><p>npm install</p>
+<li>
+<p>npm install</p>
 <ul>
 <li>下载当前项目所依赖的包</li>
 <li>通过package.josn文件的dependencies寻找</li>
 </ul>
 </li>
-<li><p>npm install 包名 -g</p>
+<li>
+<p>npm install 包名 -g</p>
 <ul>
-<li>全局安装包</li>
-<li><p>一般是一些工具</p>
+<li>
+<p>全局安装包</p>
+</li>
+<li>
+<p>一般是一些工具</p>
 <ul>
 <li>用于计算机中，而不是项目中</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>npm install 包名 -registry=地址</p>
+<li>
+<p>npm install 包名 -registry=地址</p>
 <ul>
 <li>从镜像原安装</li>
 </ul>
 </li>
-<li><p>npm  config set registry 地址</p>
+<li>
+<p>npm  config set registry 地址</p>
 <ul>
 <li>设置镜像源</li>
 </ul>
@@ -1907,23 +2238,31 @@
 </ul>
 </li>
 </ul>
-<h3 id="配置cnpm"><a href="#配置cnpm" class="headerlink" title="配置cnpm"></a>配置cnpm</h3><ul>
-<li><p>切换为国内镜像源</p>
+<h3 id="配置cnpm">配置cnpm</h3>
+<ul>
+<li>
+<p>切换为国内镜像源</p>
 <ul>
 <li>淘宝npm镜像</li>
 </ul>
 </li>
-<li><p>npm install -g cnpm —registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a></p>
+<li>
+<p>npm install -g cnpm --registry=https://registry.npm.taobao.org</p>
 </li>
-<li>其他命令与npm相似</li>
+<li>
+<p>其他命令与npm相似</p>
+</li>
 </ul>
-<h3 id="补充-1"><a href="#补充-1" class="headerlink" title="补充"></a>补充</h3><ul>
-<li><p>通过npm下载的包都放到node_module文件夹中</p>
+<h3 id="补充-2">补充</h3>
+<ul>
+<li>
+<p>通过npm下载的包都放到node_module文件夹中</p>
 <ul>
 <li>直接通过包名引入即可</li>
 </ul>
 </li>
-<li><p>node搜索包的流程</p>
+<li>
+<p>node搜索包的流程</p>
 <ul>
 <li>通过包名引入时，首先在当前目录的node_module中寻找</li>
 <li>如果没有则去上一级的node_module寻找</li>
@@ -1931,14 +2270,23 @@
 </ul>
 </li>
 </ul>
-<h2 id="Buffer缓冲区"><a href="#Buffer缓冲区" class="headerlink" title="Buffer缓冲区"></a>Buffer缓冲区</h2><h3 id="简介-3"><a href="#简介-3" class="headerlink" title="简介"></a>简介</h3><ul>
-<li><p>概念</p>
+<h2 id="Buffer缓冲区">Buffer缓冲区</h2>
+<h3 id="简介-4">简介</h3>
 <ul>
-<li>buffer结构与数组相似，操作也类似</li>
-<li><p>专门用来存储二进制文件的数组，以16进制显示</p>
+<li>
+<p>概念</p>
 <ul>
-<li>元素范围：00 ~ ff</li>
-<li><p>实际范围：00000000~11111111</p>
+<li>
+<p>buffer结构与数组相似，操作也类似</p>
+</li>
+<li>
+<p>专门用来存储二进制文件的数组，以16进制显示</p>
+<ul>
+<li>
+<p>元素范围：00 ~ ff</p>
+</li>
+<li>
+<p>实际范围：00000000~11111111</p>
 <ul>
 <li>0~255(十进制)</li>
 </ul>
@@ -1947,14 +2295,17 @@
 </li>
 </ul>
 </li>
-<li><p>作用</p>
+<li>
+<p>作用</p>
 <ul>
 <li>接收用户发送的数据，暂存</li>
 </ul>
 </li>
-<li><p>本质</p>
+<li>
+<p>本质</p>
 <ul>
-<li><p>直接操作内存空间</p>
+<li>
+<p>直接操作内存空间</p>
 <ul>
 <li>开辟连续的内存空间</li>
 </ul>
@@ -1962,61 +2313,77 @@
 </ul>
 </li>
 </ul>
-<h3 id="操作-1"><a href="#操作-1" class="headerlink" title="操作"></a>操作</h3><ul>
-<li><p>创建</p>
+<h3 id="操作-2">操作</h3>
 <ul>
-<li><p>Buffer.from</p>
+<li>
+<p>创建</p>
+<ul>
+<li>
+<p>Buffer.from</p>
 <ul>
 <li>保存字符串到buffer中</li>
 <li>var buf = Buffer.from(str)</li>
 </ul>
 </li>
-<li><p>new Buffer（1024）</p>
+<li>
+<p>new Buffer（1024）</p>
 <ul>
 <li>创建一个指定长度的buffer</li>
 <li>尽量不用此构造函数</li>
 </ul>
 </li>
-<li><p>Buffer.alloc（1024）</p>
+<li>
+<p>Buffer.alloc（1024）</p>
 <ul>
 <li>创建指定字节的buffer</li>
 </ul>
 </li>
-<li><p>Buffer.allocUnsafe（10）</p>
+<li>
+<p>Buffer.allocUnsafe（10）</p>
 <ul>
-<li><p>特性</p>
+<li>
+<p>特性</p>
 <ul>
 <li>可能含有敏感数据</li>
 <li>分配空间时，不会清空之前的数据</li>
 </ul>
 </li>
-<li><p>缺点</p>
+<li>
+<p>缺点</p>
 <ul>
 <li>可能泄露数据</li>
 </ul>
 </li>
-<li><p>优点</p>
+<li>
+<p>优点</p>
 <ul>
 <li>性能好</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>…</p>
+<li>
+<p>…</p>
 </li>
 </ul>
 </li>
-<li><p>添加</p>
+<li>
+<p>添加</p>
 <ul>
 <li>buf [0] = 254</li>
 </ul>
 </li>
-<li><p>读取</p>
+<li>
+<p>读取</p>
 <ul>
-<li>buf[0]</li>
-<li><p>只要数字在控制台输出或页面中输出一定是10进制</p>
+<li>
+<p>buf[0]</p>
+</li>
+<li>
+<p>只要数字在控制台输出或页面中输出一定是10进制</p>
 <ul>
-<li><p>若需要转换成其他</p>
+<li>
+<p>若需要转换成其他</p>
 <ul>
 <li>toString（16）</li>
 </ul>
@@ -2025,17 +2392,23 @@
 </li>
 </ul>
 </li>
-<li><p>遍历</p>
+<li>
+<p>遍历</p>
 <ul>
 <li>同数组</li>
 </ul>
 </li>
 </ul>
-<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
-<li><p>length</p>
+<h3 id="属性">属性</h3>
 <ul>
-<li>占用内存的大小（字节数）</li>
-<li><p>区别字符串length</p>
+<li>
+<p>length</p>
+<ul>
+<li>
+<p>占用内存的大小（字节数）</p>
+</li>
+<li>
+<p>区别字符串length</p>
 <ul>
 <li>表示字符串的长度</li>
 </ul>
@@ -2043,63 +2416,84 @@
 </ul>
 </li>
 </ul>
-<h2 id="fs-文件系统"><a href="#fs-文件系统" class="headerlink" title="fs  文件系统"></a>fs  文件系统</h2><h3 id="简介-4"><a href="#简介-4" class="headerlink" title="简介"></a>简介</h3><ul>
+<h2 id="fs-文件系统">fs  文件系统</h2>
+<h3 id="简介-5">简介</h3>
+<ul>
 <li>文件系统简单来说就是通过Node操作系统中的文件</li>
 <li>该模块提供了一些标准文件访问API来打开、读取、写入文件，以及与其交互</li>
 </ul>
-<h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><ul>
+<h3 id="特点-2">特点</h3>
+<ul>
 <li>fs模块所有操作都有同步与异步可选择</li>
 </ul>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
-<li><p>引入</p>
+<h3 id="使用">使用</h3>
+<ul>
+<li>
+<p>引入</p>
 <ul>
 <li>var fs = require(‘fs’)</li>
 </ul>
 </li>
 </ul>
-<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
-<li><p>文件写入</p>
+<h3 id="分类">分类</h3>
 <ul>
-<li><p>同步文件写入</p>
+<li>
+<p>文件写入</p>
 <ul>
-<li><p>同步文件系统会阻塞程序的执行</p>
+<li>
+<p>同步文件写入</p>
+<ul>
+<li>
+<p>同步文件系统会阻塞程序的执行</p>
 <ul>
 <li>除非操作完毕，否则不会向下执行代码</li>
 </ul>
 </li>
-<li><p>步骤</p>
+<li>
+<p>步骤</p>
 <ul>
-<li><p>打开文件</p>
+<li>
+<p>打开文件</p>
 <ul>
-<li><p>fs.openSync()</p>
+<li>
+<p>fs.openSync()</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
-<li>path：要打开文件的路径</li>
-<li><p>flags：打开文件要做的操作的类型（w，r）</p>
+<li>
+<p>path：要打开文件的路径</p>
+</li>
+<li>
+<p>flags：打开文件要做的操作的类型（w，r）</p>
 <ul>
-<li><p>w</p>
+<li>
+<p>w</p>
 <ul>
 <li>覆盖写</li>
 </ul>
 </li>
-<li><p>a</p>
+<li>
+<p>a</p>
 <ul>
 <li>追加写</li>
 </ul>
 </li>
-<li><p>r+</p>
+<li>
+<p>r+</p>
 <ul>
 <li>读写文件，追加，文件不存在则报错</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>[mode]：设置文件的操作权限，windows一般不写</p>
+<li>
+<p>[mode]：设置文件的操作权限，windows一般不写</p>
 </li>
 </ul>
 </li>
-<li><p>返回值</p>
+<li>
+<p>返回值</p>
 <ul>
 <li>该方法会返回一个文件的描述符</li>
 <li>可通过该描述符对文件进行操作</li>
@@ -2109,28 +2503,35 @@
 </li>
 </ul>
 </li>
-<li><p>写入内容</p>
+<li>
+<p>写入内容</p>
 <ul>
-<li><p>fs.writeSync()</p>
+<li>
+<p>fs.writeSync()</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
-<li><p>fd</p>
+<li>
+<p>fd</p>
 <ul>
 <li>文件描述符</li>
 </ul>
 </li>
-<li><p>string</p>
+<li>
+<p>string</p>
 <ul>
 <li>要写入的内容</li>
 </ul>
 </li>
-<li><p>mode</p>
+<li>
+<p>mode</p>
 <ul>
 <li>写入的起始位置</li>
 </ul>
 </li>
-<li><p>encoding</p>
+<li>
+<p>encoding</p>
 <ul>
 <li>写入的编码</li>
 </ul>
@@ -2141,13 +2542,17 @@
 </li>
 </ul>
 </li>
-<li><p>保存并关闭文件</p>
+<li>
+<p>保存并关闭文件</p>
 <ul>
-<li><p>fs.closeSync(3)</p>
+<li>
+<p>fs.closeSync(3)</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
-<li><p>fd</p>
+<li>
+<p>fd</p>
 <ul>
 <li>文件描述符</li>
 </ul>
@@ -2162,29 +2567,44 @@
 </li>
 </ul>
 </li>
-<li><p>异步文件写入</p>
+<li>
+<p>异步文件写入</p>
 <ul>
-<li>异步文件系统不会阻塞程序的执行，而是在操作完成时，通过回调函数将结果返回</li>
-<li><p>步骤</p>
+<li>
+<p>异步文件系统不会阻塞程序的执行，而是在操作完成时，通过回调函数将结果返回</p>
+</li>
+<li>
+<p>步骤</p>
 <ul>
-<li><p>打开文件</p>
+<li>
+<p>打开文件</p>
 <ul>
-<li><p>open</p>
+<li>
+<p>open</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
-<li>path：路径</li>
-<li>flags：操作类型</li>
-<li><p>callback：回调函数</p>
+<li>
+<p>path：路径</p>
+</li>
+<li>
+<p>flags：操作类型</p>
+</li>
+<li>
+<p>callback：回调函数</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
-<li><p>err：错误对象</p>
+<li>
+<p>err：错误对象</p>
 <ul>
 <li>没有错误则为null（错误优先思想）</li>
 </ul>
 </li>
-<li><p>fd：文件描述符</p>
+<li>
+<p>fd：文件描述符</p>
 </li>
 </ul>
 </li>
@@ -2192,30 +2612,43 @@
 </li>
 </ul>
 </li>
-<li><p>返回值</p>
+<li>
+<p>返回值</p>
 <ul>
 <li>异步方法没有返回值</li>
 <li>异步调用的方法，结果都是通过回调函数返回的</li>
 </ul>
 </li>
-<li><p>open时，会将该任务交给后台线程池，继续异步执行open之后的代码，当open操作完成后，通过回调函数返回</p>
+<li>
+<p>open时，会将该任务交给后台线程池，继续异步执行open之后的代码，当open操作完成后，通过回调函数返回</p>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>写入文件</p>
+<li>
+<p>写入文件</p>
 <ul>
-<li><p>write</p>
+<li>
+<p>write</p>
 <ul>
-<li>在回调函数里面操作</li>
-<li><p>参数</p>
+<li>
+<p>在回调函数里面操作</p>
+</li>
+<li>
+<p>参数</p>
 <ul>
-<li>fd</li>
-<li>string：内容</li>
-<li><p>callback：回调</p>
+<li>
+<p>fd</p>
+</li>
+<li>
+<p>string：内容</p>
+</li>
+<li>
+<p>callback：回调</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
 <li>err</li>
 <li>written：被写入的字符串的字节数</li>
@@ -2230,16 +2663,23 @@
 </li>
 </ul>
 </li>
-<li><p>关闭文件</p>
+<li>
+<p>关闭文件</p>
 <ul>
-<li><p>close</p>
+<li>
+<p>close</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
-<li>fd</li>
-<li><p>callback</p>
+<li>
+<p>fd</p>
+</li>
+<li>
+<p>callback</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
 <li>err</li>
 </ul>
@@ -2256,22 +2696,35 @@
 </li>
 </ul>
 </li>
-<li><p>简单文件写入</p>
+<li>
+<p>简单文件写入</p>
 <ul>
-<li><p>步骤</p>
+<li>
+<p>步骤</p>
 <ul>
-<li><p>异步</p>
+<li>
+<p>异步</p>
 <ul>
-<li><p>fs.writeFile()</p>
+<li>
+<p>fs.writeFile()</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
-<li>file：操作文件路径</li>
-<li>data：指定要写入的数据</li>
-<li><p>【options】</p>
+<li>
+<p>file：操作文件路径</p>
+</li>
+<li>
+<p>data：指定要写入的数据</p>
+</li>
+<li>
+<p>【options】</p>
 <ul>
-<li>选项，配置信息，对写入进行一些设置</li>
-<li><p>一般需要一个对象作为参数</p>
+<li>
+<p>选项，配置信息，对写入进行一些设置</p>
+</li>
+<li>
+<p>一般需要一个对象作为参数</p>
 <ul>
 <li>encoding：编码</li>
 <li>mode：0o666</li>
@@ -2280,12 +2733,17 @@
 </li>
 </ul>
 </li>
-<li><p>callback</p>
+<li>
+<p>callback</p>
 <ul>
-<li>写入完成以后执行的操作</li>
-<li><p>参数</p>
+<li>
+<p>写入完成以后执行的操作</p>
+</li>
+<li>
+<p>参数</p>
 <ul>
-<li><p>err</p>
+<li>
+<p>err</p>
 <ul>
 <li>错误对象</li>
 </ul>
@@ -2300,15 +2758,23 @@
 </li>
 </ul>
 </li>
-<li><p>同步</p>
+<li>
+<p>同步</p>
 <ul>
-<li><p>fs.writeFileSync()</p>
+<li>
+<p>fs.writeFileSync()</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
-<li>file：操作文件路径</li>
-<li>data：指定要写入的数据</li>
-<li><p>【options】</p>
+<li>
+<p>file：操作文件路径</p>
+</li>
+<li>
+<p>data：指定要写入的数据</p>
+</li>
+<li>
+<p>【options】</p>
 <ul>
 <li>选项，配置信息，对写入进行一些设置</li>
 </ul>
@@ -2323,18 +2789,22 @@
 </li>
 </ul>
 </li>
-<li><p>流式文件写入</p>
+<li>
+<p>流式文件写入</p>
 <ul>
-<li><p>概念</p>
+<li>
+<p>概念</p>
 <ul>
-<li><p>特点</p>
+<li>
+<p>特点</p>
 <ul>
 <li>非一次性写入文件</li>
 <li>避免占用内存</li>
 <li>适用大型文件</li>
 </ul>
 </li>
-<li><p>对比其他文件写入</p>
+<li>
+<p>对比其他文件写入</p>
 <ul>
 <li>容易内存溢出</li>
 <li>性能差</li>
@@ -2342,29 +2812,37 @@
 </li>
 </ul>
 </li>
-<li><p>步骤</p>
+<li>
+<p>步骤</p>
 <ul>
-<li><p>创建一个可写流（接通水管）</p>
+<li>
+<p>创建一个可写流（接通水管）</p>
 <ul>
-<li><p>fs.createWriteStream()</p>
+<li>
+<p>fs.createWriteStream()</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
 <li>path</li>
 <li>【option】</li>
 </ul>
 </li>
-<li><p>返回值</p>
+<li>
+<p>返回值</p>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>写入内容</p>
+<li>
+<p>写入内容</p>
 <ul>
-<li><p>write（）</p>
+<li>
+<p>write（）</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
 <li>字符串</li>
 </ul>
@@ -2373,29 +2851,37 @@
 </li>
 </ul>
 </li>
-<li><p>关闭流</p>
+<li>
+<p>关闭流</p>
 <ul>
-<li>通过监听流的open和close事件来监听流的打开和关闭</li>
-<li><p>补充</p>
+<li>
+<p>通过监听流的open和close事件来监听流的打开和关闭</p>
+</li>
+<li>
+<p>补充</p>
 <ul>
-<li><p>once（事件字符串，回调函数）</p>
+<li>
+<p>once（事件字符串，回调函数）</p>
 <ul>
 <li>为对象绑定一个一次性的事件，触发后自动失效</li>
 </ul>
 </li>
-<li><p>on（事件字符串，回调函数）</p>
+<li>
+<p>on（事件字符串，回调函数）</p>
 <ul>
 <li>绑定一个事件</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>end（）</p>
+<li>
+<p>end（）</p>
 <ul>
 <li>输送完后断“流”</li>
 </ul>
 </li>
-<li><p>close（）</p>
+<li>
+<p>close（）</p>
 <ul>
 <li>可能没送完就断“流”（旧版本）</li>
 </ul>
@@ -2408,24 +2894,35 @@
 </li>
 </ul>
 </li>
-<li><p>文件读取</p>
+<li>
+<p>文件读取</p>
 <ul>
-<li>同步文件读取</li>
-<li>异步文件读取</li>
-<li><p>简单文件读取</p>
+<li>
+<p>同步文件读取</p>
+</li>
+<li>
+<p>异步文件读取</p>
+</li>
+<li>
+<p>简单文件读取</p>
 <ul>
-<li><p>同步</p>
+<li>
+<p>同步</p>
 <ul>
-<li><p>fs.readFile()</p>
+<li>
+<p>fs.readFile()</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
 <li>path，【options，】callback（err，data）</li>
 </ul>
 </li>
-<li><p>返回值</p>
+<li>
+<p>返回值</p>
 <ul>
-<li><p>返回一个buffer</p>
+<li>
+<p>返回一个buffer</p>
 <ul>
 <li>提高通用性</li>
 <li>比如读取一张图片</li>
@@ -2437,11 +2934,14 @@
 </li>
 </ul>
 </li>
-<li><p>异步</p>
+<li>
+<p>异步</p>
 <ul>
-<li><p>fs.readFileSync()</p>
+<li>
+<p>fs.readFileSync()</p>
 <ul>
-<li><p>参数</p>
+<li>
+<p>参数</p>
 <ul>
 <li>path，【options，】callback</li>
 </ul>
@@ -2452,36 +2952,51 @@
 </li>
 </ul>
 </li>
-<li><p>流式文件读取</p>
+<li>
+<p>流式文件读取</p>
 <ul>
-<li><p>特点</p>
+<li>
+<p>特点</p>
 <ul>
 <li>适用于大文件</li>
 <li>分多次读取文件</li>
 </ul>
 </li>
-<li><p>步骤</p>
+<li>
+<p>步骤</p>
 <ul>
-<li><p>创建一个可读流</p>
+<li>
+<p>创建一个可读流</p>
 <ul>
 <li>var rs = fs.createReadStream(“hello2.txt”)</li>
 </ul>
 </li>
-<li><p>监听流的开启和关闭</p>
+<li>
+<p>监听流的开启和关闭</p>
 </li>
-<li><p>读取</p>
+<li>
+<p>读取</p>
 <ul>
 <li>如果要读取一个可读流中的数据，必须为可读流绑定一个data事件，data事件绑定完毕，会自动开始读取数据</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>pipe（）</p>
+<li>
+<p>pipe（）</p>
 <ul>
-<li>将可读流中的内容直接输出到可写流中</li>
-<li><p>简写（复制文件）</p>
+<li>
+<p>将可读流中的内容直接输出到可写流中</p>
+</li>
+<li>
+<p>简写（复制文件）</p>
 <ul>
-<li>var fs = require(‘fs’)<br>//创建一个可读流<br>var rs = fs.createReadStream(“hello2.txt”)<br>//创建一个可写流<br>var ws = fs.createWriteStream(‘a.txt’)<br>rs.pipe(ws)</li>
+<li>var fs = require(‘fs’)<br>
+//创建一个可读流<br>
+var rs = fs.createReadStream(“hello2.txt”)<br>
+//创建一个可写流<br>
+var ws = fs.createWriteStream(‘a.txt’)<br>
+rs.pipe(ws)</li>
 </ul>
 </li>
 </ul>
@@ -2491,18 +3006,26 @@
 </ul>
 </li>
 </ul>
-<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><ul>
-<li><p>existsSync()</p>
+<h3 id="其他方法">其他方法</h3>
+<ul>
+<li>
+<p>existsSync()</p>
 <ul>
 <li>验证文件路径是否存在</li>
 <li>只有同步（立即获取结果）</li>
 </ul>
 </li>
-<li><p>stat( path,  callback（err，stat）)</p>
+<li>
+<p>stat( path,  callback（err，stat）)</p>
 <ul>
-<li>获取文件状态</li>
-<li>返回一个对象，保存当前对象状态的信息</li>
-<li><p>属性</p>
+<li>
+<p>获取文件状态</p>
+</li>
+<li>
+<p>返回一个对象，保存当前对象状态的信息</p>
+</li>
+<li>
+<p>属性</p>
 <ul>
 <li>size</li>
 <li>…</li>
@@ -2510,17 +3033,23 @@
 </li>
 </ul>
 </li>
-<li><p>unlink（path，callback）/unlinkSync（path）</p>
+<li>
+<p>unlink（path，callback）/unlinkSync（path）</p>
 <ul>
 <li>删除文件</li>
 </ul>
 </li>
-<li><p>readdir（path[,  option], callback(err,  files)）</p>
+<li>
+<p>readdir（path[,  option], callback(err,  files)）</p>
 <ul>
-<li>读取一个目录的 目录结构</li>
-<li><p>回调参数</p>
+<li>
+<p>读取一个目录的 目录结构</p>
+</li>
+<li>
+<p>回调参数</p>
 <ul>
-<li><p>files</p>
+<li>
+<p>files</p>
 <ul>
 <li>是一个字符串数组，每一个元素就是一个文件夹或文件</li>
 </ul>
@@ -2529,54 +3058,72 @@
 </li>
 </ul>
 </li>
-<li><p>truncate(path , len, callback)</p>
+<li>
+<p>truncate(path , len, callback)</p>
 <ul>
 <li>截断文件</li>
 <li>len：截断后的文件大小</li>
 </ul>
 </li>
-<li><p>mkdir（path[，mode]，callback）</p>
+<li>
+<p>mkdir（path[，mode]，callback）</p>
 <ul>
 <li>创建目录</li>
 </ul>
 </li>
-<li><p>rmdir（path）</p>
+<li>
+<p>rmdir（path）</p>
 <ul>
 <li>删除文件夹</li>
 </ul>
 </li>
-<li><p>rename（oldpath，newpath，callback）</p>
+<li>
+<p>rename（oldpath，newpath，callback）</p>
 <ul>
 <li>重命名文件</li>
 <li>改变路径</li>
 </ul>
 </li>
-<li><p>watchFile（filename[,optin], listener）</p>
+<li>
+<p>watchFile（filename[,optin], listener）</p>
 <ul>
-<li>监视文件的修改，耗性能</li>
-<li><p>参数</p>
+<li>
+<p>监视文件的修改，耗性能</p>
+</li>
+<li>
+<p>参数</p>
 <ul>
-<li>文件名</li>
-<li><p>配置选项</p>
+<li>
+<p>文件名</p>
+</li>
+<li>
+<p>配置选项</p>
 <ul>
-<li><p>interval：1000</p>
+<li>
+<p>interval：1000</p>
 <ul>
 <li>监听频率（1s刷新一次）</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>回调函数</p>
+<li>
+<p>回调函数</p>
 <ul>
-<li>当文件发送变化时执行</li>
-<li><p>参数</p>
+<li>
+<p>当文件发送变化时执行</p>
+</li>
+<li>
+<p>参数</p>
 <ul>
-<li><p>curr</p>
+<li>
+<p>curr</p>
 <ul>
 <li>当前文件状态stat</li>
 </ul>
 </li>
-<li><p>prev</p>
+<li>
+<p>prev</p>
 <ul>
 <li>修改前文件状态stat</li>
 </ul>
@@ -2740,7 +3287,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Node介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0Node-js"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">为什么要学习Node.js</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Node.js是什么</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Node能做什么</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E8%B5%B7%E6%AD%A5"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">起步</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85Node%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">安装Node环境</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A7%A3%E6%9E%90%E6%89%A7%E8%A1%8CJavaScript"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">解析执行JavaScript</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%86%99"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">文件的读写</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#http"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">http</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node%E4%B8%AD%E7%9A%84%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Node中的模块系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">什么是模块化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#CommonJS%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">CommonJS模块规范</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%A0%E8%BD%BDrequire"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">加载require</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%BC%E5%87%BAexports"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">导出exports</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8E%9F%E7%90%86"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">模块原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#require%E7%9A%84%E5%8A%A0%E8%BD%BD%E8%A7%84%E5%88%99"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">require的加载规则</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#require%E7%9A%84%E5%8A%A0%E8%BD%BD%E8%A7%84%E5%88%99%EF%BC%9A"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">require的加载规则：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97%E6%A0%87%E8%AF%86%E7%AC%A6%E4%B8%AD%E7%9A%84-%E5%92%8C%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E8%B7%AF%E5%BE%84%E4%B8%AD%E7%9A%84"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">模块标识符中的&#x2F;和文件操作路径中的&#x2F;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#npm"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">npm</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm%E7%BD%91%E7%AB%99"><span class="toc-nav-number">5.0.1.</span> <span class="toc-nav-text">npm网站</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">5.0.2.</span> <span class="toc-nav-text">npm命令行工具</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.0.3.</span> <span class="toc-nav-text">常用命令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3npm%E8%A2%AB%E5%A2%99%E9%97%AE%E9%A2%98"><span class="toc-nav-number">5.0.4.</span> <span class="toc-nav-text">解决npm被墙问题</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#package-json"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">package.json</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#package-json%E5%92%8Cpackage-lock-json"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">package.json和package-lock.json</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#path%E8%B7%AF%E5%BE%84%E6%93%8D%E4%BD%9C%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">path路径操作模块</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98-dirname-filename"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Node中的其它成员(dirname,filename)</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Express%EF%BC%88%E5%BF%AB%E9%80%9F%E7%9A%84%EF%BC%89"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">Express（快速的）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#hello-world"><span class="toc-nav-number">8.0.0.0.1.</span> <span class="toc-nav-text">hello world:</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%B7%AF%E7%94%B1"><span class="toc-nav-number">8.0.0.0.2.</span> <span class="toc-nav-text">基本路由</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Express%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1API"><span class="toc-nav-number">8.0.0.0.3.</span> <span class="toc-nav-text">Express静态服务API</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%9C%A8Express%E4%B8%AD%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8art-templete%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="toc-nav-number">8.0.0.0.4.</span> <span class="toc-nav-text">在Express中配置使用art-templete模板引擎</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%9C%A8Express%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">8.0.0.0.5.</span> <span class="toc-nav-text">在Express中获取表单请求数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96get%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="toc-nav-number">8.0.0.0.5.1.</span> <span class="toc-nav-text">获取get请求数据：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96post%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="toc-nav-number">8.0.0.0.5.2.</span> <span class="toc-nav-text">获取post请求数据：</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9C%A8Express%E4%B8%AD%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8express-session%E6%8F%92%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">8.0.1.</span> <span class="toc-nav-text">在Express中配置使用express-session插件操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A9%E7%94%A8Express%E5%AE%9E%E7%8E%B0ADUS%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">8.0.2.</span> <span class="toc-nav-text">利用Express实现ADUS项目</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E6%80%9D%E6%83%B3"><span class="toc-nav-number">8.0.2.1.</span> <span class="toc-nav-text">模块化思想</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%B5%B7%E6%AD%A5-1"><span class="toc-nav-number">8.0.2.2.</span> <span class="toc-nav-text">起步</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">8.0.2.3.</span> <span class="toc-nav-text">路由设计</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%8F%90%E5%8F%96%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">8.0.2.4.</span> <span class="toc-nav-text">提取路由模块</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%AE%BE%E8%AE%A1%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E7%9A%84API%E6%96%87%E4%BB%B6%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">8.0.2.5.</span> <span class="toc-nav-text">设计操作数据的API文件模块</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">8.0.2.6.</span> <span class="toc-nav-text">步骤</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AD%90%E6%A8%A1%E6%9D%BF%E5%92%8C%E6%A8%A1%E6%9D%BF%E7%9A%84%E7%BB%A7%E6%89%BF%EF%BC%88%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%EF%BC%89%E3%80%90include%EF%BC%8Cextend%EF%BC%8Cblock%E3%80%91"><span class="toc-nav-number">8.0.2.7.</span> <span class="toc-nav-text">子模板和模板的继承（模板引擎高级语法）【include，extend，block】</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#MongoDB"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">MongoDB</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E5%92%8C%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.1.</span> <span class="toc-nav-text">关系型和非关系型数据库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E8%A1%A8%E5%B0%B1%E6%98%AF%E5%85%B3%E7%B3%BB%EF%BC%8C%E6%88%96%E8%80%85%E8%AF%B4%E8%A1%A8%E4%B8%8E%E8%A1%A8%E4%B9%8B%E9%97%B4%E5%AD%98%E5%9C%A8%E5%85%B3%E7%B3%BB%EF%BC%89%E3%80%82"><span class="toc-nav-number">9.1.1.</span> <span class="toc-nav-text">关系型数据库（表就是关系，或者说表与表之间存在关系）。</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.1.2.</span> <span class="toc-nav-text">非关系型数据库</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">9.2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%85%B3%E9%97%AD%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.3.</span> <span class="toc-nav-text">启动和关闭数据库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.4.</span> <span class="toc-nav-text">连接数据库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">9.5.</span> <span class="toc-nav-text">基本命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8Node%E4%B8%AD%E5%A6%82%E4%BD%95%E6%93%8D%E4%BD%9CMongoDB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.6.</span> <span class="toc-nav-text">在Node中如何操作MongoDB数据库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%98%E6%96%B9%E7%9A%84MongoDB%E5%8C%85%E6%9D%A5%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">9.6.1.</span> <span class="toc-nav-text">使用官方的MongoDB包来操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85mongoose%E6%9D%A5%E6%93%8D%E4%BD%9CMongoDB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.6.2.</span> <span class="toc-nav-text">使用第三方包mongoose来操作MongoDB数据库</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97%EF%BC%88%E6%AD%A5%E9%AA%A4%EF%BC%89"><span class="toc-nav-number">9.7.</span> <span class="toc-nav-text">学习指南（步骤）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E8%AE%A1Scheme-%E5%8F%91%E5%B8%83Model-%E5%88%9B%E5%BB%BA%E8%A1%A8"><span class="toc-nav-number">9.7.1.</span> <span class="toc-nav-text">设计Scheme 发布Model (创建表)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE%EF%BC%88%E5%A2%9E%EF%BC%89"><span class="toc-nav-number">9.7.2.</span> <span class="toc-nav-text">添加数据（增）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%EF%BC%88%E5%88%A0%EF%BC%89"><span class="toc-nav-number">9.7.3.</span> <span class="toc-nav-text">删除（删）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9B%B4%E6%96%B0%EF%BC%88%E6%94%B9%EF%BC%89"><span class="toc-nav-number">9.7.4.</span> <span class="toc-nav-text">更新（改）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E8%AF%A2%EF%BC%88%E6%9F%A5%EF%BC%89"><span class="toc-nav-number">9.7.5.</span> <span class="toc-nav-text">查询（查）</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8Node%E6%93%8D%E4%BD%9CMySQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">使用Node操作MySQL数据库</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">异步编程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">回调函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Promise"><span class="toc-nav-number">11.2.</span> <span class="toc-nav-text">Promise</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Generator"><span class="toc-nav-number">11.3.</span> <span class="toc-nav-text">Generator</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">其他</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9%E5%AE%8C%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E9%87%8D%E5%90%AF"><span class="toc-nav-number">12.1.</span> <span class="toc-nav-text">修改完代码自动重启</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B0%81%E8%A3%85%E5%BC%82%E6%AD%A5API"><span class="toc-nav-number">12.2.</span> <span class="toc-nav-text">封装异步API</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95%EF%BC%8C%E9%83%BD%E6%98%AF%E5%AF%B9%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E4%B8%80%E7%A7%8D%E5%8F%82%E6%95%B0"><span class="toc-nav-number">12.3.</span> <span class="toc-nav-text">数组的遍历方法，都是对函数作为一种参数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#EcmaScript-6"><span class="toc-nav-number">12.4.</span> <span class="toc-nav-text">EcmaScript 6</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">项目案例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-nav-number">13.1.</span> <span class="toc-nav-text">目录结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%A1%B5"><span class="toc-nav-number">13.2.</span> <span class="toc-nav-text">模板页</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1%E8%AE%BE%E8%AE%A1-1"><span class="toc-nav-number">13.3.</span> <span class="toc-nav-text">路由设计</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">13.4.</span> <span class="toc-nav-text">模型设计</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">13.5.</span> <span class="toc-nav-text">功能实现</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4-1"><span class="toc-nav-number">13.6.</span> <span class="toc-nav-text">步骤</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Express%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.</span> <span class="toc-nav-text">Express中间件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">14.1.</span> <span class="toc-nav-text">中间件的概念</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-nav-number">14.2.</span> <span class="toc-nav-text">中间件的分类:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%BA%A7%E5%88%AB%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.2.1.</span> <span class="toc-nav-text">1.1 应用程序级别的中间件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1%E7%BA%A7%E5%88%AB%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.2.2.</span> <span class="toc-nav-text">路由级别的中间件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB"><span class="toc-nav-number">14.2.3.</span> <span class="toc-nav-text">总</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.3.</span> <span class="toc-nav-text">错误处理中间件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%85%E7%BD%AE%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.4.</span> <span class="toc-nav-text">内置中间件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.5.</span> <span class="toc-nav-text">第三方中间件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE2-0"><span class="toc-nav-number">15.</span> <span class="toc-nav-text">项目2.0</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84-1"><span class="toc-nav-number">15.1.</span> <span class="toc-nav-text">目录结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%A1%B5-1"><span class="toc-nav-number">15.2.</span> <span class="toc-nav-text">模板页</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1%E8%AE%BE%E8%AE%A1-2"><span class="toc-nav-number">15.3.</span> <span class="toc-nav-text">路由设计</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1-1"><span class="toc-nav-number">15.4.</span> <span class="toc-nav-text">模型设计</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%98%B6%E6%AE%B5%E4%B8%80"><span class="toc-nav-number">15.4.0.1.</span> <span class="toc-nav-text">阶段一</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-1"><span class="toc-nav-number">15.5.</span> <span class="toc-nav-text">功能实现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#NodeJS2-0"><span class="toc-nav-number">16.</span> <span class="toc-nav-text">NodeJS2.0</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-nav-number">16.1.</span> <span class="toc-nav-text">补充</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AA%97%E5%8F%A3"><span class="toc-nav-number">16.1.1.</span> <span class="toc-nav-text">命令行窗口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="toc-nav-number">16.1.2.</span> <span class="toc-nav-text">进程与线程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B3%E4%BA%8E%E6%80%A7%E8%83%BD"><span class="toc-nav-number">16.1.3.</span> <span class="toc-nav-text">关于性能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">16.2.</span> <span class="toc-nav-text">简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">16.2.1.</span> <span class="toc-nav-text">定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-nav-number">16.2.2.</span> <span class="toc-nav-text">特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="toc-nav-number">16.2.3.</span> <span class="toc-nav-text">作用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B3%E4%BA%8Enode%E7%89%88%E6%9C%AC"><span class="toc-nav-number">16.2.4.</span> <span class="toc-nav-text">关于node版本</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">16.3.</span> <span class="toc-nav-text">操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8node%E6%89%A7%E8%A1%8Cjs%E6%96%87%E4%BB%B6"><span class="toc-nav-number">16.3.1.</span> <span class="toc-nav-text">使用node执行js文件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-nav-number">16.4.</span> <span class="toc-nav-text">模块化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-1"><span class="toc-nav-number">16.4.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CommonJS%E8%A7%84%E8%8C%83"><span class="toc-nav-number">16.4.2.</span> <span class="toc-nav-text">CommonJS规范</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8C%85package"><span class="toc-nav-number">16.5.</span> <span class="toc-nav-text">包package</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-2"><span class="toc-nav-number">16.5.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CommonJS%E7%9A%84%E5%8C%85%E8%A7%84%E8%8C%83%E7%BB%84%E6%88%90"><span class="toc-nav-number">16.5.2.</span> <span class="toc-nav-text">CommonJS的包规范组成</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-1"><span class="toc-nav-number">16.5.3.</span> <span class="toc-nav-text">npm</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AEcnpm"><span class="toc-nav-number">16.5.4.</span> <span class="toc-nav-text">配置cnpm</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85-1"><span class="toc-nav-number">16.5.5.</span> <span class="toc-nav-text">补充</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Buffer%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-nav-number">16.6.</span> <span class="toc-nav-text">Buffer缓冲区</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-3"><span class="toc-nav-number">16.6.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%93%8D%E4%BD%9C-1"><span class="toc-nav-number">16.6.2.</span> <span class="toc-nav-text">操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">16.6.3.</span> <span class="toc-nav-text">属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#fs-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-nav-number">16.7.</span> <span class="toc-nav-text">fs  文件系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-4"><span class="toc-nav-number">16.7.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%B9%E7%82%B9-1"><span class="toc-nav-number">16.7.2.</span> <span class="toc-nav-text">特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">16.7.3.</span> <span class="toc-nav-text">使用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-nav-number">16.7.4.</span> <span class="toc-nav-text">分类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95"><span class="toc-nav-number">16.7.5.</span> <span class="toc-nav-text">其他方法</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Node介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0Node-js"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">为什么要学习Node.js</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Node.js是什么</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Node能做什么</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">起步</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85Node%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">安装Node环境</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A7%A3%E6%9E%90%E6%89%A7%E8%A1%8CJavaScript"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">解析执行JavaScript</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%86%99"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">文件的读写</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#http"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">http</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Node中的模块系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">什么是模块化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#CommonJS%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">CommonJS模块规范</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%A0%E8%BD%BDrequire"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">加载require</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%BC%E5%87%BAexports"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">导出exports</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8E%9F%E7%90%86"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">模块原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">require的加载规则</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#require%E7%9A%84%E5%8A%A0%E8%BD%BD%E8%A7%84%E5%88%99%EF%BC%9A"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">require的加载规则：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97%E6%A0%87%E8%AF%86%E7%AC%A6%E4%B8%AD%E7%9A%84-%E5%92%8C%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E8%B7%AF%E5%BE%84%E4%B8%AD%E7%9A%84"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">模块标识符中的&#x2F;和文件操作路径中的&#x2F;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">npm</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm%E7%BD%91%E7%AB%99"><span class="toc-nav-number">5.0.1.</span> <span class="toc-nav-text">npm网站</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">5.0.2.</span> <span class="toc-nav-text">npm命令行工具</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.0.3.</span> <span class="toc-nav-text">常用命令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3npm%E8%A2%AB%E5%A2%99%E9%97%AE%E9%A2%98"><span class="toc-nav-number">5.0.4.</span> <span class="toc-nav-text">解决npm被墙问题</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">package.json</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#package-json%E5%92%8Cpackage-lock-json"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">package.json和package-lock.json</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#path%E8%B7%AF%E5%BE%84%E6%93%8D%E4%BD%9C%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">path路径操作模块</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Node中的其它成员(__dirname,__filename)</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">Express（快速的）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#hello-world-image-20200310124850557"><span class="toc-nav-number">8.0.0.0.1.</span> <span class="toc-nav-text">hello world:</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%B7%AF%E7%94%B1"><span class="toc-nav-number">8.0.0.0.2.</span> <span class="toc-nav-text">基本路由</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Express%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1API"><span class="toc-nav-number">8.0.0.0.3.</span> <span class="toc-nav-text">Express静态服务API</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%9C%A8Express%E4%B8%AD%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8art-templete%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="toc-nav-number">8.0.0.0.4.</span> <span class="toc-nav-text">在Express中配置使用art-templete模板引擎</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%9C%A8Express%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">8.0.0.0.5.</span> <span class="toc-nav-text">在Express中获取表单请求数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96get%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="toc-nav-number">8.0.0.0.5.1.</span> <span class="toc-nav-text">获取get请求数据：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96post%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="toc-nav-number">8.0.0.0.5.2.</span> <span class="toc-nav-text">获取post请求数据：</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9C%A8Express%E4%B8%AD%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8express-session%E6%8F%92%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">8.0.1.</span> <span class="toc-nav-text">在Express中配置使用express-session插件操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A9%E7%94%A8Express%E5%AE%9E%E7%8E%B0ADUS%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">8.0.2.</span> <span class="toc-nav-text">利用Express实现ADUS项目</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E6%80%9D%E6%83%B3"><span class="toc-nav-number">8.0.2.1.</span> <span class="toc-nav-text">模块化思想</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%B5%B7%E6%AD%A5"><span class="toc-nav-number">8.0.2.2.</span> <span class="toc-nav-text">起步</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">8.0.2.3.</span> <span class="toc-nav-text">路由设计</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%8F%90%E5%8F%96%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">8.0.2.4.</span> <span class="toc-nav-text">提取路由模块</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%AE%BE%E8%AE%A1%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E7%9A%84API%E6%96%87%E4%BB%B6%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">8.0.2.5.</span> <span class="toc-nav-text">设计操作数据的API文件模块</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">8.0.2.6.</span> <span class="toc-nav-text">步骤</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AD%90%E6%A8%A1%E6%9D%BF%E5%92%8C%E6%A8%A1%E6%9D%BF%E7%9A%84%E7%BB%A7%E6%89%BF%EF%BC%88%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%EF%BC%89%E3%80%90include%EF%BC%8Cextend%EF%BC%8Cblock%E3%80%91"><span class="toc-nav-number">8.0.2.7.</span> <span class="toc-nav-text">子模板和模板的继承（模板引擎高级语法）【include，extend，block】</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">MongoDB</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E5%92%8C%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.1.</span> <span class="toc-nav-text">关系型和非关系型数据库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E8%A1%A8%E5%B0%B1%E6%98%AF%E5%85%B3%E7%B3%BB%EF%BC%8C%E6%88%96%E8%80%85%E8%AF%B4%E8%A1%A8%E4%B8%8E%E8%A1%A8%E4%B9%8B%E9%97%B4%E5%AD%98%E5%9C%A8%E5%85%B3%E7%B3%BB%EF%BC%89%E3%80%82"><span class="toc-nav-number">9.1.1.</span> <span class="toc-nav-text">关系型数据库（表就是关系，或者说表与表之间存在关系）。</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.1.2.</span> <span class="toc-nav-text">非关系型数据库</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">9.2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%85%B3%E9%97%AD%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.3.</span> <span class="toc-nav-text">启动和关闭数据库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.4.</span> <span class="toc-nav-text">连接数据库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">9.5.</span> <span class="toc-nav-text">基本命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8Node%E4%B8%AD%E5%A6%82%E4%BD%95%E6%93%8D%E4%BD%9CMongoDB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.6.</span> <span class="toc-nav-text">在Node中如何操作MongoDB数据库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%98%E6%96%B9%E7%9A%84MongoDB%E5%8C%85%E6%9D%A5%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">9.6.1.</span> <span class="toc-nav-text">使用官方的MongoDB包来操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85mongoose%E6%9D%A5%E6%93%8D%E4%BD%9CMongoDB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-number">9.6.2.</span> <span class="toc-nav-text">使用第三方包mongoose来操作MongoDB数据库</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97%EF%BC%88%E6%AD%A5%E9%AA%A4%EF%BC%89"><span class="toc-nav-number">9.7.</span> <span class="toc-nav-text">学习指南（步骤）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E8%AE%A1Scheme-%E5%8F%91%E5%B8%83Model-%E5%88%9B%E5%BB%BA%E8%A1%A8"><span class="toc-nav-number">9.7.1.</span> <span class="toc-nav-text">设计Scheme 发布Model (创建表)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE%EF%BC%88%E5%A2%9E%EF%BC%89"><span class="toc-nav-number">9.7.2.</span> <span class="toc-nav-text">添加数据（增）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%EF%BC%88%E5%88%A0%EF%BC%89"><span class="toc-nav-number">9.7.3.</span> <span class="toc-nav-text">删除（删）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9B%B4%E6%96%B0%EF%BC%88%E6%94%B9%EF%BC%89"><span class="toc-nav-number">9.7.4.</span> <span class="toc-nav-text">更新（改）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E8%AF%A2%EF%BC%88%E6%9F%A5%EF%BC%89"><span class="toc-nav-number">9.7.5.</span> <span class="toc-nav-text">查询（查）</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">使用Node操作MySQL数据库</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">异步编程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">回调函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Promise"><span class="toc-nav-number">11.2.</span> <span class="toc-nav-text">Promise</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Generator"><span class="toc-nav-number">11.3.</span> <span class="toc-nav-text">Generator</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">其他</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9%E5%AE%8C%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E9%87%8D%E5%90%AF"><span class="toc-nav-number">12.1.</span> <span class="toc-nav-text">修改完代码自动重启</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B0%81%E8%A3%85%E5%BC%82%E6%AD%A5API"><span class="toc-nav-number">12.2.</span> <span class="toc-nav-text">封装异步API</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95%EF%BC%8C%E9%83%BD%E6%98%AF%E5%AF%B9%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E4%B8%80%E7%A7%8D%E5%8F%82%E6%95%B0"><span class="toc-nav-number">12.3.</span> <span class="toc-nav-text">数组的遍历方法，都是对函数作为一种参数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#EcmaScript-6"><span class="toc-nav-number">12.4.</span> <span class="toc-nav-text">EcmaScript 6</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">项目案例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-nav-number">13.1.</span> <span class="toc-nav-text">目录结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%A1%B5"><span class="toc-nav-number">13.2.</span> <span class="toc-nav-text">模板页</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1%E8%AE%BE%E8%AE%A1-2"><span class="toc-nav-number">13.3.</span> <span class="toc-nav-text">路由设计</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">13.4.</span> <span class="toc-nav-text">模型设计</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">13.5.</span> <span class="toc-nav-text">功能实现</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4-2"><span class="toc-nav-number">13.6.</span> <span class="toc-nav-text">步骤</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">14.</span> <span class="toc-nav-text">Express中间件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">14.1.</span> <span class="toc-nav-text">中间件的概念</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-nav-number">14.2.</span> <span class="toc-nav-text">中间件的分类:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%BA%A7%E5%88%AB%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.2.1.</span> <span class="toc-nav-text">1.1 应用程序级别的中间件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1%E7%BA%A7%E5%88%AB%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.2.2.</span> <span class="toc-nav-text">路由级别的中间件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB"><span class="toc-nav-number">14.2.3.</span> <span class="toc-nav-text">总</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.3.</span> <span class="toc-nav-text">错误处理中间件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%85%E7%BD%AE%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.4.</span> <span class="toc-nav-text">内置中间件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-nav-number">14.5.</span> <span class="toc-nav-text">第三方中间件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">15.</span> <span class="toc-nav-text">项目2.0</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84-2"><span class="toc-nav-number">15.1.</span> <span class="toc-nav-text">目录结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%A1%B5-2"><span class="toc-nav-number">15.2.</span> <span class="toc-nav-text">模板页</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1%E8%AE%BE%E8%AE%A1-3"><span class="toc-nav-number">15.3.</span> <span class="toc-nav-text">路由设计</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1-2"><span class="toc-nav-number">15.4.</span> <span class="toc-nav-text">模型设计</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%98%B6%E6%AE%B5%E4%B8%80"><span class="toc-nav-number">15.4.0.1.</span> <span class="toc-nav-text">阶段一</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-2"><span class="toc-nav-number">15.5.</span> <span class="toc-nav-text">功能实现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">16.</span> <span class="toc-nav-text">NodeJS2.0</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-nav-number">16.1.</span> <span class="toc-nav-text">补充</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AA%97%E5%8F%A3"><span class="toc-nav-number">16.1.1.</span> <span class="toc-nav-text">命令行窗口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="toc-nav-number">16.1.2.</span> <span class="toc-nav-text">进程与线程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B3%E4%BA%8E%E6%80%A7%E8%83%BD"><span class="toc-nav-number">16.1.3.</span> <span class="toc-nav-text">关于性能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">16.2.</span> <span class="toc-nav-text">简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">16.2.1.</span> <span class="toc-nav-text">定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-nav-number">16.2.2.</span> <span class="toc-nav-text">特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="toc-nav-number">16.2.3.</span> <span class="toc-nav-text">作用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B3%E4%BA%8Enode%E7%89%88%E6%9C%AC"><span class="toc-nav-number">16.2.4.</span> <span class="toc-nav-text">关于node版本</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">16.3.</span> <span class="toc-nav-text">操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8node%E6%89%A7%E8%A1%8Cjs%E6%96%87%E4%BB%B6"><span class="toc-nav-number">16.3.1.</span> <span class="toc-nav-text">使用node执行js文件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-nav-number">16.4.</span> <span class="toc-nav-text">模块化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-2"><span class="toc-nav-number">16.4.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CommonJS%E8%A7%84%E8%8C%83"><span class="toc-nav-number">16.4.2.</span> <span class="toc-nav-text">CommonJS规范</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8C%85package"><span class="toc-nav-number">16.5.</span> <span class="toc-nav-text">包package</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-3"><span class="toc-nav-number">16.5.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CommonJS%E7%9A%84%E5%8C%85%E8%A7%84%E8%8C%83%E7%BB%84%E6%88%90"><span class="toc-nav-number">16.5.2.</span> <span class="toc-nav-text">CommonJS的包规范组成</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm"><span class="toc-nav-number">16.5.3.</span> <span class="toc-nav-text">npm</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AEcnpm"><span class="toc-nav-number">16.5.4.</span> <span class="toc-nav-text">配置cnpm</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85-2"><span class="toc-nav-number">16.5.5.</span> <span class="toc-nav-text">补充</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Buffer%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-nav-number">16.6.</span> <span class="toc-nav-text">Buffer缓冲区</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-4"><span class="toc-nav-number">16.6.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%93%8D%E4%BD%9C-2"><span class="toc-nav-number">16.6.2.</span> <span class="toc-nav-text">操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">16.6.3.</span> <span class="toc-nav-text">属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#fs-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-nav-number">16.7.</span> <span class="toc-nav-text">fs  文件系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-5"><span class="toc-nav-number">16.7.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%B9%E7%82%B9-2"><span class="toc-nav-number">16.7.2.</span> <span class="toc-nav-text">特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">16.7.3.</span> <span class="toc-nav-text">使用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-nav-number">16.7.4.</span> <span class="toc-nav-text">分类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95"><span class="toc-nav-number">16.7.5.</span> <span class="toc-nav-text">其他方法</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -2881,7 +3428,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">401.6k</span>
+          站点总字数：<span class="post-count">402.8k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

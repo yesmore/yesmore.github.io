@@ -463,6 +463,59 @@
   <!-- top end -->
   
 
+  <a href="/cn/09-仿射变换之平移三角形-TranslatedTriangle/">
+    <h1 class="post-title">
+      【WebGL之巅】09-仿射变换之平移三角形
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：10-TranslatedTriangle
+要点：平移变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
+
+
+目的
+将一个三角形向上和向右平移0.5个单位
+知识点
+一、逐顶点操作
+​	为顶点坐标的每个分量加上一个常量就可以实现
+二、矢量的加法
+​	方便的矢量相加运算是GLSL ES提供的特性之一
+
+
+
+矢量
+值
+
+......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-26
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/08-绘制一个矩形-HelloRectangle/">
     <h1 class="post-title">
       【WebGL之巅】08-绘制一个矩形
@@ -477,7 +530,8 @@
 复习：【WebGL之巅】07-绘制三角形
 
 
-实例12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596......
+实例
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859......
     </div>
   </a>
   
@@ -519,7 +573,8 @@
 参考：《WebGL编程指南》p82~84讲解
 
 
-实例1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  ......
+实例
+1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; ......
     </div>
   </a>
   
@@ -560,8 +615,10 @@
 复习：03-绘制一个点_v2_attribute变量
 
 
-绘制步骤获取WebGL上下文 → 初始化着色器 → 设置点的坐标信息 → 设置&lt;canvas&gt;背景色 → 清空&lt;canvas&gt; → 绘制
-知识点一、缓冲区......
+绘制步骤
+获取WebGL上下文 → 初始化着色器 → 设置点的坐标信息 → 设置&lt;canvas&gt;背景色 → 清空&lt;canvas&gt; → 绘制
+知识点
+一、缓......
     </div>
   </a>
   
@@ -601,8 +658,10 @@
 要点：注册js事件、匿名函数、坐标转换、g_points.push()
 
 
-知识点一、为何使用匿名函数？先看示例：
-1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Position)......
+知识点
+一、为何使用匿名函数？
+先看示例：
+1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Positio......
     </div>
   </a>
   
@@ -643,11 +702,12 @@
 
 
 知识点
+
 为何使用匿名函数？
 
 先看示例：
 1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Position);&#125;;
-当你要画一个点时，需要传入三个变量......
+当你要画一个点时，需要传入三个变......
     </div>
   </a>
   
@@ -688,8 +748,11 @@
 
 
 知识点
-位置信息的传输方式1：attribute变量，传输与顶点相关的数据
-方式2：uniform......
+
+
+位置信息的传输
+方式1：attribute变量，传输与顶点相关的数据
+方式2：unif......
     </div>
   </a>
   
@@ -730,6 +793,7 @@
 
 
 步骤
+
 获取&lt;canvas&gt;元素
 获取WebGL上下文
 初始化着色器
@@ -738,7 +802,10 @@
 绘图
 
 知识点
-着色器顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是指二维或......
+
+
+着色器
+顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是......
     </div>
   </a>
   
@@ -778,17 +845,22 @@
 
 
 步骤
+
 获取&lt;canvas&gt;元素
 获取webgl绘图上下文
 设置背景色
 清空&lt;canvas&gt;
 
 知识点
+
+
 gl.cleanColor()的参数
+
 
 一旦指定了背景色，背景色就会驻存在WebGL系统中，在下次调用clearColor前不会改变
 
-若想显示webgl调试错误，在调用getWebGLContext......
+
+若想显示webgl调试错误，在调用getWebGLCo......
     </div>
   </a>
   
@@ -827,44 +899,6 @@ gl.cleanColor()的参数
 需求：解析出所有城市名称
 
 1234567891011121314151617181920212223#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsfrom lxml import etree# 项目需求：解析出所有城市名称https://www.aqistudy.cn/historydata/if......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/xpath解析爬取美女图片/">
-    <h1 class="post-title">
-      xpath解析爬取美女图片【★★】
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      复习：XPath语法
-需求：解析下载图片数据
-
-123456789101112131415161718192021222324252627282930313233343536373839#!/usr/bin/env python # -*- coding:utf-8 -*-# 需求：解析下载图片数据 http://pic.netbian.com/4kmeinv/import requests......
     </div>
   </a>
   
@@ -1046,6 +1080,18 @@ gl.cleanColor()的参数
     
     
     
+    <a href="/tags/#Vue" title="Vue" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Vue</a>
+    
+    
+    
+    <a href="/tags/#MySQL" title="MySQL" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> MySQL</a>
+    
+    
+    
+    <a href="/tags/#egg" title="egg" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> egg</a>
+    
+    
+    
     <a href="/tags/#Electron" title="Electron" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Electron</a>
     
     
@@ -1149,6 +1195,10 @@ gl.cleanColor()的参数
 <div class="widget">
   <ul style="padding-left: 0;">
     
+    <a href="../../vue-egg-jwt-template/">
+      <li style="list-style: none;">Vue-egg-jwt-template</li>
+    </a>
+    
     <a href="../../HTML-mobile/">
       <li style="list-style: none;">前端之移动端适配详解</li>
     </a>
@@ -1165,10 +1215,6 @@ gl.cleanColor()的参数
       <li style="list-style: none;">【OS】一、相比32位，64位的优势是什么？</li>
     </a>
     
-    <a href="../../FrontEndAdvanced-Micro-frontend/">
-      <li style="list-style: none;">【前端进阶】微前端架构简介</li>
-    </a>
-    
   </ul>
 </div>
 
@@ -1178,9 +1224,9 @@ gl.cleanColor()的参数
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（111） </a></h5>
+<h5><a href="/archives/">归档（112） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">32</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1241,6 +1287,10 @@ gl.cleanColor()的参数
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
+    <a href="/categories/#Vue">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
+    </a>
+    
     <a href="/categories/#Electron">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
@@ -1255,6 +1305,10 @@ gl.cleanColor()的参数
     
     <a href="/categories/#Hexo">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
+    </a>
+    
+    <a href="/categories/#egg">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> egg</li>
     </a>
     
     <a href="/categories/#NodeJs">
@@ -1375,7 +1429,7 @@ gl.cleanColor()的参数
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">401.6k</span>
+          站点总字数：<span class="post-count">402.8k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
