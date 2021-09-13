@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/cn/Algorithm-intersectionOfTwoLinkedLists/</loc>
+    
+    <lastmod>2021-09-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/cn/vue-egg-jwt-template/</loc>
     
     <lastmod>2021-09-12</lastmod>
@@ -998,7 +1005,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/egg/</loc>
+    <loc>https://yesmore.cc/tags/Eggjs/</loc>
     <lastmod>2021-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1147,14 +1154,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Web%E5%AE%89%E5%85%A8/%E7%9F%A5%E8%AF%86%E6%89%AB%E7%9B%B2/</loc>
+    <loc>https://yesmore.cc/categories/Vue/</loc>
     <lastmod>2021-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Vue/</loc>
+    <loc>https://yesmore.cc/categories/Web%E5%AE%89%E5%85%A8/%E7%9F%A5%E8%AF%86%E6%89%AB%E7%9B%B2/</loc>
     <lastmod>2021-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1189,7 +1196,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Vue/egg/</loc>
+    <loc>https://yesmore.cc/categories/Vue/Eggjs/</loc>
     <lastmod>2021-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
