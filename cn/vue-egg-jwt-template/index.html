@@ -244,6 +244,17 @@
           
           
           <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archives/">
               
               归档
@@ -255,21 +266,6 @@
           
           
           <li>
-            <a href="/categories/">
-              
-              分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          <li>
             <a href="/tags/">
               
               标签
@@ -277,6 +273,10 @@
               
             </a>
           </li>
+          
+          
+          
+          
           
           
           
@@ -417,14 +417,14 @@
             <div class="blank_box"></div>
             <span class="meta">
               阅读时间 <span class="post-count">
-                5
+                8
               </span> 分钟
             </span>
             <div class="blank_box"></div>
             <span class="meta">
               文章共 
               <span class="post-count">
-                962
+                1.4k
               </span> 
               字
             </span>
@@ -488,10 +488,14 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <div align=center>
-    <h1>Vue-egg-jwt-template</h1>
+    <h1>VuEgg-jwt-template</h1>
+    <img src="https://img.shields.io/github/stars/yesmore/vue-egg-jwt-template.svg" alt="star"/>
+    <img src="https://img.shields.io/github/package-json/v/yesmore/vue-egg-jwt-template" alt="star"/>
+    <img src="https://img.shields.io/github/issues/yesmore/vue-egg-jwt-template" alt="star"/><br>
+     <img src="https://img.shields.io/github/license/yesmore/vue-egg-jwt-template" alt="star"/>
 </div>
 <hr>
-<p>阅读文档：<a target="_blank" rel="noopener" href="https://github.com/yesmore/vue-egg-jwt-template/blob/main/README-zh.md">中文版</a> | <a target="_blank" rel="noopener" href="https://github.com/yesmore/vue-egg-jwt-template">English</a></p>
+<p><strong>阅读文档</strong>：<a target="_blank" rel="noopener" href="https://github.com/yesmore/vue-egg-jwt-template/blob/main/README-zh.md">中文版</a> | <a target="_blank" rel="noopener" href="https://github.com/yesmore/vue-egg-jwt-template">English</a></p>
 <blockquote>
 <p>简介：开箱即用的 User authentication template——用户权鉴模板。</p>
 <p>适用人群：</p>
@@ -502,10 +506,20 @@
 </ul>
 </blockquote>
 <h2 id="快速开始">快速开始</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Clone git repo</span></span><br><span class="line">$ git <span class="built_in">clone</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install project</span></span><br><span class="line">$ <span class="built_in">cd</span> vue-egg-jwt-template</span><br><span class="line">$ npm i</span><br><span class="line"><span class="comment"># Start Front-end</span></span><br><span class="line">$ npm run dev</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> egg-server</span><br><span class="line">$ npm i</span><br><span class="line"><span class="comment"># Start Front-end</span></span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<p>开始之前，请确保你有以下环境：</p>
+<ul>
+<li>Nodejs</li>
+<li>Npm（Nodejs自带）</li>
+<li>MySQL 5.7.x</li>
+</ul>
+<h3 id="克隆仓库">克隆仓库</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git bash</span></span><br><span class="line">$ git <span class="built_in">clone</span> git@github.com:yesmore/vue-egg-jwt-template.git</span><br><span class="line"><span class="comment"># or http</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/yesmore/vue-egg-jwt-template.git</span><br><span class="line"><span class="comment"># or release</span></span><br><span class="line">https://github.com/yesmore/vue-egg-jwt-template/releases/tag/v1.0.1-release</span><br></pre></td></tr></table></figure>
+<h3 id="安装项目">安装项目</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> vue-egg-jwt-template</span><br><span class="line">$ npm i</span><br><span class="line"><span class="comment"># Start Front-end</span></span><br><span class="line">$ npm run dev</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> egg-server</span><br><span class="line">$ npm i</span><br><span class="line"><span class="comment"># Start Front-end</span></span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
 <p>登录页：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="http://localhost:8081/#/login">http://localhost:8081/#/login</a></li>
+<li>…</li>
 </ul>
 <p>Api参考：</p>
 <ul>
@@ -514,7 +528,7 @@
 <li>…</li>
 </ul>
 <h2 id="模块">模块</h2>
-<h4 id="版本">版本</h4>
+<h3 id="版本">版本</h3>
 <table>
 <thead>
 <tr>
@@ -541,9 +555,11 @@
 </tr>
 </tbody>
 </table>
-<h4 id="交互模型">交互模型</h4>
+<h3 id="文件目录">文件目录</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">|- egg-server/</span><br><span class="line">	|- app/</span><br><span class="line">		|- controller/</span><br><span class="line">		|- middleware/</span><br><span class="line">		|- model/</span><br><span class="line">		|- service/</span><br><span class="line">		|- view/</span><br><span class="line">		|- router.js</span><br><span class="line">	|- config/</span><br><span class="line">		|- config.default.js</span><br><span class="line">		|- plugin.js</span><br><span class="line">	|- test/</span><br><span class="line">	|- app.js</span><br><span class="line">	|- package.json</span><br><span class="line">	|- ...</span><br><span class="line"></span><br><span class="line">|- vue-egg-jwt-template/</span><br><span class="line">	|- build/</span><br><span class="line">	|- config/</span><br><span class="line">		|- dev.env.js</span><br><span class="line">		|- index.js</span><br><span class="line">		|- prod.env.js</span><br><span class="line">	|- src/</span><br><span class="line">		|- assets/</span><br><span class="line">		|- router/</span><br><span class="line">		|- utils/</span><br><span class="line">		|- views/</span><br><span class="line">		|- App.vue</span><br><span class="line">		|- main.js</span><br><span class="line">	|- <span class="keyword">static</span>/</span><br><span class="line">	|- package.json</span><br><span class="line">	|- ...</span><br></pre></td></tr></table></figure>
+<h3 id="交互模型">交互模型</h3>
 <p><strong>前端</strong> — (<strong>http请求</strong>) — <strong>Contorller</strong> — (<strong>service</strong>) — <strong>MySQL</strong></p>
-<h4 id="主要逻辑">主要逻辑</h4>
+<h3 id="主要逻辑">主要逻辑</h3>
 <ul>
 <li>用户登陆校验（<strong>Jwt</strong>） <code>app/controller/jwt.js</code></li>
 </ul>
@@ -572,13 +588,22 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * User model</span></span><br><span class="line"><span class="comment"> *  id: STRING</span></span><br><span class="line"><span class="comment"> *  username: STRING,</span></span><br><span class="line"><span class="comment"> *  password: STRING,</span></span><br><span class="line"><span class="comment"> *  group_id: STRING,</span></span><br><span class="line"><span class="comment"> *  created_at: STRING,</span></span><br><span class="line"><span class="comment"> *  updated_at: STRING</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">app</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; STRING &#125; = app.Sequelize;</span><br><span class="line">  <span class="comment">// Serialize converts the first parameter (model name) of define to plural by default</span></span><br><span class="line">  <span class="comment">// Sequelize默认将define的第一个参数（模型名称）转为复数</span></span><br><span class="line">  <span class="keyword">const</span> User = app.model.define(<span class="string">&#x27;user&#x27;</span>, &#123;</span><br><span class="line">    username: STRING,</span><br><span class="line">    password: STRING</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// user&#x27;s Group: Primary key pointing to group</span></span><br><span class="line">  <span class="comment">// 主键指向组</span></span><br><span class="line">  User.associate = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    app.model.User.belongsTo(app.model.Group, &#123;</span><br><span class="line">      foreignKey: <span class="string">&#x27;group_id&#x27;</span>,</span><br><span class="line">      <span class="keyword">as</span>: <span class="string">&#x27;group&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> User</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><strong>组模型</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Group model</span></span><br><span class="line"><span class="comment"> *  id: STRING</span></span><br><span class="line"><span class="comment"> *  groupname: STRING,</span></span><br><span class="line"><span class="comment"> *  created_at: STRING,</span></span><br><span class="line"><span class="comment"> *  updated_at: STRING</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">app</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; STRING &#125; = app.Sequelize;</span><br><span class="line">  <span class="keyword">const</span> Group = app.model.define(<span class="string">&#x27;group&#x27;</span>, &#123;</span><br><span class="line">    groupname: STRING,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> Group</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="配置">配置</h2>
-<h4 id="ESLint-for-Vue">ESLint for Vue</h4>
+<h2 id="其他配置">其他配置</h2>
+<h3 id="ESLint-for-Vue">ESLint for Vue</h3>
 <p>此模板默认开启<strong>ESlint</strong>，如果你需要关闭，可以执行下面的操作：</p>
 <blockquote>
 <p>config文件夹下的index.js文件中找到useEslint，并改成false</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Use Eslint Loader?</span></span><br><span class="line"><span class="comment">// If true, your code will be linted during bundling and</span></span><br><span class="line"><span class="comment">// linting errors and warnings will be shown in the console.</span></span><br><span class="line">useEslint: <span class="literal">true</span>,</span><br></pre></td></tr></table></figure>
+<h3 id="Axios-for-Vue">Axios for Vue</h3>
+<p>我封装了一个 <code>request</code> 工具模块作为独立的<strong>http</strong>请求模块，位于 <strong>vue/src/utils/request.js</strong> 中；然后在 <strong>vue/main.js</strong> 中全局引入并<strong>注册</strong>到Vue原型上；并且在 <strong>vue/config/dev.env.js</strong> 文件中设置 <strong>baseURL 的开发全局变量 API_ROOT</strong> 。这样，在所有页面就可以使用 <code>request</code> 模块发送<code>http</code>请求。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// request.js</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> request = axios.create(&#123;</span><br><span class="line">  baseURL: process.env.API_ROOT <span class="comment">// config/</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Set the interceptor to carry the token every request</span></span><br><span class="line">request.interceptors.request.use(<span class="function">(<span class="params">req</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> token = <span class="built_in">localStorage</span>.getItem(<span class="string">&#x27;token&#x27;</span>)</span><br><span class="line">  <span class="keyword">if</span> (token) &#123;</span><br><span class="line">    req.headers.token = token</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> req</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> request</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> request <span class="keyword">from</span> <span class="string">&#x27;./utils/request.js&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.prototype.$http = request</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue/config/dev.env.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = merge(prodEnv, &#123;</span><br><span class="line">  NODE_ENV: <span class="string">&#x27;&quot;development&quot;&#x27;</span>,</span><br><span class="line">  API_ROOT: <span class="string">&#x27;&quot;http://127.0.0.1:7001&quot;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Login.vue</span></span><br><span class="line"><span class="built_in">this</span>.$http.post(<span class="string">&#x27;/jwtlogin&#x27;</span>, &#123; postData &#125;)</span><br></pre></td></tr></table></figure>
+<p>如果你不需要全局注册 request 模块，可以注释掉 <strong>vue/main.js</strong> 中的引入语句，并在你需要的页面引入它即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="comment">// import request from &#x27;./utils/request.js&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Vue.prototype.$http = request</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-disable no-new */</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  router,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Login.vue</span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> request <span class="keyword">from</span> <span class="string">&#x27;../utils/request.js</span></span><br><span class="line"><span class="string">  export default &#123;</span></span><br><span class="line"><span class="string">    data () &#123;</span></span><br><span class="line"><span class="string">      return &#123;</span></span><br><span class="line"><span class="string">        data: &#x27;</span><span class="string">&#x27;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">	methods: &#123;</span></span><br><span class="line"><span class="string">      async fetchDate () &#123;</span></span><br><span class="line"><span class="string">        let res = await request.get(&#x27;</span>/jwtmsg<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">        this.data = res.data</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="License">License</h2>
 <p>MIT</p>
 
@@ -726,7 +751,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Vue-egg-jwt-template</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">快速开始</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%89%88%E6%9C%AC"><span class="toc-nav-number">1.2.0.1.</span> <span class="toc-nav-text">版本</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.2.0.2.</span> <span class="toc-nav-text">交互模型</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%BB%E8%A6%81%E9%80%BB%E8%BE%91"><span class="toc-nav-number">1.2.0.3.</span> <span class="toc-nav-text">主要逻辑</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ESLint-for-Vue"><span class="toc-nav-number">1.3.0.1.</span> <span class="toc-nav-text">ESLint for Vue</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#License"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">License</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">VuEgg-jwt-template</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">快速开始</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">克隆仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">安装项目</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%88%E6%9C%AC"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">版本</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">文件目录</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">交互模型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%BB%E8%A6%81%E9%80%BB%E8%BE%91"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">主要逻辑</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">其他配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ESLint-for-Vue"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">ESLint for Vue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Axios-for-Vue"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">Axios for Vue</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#License"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">License</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -869,7 +894,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">402.8k</span>
+          站点总字数：<span class="post-count">403.3k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
