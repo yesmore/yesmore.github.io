@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archives/">
               
-              分类
+              归档
               
               
             </a>
@@ -254,10 +254,12 @@
           
           
           
+          
+          
           <li>
-            <a href="/archives/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -273,8 +275,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -487,20 +487,15 @@
 
         <p>要点：docker、漏洞练习环境搭建、用于学习 Web 漏洞的常见靶</p>
 <span id="more"></span>
-<h3 id="一、安装与使用-Docker-容器">一、安装与使用 Docker 容器</h3>
-<p>以前我们搭建网站，需要在服务器依次安装 Apache、PHP、MySQL 等应用，比较烦琐，而且不同的源还有不同的应用版本，跟系统环境又可能存在兼容性的问题，这就需要手动添加源地址，甚至是自己编译安装。</p>
+<h3 id="一、安装与使用-Docker-容器"><a href="#一、安装与使用-Docker-容器" class="headerlink" title="一、安装与使用 Docker 容器"></a>一、安装与使用 Docker 容器</h3><p>以前我们搭建网站，需要在服务器依次安装 Apache、PHP、MySQL 等应用，比较烦琐，而且不同的源还有不同的应用版本，跟系统环境又可能存在兼容性的问题，这就需要手动添加源地址，甚至是自己编译安装。</p>
 <p>后来出现了 XAMPP、PHPStudy 等优秀的 PHP 集成环境，可以非常便捷地安装。但是安装好之后，如果要使用某些 PHP 网站代码，我们仍然需要查找下载，再部署上去。PHP 网站代码有可能与 PHP 版本、系统环境存在兼容问题，或者需要额外安装其他依赖库。若需要迁移服务器，那上述安装过程又得重来一遍。</p>
 <p>到底有没有高效的安装方式呢？有，答案就是 Docker。</p>
-<h4 id="1-1-Docker-安装">1.1 Docker 安装</h4>
-<p>本节主要在 Ubuntu 系统下进行演示，在 Ubuntu 下可通过以下命令安装 Docker：</p>
+<h4 id="1-1-Docker-安装"><a href="#1-1-Docker-安装" class="headerlink" title="1.1 Docker 安装"></a>1.1 Docker 安装</h4><p>本节主要在 Ubuntu 系统下进行演示，在 Ubuntu 下可通过以下命令安装 Docker：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install \</span></span><br><span class="line"><span class="bash">    apt-transport-https \</span></span><br><span class="line"><span class="bash">    ca-certificates \</span></span><br><span class="line"><span class="bash">    curl \</span></span><br><span class="line"><span class="bash">    gnupg-agent \</span></span><br><span class="line"><span class="bash">    software-properties-common</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo add-apt-repository \</span></span><br><span class="line"><span class="bash">   <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span></span><br><span class="line"><span class="bash">   $(lsb_release -cs) \</span></span><br><span class="line"><span class="bash">   stable<span class="string">&quot;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install docker-ce docker-ce-cli containerd.io</span></span><br></pre></td></tr></table></figure>
 <p>如果是 Windows 或 macOS 系统，可以直接从<a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop" data-nodeid="17971">官网</a>下载安装包安装，它会自动识别你当前的操作系统，并提供相应平台的下载地址。</p>
-<p>安装完成后，可运行以下命令，若输出“Hello from Docker！”则代表安装成功：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run hello-world</span></span><br><span class="line">Unable to find image &#x27;hello-world:latest&#x27; locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">0e03bdcc26d7: Pull complete </span><br><span class="line">Digest: sha256:4cf9c47f86df71d48364001ede3a4fcd85ae80ce02ebad74156906caff5378bc</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"><span class="meta"> $</span><span class="bash"> docker run -it ubuntu bash</span></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://hub.docker.com/</span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/get-started/</span><br></pre></td></tr></table></figure>
-<h4 id="1-2-Docker-常用命令">1.2 Docker 常用命令</h4>
-<img src="Cip5yF_ayluADYpRAAE2DM3MpC8011.png" alt="Lark20201217-105445.png" data-nodeid="17978">
-<h3 id="二、安装-sqli-labs-靶场">二、安装 sqli-labs 靶场</h3>
-<p>sqli-labs 是一款用于学习 SQL 注入的靶场平台，覆盖了各种类型的 SQL 注入，题目共 75 道，按难度划分为 4 页。sqli-labs 靶场的难度循序渐进，对于提高 SQL 注入实战能力有很好的帮助。sqli-labs 靶场的项目开源地址为<a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs" data-nodeid="17983">https://github.com/Audi-1/sqli-labs</a>。</p>
+<p>安装完成后，可运行以下命令，若输出“Hello from Docker！”则代表安装成功：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run hello-world</span></span><br><span class="line">Unable to find image &#x27;hello-world:latest&#x27; locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">0e03bdcc26d7: Pull complete </span><br><span class="line">Digest: sha256:4cf9c47f86df71d48364001ede3a4fcd85ae80ce02ebad74156906caff5378bc</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"><span class="meta"> $</span><span class="bash"> docker run -it ubuntu bash</span></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://hub.docker.com/</span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/get-started/</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-2-Docker-常用命令"><a href="#1-2-Docker-常用命令" class="headerlink" title="1.2 Docker 常用命令"></a>1.2 Docker 常用命令</h4><p><img src="Cip5yF_ayluADYpRAAE2DM3MpC8011.png" alt="Lark20201217-105445.png" data-nodeid="17978"></p>
+<h3 id="二、安装-sqli-labs-靶场"><a href="#二、安装-sqli-labs-靶场" class="headerlink" title="二、安装 sqli-labs 靶场"></a>二、安装 sqli-labs 靶场</h3><p>sqli-labs 是一款用于学习 SQL 注入的靶场平台，覆盖了各种类型的 SQL 注入，题目共 75 道，按难度划分为 4 页。sqli-labs 靶场的难度循序渐进，对于提高 SQL 注入实战能力有很好的帮助。sqli-labs 靶场的项目开源地址为<a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs" data-nodeid="17983">https://github.com/Audi-1/sqli-labs</a>。</p>
 <p>那如何使用 Docker 快速安装 sqli-labs 呢？首先，搜索 sqli-labs 镜像，挑战 STARS 星标最多的镜像，这里选择“acgpiano/sqli-labs”镜像：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker search sqli-labs</span></span><br><span class="line">NAME                       DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED</span><br><span class="line">acgpiano/sqli-labs         sql injection labs                              12</span><br><span class="line">c0ny1/sqli-labs            sqli-labs 是一个 sql 注入的练习靶机，项目地址为…                   2</span><br><span class="line">sari3l/sqli-labs-safedog   Base: sqli-labs &amp; safedog(version Linux64_2.…   1</span><br><span class="line">promiseit/sqli-labs                                                        1</span><br><span class="line">0bajie0/sqli-labs                                                          1</span><br><span class="line">tinmin/sqli-labs                                                           0</span><br><span class="line">area39/sqli-labs           sql inject                                      0</span><br><span class="line">hl0rey/sqli-labs                                                           0</span><br><span class="line">sari3l/sqli-labs           Base: Debian-Wheey + MySQL 5.5 + PHP 5          0</span><br><span class="line">sari3l/sqli-labs-yunsuo    Base: sqli-labs &amp; yunsuo(version Linux_3.0.6…   0</span><br><span class="line">aqyoung/sqli-labs                                                          0</span><br><span class="line">xuanxuan3000/sqli-labs                                                     0</span><br><span class="line">fengbj/sqli-labs           lamp+sqli-labs please down 2.0                  0</span><br><span class="line">jylsec/sqli-labs                                                           0</span><br><span class="line">baohs/sqli-labs-cenos                                                      0</span><br><span class="line">mendickxiao/sqli-labs      sqli-labs based on ubuntu                       0</span><br><span class="line">r0ulier/sqli-labs          sqlInjection                                    0</span><br></pre></td></tr></table></figure>
 <p>然后拉取镜像：</p>
@@ -509,55 +504,45 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run -dt --name sqli-labs -p 80:80 --rm acgpiano/sqli-labs                   [13:36:58]</span></span><br><span class="line">2c40ccae95775f7dca6064c95e5eed9c58e66c93e92775a04f22f407b665d331</span><br></pre></td></tr></table></figure>
 <p>各参数含义如下所示：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-d：代表后台运行</span><br><span class="line">-t：为容器分配伪终端</span><br><span class="line">--name：命名容器</span><br><span class="line">-p：指定映射端口，此处将 acgpiano/sqli-labs 的 80 端口映射到本地的 80 端口</span><br><span class="line">--rm：退出时自动移除容器</span><br></pre></td></tr></table></figure>
-<p>现在我们直接访问http://localhost，可以看到 sqli-labs 已经成功运行了。</p>
-<img src="Cip5yF_ZuAGATUgkAAGVntvgIOM781.png" alt="sqli-labs 成功运行" data-nodeid="17996">
+<p>现在我们直接访问<a target="_blank" rel="noopener" href="http://localhost，可以看到">http://localhost，可以看到</a> sqli-labs 已经成功运行了。</p>
+<p><img src="Cip5yF_ZuAGATUgkAAGVntvgIOM781.png" alt="sqli-labs 成功运行" data-nodeid="17996"></p>
 <p>最后点击“Setup/reset Database for labs”链接完成数据库的安装：</p>
-<img src="Ciqc1F_ZuAmAJIaRAAERioET74I030.png" alt="完成数据库安装" data-nodeid="18000">
+<p><img src="Ciqc1F_ZuAmAJIaRAAERioET74I030.png" alt="完成数据库安装" data-nodeid="18000"></p>
 <p>到此，sqli-labs 安装结束！</p>
-<h3 id="三、安装-DVWA-靶场">三、安装 DVWA 靶场</h3>
-<p>DVWA（Damn Vulnerable Web Application）是一款比较著名的漏洞靶场，很多 Web 安全的初学者都会拿它来练习，一些高校以及相关书籍里面也会介绍它。DVWA 的项目开源地址为https://github.com/digininja/DVWA。</p>
+<h3 id="三、安装-DVWA-靶场"><a href="#三、安装-DVWA-靶场" class="headerlink" title="三、安装 DVWA 靶场"></a>三、安装 DVWA 靶场</h3><p>DVWA（Damn Vulnerable Web Application）是一款比较著名的漏洞靶场，很多 Web 安全的初学者都会拿它来练习，一些高校以及相关书籍里面也会介绍它。DVWA 的项目开源地址为<a target="_blank" rel="noopener" href="https://github.com/digininja/DVWA。">https://github.com/digininja/DVWA。</a></p>
 <p>DVWA 靶场可以直接通过 Docker 安装：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker pull citizenstig/dvwa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run -d --name dvwa --rm -p80:80 citizenstig/dvwa</span></span><br></pre></td></tr></table></figure>
-<p>安装成功后，打开http://localhost：</p>
-<img src="Ciqc1F_ZuBWAJBW5AAFVUYKVo8w698.png" alt="Drawing 2.png" data-nodeid="18016">
+<p>安装成功后，打开<a href="http://localhost：">http://localhost：</a></p>
+<p><img src="Ciqc1F_ZuBWAJBW5AAFVUYKVo8w698.png" alt="Drawing 2.png" data-nodeid="18016"></p>
 <p>然后点击“Create/Reset Database”创建数据库，使用默认密码 admin/password 登录，即可正常使用。做题时它能直接提供阅读源码的功能，不过题目相对少一些。</p>
-<img src="Ciqc1F_ZuByAHaCUAAHUf-R43-Q924.png" alt="Drawing 3.png" data-nodeid="18020">
+<p><img src="Ciqc1F_ZuByAHaCUAAHUf-R43-Q924.png" alt="Drawing 3.png" data-nodeid="18020"></p>
 <p>上面的 XSS 漏洞默认是安全的，在实际练习时，可以在“DVWA Security“中设置安全等级，即题目的难度等级，共有 4 等，其中 Impossible 代表的是已修复漏洞的情况，可以用来熟悉如何修复漏洞。</p>
-<img src="CgqCHl_ZuCOADWKnAAKUKNFpXFI694.png" alt="DVWA 安全等级设置" data-nodeid="18024">
-<h3 id="四、安装-Pikachu-靶场">四、安装 Pikachu 靶场</h3>
-<p>Pikachu 也是一款 Web 漏洞靶场，涵盖各种 Web 漏洞类型的练习，也是基于 PHP+MySQL 搭建的平台，是由国人开发的。平台采用中文描述和基本的页面设计，相比 sqli-labs 这种单调的界面还是好看很多的。Pikachu 的项目开源地址为https://github.com/zhuifengshaonianhanlu/pikachu。</p>
+<p><img src="CgqCHl_ZuCOADWKnAAKUKNFpXFI694.png" alt="DVWA 安全等级设置" data-nodeid="18024"></p>
+<h3 id="四、安装-Pikachu-靶场"><a href="#四、安装-Pikachu-靶场" class="headerlink" title="四、安装 Pikachu 靶场"></a>四、安装 Pikachu 靶场</h3><p>Pikachu 也是一款 Web 漏洞靶场，涵盖各种 Web 漏洞类型的练习，也是基于 PHP+MySQL 搭建的平台，是由国人开发的。平台采用中文描述和基本的页面设计，相比 sqli-labs 这种单调的界面还是好看很多的。Pikachu 的项目开源地址为<a target="_blank" rel="noopener" href="https://github.com/zhuifengshaonianhanlu/pikachu。">https://github.com/zhuifengshaonianhanlu/pikachu。</a></p>
 <p>安装 Pikachu 也很简单，通过 Docker 即可快速安装。我们先搜索下镜像：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker search pikachu</span></span><br><span class="line">NAME                                  DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED</span><br><span class="line">area39/pikachu                        https://github.com/zhuifengshaonianhanlu/pik…   3</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
 <p>然后取第一个镜像安装&amp;运行：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker pull area39/pikachu</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run -d --name pikachu --rm -p80:80 area39/pikachu</span></span><br></pre></td></tr></table></figure>
-<p>安装成功后，打开http://localhost即可:</p>
-<h3 id="五、CTF-赛题练习">五、CTF 赛题练习</h3>
-<p>CTF（Capture The Flag）夺旗赛，在网络安全领域中指的是网络安全技术人员之间进行技术竞技的一种比赛形式。CTF 起源于 1996 年 DEFCON 全球黑客大会，以代替之前黑客们通过互相发起真实攻击进行技术比拼的方式。发展至今，CTF 已经成为全球范围网络安全圈流行的竞赛形式。</p>
+<p>安装成功后，打开<a target="_blank" rel="noopener" href="http://localhost即可">http://localhost即可</a>:</p>
+<h3 id="五、CTF-赛题练习"><a href="#五、CTF-赛题练习" class="headerlink" title="五、CTF 赛题练习"></a>五、CTF 赛题练习</h3><p>CTF（Capture The Flag）夺旗赛，在网络安全领域中指的是网络安全技术人员之间进行技术竞技的一种比赛形式。CTF 起源于 1996 年 DEFCON 全球黑客大会，以代替之前黑客们通过互相发起真实攻击进行技术比拼的方式。发展至今，CTF 已经成为全球范围网络安全圈流行的竞赛形式。</p>
 <p>一些 CTF 出题方经常会直接搭建现成的漏洞测试环境供参赛者使用，有些赛后会取消，有些会一直保留。所以你也可以直接利用现成的 CTF 赛题环境来练习，连搭建环境这一步都省去了。对于一些未保留在线赛题环境的 CTF 题目，就只能自己搭建了。</p>
 <p>前面的漏洞靶场更新频率不高，CTF 赛题会更与时俱进一些，每年都有新比赛和新赛题，特别是新的漏洞场景和利用技术，这在 CTF 上很容易看到。</p>
 <p>各种国内外的赛事、题目与解答（write-up）都可通过该链接获取到，我在这里顺便也介绍几个现成的 Web 漏洞 CTF 在线练习环境：</p>
 <ol>
-<li>
-<p>XCTF 攻防世界：<a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn">https://adworld.xctf.org.cn</a></p>
+<li><p>XCTF 攻防世界：<a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn">https://adworld.xctf.org.cn</a></p>
 </li>
-<li>
-<p>SQL 注入挑战平台：<a target="_blank" rel="noopener" href="http://redtiger.labs.overthewire.org">http://redtiger.labs.overthewire.org</a></p>
+<li><p>SQL 注入挑战平台：<a target="_blank" rel="noopener" href="http://redtiger.labs.overthewire.org">http://redtiger.labs.overthewire.org</a></p>
 </li>
-<li>
-<p>韩国 Web 安全挑战平台：<a target="_blank" rel="noopener" href="https://webhacking.kr/">https://webhacking.kr/</a></p>
+<li><p>韩国 Web 安全挑战平台：<a target="_blank" rel="noopener" href="https://webhacking.kr/">https://webhacking.kr/</a></p>
 </li>
-<li>
-<p>Websec CTF 练习平台：<a target="_blank" rel="noopener" href="http://www.websec.fr/">http://www.websec.fr/</a></p>
+<li><p>Websec CTF 练习平台：<a target="_blank" rel="noopener" href="http://www.websec.fr/">http://www.websec.fr/</a></p>
 </li>
-<li>
-<p>网络信息安全攻防学习平台：<a target="_blank" rel="noopener" href="http://hackinglab.cn/index.php">http://hackinglab.cn/index.php</a></p>
+<li><p>网络信息安全攻防学习平台：<a target="_blank" rel="noopener" href="http://hackinglab.cn/index.php">http://hackinglab.cn/index.php</a></p>
 </li>
-<li>
-<p>国外的 XSS 挑战平台：<a target="_blank" rel="noopener" href="http://prompt.ml/">http://prompt.ml/</a></p>
+<li><p>国外的 XSS 挑战平台：<a target="_blank" rel="noopener" href="http://prompt.ml/">http://prompt.ml/</a></p>
 </li>
 </ol>
-<h3 id="六、安装-VulHub-真实漏洞靶场">六、安装 VulHub 真实漏洞靶场</h3>
-<p>Vulhub 是一款基于 Docker 和 docker-compose 的漏洞测试靶场，进入对应目录并执行一条语句即可启动一个全新的漏洞环境，让漏洞复现变得更加简单，让安全研究者更加专注于漏洞原理本身。Vulhub 的项目开源地址为https://github.com/vulhub/vulhub。</p>
+<h3 id="六、安装-VulHub-真实漏洞靶场"><a href="#六、安装-VulHub-真实漏洞靶场" class="headerlink" title="六、安装 VulHub 真实漏洞靶场"></a>六、安装 VulHub 真实漏洞靶场</h3><p>Vulhub 是一款基于 Docker 和 docker-compose 的漏洞测试靶场，进入对应目录并执行一条语句即可启动一个全新的漏洞环境，让漏洞复现变得更加简单，让安全研究者更加专注于漏洞原理本身。Vulhub 的项目开源地址为<a target="_blank" rel="noopener" href="https://github.com/vulhub/vulhub。">https://github.com/vulhub/vulhub。</a></p>
 <p>前面的靶场都是精心构造的漏洞场景，与真实的漏洞场景还是有一些差异的。为了提高实战水平，熟悉更多的真实漏洞场景，建议你安装 VulHub 来重现各种历史漏洞进行实战练习。</p>
 <p>对于每个漏洞，VulHub 都有相应的文档描述其漏洞原理以及测试利用方法，你在重现漏洞后，可以进一步研究相关漏洞类型的利用技术，并对漏洞代码进行阅读，以提高代码审计能力。</p>
 <p>我们需要先从 GitHub 上下载 VulHub，然后进行相应目录去创建和运行容器：</p>
@@ -853,7 +838,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">403.3k</span>
+          站点总字数：<span class="post-count">403.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

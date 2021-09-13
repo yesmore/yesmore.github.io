@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archives/">
               
-              分类
+              归档
               
               
             </a>
@@ -254,10 +254,12 @@
           
           
           
+          
+          
           <li>
-            <a href="/archives/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -273,8 +275,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -486,20 +486,15 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>要点：浏览器渲染原理、浏览器进程与线程、浏览器加载网络资源的速度</p>
-<h2 id="一、浏览器渲染页面的步骤">一、浏览器渲染页面的步骤</h2>
-<p>结合代码实例讲解浏览器渲染页面时的流程和步骤。</p>
+<h2 id="一、浏览器渲染页面的步骤"><a href="#一、浏览器渲染页面的步骤" class="headerlink" title="一、浏览器渲染页面的步骤"></a>一、浏览器渲染页面的步骤</h2><p>结合代码实例讲解浏览器渲染页面时的流程和步骤。</p>
 <p>先来看一个例子，假如我们在浏览器中输入了一个网址，得到了下面的 html 文件，渲染引擎是怎样通过解析代码生成页面的呢？</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    lagou</span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="从-HTML-到-DOM">从 HTML 到 DOM</h3>
-<h4 id="1-字节流解码">1. 字节流解码</h4>
-<p>对于上面的代码，我们看到的是它的字符形式。而浏览器通过 HTTP 协议接收到的文档内容是字节数据，下图是抓包工具截获的报文截图，报文内容为左侧高亮显示的区域（为了查看方便，该工具将字节数据以十六进制方式显示）。当浏览器得到字节数据后，通过“<a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/parsing.html#encoding-sniffing-algorithm">编码嗅探算法</a>”来确定字符编码，然后根据字符编码将字节流数据进行解码，生成截图右侧的字符数据，也就是我们编写的代码。</p>
+<h3 id="从-HTML-到-DOM"><a href="#从-HTML-到-DOM" class="headerlink" title="从 HTML 到 DOM"></a>从 HTML 到 DOM</h3><h4 id="1-字节流解码"><a href="#1-字节流解码" class="headerlink" title="1. 字节流解码"></a>1. 字节流解码</h4><p>对于上面的代码，我们看到的是它的字符形式。而浏览器通过 HTTP 协议接收到的文档内容是字节数据，下图是抓包工具截获的报文截图，报文内容为左侧高亮显示的区域（为了查看方便，该工具将字节数据以十六进制方式显示）。当浏览器得到字节数据后，通过“<a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/parsing.html#encoding-sniffing-algorithm">编码嗅探算法</a>”来确定字符编码，然后根据字符编码将字节流数据进行解码，生成截图右侧的字符数据，也就是我们编写的代码。</p>
 <p>这个把字节数据解码成字符数据的过程称之为“<strong>字节流解码</strong>”。</p>
 <p><img src="CgqCHl7OM8-AJ2jzAABvLLJLW2s663.png" alt="image (4).png"></p>
 <p>我们通过浏览器调试工具查看网络请求时，也是经过了上述操作过程，才能直观地看到字符串。</p>
-<h4 id="2-输入流预处理">2. 输入流预处理</h4>
-<p>通过上一步解码得到的字符流数据在进入解析环节之前还需要进行一些预处理操作。比如将换行符转换成统一的格式，最终生成规范化的字符流数据，这个把字符数据进行统一格式化的过程称之为“<strong>输入流预处理</strong>”。</p>
-<h4 id="3-令牌化">3. 令牌化</h4>
-<p>经过前两步的数据解码和预处理，下面就要进入重要的解析步骤了。</p>
+<h4 id="2-输入流预处理"><a href="#2-输入流预处理" class="headerlink" title="2. 输入流预处理"></a>2. 输入流预处理</h4><p>通过上一步解码得到的字符流数据在进入解析环节之前还需要进行一些预处理操作。比如将换行符转换成统一的格式，最终生成规范化的字符流数据，这个把字符数据进行统一格式化的过程称之为“<strong>输入流预处理</strong>”。</p>
+<h4 id="3-令牌化"><a href="#3-令牌化" class="headerlink" title="3. 令牌化"></a>3. 令牌化</h4><p>经过前两步的数据解码和预处理，下面就要进入重要的解析步骤了。</p>
 <p>解析包含两步，第一步是<strong>将字符数据转化成令牌（Token）</strong>，第二步是<strong>解析 HTML 生成 DOM 树</strong>。先来说说令牌化，其过程是使用了一种类似状态机的算法，即每次接收一个或多个输入流中的字符；然后根据当前状态和这些字符来更新下一个状态，也就是说在不同的状态下接收同样的字符数据可能会产生不同的结果，比如当接收到“body”字符串时，在标签打开状态会解析成标签，在标签关闭状态则会解析成文本节点。</p>
 <p>这个算法的解析规则较多，在此就不一一列举了，有兴趣的同学可以通过下面这个简单的例子来理解其原理。</p>
 <p>上述 html 代码的标记过程如下：</p>
@@ -524,12 +519,10 @@
 </ol>
 <p>最终生成类似下面的令牌结构：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">开始标签:html</span><br><span class="line">  开始标签:head</span><br><span class="line">  结束标签:head</span><br><span class="line">  开始标签:body</span><br><span class="line">    字符串:lagou</span><br><span class="line">  结束标签:body</span><br><span class="line">结束标签:html</span><br></pre></td></tr></table></figure>
-<h4 id="补充-1：遇到-script-标签时的处理">补充 1：遇到 script 标签时的处理</h4>
-<p>如果在 HTML 解析过程中遇到 script 标签，则会发生一些变化。</p>
+<h4 id="补充-1：遇到-script-标签时的处理"><a href="#补充-1：遇到-script-标签时的处理" class="headerlink" title="补充 1：遇到 script 标签时的处理"></a>补充 1：遇到 script 标签时的处理</h4><p>如果在 HTML 解析过程中遇到 script 标签，则会发生一些变化。</p>
 <p>如果遇到的是内联代码，也就是在 script 标签中直接写代码，那么解析过程会暂停，执行权限会转给 JavaScript 脚本引擎，待 JavaScript 脚本执行完成之后再交由渲染引擎继续解析。有一种情况例外，那就是脚本内容中调用了改变 DOM 结构的 document.write() 函数，此时渲染引擎会回到第二步，将这些代码加入字符流，重新进行解析。</p>
 <p>如果遇到的是外链脚本，那么渲染引擎会按照我们在第 01 课时中所述的，根据标签属性来执行对应的操作。</p>
-<h4 id="4-构建-DOM-树">4. 构建 DOM 树</h4>
-<p>解析 HTML 的第二步是树构建。</p>
+<h4 id="4-构建-DOM-树"><a href="#4-构建-DOM-树" class="headerlink" title="4. 构建 DOM 树"></a>4. 构建 DOM 树</h4><p>解析 HTML 的第二步是树构建。</p>
 <p>浏览器在创建解析器的同时会创建一个 Document 对象。在树构建阶段，Document 会作为根节点被不断地修改和扩充。标记步骤产生的令牌会被送到树构建器进行处理。HTML 5 标准中定义了每类令牌对应的 DOM 元素，当树构建器接收到某个令牌时就会创建该令牌对应的 DOM 元素并将该元素插入到 DOM 树中。</p>
 <p>为了纠正元素标签嵌套错位的问题和处理未关闭的元素标签，树构建器创建的新 DOM 元素还会被插入到一个开放元素栈中。</p>
 <p>树构建算法也可以采用状态机的方式来描述，具体我们以步骤 1 的 HTML 代码为例进行举例说明。</p>
@@ -548,42 +541,32 @@
 <p>最终生成下面的 DOM 树结构：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">              Document</span><br><span class="line">             &#x2F;        \</span><br><span class="line">DocumentType           HTMLHtmlElement</span><br><span class="line">                      &#x2F;               \</span><br><span class="line">       HTMLHeadElement                 HTMLBodyElement</span><br><span class="line">                                              |</span><br><span class="line">                                          TextNode</span><br></pre></td></tr></table></figure>
 <p><img src="CgqCHl7OM-CAQGiGAAFv6uHi6MI573.png" alt="1.png"></p>
-<h4 id="补充-2：从-CSS-到-CSSOM">补充 2：从 CSS 到 CSSOM</h4>
-<p>渲染引擎除了解析 HTML 之外，也需要解析 CSS。</p>
+<h4 id="补充-2：从-CSS-到-CSSOM"><a href="#补充-2：从-CSS-到-CSSOM" class="headerlink" title="补充 2：从 CSS 到 CSSOM"></a>补充 2：从 CSS 到 CSSOM</h4><p>渲染引擎除了解析 HTML 之外，也需要解析 CSS。</p>
 <p>CSS 解析的过程与 HTML 解析过程步骤一致，最终也会生成树状结构。</p>
 <p>与 DOM 树不同的是，CSSOM 树的节点具有继承特性，也就是会先继承父节点样式作为当前样式，然后再进行补充或覆盖。下面举例说明。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123; font-size: 12px &#125;</span><br><span class="line">p &#123; font-weight: light &#125;</span><br><span class="line">span &#123; color: blue &#125;</span><br><span class="line">p span &#123; display: none &#125;</span><br><span class="line">img &#123; <span class="keyword">float</span>: left &#125;</span><br></pre></td></tr></table></figure>
 <p>对于上面的代码，会解析生成类似下面结构的 DOM 树：</p>
 <p><img src="Ciqc1F7OM-mAO8T2AAGu2Fxum4w061.png" alt="2.png"></p>
 <p>需要注意的是，上图中的 CSSOM 树并不完整，完整的 CSSOM 树还应当包括浏览器提供的默认样式（也称为“User Agent 样式”）。</p>
-<h3 id="从-DOM-到渲染">从 DOM 到渲染</h3>
-<p>有了 DOM 树和 CSSOM 树之后，渲染引擎就可以开始生成页面了。</p>
-<h4 id="5-构建渲染树">5. 构建渲染树</h4>
-<p>DOM 树包含的结构内容与 CSSOM 树包含的样式规则都是独立的，为了更方便渲染，先需要将它们合并成一棵渲染树。</p>
+<h3 id="从-DOM-到渲染"><a href="#从-DOM-到渲染" class="headerlink" title="从 DOM 到渲染"></a>从 DOM 到渲染</h3><p>有了 DOM 树和 CSSOM 树之后，渲染引擎就可以开始生成页面了。</p>
+<h4 id="5-构建渲染树"><a href="#5-构建渲染树" class="headerlink" title="5. 构建渲染树"></a>5. 构建渲染树</h4><p>DOM 树包含的结构内容与 CSSOM 树包含的样式规则都是独立的，为了更方便渲染，先需要将它们合并成一棵渲染树。</p>
 <p>这个过程会从 DOM 树的根节点开始遍历，然后在 CSSOM 树上找到每个节点对应的样式。</p>
 <p>遍历过程中会自动忽略那些不需要渲染的节点（比如脚本标记、元标记等）以及不可见的节点（比如设置了“display:none”样式）。同时也会将一些需要显示的伪类元素加到渲染树中。</p>
 <p>对于上面的 HTML 和 CSS 代码，最终生成的渲染树就只有一个 body 节点，样式为 font-size:12px。</p>
-<h4 id="6-布局">6. 布局</h4>
-<p>生成了渲染树之后，就可以进入布局阶段了，布局就是计算元素的大小及位置。</p>
+<h4 id="6-布局"><a href="#6-布局" class="headerlink" title="6. 布局"></a>6. 布局</h4><p>生成了渲染树之后，就可以进入布局阶段了，布局就是计算元素的大小及位置。</p>
 <p>计算元素布局是一个比较复杂的操作，因为需要考虑的因素有很多，包括字体大小、换行位置等，这些因素会影响段落的大小和形状，进而影响下一个段落的位置。</p>
 <p>布局完成后会输出对应的“盒模型”，它会精确地捕获每个元素的确切位置和大小，将所有相对值都转换为屏幕上的绝对像素。</p>
-<h4 id="7-绘制">7. 绘制</h4>
-<p>绘制就是将渲染树中的每个节点转换成屏幕上的实际像素的过程。得到布局树这份“施工图”之后，渲染引擎并不能立即绘制，因为还不知道绘制顺序，如果没有弄清楚绘制顺序，那么很可能会导致页面被错误地渲染。</p>
+<h4 id="7-绘制"><a href="#7-绘制" class="headerlink" title="7. 绘制"></a>7. 绘制</h4><p>绘制就是将渲染树中的每个节点转换成屏幕上的实际像素的过程。得到布局树这份“施工图”之后，渲染引擎并不能立即绘制，因为还不知道绘制顺序，如果没有弄清楚绘制顺序，那么很可能会导致页面被错误地渲染。</p>
 <p>例如，对于使用 z-index 属性的元素（如遮罩层）如果未按照正确的顺序绘制，则将导致渲染结果和预期不符（失去遮罩作用）。</p>
 <p>所以绘制过程中的第一步就是遍历布局树，生成绘制记录，然后渲染引擎会根据绘制记录去绘制相应的内容。</p>
 <p>对于无动画效果的情况，只需要考虑空间维度，生成不同的图层，然后再把这些图层进行合成，最终成为我们看到的页面。当然这个绘制过程并不是静态不变的，会随着页面滚动不断合成新的图形。</p>
-<h3 id="总结">总结</h3>
-<p>这一课时主要讲解了浏览器渲染引擎生成页面的 7 个步骤，前面 4 个步骤为 DOM 树的生成过程，后面 3 个步骤是利用 DOM 树和 CSSOM 树来渲染页面的过程。我们想要理解和记忆这些过程其实很简单，那就是以数据变化为线索，具体来说数据的变化过程为：</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这一课时主要讲解了浏览器渲染引擎生成页面的 7 个步骤，前面 4 个步骤为 DOM 树的生成过程，后面 3 个步骤是利用 DOM 树和 CSSOM 树来渲染页面的过程。我们想要理解和记忆这些过程其实很简单，那就是以数据变化为线索，具体来说数据的变化过程为：</p>
 <p>字节 → 字符 → 令牌 → 树 → 页面</p>
 <p>最后布置一道思考题：在构建渲染树的时候，渲染引擎需要遍历 DOM 树节点并从 CSSOM 树中找到匹配的样式规则，在匹配过程中是通过自上而下还是自下而上的方式呢？为什么？</p>
-<h2 id="二、浏览器的进程与线程">二、浏览器的进程与线程</h2>
-<p>浏览器作为前端代码运行的环境，也作为前端工程师的底层知识，熟悉它的结构及工作方式，无论是对于开发高性能 Web 应用，还是对于建立完善的前端知识框架，都起着至关重要的作用。这一课时我们就通过学习浏览器中的进程和线程来掌握它的整体架构。</p>
-<h3 id="进程（Process）与线程（Thread）">进程（Process）与线程（Thread）</h3>
-<p>我们先来好好梳理一下关于进程和线程的相关概念。<strong>进程</strong>是操作系统进行<strong>资源分配</strong>和调度的基本单位，<strong>线程</strong>是操作系统<strong>进行运算</strong>的最小单位。一个程序至少有一个进程，一个进程至少有一个线程。线程需要由进程来启动和管理。</p>
-<p><img src="CgqCHl75yNOASzO5AABzFfz1nN0731.png" alt="image (7).png"><br>
-　　Windows 下的进程信息</p>
-<p><img src="Ciqc1F75yOeAKk_WAABFeE0vWT8953.png" alt="image (8).png"><br>
-　　Linux 下的进程信息</p>
+<h2 id="二、浏览器的进程与线程"><a href="#二、浏览器的进程与线程" class="headerlink" title="二、浏览器的进程与线程"></a>二、浏览器的进程与线程</h2><p>浏览器作为前端代码运行的环境，也作为前端工程师的底层知识，熟悉它的结构及工作方式，无论是对于开发高性能 Web 应用，还是对于建立完善的前端知识框架，都起着至关重要的作用。这一课时我们就通过学习浏览器中的进程和线程来掌握它的整体架构。</p>
+<h3 id="进程（Process）与线程（Thread）"><a href="#进程（Process）与线程（Thread）" class="headerlink" title="进程（Process）与线程（Thread）"></a>进程（Process）与线程（Thread）</h3><p>我们先来好好梳理一下关于进程和线程的相关概念。<strong>进程</strong>是操作系统进行<strong>资源分配</strong>和调度的基本单位，<strong>线程</strong>是操作系统<strong>进行运算</strong>的最小单位。一个程序至少有一个进程，一个进程至少有一个线程。线程需要由进程来启动和管理。</p>
+<p><img src="CgqCHl75yNOASzO5AABzFfz1nN0731.png" alt="image (7).png"><br>　　Windows 下的进程信息</p>
+<p><img src="Ciqc1F75yOeAKk_WAABFeE0vWT8953.png" alt="image (8).png"><br>　　Linux 下的进程信息</p>
 <p>通常程序需要执行多个任务，比如浏览器需要一边渲染页面一边请求后端数据同时还要响应用户事件，而单线程的进程在同一时间内只能执行一个任务，无法满足多个任务并行执行的需求。要解决这个问题，可以通过 3 种方式来实现：</p>
 <ul>
 <li>多进程</li>
@@ -595,52 +578,40 @@
 <p>而多线程没有分配独立的资源，线程之间数据都是共享的，也就意味着创建线程的成本更小，因为不需要分配额外的存储空间。但线程的数据共享也带来了很多问题：首先是稳定性，进程中任意线程崩溃都会导致整个进程的崩溃，也就是说会“牵连”到进程中的其他线程。安全隐患就更容易理解了，如果有恶意线程启动，可以随意访问进程中的任意资源。</p>
 <p>总而言之，<strong>多线程更轻量，多进程更安全更稳定</strong>。</p>
 <p>有了关于进程和线程的了解，下面以使用率最高的 Chrome 浏览器为例来进行分析，看看浏览器中用到了哪些进程和线程。</p>
-<h3 id="浏览器架构">浏览器架构</h3>
-<p>通过浏览器的任务管理器（快捷键 Shift + ESC）可以看到，当浏览器打开一个标签页时，启动了下面几个进程。</p>
-<p><img src="Ciqc1F75yPWAcTNpAABoToqDfx4887.png" alt="image (9).png"><br>
-　　浏览器进程启动图</p>
-<h4 id="浏览器进程">浏览器进程</h4>
-<p>浏览器的主进程负责界⾯显⽰（地址栏、导航栏、书签等）、处理用户事件、管理⼦进程等。</p>
-<h4 id="GPU-进程">GPU 进程</h4>
-<p>处理来自其他进程的 GPU 任务，比如来自渲染进程或扩展程序进程的 CSS3 动画效果，来自浏览器进程的界面绘制等。</p>
+<h3 id="浏览器架构"><a href="#浏览器架构" class="headerlink" title="浏览器架构"></a>浏览器架构</h3><p>通过浏览器的任务管理器（快捷键 Shift + ESC）可以看到，当浏览器打开一个标签页时，启动了下面几个进程。</p>
+<p><img src="Ciqc1F75yPWAcTNpAABoToqDfx4887.png" alt="image (9).png"><br>　　浏览器进程启动图</p>
+<h4 id="浏览器进程"><a href="#浏览器进程" class="headerlink" title="浏览器进程"></a>浏览器进程</h4><p>浏览器的主进程负责界⾯显⽰（地址栏、导航栏、书签等）、处理用户事件、管理⼦进程等。</p>
+<h4 id="GPU-进程"><a href="#GPU-进程" class="headerlink" title="GPU 进程"></a>GPU 进程</h4><p>处理来自其他进程的 GPU 任务，比如来自渲染进程或扩展程序进程的 CSS3 动画效果，来自浏览器进程的界面绘制等。</p>
 <p>在第 06 课时中提到过浏览器渲染页面的过程，在最后一个步骤“绘制”中我们提到了图层的合成，而这个图层的合成操作其实就是交给 GPU 进程来完成的。</p>
 <p>它还有一个重要的特性，那就是可以利用 GPU 硬件来加速渲染，包括 Canvas 绘制、CSS3 转换（Transitions）、CSS3 变换（Transforms）、WebGL 等。具体原理就是如果 DOM 元素使用了这些属性，GPU 进程就会在合成层的时候对它进行单独处理，提升到一个独立的层进行绘制，这样就能避免重新布局和重新绘制。</p>
 <p>下面一段代码利用了 keyframes 来实现一个绕正方形运动的动画效果。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;gpu&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  .gpu &#123;</span><br><span class="line"><span class="css">    <span class="attribute">background-color</span>: darkgreen;</span></span><br><span class="line"><span class="css">    <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>, <span class="number">0</span>);</span></span><br><span class="line"><span class="css">    <span class="attribute">animation</span>: slide <span class="number">3.7s</span> ease-in-out infinite;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="keyword">@keyframes</span> slide &#123;</span></span><br><span class="line">    25% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">250px</span>, <span class="number">0</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">250px</span>, <span class="number">250px</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line">    75% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>, <span class="number">250px</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>通过浏览器性能分析工具来记录整个页面绘制过程，可以看到页面绘制完成后，浏览器没有再进行布局或绘制相关的操作。因此此时元素的绘制工作已经脱离了渲染引擎，交由 GPU 进程来维护。</p>
-<p><img src="CgqCHl75yP6AZbcnAABVpE0iXCY958.png" alt="image (10).png"><br>
-　　使用 GPU 加速进行渲染图</p>
+<p><img src="CgqCHl75yP6AZbcnAABVpE0iXCY958.png" alt="image (10).png"><br>　　使用 GPU 加速进行渲染图</p>
 <p>为了进行对比，我们再将代码稍稍修改，通过固定定位来修改元素位置。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cpu&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  .cpu &#123;</span><br><span class="line"><span class="css">    <span class="attribute">background-color</span>: darkgreen;</span></span><br><span class="line"><span class="css">    <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">position</span>: fixed;</span></span><br><span class="line"><span class="css">    <span class="attribute">animation</span>: move <span class="number">3.7s</span> ease-in-out infinite;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="keyword">@keyframes</span> move &#123;</span></span><br><span class="line">    25% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">left</span>: <span class="number">250px</span>;</span></span><br><span class="line"><span class="css">      <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">left</span>: <span class="number">250px</span>;</span></span><br><span class="line"><span class="css">      <span class="attribute">top</span>: <span class="number">250px</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">    75% &#123;</span><br><span class="line"><span class="css">      <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">      <span class="attribute">top</span>: <span class="number">250px</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>发现页面在循环进行布局和绘制操作。</p>
-<p><img src="Ciqc1F75yQmAeLhpAABTOiBQjDo080.png" alt="image (11).png"><br>
-　　不使用 GPU 加速进行渲染图</p>
+<p><img src="Ciqc1F75yQmAeLhpAABTOiBQjDo080.png" alt="image (11).png"><br>　　不使用 GPU 加速进行渲染图</p>
 <p><strong>Network Service 进程</strong></p>
 <p>负责⻚⾯的⽹络资源加载，比如在地址栏输入一个网页地址，网络进程会将请求后得到的资源交给渲染进程处理。本来只是浏览器主进程的一个模块，现在为了将浏览器进程进行“服务化”，被抽取出来，成了一个单独的进程。</p>
-<h4 id="V8-代理解析工具进程"><strong>V8 代理解析工具进程</strong></h4>
-<p>Chrome 支持使用 JavaScript 来写连接代理服务器脚本，称为 pac 代理脚本。</p>
+<h4 id="V8-代理解析工具进程"><a href="#V8-代理解析工具进程" class="headerlink" title="V8 代理解析工具进程"></a><strong>V8 代理解析工具进程</strong></h4><p>Chrome 支持使用 JavaScript 来写连接代理服务器脚本，称为 pac 代理脚本。</p>
 <p>由于 pac 代理脚本是用 JavaScript 编写的，要能够解析 pac 代理脚本就必须要用到 JavaScript 脚本引擎，直接在浏览器主进程中引入 JavaScript 引擎并不符合进程“服务化”的设计理念，所以就把这个解析功能独立成一个进程。</p>
-<h4 id="渲染进程">渲染进程</h4>
-<p>浏览器会为每个标签页单独启动一个渲染进程，所以它和上述进程不同，并不是唯一的。</p>
+<h4 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h4><p>浏览器会为每个标签页单独启动一个渲染进程，所以它和上述进程不同，并不是唯一的。</p>
 <p>渲染进程的任务是将 HTML、CSS 和 JavaScript 转化为⽤户可以与之交互的网页，每个渲染进程都会启动单独的渲染引擎线程和 JavaScript 引擎线程。关于渲染引擎的工作细节我们在第 06 课时中已经详细讨论过了，JavaScript 引擎线程也在第 12 课时中详细讨论过，这里就不重复讨论了。</p>
 <p>除此之外还包括事件触发线程，负责接收事件，并将回调函数放入 JavaScript 引擎线程的事件队列中，以及负责处理定时任务的定时器线程。</p>
 <p>这种设计保障了程序与系统的安全性，可以通过操作系统提供的权限机制来为每个渲染进程建立一个沙箱运行环境，从而防止恶意破坏用户系统或影响其他标签页的行为。</p>
 <p>同时也保障了渲染进程的稳定性，因为如果某个标签页失去响应，用户可以关掉这个标签页，此时其他标签页依然运行着，可以正常使用。如果所有标签页都运行在同一进程上，那么当某个失去响应，所有标签页都会失去响应。</p>
-<h4 id="扩展程序进程">扩展程序进程</h4>
-<p>主要是负责插件的运⾏，和渲染进程一样，也不是唯一的，浏览器会为每个插件都启动一个进程。这样的设计也是从安全性和稳定性考虑。</p>
-<h4 id="进程的服务化">进程的服务化</h4>
-<p>Chrome 官方团队在 2016年 提出了<a target="_blank" rel="noopener" href="https://docs.google.com/document/d/15I7sQyQo6zsqXVNAlVd520tdGaS8FCicZHrN0yRu-oU/edit#heading=h.cyhu8vkfrzar">面向服务的设计模型</a>，在系统资源允许的情况下，将浏览器主进程的各种模块拆分成独⽴的服务，每个服务在独立的进程中运行。通过高内聚、低耦合的结构让 Chrome 变得更稳定更安全。</p>
+<h4 id="扩展程序进程"><a href="#扩展程序进程" class="headerlink" title="扩展程序进程"></a>扩展程序进程</h4><p>主要是负责插件的运⾏，和渲染进程一样，也不是唯一的，浏览器会为每个插件都启动一个进程。这样的设计也是从安全性和稳定性考虑。</p>
+<h4 id="进程的服务化"><a href="#进程的服务化" class="headerlink" title="进程的服务化"></a>进程的服务化</h4><p>Chrome 官方团队在 2016年 提出了<a target="_blank" rel="noopener" href="https://docs.google.com/document/d/15I7sQyQo6zsqXVNAlVd520tdGaS8FCicZHrN0yRu-oU/edit#heading=h.cyhu8vkfrzar">面向服务的设计模型</a>，在系统资源允许的情况下，将浏览器主进程的各种模块拆分成独⽴的服务，每个服务在独立的进程中运行。通过高内聚、低耦合的结构让 Chrome 变得更稳定更安全。</p>
 <p>同时这种设计也具有一定的伸缩性，当运行在资源有限的设备上时，会将这些服务聚合到浏览器主进程中，从而减少内存占用。</p>
-<h3 id="总结-2">总结</h3>
-<p>这一课时我们分析了 Chrome 浏览器的架构，至少可以得到以下 3 个启示：</p>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>这一课时我们分析了 Chrome 浏览器的架构，至少可以得到以下 3 个启示：</p>
 <ul>
 <li>多进程在稳定性和安全性上有优势，但是资源占用较多；</li>
 <li>对于复杂的应用我们可以采取服务化的设计方式，将功能模块单独拆分成进程来提供服务；</li>
 <li>合理利用 GPU 进程可以加速渲染。</li>
 </ul>
 <p>最后布置一道思考题：说一说你还了解过哪些多进程与多线程设计的应用，它们的结构又是什么样的呢？</p>
-<h2 id="三、浏览器加载网络资源的速度">三、浏览器加载网络资源的速度</h2>
-<p>想要加快浏览器加载网络资源的速度，可以通过减少响应内容大小，比如使用 gzip 算法压缩响应体内容和 HTTP/2 的压缩头部功能；另一种更通用也更为重要的技术就是<strong>使用缓存</strong>。</p>
+<h2 id="三、浏览器加载网络资源的速度"><a href="#三、浏览器加载网络资源的速度" class="headerlink" title="三、浏览器加载网络资源的速度"></a>三、浏览器加载网络资源的速度</h2><p>想要加快浏览器加载网络资源的速度，可以通过减少响应内容大小，比如使用 gzip 算法压缩响应体内容和 HTTP/2 的压缩头部功能；另一种更通用也更为重要的技术就是<strong>使用缓存</strong>。</p>
 <p>下面两张截图分别是未使用缓存以及使用浏览器默认缓存的请求文件所消耗的时间，可以看出使用缓存之后加载时间大大缩短。</p>
 <p><img src="CgqCHl8MKQyAOi4qAAAqnHUKGOQ421.png" alt="Drawing 0.png"></p>
 <p>从服务端请求文件所消耗的时间</p>
@@ -648,11 +619,9 @@
 <p>从缓存中获取文件所消耗的时间</p>
 <p>Web 缓存按存储位置来区分，包括<strong>数据库缓存</strong>、<strong>服务端缓存</strong>、<strong>CDN 缓存</strong>和<strong>浏览器缓存</strong>。这一课时我们着重介绍浏览器缓存。</p>
 <p>浏览器缓存的实现方式主要有两种：HTTP 和 ServiceWorker 。</p>
-<h3 id="HTTP-缓存">HTTP 缓存</h3>
-<p>使用缓存最大的问题往往不在于将资源缓存在什么位置或者如何读写资源，而在于如何保证缓存与实际资源一致的同时，提高缓存的命中率。也就是说尽可能地让浏览器从缓存中获取资源，但同时又要保证被使用的缓存与服务端最新的资源保持一致。</p>
+<h3 id="HTTP-缓存"><a href="#HTTP-缓存" class="headerlink" title="HTTP 缓存"></a>HTTP 缓存</h3><p>使用缓存最大的问题往往不在于将资源缓存在什么位置或者如何读写资源，而在于如何保证缓存与实际资源一致的同时，提高缓存的命中率。也就是说尽可能地让浏览器从缓存中获取资源，但同时又要保证被使用的缓存与服务端最新的资源保持一致。</p>
 <p>为了达到这个目的，需要制定合适的缓存过期策略（简称“缓存策略”），HTTP 支持的缓存策略有两种：<strong>强制缓存</strong>和<strong>协商缓存</strong>。</p>
-<h4 id="强制缓存">强制缓存</h4>
-<p>强制缓存是在浏览器加载资源的时候，先直接从缓存中查找请求结果，如果不存在该缓存结果，则直接向服务端发起请求。</p>
+<h4 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a>强制缓存</h4><p>强制缓存是在浏览器加载资源的时候，先直接从缓存中查找请求结果，如果不存在该缓存结果，则直接向服务端发起请求。</p>
 <p><strong>1.</strong> <strong>Expires</strong></p>
 <p>HTTP/1.0 中可以使用响应头部字段 Expires 来设置缓存时间，它对应一个未来的时间戳。客户端第一次请求时，服务端会在响应头部添加 Expires 字段。当浏览器再次发送请求时，先会对比当前时间和 Expires 对应的时间，如果当前时间早于 Expires 时间，那么直接使用缓存；反之，需要再次发送请求。</p>
 <p><img src="https://s0.lgstatic.com/i/image/M00/31/42/Ciqc1F8MKT-AbvemAAAGfctSoow363.png" alt="Drawing 2.png"></p>
@@ -676,8 +645,7 @@
 <p>注意，虽然你可能在其他资料中看到可以使用 meta 标签来设置缓存，比如像下面的形式：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;expires&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Wed, 20 Jun 2021 22:33:00 GMT&quot;</span></span></span><br></pre></td></tr></table></figure>
 <p>但在 HTML5 规范中，并不支持这种方式，所以尽量不要使用 meta 标签来设置缓存。</p>
-<h4 id="协商缓存">协商缓存</h4>
-<p>协商缓存的更新策略是不再指定缓存的有效时间了，而是浏览器直接发送请求到服务端进行确认缓存是否更新，如果请求响应返回的 HTTP 状态为 304，则表示缓存仍然有效。控制缓存的难题就是从浏览器端转移到了服务端。</p>
+<h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><p>协商缓存的更新策略是不再指定缓存的有效时间了，而是浏览器直接发送请求到服务端进行确认缓存是否更新，如果请求响应返回的 HTTP 状态为 304，则表示缓存仍然有效。控制缓存的难题就是从浏览器端转移到了服务端。</p>
 <p><strong>1.</strong> <strong>Last-Modified 和 If-Modified-Since</strong></p>
 <p>服务端要判断缓存有没有过期，只能将双方的资源进行对比。若浏览器直接把资源文件发送给服务端进行比对的话，网络开销太大，而且也会失去缓存的意义，所以显然是不可取的。有一种简单的判断方法，那就是通过响应头部字段 Last-Modified 和请求头部字段 If-Modified-Since 比对双方资源的修改时间。</p>
 <p>具体工作流程如下：</p>
@@ -705,10 +673,8 @@
 <li><strong>计算误差</strong>。HTTP 并没有规定哈希值的计算方法，所以不同服务端可能会采用不同的哈希值计算方式。这样带来的问题是，同一个资源，在两台服务端产生的 Etag 可能是不相同的，所以对于使用服务器集群来处理请求的网站来说，使用 Etag 的缓存命中率会有所降低。</li>
 </ul>
 <p>需要注意的是，强制缓存的优先级高于协商缓存，在协商缓存中，Etag 优先级比 Last-Modified 高。既然协商缓存策略也存在一些缺陷，那么我们转移到浏览器端看看 ServiceWorker 能不能给我们带来惊喜。</p>
-<h3 id="ServiceWorker">ServiceWorker</h3>
-<p>ServiceWorker 是浏览器在后台独立于网页运行的脚本，也可以这样理解，它是浏览器和服务端之间的代理服务器。ServiceWorker 非常强大，可以实现包括推送通知和后台同步等功能，更多功能还在进一步扩展，但其最主要的功能是<strong>实现离线缓存</strong>。</p>
-<h4 id="1-使用限制">1. 使用限制</h4>
-<p>越强大的东西往往越危险，所以浏览器对 ServiceWorker 做了很多限制：</p>
+<h3 id="ServiceWorker"><a href="#ServiceWorker" class="headerlink" title="ServiceWorker"></a>ServiceWorker</h3><p>ServiceWorker 是浏览器在后台独立于网页运行的脚本，也可以这样理解，它是浏览器和服务端之间的代理服务器。ServiceWorker 非常强大，可以实现包括推送通知和后台同步等功能，更多功能还在进一步扩展，但其最主要的功能是<strong>实现离线缓存</strong>。</p>
+<h4 id="1-使用限制"><a href="#1-使用限制" class="headerlink" title="1. 使用限制"></a>1. 使用限制</h4><p>越强大的东西往往越危险，所以浏览器对 ServiceWorker 做了很多限制：</p>
 <ul>
 <li>在 ServiceWorker 中无法直接访问 DOM，但可以通过 postMessage 接口发送的消息来与其控制的页面进行通信；</li>
 <li>ServiceWorker 只能在本地环境下或 HTTPS 网站中使用；</li>
@@ -717,8 +683,7 @@
 </ul>
 <p><img src="Ciqc1F8MKYGAMRqhAACGt0bNhOM842.png" alt="Drawing 3.png"></p>
 <p>ServiceWorker 在浏览器中的支持情况</p>
-<h4 id="2-使用方法">2. 使用方法</h4>
-<p>在使用 ServiceWorker 脚本之前先要通过“注册”的方式加载它。常见的注册代码如下所示：</p>
+<h4 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2. 使用方法"></a>2. 使用方法</h4><p>在使用 ServiceWorker 脚本之前先要通过“注册”的方式加载它。常见的注册代码如下所示：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="string">&#x27;serviceWorker&#x27;</span> <span class="keyword">in</span> <span class="built_in">window</span>.navigator) &#123;</span><br><span class="line">  <span class="built_in">window</span>.navigator.serviceWorker</span><br><span class="line">    .register(<span class="string">&#x27;./sw.js&#x27;</span>)</span><br><span class="line">    .then(<span class="built_in">console</span>.log)</span><br><span class="line">    .catch(<span class="built_in">console</span>.error)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.warn(<span class="string">&#x27;浏览器不支持 ServiceWorker!&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p>首先考虑到浏览器的兼容性，判断 window.navigator 中是否存在 serviceWorker 属性，然后通过调用这个属性的 register 函数来告诉浏览器 ServiceWorker 脚本的路径。</p>
 <p>浏览器获取到 ServiceWorker 脚本之后会进行解析，解析完成会进行安装。可以通过监听 “install” 事件来监听安装，但这个事件只会在第一次加载脚本的时候触发。要让脚本能够监听浏览器的网络请求，还需要激活脚本。</p>
@@ -728,8 +693,7 @@
 <p>这段代码首先监听 install 事件，在回调函数中调用了 event.waitUntil() 函数并传入了一个 Promise 对象。event.waitUntil 用来监听多个异步操作，包括缓存打开和添加缓存路径。如果其中一个操作失败，则整个 ServiceWorker 启动失败。</p>
 <p>然后监听了 fetch 事件，在回调函数内部调用了函数 event.respondWith() 并传入了一个 Promise 对象，当捕获到 fetch 请求时，会直接返回 event.respondWith 函数中 Promise 对象的结果。</p>
 <p>在这个 Promise 对象中，我们通过 caches.match 来和当前请求对象进行匹配，如果匹配上则直接返回匹配的缓存结果，否则返回该请求结果并缓存。</p>
-<h3 id="总结-3">总结</h3>
-<p>缓存是解决性能问题的重要手段，使用缓存的好处很多，除了能让浏览器更快地加载网络资源之外，还会带来其他好处，比如节省网络流量和带宽，以及减少服务端的负担。</p>
+<h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><p>缓存是解决性能问题的重要手段，使用缓存的好处很多，除了能让浏览器更快地加载网络资源之外，还会带来其他好处，比如节省网络流量和带宽，以及减少服务端的负担。</p>
 <p>本课时介绍了 HTTP 缓存策略及 ServiceWorker，HTTP 缓存可以分为强制缓存和协商缓存，强制缓存就是在缓存有效期内直接使用浏览器缓存；协商缓存则需要先询问服务端资源是否发生改变，如果未改变再使用浏览器缓存。</p>
 <p>ServiceWorker 可以用来实现离线缓存，主要实现原理是拦截浏览器请求并返回缓存的资源文件。</p>
 <p>最后布置一道思考题：如果要让浏览器不缓存资源，你有哪些实现方式？</p>
@@ -882,7 +846,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、浏览器渲染页面的步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E-HTML-%E5%88%B0-DOM"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">从 HTML 到 DOM</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E5%AD%97%E8%8A%82%E6%B5%81%E8%A7%A3%E7%A0%81"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1. 字节流解码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E8%BE%93%E5%85%A5%E6%B5%81%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">2. 输入流预处理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-%E4%BB%A4%E7%89%8C%E5%8C%96"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">3. 令牌化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85-1%EF%BC%9A%E9%81%87%E5%88%B0-script-%E6%A0%87%E7%AD%BE%E6%97%B6%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">补充 1：遇到 script 标签时的处理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-%E6%9E%84%E5%BB%BA-DOM-%E6%A0%91"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">4. 构建 DOM 树</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85-2%EF%BC%9A%E4%BB%8E-CSS-%E5%88%B0-CSSOM"><span class="toc-nav-number">1.1.6.</span> <span class="toc-nav-text">补充 2：从 CSS 到 CSSOM</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E-DOM-%E5%88%B0%E6%B8%B2%E6%9F%93"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">从 DOM 到渲染</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-%E6%9E%84%E5%BB%BA%E6%B8%B2%E6%9F%93%E6%A0%91"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">5. 构建渲染树</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">6. 布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-%E7%BB%98%E5%88%B6"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">7. 绘制</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、浏览器的进程与线程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%EF%BC%88Process%EF%BC%89%E4%B8%8E%E7%BA%BF%E7%A8%8B%EF%BC%88Thread%EF%BC%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">进程（Process）与线程（Thread）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">浏览器架构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">浏览器进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#GPU-%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">GPU 进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#V8-%E4%BB%A3%E7%90%86%E8%A7%A3%E6%9E%90%E5%B7%A5%E5%85%B7%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">V8 代理解析工具进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">渲染进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">扩展程序进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%8C%96"><span class="toc-nav-number">2.2.6.</span> <span class="toc-nav-text">进程的服务化</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8A%A0%E8%BD%BD%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90%E7%9A%84%E9%80%9F%E5%BA%A6"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、浏览器加载网络资源的速度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">HTTP 缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">强制缓存</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">协商缓存</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ServiceWorker"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">ServiceWorker</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">1. 使用限制</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2. 使用方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、浏览器渲染页面的步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E-HTML-%E5%88%B0-DOM"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">从 HTML 到 DOM</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E5%AD%97%E8%8A%82%E6%B5%81%E8%A7%A3%E7%A0%81"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1. 字节流解码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E8%BE%93%E5%85%A5%E6%B5%81%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">2. 输入流预处理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-%E4%BB%A4%E7%89%8C%E5%8C%96"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">3. 令牌化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85-1%EF%BC%9A%E9%81%87%E5%88%B0-script-%E6%A0%87%E7%AD%BE%E6%97%B6%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">补充 1：遇到 script 标签时的处理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-%E6%9E%84%E5%BB%BA-DOM-%E6%A0%91"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">4. 构建 DOM 树</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85-2%EF%BC%9A%E4%BB%8E-CSS-%E5%88%B0-CSSOM"><span class="toc-nav-number">1.1.6.</span> <span class="toc-nav-text">补充 2：从 CSS 到 CSSOM</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E-DOM-%E5%88%B0%E6%B8%B2%E6%9F%93"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">从 DOM 到渲染</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-%E6%9E%84%E5%BB%BA%E6%B8%B2%E6%9F%93%E6%A0%91"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">5. 构建渲染树</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-%E5%B8%83%E5%B1%80"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">6. 布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-%E7%BB%98%E5%88%B6"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">7. 绘制</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、浏览器的进程与线程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%EF%BC%88Process%EF%BC%89%E4%B8%8E%E7%BA%BF%E7%A8%8B%EF%BC%88Thread%EF%BC%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">进程（Process）与线程（Thread）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">浏览器架构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">浏览器进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#GPU-%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">GPU 进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#V8-%E4%BB%A3%E7%90%86%E8%A7%A3%E6%9E%90%E5%B7%A5%E5%85%B7%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">V8 代理解析工具进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">渲染进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">扩展程序进程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%8C%96"><span class="toc-nav-number">2.2.6.</span> <span class="toc-nav-text">进程的服务化</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8A%A0%E8%BD%BD%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90%E7%9A%84%E9%80%9F%E5%BA%A6"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、浏览器加载网络资源的速度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">HTTP 缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">强制缓存</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">协商缓存</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ServiceWorker"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">ServiceWorker</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">1. 使用限制</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2. 使用方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -1023,7 +987,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">403.3k</span>
+          站点总字数：<span class="post-count">403.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
