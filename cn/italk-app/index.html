@@ -1,0 +1,3218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/italk-app/">
+  <title>
+    
+      italk-app 社交聊天app - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+          
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <!-- <li>
+            <a href="/categories">分类</a>
+          </li> -->
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/categories/#WebGL">WebGL</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Uniapp" title="Uniapp"><i class="fa fa-tag" style="color: aqua;"></i> Uniapp</a>
+              
+              <a class="tag" href="/tags/#MongDB" title="MongDB"><i class="fa fa-tag" style="color: aqua;"></i> MongDB</a>
+              
+              <a class="tag" href="/tags/#Nodejs" title="Nodejs"><i class="fa fa-tag" style="color: aqua;"></i> Nodejs</a>
+              
+            </div>
+            <h2>italk-app 社交聊天app</h2>
+            <h3 class="subheading" style="font-size: 21px;">一个基于 Uniapp、express、MongDB 实现的 聊天app</h3>
+            <span class="meta">
+              By 大Van家 on
+              2021-09-14
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                15
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                3.7k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <div align=center>
+    <h1>小舍App开发文档</h1>
+    <br>
+    <iframe style="margin-left: 2px;margin-bottom: 10px;" frameborder="0" scrolling="1" width="91px" height="20px"  src="https://ghbtns.com/github-btn.html?user=yesmore&repo=italk-uniapp&type=star&count=true"></iframe>
+    <iframe style="margin-left: 2px;margin-bottom: 10px;" frameborder="0" scrolling="1" width="91px" height="20px"  src="https://ghbtns.com/github-btn.html?user=yesmore&repo=italk-uniapp&type=fork&count=true"></iframe>
+</div>
+<hr>
+<blockquote>
+<p>注意：线上项目 <a target="_blank" rel="noopener" href="http://italk.aoau.top">italk.aoau.top</a> 注册功能已修复（其他功能也恢复正常），请放心食用。</p>
+<p>推荐本人的另一个项目：<a target="_blank" rel="noopener" href="https://github.com/yesmore/vue-egg-jwt-template">VuEgg-jwt-template</a>，基于 Vue、Eggjs 开发的<strong>用户鉴权模板</strong>，开箱即用，可配合 italk-app 项目食用，规范了后台代码，项目使用 MySQL，可自行更换成 MongoDB，让你专注于核心逻辑开发。</p>
+</blockquote>
+<h2 id="快速预览">快速预览</h2>
+<blockquote>
+<p>项目名称：小舍-社交app</p>
+<p>开发人员：熙子黒</p>
+<p>更新日期：2021-05-24</p>
+<p>开源协议：MIT</p>
+<p>有任何疑问请联系邮箱：3224266014@qq.com，并注明来意。</p>
+<p>请勿商用！</p>
+</blockquote>
+<h2 id="功能介绍">功能介绍</h2>
+<blockquote>
+<ul>
+<li>QQ、VX结合的聊天社交app</li>
+<li>即时通讯技术</li>
+<li>全栈架构</li>
+<li>UI规范化</li>
+</ul>
+<p>项目地址：<a target="_blank" rel="noopener" href="http://italk.aoau.top">http://italk.aoau.top</a> （建议移动设备访问）</p>
+<p>apk自提：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/14i6yiGFdAuQgSCcQbcU45w">https://pan.baidu.com/s/14i6yiGFdAuQgSCcQbcU45w</a>  提取码：<code>q29u</code></p>
+<p>衍生产品：小舍图片Api <a target="_blank" rel="noopener" href="https://github.com/yesmore/photosapi">https://github.com/yesmore/photosapi</a> 本项目已使用（注：该图床暂存在本人服务器，只能尽可能保证其稳定性，你可以选择更佳的图床方案来迭代：PicGo+Github+CDN，了解详情请转到本人的另一个仓库：<a target="_blank" rel="noopener" href="https://github.com/yesmore/img">yesmore/img</a>）。</p>
+<p>更多项目请访问个人博客：<a href="https://yesmore.cc">https://yesmore.cc</a></p>
+</blockquote>
+<h2 id="技术栈">技术栈</h2>
+<p>前端：<code>vue</code>+<code>uni-app</code>+<code>sass</code></p>
+<p>后端：<code>Nodejs(express)</code>+<code>mongoDB</code></p>
+<p>通信：<code>Websocket(socket.io)</code></p>
+<p><strong>Development Tool</strong>: <code>HBuilderX</code>+<code>WebStorm</code></p>
+<p><strong>Developing env</strong>: <code>Windows</code>开发+<code>Linux(Nginx)</code>部署</p>
+<blockquote>
+<p><strong>Why uni-app?</strong></p>
+<p>1.简洁的跨平台开发框架，一次开发多平台上线（Android、ios、小程序）。</p>
+<p>2.开发前置条件低，只需掌握<code>vue</code>即可快速上手。</p>
+<p><strong>Why  websocket？</strong></p>
+<p>1.不同于<code>http</code>协议，详情查看官网。</p>
+<p>2.服务端与客户端双向数据绑定。</p>
+<p>3.封装的<code>socket.io</code>库简洁API，方便快速上手。</p>
+<p>4.此项目为本人学习websocket项目，以准备后期开发物联网项目打基础。</p>
+<p><strong>Why express？</strong></p>
+<p>1.<code>express</code>是基于<code>nodejs</code>标准库<code>http</code>封装的web后端框架，方便前端人员快速开发，学习成本较低。</p>
+</blockquote>
+<h2 id="功能列表">功能列表</h2>
+<p><strong>登陆界面</strong></p>
+<ul>
+<li>[x] 支持用户名/邮箱匹配登陆</li>
+<li>[x] 实时反馈匹配结果</li>
+<li>[x] 密码校验</li>
+</ul>
+<p><strong>注册界面</strong></p>
+<ul>
+<li>[x] 支持用户名/邮箱已存在提示</li>
+<li>[x] 支持提示表单项是否填写完整</li>
+<li>[x] 密码复杂度反馈</li>
+</ul>
+<p><strong>主页界面</strong></p>
+<ul>
+<li>[x] 好友消息提示</li>
+<li>[x] 好友申请提示</li>
+<li>[x] 最后一条消息及发送时间渲染</li>
+<li>[x] 最新消息排序</li>
+<li>[ ] 群消息提示</li>
+<li>[ ] 群与好友列表渲染优先级</li>
+<li>[ ] 大厅入口（无需创建群聊）</li>
+</ul>
+<p><strong>搜索界面</strong></p>
+<ul>
+<li>[x] 正则匹配查询数据库</li>
+<li>[x] 搜索所有注册用户</li>
+<li>[x] 正则匹配渲染指定字符（串）</li>
+<li>[x] 添加好友功能</li>
+<li>[ ] 私聊窗口入口</li>
+</ul>
+<p><strong>资料卡界面</strong></p>
+<ul>
+<li>[x] 好友昵称、备注、个性签名渲染</li>
+<li>[ ] 私聊窗口入口</li>
+<li>[x] 好友详情界面入口</li>
+</ul>
+<p><strong>详情界面</strong></p>
+<ul>
+<li>[x] 用户详情修改（头像、签名、昵称、性别、生日、电话、邮箱）</li>
+<li>[ ] 用户密码修改</li>
+<li>[x] 修改存储数据库</li>
+<li>[x] 退出登录功能</li>
+<li>[x] 删除好友功能</li>
+</ul>
+<p><strong>好友私聊窗口</strong></p>
+<ul>
+<li>[x] 发送文字消息</li>
+<li>[x] 发送图片消息</li>
+<li>[ ] 发送语音消息（兼容性）</li>
+<li>[x] 发送定位消息（未完善）</li>
+<li>[x] 发送表情消息</li>
+<li>[x] 拍摄照片功能</li>
+<li>[ ] 发送文件消息</li>
+<li>[ ] 发送视频消息</li>
+</ul>
+<p><strong>好友动态</strong></p>
+<ul>
+<li>[ ] 动态列表渲染</li>
+<li>[ ] 动态详情查看</li>
+<li>[ ] 分享动态消息</li>
+</ul>
+<h2 id="Project">Project</h2>
+<h3 id="项目目录">项目目录</h3>
+<blockquote>
+<p>暂未完善</p>
+<p><strong>前端</strong></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">┌- </span><br><span class="line">├-	commons/					<span class="comment">// 配置文件</span></span><br><span class="line">    ├-	db.js				<span class="comment">// 连接数据库配置</span></span><br><span class="line">    ├-  </span><br><span class="line">├-	components/					<span class="comment">// 数据模型</span></span><br><span class="line">    ├-	</span><br><span class="line">├-	pages/				<span class="comment">// 中间件</span></span><br><span class="line">    ├-	err.js				<span class="comment">// 错误处理中间件</span></span><br><span class="line">├-	<span class="keyword">static</span>/					<span class="comment">// 后端路由</span></span><br><span class="line">    ├-	index.js</span><br><span class="line">├-	App.vue					<span class="comment">// </span></span><br><span class="line">├-	main.js						<span class="comment">//</span></span><br><span class="line">├-	pages.json				<span class="comment">// 入口</span></span><br><span class="line">├-	manifest.json</span><br><span class="line">├-	project.config.json			 <span class="comment">// 版本控制</span></span><br><span class="line">├-	uni.scss		 <span class="comment">// 版本控制</span></span><br><span class="line">├-	README.md				<span class="comment">// readme</span></span><br><span class="line">└-	</span><br></pre></td></tr></table></figure>
+<p><strong>后端</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">┌- </span><br><span class="line">├-	config/					<span class="comment">// 配置文件</span></span><br><span class="line">    ├-	db.js				<span class="comment">// 连接数据库配置</span></span><br><span class="line">    ├-  </span><br><span class="line">├-	model/					<span class="comment">// 数据模型</span></span><br><span class="line">    ├-	</span><br><span class="line">├-	middleware/				<span class="comment">// 中间件</span></span><br><span class="line">    ├-	err.js				<span class="comment">// 错误处理中间件</span></span><br><span class="line">├-	router/					<span class="comment">// 后端路由</span></span><br><span class="line">    ├-	index.js</span><br><span class="line">├-	server/					<span class="comment">// </span></span><br><span class="line">    ├-</span><br><span class="line">├-	dao/					<span class="comment">//</span></span><br><span class="line">    ├-</span><br><span class="line">├-	app.js					<span class="comment">// 入口</span></span><br><span class="line">├-	package.json			 <span class="comment">// 版本控制</span></span><br><span class="line">├-	package-lock.json		 <span class="comment">// 版本控制</span></span><br><span class="line">├-	README.md				<span class="comment">// readme</span></span><br><span class="line">└-	</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="插件">插件</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">包</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>cors</strong></td>
+<td style="text-align:center">2.8.5</td>
+<td style="text-align:center">跨域处理</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>express</strong></td>
+<td style="text-align:center">4.17.1</td>
+<td style="text-align:center">web框架</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>mongoose</strong></td>
+<td style="text-align:center">5.12.10</td>
+<td style="text-align:center">数据库</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>require-all</strong></td>
+<td style="text-align:center">3.0.0</td>
+<td style="text-align:center">加载目录下所有文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>body-parser</strong></td>
+<td style="text-align:center">1.19.0</td>
+<td style="text-align:center">获取前端数据</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>nodemailer</strong></td>
+<td style="text-align:center">6.6.0</td>
+<td style="text-align:center">邮箱插件</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>bcryptjs</strong></td>
+<td style="text-align:center">2.4.3</td>
+<td style="text-align:center">密码加密</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>jsonwebtoken</strong></td>
+<td style="text-align:center">8.5.1</td>
+<td style="text-align:center">token身份验证</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>multer</strong></td>
+<td style="text-align:center">1.4.2</td>
+<td style="text-align:center">文件上传插件</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><a target="_blank" rel="noopener" href="http://socket.io">socket.io</a></strong></td>
+<td style="text-align:center">2.3.0</td>
+<td style="text-align:center">后端通讯模块</td>
+</tr>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="http://weapp.socket.io">weapp.socket.io</a></td>
+<td style="text-align:center">2.0.6</td>
+<td style="text-align:center">前端通讯模块</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>后端插件</p>
+</blockquote>
+<h2 id="前端路由">前端路由</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">路由</th>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">/index</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">首页</td>
+</tr>
+<tr>
+<td style="text-align:center">/signin</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">登录页</td>
+</tr>
+<tr>
+<td style="text-align:center">/signup</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">注册页</td>
+</tr>
+<tr>
+<td style="text-align:center">/userhome?id=xxx</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">Num/Str</td>
+<td style="text-align:center">用户唯一id</td>
+</tr>
+<tr>
+<td style="text-align:center">/search</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">好友搜索</td>
+</tr>
+</tbody>
+</table>
+<h2 id="交互逻辑">交互逻辑</h2>
+<table>
+<thead>
+<tr>
+<th>标题</th>
+<th style="text-align:left">逻辑</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前后端交互流程</td>
+<td style="text-align:left"><strong>前端发送请求</strong> <code>→</code> <strong>匹配后端路由</strong> <code>→</code> <strong>server处理函数</strong> <code>→</code> <strong>dbserver CRUD</strong> <code>∞</code> <strong>db</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>前后端交互验证</td>
+<td style="text-align:left">1. 登陆时，客户端发送用户名密码<br/>2. 服务端验证用户名密码是否正确，校验通过就会生成一个有时效的token串，发送给客户端<br/>3. 客户端储存token,一般都会存储在localStorage或者cookie里面<br/>4. 客户端每次请求时都带有token，可以将其放在请求头里，每次请求都携带token<br/>5. 服务端验证token，所有需要校验身份的接口都会被校验token，若token解析后的数据包含用户身份信息，则身份验证通过，返回数据<br/></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Schema">Schema</h2>
+<h3 id="用户">用户</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">id</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户名</td>
+</tr>
+<tr>
+<td style="text-align:center">email</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">邮箱</td>
+</tr>
+<tr>
+<td style="text-align:center">psw</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">密码</td>
+</tr>
+<tr>
+<td style="text-align:center">sex</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">性别</td>
+</tr>
+<tr>
+<td style="text-align:center">birth</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">生日</td>
+</tr>
+<tr>
+<td style="text-align:center">phone</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">电话</td>
+</tr>
+<tr>
+<td style="text-align:center">explain</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">签名</td>
+</tr>
+<tr>
+<td style="text-align:center">imgurl</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">头像地址</td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">注册时间</td>
+</tr>
+<tr>
+<td style="text-align:center">grade</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户等级</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="好友">好友</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">id</td>
+</tr>
+<tr>
+<td style="text-align:center">userID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+</tr>
+<tr>
+<td style="text-align:center">friendID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">好友id</td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">date</td>
+<td style="text-align:center">生成时间</td>
+</tr>
+<tr>
+<td style="text-align:center">state</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">好友状态(0 已为好友，1 申请中，2 对方未同意 )</td>
+</tr>
+<tr>
+<td style="text-align:center">lastTime</td>
+<td style="text-align:center">date</td>
+<td style="text-align:center">最后一条消息时间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="私聊消息">私聊消息</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">id</td>
+</tr>
+<tr>
+<td style="text-align:center">userID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">发送者id</td>
+</tr>
+<tr>
+<td style="text-align:center">friendID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">接受者id</td>
+</tr>
+<tr>
+<td style="text-align:center">message</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">发送内容</td>
+</tr>
+<tr>
+<td style="text-align:center">types</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">内容类型(0文字,1图片,2音频,3定位)</td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">date</td>
+<td style="text-align:center">发送日期</td>
+</tr>
+<tr>
+<td style="text-align:center">state</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">消息状态(0已读，1未读)</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="群">群</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">id</td>
+</tr>
+<tr>
+<td style="text-align:center">userID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群主id</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群名</td>
+</tr>
+<tr>
+<td style="text-align:center">imgurl</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群封面</td>
+</tr>
+<tr>
+<td style="text-align:center">notice</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群说明</td>
+</tr>
+<tr>
+<td style="text-align:center">notice</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群公告</td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">date</td>
+<td style="text-align:center">创建日期</td>
+</tr>
+<tr>
+<td style="text-align:center">groupNum</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群号</td>
+</tr>
+</tbody>
+</table>
+<h3 id="群消息">群消息</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">id</td>
+</tr>
+<tr>
+<td style="text-align:center">groupID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群id</td>
+</tr>
+<tr>
+<td style="text-align:center">userID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">发送者id</td>
+</tr>
+<tr>
+<td style="text-align:center">message</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">发送内容</td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">date</td>
+<td style="text-align:center">发送时间</td>
+</tr>
+<tr>
+<td style="text-align:center">types</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">内容类型</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="群成员">群成员</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">id</td>
+</tr>
+<tr>
+<td style="text-align:center">groupID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群id</td>
+</tr>
+<tr>
+<td style="text-align:center">userID</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群内昵称</td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">date</td>
+<td style="text-align:center">加入日期</td>
+</tr>
+<tr>
+<td style="text-align:center">tip</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">未读消息数</td>
+</tr>
+<tr>
+<td style="text-align:center">shield</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">免打扰(0不屏蔽,1屏蔽)</td>
+</tr>
+<tr>
+<td style="text-align:center">lastTime</td>
+<td style="text-align:center">date</td>
+<td style="text-align:center">最后一条消息时间</td>
+</tr>
+</tbody>
+</table>
+<h2 id="API-DOC">API DOC</h2>
+<blockquote>
+<p>baseURL:</p>
+<p>注：所有接口名对应路由调用的api</p>
+</blockquote>
+<h3 id="1-signUp">1.signUp</h3>
+<p>描述：注册用户</p>
+<p>地址：<code>/signup/add</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">mail</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">邮箱</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">pwd</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">密码</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-judgeValue">2.judgeValue</h3>
+<p>描述：查询用户是否存在</p>
+<p>地址：<code>/signup/judge</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户名/邮箱</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center"><code>name</code>/<code>mail</code></td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center"><code>0</code>存在 或 <code>&gt;0</code>:不存在</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;status&quot;</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="string">&quot;result&quot;</span>:<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-signIn">3.signIn</h3>
+<p>描述：登陆</p>
+<p>地址：<code>/signin/match</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户名/邮箱</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">psw</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">密码</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">imgurl</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">头像url</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">token</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;status&quot;</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="string">&quot;back&quot;</span>:&#123;</span><br><span class="line">        <span class="string">&quot;id&quot;</span>:<span class="string">&quot;60a9cb976d91641d68733adf&quot;</span>,</span><br><span class="line">        <span class="string">&quot;name&quot;</span>:<span class="string">&quot;西西&quot;</span>,</span><br><span class="line">        <span class="string">&quot;imgurl&quot;</span>:<span class="string">&quot;user.jpg&quot;</span>,</span><br><span class="line">        <span class="string">&quot;token&quot;</span>:<span class="string">&quot;后端生成的token&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-searchUser">4.searchUser</h3>
+<p>描述：搜索用户</p>
+<p>地址：<code>/search/user</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">搜索词</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">验证</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户数据</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;status&quot;</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="string">&quot;result&quot;</span>:[</span><br><span class="line">        &#123;</span><br><span class="line">      	 <span class="string">&quot;imgurl&quot;</span>:<span class="string">&quot;user.jpg&quot;</span>,</span><br><span class="line">     	 <span class="string">&quot;_id&quot;</span>:<span class="string">&quot;60a9cb976d91641d68733adf&quot;</span>,</span><br><span class="line">      	 <span class="string">&quot;name&quot;</span>:<span class="string">&quot;西西&quot;</span>,</span><br><span class="line">      	 <span class="string">&quot;email&quot;</span>:<span class="string">&quot;123456@qq.com&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;imgurl&quot;</span>:<span class="string">&quot;user.jpg&quot;</span>,</span><br><span class="line">          <span class="string">&quot;_id&quot;</span>:<span class="string">&quot;60aa4245fc3f843660404cc8&quot;</span>,</span><br><span class="line">          <span class="string">&quot;name&quot;</span>:<span class="string">&quot;哥哥&quot;</span>,</span><br><span class="line">          <span class="string">&quot;email&quot;</span>:<span class="string">&quot;123456789@qq.com&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-isFriend">5.isFriend</h3>
+<p>描述：是否为好友</p>
+<p>地址：<code>/search/isfriend</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">fid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">搜索对象id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">验证</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码200/400</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-searchGroup">6.searchGroup</h3>
+<p>描述：搜索群</p>
+<p>地址：/search/group</p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">搜索词</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">验证</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群名</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">_id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">imgurl</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群头像</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-isInGroup">7.isInGroup</h3>
+<p>描述：是否在群内</p>
+<p>地址：/search/isingroup</p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">gid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">验证</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-userDetial">8.userDetial</h3>
+<p>描述：用户详情</p>
+<p>地址：<code>/user/detial</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">验证</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">用户详情数据</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    data:&#123;</span><br><span class="line">        result:&#123;</span><br><span class="line">           	 createdAt:<span class="string">&quot;2021-05-23T11:53:41.100Z&quot;</span></span><br><span class="line">			email:<span class="string">&quot;242166@qq.co&quot;</span></span><br><span class="line">             imgurl:<span class="string">&quot;user.jpg&quot;</span></span><br><span class="line">			name:<span class="string">&quot;小花&quot;</span></span><br><span class="line">			sex:<span class="string">&quot;asexual&quot;</span></span><br><span class="line">			time:<span class="string">&quot;2021-05-23T11:53:41.090Z&quot;</span></span><br><span class="line">			updatedAt:<span class="string">&quot;2021-05-25T08:20:01.765Z&quot;</span></span><br><span class="line">			_id:<span class="string">&quot;60aa4245fc3f843660404cc8&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-userUpdate">9.userUpdate</h3>
+<p>描述：用户信息修改</p>
+<p>地址：<code>/user/update</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">验证</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">修改内容</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">psw</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">密码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">修改类型</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码200/300/400/500/201</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">200</span>：修改成功</span><br><span class="line"><span class="number">300</span>：用户名已存在，修改失败</span><br><span class="line"><span class="number">400</span>：失败</span><br><span class="line"><span class="number">500</span>：报错</span><br><span class="line"><span class="number">201</span>：邮箱已存在</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10-getMarkName">10.getMarkName</h3>
+<p>描述：获取好友昵称</p>
+<p>地址：<code>/user/getmarkname</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">fid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">好友id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码200/500</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">昵称</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11-updateMarkName">11.updateMarkName</h3>
+<p>描述：好友昵称修改</p>
+<p>地址：<code>/user/updatemarkname</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">uid/fid/name</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码200/500</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="12-applyFriend">12.applyFriend</h3>
+<p>描述：<em>申请好友</em></p>
+<p>地址：<code>/friend/apply</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">uid/fid/msg</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">msg</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">请求词</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="13-updateFriendState">13.updateFriendState</h3>
+<p>描述：<em>更新好友关系（同意）</em></p>
+<p>地址：<code>/friend/updatefriendstate</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">uid/fid</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="14-deleteFriend">14.deleteFriend</h3>
+<p>描述：<em>好友状态更新（拒绝/删除）</em></p>
+<p>地址：<code>/friend/deletefriend</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">uid/fid</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="15-upload">15.*upload</h3>
+<p>描述：文件上传</p>
+<p>地址：<code>/files/upload</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">文件保存目录（/user/group/…）</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">文件名</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">保存的文件名</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="16-getFriend">16.getFriend</h3>
+<p>描述：<em>获取好友列表</em></p>
+<p>地址：<code>/index/getfriend</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">state</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">关系状态</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">好友数据</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">0：好友 / 1：群聊</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    id: ver.friendID._id,</span><br><span class="line">    name: ver.friendID.name,</span><br><span class="line">    markname: ver.markname,</span><br><span class="line">    imgurl: ver.friendID.imgurl,</span><br><span class="line">    lastTime: ver.lastTime,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="17-getLastMsg">17.getLastMsg</h3>
+<p>描述：<em>获取最后一条好友消息</em></p>
+<p>地址：<code>/index/getlastmsg</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">fid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">好友id</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    message: ver.message,</span><br><span class="line">      types: ver.types,</span><br><span class="line">      time: ver.time,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="18-unreadMsg">18.unreadMsg</h3>
+<p>描述：<em>获取好友未读消息数</em></p>
+<p>地址：<code>/index/updatemsg</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">fid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">好友id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">state</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">消息状态</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">消息数</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="19-updateMsg">19.updateMsg</h3>
+<p>描述：<em>更新好友未读消息数</em></p>
+<p>地址：<code>/index/updatemsg</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">fid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">好友id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">state</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">消息状态</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">str</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="20-getGroup">20.getGroup</h3>
+<p>描述：<em>获取群列表</em></p>
+<p>地址：<code>/index/getgroup</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">0：好友 / 1：群聊</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    gid: ver.groupID._id,</span><br><span class="line">        name: ver.groupID.name,</span><br><span class="line">        markname: ver.name,</span><br><span class="line">        imgurl: ver.groupID.imgurl,</span><br><span class="line">        lastTime: ver.lastTime,</span><br><span class="line">        tip: ver.tip</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="21-getLastMsg">21.getLastMsg</h3>
+<p>描述：<em>获取最后一条群消息</em></p>
+<p>地址：<code>/index/getlastgroupmsg</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">gid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群id</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    message: ver.message,</span><br><span class="line">      types: ver.types,</span><br><span class="line">      time: ver.time,</span><br><span class="line">      name: ver.userID.name <span class="comment">// 谁发的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="22-updateGroupMsg">22.updateGroupMsg</h3>
+<p>描述：<em>更新群未读消息数</em></p>
+<p>地址：<code>/index/updategroupmsg</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">gid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">群id</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="23-msg">23.msg</h3>
+<p>描述：<em>聊天消息分页查询</em></p>
+<p>地址：<code>/chat/msg</code></p>
+<p>请求方式：<strong>POST</strong></p>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">校验</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">用户id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">fid</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">好友id</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">nowPage</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">当前页数</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">pageSize</td>
+<td style="text-align:center">num</td>
+<td style="text-align:center">每页消息条数</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">必需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">status</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">状态码</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">result</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    id: ver._id,</span><br><span class="line">    messagee: ver.message,</span><br><span class="line">    types: ver.types,	<span class="comment">// 消息类型</span></span><br><span class="line">    time: ver.time,</span><br><span class="line"></span><br><span class="line">    fromId: ver.userID._id,</span><br><span class="line">    imgurl: ver.userID.imgurl,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/Algorithm-intersectionOfTwoLinkedLists/" data-toggle="tooltip" data-placement="top" title="【LeetCode-简单】160. 相交链表">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=italk-app 社交聊天app&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/italk-app/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Tue Sep 14 2021 10:52:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">小舍App开发文档</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E9%A2%84%E8%A7%88"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">快速预览</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">功能介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">技术栈</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E5%88%97%E8%A1%A8"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">功能列表</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Project"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Project</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">项目目录</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">插件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">前端路由</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%A4%E4%BA%92%E9%80%BB%E8%BE%91"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">交互逻辑</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Schema"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">Schema</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%94%A8%E6%88%B7"><span class="toc-nav-number">1.9.1.</span> <span class="toc-nav-text">用户</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A5%BD%E5%8F%8B"><span class="toc-nav-number">1.9.2.</span> <span class="toc-nav-text">好友</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%A7%81%E8%81%8A%E6%B6%88%E6%81%AF"><span class="toc-nav-number">1.9.3.</span> <span class="toc-nav-text">私聊消息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BE%A4"><span class="toc-nav-number">1.9.4.</span> <span class="toc-nav-text">群</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BE%A4%E6%B6%88%E6%81%AF"><span class="toc-nav-number">1.9.5.</span> <span class="toc-nav-text">群消息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BE%A4%E6%88%90%E5%91%98"><span class="toc-nav-number">1.9.6.</span> <span class="toc-nav-text">群成员</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#API-DOC"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">API DOC</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-signUp"><span class="toc-nav-number">1.10.1.</span> <span class="toc-nav-text">1.signUp</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-judgeValue"><span class="toc-nav-number">1.10.2.</span> <span class="toc-nav-text">2.judgeValue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-signIn"><span class="toc-nav-number">1.10.3.</span> <span class="toc-nav-text">3.signIn</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-searchUser"><span class="toc-nav-number">1.10.4.</span> <span class="toc-nav-text">4.searchUser</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-isFriend"><span class="toc-nav-number">1.10.5.</span> <span class="toc-nav-text">5.isFriend</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-searchGroup"><span class="toc-nav-number">1.10.6.</span> <span class="toc-nav-text">6.searchGroup</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-isInGroup"><span class="toc-nav-number">1.10.7.</span> <span class="toc-nav-text">7.isInGroup</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8-userDetial"><span class="toc-nav-number">1.10.8.</span> <span class="toc-nav-text">8.userDetial</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#9-userUpdate"><span class="toc-nav-number">1.10.9.</span> <span class="toc-nav-text">9.userUpdate</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#10-getMarkName"><span class="toc-nav-number">1.10.10.</span> <span class="toc-nav-text">10.getMarkName</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#11-updateMarkName"><span class="toc-nav-number">1.10.11.</span> <span class="toc-nav-text">11.updateMarkName</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#12-applyFriend"><span class="toc-nav-number">1.10.12.</span> <span class="toc-nav-text">12.applyFriend</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#13-updateFriendState"><span class="toc-nav-number">1.10.13.</span> <span class="toc-nav-text">13.updateFriendState</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#14-deleteFriend"><span class="toc-nav-number">1.10.14.</span> <span class="toc-nav-text">14.deleteFriend</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#15-upload"><span class="toc-nav-number">1.10.15.</span> <span class="toc-nav-text">15.*upload</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#16-getFriend"><span class="toc-nav-number">1.10.16.</span> <span class="toc-nav-text">16.getFriend</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#17-getLastMsg"><span class="toc-nav-number">1.10.17.</span> <span class="toc-nav-text">17.getLastMsg</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#18-unreadMsg"><span class="toc-nav-number">1.10.18.</span> <span class="toc-nav-text">18.unreadMsg</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#19-updateMsg"><span class="toc-nav-number">1.10.19.</span> <span class="toc-nav-text">19.updateMsg</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#20-getGroup"><span class="toc-nav-number">1.10.20.</span> <span class="toc-nav-text">20.getGroup</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#21-getLastMsg"><span class="toc-nav-number">1.10.21.</span> <span class="toc-nav-text">21.getLastMsg</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#22-updateGroupMsg"><span class="toc-nav-number">1.10.22.</span> <span class="toc-nav-text">22.updateGroupMsg</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#23-msg"><span class="toc-nav-number">1.10.23.</span> <span class="toc-nav-text">23.msg</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Uniapp" title="Uniapp">Uniapp</a>
+            
+            <a class="tag" href="/tags/#MongDB" title="MongDB">MongDB</a>
+            
+            <a class="tag" href="/tags/#Nodejs" title="Nodejs">Nodejs</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://aoau.top:3004/courses/ps" target="_blank">白云轻舍</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">407.8k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/italk-app/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
+</html>
