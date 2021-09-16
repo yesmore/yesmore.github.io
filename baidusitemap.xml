@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yesmore.cc/cn/xiaoshesapi/</loc>
+    <lastmod>2021-09-16</lastmod>
+  </url>
+  <url>
     <loc>https://yesmore.cc/cn/italk-app/</loc>
     <lastmod>2021-09-14</lastmod>
   </url>
@@ -423,10 +427,6 @@
   <url>
     <loc>https://yesmore.cc/cn/nodejs/</loc>
     <lastmod>2021-07-22</lastmod>
-  </url>
-  <url>
-    <loc>https://yesmore.cc/cn/xiaoshesapi/</loc>
-    <lastmod>2021-07-21</lastmod>
   </url>
   <url>
     <loc>https://yesmore.cc/cn/JavaScript%20-DOM%E4%BA%8B%E4%BB%B6%E4%B9%8B%E6%8B%96%E6%8B%BD%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96/</loc>
