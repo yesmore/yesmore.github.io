@@ -224,9 +224,7 @@
           
           
           <li>
-            <a href="/about/">
-              
-              关于
+            <a href="/algorithms/">
               
               
             </a>
@@ -246,7 +244,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -422,7 +422,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                838
+                833
               </span> 
               字
             </span>
@@ -486,23 +486,14 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>要点：链表、双指针</p>
-<h3 id="描述">描述</h3>
-<p>给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。</p>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。</p>
 <p>题目数据 保证 整个链式结构中不存在环。</p>
 <p>注意，函数返回结果后，链表必须 保持其原始结构 。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">示例 <span class="number">1</span>：</span><br><span class="line"></span><br><span class="line">输入：intersectVal = <span class="number">8</span>, listA = [<span class="number">4</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">5</span>], listB = [<span class="number">5</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">5</span>], skipA = <span class="number">2</span>, skipB = <span class="number">3</span></span><br><span class="line">输出：Intersected at <span class="string">&#x27;8&#x27;</span></span><br><span class="line">解释：相交节点的值为 <span class="number">8</span> （注意，如果两个链表相交则不能为 <span class="number">0</span>）。</span><br><span class="line">从各自的表头开始算起，链表 A 为 [<span class="number">4</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">5</span>]，链表 B 为 [<span class="number">5</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">5</span>]。</span><br><span class="line">在 A 中，相交节点前有 <span class="number">2</span> 个节点；在 B 中，相交节点前有 <span class="number">3</span> 个节点。</span><br><span class="line"></span><br><span class="line">示例 <span class="number">2</span>：</span><br><span class="line"></span><br><span class="line">输入：intersectVal = <span class="number">2</span>, listA = [<span class="number">0</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>], listB = [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>], skipA = <span class="number">3</span>, skipB = <span class="number">1</span></span><br><span class="line">输出：Intersected at <span class="string">&#x27;2&#x27;</span></span><br><span class="line">解释：相交节点的值为 <span class="number">2</span> （注意，如果两个链表相交则不能为 <span class="number">0</span>）。</span><br><span class="line">从各自的表头开始算起，链表 A 为 [<span class="number">0</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>]，链表 B 为 [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>]。</span><br><span class="line">在 A 中，相交节点前有 <span class="number">3</span> 个节点；在 B 中，相交节点前有 <span class="number">1</span> 个节点。</span><br><span class="line"></span><br><span class="line">示例 <span class="number">3</span>：</span><br><span class="line"></span><br><span class="line">输入：intersectVal = <span class="number">0</span>, listA = [<span class="number">2</span>,<span class="number">6</span>,<span class="number">4</span>], listB = [<span class="number">1</span>,<span class="number">5</span>], skipA = <span class="number">3</span>, skipB = <span class="number">2</span></span><br><span class="line">输出：<span class="literal">null</span></span><br><span class="line">解释：从各自的表头开始算起，链表 A 为 [<span class="number">2</span>,<span class="number">6</span>,<span class="number">4</span>]，链表 B 为 [<span class="number">1</span>,<span class="number">5</span>]。</span><br><span class="line">由于这两个链表不相交，所以 intersectVal 必须为 <span class="number">0</span>，而 skipA 和 skipB 可以是任意值。</span><br><span class="line">这两个链表不相交，因此返回 <span class="literal">null</span> 。</span><br></pre></td></tr></table></figure>
 <p>提示：</p>
-<p>listA 中节点数目为 m<br>
-listB 中节点数目为 n<br>
-0 &lt;= m, n &lt;= 3 * 104<br>
-1 &lt;= Node.val &lt;= 105<br>
-0 &lt;= skipA &lt;= m<br>
-0 &lt;= skipB &lt;= n<br>
-如果 listA 和 listB 没有交点，intersectVal 为 0<br>
-如果 listA 和 listB 有交点，intersectVal == listA[skipA + 1] == listB[skipB + 1]</p>
+<p>listA 中节点数目为 m<br>listB 中节点数目为 n<br>0 &lt;= m, n &lt;= 3 * 104<br>1 &lt;= Node.val &lt;= 105<br>0 &lt;= skipA &lt;= m<br>0 &lt;= skipB &lt;= n<br>如果 listA 和 listB 没有交点，intersectVal 为 0<br>如果 listA 和 listB 有交点，intersectVal == listA[skipA + 1] == listB[skipB + 1]</p>
 <p>进阶：你能否设计一个时间复杂度 O(n) 、仅用 O(1) 内存的解决方案？</p>
-<h3 id="方法一、哈希表">方法一、哈希表</h3>
-<p>有 A, B 这两条链表, 先遍历其中一个，比如 A 链表, 并将 A 中的所有节点存入哈希表。</p>
+<h3 id="方法一、哈希表"><a href="#方法一、哈希表" class="headerlink" title="方法一、哈希表"></a>方法一、哈希表</h3><p>有 A, B 这两条链表, 先遍历其中一个，比如 A 链表, 并将 A 中的所有节点存入哈希表。</p>
 <p>遍历 B 链表,检查节点是否在哈希表中, 第一个存在的就是相交节点</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;ListNode&#125;</span> <span class="variable">headA</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;ListNode&#125;</span> <span class="variable">headB</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;ListNode&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> getIntersectionNode = <span class="function"><span class="keyword">function</span>(<span class="params">headA, headB</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> data = <span class="keyword">new</span> <span class="built_in">Set</span>()</span><br><span class="line">  <span class="keyword">while</span> (headA) &#123;</span><br><span class="line">    data.add(headA)</span><br><span class="line">    headA = headA.next</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (headB) &#123;</span><br><span class="line">    <span class="keyword">if</span> (data.has(headB))</span><br><span class="line">      <span class="keyword">return</span> headB</span><br><span class="line">    headB = headB.next</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -512,17 +503,13 @@ listB 中节点数目为 n<br>
 </ul>
 <p>时间复杂度：$O(N)$</p>
 <p>空间复杂度：$O(N)$</p>
-<h3 id="方法二、双指针">方法二、双指针</h3>
-<p>例如使用 a, b 两个指针分别指向 A, B 这两条链表, 两个指针相同的速度向后移动,</p>
+<h3 id="方法二、双指针"><a href="#方法二、双指针" class="headerlink" title="方法二、双指针"></a>方法二、双指针</h3><p>例如使用 a, b 两个指针分别指向 A, B 这两条链表, 两个指针相同的速度向后移动,</p>
 <ul>
-<li>
-<p>当 a 到达链表的尾部时,重定位到链表 B 的头结点</p>
+<li><p>当 a 到达链表的尾部时,重定位到链表 B 的头结点</p>
 </li>
-<li>
-<p>当 b 到达链表的尾部时,重定位到链表 A 的头结点。</p>
+<li><p>当 b 到达链表的尾部时,重定位到链表 A 的头结点。</p>
 </li>
-<li>
-<p>a, b 指针相遇的点为相交的起始节点，否则没有相交点</p>
+<li><p>a, b 指针相遇的点为相交的起始节点，否则没有相交点</p>
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;ListNode&#125;</span> <span class="variable">headA</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;ListNode&#125;</span> <span class="variable">headB</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;ListNode&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> getIntersectionNode = <span class="function"><span class="keyword">function</span>(<span class="params">headA, headB</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = headA, b = headB</span><br><span class="line">  <span class="keyword">while</span> (a !== b) &#123;</span><br><span class="line">    a = !a ? headA : a.next</span><br><span class="line">    b = !b ? headB : b.next </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -823,7 +810,7 @@ listB 中节点数目为 n<br>
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">407.9k</span>
+          站点总字数：<span class="post-count">407.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1290,20 +1277,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-</body>
+	</body>
 </html>
