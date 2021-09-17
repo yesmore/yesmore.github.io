@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/cn/Algorithm-plus-one/</loc>
+    
+    <lastmod>2021-09-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/cn/xiaoshesapi/</loc>
     
     <lastmod>2021-09-16</lastmod>
@@ -1019,14 +1026,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Electron/</loc>
+    <loc>https://yesmore.cc/tags/%E5%85%8D%E8%B4%B9Api/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/%E5%85%8D%E8%B4%B9Api/</loc>
+    <loc>https://yesmore.cc/tags/Electron/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1182,13 +1189,6 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Vue/</loc>
-    <lastmod>2021-09-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yesmore.cc/categories/Web%E5%AE%89%E5%85%A8/%E7%9F%A5%E8%AF%86%E6%89%AB%E7%9B%B2/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
@@ -1196,7 +1196,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Electron/</loc>
+    <loc>https://yesmore.cc/categories/Vue/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1204,6 +1204,13 @@
   
   <url>
     <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/</loc>
+    <lastmod>2021-09-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/categories/Electron/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
