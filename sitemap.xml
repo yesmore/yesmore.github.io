@@ -1005,20 +1005,6 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Electron/</loc>
-    <lastmod>2021-10-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yesmore.cc/tags/%E5%85%8D%E8%B4%B9Api/</loc>
-    <lastmod>2021-10-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yesmore.cc/tags/Vue/</loc>
     <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1034,6 +1020,20 @@
   
   <url>
     <loc>https://yesmore.cc/tags/Eggjs/</loc>
+    <lastmod>2021-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/tags/Electron/</loc>
+    <lastmod>2021-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/tags/%E5%85%8D%E8%B4%B9Api/</loc>
     <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1189,14 +1189,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Electron/</loc>
+    <loc>https://yesmore.cc/categories/Vue/</loc>
     <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/</loc>
+    <loc>https://yesmore.cc/categories/Electron/</loc>
     <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1210,7 +1210,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Vue/</loc>
+    <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/</loc>
     <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1231,14 +1231,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/NodeJs/</loc>
+    <loc>https://yesmore.cc/categories/Vue/Eggjs/</loc>
     <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Vue/Eggjs/</loc>
+    <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/NodeJs/</loc>
     <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

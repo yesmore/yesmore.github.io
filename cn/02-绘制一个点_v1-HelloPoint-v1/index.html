@@ -221,8 +221,6 @@
 
           <!-- 
           
-          
-          
           <li>
             <a href="/about/">
               
@@ -231,6 +229,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -265,6 +265,10 @@
           
           
           
+          
+          
+          
+          
           <li>
             <a href="/tags/">
               
@@ -273,10 +277,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -490,8 +490,7 @@
 <p>要点：着色器、着色器代码规范、vec4（齐次坐标）、gl.drawArrays()</p>
 </blockquote>
 <span id="more"></span>
-<h4 id="步骤">步骤</h4>
-<ol>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
 <li>获取<code>&lt;canvas&gt;</code>元素</li>
 <li>获取WebGL上下文</li>
 <li><strong>初始化着色器</strong></li>
@@ -499,61 +498,41 @@
 <li>清除<code>&lt;canvas&gt;</code></li>
 <li>绘图</li>
 </ol>
-<h4 id="知识点">知识点</h4>
-<ol>
-<li>
-<h6 id="着色器">着色器</h6>
-<p><strong>顶点着色器</strong>：用来描述顶点特性（位置、颜色等）的程序。<code>顶点</code>是指二维或三维空间中的一个点（端点或交点）。</p>
+<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ol>
+<li><h6 id="着色器"><a href="#着色器" class="headerlink" title="着色器"></a>着色器</h6><p><strong>顶点着色器</strong>：用来描述顶点特性（位置、颜色等）的程序。<code>顶点</code>是指二维或三维空间中的一个点（端点或交点）。</p>
 <p><strong>片元着色器</strong>：进行逐片元处理过程如’光照‘的程序。<code>片元</code>是一个WebGL术语，可理解为<code>像素</code>（图像的单元）。</p>
 </li>
-<li>
-<h6 id="代码规范">代码规范</h6>
-<p>因为着色器程序代码必须预先处理成单个字符串形式，所以用<code>+</code>将多行字符串连成长字符串，当着色器内部出错时，可以获取出错行号，也可以不使用<code>\n</code></p>
+<li><h6 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h6><p>因为着色器程序代码必须预先处理成单个字符串形式，所以用<code>+</code>将多行字符串连成长字符串，当着色器内部出错时，可以获取出错行号，也可以不使用<code>\n</code></p>
 </li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 顶点着色器程序</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">        <span class="string">&#x27;gl_Position = vec4(0.1, 0.1, 0.0, 1.0);\n&#x27;</span> + <span class="comment">//设置坐标</span></span><br><span class="line">        <span class="string">&#x27;gl_PointSize = 10.0;\n&#x27;</span> +                    <span class="comment">//设置尺寸</span></span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 片元着色器程序</span></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE=</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">        <span class="string">&#x27;gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0);\n&#x27;</span>+ <span class="comment">//设置颜色</span></span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>
-<h6 id="initShaders-gl-vshader-fshader-初始化着色器，">initShaders(gl, vshader, fshader)初始化着色器，</h6>
-<p>返回值：true/false</p>
+<ol>
+<li><h6 id="initShaders-gl-vshader-fshader-初始化着色器，"><a href="#initShaders-gl-vshader-fshader-初始化着色器，" class="headerlink" title="initShaders(gl, vshader, fshader)初始化着色器，"></a>initShaders(gl, vshader, fshader)初始化着色器，</h6><p>返回值：true/false</p>
 <p>作用：将字符串形式的着色器代码从js传给webgl系统，并建立着色器。</p>
 <p>运行位置：着色器运行在WebGL系统，而不是js程序中。</p>
 </li>
-<li>
-<p><strong>WebGL程序 = 运行在浏览器中的js + 运行在WebGL系统的着色器程序</strong></p>
+<li><p><strong>WebGL程序 = 运行在浏览器中的js + 运行在WebGL系统的着色器程序</strong></p>
 </li>
-<li>
-<h6 id="vec4：表示三个浮点数组成的矢量（vector）">vec4：表示<strong>三个浮点数</strong>组成的<strong>矢量</strong>（vector）</h6>
-</li>
-<li>
-<h6 id="vec4-v0-v1-v2-v3">vec4(v0, v1, v2, v3)</h6>
-<p>作用：创建vec4类型的变量</p>
+<li><h6 id="vec4：表示三个浮点数组成的矢量（vector）"><a href="#vec4：表示三个浮点数组成的矢量（vector）" class="headerlink" title="vec4：表示三个浮点数组成的矢量（vector）"></a>vec4：表示<strong>三个浮点数</strong>组成的<strong>矢量</strong>（vector）</h6></li>
+<li><h6 id="vec4-v0-v1-v2-v3"><a href="#vec4-v0-v1-v2-v3" class="headerlink" title="vec4(v0, v1, v2, v3)"></a>vec4(v0, v1, v2, v3)</h6><p>作用：创建vec4类型的变量</p>
 <p>返回值：由v0~v3组成的vec4对象</p>
 <p>参数：X、Y、Z坐标 + 1.0</p>
 </li>
-<li>
-<h6 id="齐次坐标：由4个分离组成的矢量被称为其次坐标。"><strong>齐次坐标</strong>：由4个分离组成的矢量被称为其次坐标。</h6>
-<p>齐次坐标用如下符号描述：(x,y,z,w)，等价于(x/w, y/w, z/w)。所以当w等于1，就可以当成三维坐标使用。w值必须大于0，若w趋近于0， 那么它表示的点趋近于无穷远。</p>
+<li><h6 id="齐次坐标：由4个分离组成的矢量被称为其次坐标。"><a href="#齐次坐标：由4个分离组成的矢量被称为其次坐标。" class="headerlink" title="齐次坐标：由4个分离组成的矢量被称为其次坐标。"></a><strong>齐次坐标</strong>：由4个分离组成的矢量被称为其次坐标。</h6><p>齐次坐标用如下符号描述：(x,y,z,w)，等价于(x/w, y/w, z/w)。所以当w等于1，就可以当成三维坐标使用。w值必须大于0，若w趋近于0， 那么它表示的点趋近于无穷远。</p>
 <p>作用：用矩阵乘法来描述顶点变化称为可能。</p>
 </li>
-<li>
-<h6 id="gl-drawArrays">gl.drawArrays()</h6>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">作用：执行顶点着色器，按照mode参数指定的方式绘制图形</span><br><span class="line">参数：</span><br><span class="line">	mode，指定绘制的方式（gl.POINTS/gl.LINES/gl.LINE_STRIP/gl.LINE_LOOP/gl.TRIANGLES/gl.TRIANGLE_STRIP/gl.TRIANGLE_FAN）。</span><br><span class="line">	first, 指定从那个顶点开始绘制（整数型），<span class="number">0</span>表示从第一个顶点开始画起。</span><br><span class="line">	count, 指定绘制需要多少个顶点（整数型），顶点着色器执行的次数，每次处理一个顶点。执行完后，片元着色器开始执行</span><br><span class="line">返回值：无</span><br><span class="line">错误：/</span><br></pre></td></tr></table></figure>
+<li><h6 id="gl-drawArrays"><a href="#gl-drawArrays" class="headerlink" title="gl.drawArrays()"></a>gl.drawArrays()</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">作用：执行顶点着色器，按照mode参数指定的方式绘制图形</span><br><span class="line">参数：</span><br><span class="line">	mode，指定绘制的方式（gl.POINTS/gl.LINES/gl.LINE_STRIP/gl.LINE_LOOP/gl.TRIANGLES/gl.TRIANGLE_STRIP/gl.TRIANGLE_FAN）。</span><br><span class="line">	first, 指定从那个顶点开始绘制（整数型），<span class="number">0</span>表示从第一个顶点开始画起。</span><br><span class="line">	count, 指定绘制需要多少个顶点（整数型），顶点着色器执行的次数，每次处理一个顶点。执行完后，片元着色器开始执行</span><br><span class="line">返回值：无</span><br><span class="line">错误：/</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<h6 id="WebGL坐标系统：右手坐标系（暂时这么认为）">WebGL坐标系统：右手坐标系（暂时这么认为）</h6>
-</li>
+<li><h6 id="WebGL坐标系统：右手坐标系（暂时这么认为）"><a href="#WebGL坐标系统：右手坐标系（暂时这么认为）" class="headerlink" title="WebGL坐标系统：右手坐标系（暂时这么认为）"></a>WebGL坐标系统：右手坐标系（暂时这么认为）</h6></li>
 </ol>
 <p><img src="HelloPoint-v1-01.png" alt="1"></p>
 <p><img src="HelloPoint-v1-02.png" alt="1"></p>
-<ol start="10">
+<ol>
 <li>WebGL不需要交换颜色缓冲区</li>
 </ol>
-<h4 id="实例">实例</h4>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Draw a point<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">&quot;main()&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;webgl&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span>&gt;</span></span><br><span class="line">        Please use the browser supporting &quot;canvas&quot;.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/webgl-utils.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/webgl-debug.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/cuon-utils.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;HelloPoint1.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Draw a point<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">&quot;main()&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;webgl&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span>&gt;</span></span><br><span class="line">        Please use the browser supporting &quot;canvas&quot;.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/webgl-utils.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/webgl-debug.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/cuon-utils.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;HelloPoint1.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HelloPoint1.js</span></span><br><span class="line"><span class="comment">// 顶点着色器程序</span></span><br><span class="line"><span class="keyword">var</span> VSHADER_SOURCE =</span><br><span class="line">    <span class="string">&#x27;void main() &#123;\n&#x27;</span> +</span><br><span class="line">        <span class="string">&#x27;gl_Position = vec4(-0.5, -0.5, 0.0, 1.0);\n&#x27;</span> + <span class="comment">//设置坐标：顶点位置</span></span><br><span class="line">        <span class="string">&#x27;gl_PointSize = 10.0;\n&#x27;</span> +                    <span class="comment">//设置尺寸（px数），默认值1.0</span></span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 片元着色器程序</span></span><br><span class="line"><span class="keyword">var</span> FSHADER_SOURCE=</span><br><span class="line">    <span class="string">&#x27;void main()&#123;\n&#x27;</span>+</span><br><span class="line">        <span class="string">&#x27;gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0);\n&#x27;</span>+ <span class="comment">//设置颜色，RGBA格式</span></span><br><span class="line">    <span class="string">&#x27;&#125;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;webgl&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> gl = getWebGLContext(canvas);</span><br><span class="line">    <span class="keyword">if</span>( !gl )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to get the rendering context for WebGL&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化着色器</span></span><br><span class="line">    <span class="keyword">if</span>(!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE))&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Failed to initialize shaders.&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    gl.clearColor(<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);</span><br><span class="line">    gl.clear(gl.COLOR_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">    gl.drawArrays(gl.POINTS, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="效果">效果</h4>
-<p><img src="HelloPoint-v1-03.png" alt="1"></p>
+<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="HelloPoint-v1-03.png" alt="1"></p>
 
 
         <hr>
@@ -844,7 +823,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">408.3k</span>
+          站点总字数：<span class="post-count">408.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
