@@ -222,31 +222,20 @@
           <!-- 
           
           <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/algorithms/">
               
               
             </a>
@@ -265,7 +254,14 @@
           
           
           
-          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
           
           
           
@@ -277,6 +273,10 @@
               
             </a>
           </li>
+          
+          
+          
+          
           
           
           
@@ -422,7 +422,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                489
+                498
               </span> 
               字
             </span>
@@ -487,11 +487,8 @@
 
         <div align=center>
     <h1>小舍图片Api接口 v2</h1><br>
-    <iframe style="margin-left: 2px;margin-bottom: 10px;" frameborder="0" scrolling="1" width="91px" height="20px"  src="https://ghbtns.com/github-btn.html?user=yesmore&repo=photosapi&type=star&count=true"></iframe>
+	<iframe style="margin-left: 2px;margin-bottom: 10px;" frameborder="0" scrolling="1" width="91px" height="20px"  src="https://ghbtns.com/github-btn.html?user=yesmore&repo=photosapi&type=star&count=true"></iframe>
 </div>
-
-
-
 <hr>
 <blockquote>
 <p>截止已更新：参数 <strong>p</strong> 范围为：1~14（1400张）。</p>
@@ -503,9 +500,10 @@
 </ul>
 <p>注意：<strong>个人接口，请勿商用。图片收集不易，请珍惜食用。</strong></p>
 </blockquote>
-<h2 id="用户使用须知"><a href="#用户使用须知" class="headerlink" title="用户使用须知"></a>用户使用须知</h2><h3 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h3><p>地址：<code>http://v2.aoau.top</code></p>
+<h2 id="用户使用须知">用户使用须知</h2>
+<h3 id="调用方法">调用方法</h3>
+<p>地址：<code>http://v2.aoau.top</code></p>
 <p>方法：<code>GET</code></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -524,14 +522,21 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="ajax请求示例"><a href="#ajax请求示例" class="headerlink" title="ajax请求示例"></a>ajax请求示例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="title">fetchPhotos</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="built_in">this</span>.$http.get(<span class="string">&#x27;http://v2.aoau.top/pb?p=3&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h3 id="ajax请求示例">ajax请求示例</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="title">fetchPhotos</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="built_in">this</span>.$http.get(<span class="string">&#x27;http://v2.aoau.top/pb?p=3&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <p>示例url：<code>http://v2.aoau.top/pb?p=3</code></p>
 <p>返回值：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">res:&#123;</span><br><span class="line">	<span class="string">&quot;msg&quot;</span>: <span class="string">&quot;Github：https://github.com/yesmore/photosapi&quot;</span>,</span><br><span class="line">	<span class="string">&quot;currentPage&quot;</span>: <span class="string">&quot;3&quot;</span>,</span><br><span class="line">	<span class="string">&quot;photoNum&quot;</span>: <span class="number">100</span>,</span><br><span class="line">	<span class="string">&quot;totalUsers&quot;</span>: <span class="number">3</span>,</span><br><span class="line">	<span class="string">&quot;totalCall&quot;</span>: <span class="number">49</span>,</span><br><span class="line">	<span class="string">&quot;uip&quot;</span>: <span class="string">&quot;127.0.0.1&quot;</span>,</span><br><span class="line">	<span class="string">&quot;photoList&quot;</span>: [</span><br><span class="line">		<span class="string">&quot;https://cdn.jsdelivr.net/gh/yesmore/img/v2/3/01.jpg&quot;</span>,</span><br><span class="line">		...</span><br><span class="line">	],</span><br><span class="line">	<span class="string">&quot;info&quot;</span>: <span class="string">&quot;图片来源于网络，仅供个人娱乐。&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>下面是测试，其他线路请自行尝试<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/1/01.jpg">线路1</a><br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/2/01.jpg">线路2</a><br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/3/01.jpg">线路3</a><br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/4/01.jpg">线路4</a><br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/8/01.jpg">线路8</a><br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/14/01.jpg">线路14</a></p>
+<p>下面是测试，其他线路请自行尝试<br>
+<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/1/01.jpg">线路1</a><br>
+<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/2/01.jpg">线路2</a><br>
+<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/3/01.jpg">线路3</a><br>
+<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/4/01.jpg">线路4</a><br>
+<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/8/01.jpg">线路8</a><br>
+<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yesmore/img/v2/14/01.jpg">线路14</a></p>
 <hr>
-<h2 id="开发者须知"><a href="#开发者须知" class="headerlink" title="开发者须知"></a>开发者须知</h2><p>如果你想基于本项目开发，可以参考以下意见：</p>
+<h2 id="开发者须知">开发者须知</h2>
+<p>如果你想基于本项目开发，可以参考以下意见：</p>
 <ul>
 <li>使用 <strong>PicGo</strong>+<strong>Github</strong>+<strong>jsdelive</strong>r(CDN) 存储你的图片</li>
 <li>使用 <strong><a target="_blank" rel="noopener" href="https://github.com/yesmore/vue-egg-jwt-template">vuEgg-jwt-template</a></strong> 中的 <strong>egg-server</strong> 管理作为你的 <u>Api</u> 服务器</li>
@@ -543,16 +548,21 @@
 <p>vuEgg-jwt-template 是本人的另一个开源项目，基于 Vue、Eggjs、Jwt 实现的开箱即用的用户鉴权模板，使开发人员专注于核心逻辑编写，了解 <a target="_blank" rel="noopener" href="https://github.com/yesmore/vue-egg-jwt-template">详情</a>。</p>
 <p><strong>关于 CDN 加速</strong>：</p>
 <p>访问了解 <a target="_blank" rel="noopener" href="https://www.jsdelivr.com/?docs=gh">详情</a>。</p>
-<h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><p>开始之前，请确保你有以下环境：</p>
+<h3 id="快速开始">快速开始</h3>
+<p>开始之前，请确保你有以下环境：</p>
 <ul>
 <li>Nodejs</li>
 <li>Npm（Nodejs自带）</li>
 <li>MySQL 5.7.x</li>
 </ul>
-<h4 id="Clone-git-repo"><a href="#Clone-git-repo" class="headerlink" title="Clone git repo"></a>Clone git repo</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git bash</span></span><br><span class="line">$ git <span class="built_in">clone</span> git@github.com:yesmore/photosapi.git</span><br><span class="line"><span class="comment"># or http</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/yesmore/photosapi.git</span><br></pre></td></tr></table></figure>
-<h4 id="Install-amp-Start"><a href="#Install-amp-Start" class="headerlink" title="Install &amp; Start"></a>Install &amp; Start</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> egg-server</span><br><span class="line">$ npm i</span><br><span class="line"><span class="comment"># Start</span></span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
-<h4 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">|- egg-server/</span><br><span class="line">	|- app/</span><br><span class="line">		|- controller/</span><br><span class="line">		|- middleware/</span><br><span class="line">		|- model/</span><br><span class="line">		|- service/</span><br><span class="line">		|- view/</span><br><span class="line">		|- router.js</span><br><span class="line">	|- config/</span><br><span class="line">		|- config.default.js</span><br><span class="line">		|- plugin.js</span><br><span class="line">	|- test/</span><br><span class="line">	|- app.js</span><br><span class="line">	|- package.json</span><br><span class="line">	|- ...</span><br></pre></td></tr></table></figure>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>
+<h4 id="Clone-git-repo">Clone git repo</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git bash</span></span><br><span class="line">$ git <span class="built_in">clone</span> git@github.com:yesmore/photosapi.git</span><br><span class="line"><span class="comment"># or http</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/yesmore/photosapi.git</span><br></pre></td></tr></table></figure>
+<h4 id="Install-Start">Install &amp; Start</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> egg-server</span><br><span class="line">$ npm i</span><br><span class="line"><span class="comment"># Start</span></span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<h4 id="文件目录">文件目录</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">|- egg-server/</span><br><span class="line">	|- app/</span><br><span class="line">		|- controller/</span><br><span class="line">		|- middleware/</span><br><span class="line">		|- model/</span><br><span class="line">		|- service/</span><br><span class="line">		|- view/</span><br><span class="line">		|- router.js</span><br><span class="line">	|- config/</span><br><span class="line">		|- config.default.js</span><br><span class="line">		|- plugin.js</span><br><span class="line">	|- test/</span><br><span class="line">	|- app.js</span><br><span class="line">	|- package.json</span><br><span class="line">	|- ...</span><br></pre></td></tr></table></figure>
+<h2 id="License">License</h2>
+<p>MIT</p>
 
 
         <hr>
@@ -702,7 +712,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">小舍图片Api接口 v2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">用户使用须知</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">调用方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ajax%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">ajax请求示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E8%80%85%E9%A1%BB%E7%9F%A5"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">开发者须知</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">快速开始</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Clone-git-repo"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">Clone git repo</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Install-amp-Start"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">Install &amp; Start</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="toc-nav-number">1.2.1.3.</span> <span class="toc-nav-text">文件目录</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#License"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">License</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">小舍图片Api接口 v2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">用户使用须知</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">调用方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ajax%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">ajax请求示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E8%80%85%E9%A1%BB%E7%9F%A5"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">开发者须知</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">快速开始</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Clone-git-repo"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">Clone git repo</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Install-Start"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">Install &amp; Start</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="toc-nav-number">1.2.1.3.</span> <span class="toc-nav-text">文件目录</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#License"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">License</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -843,7 +853,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">411.6k</span>
+          站点总字数：<span class="post-count">411.8k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1310,5 +1320,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
 </html>

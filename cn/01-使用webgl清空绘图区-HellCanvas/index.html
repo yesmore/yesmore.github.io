@@ -222,31 +222,20 @@
           <!-- 
           
           <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/algorithms/">
               
               
             </a>
@@ -265,7 +254,14 @@
           
           
           
-          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
           
           
           
@@ -277,6 +273,10 @@
               
             </a>
           </li>
+          
+          
+          
+          
           
           
           
@@ -489,29 +489,38 @@
 <p>对应《WebGL编程指南》代码：01-HelloCanvas</p>
 </blockquote>
 <span id="more"></span>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
+<h4 id="步骤">步骤</h4>
+<ol>
 <li>获取<code>&lt;canvas&gt;</code>元素</li>
 <li>获取webgl绘图上下文</li>
 <li>设置背景色</li>
 <li>清空<code>&lt;canvas&gt;</code></li>
 </ol>
-<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ol>
-<li><p>gl.cleanColor()的参数</p>
+<h4 id="知识点">知识点</h4>
+<ol>
+<li>
+<p>gl.cleanColor()的参数</p>
 </li>
-<li><p>一旦指定了背景色，背景色就会驻存在WebGL系统中，在下次调用clearColor前不会改变</p>
+<li>
+<p>一旦指定了背景色，背景色就会驻存在WebGL系统中，在下次调用clearColor前不会改变</p>
 </li>
-<li><p>若想显示webgl调试错误，在调用getWebGLContext时，传入第二个参数<code>true</code>即可开启，例:</p>
+<li>
+<p>若想显示webgl调试错误，在调用getWebGLContext时，传入第二个参数<code>true</code>即可开启，例:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gl = getWebGLContext(canvas, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>gl.clear(buffer)清空背景色; 关于缓冲区，可以<a href="">查看这里</a></p>
+<li>
+<p>gl.clear(buffer)清空背景色; 关于缓冲区，可以<a href="">查看这里</a></p>
 </li>
 </ol>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p><code>HelloCanvas.html</code></p>
+<h4 id="实例">实例</h4>
+<p><code>HelloCanvas.html</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Clear canvas<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">&quot;main()&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;webgl&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span>&gt;</span></span><br><span class="line">		Please use the browser supporting &quot;canvas&quot;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/webgl-utils.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/webgl-debug.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/cuon-utils.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;HelloCanvas.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><code>HelloCanvas.js</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//HelloCanvas.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//获取&lt;canvas&gt;元素</span></span><br><span class="line">	<span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;webgl&#x27;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取WebGl绘图上下文</span></span><br><span class="line">	<span class="keyword">var</span> gl = getWebGLContext(canvas);</span><br><span class="line">	<span class="keyword">if</span>(!gl)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&#x27;Failed to get the rendering context for WebGL&#x27;</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//指定清空&lt;canvas&gt;的颜色</span></span><br><span class="line">	gl.clearColor(<span class="number">0.6</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//清空&lt;canvas&gt;</span></span><br><span class="line">	gl.clear(gl.COLOR_BUFFER_BIT);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="HellCanvas.png" alt=""></p>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p><code>getWebGLContext()</code>是《webgl编程指南》一书所编写的工具库(<code>cuon-utils.js</code>)中的方法，若有需要，可找博主私信即可。</p>
+<h4 id="效果">效果</h4>
+<p><img src="HellCanvas.png" alt=""></p>
+<h4 id="注意">注意</h4>
+<p><code>getWebGLContext()</code>是《webgl编程指南》一书所编写的工具库(<code>cuon-utils.js</code>)中的方法，若有需要，可找博主私信即可。</p>
 
 
         <hr>
@@ -802,7 +811,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">411.6k</span>
+          站点总字数：<span class="post-count">411.8k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1269,5 +1278,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
 </html>
