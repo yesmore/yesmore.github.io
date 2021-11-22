@@ -1026,13 +1026,6 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Hexo/</loc>
-    <lastmod>2021-11-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yesmore.cc/tags/Nginx/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
@@ -1041,6 +1034,13 @@
   
   <url>
     <loc>https://yesmore.cc/tags/Linux/</loc>
+    <lastmod>2021-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/tags/Hexo/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1266,14 +1266,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/Hexo/</loc>
+    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/Nginx/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/Nginx/</loc>
+    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/Hexo/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
