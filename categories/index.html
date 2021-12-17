@@ -224,9 +224,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archives/">
               
-              关于
+              归档
               
               
             </a>
@@ -235,7 +235,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -255,9 +257,7 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -283,7 +283,7 @@
           
           
            -->
-          
+
           <li>
             <a href="/about">关于</a>
           </li>
@@ -297,7 +297,7 @@
             <a href="/algorithms">算法</a>
           </li>
           <li>
-            <a href="/categories/#WebGL">WebGL</a>
+            <a href="/tags/#开源项目">开源项目</a>
           </li>
 
           
@@ -335,7 +335,7 @@
       // CLOSE
       $navbar.className = " ";
       // wait until animation end.
-      setTimeout(function() {
+      setTimeout(function () {
         // prevent frequently toggle
         if ($navbar.className.indexOf('in') < 0) {
           $collapse.style.height = "0px"
@@ -348,7 +348,6 @@
     }
   }
 </script>
-
 
 		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
 		<!-- Modified by Yu-Hsuan Yen -->
@@ -466,7 +465,7 @@
         
         <a href="#Python" title="Python" rel="13">Python</a>
         
-        <a href="#开源项目" title="开源项目" rel="1">开源项目</a>
+        <a href="#Demo" title="Demo" rel="1">Demo</a>
         
         <a href="#Web安全" title="Web安全" rel="3">Web安全</a>
         
@@ -484,35 +483,35 @@
         
         <a href="#知识扫盲" title="知识扫盲" rel="3">知识扫盲</a>
         
-        <a href="#Nginx" title="Nginx" rel="1">Nginx</a>
-        
         <a href="#Hexo" title="Hexo" rel="1">Hexo</a>
+        
+        <a href="#Nginx" title="Nginx" rel="1">Nginx</a>
         
         <a href="#NodeJs" title="NodeJs" rel="2">NodeJs</a>
         
-        <a href="#开源项目" title="开源项目" rel="1">开源项目</a>
+        <a href="#Demo" title="Demo" rel="1">Demo</a>
         
-        <a href="#开源项目" title="开源项目" rel="1">开源项目</a>
+        <a href="#Demo" title="Demo" rel="1">Demo</a>
         
         <a href="#Linux" title="Linux" rel="1">Linux</a>
         
-        <a href="#开源项目" title="开源项目" rel="2">开源项目</a>
+        <a href="#Demo" title="Demo" rel="2">Demo</a>
         
         <a href="#Browser" title="Browser" rel="1">Browser</a>
         
         <a href="#HTML" title="HTML" rel="1">HTML</a>
         
-        <a href="#Uniapp" title="Uniapp" rel="1">Uniapp</a>
-        
         <a href="#Hexo" title="Hexo" rel="1">Hexo</a>
         
-        <a href="#MongDB" title="MongDB" rel="1">MongDB</a>
+        <a href="#Uniapp" title="Uniapp" rel="1">Uniapp</a>
         
         <a href="#建站指南" title="建站指南" rel="1">建站指南</a>
         
+        <a href="#MongDB" title="MongDB" rel="1">MongDB</a>
+        
         <a href="#Nodejs" title="Nodejs" rel="1">Nodejs</a>
         
-        <a href="#开源项目" title="开源项目" rel="1">开源项目</a>
+        <a href="#Demo" title="Demo" rel="1">Demo</a>
         
         <a href="#Echarts" title="Echarts" rel="1">Echarts</a>
         
@@ -1116,9 +1115,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/FrontEndAdvanced-Promise/">
+          <a href="/cn/FrontEndAdvanced-Programming/">
             <h2 class="post-title">
-              【前端进阶】手写Promise
+              【前端进阶】命令式编程与声明式编程
               
               -- cn
               
@@ -1134,9 +1133,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/FrontEndAdvanced-Programming/">
+          <a href="/cn/FrontEndAdvanced-Promise/">
             <h2 class="post-title">
-              【前端进阶】命令式编程与声明式编程
+              【前端进阶】手写Promise
               
               -- cn
               
@@ -2739,9 +2738,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/Algorithm-remove-duplicates-from-sorted-array/">
+          <a href="/cn/Algorithm-plus-one/">
             <h2 class="post-title">
-              【LeetCode-简单】26.删除排序数组中的重复项
+              【LeetCode-简单】66. 加一
               
               -- cn
               
@@ -2757,9 +2756,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/Algorithm-plus-one/">
+          <a href="/cn/Algorithm-remove-duplicates-from-sorted-array/">
             <h2 class="post-title">
-              【LeetCode-简单】66. 加一
+              【LeetCode-简单】26.删除排序数组中的重复项
               
               -- cn
               
@@ -3142,6 +3141,24 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
+          <a href="/cn/正则解析爬取单页多张图片/">
+            <h2 class="post-title">
+              正则解析爬取单页多张图片【★★】
+              
+              -- cn
+              
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
           <a href="/cn/正则解析爬取分页多张图片/">
             <h2 class="post-title">
               正则解析爬取分页多张图片【★★★】
@@ -3163,24 +3180,6 @@
           <a href="/cn/爬取搜狗页面/">
             <h2 class="post-title">
               爬取搜狗页面【★】
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/正则解析爬取单页多张图片/">
-            <h2 class="post-title">
-              正则解析爬取单页多张图片【★★】
               
               -- cn
               
@@ -3230,8 +3229,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="开源项目">
-          <span class="tag-text">开源项目</span>
+        <span class="fa fa-tag listing-seperator" id="Demo">
+          <span class="tag-text">Demo</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -3354,9 +3353,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/centosweb/">
+          <a href="/cn/hello-world/">
             <h2 class="post-title">
-              Centos7 零成本搭建web服务器【外网可访问】
+              建站随笔
               
               -- cn
               
@@ -3372,9 +3371,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/hello-world/">
+          <a href="/cn/centosweb/">
             <h2 class="post-title">
-              建站随笔
+              Centos7 零成本搭建web服务器【外网可访问】
               
               -- cn
               
@@ -3629,8 +3628,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Nginx">
-          <span class="tag-text">Nginx</span>
+        <span class="fa fa-tag listing-seperator" id="Hexo">
+          <span class="tag-text">Hexo</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -3638,9 +3637,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/centosweb/">
+          <a href="/cn/hello-world/">
             <h2 class="post-title">
-              Centos7 零成本搭建web服务器【外网可访问】
+              建站随笔
               
               -- cn
               
@@ -3654,8 +3653,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Hexo">
-          <span class="tag-text">Hexo</span>
+        <span class="fa fa-tag listing-seperator" id="Nginx">
+          <span class="tag-text">Nginx</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -3663,9 +3662,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/hello-world/">
+          <a href="/cn/centosweb/">
             <h2 class="post-title">
-              建站随笔
+              Centos7 零成本搭建web服务器【外网可访问】
               
               -- cn
               
@@ -3722,8 +3721,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="开源项目">
-          <span class="tag-text">开源项目</span>
+        <span class="fa fa-tag listing-seperator" id="Demo">
+          <span class="tag-text">Demo</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -3751,8 +3750,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="开源项目">
-          <span class="tag-text">开源项目</span>
+        <span class="fa fa-tag listing-seperator" id="Demo">
+          <span class="tag-text">Demo</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -3805,8 +3804,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="开源项目">
-          <span class="tag-text">开源项目</span>
+        <span class="fa fa-tag listing-seperator" id="Demo">
+          <span class="tag-text">Demo</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -3898,35 +3897,6 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Uniapp">
-          <span class="tag-text">Uniapp</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/italk-app/">
-            <h2 class="post-title">
-              italk-app 社交聊天app
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              一个基于 Uniapp、express、MongDB 实现的 聊天app
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="Hexo">
           <span class="tag-text">Hexo</span>
         </span>
@@ -3956,8 +3926,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="MongDB">
-          <span class="tag-text">MongDB</span>
+        <span class="fa fa-tag listing-seperator" id="Uniapp">
+          <span class="tag-text">Uniapp</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -4014,6 +3984,35 @@
       </div>
       
       <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="MongDB">
+          <span class="tag-text">MongDB</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/cn/italk-app/">
+            <h2 class="post-title">
+              italk-app 社交聊天app
+              
+              -- cn
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              一个基于 Uniapp、express、MongDB 实现的 聊天app
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="Nodejs">
           <span class="tag-text">Nodejs</span>
         </span>
@@ -4043,8 +4042,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="开源项目">
-          <span class="tag-text">开源项目</span>
+        <span class="fa fa-tag listing-seperator" id="Demo">
+          <span class="tag-text">Demo</span>
         </span>
         
         <!-- <li class="listing-item">
