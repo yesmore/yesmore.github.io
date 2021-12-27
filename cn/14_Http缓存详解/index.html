@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/14_Http缓存详解/">
+  <title>
+    
+      HTTP缓存 - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <!-- <li>
+            <a href="/categories">分类</a>
+          </li> -->
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/tags/#开源项目">开源项目</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function () {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+              
+              <a class="tag" href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+              
+            </div>
+            <h2>HTTP缓存</h2>
+            <h3 class="subheading" style="font-size: 21px;"></h3>
+            <span class="meta">
+              By 大Van家 on
+              2021-12-17
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                15
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                4.4k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="HTTP缓存">HTTP缓存</h2>
+<h3 id="前言">前言</h3>
+<p>通过本文，你将了解到http缓存机制是怎样的，no-cache到底有没有缓存，地址栏回车，F5，ctrl+F5的区别，以及当下较为推荐的缓存方案等。</p>
+<h3 id="说明">说明</h3>
+<p><strong>阅读前提：http缓存主要针如css，js，图片等更新频率不大的静态文件。</strong></p>
+<p>首先得先明确这个概念，不然以下的概念以及例子，都会显得不太有意义，或者不是那么完美。</p>
+<h3 id="一、http缓存请求相应头">一、http缓存请求相应头</h3>
+<p>阅读本文，先大概了解这些缓存字段是必须的，后面也会细说，先留个印象。</p>
+<p><strong>1.Cache-Control</strong></p>
+<p>请求/响应头，缓存控制字段，可以说是控制http缓存的最高指令，要不要缓存也是它说了算。</p>
+<p>它有以下常用值</p>
+<ul>
+<li><strong>no-store</strong>：所有内容都不缓存</li>
+<li><strong>no-cache</strong>：缓存，但是浏览器使用缓存前，都会请求服务器判断缓存资源是否是最新，它是个比较高贵的存在，因为它只用不过期的缓存。</li>
+<li><strong>max-age=x</strong> (单位秒) 请求缓存后的X秒不再发起请求，属于 http1.1 属性，与下方 Expires (http1.0属性) 类似，但优先级要比 Expires 高。</li>
+<li><strong>s-maxage=x</strong> (单位秒) 代理服务器请求源站缓存后的 X 秒不再发起请求，只对CDN缓存有效(这个在后面会细说)</li>
+<li><strong>public</strong> 客户端和代理服务器(CDN)都可缓存</li>
+<li><strong>private</strong> 只有客户端可以缓存</li>
+</ul>
+<p><strong>2.Expires</strong></p>
+<p>响应头，代表资源过期时间，由服务器返回提供，GMT格式日期，是http1.0的属性，在与max-age(http1.1)共存的情况下，优先级要低。</p>
+<p><strong>3.Last-Modified</strong><br>
+响应头，资源最新修改时间，<strong>由服务器告诉浏览器。</strong></p>
+<p><strong>4.if-Modified-Since</strong><br>
+请求头，资源最新修改时间，<strong>由浏览器告诉服务器</strong>(其实就是上次服务器给的Last-Modified，请求又还给服务器对比)，和Last-Modified是一对，它两会进行对比。</p>
+<p><strong>5.Etag</strong><br>
+响应头，资源标识，由服务器告诉浏览器。</p>
+<p><strong>6.if-None-Match</strong><br>
+请求头，缓存资源标识，由浏览器告诉服务器(其实就是上次服务器给的Etag)，和Etag是一对，它两会进行对比**。**</p>
+<h3 id="二、为什么要使用HTTP缓存"><strong>二、为什么要使用HTTP缓存</strong></h3>
+<p>假设我们请求一次服务器，请求头大小1kb，响应头大小1kb，请求文件10kb。</p>
+<p>1次请求流量：12kb</p>
+<p>10次请求流量：120kb</p>
+<p>N次请求：12*N…</p>
+<p>这只是假想的一次请求，但事实上的请求不仅是请求文件，请求客户端也会更多，那么问题就很明显：</p>
+<p>1.客户端每次都要请求服务器，浪费流量(比如手机端？)。</p>
+<p>2.服务器每次都得提供查找，下载，请求用户基础如果较大，服务器存在较大压力。</p>
+<p>3.客户端每次请求完都要进行页面渲染，用户体验较差。</p>
+<p>那么我们是否可以将请求的文件存放起来使用，比如使用http缓存。</p>
+<h3 id="三、使用http缓存">三、使用http缓存</h3>
+<h4 id="1-让服务器与浏览器约定一个文件过期时间——Expires-GMT时间格式-。">1.让服务器与浏览器约定一个文件过期时间——Expires(GMT时间格式)。</h4>
+<p>日常请求对话</p>
+<p>第一次请求</p>
+<p>浏览器：服务器服务器，我现在需要一个a.js文件，帮我找找，然后给我。</p>
+<p>服务器：次次找我要，烦不烦，文件给你可以，我们约定个时间(<strong>Expires</strong>)，时间没到别来烦我了，返回了a.js以及过期时间Expires。</p>
+<p>后续请求…</p>
+<p>浏览器会先对比当前时间是否已经大于<strong>Expires</strong>，也就是判断文件是否超过了约定的过期时间。</p>
+<p>时间没过，不发起请求，直接使用本地缓存。</p>
+<p>时间过期，发起请求，继续上述的浏览器与服务器的谈话日常。</p>
+<blockquote>
+<p>问题：假设Expires已过期，浏览器再次请求服务器，但a.js相比上次并未做任何改变，那这次请求我们是否通过某种方式加以避免？</p>
+</blockquote>
+<h4 id="2-让服务器与浏览器在约定文件过期时间的基础上，再加一个文件最新修改时间的对比——Last-Modified与if-Modified-Since">2.让服务器与浏览器在约定文件过期时间的基础上，再加一个文件最新修改时间的对比——Last-Modified与if-Modified-Since</h4>
+<p>日常请求对话</p>
+<p>第一次请求</p>
+<p>浏览器：服务器服务器，我现在需要一个a.js，你找到了给我，顺便给我个过期时间，时间没到我保证不烦你！</p>
+<p>服务器：瓜娃子，行，过期时间我给你，另外再给你一个文件最新修改时间<strong>Last-Modified</strong>，到时候文件过期了咱两核对文件修改时间，对得上你就别烦我，返回a.js+<strong>Expires+Last-Modified</strong>。</p>
+<p>后续请求…</p>
+<p>Expires未过期，浏览器机智的使用本地缓存，免得挨打。</p>
+<p>Expires过期，服务器带上了文件最新修改时间if-Modified-Since(也就是上次请求服务器返回的Last-Modified)，服务器将if-Modified-Since与Last-Modified做了个对比。</p>
+<ul>
+<li>
+<p>if-Modified-Since 与Last-Modified<strong>不相等</strong>，服务器查找了最新的a.js，同时再次返回Expires与全新的Last-Modified</p>
+</li>
+<li>
+<p>if-Modified-Since 与Last-Modified<strong>相等</strong>，服务器返回了状态码 <strong>304</strong>，文件没修改过，你还是用你的本地缓存。</p>
+</li>
+</ul>
+<p>如下图，请求头与响应头文件修改时间相同，所以返回了304，使用本地缓存：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/1213309-20180808194625127-1153748272.png" alt="img"></p>
+<blockquote>
+<p>问题：浏览器端可以随意修改Expires，Expires不稳定，Last-Modified只能精确到秒，假设文件是在1s内发生变动，Last-Modified无法感知到变化，这种情况下浏览器永远拿不到最新的文件(假想极端情况)。</p>
+</blockquote>
+<h4 id="3-让服务器与浏览器在过期时间Expires-Last-Modified的基础上，再增加一个文件内容唯一对比标记——Etag与If-None-Match。哦对了，我们说Expires不稳定，这里我们再加入一个max-age来加以代替-cache-control其中一个值-。">3.让服务器与浏览器在过期时间Expires+Last-Modified的基础上，再增加一个文件内容唯一对比标记——Etag与If-None-Match。哦对了，我们说Expires不稳定，这里我们再加入一个max-age来加以代替(cache-control其中一个值)。</h4>
+<p>日常对话</p>
+<p>第一次请求</p>
+<p>浏览器：服务器服务器，你懂得~~~~~~</p>
+<p>服务器：我不懂！a.js我给你，过期时间我也给你，再给你一个<strong>max-age=60(单位秒)，Last-Modified你也给我收好，再加一个文件内容唯一标识符Etag</strong>。</p>
+<p>后续请求…</p>
+<p>60S内，不发起请求，直接使用本地缓存。（<strong>max-age=60代表请求成功缓存后的60S内不再发起请求，与Expires相似，同时存在max-age优先级要比Expires高，区别后面具体说</strong>）</p>
+<p>60S后，浏览器带上了<strong>if-Modified-Since</strong> 与<strong>If-None-Match</strong>(上次服务器返回来的Etag)发起请求，服务器对比<strong>If-None-Match与Etag(不对比if-Modified-Since与Last-Modified了，Etag优先级比Last-Modified高，毕竟更精准)</strong></p>
+<p>If-None-Match与Etag不相等，说明a.js内容被修改过，服务器返回最新a.js与全新的Etag与max-age=60与Last-Modified与Expires</p>
+<p>If-None-Match与Etag相等，说明a.js文件内容无任何改变，返回304，告诉浏览器继续使用之前的本地缓存。</p>
+<p>如下图，服务器<strong>Etag与If-None-Match相同，所以返回了状态码304，由于优先级问题，虽然也有if-Modified-Since与Last-Modified，但这里不会对两者做对比。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/1213309-20180811171520257-1175510467.png" alt="img"></p>
+<p><strong>问题：我们已经可以精确的对比服务器文件与本地缓存文件差异，但其实上面方案的演变都存在一个较大缺陷，</strong> <strong>max-age或Expires不过期，浏览器无法主动感知服务器文件变化。</strong></p>
+<h3 id="四、http缓存方案"><strong>四、http缓存方案</strong></h3>
+<p><strong>1.md5/hash缓存</strong></p>
+<p>通过<strong>不缓存html</strong>，为静态文件添加MD5或者hash标识，解决浏览器无法跳过缓存过期时间主动感知文件变化的问题。</p>
+<p>为什么这么做？实现原理是什么？</p>
+<p>我们前面说的http缓存方案，服务器与浏览器的文件修改时间对比，文件内容标识对比，前提基础都是建立在<strong>两者文件路径完全相同</strong>的情况下。</p>
+<p><strong>module/js/a-hash1.js</strong>与<strong>module/js/a-hash2.js</strong>是两个完全不同的文件，假想浏览器第一次加载页面，请求并缓存了<strong>module/js/a-hash1.js，<strong>第二次加载，文件指向变成了</strong>module/js/a-hash2.js</strong>，浏览器会直接重新请求<strong>a-hash2.js</strong>，因为这就是两个完全不同的文件，哪里还有什么http缓存文件对比，t通过这种做法，我们就可以从根本上解决过期时间没到浏览器无法主动请求服务器的问题。因此我们只需要在项目每次发布迭代将修改过的静态文件添加不同的MD5或hash标识就好啦。</p>
+<p><strong>注意，这里不推荐缓存html文件(或许有更好的做法，欢迎留言)，这样每次html加载渲染都可以感知文件变化，反正文件没变还是使用本地缓存，文件名都变了说明修改过，重新请求缓存就好了。</strong></p>
+<p>怎么改？一个个手动去修改？那不得累死。webpack提供了**<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/webpack-md5-hash">webpack-md5-hash</a>插件**，可以帮助开发者在项目发布时自动修改文件标识。</p>
+<p>我们公司因为用的是fis3打包工具，这里使用的是**<a target="_blank" rel="noopener" href="http://fis.baidu.com/fis3/docs/beginning/release.html">fis3构建-文件指纹</a>**(搜文件指纹)，原理都差不多。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/1213309-20180812210442732-1599210158.png" alt="img"></p>
+<p><strong>2.CDN缓存(作为了解)</strong></p>
+<p>在文章开头cache-control相关值介绍中，提到了例如s-maxage代理服务器的概念，本人在整理http缓存相关知识点时，从同学口中了解到了也较为推荐的http缓存方案——CDN缓存，这里就作为一个拓展吧，正常的缓存还是推荐MD5缓存。</p>
+<p><strong>2.1什么是CDN</strong></p>
+<p>了解CDN缓存，先得知道什么是CDN，CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术(较为官方的说明)。</p>
+<p>之前看到一个不错的例子，这里直接拿过来举例说说CDN。</p>
+<p>假设多年前我们所在的城市只有一个火车站，每次春运，整个城市的人都得去这个火车站买票，人流量以及购票的需求可想而知有多大，为了缓解这个问题，城市的不同区，都出现了火车票代售点，这样每个区的人都可以就近买票了，火车站总站的压力就这样大大减轻了。</p>
+<p>我们可以把每个区的售票点称之为CDN节点，也就是前面所说的代理服务器。简而言之，我们可以把CDN理解成浏览器与服务器之间的临时站点，它会替服务器处理一部分的浏览器请求，从而整理减轻总服务器的压力。</p>
+<p>我们可以把CDN的价值归纳为：</p>
+<p>1.CDN通过分流的形式，大大减轻源站的访问压力。</p>
+<p>2.就像住的区比较偏远，每次买票要去城市中心，而这个区后来有了分站，火车票就可以就近购买一样。CDN也解决了跨地区访问问题，根本上为访问提供了加速。</p>
+<p><strong>2.2什么是CDN缓存</strong></p>
+<p><strong>CDN边缘节点缓存数据，当浏览器请求，CDN将代替源站判断并处理此处请求。</strong></p>
+<p>日常请求对话</p>
+<p>第一次请求</p>
+<p>浏览器：服务器老哥，我需要a.js.</p>
+<p>服务器：（恼羞成怒）文件我给我小弟CDN了，以后你要这个找CDN，别找我了。成功返回a.js给CDN，CDN进行缓存，同时CDN返回给浏览器，浏览器自己也进行了缓存(cache-control的值public就是用在这的)。</p>
+<p>后续请求…</p>
+<p>浏览器：服务器，我缓存时间到了，赶紧给我对比下文件，看看要不要重新返回给我。</p>
+<p>CDN节点：打住打住，叫唤啥呢，我大哥比较忙，文件给我看看，请求被代理了。</p>
+<p>情况1：CDN节点自己缓存的文件未过期，于是返回了304给浏览器，打回了这次请求。</p>
+<p>情况2：CDN节点发现自己缓存的文件过期了，为了保险起见，自己发起请求给了服务器(源站)，成功拿回了最新数据，然后再交给与了浏览器。</p>
+<p>其实说到这，CDN缓存的问题也跟前面的http缓存一样，CDN缓存时间不过期，浏览器始终被拦截，无法拿到最新的文件。</p>
+<p>但是我们回归http缓存问题本质，缓存本身针对于更新频率不高的静态文件，其次，CDN缓存提供了分流以及访问加速其它优势条件。这里我问过同学，得到的信息是，CDN类似一个平台，是可以通过登录，手动更新CDN缓存的，变相解决了浏览器缓存无法手动控制的问题。</p>
+<p>那么两种http缓存方案就说到这里了，接下来谈谈http缓存其它的一些问题和概念。</p>
+<h3 id="五、浏览器地址栏回车，新开窗口，F5刷新，CTRL-F5刷新等浏览器操作对HTTP缓存的影响"><strong>五、浏览器地址栏回车，新开窗口，F5刷新，CTRL+F5刷新等浏览器操作对HTTP缓存的影响</strong></h3>
+<p>在利用fiddler抓包看不同网站缓存时，发现了一个有趣的问题，大部分网站的<strong>cache-control都设置的为no-cache</strong>。</p>
+<p>我在前面说了，no-cache不是不缓存，要缓存，但是浏览器在协商性缓存情况下，都会无条件像服务器发起请求，判断自己的缓存是不是最新，如果是就接着用，不是就请求最新的文件，缓存起来用，以此循环。</p>
+<p>那么有必要设置过期时间<strong>Expires与max-age吗？有！</strong></p>
+<p>当我们第一次浏览一个页面，关闭后，第二次再打开还是属于新开窗口行为，如果设置了缓存时间，新开窗口会走强缓存，可以避免反复的文件下载，加快页面渲染，提升用户体验性。</p>
+<p>(其实一开始我是觉得Expires与max-age是不需要设置的**，**直到我使用pageSpeed对公司网站做了个性能评分，发现还是推荐使用缓存时间，结合上面的话，其实是有道理的)</p>
+<p><img src="https://images2018.cnblogs.com/blog/1213309/201808/1213309-20180817141838720-867735439.png" alt="img"></p>
+<p>对于上面的话不理解没关系，这里结合百度百科与其它博客的概念，我们对浏览器的不同行为对缓存的影响做一个总结。</p>
+<p>1.<strong>浏览器地址栏回车，或者点击跳转按钮，前进，后退，新开窗口</strong>，这些行为，会让Expires，max-age生效，也就是说，这几种操作下，浏览器会判断过期时间，再考虑要不要发起请求，当然Last-Modified和Etag也有效。</p>
+<p>2.<strong>F5刷新浏览器，或者使用浏览器导航栏的刷新按钮</strong>，这几种，会忽略掉Expires，max-age的限制，强行发起请求，Last-Modified和Etag在这种情况下也有效。</p>
+<p>3**.CTRL+F5**是强制请求，所有缓存文件都不使用，全部重新请求下载，因此Expires，max-age，Last-Modified和Etag全部失效。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/1213309-20180812215938593-1709664851.png" alt="img"></p>
+<p>但事实上，我们很少用到地址栏回车，地址栏跳转，所以要触发缓存时间的判断，还需要特定的操作，站在我的理解，综合考虑下，才有了这么多网站的cache-control设置为no-cache，也就是使用缓存前都判断文件是否为最新，更为合理。</p>
+<p><strong>6.强缓存与协商性缓存(弱缓存)</strong></p>
+<p>了解了上面不同浏览器行为对http缓存的不同影响，理解强缓存与协商性缓存就很容易了。</p>
+<p>**强缓存：**不发起http请求，直接使用本地缓存，比如浏览器地址栏回车，使用浏览器的刷新按钮，在Expires或max-age生效的情况下，触发的都是强缓存。</p>
+<p>**协商性缓存(弱缓存)：**在使用本地缓存前，先与服务器协商，核对缓存文件是否为最新。比如设置了cache-control=no-cache，不管你做任何操作，都会发起请求，这一类就是协商性缓存了。</p>
+<p><strong>7.max-age和Expires的区别</strong></p>
+<p>在用fiddler抓包的时候，发现不少网站同时设置了max-age和Expires，为毛要设置两个，功能不都差不多吗，两者区别是啥？</p>
+<p>1.max-age是http1.1的属性，Expires是http1.0的属性，为了做到向下兼容，一般写两个。但如在1.1环境下，max-age优先级比Expires高。</p>
+<p>2.max-age是相对过期时间，Expires是绝对过期时间。max-age在浏览器成功缓存文件后，只需相对请求成功之后的多长时间不再发起请求就好了，而Expires总是需要服务器返回一个精准的GMT格式的日期，并以这个日期为标准来判断缓存是否过期，相对就比较麻烦，所以才有了max-age这样的存在来代替它。</p>
+<p>同理，no-cache和 Pargma也是这样的存在，一个是1.1的属性，一个是1.0，向下兼容，同时写了两个。</p>
+<p>好了，说到这里其实介绍的差不多了，了解了这些，浏览器和服务器之间也能过上幸福的生活了。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/09_Diff算法与Key/" data-toggle="tooltip" data-placement="top" title="你需要知道的Diff算法">&larr; 上一篇</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/12_CDN内容分发网络/" data-toggle="tooltip" data-placement="top" title="CDN：内容分发网络">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=HTTP缓存&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/14_Http缓存详解/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Fri Dec 17 2021 13:52:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#HTTP%E7%BC%93%E5%AD%98"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">HTTP缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">说明</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81http%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E7%9B%B8%E5%BA%94%E5%A4%B4"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">一、http缓存请求相应头</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8HTTP%E7%BC%93%E5%AD%98"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">二、为什么要使用HTTP缓存</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8http%E7%BC%93%E5%AD%98"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">三、使用http缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BA%A6%E5%AE%9A%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4%E2%80%94%E2%80%94Expires-GMT%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F-%E3%80%82"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">1.让服务器与浏览器约定一个文件过期时间——Expires(GMT时间格式)。</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%A8%E7%BA%A6%E5%AE%9A%E6%96%87%E4%BB%B6%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4%E7%9A%84%E5%9F%BA%E7%A1%80%E4%B8%8A%EF%BC%8C%E5%86%8D%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E6%9C%80%E6%96%B0%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E7%9A%84%E5%AF%B9%E6%AF%94%E2%80%94%E2%80%94Last-Modified%E4%B8%8Eif-Modified-Since"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">2.让服务器与浏览器在约定文件过期时间的基础上，再加一个文件最新修改时间的对比——Last-Modified与if-Modified-Since</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%A8%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4Expires-Last-Modified%E7%9A%84%E5%9F%BA%E7%A1%80%E4%B8%8A%EF%BC%8C%E5%86%8D%E5%A2%9E%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%94%AF%E4%B8%80%E5%AF%B9%E6%AF%94%E6%A0%87%E8%AE%B0%E2%80%94%E2%80%94Etag%E4%B8%8EIf-None-Match%E3%80%82%E5%93%A6%E5%AF%B9%E4%BA%86%EF%BC%8C%E6%88%91%E4%BB%AC%E8%AF%B4Expires%E4%B8%8D%E7%A8%B3%E5%AE%9A%EF%BC%8C%E8%BF%99%E9%87%8C%E6%88%91%E4%BB%AC%E5%86%8D%E5%8A%A0%E5%85%A5%E4%B8%80%E4%B8%AAmax-age%E6%9D%A5%E5%8A%A0%E4%BB%A5%E4%BB%A3%E6%9B%BF-cache-control%E5%85%B6%E4%B8%AD%E4%B8%80%E4%B8%AA%E5%80%BC-%E3%80%82"><span class="toc-nav-number">1.5.3.</span> <span class="toc-nav-text">3.让服务器与浏览器在过期时间Expires+Last-Modified的基础上，再增加一个文件内容唯一对比标记——Etag与If-None-Match。哦对了，我们说Expires不稳定，这里我们再加入一个max-age来加以代替(cache-control其中一个值)。</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81http%E7%BC%93%E5%AD%98%E6%96%B9%E6%A1%88"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">四、http缓存方案</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E5%9B%9E%E8%BD%A6%EF%BC%8C%E6%96%B0%E5%BC%80%E7%AA%97%E5%8F%A3%EF%BC%8CF5%E5%88%B7%E6%96%B0%EF%BC%8CCTRL-F5%E5%88%B7%E6%96%B0%E7%AD%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%93%8D%E4%BD%9C%E5%AF%B9HTTP%E7%BC%93%E5%AD%98%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">五、浏览器地址栏回车，新开窗口，F5刷新，CTRL+F5刷新等浏览器操作对HTTP缓存的影响</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#preInterview" title="preInterview">preInterview</a>
+            
+            <a class="tag" href="/tags/#面试" title="面试">面试</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2021
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">437.7k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/14_Http缓存详解/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
+</html>

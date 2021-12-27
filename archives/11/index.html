@@ -224,17 +224,6 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               关于
@@ -246,9 +235,7 @@
           
           
           <li>
-            <a href="/categories/">
-              
-              分类
+            <a href="/algorithms/">
               
               
             </a>
@@ -257,7 +244,20 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
               
               
             </a>
@@ -462,31 +462,39 @@
   <!-- top end -->
   
 
-  <a href="/cn/bs4解析爬取三国演义所有章节及内容/">
+  <a href="/cn/11-使用Matrix变换矩阵实现三角形旋转、平移、缩放-RotatedTriangle-Matrix/">
     <h1 class="post-title">
-      bs4解析爬取三国演义所有章节及内容【★★★】
+      【WebGL之巅】11-使用Matrix变换矩阵实现三角形旋转、平移、缩放
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：Python爬虫介绍
-需求：爬取三国演义小说所有的章节标题和章节内容
-1http://www.shicimingju.com/book/sanguoyanyi.html
+      
+对应《WebGL编程指南》代码：12-RotatedTriangle_Matrix
+要点：矩阵和矢量的乘法、矩阵变换（旋转矩阵、平移矩阵、缩放矩阵）、gl.uniformMatrix4fv
 
-12345678910111213141516171819202122232425262728293031323334353637#!/usr/bin/env python # -*- coding:utf-8 -*......
+
+知识点
+一、矩阵和矢量的乘法
+矩阵示例：
+​	$
+\begin{bmatrix}
+​	8 &amp; 3 &amp; 0 \\
+​	4 &amp; 3 &amp; 6 \\
+​	3 &amp; 2 ......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-26
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -501,30 +509,33 @@
   <!-- top end -->
   
 
-  <a href="/cn/正则解析爬取分页多张图片/">
+  <a href="/cn/friends/">
     <h1 class="post-title">
-      正则解析爬取分页多张图片【★★★】
+      链友
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：Python正则解析语法
-需求：分页爬取糗事百科中糗图板块下所有的糗图图片
+      👋 链友申请
+在此页评论区留下您的 [BlogTitle]、[BlogLink] 即可；
+博主会在三日内给予回复，感谢！
 
-1234567891011121314151617181920212223242526272829303132333435363738394041#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport reimport os# 需求：爬......
+示例：
+BlogTitle：快乐码原
+BlogLink：https://yesmore.cc
+
+...
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-26
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#链友" title="链友"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
     
   </div>
   
@@ -539,30 +550,38 @@
   <!-- top end -->
   
 
-  <a href="/cn/正则解析爬取单页多张图片/">
+  <a href="/cn/10-仿射变换之旋转三角形-RotatedTriangle/">
     <h1 class="post-title">
-      正则解析爬取单页多张图片【★★】
+      【WebGL之巅】10-仿射变换之旋转三角形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：Python正则解析语法
-需求：爬取糗事百科中糗图板块下所有的糗图图片
+      
+对应《WebGL编程指南》代码：11-RotatedTriangle
+要点：旋转变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
-12345678910111213141516171819202122232425262728293031323334353637#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport re   # 正则表达式模块import os# 需求......
+
+步骤
+目的：将三角形逆时针旋转90度
+计算90度的正余弦值 → 传给顶点着色器uniform变量
+知识点
+一、正旋转
+​	①描述旋转操作：绕Z轴，逆时针旋转β角度。
+​	②关于“逆时针”的约定：如果β是正值，观察......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-26
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -577,35 +596,45 @@
   <!-- top end -->
   
 
-  <a href="/cn/单张图片爬取/">
+  <a href="/cn/09-仿射变换之平移三角形-TranslatedTriangle/">
     <h1 class="post-title">
-      单张图片爬取【★】
+      【WebGL之巅】09-仿射变换之平移三角形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-request请求返回类型区别：
-
-content返回的是二进制形式的图片数据
-text（字符串） content（二进制）json() (对象)
+对应《WebGL编程指南》代码：10-TranslatedTriangle
+要点：平移变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
+目的
+将一个三角形向上和向右平移0.5个单位
+知识点
+一、逐顶点操作
+​	为顶点坐标的每个分量加上一个常量就可以实现
+二、矢量的加法
+​	方便的矢量相加运算是GLSL ES提供的特性之一
 
-12345678910111213#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsif __name__ == &quot;__main__&quot;:    # 爬......
+
+
+矢量
+值
+
+......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-26
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -620,34 +649,34 @@ text（字符串） content（二进制）json() (对象)
   <!-- top end -->
   
 
-  <a href="/cn/爬取药监局相关数据/">
+  <a href="/cn/08-绘制一个矩形-HelloRectangle/">
     <h1 class="post-title">
-      爬取药监局相关数据【★★】
+      【WebGL之巅】08-绘制一个矩形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
+对应《WebGL编程指南》代码：08-HelloRectangle
+要点：缓冲区对象、gl.drawArrays()参数
+复习：【WebGL之巅】07-绘制三角形
 
-携带post参数的爬虫
-子链爬取
 
-
-
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport jsonif __name__ == &quo......
+实例
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-25
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -662,31 +691,35 @@ text（字符串） content（二进制）json() (对象)
   <!-- top end -->
   
 
-  <a href="/cn/爬取豆瓣电影详情/">
+  <a href="/cn/07-绘制三角形-HelloTriangle/">
     <h1 class="post-title">
-      爬取豆瓣电影详情【★★】
+      【WebGL之巅】07-绘制三角形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-携带post参数的爬虫
+对应《WebGL编程指南》代码：07-HelloTriangle
+要点：缓冲区对象、gl.drawArrays
+复习：【WebGL之巅】06-绘制三个点
+参考：《WebGL编程指南》p82~84讲解
 
 
-12345678910111213141516171819202122232425#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsimport jsonif __name__ == &quot;__main__&quot;:    url = &#x27;https://movie.douba......
+实例
+1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; ......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-25
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -701,31 +734,36 @@ text（字符串） content（二进制）json() (对象)
   <!-- top end -->
   
 
-  <a href="/cn/使用爬虫破解百度翻译/">
+  <a href="/cn/06-绘制三个点-MultiPoints/">
     <h1 class="post-title">
-      使用爬虫破解百度翻译【★★】
+      【WebGL之巅】06-绘制三个点
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-携带post参数的爬虫
+对应《WebGL编程指南》代码：06-MultiPoints
+要点：缓冲区对象、gl.drawArrays、缓冲区对象向着色器传入多个顶点的数据的5个步骤
+复习：03-绘制一个点_v2_attribute变量
 
 
-1234567891011121314151617181920212223242526272829#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsimport jsonif __name__ == &quot;__main__&quot;:    # 1.指定url    post_url =......
+绘制步骤
+获取WebGL上下文 → 初始化着色器 → 设置点的坐标信息 → 设置&lt;canvas&gt;背景色 → 清空&lt;canvas&gt; → 绘制
+知识点
+一、缓......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-25
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -740,33 +778,35 @@ text（字符串） content（二进制）json() (对象)
   <!-- top end -->
   
 
-  <a href="/cn/UA伪装爬取网页/">
+  <a href="/cn/05-通过鼠标点击绘点_v2_彩色版-ClickedPoints-color/">
     <h1 class="post-title">
-      UA伪装爬取网页【★】
+      【WebGL之巅】05-通过鼠标点击绘点_v2_彩色版
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：UA检测
+      
+对应《WebGL编程指南》代码：05-ColorPoints
+要点：注册js事件、匿名函数、坐标转换、g_points.push()
 
-UA：User-Agent（请求载体的身份标识）.
-门户网站的服务器会检测对应请求的载体身份标识，如果检测到请求的载体身份标识为某一款浏览器，说明该请求是一个正常的请求。但是，如果检测到请求的载体身份标识不是基于某一款浏览器的，则表示该请求为不正常的请求（爬虫），则服务器端就很有可能拒绝该次请求。
 
-
-123456789101112131415161718192021222......
+知识点
+一、为何使用匿名函数？
+先看示例：
+1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Positio......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-25
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -781,69 +821,77 @@ UA：User-Agent（请求载体的身份标识）.
   <!-- top end -->
   
 
-  <a href="/cn/爬取搜狗页面/">
+  <a href="/cn/04-通过鼠标点击绘点_v1-ClickedPoints/">
     <h1 class="post-title">
-      爬取搜狗页面【★】
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      复习：request模块讲解
-
-123456789101112131415161718#!/usr/bin/env python # -*- coding:utf-8 -*-# - 需求：爬取搜狗首页的页面数据import requestsif __name__ == &quot;__main__&quot;:    # step_1:指定url    url = &#x27;https:/......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/00-使用canvas绘制2d矩形-HelloCanvas2d/">
-    <h1 class="post-title">
-      【WebGL之巅】00-使用canvas绘制2d矩形
+      【WebGL之巅】04-通过鼠标点击绘点_v1
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-对应《WebGL编程指南》代码：00-HelloCanvas2d
+对应《WebGL编程指南》代码：04-ClickPoint
+要点：注册js事件
 
 
 知识点
 
-canvas绘图机制：上下文。要在&lt;canvas&gt;上绘制图像，须先获取绘图上下文，“2d”代表我们要绘制二维图形。
-fillstyle：设置或返回用于填充绘画的颜色、渐变或模式。
-使用填充颜色填充矩形。
-fillRect(x,y,width,height)
+为何使用匿名函数？
 
-1234参数：x    矩形左上角的 x......
+先看示例：
+1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Position);&#125;;
+当你要画一个点时，需要传入三个变......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-22
+    2021-07-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/03-绘制一个点_v2_attribute变量-HelloPoint-v2/">
+    <h1 class="post-title">
+      【WebGL之巅】03-绘制一个点_v2_attribute变量
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：03-HelloPoint2
+要点：JavaScript与着色器之前数据的传输（attribute变量使用步骤）、存储限定符（attribute）、gl.getAttribLocation()、gl.vertexAttrib3f()、WebGL函数命名规范
+
+
+知识点
+
+
+位置信息的传输
+方式1：attribute变量，传输与顶点相关的数据
+方式2：unif......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-24
   </p>
   <div class="tags">
     
@@ -889,17 +937,17 @@ fillRect(x,y,width,height)
         <!-- Visitors -->
 <h5><a href="/">来访者</a></h5>
 
-  <div class="widget">
+<div class="widget">
   <span>
-    您是本站第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
+    宁好, 第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
   </span>
   <br />
   <span>
     总阅读量 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
   </span>
   <!-- 网站运行时间的设置 -->
-  <div> 
-    站点已战战兢兢运行 
+  <div>
+    站点已运行
     <a href="javascript:;;">
       <strong><span id="timeDate">载入天数...</span></strong>
     </a>天
@@ -909,22 +957,33 @@ fillRect(x,y,width,height)
   </div>
   <script>
     var now = new Date();
+
     function createtime() {
-      var grt= new Date("07/10/2021 13:14:21");//此处修改你的建站时间或者网站上线时间
-      now.setTime(now.getTime()+250);
-      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+      var grt = new Date("07/10/2021 13:14:21"); //此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
       document.getElementById("timeDate").innerHTML = dnum;
       // document.getElementById("times").innerHTML = hnum + "h " + mnum + "' " + snum + "''";
     }
-  setInterval("createtime()",250);
+    setInterval("createtime()", 250);
   </script>
 </div>
-
 
         <hr>
     
@@ -940,6 +999,14 @@ fillRect(x,y,width,height)
     
     
     <a href="/tags/#WebGL" title="WebGL" rel="32"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+    
+    
+    <a href="/tags/#preInterview" title="preInterview" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    
+    
+    <a href="/tags/#面试" title="面试" rel="18"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
     
     
@@ -1019,10 +1086,6 @@ fillRect(x,y,width,height)
     
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
     <a href="/tags/#Nginx" title="Nginx" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Nginx</a>
     
     
@@ -1031,7 +1094,11 @@ fillRect(x,y,width,height)
     
     
     
-    <a href="/tags/#面试" title="面试" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
     
     
     
@@ -1157,24 +1224,24 @@ fillRect(x,y,width,height)
 <div class="widget">
   <ul style="padding-left: 0;">
     
-    <a href="../../cn/Different-UI/">
-      <li style="list-style: none;">Different UI</li>
+    <a href="../../cn/17_%E4%BB%8EArray.from%E7%90%86%E8%A7%A3%E7%B1%BB%E6%95%B0%E7%BB%84/">
+      <li style="list-style: none;">从Array.from理解类数组</li>
     </a>
     
-    <a href="../../cn/ms-HTML%EF%BC%86CSS2.0/">
-      <li style="list-style: none;">前端面试题汇总-HTML＆CSS篇2.0 实战篇</li>
+    <a href="../../cn/16_%E4%B8%80%E9%81%93function%E9%9D%A2%E8%AF%95%E9%A2%98/">
+      <li style="list-style: none;">一道function面试题.js</li>
     </a>
     
-    <a href="../../cn/ms-JavaScript2.0%20/">
-      <li style="list-style: none;">前端面试题汇总-JavaScript篇2.0 实战篇</li>
+    <a href="../../cn/09_Diff%E7%AE%97%E6%B3%95%E4%B8%8EKey/">
+      <li style="list-style: none;">你需要知道的Diff算法</li>
     </a>
     
-    <a href="../../cn/osapi/">
-      <li style="list-style: none;">OSAPI - 开源Api管理平台</li>
+    <a href="../../cn/14_Http%E7%BC%93%E5%AD%98%E8%AF%A6%E8%A7%A3/">
+      <li style="list-style: none;">HTTP缓存</li>
     </a>
     
-    <a href="../../cn/FrontEndAdvanced-Design-Pattern/">
-      <li style="list-style: none;">【前端进阶】框架用了哪些设计模式？</li>
+    <a href="../../cn/12_CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">
+      <li style="list-style: none;">CDN：内容分发网络</li>
     </a>
     
   </ul>
@@ -1186,9 +1253,9 @@ fillRect(x,y,width,height)
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（119） </a></h5>
+<h5><a href="/archives/">归档（134） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1203,6 +1270,10 @@ fillRect(x,y,width,height)
     
     <a href="/categories/#JavaScript">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#面试">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
     </a>
     
     <a href="/categories/#WebGL">
@@ -1225,6 +1296,10 @@ fillRect(x,y,width,height)
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
     </a>
     
+    <a href="/categories/#Demo">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
     <a href="/categories/#Math">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Math</li>
     </a>
@@ -1235,10 +1310,6 @@ fillRect(x,y,width,height)
     
     <a href="/categories/#Python">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Web安全">
@@ -1253,8 +1324,12 @@ fillRect(x,y,width,height)
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#面试">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
+    <a href="/categories/#链友">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#知识扫盲">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
     <a href="/categories/#免费api">
@@ -1269,16 +1344,12 @@ fillRect(x,y,width,height)
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
-    <a href="/categories/#知识扫盲">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
+    <a href="/categories/#Nginx">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#Hexo">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
-    <a href="/categories/#Nginx">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#NodeJs">
@@ -1366,10 +1437,10 @@ fillRect(x,y,width,height)
         <!-- Friends Blog -->
 
 <h5><a href="/">链友</a></h5>
+<a target="_blank" href='https://yesmore.cc/cn/friends/'>链友申请</a>
 <ul class="list-inline">
   
 </ul>
-
 
         <hr>
     
@@ -1421,7 +1492,7 @@ fillRect(x,y,width,height)
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">411.9k</span>
+          站点总字数：<span class="post-count">437.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

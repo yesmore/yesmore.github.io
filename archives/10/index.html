@@ -224,17 +224,6 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               关于
@@ -246,9 +235,7 @@
           
           
           <li>
-            <a href="/categories/">
-              
-              分类
+            <a href="/algorithms/">
               
               
             </a>
@@ -257,7 +244,20 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
               
               
             </a>
@@ -462,116 +462,29 @@
   <!-- top end -->
   
 
-  <a href="/cn/07-绘制三角形-HelloTriangle/">
+  <a href="/cn/19-颜色与纹理-使用多幅纹理-MultiTexture/">
     <h1 class="post-title">
-      【WebGL之巅】07-绘制三角形
+      【WebGL之巅】19-颜色与纹理-使用多幅纹理
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：07-HelloTriangle
-要点：缓冲区对象、gl.drawArrays
-复习：【WebGL之巅】06-绘制三个点
-参考：《WebGL编程指南》p82~84讲解
-
-
-实例
-1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-25
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/06-绘制三个点-MultiPoints/">
-    <h1 class="post-title">
-      【WebGL之巅】06-绘制三个点
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：06-MultiPoints
-要点：缓冲区对象、gl.drawArrays、缓冲区对象向着色器传入多个顶点的数据的5个步骤
-复习：03-绘制一个点_v2_attribute变量
-
-
-绘制步骤
-获取WebGL上下文 → 初始化着色器 → 设置点的坐标信息 → 设置&lt;canvas&gt;背景色 → 清空&lt;canvas&gt; → 绘制
-知识点
-一、缓......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-25
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/05-通过鼠标点击绘点_v2_彩色版-ClickedPoints-color/">
-    <h1 class="post-title">
-      【WebGL之巅】05-通过鼠标点击绘点_v2_彩色版
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：05-ColorPoints
-要点：注册js事件、匿名函数、坐标转换、g_points.push()
-
+      对应《WebGL编程指南》代码：21-MultiTexture
+要点：纹理映射、多个纹理单元使用
 
 知识点
-一、为何使用匿名函数？
-先看示例：
-1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Positio......
+一、区别单个纹理单元
+1、片元着色器能够访问两个纹理
+2、最终的片元颜色由两个纹理上的纹素颜色共同决定
+3、initTextures(gl, n)函数创建了两个纹理对象
+12345678910111213141516171819202122232425function initText......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-25
+    2021-07-30
   </p>
   <div class="tags">
     
@@ -592,38 +505,33 @@
   <!-- top end -->
   
 
-  <a href="/cn/04-通过鼠标点击绘点_v1-ClickedPoints/">
+  <a href="/cn/Websocket/">
     <h1 class="post-title">
-      【WebGL之巅】04-通过鼠标点击绘点_v1
+      WebSocket介绍与实战开发
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：04-ClickPoint
-要点：注册js事件
+      思考：这种网页版的聊天功能应该如何去实现？？
 
+websocket介绍
 
-知识点
+WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。
+websocket是一种持久协议，http是非持久协议
 
-为何使用匿名函数？
-
-先看示例：
-1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Position);&#125;;
-当你要画一个点时，需要传入三个变......
+现在很多网站都有实时推送的需求，比如聊天，客服咨询等
+早期没有websocket时，通过ajax轮询，由于htt......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-24
+    2021-07-30
   </p>
   <div class="tags">
     
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    <a href="/tags/#websocket" title="websocket"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
     
   </div>
   
@@ -638,31 +546,96 @@
   <!-- top end -->
   
 
-  <a href="/cn/03-绘制一个点_v2_attribute变量-HelloPoint-v2/">
+  <a href="/cn/10-Browser/">
     <h1 class="post-title">
-      【WebGL之巅】03-绘制一个点_v2_attribute变量
+      浏览器渲染原理及浏览器存储
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-对应《WebGL编程指南》代码：03-HelloPoint2
-要点：JavaScript与着色器之前数据的传输（attribute变量使用步骤）、存储限定符（attribute）、gl.getAttribLocation()、gl.vertexAttrib3f()、WebGL函数命名规范
+要点：浏览器渲染原理（简介、渲染机制）、浏览器存储（cookie、LocalStorage、sessionStorage、IndexedDB）
+
+
+浏览器渲染原理
+简介
+引入
+
+
+输入网址进入网页的三个阶段
+
+http请求阶段
+http响应阶段
+浏览器渲染阶段
+
+
+
+补充
+
+
+进程Process
+
+一个运行的程序/浏览器页面
+
+
+
+线程Thread
+
+
+进程内的子任务
+
+可多个线程同时进行......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-30
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#Browser" title="Browser"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/18-颜色与纹理-在矩形表面帖上图像-TexturedQuad/">
+    <h1 class="post-title">
+      【WebGL之巅】18-颜色与纹理-在矩形表面帖上图像
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：20-TexturedQuad
+要点：纹理映射、纹理坐标
 
 
 知识点
-
-
-位置信息的传输
-方式1：attribute变量，传输与顶点相关的数据
-方式2：unif......
+一、纹理映射
+​		概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
+​		作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA格式编码。
+二、纹理......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-24
+    2021-07-29
   </p>
   <div class="tags">
     
@@ -683,39 +656,208 @@
   <!-- top end -->
   
 
-  <a href="/cn/02-绘制一个点_v1-HelloPoint-v1/">
+  <a href="/cn/17-颜色与纹理-绘制彩色与渐变三角形-ColoredTriangle/">
     <h1 class="post-title">
-      【WebGL之巅】02-绘制一个点_v1
+      【WebGL之巅】17-颜色与纹理-绘制彩色与渐变三角形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-对应《WebGL编程指南》代码：02-HelloPoint1
-要点：着色器、着色器代码规范、vec4（齐次坐标）、gl.drawArrays()
+对应《WebGL编程指南》代码：19-ColoredTriangle
+要点：【WebGL之巅】17-颜色与纹理-绘制三个不同颜色的顶点、gl.drawArrays、几何形状的装配和光栅化
+
+
+知识点
+一、几何形状的装配和光栅化
+在顶点着色器和片元着色器之间，有这样两个步骤：
+​		图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的第一个参......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-29
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/16-颜色与纹理-绘制三个不同颜色的顶点-MultiAttributeColor/">
+    <h1 class="post-title">
+      【WebGL之巅】16-颜色与纹理-绘制三个不同颜色的顶点
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：18-MultiAttributeColor
+要点：绘制三个不同color的点、交错组织
+
+
+知识点
+一、varying变量
+12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_C......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-29
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/15-颜色与纹理-将非坐标数据传入顶点着色器-MultiAttributeSize/">
+    <h1 class="post-title">
+      【WebGL之巅】15-颜色与纹理-将非坐标数据传入顶点着色器
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：16-MultiAttributeSize、17-MultiAttributeSize_Interleaved
+要点：绘制三个不同size的点、交错组织
+
+
+知识点
+一、回顾—将顶点坐标传入着色器步骤
+1.创建缓冲区对象
+2.将缓冲区对象绑定到target上
+3.向缓存对象写入数据
+4.将缓冲区对象分配给a_Postion变量(attribute变量)
+5.......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-28
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/14-简单动画-使三角形旋转-RotatingTriangle/">
+    <h1 class="post-title">
+      【WebGL之巅】14-简单动画-使三角形旋转
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：15-RotatingTriangle
+要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、setRotate方法
+tips：当前页含有动画示例，Tag Cloud可能会失效。
+
+
+知识点
+一、动画原理
+基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
+为了生成动画，需要两个关键机制：
+​	机制一：在规定时刻反复调用同......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-27
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/13-使用Matrix4变换矩阵实现三角形复合变换-RotatedTranslatedTriangle/">
+    <h1 class="post-title">
+      【WebGL之巅】13-使用Matrix4变换矩阵实现三角形复合变换
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：14-RotatedTranslatedTriangle
+要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、复合变换
 
 
 步骤
-
-获取&lt;canvas&gt;元素
-获取WebGL上下文
-初始化着色器
-设置&lt;canvas&gt;背景色
-清除&lt;canvas&gt;
-绘图
-
+1.将三角形沿着X轴平移一段距离
+2.旋转三角形
 知识点
-
-
-着色器
-顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是......
+一、模型变换
+建立下面的等式：
+​	&lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-24
+    2021-07-27
   </p>
   <div class="tags">
     
@@ -736,161 +878,35 @@
   <!-- top end -->
   
 
-  <a href="/cn/01-使用webgl清空绘图区-HellCanvas/">
+  <a href="/cn/12-使用Matrix4变换矩阵实现三角形旋转、平移、缩放-RotatedTriangle-Matrix4/">
     <h1 class="post-title">
-      【WebGL之巅】01-使用webgl清空绘图区
+      【WebGL之巅】12-使用Matrix4变换矩阵实现三角形旋转、平移、缩放
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-对应《WebGL编程指南》代码：01-HelloCanvas
+对应《WebGL编程指南》代码：13-RotatedTriangle_Matrix4
+要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象
 
-
-步骤
-
-获取&lt;canvas&gt;元素
-获取webgl绘图上下文
-设置背景色
-清空&lt;canvas&gt;
 
 知识点
-
-
-gl.cleanColor()的参数
-
-
-一旦指定了背景色，背景色就会驻存在WebGL系统中，在下次调用clearColor前不会改变
-
-
-若想显示webgl调试错误，在调用getWebGLCo......
+一、矩阵变换库cuon-matrix.js
+OpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
+cuon-matrix.js......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-24
+    2021-07-27
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/xpath解析爬取全国城市名称/">
-    <h1 class="post-title">
-      xpath解析爬取全国城市名称【★★】
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      复习：XPath语法
-需求：解析出所有城市名称
-
-1234567891011121314151617181920212223#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsfrom lxml import etree# 项目需求：解析出所有城市名称https://www.aqistudy.cn/historydata/if......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/xpath解析爬取美女图片/">
-    <h1 class="post-title">
-      xpath解析爬取美女图片【★★】
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      复习：XPath语法
-需求：解析下载图片数据
-
-123456789101112131415161718192021222324252627282930313233343536373839#!/usr/bin/env python # -*- coding:utf-8 -*-# 需求：解析下载图片数据 http://pic.netbian.com/4kmeinv/import requests......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/xpath解析58二手房的房源信息/">
-    <h1 class="post-title">
-      xpath解析58二手房的房源信息【★★】
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      复习：XPath语法
-需求：爬取58二手房中的房源信息
-
-1234567891011121314151617181920212223#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsfrom lxml import etree# 需求：爬取58二手房中的房源信息if __name__ == &quot;__main__&qu......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
     
   </div>
   
@@ -930,17 +946,17 @@ gl.cleanColor()的参数
         <!-- Visitors -->
 <h5><a href="/">来访者</a></h5>
 
-  <div class="widget">
+<div class="widget">
   <span>
-    您是本站第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
+    宁好, 第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
   </span>
   <br />
   <span>
     总阅读量 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
   </span>
   <!-- 网站运行时间的设置 -->
-  <div> 
-    站点已战战兢兢运行 
+  <div>
+    站点已运行
     <a href="javascript:;;">
       <strong><span id="timeDate">载入天数...</span></strong>
     </a>天
@@ -950,22 +966,33 @@ gl.cleanColor()的参数
   </div>
   <script>
     var now = new Date();
+
     function createtime() {
-      var grt= new Date("07/10/2021 13:14:21");//此处修改你的建站时间或者网站上线时间
-      now.setTime(now.getTime()+250);
-      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+      var grt = new Date("07/10/2021 13:14:21"); //此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
       document.getElementById("timeDate").innerHTML = dnum;
       // document.getElementById("times").innerHTML = hnum + "h " + mnum + "' " + snum + "''";
     }
-  setInterval("createtime()",250);
+    setInterval("createtime()", 250);
   </script>
 </div>
-
 
         <hr>
     
@@ -981,6 +1008,14 @@ gl.cleanColor()的参数
     
     
     <a href="/tags/#WebGL" title="WebGL" rel="32"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+    
+    
+    <a href="/tags/#preInterview" title="preInterview" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    
+    
+    <a href="/tags/#面试" title="面试" rel="18"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
     
     
@@ -1060,10 +1095,6 @@ gl.cleanColor()的参数
     
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
     <a href="/tags/#Nginx" title="Nginx" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Nginx</a>
     
     
@@ -1072,7 +1103,11 @@ gl.cleanColor()的参数
     
     
     
-    <a href="/tags/#面试" title="面试" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
     
     
     
@@ -1198,24 +1233,24 @@ gl.cleanColor()的参数
 <div class="widget">
   <ul style="padding-left: 0;">
     
-    <a href="../../cn/Different-UI/">
-      <li style="list-style: none;">Different UI</li>
+    <a href="../../cn/17_%E4%BB%8EArray.from%E7%90%86%E8%A7%A3%E7%B1%BB%E6%95%B0%E7%BB%84/">
+      <li style="list-style: none;">从Array.from理解类数组</li>
     </a>
     
-    <a href="../../cn/ms-HTML%EF%BC%86CSS2.0/">
-      <li style="list-style: none;">前端面试题汇总-HTML＆CSS篇2.0 实战篇</li>
+    <a href="../../cn/16_%E4%B8%80%E9%81%93function%E9%9D%A2%E8%AF%95%E9%A2%98/">
+      <li style="list-style: none;">一道function面试题.js</li>
     </a>
     
-    <a href="../../cn/ms-JavaScript2.0%20/">
-      <li style="list-style: none;">前端面试题汇总-JavaScript篇2.0 实战篇</li>
+    <a href="../../cn/09_Diff%E7%AE%97%E6%B3%95%E4%B8%8EKey/">
+      <li style="list-style: none;">你需要知道的Diff算法</li>
     </a>
     
-    <a href="../../cn/osapi/">
-      <li style="list-style: none;">OSAPI - 开源Api管理平台</li>
+    <a href="../../cn/14_Http%E7%BC%93%E5%AD%98%E8%AF%A6%E8%A7%A3/">
+      <li style="list-style: none;">HTTP缓存</li>
     </a>
     
-    <a href="../../cn/FrontEndAdvanced-Design-Pattern/">
-      <li style="list-style: none;">【前端进阶】框架用了哪些设计模式？</li>
+    <a href="../../cn/12_CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">
+      <li style="list-style: none;">CDN：内容分发网络</li>
     </a>
     
   </ul>
@@ -1227,9 +1262,9 @@ gl.cleanColor()的参数
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（119） </a></h5>
+<h5><a href="/archives/">归档（134） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1244,6 +1279,10 @@ gl.cleanColor()的参数
     
     <a href="/categories/#JavaScript">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#面试">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
     </a>
     
     <a href="/categories/#WebGL">
@@ -1266,6 +1305,10 @@ gl.cleanColor()的参数
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
     </a>
     
+    <a href="/categories/#Demo">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
     <a href="/categories/#Math">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Math</li>
     </a>
@@ -1276,10 +1319,6 @@ gl.cleanColor()的参数
     
     <a href="/categories/#Python">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Web安全">
@@ -1294,8 +1333,12 @@ gl.cleanColor()的参数
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#面试">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
+    <a href="/categories/#链友">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#知识扫盲">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
     <a href="/categories/#免费api">
@@ -1310,16 +1353,12 @@ gl.cleanColor()的参数
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
-    <a href="/categories/#知识扫盲">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
+    <a href="/categories/#Nginx">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#Hexo">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
-    <a href="/categories/#Nginx">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#NodeJs">
@@ -1407,10 +1446,10 @@ gl.cleanColor()的参数
         <!-- Friends Blog -->
 
 <h5><a href="/">链友</a></h5>
+<a target="_blank" href='https://yesmore.cc/cn/friends/'>链友申请</a>
 <ul class="list-inline">
   
 </ul>
-
 
         <hr>
     
@@ -1462,7 +1501,7 @@ gl.cleanColor()的参数
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">411.9k</span>
+          站点总字数：<span class="post-count">437.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

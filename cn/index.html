@@ -224,17 +224,6 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               关于
@@ -246,9 +235,7 @@
           
           
           <li>
-            <a href="/categories/">
-              
-              分类
+            <a href="/algorithms/">
               
               
             </a>
@@ -257,7 +244,20 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
               
               
             </a>
@@ -459,94 +459,33 @@
   
   <!-- top start (article top hot config) -->
   
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
   <!-- top end -->
   
 
-  <a href="/cn/Different-UI/">
+  <a href="/cn/17_从Array.from理解类数组/">
     <h1 class="post-title">
-      Different UI
-    </h1>
-    <h3 class="post-subtitle">
-      ✨ A Vue.js 3 UI Library
-    </h3>
-    <div class="post-content-preview">
-      
-  
-
-
-最新版本请查看 github
-
-Different UI - A Vue.js 3 UI library made by @yesmore
-
-💪 Vue 3 Composition API
-🔥 Written in TypeScript
-✨ With Colorful Style
-
-阅读文档：中文版 | English
-⚡️ 状态: Beta
-这个项目仍在持续开发中。欢迎加入......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-11-22
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Vue" title="Vue"><i class="fa fa-tag" style="color: aqua;"></i> Vue</a>
-    
-    <a href="/tags/#UI组件库" title="UI组件库"><i class="fa fa-tag" style="color: aqua;"></i> UI组件库</a>
-    
-    <a href="/tags/#开源项目" title="开源项目"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/ms-HTML＆CSS2.0/">
-    <h1 class="post-title">
-      前端面试题汇总-HTML＆CSS篇2.0 实战篇
+      从Array.from理解类数组
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-Tips：
+      从Array.from理解类数组
 
-HTNL
-1.理解HTML语义化
+Array.from：允许在 JavaScript 集合(如: 数组、类数组对象、或者是字符串、map 、set 等可迭代对象) 上进行有用的转换。
 
-
-增加可读性
-
-
-方便SEO
-
-
-12345678910111213141516&lt;div&gt;    &lt;div&gt;        列表一    &lt;/div&gt;    &lt;div&gt;        列表二    &lt;/div&gt;&lt;/div&gt;&lt;h1&gt;标题&lt;/h1&gt;&......
+执行下面的程序：
+123456789var obj = &#123;  0: 1,  1: 2,  2: 3,  length: 3&#125;;var newArr = Array.from(obj);c......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-10-31
+    2021-12-27
   </p>
   <div class="tags">
+    
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
     <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
@@ -563,35 +502,29 @@ HTNL
   <!-- top end -->
   
 
-  <a href="/cn/ms-JavaScript2.0 /">
+  <a href="/cn/16_一道function面试题/">
     <h1 class="post-title">
-      前端面试题汇总-JavaScript篇2.0 实战篇
+      一道function面试题.js
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      1、变量类型和计算
-提问：
+      原题
 
-typeof 能判断哪些类型
-何时使用 === 与 ==
-值类型和引用类型的区别
-手写深拷贝
+源码：01_一道function面试题.js
 
-值类型 vs 引用类型
-值类型：
-1234let a = 100let b = aa = 200console.log(b) // 100
-常见值类型
-12345const a // undefinedconst s = &#x27;abc&#x27;const n ......
+1234567891011121314151617181920212223242526272829303132function Foo() &#123;  getName = function () &#123;    console.log(1);  &#125;  console.log(this);  return this&#1......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-10-31
+    2021-12-26
   </p>
   <div class="tags">
+    
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
     <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
@@ -608,42 +541,31 @@ typeof 能判断哪些类型
   <!-- top end -->
   
 
-  <a href="/cn/osapi/">
+  <a href="/cn/09_Diff算法与Key/">
     <h1 class="post-title">
-      OSAPI - 开源Api管理平台
+      你需要知道的Diff算法
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-    
-        👋 OSAPI - 开源Api管理平台
-    
-    
-
-阅读文档：中文版 | English
-📖 使用者须知
-
-迭代中：每周花半天维护及更新，支持pr。
-
-OSAPI是干嘛的？
-作者君：
-平时写点有趣或者有用（bushi）的接口，比如隔壁的 photosapi ，使用该平台进行统一管理且开源，同时收集整理互联网上其他的 Api，并通过该管理平台集成为接口......
+      Diff算法
+提到这个算法，就必须说一下关于Key的事情了。
+其实每个组件中的每个标签都会有一个key, 只不过有的必须显示的指定，有的可以隐藏。
+如果生成的render出来后就不会改变里面的内容，那么你不需要指定key（不指定key时，React也会生成一个默认的标识）,或者将index作为key，只要key不重复即可。
+但是如果你的标签是动态的，是有可能刷新的，就必须显示的指定key。上......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-10-26
+    2021-12-17
   </p>
   <div class="tags">
     
-    <a href="/tags/#开源项目" title="开源项目"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
-    <a href="/tags/#NodeJs" title="NodeJs"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
-    
-    <a href="/tags/#免费Api" title="免费Api"><i class="fa fa-tag" style="color: aqua;"></i> 免费Api</a>
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
   </div>
   
@@ -658,32 +580,34 @@ OSAPI是干嘛的？
   <!-- top end -->
   
 
-  <a href="/cn/FrontEndAdvanced-Design-Pattern/">
+  <a href="/cn/14_Http缓存详解/">
     <h1 class="post-title">
-      【前端进阶】框架用了哪些设计模式？
+      HTTP缓存
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      要点：分析设计模式相关概念
-一个重要的抽象知识——设计模式，先来看看维基百科对设计模式的定义：
-
-设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题所提出的解决方案。设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。
-
-从这个定义不难看出，设计模式就是一套抽象的理论，属于编程知识中的“道”而非“术”，对于理论的学习我们最......
+      HTTP缓存
+前言
+通过本文，你将了解到http缓存机制是怎样的，no-cache到底有没有缓存，地址栏回车，F5，ctrl+F5的区别，以及当下较为推荐的缓存方案等。
+说明
+阅读前提：http缓存主要针如css，js，图片等更新频率不大的静态文件。
+首先得先明确这个概念，不然以下的概念以及例子，都会显得不太有意义，或者不是那么完美。
+一、http缓存请求相应头
+阅读本文，先大概了解这些缓存......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-10-11
+    2021-12-17
   </p>
   <div class="tags">
     
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
-    <a href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
   </div>
   
@@ -698,31 +622,30 @@ OSAPI是干嘛的？
   <!-- top end -->
   
 
-  <a href="/cn/FrontEndAdvanced-ServerLess/">
+  <a href="/cn/12_CDN内容分发网络/">
     <h1 class="post-title">
-      【前端进阶】前端Serverless架构详解
+      CDN：内容分发网络
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      要点：
-严格意义上来说，Serverless 并不属于前端技术，但对于那些想提升自己知识广度，想往全栈工程师方向发展的前端工程师而言，是一个非常高效的工具。而对于那些只想专注于前端领域的工程师而言，了解 Serverless 背后的思想，对提升开发思维也会有一定的帮助。
-下面我们就通过相关概念和具体案例来揭开 Serverless 的神秘面纱吧。
-一、什么是 Serverless
-Serve......
+      CDN(Content Delivery Network)：内容分发网络
+
+CDN是构建在现有网络基础之上的智能虚拟网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。
+在不同地域的用户访问网站的响应速度存在差异,为了提高用户访问的响应速度、优化现有I......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-10-11
+    2021-12-15
   </p>
   <div class="tags">
     
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
-    <a href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
   </div>
   
@@ -737,30 +660,32 @@ Serve......
   <!-- top end -->
   
 
-  <a href="/cn/FrontEndAdvanced-Micro-frontend/">
+  <a href="/cn/07_重绘与重排/">
     <h1 class="post-title">
-      【前端进阶】微前端架构简介
+      重排(Reflow)与重绘(Repaint)
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      要点：
-在这之前，我们来思考一个问题，在日常开发中是怎么复用代码的？
-复制粘贴。这是初级工程师最容易采用的方式，该方式虽然简单有效，但会给代码维护带来很多问题，比如增加了很多重复的代码，复用代码逻辑发生变动时需要处处修改。因此，这种违反 DRY（Don’t Repeat Yourself）原则的方式应该尽量避免。
-封装模块。稍有经验的工程师会考虑将代码逻辑封装成模块，然后通过引用模块的方式来......
+      重排(Reflow)与重绘(Repaint)
+必要前置知识：06_浏览器渲染原理
+补充瞻仰巨佬：从输入URL到页面加载的过程？如何由一道题完善自己的前端知识体系！
+概览
+浏览器下载完页面所有的资源后，就要开始构建DOM树，与此同时还会构建渲染树(Render Tree)。（其实在构建渲染树之前，和DOM树同期会构建Style Tree。DOM树与Style Tree合并为渲染树）。
+**DO......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-10-10
+    2021-12-15
   </p>
   <div class="tags">
     
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
-    <a href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
   </div>
   
@@ -775,29 +700,32 @@ Serve......
   <!-- top end -->
   
 
-  <a href="/cn/Algorithm-plus-one/">
+  <a href="/cn/10_ES6-ES12/">
     <h1 class="post-title">
-      【LeetCode-简单】66. 加一
+      ES6~ES12
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      要点：数组的遍历(正向遍历和反向遍历)
-描述
-12345678910111213141516给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。你可以假设除了整数 0 之外，这个整数不会以零开头。示例 1:输入: [1,2,3]输出: [1,2,4]解释: 输入数组表示数字 123。示例 2:输入: [4,3,2,1]......
+      ES6（ES2015）
+1.1 块级作用域
+​	ES6之前没有块级作用域，ES5的var没有块级作用域的概念，只有function有作用域的概念，ES6的let、const引入了块级作用域。
+​	ES5之前if和for都没有作用域，所以很多时候需要使用function的作用域，比如闭包。
+1.1.1 什么是变量作用域
+​	变量在什么范围内可用，类似Java的全局变量和局部变量的概念，全局变量......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-09-17
+    2021-12-14
   </p>
   <div class="tags">
     
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
-    <a href="/tags/#LeetCode" title="LeetCode"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
   </div>
   
@@ -812,46 +740,29 @@ Serve......
   <!-- top end -->
   
 
-  <a href="/cn/xiaoshesapi/">
+  <a href="/cn/11_浏览器存储/">
     <h1 class="post-title">
-      小舍免费图片Api V2
+      浏览器存储
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-    小舍图片Api接口 v2
-	
-
-
-
-截止已更新：参数 p 范围为：1~14（1400张）。
-如果喜欢请给仓库点个star：https://github.com/yesmore/photosapi
-此接口为 小舍图片Api接口 重构版，新增：
-
-CDN 加速
-接口 pv 统计功能
-
-注意：个人接口，请勿商用。图片收集不易，请珍惜食用。
-
-用户使用须知
-调用方法
-地址：http://v......
+      浏览器存储
+前言
+随着移动网络的发展与演化，我们手机上现在除了有原生 App，还能跑“WebApp”——它即开即用，用完即走。一个优秀的 WebApp 甚至可以拥有和原生 App 媲美的功能和体验。WebApp 优异的性能表现，有一部分原因要归功于浏览器存储技术的提升。cookie存储数据的功能已经很难满足开发所需，逐渐被WebStorage、IndexedDB所取代，本文将介绍这几种存储方......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-09-16
+    2021-12-14
   </p>
   <div class="tags">
     
-    <a href="/tags/#开源项目" title="开源项目"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
-    <a href="/tags/#NodeJs" title="NodeJs"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
-    
-    <a href="/tags/#免费Api" title="免费Api"><i class="fa fa-tag" style="color: aqua;"></i> 免费Api</a>
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
   </div>
   
@@ -866,40 +777,71 @@ CDN 加速
   <!-- top end -->
   
 
-  <a href="/cn/italk-app/">
+  <a href="/cn/06_浏览器渲染原理/">
     <h1 class="post-title">
-      italk-app 社交聊天app
+      浏览器原理
     </h1>
     <h3 class="post-subtitle">
-      一个基于 Uniapp、express、MongDB 实现的 聊天app
+      
     </h3>
     <div class="post-content-preview">
-      
-    小舍App开发文档
-    
-    
-    
-
-
-
-注意：线上项目 italk.aoau.top 注册功能已修复（其他功能也恢复正常），请放心食用。
-推荐本人的另一个项目：VuEgg-jwt-template，基于 Vue、Eggjs 开发的用户鉴权模板，开箱即用，可配合 italk-app 项目食用，规范了后台代码，项目使用 MySQL，可自行更换成 MongoDB，让你专注......
+      浏览器原理
+概览：浏览器的解析渲染过程
+1）解析 HTML 构建DOM树
+2）解析 CSS 构建CSSOM树
+3）利用上面两个树构建渲染树（渲染树的节点即为“渲染对象”）
+4）渲染对象被创建并添加到树中，它们并没有位置和大小，所以当浏览器生成渲染树以后，就会根据渲染树来进行布局（也可以被称作“回流”），这一阶段浏览器要做的事情是要弄清楚各个节点在页面中的确切位置和大小。通常这一行为也被称为“......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-09-14
+    2021-12-14
   </p>
   <div class="tags">
     
-    <a href="/tags/#开源项目" title="开源项目"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
-    <a href="/tags/#Uniapp" title="Uniapp"><i class="fa fa-tag" style="color: aqua;"></i> Uniapp</a>
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
-    <a href="/tags/#MongDB" title="MongDB"><i class="fa fa-tag" style="color: aqua;"></i> MongDB</a>
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/02_js数据类型/">
+    <h1 class="post-title">
+      JS数据类型
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      JS有哪些数据类型
+Undefined、Null、Boolean、Number、String、Object、Symbol、BigInt
+ES6 中新增了一种 Symbol 。这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。
+谷歌67版本中还出现了一种 bigInt。是指安全存储、操作大整数。（但是很多人不把这个做为一个类型）。
+Object 中包含了哪......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-12-13
+  </p>
+  <div class="tags">
     
-    <a href="/tags/#Nodejs" title="Nodejs"><i class="fa fa-tag" style="color: aqua;"></i> Nodejs</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
   </div>
   
@@ -935,17 +877,17 @@ CDN 加速
         <!-- Visitors -->
 <h5><a href="/">来访者</a></h5>
 
-  <div class="widget">
+<div class="widget">
   <span>
-    您是本站第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
+    宁好, 第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
   </span>
   <br />
   <span>
     总阅读量 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
   </span>
   <!-- 网站运行时间的设置 -->
-  <div> 
-    站点已战战兢兢运行 
+  <div>
+    站点已运行
     <a href="javascript:;;">
       <strong><span id="timeDate">载入天数...</span></strong>
     </a>天
@@ -955,22 +897,33 @@ CDN 加速
   </div>
   <script>
     var now = new Date();
+
     function createtime() {
-      var grt= new Date("07/10/2021 13:14:21");//此处修改你的建站时间或者网站上线时间
-      now.setTime(now.getTime()+250);
-      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+      var grt = new Date("07/10/2021 13:14:21"); //此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
       document.getElementById("timeDate").innerHTML = dnum;
       // document.getElementById("times").innerHTML = hnum + "h " + mnum + "' " + snum + "''";
     }
-  setInterval("createtime()",250);
+    setInterval("createtime()", 250);
   </script>
 </div>
-
 
         <hr>
     
@@ -986,6 +939,14 @@ CDN 加速
     
     
     <a href="/tags/#WebGL" title="WebGL" rel="32"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+    
+    
+    <a href="/tags/#preInterview" title="preInterview" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    
+    
+    <a href="/tags/#面试" title="面试" rel="18"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
     
     
@@ -1065,10 +1026,6 @@ CDN 加速
     
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
     <a href="/tags/#Nginx" title="Nginx" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Nginx</a>
     
     
@@ -1077,7 +1034,11 @@ CDN 加速
     
     
     
-    <a href="/tags/#面试" title="面试" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
     
     
     
@@ -1203,24 +1164,24 @@ CDN 加速
 <div class="widget">
   <ul style="padding-left: 0;">
     
-    <a href="Different-UI/">
-      <li style="list-style: none;">Different UI</li>
+    <a href="17_%E4%BB%8EArray.from%E7%90%86%E8%A7%A3%E7%B1%BB%E6%95%B0%E7%BB%84/">
+      <li style="list-style: none;">从Array.from理解类数组</li>
     </a>
     
-    <a href="ms-HTML%EF%BC%86CSS2.0/">
-      <li style="list-style: none;">前端面试题汇总-HTML＆CSS篇2.0 实战篇</li>
+    <a href="16_%E4%B8%80%E9%81%93function%E9%9D%A2%E8%AF%95%E9%A2%98/">
+      <li style="list-style: none;">一道function面试题.js</li>
     </a>
     
-    <a href="ms-JavaScript2.0%20/">
-      <li style="list-style: none;">前端面试题汇总-JavaScript篇2.0 实战篇</li>
+    <a href="09_Diff%E7%AE%97%E6%B3%95%E4%B8%8EKey/">
+      <li style="list-style: none;">你需要知道的Diff算法</li>
     </a>
     
-    <a href="osapi/">
-      <li style="list-style: none;">OSAPI - 开源Api管理平台</li>
+    <a href="14_Http%E7%BC%93%E5%AD%98%E8%AF%A6%E8%A7%A3/">
+      <li style="list-style: none;">HTTP缓存</li>
     </a>
     
-    <a href="FrontEndAdvanced-Design-Pattern/">
-      <li style="list-style: none;">【前端进阶】框架用了哪些设计模式？</li>
+    <a href="12_CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">
+      <li style="list-style: none;">CDN：内容分发网络</li>
     </a>
     
   </ul>
@@ -1232,9 +1193,9 @@ CDN 加速
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（119） </a></h5>
+<h5><a href="/archives/">归档（134） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/07/">July 2021</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/12/">December 2021</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1249,6 +1210,10 @@ CDN 加速
     
     <a href="/categories/#JavaScript">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#面试">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
     </a>
     
     <a href="/categories/#WebGL">
@@ -1271,6 +1236,10 @@ CDN 加速
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
     </a>
     
+    <a href="/categories/#Demo">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
     <a href="/categories/#Math">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Math</li>
     </a>
@@ -1281,10 +1250,6 @@ CDN 加速
     
     <a href="/categories/#Python">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Web安全">
@@ -1299,8 +1264,12 @@ CDN 加速
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#面试">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
+    <a href="/categories/#链友">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#知识扫盲">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
     <a href="/categories/#免费api">
@@ -1315,16 +1284,12 @@ CDN 加速
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
-    <a href="/categories/#知识扫盲">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
+    <a href="/categories/#Nginx">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#Hexo">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
-    <a href="/categories/#Nginx">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#NodeJs">
@@ -1412,10 +1377,10 @@ CDN 加速
         <!-- Friends Blog -->
 
 <h5><a href="/">链友</a></h5>
+<a target="_blank" href='https://yesmore.cc/cn/friends/'>链友申请</a>
 <ul class="list-inline">
   
 </ul>
-
 
         <hr>
     
@@ -1467,7 +1432,7 @@ CDN 加速
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">411.9k</span>
+          站点总字数：<span class="post-count">437.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

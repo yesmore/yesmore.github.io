@@ -224,17 +224,6 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               关于
@@ -246,9 +235,7 @@
           
           
           <li>
-            <a href="/categories/">
-              
-              分类
+            <a href="/algorithms/">
               
               
             </a>
@@ -257,7 +244,20 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
               
               
             </a>
@@ -462,32 +462,31 @@
   <!-- top end -->
   
 
-  <a href="/cn/Algorithm-intersectionOfTwoLinkedLists/">
+  <a href="/cn/02_js数据类型/">
     <h1 class="post-title">
-      【LeetCode-简单】160. 相交链表
+      JS数据类型
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      要点：链表、双指针
-描述
-给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。
-题目数据 保证 整个链式结构中不存在环。
-注意，函数返回结果后，链表必须 保持其原始结构 。
-1234567891011121314151617181920212223示例 1：输入：intersectVal = 8, listA ......
+      JS有哪些数据类型
+Undefined、Null、Boolean、Number、String、Object、Symbol、BigInt
+ES6 中新增了一种 Symbol 。这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。
+谷歌67版本中还出现了一种 bigInt。是指安全存储、操作大整数。（但是很多人不把这个做为一个类型）。
+Object 中包含了哪......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-09-13
+    2021-12-13
   </p>
   <div class="tags">
     
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
     
-    <a href="/tags/#LeetCode" title="LeetCode"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
   </div>
   
@@ -502,284 +501,286 @@
   <!-- top end -->
   
 
-  <a href="/cn/vue-egg-jwt-template/">
+  <a href="/cn/05_原型链/">
     <h1 class="post-title">
-      VuEgg-jwt-template
+      原型
     </h1>
     <h3 class="post-subtitle">
-      一个基于 Vue、eggjs、Mysql 实现的 jwt 用户鉴权模板
+      
     </h3>
     <div class="post-content-preview">
-      
-    VuEgg-jwt-template
-    
-    
-
-
-阅读文档：中文版 | English
-
-简介：开箱即用的 User authentication template——用户权鉴模板。
-适用人群：
-
-前端开发学习egg框架初学者
-使用 Vue-egg 架构的开发者
-或者像 @yesmore 这样又菜又懒的CV工程师
-
-
-快速开始
-开始之前，请确保你有以下环境：
-
-Node......
+      原型链
+12345678// 要有顺着原型链找东西的技巧 // 甭管是 常规的 找方法、找属性// 还是面试中可能问的找构造函数 找Function Object的显式原型/*（比如写一个 Function.prototype.func = function()&#123;...&#125;   要知道这个func方法 哪些实例对象可以调用（顺着原型链的隐式原型那条路线要能抵达Functio......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-09-12
+    2021-12-13
   </p>
   <div class="tags">
     
-    <a href="/tags/#Vue" title="Vue"><i class="fa fa-tag" style="color: aqua;"></i> Vue</a>
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/03_new/">
+    <h1 class="post-title">
+      JS中的new关键字
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      new一个构造函数过程中发生了什么
+
+红宝书：
+要创建 Person 的实例，应使用 new 操作符。以这种方式调用 构造函数 会执行如下操作：
+(1) 在内存中创建一个新对象
+(2) 这个新对象内部的 [ [Prototype] ] 特性被赋值为构造函数的 prototype属性。
+(3) 构造函数内部的 this 被赋值为这个新对象（即 this 指向新对象）
+(4) 执行构造函数内部的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-12-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/04_构造函数/">
+    <h1 class="post-title">
+      JS构造函数
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      先复习一下函数的定义方式：
+1.声明式函数定义： function 函数名(){}；这种定义方式，会将函数声明提升到该函数所在作用域的最开头，也是就无论你在这个函数的最小作用域的那儿使用这种方式声明的函数，在这个作用域内，你都可以调用这个函数为你所用。
+2.函数表达式：let fun = function(){}; 此方式定义的函数，只能在该作用域中，这段赋值代码执行之后才能通过fun() ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-12-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/01_https传输原理/">
+    <h1 class="post-title">
+      https传输原理
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+超文本传输协议HTTP协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。
+为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-12-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#preInterview" title="preInterview"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/ms-HTML＆CSS2.0/">
+    <h1 class="post-title">
+      前端面试题汇总-HTML＆CSS篇2.0 实战篇
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+Tips：
+
+HTNL
+1.理解HTML语义化
+
+
+增加可读性
+
+
+方便SEO
+
+
+12345678910111213141516&lt;div&gt;    &lt;div&gt;        列表一    &lt;/div&gt;    &lt;div&gt;        列表二    &lt;/div&gt;&lt;/div&gt;&lt;h1&gt;标题&lt;/h1&gt;&......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-10-31
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/ms-JavaScript2.0 /">
+    <h1 class="post-title">
+      前端面试题汇总-JavaScript篇2.0 实战篇
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      1、变量类型和计算
+提问：
+
+typeof 能判断哪些类型
+何时使用 === 与 ==
+值类型和引用类型的区别
+手写深拷贝
+
+值类型 vs 引用类型
+值类型：
+1234let a = 100let b = aa = 200console.log(b) // 100
+常见值类型
+12345const a // undefinedconst s = &#x27;abc&#x27;const n ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-10-31
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#面试" title="面试"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/osapi/">
+    <h1 class="post-title">
+      OSAPI - 开源Api管理平台
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+    
+        👋 OSAPI - 开源Api管理平台
+    
+    
+
+阅读文档：中文版 | English
+📖 使用者须知
+
+迭代中：每周花半天维护及更新，支持pr。
+
+OSAPI是干嘛的？
+作者君：
+平时写点有趣或者有用（bushi）的接口，比如隔壁的 photosapi ，使用该平台进行统一管理且开源，同时收集整理互联网上其他的 Api，并通过该管理平台集成为接口......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-10-26
+  </p>
+  <div class="tags">
     
     <a href="/tags/#开源项目" title="开源项目"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
     
-    <a href="/tags/#MySQL" title="MySQL"><i class="fa fa-tag" style="color: aqua;"></i> MySQL</a>
-    
-    <a href="/tags/#Eggjs" title="Eggjs"><i class="fa fa-tag" style="color: aqua;"></i> Eggjs</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/HTML-mobile/">
-    <h1 class="post-title">
-      前端之移动端适配详解
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      一、相关概念
-​		在学习移动端之前，我们先来学习一些基础的概念和专有名词，这些知识会在以后的面试、工作沟通中经常用到。
-屏幕相关
-1.屏幕大小
-​			指屏幕的对角线长度，单位是英寸(inch)。常见尺寸有： 3.5寸、4.7寸、5.0寸、5.5寸、6.0寸等。
-备注：1英寸(inch) = 2.54厘米(cm)
-
-2.屏幕分辨率
-指屏幕在：横向、纵向上所拥有的物理像素点总数。一般表示用 ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-09-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#mobile" title="mobile"><i class="fa fa-tag" style="color: aqua;"></i> mobile</a>
-    
-    <a href="/tags/#HTML" title="HTML"><i class="fa fa-tag" style="color: aqua;"></i> HTML</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/OS-storage/">
-    <h1 class="post-title">
-      【OS】三、存储器分级策略
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      SSD、内存和 L1 Cache 相比速度差多少倍？
-如果你不知道 L1 Cache，可能会错误地判断内存执行速度。我们写程序，会用寄存器、内存以及硬盘，所以按照墨菲定律，如果这里有一个认知是错误的，那么最终的结果就会产生问题。
-下面，回到我们今天的问题，这个问题关联的知识点是存储器分级策略。接下来，请你带着问题开始学习今天的内容。
-为什么会有存储器分级策略？
-要想弄清楚存储器分级策略。
-首......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-09-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#操作系统" title="操作系统"><i class="fa fa-tag" style="color: aqua;"></i> 操作系统</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/OS-digui/">
-    <h1 class="post-title">
-      【OS】二、不支持递归的程序语言如何实现递归程序
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      一道非常不错的面试题：不支持递归的程序语言如何实现递归程序？
-之所以说这道题好，是因为：
-
-首先，它不是纯粹考概念和死记硬背，求职者在回答问题之前需要进行一定的思考；
-其次，这道题目可以继续深挖，比如可以让求职者具体写一个程序，就变成了一道编程题；
-最后，这道题目有实战意义，它背后考察的是求职者的编程功底。
-
-为了弄清楚这道题目，你需要对程序有一个更深层次的认识，不仅仅停留在指令的执行层面，......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-09-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#操作系统" title="操作系统"><i class="fa fa-tag" style="color: aqua;"></i> 操作系统</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/OS-32VS64/">
-    <h1 class="post-title">
-      【OS】一、相比32位，64位的优势是什么？
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      前置知识：程序是如何执行的？
-我们先来看一道常规的面试题：相比 32 位，64 位的优势是什么？
-面试官考察这种类型的问题，主要是想看求职者是否有扎实的计算机基础，同时想知道求职者在工作中是否充满好奇，会主动学习、寻根问底，毕竟 32、64 位是经常出现在程序员视野的词汇，常见的东西都弄明白了，那说明这个人学习能力强。
-其实 ，面试官在这里给你挖了一个陷阱，因为他没有说清楚 32、64 位指......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-09-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#操作系统" title="操作系统"><i class="fa fa-tag" style="color: aqua;"></i> 操作系统</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/FrontEndAdvanced-Programming/">
-    <h1 class="post-title">
-      【前端进阶】命令式编程与声明式编程
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：命令式编程与声明式编程区别。
-程序代码虽然在机器上运行，但终究是由人来编写和维护的，因此代码的可读性、可维护性在软件开发中尤为重要。所以我们在编写代码的时候通常会遵循一些编码规范或风格，比如 Google 提出了最著名的关于主流语言的风格指南，但这些都比较微观和具体，如果宏观且抽象地来看，编码风格可以上升为编程范式。
-编程范式（Programming Paradigm）也称“编程泛型”......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-09-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/FrontEndAdvanced-Nodejs/">
-    <h1 class="post-title">
-      【前端进阶】Nodejs实现原理之libuv
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：Nodejs源码解析。
-提到 Node.js，相信大部分前端工程师都会想到基于它来开发服务端，只需要掌握 JavaScript 一门语言就可以成为全栈工程师，但其实 Node.js 的意义并不仅于此。
-很多高级语言，执行权限都可以触及操作系统，而运行在浏览器端的 JavaScript 则例外，浏览器为其创建的沙箱环境，把前端工程师封闭在一个编程世界的象牙塔里。不过 Node.js 的出......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-09-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
-    
     <a href="/tags/#NodeJs" title="NodeJs"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
     
+    <a href="/tags/#免费Api" title="免费Api"><i class="fa fa-tag" style="color: aqua;"></i> 免费Api</a>
+    
   </div>
   
 
@@ -793,23 +794,26 @@ Node......
   <!-- top end -->
   
 
-  <a href="/cn/FrontEndAdvanced-XSS-CSRF-ClickJacking/">
+  <a href="/cn/FrontEndAdvanced-Design-Pattern/">
     <h1 class="post-title">
-      【前端进阶】前端安全问题
+      【前端进阶】框架用了哪些设计模式？
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      要点：XSS、CSRF 和 ClickJacking。
-随着 Web 应用越来越广泛，各种 Web 安全问题也日益凸显，时常看到网上消息说，某网站用户账号信息遭泄露或盗取。
-Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的各种安全策略给前端工程师造就了一种安全的假象；另一方面在通常的理解中，黑客更多的是通过系统漏洞和病毒程序来入侵服务端，让人容易形成安全问题只与服务端关系密切的错觉......
+      要点：分析设计模式相关概念
+一个重要的抽象知识——设计模式，先来看看维基百科对设计模式的定义：
+
+设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题所提出的解决方案。设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。
+
+从这个定义不难看出，设计模式就是一套抽象的理论，属于编程知识中的“道”而非“术”，对于理论的学习我们最......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-09-10
+    2021-10-11
   </p>
   <div class="tags">
     
@@ -830,25 +834,25 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
   <!-- top end -->
   
 
-  <a href="/cn/FrontEndAdvanced-performance-optimization/">
+  <a href="/cn/FrontEndAdvanced-ServerLess/">
     <h1 class="post-title">
-      【前端进阶】前端性能优化
+      【前端进阶】前端Serverless架构详解
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       要点：
-性能是前端领域关注度非常高的话题，因为页面性能的好坏会直接影响用户体验。为了不断提升用户体验，前端工程师往往会对页面性能不断改进，而这个改进的过程就叫性能优化。这一讲我们就详细探究性能优化相关的内容。
-一、性能指标
-什么是性能？性能是指程序的运行速度，而前端性能是指页面的响应速度，提到速度必然离不开一个变量，那就是时间。所以我们会看到性能指标都是以时间为单位来测量的。
-前端性能的指标......
+严格意义上来说，Serverless 并不属于前端技术，但对于那些想提升自己知识广度，想往全栈工程师方向发展的前端工程师而言，是一个非常高效的工具。而对于那些只想专注于前端领域的工程师而言，了解 Serverless 背后的思想，对提升开发思维也会有一定的帮助。
+下面我们就通过相关概念和具体案例来揭开 Serverless 的神秘面纱吧。
+一、什么是 Serverless
+Serve......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-09-10
+    2021-10-11
   </p>
   <div class="tags">
     
@@ -894,17 +898,17 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
         <!-- Visitors -->
 <h5><a href="/">来访者</a></h5>
 
-  <div class="widget">
+<div class="widget">
   <span>
-    您是本站第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
+    宁好, 第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
   </span>
   <br />
   <span>
     总阅读量 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
   </span>
   <!-- 网站运行时间的设置 -->
-  <div> 
-    站点已战战兢兢运行 
+  <div>
+    站点已运行
     <a href="javascript:;;">
       <strong><span id="timeDate">载入天数...</span></strong>
     </a>天
@@ -914,22 +918,33 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
   </div>
   <script>
     var now = new Date();
+
     function createtime() {
-      var grt= new Date("07/10/2021 13:14:21");//此处修改你的建站时间或者网站上线时间
-      now.setTime(now.getTime()+250);
-      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+      var grt = new Date("07/10/2021 13:14:21"); //此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
       document.getElementById("timeDate").innerHTML = dnum;
       // document.getElementById("times").innerHTML = hnum + "h " + mnum + "' " + snum + "''";
     }
-  setInterval("createtime()",250);
+    setInterval("createtime()", 250);
   </script>
 </div>
-
 
         <hr>
     
@@ -945,6 +960,14 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
     
     
     <a href="/tags/#WebGL" title="WebGL" rel="32"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+    
+    
+    <a href="/tags/#preInterview" title="preInterview" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    
+    
+    <a href="/tags/#面试" title="面试" rel="18"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
     
     
@@ -1024,10 +1047,6 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
     
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
     <a href="/tags/#Nginx" title="Nginx" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Nginx</a>
     
     
@@ -1036,7 +1055,11 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
     
     
     
-    <a href="/tags/#面试" title="面试" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
     
     
     
@@ -1162,24 +1185,24 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
 <div class="widget">
   <ul style="padding-left: 0;">
     
-    <a href="../../cn/Different-UI/">
-      <li style="list-style: none;">Different UI</li>
+    <a href="../../cn/17_%E4%BB%8EArray.from%E7%90%86%E8%A7%A3%E7%B1%BB%E6%95%B0%E7%BB%84/">
+      <li style="list-style: none;">从Array.from理解类数组</li>
     </a>
     
-    <a href="../../cn/ms-HTML%EF%BC%86CSS2.0/">
-      <li style="list-style: none;">前端面试题汇总-HTML＆CSS篇2.0 实战篇</li>
+    <a href="../../cn/16_%E4%B8%80%E9%81%93function%E9%9D%A2%E8%AF%95%E9%A2%98/">
+      <li style="list-style: none;">一道function面试题.js</li>
     </a>
     
-    <a href="../../cn/ms-JavaScript2.0%20/">
-      <li style="list-style: none;">前端面试题汇总-JavaScript篇2.0 实战篇</li>
+    <a href="../../cn/09_Diff%E7%AE%97%E6%B3%95%E4%B8%8EKey/">
+      <li style="list-style: none;">你需要知道的Diff算法</li>
     </a>
     
-    <a href="../../cn/osapi/">
-      <li style="list-style: none;">OSAPI - 开源Api管理平台</li>
+    <a href="../../cn/14_Http%E7%BC%93%E5%AD%98%E8%AF%A6%E8%A7%A3/">
+      <li style="list-style: none;">HTTP缓存</li>
     </a>
     
-    <a href="../../cn/FrontEndAdvanced-Design-Pattern/">
-      <li style="list-style: none;">【前端进阶】框架用了哪些设计模式？</li>
+    <a href="../../cn/12_CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">
+      <li style="list-style: none;">CDN：内容分发网络</li>
     </a>
     
   </ul>
@@ -1191,9 +1214,9 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（119） </a></h5>
+<h5><a href="/archives/">归档（134） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1208,6 +1231,10 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
     
     <a href="/categories/#JavaScript">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#面试">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
     </a>
     
     <a href="/categories/#WebGL">
@@ -1230,6 +1257,10 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
     </a>
     
+    <a href="/categories/#Demo">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
     <a href="/categories/#Math">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Math</li>
     </a>
@@ -1240,10 +1271,6 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
     
     <a href="/categories/#Python">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Web安全">
@@ -1258,8 +1285,12 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#面试">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
+    <a href="/categories/#链友">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#知识扫盲">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
     <a href="/categories/#免费api">
@@ -1274,16 +1305,12 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
-    <a href="/categories/#知识扫盲">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
+    <a href="/categories/#Nginx">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#Hexo">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
-    <a href="/categories/#Nginx">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#NodeJs">
@@ -1371,10 +1398,10 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
         <!-- Friends Blog -->
 
 <h5><a href="/">链友</a></h5>
+<a target="_blank" href='https://yesmore.cc/cn/friends/'>链友申请</a>
 <ul class="list-inline">
   
 </ul>
-
 
         <hr>
     
@@ -1426,7 +1453,7 @@ Web 安全问题很容易成为前端工程师的盲点，一方面浏览器的�
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">411.9k</span>
+          站点总字数：<span class="post-count">437.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

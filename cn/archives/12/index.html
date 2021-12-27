@@ -224,17 +224,6 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               关于
@@ -246,9 +235,7 @@
           
           
           <li>
-            <a href="/categories/">
-              
-              分类
+            <a href="/algorithms/">
               
               
             </a>
@@ -257,7 +244,20 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
               
               
             </a>
@@ -462,40 +462,45 @@
   <!-- top end -->
   
 
-  <a href="/cn/react/">
+  <a href="/cn/02-绘制一个点_v1-HelloPoint-v1/">
     <h1 class="post-title">
-      React
+      【WebGL之巅】02-绘制一个点_v1
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-react学习笔记
+对应《WebGL编程指南》代码：02-HelloPoint1
+要点：着色器、着色器代码规范、vec4（齐次坐标）、gl.drawArrays()
 
 
-1. React简介
+步骤
 
-React官网：https://react.docschina.org/docs/add-react-to-a-website.html
+获取&lt;canvas&gt;元素
+获取WebGL上下文
+初始化着色器
+设置&lt;canvas&gt;背景色
+清除&lt;canvas&gt;
+绘图
 
-react是什么？
-React用于构建用户界面的JS库。是一个将数据渲染为HTML视图的开源JS库。
-谁开发的？
-Facebook开发开源
-为什么学？
-1.原生JS操作DOM繁琐，效率低（DOM Api操......
+知识点
+
+
+着色器
+顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-22
+    2021-07-24
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#React" title="React"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -510,56 +515,47 @@ Facebook开发开源
   <!-- top end -->
   
 
-  <a href="/cn/nodejs/">
+  <a href="/cn/01-使用webgl清空绘图区-HellCanvas/">
     <h1 class="post-title">
-      NodeJs
+      【WebGL之巅】01-使用webgl清空绘图区
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-nodejs基础知识笔记
+对应《WebGL编程指南》代码：01-HelloCanvas
 
 
-Node介绍
-为什么要学习Node.js
+步骤
 
-企业需求
+获取&lt;canvas&gt;元素
+获取webgl绘图上下文
+设置背景色
+清空&lt;canvas&gt;
 
-具有服务端开发经验更改
-front-end
-back-end
-全栈开发工程师
-基本的网站开发能力
-
-服务端
-前端
-运维部署
+知识点
 
 
-多人社区
+gl.cleanColor()的参数
 
 
+一旦指定了背景色，背景色就会驻存在WebGL系统中，在下次调用clearColor前不会改变
 
 
-Node.js是什么
-
-Node.js是JavaScript 运行时
-通俗易懂的讲，Node.js是JavaScript的运行平台
-Node.js既不是语言，也......
+若想显示webgl调试错误，在调用getWebGLCo......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-22
+    2021-07-24
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#NodeJs" title="NodeJs"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -574,153 +570,24 @@ Node.js既不是语言，也......
   <!-- top end -->
   
 
-  <a href="/cn/JavaScript -DOM事件之拖拽的实现与简单优化/">
+  <a href="/cn/xpath解析爬取全国城市名称/">
     <h1 class="post-title">
-      【JavaScript 随笔】DOM事件之——拖拽的实现与简单优化
+      xpath解析爬取全国城市名称【★★】
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      效果
+      复习：XPath语法
+需求：解析出所有城市名称
 
-鼠标点击文档中任意元素拖拽至任意位置。
-思路与流程
-123鼠标按下时，开始拖拽：onmousedown鼠标移动，元素被拖动：onmousemove鼠标松开，被拖拽元素固定：onmouseup
-代码
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515......
+1234567891011121314151617181920212223#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsfrom lxml import etree# 项目需求：解析出所有城市名称https://www.aqistudy.cn/historydata/if......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/ajax-加载本地文件出现跨域解决方案/">
-    <h1 class="post-title">
-      Ajax跨域解决方案
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-本地 Ajax 跨域报错 Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, chrome-untrusted, https.
-
-
-
-当我们在做练习或者写 Demo 的时候，有访问本地文件的需求，当我们在加载的时候发现不能加载，会报如下错误：......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#Ajax" title="Ajax"><i class="fa fa-tag" style="color: aqua;"></i> Ajax</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/JavaScript-实现动态显示时间效果/">
-    <h1 class="post-title">
-      Javascript动态显示时间
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      知识点
-
-
-Timing事件之 setInterval()方法：
-
-效果
-
-上代码
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/spider/">
-    <h1 class="post-title">
-      Python爬虫
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      一、爬虫基础简介
-
-前戏
-​    1.你是否在夜深人静的时候，想看一些会让你更睡不着的图片却苦于没有资源…
-​    2.你是否在节假日出行高峰的时候，想快速抢购火车票成功…
-​    3.你是否在网上购物的时候，想快速且精准的定位到口碑质量最好的商品…
-什么是爬虫：
-- 通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。
-
-爬虫的价值：
-- 实际应用
-- 就业
-爬虫究竟是合......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-21
+    2021-07-23
   </p>
   <div class="tags">
     
@@ -741,36 +608,30 @@ Timing事件之 setInterval()方法：
   <!-- top end -->
   
 
-  <a href="/cn/TypeScript/">
+  <a href="/cn/xpath解析爬取美女图片/">
     <h1 class="post-title">
-      TypeScript学习笔记
+      xpath解析爬取美女图片【★★】
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-ts学习笔记
+      复习：XPath语法
+需求：解析下载图片数据
 
-
-第一章 快速入门
-0、TypeScript简介
-TypeScript是JavaScript的超集；
-它对JS进行了扩展，向JS中引入了类型的概念，并添加了许多新的特性；
-TS代码需要通过编译器编译为JS，然后再交由JS解析器执行；
-TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用；
-相较于JS而言，TS拥有了静态类型，更加严格的语法，更强大的功能；
-TS可以......
+123456789101112131415161718192021222324252627282930313233343536373839#!/usr/bin/env python # -*- coding:utf-8 -*-# 需求：解析下载图片数据 http://pic.netbian.com/4kmeinv/import requests......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-21
+    2021-07-23
   </p>
   <div class="tags">
     
-    <a href="/tags/#TypeScript" title="TypeScript"><i class="fa fa-tag" style="color: aqua;"></i> TypeScript</a>
+    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    
+    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
     
   </div>
   
@@ -785,37 +646,30 @@ TS可以......
   <!-- top end -->
   
 
-  <a href="/cn/hello-world/">
+  <a href="/cn/xpath解析58二手房的房源信息/">
     <h1 class="post-title">
-      建站随笔
+      xpath解析58二手房的房源信息【★★】
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      …
+      复习：XPath语法
+需求：爬取58二手房中的房源信息
 
-新建文章
-1$ hexo new &quot;My New Post&quot;
-新建页面
-1$ hexo new page ‘title’
-提交Git
-1$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
-本地调试
-12$ hexo s --debug$ hexo s
-...
+1234567891011121314151617181920212223#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsfrom lxml import etree# 需求：爬取58二手房中的房源信息if __name__ == &quot;__main__&qu......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-20
+    2021-07-23
   </p>
   <div class="tags">
     
-    <a href="/tags/#建站指南" title="建站指南"><i class="fa fa-tag" style="color: aqua;"></i> 建站指南</a>
+    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
     
-    <a href="/tags/#Hexo" title="Hexo"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
+    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
     
   </div>
   
@@ -830,47 +684,192 @@ TS可以......
   <!-- top end -->
   
 
-  <a href="/cn/centosweb/">
+  <a href="/cn/bs4解析爬取三国演义所有章节及内容/">
     <h1 class="post-title">
-      Centos7 零成本搭建web服务器【外网可访问】
+      bs4解析爬取三国演义所有章节及内容【★★★】
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      复习：Python爬虫介绍
+需求：爬取三国演义小说所有的章节标题和章节内容
+1http://www.shicimingju.com/book/sanguoyanyi.html
+
+12345678910111213141516171819202122232425262728293031323334353637#!/usr/bin/env python # -*- coding:utf-8 -*......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-23
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    
+    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/正则解析爬取分页多张图片/">
+    <h1 class="post-title">
+      正则解析爬取分页多张图片【★★★】
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      复习：Python正则解析语法
+需求：分页爬取糗事百科中糗图板块下所有的糗图图片
+
+1234567891011121314151617181920212223242526272829303132333435363738394041#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport reimport os# 需求：爬......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-23
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    
+    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/正则解析爬取单页多张图片/">
+    <h1 class="post-title">
+      正则解析爬取单页多张图片【★★】
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      复习：Python正则解析语法
+需求：爬取糗事百科中糗图板块下所有的糗图图片
+
+12345678910111213141516171819202122232425262728293031323334353637#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport re   # 正则表达式模块import os# 需求......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-23
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    
+    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/单张图片爬取/">
+    <h1 class="post-title">
+      单张图片爬取【★】
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-更新：【Windows+Nginx+Natapp零成本搭建web服务器】教程即将上线 。
+request请求返回类型区别：
 
-
-一、 技术栈
-
-
-虚拟机：当然是选择 Linux 系统，本人使用的是 centos7 版本。
-服务器：轻量级服务器nginx，10分钟搭建静态网站。
-内网穿透：使用Natapp，访问内网。
+content返回的是二进制形式的图片数据
+text（字符串） content（二进制）json() (对象)
 
 
 
-二、步骤
-
-
-Linux系统安装与配置
-
-安装linux虚拟机就跳过吧，网上一大把，当然最好是Cent......
+12345678910111213#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsif __name__ == &quot;__main__&quot;:    # 爬......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2020-12-07
+    2021-07-23
   </p>
   <div class="tags">
     
-    <a href="/tags/#建站指南" title="建站指南"><i class="fa fa-tag" style="color: aqua;"></i> 建站指南</a>
+    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
     
-    <a href="/tags/#Nginx" title="Nginx"><i class="fa fa-tag" style="color: aqua;"></i> Nginx</a>
+    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
     
-    <a href="/tags/#Linux" title="Linux"><i class="fa fa-tag" style="color: aqua;"></i> Linux</a>
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/爬取药监局相关数据/">
+    <h1 class="post-title">
+      爬取药监局相关数据【★★】
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+
+携带post参数的爬虫
+子链爬取
+
+
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport jsonif __name__ == &quo......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-23
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    
+    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
     
   </div>
   
@@ -886,6 +885,10 @@ Linux系统安装与配置
       <a href="/cn/archives/11/">&larr; 上一页</a>
     </li>
     
+    
+    <li class="next">
+      <a href="/cn/archives/13/">下一页 &rarr;</a>
+    </li>
     
   </ul>
 
@@ -906,17 +909,17 @@ Linux系统安装与配置
         <!-- Visitors -->
 <h5><a href="/">来访者</a></h5>
 
-  <div class="widget">
+<div class="widget">
   <span>
-    您是本站第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
+    宁好, 第<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 位访客
   </span>
   <br />
   <span>
     总阅读量 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
   </span>
   <!-- 网站运行时间的设置 -->
-  <div> 
-    站点已战战兢兢运行 
+  <div>
+    站点已运行
     <a href="javascript:;;">
       <strong><span id="timeDate">载入天数...</span></strong>
     </a>天
@@ -926,22 +929,33 @@ Linux系统安装与配置
   </div>
   <script>
     var now = new Date();
+
     function createtime() {
-      var grt= new Date("07/10/2021 13:14:21");//此处修改你的建站时间或者网站上线时间
-      now.setTime(now.getTime()+250);
-      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+      var grt = new Date("07/10/2021 13:14:21"); //此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
       document.getElementById("timeDate").innerHTML = dnum;
       // document.getElementById("times").innerHTML = hnum + "h " + mnum + "' " + snum + "''";
     }
-  setInterval("createtime()",250);
+    setInterval("createtime()", 250);
   </script>
 </div>
-
 
         <hr>
     
@@ -957,6 +971,14 @@ Linux系统安装与配置
     
     
     <a href="/tags/#WebGL" title="WebGL" rel="32"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+    
+    
+    <a href="/tags/#preInterview" title="preInterview" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    
+    
+    <a href="/tags/#面试" title="面试" rel="18"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
     
     
     
@@ -1036,10 +1058,6 @@ Linux系统安装与配置
     
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
     <a href="/tags/#Nginx" title="Nginx" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Nginx</a>
     
     
@@ -1048,7 +1066,11 @@ Linux系统安装与配置
     
     
     
-    <a href="/tags/#面试" title="面试" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
     
     
     
@@ -1174,24 +1196,24 @@ Linux系统安装与配置
 <div class="widget">
   <ul style="padding-left: 0;">
     
-    <a href="../../Different-UI/">
-      <li style="list-style: none;">Different UI</li>
+    <a href="../../17_%E4%BB%8EArray.from%E7%90%86%E8%A7%A3%E7%B1%BB%E6%95%B0%E7%BB%84/">
+      <li style="list-style: none;">从Array.from理解类数组</li>
     </a>
     
-    <a href="../../ms-HTML%EF%BC%86CSS2.0/">
-      <li style="list-style: none;">前端面试题汇总-HTML＆CSS篇2.0 实战篇</li>
+    <a href="../../16_%E4%B8%80%E9%81%93function%E9%9D%A2%E8%AF%95%E9%A2%98/">
+      <li style="list-style: none;">一道function面试题.js</li>
     </a>
     
-    <a href="../../ms-JavaScript2.0%20/">
-      <li style="list-style: none;">前端面试题汇总-JavaScript篇2.0 实战篇</li>
+    <a href="../../09_Diff%E7%AE%97%E6%B3%95%E4%B8%8EKey/">
+      <li style="list-style: none;">你需要知道的Diff算法</li>
     </a>
     
-    <a href="../../osapi/">
-      <li style="list-style: none;">OSAPI - 开源Api管理平台</li>
+    <a href="../../14_Http%E7%BC%93%E5%AD%98%E8%AF%A6%E8%A7%A3/">
+      <li style="list-style: none;">HTTP缓存</li>
     </a>
     
-    <a href="../../FrontEndAdvanced-Design-Pattern/">
-      <li style="list-style: none;">【前端进阶】框架用了哪些设计模式？</li>
+    <a href="../../12_CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">
+      <li style="list-style: none;">CDN：内容分发网络</li>
     </a>
     
   </ul>
@@ -1203,9 +1225,9 @@ Linux系统安装与配置
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（119） </a></h5>
+<h5><a href="/archives/">归档（134） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1220,6 +1242,10 @@ Linux系统安装与配置
     
     <a href="/categories/#JavaScript">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#面试">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
     </a>
     
     <a href="/categories/#WebGL">
@@ -1242,6 +1268,10 @@ Linux系统安装与配置
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
     </a>
     
+    <a href="/categories/#Demo">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
     <a href="/categories/#Math">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Math</li>
     </a>
@@ -1252,10 +1282,6 @@ Linux系统安装与配置
     
     <a href="/categories/#Python">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Web安全">
@@ -1270,8 +1296,12 @@ Linux系统安装与配置
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#面试">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
+    <a href="/categories/#链友">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#知识扫盲">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
     <a href="/categories/#免费api">
@@ -1286,16 +1316,12 @@ Linux系统安装与配置
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
-    <a href="/categories/#知识扫盲">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
+    <a href="/categories/#Nginx">
+      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#Hexo">
       <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
-    <a href="/categories/#Nginx">
-      <li  style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#NodeJs">
@@ -1383,10 +1409,10 @@ Linux系统安装与配置
         <!-- Friends Blog -->
 
 <h5><a href="/">链友</a></h5>
+<a target="_blank" href='https://yesmore.cc/cn/friends/'>链友申请</a>
 <ul class="list-inline">
   
 </ul>
-
 
         <hr>
     
@@ -1438,7 +1464,7 @@ Linux系统安装与配置
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">411.9k</span>
+          站点总字数：<span class="post-count">437.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
