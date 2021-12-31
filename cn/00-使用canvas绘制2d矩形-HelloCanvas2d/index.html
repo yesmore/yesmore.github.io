@@ -224,7 +224,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -244,6 +246,15 @@
           
           
           <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/categories/">
               
               分类
@@ -254,14 +265,7 @@
           
           
           
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
+          
           
           
           
@@ -273,10 +277,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -488,16 +488,13 @@
 <p>对应《WebGL编程指南》代码：00-HelloCanvas2d</p>
 </blockquote>
 <span id="more"></span>
-<h4 id="知识点">知识点</h4>
-<ol>
+<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ol>
 <li>canvas绘图机制：上下文。要在<code>&lt;canvas&gt;</code>上绘制图像，须先获取绘图上下文，“2d”代表我们要绘制二维图形。</li>
 <li><code>fillstyle</code>：设置或返回用于填充绘画的颜色、渐变或模式。</li>
-<li>使用填充颜色填充矩形。<br>
-<code>fillRect(x,y,width,height)</code></li>
+<li>使用填充颜色填充矩形。<br><code>fillRect(x,y,width,height)</code></li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">参数：x    矩形左上角的 x 坐标</span><br><span class="line">	 y    矩形左上角的 y 坐标</span><br><span class="line">	 width  矩形的宽度</span><br><span class="line">	 height 矩形的高度</span><br></pre></td></tr></table></figure>
-<h4 id="实例">实例</h4>
-<p><code>HelloCanvas2d.html</code></p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p><code>HelloCanvas2d.html</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Clear canvas<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">&quot;main()&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;mycanvas&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span>&gt;</span></span><br><span class="line">		Please use the browser supporting &quot;canvas&quot;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;HelloCanvas2d.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><code>HelloCanvas2d.js</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//HelloCanvas2d.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="comment">//获取&lt;canvas&gt;标签</span></span><br><span class="line">	<span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">&quot;mycanvas&quot;</span>);</span><br><span class="line">	<span class="comment">//如果没找到&lt;canvas&gt;标签，则输出错误信息</span></span><br><span class="line">	<span class="keyword">if</span> (!canvas) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&#x27;Failed to retrieve the &lt;canvas&gt; element.&#x27;</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// canvas绘图机制：上下文。要在&lt;canvas&gt;上绘制图像，须先获取绘图上下文，“2d”代表我们要绘制二维图形。</span></span><br><span class="line">	<span class="comment">// 注意区分‘2d’大小写</span></span><br><span class="line">	<span class="keyword">var</span> ctx = canvas.getContext(<span class="string">&quot;2d&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	ctx.fillStyle = <span class="string">&quot;rgba(0,100,0,1)&quot;</span>;</span><br><span class="line">	ctx.fillRect(<span class="number">120</span>, <span class="number">10</span>, <span class="number">150</span>, <span class="number">150</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -791,7 +788,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">437.7k</span>
+          站点总字数：<span class="post-count">437.5k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
