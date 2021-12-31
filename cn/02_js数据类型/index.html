@@ -221,8 +221,6 @@
 
           <!-- 
           
-          
-          
           <li>
             <a href="/about/">
               
@@ -242,6 +240,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -484,13 +484,17 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="JS有哪些数据类型"><a href="#JS有哪些数据类型" class="headerlink" title="JS有哪些数据类型"></a>JS有哪些数据类型</h2><p>Undefined、Null、Boolean、Number、String、Object、Symbol、BigInt</p>
+        <h2 id="JS有哪些数据类型">JS有哪些数据类型</h2>
+<p>Undefined、Null、Boolean、Number、String、Object、Symbol、BigInt</p>
 <p>ES6 中新增了一种 Symbol 。这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。</p>
 <p>谷歌67版本中还出现了一种 bigInt。是指安全存储、操作大整数。（但是很多人不把这个做为一个类型）。</p>
-<h2 id="Object-中包含了哪几种类型？"><a href="#Object-中包含了哪几种类型？" class="headerlink" title="Object 中包含了哪几种类型？"></a>Object 中包含了哪几种类型？</h2><p>其中包含了Data、function、Array等。这三种是常规用的。</p>
-<h2 id="JS的基本类型和引用类型有哪些呢？"><a href="#JS的基本类型和引用类型有哪些呢？" class="headerlink" title="JS的基本类型和引用类型有哪些呢？"></a>JS的基本类型和引用类型有哪些呢？</h2><p><strong>基本类型</strong>（单类型）：除Object。 String、Number、boolean、null、undefined。</p>
+<h2 id="Object-中包含了哪几种类型？">Object 中包含了哪几种类型？</h2>
+<p>其中包含了Data、function、Array等。这三种是常规用的。</p>
+<h2 id="JS的基本类型和引用类型有哪些呢？">JS的基本类型和引用类型有哪些呢？</h2>
+<p><strong>基本类型</strong>（单类型）：除Object。 String、Number、boolean、null、undefined。</p>
 <p><strong>引用类型</strong>：object。里面包含的 function、Array、Date。</p>
-<h2 id="引用数据类型和原始数据类型有什么区别"><a href="#引用数据类型和原始数据类型有什么区别" class="headerlink" title="引用数据类型和原始数据类型有什么区别"></a>引用数据类型和原始数据类型有什么区别</h2><p><strong>栈</strong>：原始数据类型（Undefined、Null、Boolean、Number、String）</p>
+<h2 id="引用数据类型和原始数据类型有什么区别">引用数据类型和原始数据类型有什么区别</h2>
+<p><strong>栈</strong>：原始数据类型（Undefined、Null、Boolean、Number、String）</p>
 <p><strong>堆</strong>：引用数据类型（对象、数组和函数）</p>
 <p>两种类型的区别在于<strong>存储位置</strong>的不同：</p>
 <p><strong>原始数据类型</strong>直接存储在栈（stack）中的简单数据段：</p>
@@ -505,23 +509,28 @@
 <li>引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。</li>
 <li>当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。</li>
 </ul>
-<h2 id="JS-中-typeof-输出分别是什么？"><a href="#JS-中-typeof-输出分别是什么？" class="headerlink" title="JS 中 typeof 输出分别是什么？"></a>JS 中 typeof 输出分别是什么？</h2><p>{ } 、[ ] 输出 object。</p>
+<h2 id="JS-中-typeof-输出分别是什么？">JS 中 typeof 输出分别是什么？</h2>
+<p>{ } 、[ ] 输出 object。</p>
 <p>console.log( ) 输出 function。</p>
 <p>注意：NaN 是 Number 中的特殊数值，非Number 。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>(<span class="string">&#x27;as&#x27;</span>) == <span class="literal">NaN</span> <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">&#x27;123&#x27;</span>) == <span class="literal">NaN</span> <span class="comment">// fal</span></span><br><span class="line"><span class="comment">// 用 isNaN() 检测是否是非数值型</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">&#x27;123&#x27;</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="number">123</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="built_in">Number</span>(<span class="string">&#x27;as&#x27;</span>)) <span class="comment">// true</span></span><br><span class="line"><span class="literal">NaN</span> == <span class="literal">NaN</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<h2 id="JS如何判断数据类型？"><a href="#JS如何判断数据类型？" class="headerlink" title="JS如何判断数据类型？"></a>JS如何判断数据类型？</h2><p><strong>typeof</strong> </p>
+<h2 id="JS如何判断数据类型？">JS如何判断数据类型？</h2>
+<p><strong>typeof</strong></p>
 <p><strong>toString()</strong></p>
 <ul>
-<li><p>作用：其他类型转成 string 的方法</p>
+<li>
+<p>作用：其他类型转成 string 的方法</p>
 </li>
-<li><p>支持：number、boolean、string、object </p>
+<li>
+<p>支持：number、boolean、string、object</p>
 </li>
-<li><p>不支持：null 、undefined</p>
+<li>
+<p>不支持：null 、undefined</p>
 </li>
 </ul>
 <p><strong>toLocaleString()</strong></p>
 <ul>
-<li>作用：把数组转成本地字符串 </li>
+<li>作用：把数组转成本地字符串</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>].toLocaleString() <span class="comment">// &#x27;1, 2, 3&#x27;</span></span><br></pre></td></tr></table></figure>
 <p><strong>检测数组类型的方法</strong></p>
@@ -531,39 +540,47 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr.constructor === <span class="built_in">Array</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <p>③ Array.isArray( ) 检验值是否为数组</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>]</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(arr)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h2 id="Null-和-Undefined-有什么区别？"><a href="#Null-和-Undefined-有什么区别？" class="headerlink" title="Null 和 Undefined 有什么区别？"></a>Null 和 Undefined 有什么区别？</h2><p>Null 只有一个值，是 null。不存在的对象。</p>
+<h2 id="Null-和-Undefined-有什么区别？">Null 和 Undefined 有什么区别？</h2>
+<p>Null 只有一个值，是 null。不存在的对象。</p>
 <p>Undefined 只有一个值，是undefined。没有初始化。undefined 是从 null 中派生出来的。</p>
 <p>简单理解就是：undefined 是<strong>没有定义</strong>的，null 是<strong>定义了但是为空</strong>。</p>
-<h2 id="Null-不存在的原因是什么？如何解决？"><a href="#Null-不存在的原因是什么？如何解决？" class="headerlink" title="Null 不存在的原因是什么？如何解决？"></a>Null 不存在的原因是什么？如何解决？</h2><p>不存在的原因是：</p>
+<h2 id="Null-不存在的原因是什么？如何解决？">Null 不存在的原因是什么？如何解决？</h2>
+<p>不存在的原因是：</p>
 <ul>
 <li>方法不存在</li>
 <li>对象不存在</li>
 <li>字符串变量不存在</li>
-<li>接口类型对象没初始化 </li>
+<li>接口类型对象没初始化</li>
 </ul>
 <p>解决方法：做判断处理的时候，放在设定值的最前面</p>
 <p>或者避免展示null/undefined：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Tools = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 移除空字符串或者非法字符串，返回&quot;&quot;</span></span><br><span class="line"><span class="comment"> * 如果是合法字符串，则返回原值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>obj 文本</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">Tools.removeNullOrUndefined = <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//typeof 返回的是字符串，有六种可能：&quot;number&quot;、&quot;string&quot;、&quot;boolean&quot;、&quot;object&quot;、&quot;function&quot;、&quot;undefined&quot;  </span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span>(obj) == <span class="string">&quot;undefined&quot;</span> || obj == <span class="string">&quot;&quot;</span> || obj == <span class="literal">null</span> || obj == <span class="string">&quot;null&quot;</span> || obj.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//删除全是空格的情况</span></span><br><span class="line">        <span class="keyword">var</span> regu = <span class="string">&quot;^[ ]+$&quot;</span>;</span><br><span class="line">        <span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(regu);</span><br><span class="line">        <span class="keyword">if</span>(re.test(obj))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> obj;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="和-有什么区别，什么场景下使用？"><a href="#和-有什么区别，什么场景下使用？" class="headerlink" title="== 和 === 有什么区别，什么场景下使用？"></a>== 和 === 有什么区别，什么场景下使用？</h2><p> == 表示相同。</p>
-<p>比较的是<strong>物理地址</strong>，相当于比较两个对象的 hashCode ，肯定不相等的。<br>类型不同，值也可能相等。</p>
+<h2 id="和-有什么区别，什么场景下使用？">== 和 === 有什么区别，什么场景下使用？</h2>
+<p>== 表示相同。</p>
+<p>比较的是<strong>物理地址</strong>，相当于比较两个对象的 hashCode ，肯定不相等的。<br>
+类型不同，值也可能相等。</p>
 <p>=== 表示严格相同。</p>
 <p>例：同为 null／undefined ，相等。</p>
-<p>简单理解就是 == 就是<strong>先比较数据类型</strong>是否一样。<br>=== 类型不同直接就是 false。</p>
+<p>简单理解就是 == 就是<strong>先比较数据类型</strong>是否一样。<br>
+=== 类型不同直接就是 false。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span> <span class="comment">// true</span></span><br><span class="line"><span class="literal">null</span> === <span class="literal">undefined</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<h2 id="JS对象如何比较？"><a href="#JS对象如何比较？" class="headerlink" title="JS对象如何比较？"></a>JS对象如何比较？</h2><p><strong>方法一</strong>：通过<code>JSON.stringify(obj)</code>来判断两个对象转后的字符串是否相等</p>
+<h2 id="JS对象如何比较？">JS对象如何比较？</h2>
+<p><strong>方法一</strong>：通过<code>JSON.stringify(obj)</code>来判断两个对象转后的字符串是否相等</p>
 <p>缺点：这种方法有限制就是当两个对比的对象中key的顺序不是完全相同时会比较出错</p>
-<p><strong>方法二：</strong>浅层比较</p>
+<p>**方法二：**浅层比较</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shallowEqual</span>(<span class="params">object1, object2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> keys1 = <span class="built_in">Object</span>.keys(object1);</span><br><span class="line">  <span class="keyword">const</span> keys2 = <span class="built_in">Object</span>.keys(object2);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (keys1.length !== keys2.length) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; keys1.length; index++) &#123;</span><br><span class="line">    <span class="keyword">const</span> val1 = object1[keys1[index]];</span><br><span class="line">    <span class="keyword">const</span> val2 = object2[keys2[index]];</span><br><span class="line">    <span class="keyword">if</span> (val1 !== val2) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>getOwnPropertyNames</code> 方法可以将Object对象的第一层key获取到并返回一个由第一层key组成的数组。</p>
-<p>优点：相对方法一进行了优化，可以应对不同顺序的Object进行比较，不用担心顺序不同而对比出错。<br> 缺点：从方法中可以看到只能获取到第一层的key组成的数组，当对象是复合对象时无法进行多层对象的比较。</p>
-<p><strong>方法三：</strong>深度对比两个对象是否完全相等</p>
+<p>优点：相对方法一进行了优化，可以应对不同顺序的Object进行比较，不用担心顺序不同而对比出错。<br>
+缺点：从方法中可以看到只能获取到第一层的key组成的数组，当对象是复合对象时无法进行多层对象的比较。</p>
+<p>**方法三：**深度对比两个对象是否完全相等</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepEqual</span>(<span class="params">object1, object2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> keys1 = <span class="built_in">Object</span>.keys(object1);</span><br><span class="line">  <span class="keyword">const</span> keys2 = <span class="built_in">Object</span>.keys(object2);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (keys1.length !== keys2.length) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; keys1.length; index++) &#123;</span><br><span class="line">    <span class="keyword">const</span> val1 = object1[keys1[index]];</span><br><span class="line">    <span class="keyword">const</span> val2 = object2[keys2[index]];</span><br><span class="line">    <span class="keyword">const</span> areObjects = isObject(val1) &amp;&amp; isObject(val2);</span><br><span class="line">    <span class="keyword">if</span> (areObjects &amp;&amp; !deepEqual(val1, val2) || </span><br><span class="line">        !areObjects &amp;&amp; val1 !== val2) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isObject</span>(<span class="params">object</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> object != <span class="literal">null</span> &amp;&amp; <span class="keyword">typeof</span> object === <span class="string">&#x27;object&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>总结：</p>
-<p>引用相等性（使用 ===、 == 或 Object.is()）用来确定操作数是否为同一个对象实例。</p>
+<p>引用相等性（使用 ===、 == 或 <a target="_blank" rel="noopener" href="http://Object.is">Object.is</a>()）用来确定操作数是否为同一个对象实例。</p>
 <p>手动检查对象是否相等，需要对属性值进行手动比较。尽管这类检查需要手动编码来对属性进行比较，但由于很简单，所以这种方法很方便。</p>
 <p>当被比较的对象有很多属性或在运行时确定对象的结构时，更好的方法是使用浅层检查。</p>
 <p>如果比较的对象具有嵌套对象，则应该进行深度比较检查。</p>
-<h2 id="Object-类型"><a href="#Object-类型" class="headerlink" title="Object 类型"></a>Object 类型</h2><p>ECMAjavascript中的对象其实就是一组数据和功能的集合。对象可以通过执行new操作符后跟要创建的对象类型的名称来创建。创建object类型的实例并为其添加属性（或）方法，就可以自定义创建对象。</p>
+<h2 id="Object-类型">Object 类型</h2>
+<p>ECMAjavascript中的对象其实就是一组数据和功能的集合。对象可以通过执行new操作符后跟要创建的对象类型的名称来创建。创建object类型的实例并为其添加属性（或）方法，就可以自定义创建对象。</p>
 <p>如：var o = new Object( );</p>
 <p>object 的每个实例都有下列属性和方法：</p>
 <p>constructor：保存着用于创建当前对象的函数。（构造函数)constructor就是object();</p>
@@ -864,7 +881,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">437.5k</span>
+          站点总字数：<span class="post-count">437.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
