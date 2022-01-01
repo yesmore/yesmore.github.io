@@ -462,32 +462,32 @@
   <!-- top end -->
   
 
-  <a href="/cn/27-光照-运动物体的光照效果-LightedTranslatedRotatedCube/">
+  <a href="/cn/Algorithm-set＆map/">
     <h1 class="post-title">
-      【WebGL之巅】27-光照-运动物体的光照效果
+      【数据结构与算法】集合、字典（JavaScript版详解）
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对应《WebGL编程指南》第八章 39-LightedTranslatedRotatedCube
-要点：平行光、漫反射+环境反射、魔法矩阵（逆转置矩阵）
+      要点：JavaScript的集合(set)、字典(map)概念
 
-知识点
-一、坐标变换引起的法向量变化
-在程序 LightedTranslatedRotatedCube 中，立方体先绕 z 轴顺时针旋转了90度，然后沿着 y 轴平移了0.9个单位。场景中的光照情况与前一节的 LightedCube_am......
+一、集合
+几乎每种编程语言中，都有集合结构。集合比较常见的实现方式是哈希表，这里使用 JavaScript 的 Object 进行封装。
+1.1 源码定义
+12345678interface Set&lt;T&gt; &#123;    add(value: T): this;    clear(): void;    del......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-08-08
+    2021-08-14
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
   </div>
   
@@ -502,30 +502,35 @@
   <!-- top end -->
   
 
-  <a href="/cn/世界坐标系和本地坐标系/">
+  <a href="/cn/JavaScript-dateTime/">
     <h1 class="post-title">
-      世界坐标系和本地坐标系
+      Javascript时间＆日期处理终极解决方案
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对应《WebGL编程指南》附录G
+      要点：JavaScript日期格式化方案总结、最新消息（QQ/weChat）日期排序算法
 
-一、引入
-在第7章“进人三维世界”中，我们创建并显示了第一个三维物体（一个立方体），示例程序开始变得像一个“真正”的三维程序了。我们亲手设置了立方体的顶点坐标和索引信息，这很耗时间。虽然整本书我们都是这样做的，但是在构建你自己的，真正的WebGL程序时往往不会这样做。我们通常使用专用的三维建模工具，因为建模工具允许我们通过对各种基本的三维图形（立方体、圆柱......
+一、Date类型
+在讲述常见日期问题之前，先梳理一下Date类型的方法。
+ECMAScript中的Date类型使用自UTC（Coordinated in Universal Time，国际协调时间）**1970年1月1日午夜（零时）**开始经过的毫秒数来保存日期。
+1.1 常用方法列表
+
+
+
+方法
+描......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-08-06
+    2021-08-13
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -540,33 +545,41 @@
   <!-- top end -->
   
 
-  <a href="/cn/26-光照-光照原理-平行光-LightedCube/">
+  <a href="/cn/Algorithm-String/">
     <h1 class="post-title">
-      【WebGL之巅】26-光照-光照原理
+      【数据结构与算法】字符串（JavaScript版详解）
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对应《WebGL编程指南》第八章 36-LightedCube、37-LightedCube_animation、38-LightedCube_ambient
-要点：光源类型（平行光、点光源光）、反射类型（漫反射、环境反射）、根据光线和表面的方向计算入射角、法向量
+      要点：字符串、常见字符串方法
+先知：
 
-知识点
-一、光照原理
-1.1 引入——着色与阴影
-现实世界中的物体被光纤照射时，会反射一部分光。只有当反射光线进入你的眼睛时，......
+一、串
+1.1 定义
+串（string） 是由零个或多个字符组成的有限序列，又名叫 字符串
+1.2 串的逻辑结构
+串 的逻辑结构和线性表很相似，不同之处在于串针对的是字符集，也就是串中的元素都是字符。
+因此，对于串的基本操作与线性表是有很大差别的：
+
+
+线性表更关注的是单个元素的操作，比如查找一个元素，插入或删除一个元素；
+
+
+但串中更多的是查找子串位......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-08-05
+    2021-08-13
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
   </div>
   
@@ -581,33 +594,36 @@
   <!-- top end -->
   
 
-  <a href="/cn/25-三维世界-立方体-HelloCubes/">
+  <a href="/cn/Algorithm-Queue/">
     <h1 class="post-title">
-      【WebGL之巅】25-三维世界-立方体
+      【数据结构与算法】队列（JavaScript版详解）
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对应《WebGL编程指南》第七章 33-HelloCubes、34-ColoredCube
-要点：立方体及其顶点坐标、gl.drawElements()
+      要点：基本队列、优先队列、双端队列、循环队列、对应练习
+先知：队列（Queue）是一种运算受限的线性表，特点：先进先出。(FIFO：First In First Out)
 
-知识点
-一、立方体
-1.1 目的
-迄今为止，本教程通过绘制一些简单的三角形，展示了 WebGL 的诸多特性。你对绘制三维对象的基础只是应该已经有了足够的了解。下面，我们就来绘制如下图所示的立方体。其8个顶点的颜色分别为白色、品红色、红色、......
+一、认识队列
+1.1 定义
+队列（Queue）是一种运算受限的线性表，特点：先进先出。(FIFO：First In First Out)
+受限之处：
+
+只允许在表的前端（front）进行删除操作。
+只允许在表的后端（re......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-08-04
+    2021-08-12
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
   </div>
   
@@ -622,33 +638,33 @@
   <!-- top end -->
   
 
-  <a href="/cn/24-三维世界-对象的前后关系-DepthBuffer/">
+  <a href="/cn/Algorithm-Stack/">
     <h1 class="post-title">
-      【WebGL之巅】24-三维世界-对象的前后关系
+      【数据结构与算法】栈（JavaScript版详解）
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对应《WebGL编程指南》第七章 31-DepthBuffer、32-Zfighting
-要点：对象的前后关系、隐藏面消除、深度冲突
+      要点：栈（顺序栈、链栈）概念、栈结构的5大应用
+先知：数组是一个线性结构，并且可以在数组的任意位置插入和删除元素。但是有时候，我们为了实现某些功能，必须对这种任意性加以限制。栈和队列就是比较常见的受限的线性结构。
 
-知识点
-一、正确处理对象的前后关系
-目前为止，已经掌握编写代码移动视点，设置可视空间，从不同的角度观察三维对象，处理三角形缺一角的情况。但是，仍然还存在一个问题：在移动视点的过程中，有时候前面的三角形会“躲”到后面的三角形之后，这一节将会研究这一问题。
-1.......
+一、什么是栈
+1.1 栈
+栈（stack）是一种运算受限的线性表：
+1、LIFO（last in first out）表示就是后进入的元素，第一个弹出栈空间。类似于自动餐托盘，最......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-08-03
+    2021-08-12
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
   </div>
   
@@ -663,32 +679,37 @@
   <!-- top end -->
   
 
-  <a href="/cn/23-三维世界-可视空间（透视投影）-perspectiveview/">
+  <a href="/cn/Algorithm-DoubleLinkedList/">
     <h1 class="post-title">
-      【WebGL之巅】23-三维世界-可视空间（透视投影）
+      【数据结构与算法】双向链表详解
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对应《WebGL编程指南》第七章 28-perspectiveview，29-perspectiveview_mvp，30-perspectiveview_mvpMatrix
-要点：可视空间（透视投影）、模型视图投影矩阵
+      要点：双向链表详解
 
-知识点
-一、可视空间（投影透视）
-在正射投影的可视空间中，不管三角形与视点的距离是远是近，它由多大，那么画出来就有多大。为了打破这条限制，我们可以使用透视投影可视空间，它......
+单向链表和双向链表
+一、单向链表
+只能从头遍历到尾或者从尾遍历到头（一般从头到尾）。
+链表相连的过程是单向的，实现原理是上一个节点中有指向下一个节点的引用。
+单向链表有一个比较明显的缺点：可以轻松到达下一个节点，但回到前一个节点很难，在实际开发中, 经常会遇到需要回到上一个节点的情况。
+二、双向链表
+双向链表特点：
+既可以从头遍历到尾，也可以从尾遍历到头。
+链表相连的过......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-08-03
+    2021-08-12
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
   </div>
   
@@ -703,37 +724,37 @@
   <!-- top end -->
   
 
-  <a href="/cn/Echarts/">
+  <a href="/cn/Algorithm-SingleLinkedList/">
     <h1 class="post-title">
-      数据可视化之Echarts学习
+      【数据结构与算法】单向链表详解
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      ​		应对现在数据可视化的趋势，越来越多企业需要在很多场景(营销数据，生产数据，用户数据)下使用，可视化图表来展示体现数据，让数据更加直观，数据特点更加突出。
-​		该笔记基于完成一个静态可视化面板项目。预览地址：http://dsj.aoau.top
+      要点：单链表详解、JavaScript单链表方法的封装
 
-01-使用技术
-完成该项目需要具备以下知识：
-
-div + css 布局
-flex 布局
-Less
-原生js + jquery 使用
-re......
+认识链表
+一、链表和数组
+链表和数组一样，可以用于存储一系列的元素，但是链表和数组的实现机制完全不同。
+1.1 数组
+数组特点：
+存储多个元素，数组（或列表）可能是最常用的数据结构。
+几乎每一种编程语言都有默认实现数组结构，提供了一个便利的 [] 语法来访问数组元素。
+数组缺点：
+数组的创建需要申请一段连续的内存空间(一整块内存)，并......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-08-01
+    2021-08-12
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#Echarts" title="Echarts"><i class="fa fa-tag" style="color: aqua;"></i> Echarts</a>
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
   </div>
   
@@ -748,121 +769,37 @@ re......
   <!-- top end -->
   
 
-  <a href="/cn/22-三维世界-可视范围-OrthoView/">
+  <a href="/cn/Algorithm-linearList/">
     <h1 class="post-title">
-      【WebGL之巅】22-三维世界-可视范围
+      【数据结构与算法】线性表
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对应《WebGL编程指南》第七章 26-OrthoView、27-LookAtTrianglesWithKeys_ViewVolume
-要点：可视空间（正射类型、透视投影）、可视范围（正射类型）、盒状可视空间
+      要点：线性表知识点汇总
 
-知识点
-一、可视范围（正射类型）
-​		回顾：在上一节的最后一个示例程序中，当视点在极左或极右的位置时，三角形会缺少一部分。
-​		三角形缺了一角的原因是，我们没有指定可视范围，即实......
+
+一、线性表的定义
+由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。
+
+二、线性表的特点
+1、线性表中元素的个数n(n≥O)定义为线性表的长度，n=O时称为空表。
+2、将非空的线性表(n&gt;O)记作(a1，a2，a3，…，an)；
+3、这里的数据元素$a_i (1≤i≤n)$​​​只是个抽象的符号，其具体含义在不同情况下可以不同；
+4、在非空的线性表......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-08-01
+    2021-08-12
   </p>
   <div class="tags">
     
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/21-三维世界-绘制三个三角形-LookAtTriangles/">
-    <h1 class="post-title">
-      【WebGL之巅】21-三维世界-绘制三个三角形
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      对应《WebGL编程指南》第七章 22-LookAtTriangles、23-LookAtRotatedTriangles、24-LookAtRotatedTriangles_mvMatrix、25-LookAtTrianglesWithKeys
-要点：视点和视线、景深、观察者视图、模型视图矩阵
-
-知识点
-一、立方体由三角形构成
-1.1 深度
-​		之前讨论过，三维物体也是由二维图形（特别是......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-01
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/20-GLSL ES着色器语言语法详解-GLSLES/">
-    <h1 class="post-title">
-      【WebGL之巅】20-GLSL ES着色器语言语法详解
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      对应《WebGL编程指南》第六章 GLSL ES
-
-总览
-本章知识点：
-1、数据、变量和变量类型
-2、矢量、矩阵、结构体、数组、采样器（纹理）
-3、运算、程序流、函数
-4、attribute、uniform和varying变量
-5、精度限定词
-6、预处理和指令
-回顾
-基本着色器代码
-1234567891011121314151617181920212223//顶点着色器程序var VSHAD......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
   </div>
   
@@ -1455,11 +1392,11 @@ re......
         <p class="copyright text-muted">
           Copyright &copy;
           大Van家
-          2021
+          2022
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">437.7k</span>
+          站点总字数：<span class="post-count">437.9k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1511,7 +1448,7 @@ re......
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='y,e,s,m,o,r,e,c,c' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
     <!-- Mouseclick -->
   
 

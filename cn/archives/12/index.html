@@ -462,39 +462,27 @@
   <!-- top end -->
   
 
-  <a href="/cn/02-绘制一个点_v1-HelloPoint-v1/">
+  <a href="/cn/21-三维世界-绘制三个三角形-LookAtTriangles/">
     <h1 class="post-title">
-      【WebGL之巅】02-绘制一个点_v1
+      【WebGL之巅】21-三维世界-绘制三个三角形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：02-HelloPoint1
-要点：着色器、着色器代码规范、vec4（齐次坐标）、gl.drawArrays()
-
-
-步骤
-
-获取&lt;canvas&gt;元素
-获取WebGL上下文
-初始化着色器
-设置&lt;canvas&gt;背景色
-清除&lt;canvas&gt;
-绘图
+      对应《WebGL编程指南》第七章 22-LookAtTriangles、23-LookAtRotatedTriangles、24-LookAtRotatedTriangles_mvMatrix、25-LookAtTrianglesWithKeys
+要点：视点和视线、景深、观察者视图、模型视图矩阵
 
 知识点
-
-
-着色器
-顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是......
+一、立方体由三角形构成
+1.1 深度
+​		之前讨论过，三维物体也是由二维图形（特别是......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-24
+    2021-08-01
   </p>
   <div class="tags">
     
@@ -515,41 +503,33 @@
   <!-- top end -->
   
 
-  <a href="/cn/01-使用webgl清空绘图区-HellCanvas/">
+  <a href="/cn/20-GLSL ES着色器语言语法详解-GLSLES/">
     <h1 class="post-title">
-      【WebGL之巅】01-使用webgl清空绘图区
+      【WebGL之巅】20-GLSL ES着色器语言语法详解
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：01-HelloCanvas
+      对应《WebGL编程指南》第六章 GLSL ES
 
-
-步骤
-
-获取&lt;canvas&gt;元素
-获取webgl绘图上下文
-设置背景色
-清空&lt;canvas&gt;
-
-知识点
-
-
-gl.cleanColor()的参数
-
-
-一旦指定了背景色，背景色就会驻存在WebGL系统中，在下次调用clearColor前不会改变
-
-
-若想显示webgl调试错误，在调用getWebGLCo......
+总览
+本章知识点：
+1、数据、变量和变量类型
+2、矢量、矩阵、结构体、数组、采样器（纹理）
+3、运算、程序流、函数
+4、attribute、uniform和varying变量
+5、精度限定词
+6、预处理和指令
+回顾
+基本着色器代码
+1234567891011121314151617181920212223//顶点着色器程序var VSHAD......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-24
+    2021-07-30
   </p>
   <div class="tags">
     
@@ -570,30 +550,35 @@ gl.cleanColor()的参数
   <!-- top end -->
   
 
-  <a href="/cn/xpath解析爬取全国城市名称/">
+  <a href="/cn/19-颜色与纹理-使用多幅纹理-MultiTexture/">
     <h1 class="post-title">
-      xpath解析爬取全国城市名称【★★】
+      【WebGL之巅】19-颜色与纹理-使用多幅纹理
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：XPath语法
-需求：解析出所有城市名称
+      对应《WebGL编程指南》代码：21-MultiTexture
+要点：纹理映射、多个纹理单元使用
 
-1234567891011121314151617181920212223#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsfrom lxml import etree# 项目需求：解析出所有城市名称https://www.aqistudy.cn/historydata/if......
+知识点
+一、区别单个纹理单元
+1、片元着色器能够访问两个纹理
+2、最终的片元颜色由两个纹理上的纹素颜色共同决定
+3、initTextures(gl, n)函数创建了两个纹理对象
+12345678910111213141516171819202122232425function initText......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-30
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -608,30 +593,33 @@ gl.cleanColor()的参数
   <!-- top end -->
   
 
-  <a href="/cn/xpath解析爬取美女图片/">
+  <a href="/cn/Websocket/">
     <h1 class="post-title">
-      xpath解析爬取美女图片【★★】
+      WebSocket介绍与实战开发
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：XPath语法
-需求：解析下载图片数据
+      思考：这种网页版的聊天功能应该如何去实现？？
 
-123456789101112131415161718192021222324252627282930313233343536373839#!/usr/bin/env python # -*- coding:utf-8 -*-# 需求：解析下载图片数据 http://pic.netbian.com/4kmeinv/import requests......
+websocket介绍
+
+WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。
+websocket是一种持久协议，http是非持久协议
+
+现在很多网站都有实时推送的需求，比如聊天，客服咨询等
+早期没有websocket时，通过ajax轮询，由于htt......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-30
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#websocket" title="websocket"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
     
   </div>
   
@@ -646,30 +634,58 @@ gl.cleanColor()的参数
   <!-- top end -->
   
 
-  <a href="/cn/xpath解析58二手房的房源信息/">
+  <a href="/cn/10-Browser/">
     <h1 class="post-title">
-      xpath解析58二手房的房源信息【★★】
+      浏览器渲染原理及浏览器存储
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：XPath语法
-需求：爬取58二手房中的房源信息
+      
+要点：浏览器渲染原理（简介、渲染机制）、浏览器存储（cookie、LocalStorage、sessionStorage、IndexedDB）
 
-1234567891011121314151617181920212223#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsfrom lxml import etree# 需求：爬取58二手房中的房源信息if __name__ == &quot;__main__&qu......
+
+浏览器渲染原理
+简介
+引入
+
+
+输入网址进入网页的三个阶段
+
+http请求阶段
+http响应阶段
+浏览器渲染阶段
+
+
+
+补充
+
+
+进程Process
+
+一个运行的程序/浏览器页面
+
+
+
+线程Thread
+
+
+进程内的子任务
+
+可多个线程同时进行......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-30
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#Browser" title="Browser"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
     
   </div>
   
@@ -684,31 +700,36 @@ gl.cleanColor()的参数
   <!-- top end -->
   
 
-  <a href="/cn/bs4解析爬取三国演义所有章节及内容/">
+  <a href="/cn/18-颜色与纹理-在矩形表面帖上图像-TexturedQuad/">
     <h1 class="post-title">
-      bs4解析爬取三国演义所有章节及内容【★★★】
+      【WebGL之巅】18-颜色与纹理-在矩形表面帖上图像
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：Python爬虫介绍
-需求：爬取三国演义小说所有的章节标题和章节内容
-1http://www.shicimingju.com/book/sanguoyanyi.html
+      
+对应《WebGL编程指南》代码：20-TexturedQuad
+要点：纹理映射、纹理坐标
 
-12345678910111213141516171819202122232425262728293031323334353637#!/usr/bin/env python # -*- coding:utf-8 -*......
+
+知识点
+一、纹理映射
+​		概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
+​		作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA格式编码。
+二、纹理......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-29
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -723,30 +744,35 @@ gl.cleanColor()的参数
   <!-- top end -->
   
 
-  <a href="/cn/正则解析爬取分页多张图片/">
+  <a href="/cn/17-颜色与纹理-绘制彩色与渐变三角形-ColoredTriangle/">
     <h1 class="post-title">
-      正则解析爬取分页多张图片【★★★】
+      【WebGL之巅】17-颜色与纹理-绘制彩色与渐变三角形
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      复习：Python正则解析语法
-需求：分页爬取糗事百科中糗图板块下所有的糗图图片
+      
+对应《WebGL编程指南》代码：19-ColoredTriangle
+要点：【WebGL之巅】17-颜色与纹理-绘制三个不同颜色的顶点、gl.drawArrays、几何形状的装配和光栅化
 
-1234567891011121314151617181920212223242526272829303132333435363738394041#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport reimport os# 需求：爬......
+
+知识点
+一、几何形状的装配和光栅化
+在顶点着色器和片元着色器之间，有这样两个步骤：
+​		图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的第一个参......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-29
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -761,115 +787,34 @@ gl.cleanColor()的参数
   <!-- top end -->
   
 
-  <a href="/cn/正则解析爬取单页多张图片/">
+  <a href="/cn/16-颜色与纹理-绘制三个不同颜色的顶点-MultiAttributeColor/">
     <h1 class="post-title">
-      正则解析爬取单页多张图片【★★】
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      复习：Python正则解析语法
-需求：爬取糗事百科中糗图板块下所有的糗图图片
-
-12345678910111213141516171819202122232425262728293031323334353637#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport re   # 正则表达式模块import os# 需求......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/单张图片爬取/">
-    <h1 class="post-title">
-      单张图片爬取【★】
+      【WebGL之巅】16-颜色与纹理-绘制三个不同颜色的顶点
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-request请求返回类型区别：
-
-content返回的是二进制形式的图片数据
-text（字符串） content（二进制）json() (对象)
+对应《WebGL编程指南》代码：18-MultiAttributeColor
+要点：绘制三个不同color的点、交错组织
 
 
-
-12345678910111213#!/usr/bin/env python # -*- coding:utf-8 -*-import requestsif __name__ == &quot;__main__&quot;:    # 爬......
+知识点
+一、varying变量
+12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_C......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-23
+    2021-07-29
   </p>
   <div class="tags">
     
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/爬取药监局相关数据/">
-    <h1 class="post-title">
-      爬取药监局相关数据【★★】
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-
-携带post参数的爬虫
-子链爬取
-
-
-
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#!/usr/bin/env python# -*- coding:utf-8 -*-import requestsimport jsonif __name__ == &quo......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python"><i class="fa fa-tag" style="color: aqua;"></i> Python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
     
   </div>
   
@@ -1462,11 +1407,11 @@ text（字符串） content（二进制）json() (对象)
         <p class="copyright text-muted">
           Copyright &copy;
           大Van家
-          2021
+          2022
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">437.7k</span>
+          站点总字数：<span class="post-count">437.9k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1518,7 +1463,7 @@ text（字符串） content（二进制）json() (对象)
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='y,e,s,m,o,r,e,c,c' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
     <!-- Mouseclick -->
   
 

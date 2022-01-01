@@ -462,29 +462,238 @@
   <!-- top end -->
   
 
-  <a href="/cn/19-颜色与纹理-使用多幅纹理-MultiTexture/">
+  <a href="/cn/Algorithm-Array/">
     <h1 class="post-title">
-      【WebGL之巅】19-颜色与纹理-使用多幅纹理
+      【数据结构与算法】JavaScript数组-操作数组方法总结
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对应《WebGL编程指南》代码：21-MultiTexture
-要点：纹理映射、多个纹理单元使用
+      要点：JavaScript数组、操作数组的方法
 
-知识点
-一、区别单个纹理单元
-1、片元着色器能够访问两个纹理
-2、最终的片元颜色由两个纹理上的纹素颜色共同决定
-3、initTextures(gl, n)函数创建了两个纹理对象
-12345678910111213141516171819202122232425function initText......
+几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。
+数组通常情况下用于存储一系列同一种数据类型的值。
+但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。
+
+汇总：
+不改变原数组的方法(8个):
+ES5：
+
+join、toLocateString、toS......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-30
+    2021-08-11
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Algorithm-guide/">
+    <h1 class="post-title">
+      【数据结构与算法】数据结构与算法前言、复杂度
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      要点：数据结构与算法、复杂度、程序运行的效率
+程序 = 数据结构 + 算法
+
+数据结构
+一、数据结构的定义
+官方定义：无
+民间定义：
+
+
+“数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义相关的函数来给出。” — 《数据结构、算法与应用》
+
+
+“数据结构是 ADT（抽象数据类型 Abstract Data Type）的物理实现。” — 《数据......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-11
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/WebSecurity03-XSS/">
+    <h1 class="post-title">
+      【Web安全扫盲】03-XSS
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      要点：XSS
+
+在这些常见的Web 漏洞中，XSS（Cross-site Script，跨站脚本）漏洞无疑是最多见的。根据 HackerOne 漏洞奖励平台发布的 The 2020 Hacker Report，XSS 漏洞类型占所有报告漏洞中的 23％，排名第一。
+
+起源
+最早的 XSS 漏洞可追溯到 1999 年末，微软安全工程师发现一些网站遭到攻击，网站被插入了一些恶意脚本和图像标签。随......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Web安全" title="Web安全"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
+    
+    <a href="/tags/#知识扫盲" title="知识扫盲"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/WebSecurity02-environment/">
+    <h1 class="post-title">
+      【Web安全扫盲】02-靶场：漏洞练习环境搭建
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      要点：docker、漏洞练习环境搭建、用于学习 Web 漏洞的常见靶
+
+一、安装与使用 Docker 容器
+以前我们搭建网站，需要在服务器依次安装 Apache、PHP、MySQL 等应用，比较烦琐，而且不同的源还有不同的应用版本，跟系统环境又可能存在兼容性的问题，这就需要手动添加源地址，甚至是自己编译安装。
+后来出现了 XAMPP、PHPStudy 等优秀的 PHP 集成环境，可以非常便捷......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Web安全" title="Web安全"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
+    
+    <a href="/tags/#知识扫盲" title="知识扫盲"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/WebSecurity01/">
+    <h1 class="post-title">
+      【Web安全扫盲】01-概览、常用渗透工具、信息收集
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      要点：web渗透、信息收集、靶场搭建、XSS、SQL注入、CSRF漏洞、SSRF漏洞、XXE漏洞、反序列化漏洞、文件上传漏洞、命令与代码注入、逻辑漏洞、内网渗透、研发安全。
+
+一、概览
+1.1 Why Web 安全？
+随着时代的发展，如今无论是国家还是企业，都十分重视网络安全，各种相关的岗位也随之出现。在拉勾网上搜“Web 安全”就能找到相关的岗位。
+
+根据 HackerOne 的报告数据（......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Web安全" title="Web安全"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
+    
+    <a href="/tags/#知识扫盲" title="知识扫盲"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/30-层次模型-多节点模型-MultiJointModel/">
+    <h1 class="post-title">
+      【WebGL之巅】（完结篇）30-层次模型-多节点模型
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      对应《WebGL编程指南》第九章 44-MultiJointModel、45-MultiJointModel_segment
+要点：层次结构模型、多节点模型
+
+知识点
+一、多节点模型
+这一节将把 JointModel 扩展为 MultiJointModel，后者绘制一个具有多个关节的完整的机器人手臂，包括基座 base，上臂 arm1，前臂 arm2，手掌 palm，两根手指 finger1......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-08
   </p>
   <div class="tags">
     
@@ -505,137 +714,28 @@
   <!-- top end -->
   
 
-  <a href="/cn/Websocket/">
+  <a href="/cn/29-层次模型-单关节模型-jointModel/">
     <h1 class="post-title">
-      WebSocket介绍与实战开发
+      【WebGL之巅】29-层次模型-单关节模型
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      思考：这种网页版的聊天功能应该如何去实现？？
-
-websocket介绍
-
-WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。
-websocket是一种持久协议，http是非持久协议
-
-现在很多网站都有实时推送的需求，比如聊天，客服咨询等
-早期没有websocket时，通过ajax轮询，由于htt......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#websocket" title="websocket"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/10-Browser/">
-    <h1 class="post-title">
-      浏览器渲染原理及浏览器存储
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-要点：浏览器渲染原理（简介、渲染机制）、浏览器存储（cookie、LocalStorage、sessionStorage、IndexedDB）
-
-
-浏览器渲染原理
-简介
-引入
-
-
-输入网址进入网页的三个阶段
-
-http请求阶段
-http响应阶段
-浏览器渲染阶段
-
-
-
-补充
-
-
-进程Process
-
-一个运行的程序/浏览器页面
-
-
-
-线程Thread
-
-
-进程内的子任务
-
-可多个线程同时进行......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#Browser" title="Browser"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/18-颜色与纹理-在矩形表面帖上图像-TexturedQuad/">
-    <h1 class="post-title">
-      【WebGL之巅】18-颜色与纹理-在矩形表面帖上图像
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：20-TexturedQuad
-要点：纹理映射、纹理坐标
-
+      对应《WebGL编程指南》第九章 43-jointModel
+要点：多个简单模型组成的复杂模型、层次结构模型、单关节模型
 
 知识点
-一、纹理映射
-​		概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
-​		作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA格式编码。
-二、纹理......
+一、多个简单模型组成的复杂模型
+1.1 引入
+我们已经知道如何平移、旋转简单的模型，比如二维的三角形或三维的立方体。但是，实际用到的很多三维模型，如3D游戏中的人物角色模型等，都是由多个小的立方体模型组成的。
+绘制由多个小部件组成的复杂模型，最关键的问题是如何处......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-29
+    2021-08-08
   </p>
   <div class="tags">
     
@@ -656,251 +756,26 @@ http响应阶段
   <!-- top end -->
   
 
-  <a href="/cn/17-颜色与纹理-绘制彩色与渐变三角形-ColoredTriangle/">
+  <a href="/cn/28-光照-光照原理-点光源-PointLightedCube/">
     <h1 class="post-title">
-      【WebGL之巅】17-颜色与纹理-绘制彩色与渐变三角形
+      【WebGL之巅】28-光照-光照原理-点光源
     </h1>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：19-ColoredTriangle
-要点：【WebGL之巅】17-颜色与纹理-绘制三个不同颜色的顶点、gl.drawArrays、几何形状的装配和光栅化
-
+      对应《WebGL编程指南》第八章 40-PointLightedCube、41-PointLightedCube_animation、42-PointLightedCube_perFragment
+要点：点光源光、逐片元光照
 
 知识点
-一、几何形状的装配和光栅化
-在顶点着色器和片元着色器之间，有这样两个步骤：
-​		图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的第一个参......
+一、点光源
+与平行光相比，点光源光发出的光，在三维空间的不同位置上其方向也不同，如下图所示。所以，在对点光源光下的物体进行着色时，需要在每个入射点计算点光源光......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     By 大Van家 on
-    2021-07-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/16-颜色与纹理-绘制三个不同颜色的顶点-MultiAttributeColor/">
-    <h1 class="post-title">
-      【WebGL之巅】16-颜色与纹理-绘制三个不同颜色的顶点
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：18-MultiAttributeColor
-要点：绘制三个不同color的点、交错组织
-
-
-知识点
-一、varying变量
-12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_C......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/15-颜色与纹理-将非坐标数据传入顶点着色器-MultiAttributeSize/">
-    <h1 class="post-title">
-      【WebGL之巅】15-颜色与纹理-将非坐标数据传入顶点着色器
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：16-MultiAttributeSize、17-MultiAttributeSize_Interleaved
-要点：绘制三个不同size的点、交错组织
-
-
-知识点
-一、回顾—将顶点坐标传入着色器步骤
-1.创建缓冲区对象
-2.将缓冲区对象绑定到target上
-3.向缓存对象写入数据
-4.将缓冲区对象分配给a_Postion变量(attribute变量)
-5.......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-28
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/14-简单动画-使三角形旋转-RotatingTriangle/">
-    <h1 class="post-title">
-      【WebGL之巅】14-简单动画-使三角形旋转
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：15-RotatingTriangle
-要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、setRotate方法
-tips：当前页含有动画示例，Tag Cloud可能会失效。
-
-
-知识点
-一、动画原理
-基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
-为了生成动画，需要两个关键机制：
-​	机制一：在规定时刻反复调用同......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-27
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/13-使用Matrix4变换矩阵实现三角形复合变换-RotatedTranslatedTriangle/">
-    <h1 class="post-title">
-      【WebGL之巅】13-使用Matrix4变换矩阵实现三角形复合变换
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：14-RotatedTranslatedTriangle
-要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、复合变换
-
-
-步骤
-1.将三角形沿着X轴平移一段距离
-2.旋转三角形
-知识点
-一、模型变换
-建立下面的等式：
-​	&lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-27
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/12-使用Matrix4变换矩阵实现三角形旋转、平移、缩放-RotatedTriangle-Matrix4/">
-    <h1 class="post-title">
-      【WebGL之巅】12-使用Matrix4变换矩阵实现三角形旋转、平移、缩放
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：13-RotatedTriangle_Matrix4
-要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象
-
-
-知识点
-一、矩阵变换库cuon-matrix.js
-OpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
-cuon-matrix.js......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-27
+    2021-08-08
   </p>
   <div class="tags">
     
@@ -1499,11 +1374,11 @@ cuon-matrix.js......
         <p class="copyright text-muted">
           Copyright &copy;
           大Van家
-          2021
+          2022
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">437.7k</span>
+          站点总字数：<span class="post-count">437.9k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1555,7 +1430,7 @@ cuon-matrix.js......
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='.,.,.,.,.,.,.,.,.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='y,e,s,m,o,r,e,c,c' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
     <!-- Mouseclick -->
   
 
