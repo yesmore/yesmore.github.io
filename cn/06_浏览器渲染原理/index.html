@@ -487,17 +487,14 @@
         <blockquote>
 <p>同系列文章请查看：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview">Github：pre-interview</a></p>
 </blockquote>
-<h2 id="浏览器原理">浏览器原理</h2>
-<h3 id="概览：浏览器的解析渲染过程">概览：浏览器的解析渲染过程</h3>
-<p>1）<strong>解析</strong> HTML 构建<strong>DOM树</strong></p>
+<h2 id="浏览器原理"><a href="#浏览器原理" class="headerlink" title="浏览器原理"></a>浏览器原理</h2><h3 id="概览：浏览器的解析渲染过程"><a href="#概览：浏览器的解析渲染过程" class="headerlink" title="概览：浏览器的解析渲染过程"></a>概览：浏览器的解析渲染过程</h3><p>1）<strong>解析</strong> HTML 构建<strong>DOM树</strong></p>
 <p>2）<strong>解析</strong> CSS 构建<strong>CSSOM树</strong></p>
 <p>3）利用上面两个树构建<strong>渲染树</strong>（<strong>渲染树的节点</strong>即为“<strong>渲染对象</strong>”）</p>
 <p>4）<strong>渲染</strong>对象被创建并添加到树中，它们并没有位置和大小，所以当浏览器生成渲染树以后，就会<strong>根据渲染树来进行布局</strong>（也可以被称作“<strong>回流</strong>”），这一阶段浏览器要做的事情是要弄清楚各个节点在页面中的确切位置和大小。通常这一行为也被称为“<strong>自动重排</strong>”。</p>
 <p>5）上述几步过后，布局结束；<strong>最后进行绘制</strong>，遍历渲染树并调用渲染对象的 <strong>paint</strong> 方法将它们的内容显示在屏幕上，绘制使用 UI 基础组件。</p>
 <p>webkit的主要流程如图：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/webkit.png" alt=""></p>
-<h3 id="细节补充">细节补充</h3>
-<blockquote>
+<h3 id="细节补充"><a href="#细节补充" class="headerlink" title="细节补充"></a>细节补充</h3><blockquote>
 <ul>
 <li>首先解析收到的文档，根据文档定义构建一棵 DOM 树，DOM 树是由 DOM 元素及属性节点组成的。</li>
 <li>然后对 CSS 进行解析，生成 CSSOM 规则树。</li>
@@ -506,10 +503,8 @@
 <li>布局阶段结束后是绘制阶段，遍历渲染树并调用渲染对象的 paint 方法将它们的内容显示在屏幕上，绘制使用 UI 基础组件。</li>
 </ul>
 </blockquote>
-<h2 id="解析文档（HTML）过程中，是将HTML都解析完了再去生成渲染树吗？">解析文档（HTML）过程中，是将HTML都解析完了再去生成渲染树吗？</h2>
-<p><strong>注意</strong>：这个过程是逐步完成的，<strong>为了更好的用户体验</strong>，渲染引擎将会尽可能早的将内容呈现到屏幕上，<strong>并不会等到所有的html 都解析完成之后再去构建和布局 render 树</strong>。它是<strong>解析完一部分内容就显示一部分内容</strong>，同时，可能还在通过网络下载其余内容。</p>
-<h3 id="script中的脚本文件、link中的css文件的解析-执行会阻塞文档解析吗？如何阻塞？">script中的脚本文件、link中的css文件的解析/执行会阻塞文档解析吗？如何阻塞？</h3>
-<ul>
+<h2 id="解析文档（HTML）过程中，是将HTML都解析完了再去生成渲染树吗？"><a href="#解析文档（HTML）过程中，是将HTML都解析完了再去生成渲染树吗？" class="headerlink" title="解析文档（HTML）过程中，是将HTML都解析完了再去生成渲染树吗？"></a>解析文档（HTML）过程中，是将HTML都解析完了再去生成渲染树吗？</h2><p><strong>注意</strong>：这个过程是逐步完成的，<strong>为了更好的用户体验</strong>，渲染引擎将会尽可能早的将内容呈现到屏幕上，<strong>并不会等到所有的html 都解析完成之后再去构建和布局 render 树</strong>。它是<strong>解析完一部分内容就显示一部分内容</strong>，同时，可能还在通过网络下载其余内容。</p>
+<h3 id="script中的脚本文件、link中的css文件的解析-执行会阻塞文档解析吗？如何阻塞？"><a href="#script中的脚本文件、link中的css文件的解析-执行会阻塞文档解析吗？如何阻塞？" class="headerlink" title="script中的脚本文件、link中的css文件的解析/执行会阻塞文档解析吗？如何阻塞？"></a>script中的脚本文件、link中的css文件的解析/执行会阻塞文档解析吗？如何阻塞？</h3><ul>
 <li><strong>脚本的加载会阻塞文档解析</strong></li>
 </ul>
 <p>如果没有 defer 或 async 属性，浏览器会立即加载并执行相应的脚本。它不会等待后续加载的文档元素，读取到就会开始加载和执行，这样就阻塞了后续文档的加载。</p>
@@ -535,8 +530,7 @@
 </blockquote>
 <p>然而，存在一个问题，JavaScript 脚本执行时可能在文档的解析过程中<strong>请求样式信息</strong>（比如根据样式获取元素节点），如果样式还没有加载和解析，脚本将得到错误的值，显然这将会导致很多问题。所以——</p>
 <p><strong>如果浏览器尚未完成 CSSOM 的下载和构建，而我们却想在此时运行脚本</strong>，那么浏览器将<strong>延迟 JavaScript 脚本执行和文档的解析</strong>，直至其完成 CSSOM 的下载和构建。也就是说，在这种情况下，浏览器会先下载和构建 CSSOM，然后再执行 JavaScript，最后再继续文档的解析。这样就会间接阻塞了文档解析。</p>
-<h2 id="什么情况会阻止浏览器渲染？">什么情况会阻止浏览器渲染？</h2>
-<p>要明确——首先<strong>渲染的前提是生成渲染树</strong></p>
+<h2 id="什么情况会阻止浏览器渲染？"><a href="#什么情况会阻止浏览器渲染？" class="headerlink" title="什么情况会阻止浏览器渲染？"></a>什么情况会阻止浏览器渲染？</h2><p>要明确——首先<strong>渲染的前提是生成渲染树</strong></p>
 <p>1）所以 HTML 和 CSS 肯定会阻塞渲染。</p>
 <blockquote>
 <p>如果你想渲染的越快，你越应该降低一开始需要渲染的文件大小，并且扁平层级，优化选择器。</p>
@@ -546,8 +540,7 @@
 <blockquote>
 <p>拓展知识</p>
 <p>并不是说 script 标签必须放在底部，因为你可以给 script 标签添加 defer 或者 async 属性</p>
-<p>当 script 标签加上 defer 属性以后，表示该 JS 文件会<strong>并行下载</strong>，但是会放到 HTML 解析完成后顺序执行，所以对于这种情况你可以把 script 标签放在任意位置。<br>
-同理，对于没有任何依赖的 JS 文件可以加上 async 属性，表示 JS 文件下载和解析不会阻塞渲染（<strong>async属性不能保证JS文件的执行是按顺序的</strong>）。</p>
+<p>当 script 标签加上 defer 属性以后，表示该 JS 文件会<strong>并行下载</strong>，但是会放到 HTML 解析完成后顺序执行，所以对于这种情况你可以把 script 标签放在任意位置。<br>同理，对于没有任何依赖的 JS 文件可以加上 async 属性，表示 JS 文件下载和解析不会阻塞渲染（<strong>async属性不能保证JS文件的执行是按顺序的</strong>）。</p>
 </blockquote>
 <p>记住这张图：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/2aa7934a848ff1c9c408c266cc8010a1.png" alt="script"></p>
@@ -841,7 +834,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.7k</span>
+          站点总字数：<span class="post-count">440.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
