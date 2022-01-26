@@ -224,6 +224,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/algorithms/">
               
               
@@ -244,17 +255,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -262,6 +262,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -280,8 +282,6 @@
           
           
           
-          
-          
            -->
 
           <li>
@@ -290,9 +290,9 @@
           <li>
             <a href="/archives">归档</a>
           </li>
-          <!-- <li>
-            <a href="/categories">分类</a>
-          </li> -->
+          <li>
+            <a href="/cn/Diary">二喵日记</a>
+          </li>
           <li>
             <a href="/algorithms">算法</a>
           </li>
@@ -473,13 +473,15 @@
       
 同系列文章请查看：Github：pre-interview
 
-ES6深拷贝函数封装前置：WeakMap数据类型Map与WeakMap区别：
+ES6深拷贝函数封装
+前置：WeakMap数据类型
+Map与WeakMap区别：
 
 Map的键名可以是任意类型（{}、[]）
 WeakMap的键名只能是对象
 
 例：从垃圾回收来感受WeakMap
-123456789101112131415const oBtn1 = document.querySelector(&#x27;#btn1......
+123456789101112131415const oBtn1 = document.querySelector(&#x27;#bt......
     </div>
   </a>
   
@@ -517,11 +519,15 @@ WeakMap的键名只能是对象
       
 同系列文章请查看：Github：pre-interview
 
-ES5深拷贝函数封装简述JavaScript深拷贝与浅拷贝
+ES5深拷贝函数封装
+简述JavaScript深拷贝与浅拷贝
+
 假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。
+
+
 前置知识：JavaScript基本数据类型与复杂（引用）数据类型。
 
-12345678910111213141516171819202122......
+1234567891011121314151617181920......
     </div>
   </a>
   
@@ -559,7 +565,9 @@ ES5深拷贝函数封装简述JavaScript深拷贝与浅拷贝
       
 同系列文章请查看：Github：pre-interview
 
-相等性判断概览四种判断相等的方法：
+相等性判断
+概览
+四种判断相等的方法：
 
 全等：===
 等于：==
@@ -570,7 +578,7 @@ JavaScript中提供有关相等判断的操作方法：
 
 严格相等： === Strict Equality
 非严格（抽象相等/非约束） 相等：== Loose Equality
-Ob......
+......
     </div>
   </a>
   
@@ -608,10 +616,14 @@ Ob......
       
 同系列文章请查看：Github：pre-interview
 
-lookupGetter非标准该特性是非标准的，请尽量不要在生产环境中使用它！
-已废弃该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
-概述__lookupGetter__ 方法会返回当前对象上指定属性的属性读取访问器函数（getter）。
-12345678......
+lookupGetter
+非标准
+该特性是非标准的，请尽量不要在生产环境中使用它！
+已废弃
+该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
+概述
+__lookupGetter__ 方法会返回当前对象上指定属性的属性读取访问器函数（getter）。
+1234......
     </div>
   </a>
   
@@ -649,10 +661,11 @@ lookupGetter非标准该特性是非标准的，请尽量不要在生产环境�
       
 同系列文章请查看：Github：pre-interview
 
-JS稀疏数组遍历问题前置知识：
+JS稀疏数组遍历问题
+前置知识：
 
-JavaScript并没有常规的数组，所有的数组其实就是个对象，只不过会自动管理一些”数字”属性和length属性罢了。
-JavaScript中的数组根本没有索引，因为索引应该是数字，而JavaScript中数组的索引其实是字符串：arr[1]其实就是arr[“1”]，给arr[“1000”] ......
+JavaScript并没有常规的数组，所有的数组其实就是个对象，只不过会自动管理一些&quot;数字&quot;属性和length属性罢了。
+JavaScript中的数组根本没有索引，因为索引应该是数字，而JavaScript中数组的索引其实是字符串：arr[1]其实就是arr[“1”]，给a......
     </div>
   </a>
   
@@ -691,10 +704,11 @@ JavaScript中的数组根本没有索引，因为索引应该是数字，而Java
 同系列文章请查看：Github：pre-interview
 
 从Array.from理解类数组
+
 Array.from：允许在 JavaScript 集合(如: 数组、类数组对象、或者是字符串、map 、set 等可迭代对象) 上进行有用的转换。
 
 执行下面的程序：
-123456789var obj = &#123;  0: 1,  1: 2,  2: 3,  length: 3&#125;......
+123456789var obj = &#123;  0: 1,  1: 2,  2: 3,  length: 3&#125......
     </div>
   </a>
   
@@ -732,9 +746,10 @@ Array.from：允许在 JavaScript 集合(如: 数组、类数组对象、或者�
       
 同系列文章请查看：Github：pre-interview
 
-Diff算法提到这个算法，就必须说一下关于Key的事情了。
+Diff算法
+提到这个算法，就必须说一下关于Key的事情了。
 其实每个组件中的每个标签都会有一个key, 只不过有的必须显示的指定，有的可以隐藏。
- 如果生成的render出来后就不会改变里面的内容，那么你不需要指定key（不指定key时，React也会生成一个默认的标识）,或者将index作为key，只要key不重复即可。
+如果生成的render出来后就不会改变里面的内容，那么你不需要指定key（不指定key时，React也会生成一个默认的标识）,或者将index作为key，只要key不重复即可。
 但是......
     </div>
   </a>
@@ -773,9 +788,12 @@ Diff算法提到这个算法，就必须说一下关于Key的事情了。
       
 同系列文章请查看：Github：pre-interview
 
-HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-cache到底有没有缓存，地址栏回车，F5，ctrl+F5的区别，以及当下较为推荐的缓存方案等。
-说明阅读前提：http缓存主要针如css，js，图片等更新频率不大的静态文件。
-首先得先明确这个概念，不然以下的概念以及例子，都会显得不太有意义，或者不是那么完美。......
+HTTP缓存
+前言
+通过本文，你将了解到http缓存机制是怎样的，no-cache到底有没有缓存，地址栏回车，F5，ctrl+F5的区别，以及当下较为推荐的缓存方案等。
+说明
+阅读前提：http缓存主要针如css，js，图片等更新频率不大的静态文件。
+首先得先明确这个概念，不然以下的概念以及例子，都会显得不太有意义，或者不是那么......
     </div>
   </a>
   
@@ -880,14 +898,6 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
   <div class="tags">
     
     
-    <a href="/tags/#preInterview" title="preInterview" rel="19"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
-    
-    
-    
-    <a href="/tags/#面试" title="面试" rel="23"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
-    
-    
-    
     <a href="/tags/#JavaScript" title="JavaScript" rel="81"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     
@@ -896,11 +906,23 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
     
     
     
+    <a href="/tags/#preInterview" title="preInterview" rel="19"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    
+    
+    <a href="/tags/#面试" title="面试" rel="23"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    
+    
+    
     <a href="/tags/#算法" title="算法" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
     
     
     <a href="/tags/#LeetCode" title="LeetCode" rel="7"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
+    
+    
+    
+    <a href="/tags/#日记" title="日记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 日记</a>
     
     
     
@@ -952,15 +974,23 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
     
     
     
-    <a href="/tags/#Ajax" title="Ajax" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Ajax</a>
-    
-    
-    
     <a href="/tags/#Web安全" title="Web安全" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
     
     
     
     <a href="/tags/#知识扫盲" title="知识扫盲" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
+    
+    
+    
+    <a href="/tags/#websocket" title="websocket" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
+    
+    
+    
+    <a href="/tags/#Ajax" title="Ajax" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Ajax</a>
+    
+    
+    
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
     
     
     
@@ -976,15 +1006,7 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
     
     
     
-    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
-    
-    
-    
     <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
-    <a href="/tags/#websocket" title="websocket" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
     
     
     
@@ -1139,9 +1161,9 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（139） </a></h5>
+<h5><a href="/archives/">归档（140） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1154,12 +1176,12 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
 <div class="widget">
   <ul style="padding-left: 0;">
     <!-- 
-    <a href="/categories/#面试">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
-    </a>
-    
     <a href="/categories/#JavaScript">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#面试">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
     </a>
     
     <a href="/categories/#WebGL">
@@ -1172,6 +1194,10 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
     
     <a href="/categories/#LeetCode">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
+    </a>
+    
+    <a href="/categories/#日记">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 日记</li>
     </a>
     
     <a href="/categories/#Vue">
@@ -1202,28 +1228,24 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Web安全</li>
     </a>
     
-    <a href="/categories/#建站指南">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
+    <a href="/categories/#websocket">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> websocket</li>
     </a>
     
     <a href="/categories/#链友">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
     </a>
     
-    <a href="/categories/#websocket">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> websocket</li>
-    </a>
-    
-    <a href="/categories/#免费api">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
+    <a href="/categories/#建站指南">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
     <a href="/categories/#知识扫盲">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
-    <a href="/categories/#Nginx">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
+    <a href="/categories/#免费api">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
     </a>
     
     <a href="/categories/#Eggjs">
@@ -1234,6 +1256,10 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
+    <a href="/categories/#Nginx">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
+    </a>
+    
     <a href="/categories/#Hexo">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
     </a>
@@ -1242,16 +1268,16 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
     </a>
     
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
     <a href="/categories/#Linux">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Linux</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Demo">
@@ -1386,7 +1412,7 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
   <li><a href="https://yesmore.cc" target="_blank">快乐码原</a></li>
   
 </ul>
-<a target="_blank" href='https://yesmore.cc/cn/friends/'>『链友申请--点这里』</a>
+<a target="_blank" href='https://yesmore.cc/cn/friends/'>『交换友链--点这里』</a>
 
         <hr>
     
@@ -1438,7 +1464,7 @@ HTTP缓存前言通过本文，你将了解到http缓存机制是怎样的，no-
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.4k</span>
+          站点总字数：<span class="post-count">440.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
