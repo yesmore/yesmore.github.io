@@ -265,10 +265,6 @@
           
           
           
-          
-          
-          
-          
           <li>
             <a href="/tags/">
               
@@ -277,6 +273,10 @@
               
             </a>
           </li>
+          
+          
+          
+          
           
           
           
@@ -291,7 +291,7 @@
             <a href="/archives">归档</a>
           </li>
           <li>
-            <a href="/cn/Diary">二喵日记</a>
+            <a href="/cn/Diary">杂记</a>
           </li>
           <li>
             <a href="/algorithms">算法</a>
@@ -473,11 +473,13 @@
       要点：基本队列、优先队列、双端队列、循环队列、对应练习
 先知：队列（Queue）是一种运算受限的线性表，特点：先进先出。(FIFO：First In First Out)
 
-一、认识队列1.1 定义队列（Queue）是一种运算受限的线性表，特点：先进先出。(FIFO：First In First Out)
+一、认识队列
+1.1 定义
+队列（Queue）是一种运算受限的线性表，特点：先进先出。(FIFO：First In First Out)
 受限之处：
 
 只允许在表的前端（front）进行删除操作。
-只允许在表的后端（rear......
+只允许在表的后端（re......
     </div>
   </a>
   
@@ -515,8 +517,10 @@
       要点：栈（顺序栈、链栈）概念、栈结构的5大应用
 先知：数组是一个线性结构，并且可以在数组的任意位置插入和删除元素。但是有时候，我们为了实现某些功能，必须对这种任意性加以限制。栈和队列就是比较常见的受限的线性结构。
 
-一、什么是栈1.1 栈栈（stack）是一种运算受限的线性表：
-1、LIFO（last in first out）表示就是后进入的元素，第一个弹出栈空间。类似于自动餐托盘，最后放......
+一、什么是栈
+1.1 栈
+栈（stack）是一种运算受限的线性表：
+1、LIFO（last in first out）表示就是后进入的元素，第一个弹出栈空间。类似于自动餐托盘，最......
     </div>
   </a>
   
@@ -553,11 +557,15 @@
     <div class="post-content-preview">
       要点：双向链表详解
 
-单向链表和双向链表一、单向链表只能从头遍历到尾或者从尾遍历到头（一般从头到尾）。
+单向链表和双向链表
+一、单向链表
+只能从头遍历到尾或者从尾遍历到头（一般从头到尾）。
 链表相连的过程是单向的，实现原理是上一个节点中有指向下一个节点的引用。
 单向链表有一个比较明显的缺点：可以轻松到达下一个节点，但回到前一个节点很难，在实际开发中, 经常会遇到需要回到上一个节点的情况。
-二、双向链表双向链表特点：既可以从头遍历到尾，也可以从尾遍历到头。
-链表相连的过程是双向......
+二、双向链表
+双向链表特点：
+既可以从头遍历到尾，也可以从尾遍历到头。
+链表相连的过......
     </div>
   </a>
   
@@ -594,10 +602,15 @@
     <div class="post-content-preview">
       要点：单链表详解、JavaScript单链表方法的封装
 
-认识链表一、链表和数组链表和数组一样，可以用于存储一系列的元素，但是链表和数组的实现机制完全不同。
-1.1 数组数组特点：存储多个元素，数组（或列表）可能是最常用的数据结构。
+认识链表
+一、链表和数组
+链表和数组一样，可以用于存储一系列的元素，但是链表和数组的实现机制完全不同。
+1.1 数组
+数组特点：
+存储多个元素，数组（或列表）可能是最常用的数据结构。
 几乎每一种编程语言都有默认实现数组结构，提供了一个便利的 [] 语法来访问数组元素。
-数组缺点：数组的创建需要申请一段连续的内存空间(一整块内存)，并且大小是固......
+数组缺点：
+数组的创建需要申请一段连续的内存空间(一整块内存)，并......
     </div>
   </a>
   
@@ -635,12 +648,14 @@
       要点：线性表知识点汇总
 
 
-一、线性表的定义由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。
+一、线性表的定义
+由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。
 
-二、线性表的特点1、线性表中元素的个数n(n≥O)定义为线性表的长度，n=O时称为空表。
+二、线性表的特点
+1、线性表中元素的个数n(n≥O)定义为线性表的长度，n=O时称为空表。
 2、将非空的线性表(n&gt;O)记作(a1，a2，a3，…，an)；
 3、这里的数据元素$a_i (1≤i≤n)$​​​只是个抽象的符号，其具体含义在不同情况下可以不同；
-4、在非空的线性表，有......
+4、在非空的线性表......
     </div>
   </a>
   
@@ -677,13 +692,15 @@
     <div class="post-content-preview">
       要点：JavaScript数组、操作数组的方法
 
-几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。数组通常情况下用于存储一系列同一种数据类型的值。但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。
+几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。
+数组通常情况下用于存储一系列同一种数据类型的值。
+但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。
 
 汇总：
 不改变原数组的方法(8个):
 ES5：
 
-join、toLocateString、toStr......
+join、toLocateString、toS......
     </div>
   </a>
   
@@ -719,13 +736,18 @@ join、toLocateString、toStr......
     </h3>
     <div class="post-content-preview">
       要点：数据结构与算法、复杂度、程序运行的效率
-程序 = 数据结构 + 算法 
+程序 = 数据结构 + 算法
 
-数据结构一、数据结构的定义官方定义：无
+数据结构
+一、数据结构的定义
+官方定义：无
 民间定义：
 
-“数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义相关的函数来给出。” —- 《数据结构、算法与应用》
-“数据结构是 ADT（抽象数据类型 Abstract Data Type）的物理实现。” —- 《数据结构......
+
+“数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义相关的函数来给出。” — 《数据结构、算法与应用》
+
+
+“数据结构是 ADT（抽象数据类型 Abstract Data Type）的物理实现。” — 《数据......
     </div>
   </a>
   
@@ -764,7 +786,8 @@ join、toLocateString、toStr......
 
 在这些常见的Web 漏洞中，XSS（Cross-site Script，跨站脚本）漏洞无疑是最多见的。根据 HackerOne 漏洞奖励平台发布的 The 2020 Hacker Report，XSS 漏洞类型占所有报告漏洞中的 23％，排名第一。
 
-起源最早的 XSS 漏洞可追溯到 1999 年末，微软安全工程师发现一些网站遭到攻击，网站被插入了一些恶意脚本和图像标签。随后......
+起源
+最早的 XSS 漏洞可追溯到 1999 年末，微软安全工程师发现一些网站遭到攻击，网站被插入了一些恶意脚本和图像标签。随......
     </div>
   </a>
   
@@ -897,7 +920,7 @@ join、toLocateString、toStr......
     
     
     
-    <a href="/tags/#日记" title="日记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 日记</a>
+    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
     
     
     
@@ -965,6 +988,10 @@ join、toLocateString、toStr......
     
     
     
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
     <a href="/tags/#建站指南" title="建站指南" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 建站指南</a>
     
     
@@ -974,10 +1001,6 @@ join、toLocateString、toStr......
     
     
     <a href="/tags/#Linux" title="Linux" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Linux</a>
-    
-    
-    
-    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
     
     
     
@@ -1171,8 +1194,8 @@ join、toLocateString、toStr......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
     </a>
     
-    <a href="/categories/#日记">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 日记</li>
+    <a href="/categories/#杂记">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 杂记</li>
     </a>
     
     <a href="/categories/#Vue">
@@ -1207,12 +1230,12 @@ join、toLocateString、toStr......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> websocket</li>
     </a>
     
-    <a href="/categories/#建站指南">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
-    </a>
-    
     <a href="/categories/#链友">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#建站指南">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
     <a href="/categories/#知识扫盲">
@@ -1267,20 +1290,20 @@ join、toLocateString、toStr......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> HTML</li>
     </a>
     
-    <a href="/categories/#Hexo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
     <a href="/categories/#Uniapp">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Uniapp</li>
     </a>
     
-    <a href="/categories/#建站指南">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
+    <a href="/categories/#Hexo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
     </a>
     
     <a href="/categories/#MongDB">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> MongDB</li>
+    </a>
+    
+    <a href="/categories/#建站指南">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
     <a href="/categories/#Nodejs">
@@ -1439,7 +1462,7 @@ join、toLocateString、toStr......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.4k</span>
+          站点总字数：<span class="post-count">440.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

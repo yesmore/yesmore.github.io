@@ -1075,7 +1075,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/%E6%97%A5%E8%AE%B0/</loc>
+    <loc>https://yesmore.cc/tags/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1194,6 +1194,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/tags/%E9%93%BE%E5%8F%8B/</loc>
+    <lastmod>2022-01-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/tags/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
@@ -1209,13 +1216,6 @@
   
   <url>
     <loc>https://yesmore.cc/tags/Linux/</loc>
-    <lastmod>2022-01-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yesmore.cc/tags/%E9%93%BE%E5%8F%8B/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1357,7 +1357,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E6%97%A5%E8%AE%B0/</loc>
+    <loc>https://yesmore.cc/categories/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1420,14 +1420,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://yesmore.cc/categories/%E9%93%BE%E5%8F%8B/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/%E9%93%BE%E5%8F%8B/</loc>
+    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1525,13 +1525,6 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Hexo/</loc>
-    <lastmod>2022-01-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yesmore.cc/categories/Uniapp/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
@@ -1539,7 +1532,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Hexo/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://yesmore.cc/categories/Hexo/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1547,6 +1540,13 @@
   
   <url>
     <loc>https://yesmore.cc/categories/Uniapp/MongDB/</loc>
+    <lastmod>2022-01-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/categories/Hexo/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2022-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

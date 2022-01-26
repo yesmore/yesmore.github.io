@@ -265,10 +265,6 @@
           
           
           
-          
-          
-          
-          
           <li>
             <a href="/tags/">
               
@@ -277,6 +273,10 @@
               
             </a>
           </li>
+          
+          
+          
+          
           
           
           
@@ -291,7 +291,7 @@
             <a href="/archives">归档</a>
           </li>
           <li>
-            <a href="/cn/Diary">二喵日记</a>
+            <a href="/cn/Diary">杂记</a>
           </li>
           <li>
             <a href="/algorithms">算法</a>
@@ -473,11 +473,12 @@
       思考：这种网页版的聊天功能应该如何去实现？？
 
 websocket介绍
+
 WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。
 websocket是一种持久协议，http是非持久协议
 
 现在很多网站都有实时推送的需求，比如聊天，客服咨询等
-早期没有websocket时，通过ajax轮询，由于http......
+早期没有websocket时，通过ajax轮询，由于htt......
     </div>
   </a>
   
@@ -514,7 +515,11 @@ websocket是一种持久协议，http是非持久协议
 要点：浏览器渲染原理（简介、渲染机制）、浏览器存储（cookie、LocalStorage、sessionStorage、IndexedDB）
 
 
-浏览器渲染原理简介引入
+浏览器渲染原理
+简介
+引入
+
+
 输入网址进入网页的三个阶段
 
 http请求阶段
@@ -524,16 +529,20 @@ http响应阶段
 
 
 补充
+
+
 进程Process
 
 一个运行的程序/浏览器页面
 
 
+
 线程Thread
+
 
 进程内的子任务
 
-可多个线程同时进行，实际是轮流执行......
+可多个线程同时进行......
     </div>
   </a>
   
@@ -573,8 +582,11 @@ http响应阶段
 要点：纹理映射、纹理坐标
 
 
-知识点一、纹理映射​        概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
-​        作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA......
+知识点
+一、纹理映射
+​		概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
+​		作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA格式编码。
+二、纹理......
     </div>
   </a>
   
@@ -614,8 +626,10 @@ http响应阶段
 要点：【WebGL之巅】17-颜色与纹理-绘制三个不同颜色的顶点、gl.drawArrays、几何形状的装配和光栅化
 
 
-知识点一、几何形状的装配和光栅化在顶点着色器和片元着色器之间，有这样两个步骤：
-​        图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的......
+知识点
+一、几何形状的装配和光栅化
+在顶点着色器和片元着色器之间，有这样两个步骤：
+​		图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的第一个参......
     </div>
   </a>
   
@@ -655,7 +669,9 @@ http响应阶段
 要点：绘制三个不同color的点、交错组织
 
 
-知识点一、varying变量12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_Col......
+知识点
+一、varying变量
+12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_C......
     </div>
   </a>
   
@@ -695,11 +711,13 @@ http响应阶段
 要点：绘制三个不同size的点、交错组织
 
 
-知识点一、回顾—将顶点坐标传入着色器步骤1.创建缓冲区对象
+知识点
+一、回顾—将顶点坐标传入着色器步骤
+1.创建缓冲区对象
 2.将缓冲区对象绑定到target上
 3.向缓存对象写入数据
 4.将缓冲区对象分配给a_Postion变量(attribute变量)
-5.连接......
+5.......
     </div>
   </a>
   
@@ -740,9 +758,11 @@ http响应阶段
 tips：当前页含有动画示例，Tag Cloud可能会失效。
 
 
-知识点一、动画原理基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
+知识点
+一、动画原理
+基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
 为了生成动画，需要两个关键机制：
-​    机制一：在规定时刻反复调用......
+​	机制一：在规定时刻反复调用同......
     </div>
   </a>
   
@@ -782,10 +802,13 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、复合变换
 
 
-步骤1.将三角形沿着X轴平移一段距离
+步骤
+1.将三角形沿着X轴平移一段距离
 2.旋转三角形
-知识点一、模型变换建立下面的等式：
-​    &lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
+知识点
+一、模型变换
+建立下面的等式：
+​	&lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
     </div>
   </a>
   
@@ -918,7 +941,7 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
     
     
     
-    <a href="/tags/#日记" title="日记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 日记</a>
+    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
     
     
     
@@ -986,6 +1009,10 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
     
     
     
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
     <a href="/tags/#建站指南" title="建站指南" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 建站指南</a>
     
     
@@ -995,10 +1022,6 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
     
     
     <a href="/tags/#Linux" title="Linux" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Linux</a>
-    
-    
-    
-    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
     
     
     
@@ -1192,8 +1215,8 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
     </a>
     
-    <a href="/categories/#日记">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 日记</li>
+    <a href="/categories/#杂记">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 杂记</li>
     </a>
     
     <a href="/categories/#Vue">
@@ -1228,12 +1251,12 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> websocket</li>
     </a>
     
-    <a href="/categories/#建站指南">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
-    </a>
-    
     <a href="/categories/#链友">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#建站指南">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
     <a href="/categories/#知识扫盲">
@@ -1288,20 +1311,20 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> HTML</li>
     </a>
     
-    <a href="/categories/#Hexo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
-    </a>
-    
     <a href="/categories/#Uniapp">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Uniapp</li>
     </a>
     
-    <a href="/categories/#建站指南">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
+    <a href="/categories/#Hexo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
     </a>
     
     <a href="/categories/#MongDB">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> MongDB</li>
+    </a>
+    
+    <a href="/categories/#建站指南">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
     <a href="/categories/#Nodejs">
@@ -1460,7 +1483,7 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.4k</span>
+          站点总字数：<span class="post-count">440.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
