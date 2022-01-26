@@ -233,6 +233,17 @@
           
           
           <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
@@ -254,15 +265,6 @@
           
           
           
-          <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -273,8 +275,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -486,8 +486,7 @@
 
         <p>先知：mathjax是一个用于latex、mathml和ascimath表示法的开源javascript显示引擎。</p>
 <span id="more"></span>
-<h2 id="快速导览">快速导览</h2>
-<h3 id="算式">算式</h3>
+<h2 id="快速导览"><a href="#快速导览" class="headerlink" title="快速导览"></a>快速导览</h2><h3 id="算式"><a href="#算式" class="headerlink" title="算式"></a>算式</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -530,7 +529,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="符号">符号</h3>
+</div>
+<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -605,7 +605,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="希腊字母">希腊字母</h3>
+</div>
+<h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -660,26 +661,23 @@
 </tr>
 </tbody>
 </table>
-<h2 id="呈现位置">呈现位置</h2>
-<p>正文(inline)中的LaTeX公式用<code>$...$</code>定义</p>
+</div>
+<h2 id="呈现位置"><a href="#呈现位置" class="headerlink" title="呈现位置"></a>呈现位置</h2><p>正文(inline)中的LaTeX公式用<script type="math/tex">...</script>定义</p>
 <ul>
-<li>语句为<code>$\sum_&#123;i=0&#125;^N\int_&#123;a&#125;^&#123;b&#125;g(t,i)\text&#123;d&#125;t$</code></li>
-<li>显示为$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$</li>
+<li>语句为<script type="math/tex">\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t</script></li>
+<li>显示为$\sum<em>{i=0}^N\int</em>{a}^{b}g(t,i)\text{d}t$</li>
 </ul>
-<p>单独显示(display)的LaTeX公式用<code>$$...$$</code>​定义，此时公式居中并放大显示</p>
+<p>单独显示(display)的LaTeX公式用$$$…$$$​定义，此时公式居中并放大显示</p>
 <ul>
-<li>
-<p>语句为<code>$$\sum_&#123;i=0&#125;^N\int_&#123;a&#125;^&#123;b&#125;g(t,i)\text&#123;d&#125;t$$</code></p>
+<li><p>语句为$$$\sum<em>{i=0}^N\int</em>{a}^{b}g(t,i)\text{d}t$$$</p>
 </li>
-<li>
-<p>显示为</p>
-<p>$$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$</p>
-</li>
+<li><p>显示为</p>
+<script type="math/tex; mode=display">\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t</script></li>
 </ul>
 <blockquote>
-<p>下列描述语句中若非特别指出均省略<code>$...$</code></p>
+<p>下列描述语句中若非特别指出均省略<script type="math/tex">...</script></p>
 </blockquote>
-<h2 id="希腊字母-2">希腊字母</h2>
+<h2 id="希腊字母-1"><a href="#希腊字母-1" class="headerlink" title="希腊字母"></a>希腊字母</h2><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -760,10 +758,10 @@
 <td>ω</td>
 <td>\omega</td>
 <td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>若需要大写希腊字母，将命令首字母大写即可。</p>
 <ul>
 <li><code>\Gamma</code>效果为 $\Gamma$​</li>
@@ -772,23 +770,17 @@
 <ul>
 <li><code>\varGamma</code>效果为$\varGamma$</li>
 </ul>
-<h2 id="字母修饰">字母修饰</h2>
-<h3 id="上下标">上下标</h3>
-<p>上标：<code>^</code></p>
+<h2 id="字母修饰"><a href="#字母修饰" class="headerlink" title="字母修饰"></a>字母修饰</h2><h3 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h3><p>上标：<code>^</code></p>
 <p>下标：<code>_</code></p>
 <p>举例：<code>C_n^2</code>效果为 $C_n^2$</p>
-<h3 id="矢量">矢量</h3>
-<p><code>\vec a</code>效果为 $\vec a$</p>
+<h3 id="矢量"><a href="#矢量" class="headerlink" title="矢量"></a>矢量</h3><p><code>\vec a</code>效果为 $\vec a$</p>
 <p><code>\overrightarrow&#123;xy&#125;</code>效果为 $\overrightarrow{xy}$</p>
-<h3 id="字体">字体</h3>
-<p>Typewriter：<code>\mathtt&#123;A&#125;</code>效果为：$\mathtt{A}$</p>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>Typewriter：<code>\mathtt&#123;A&#125;</code>效果为：$\mathtt{A}$</p>
 <p>Blackboard Bold：<code>\mathbb&#123;A&#125;</code>效果为 $\mathbb{A}$</p>
 <p>Sans Serif：<code>\mathsf&#123;A&#125;</code>效果为 $\mathbb{A}$</p>
-<h2 id="分组">分组</h2>
-<p>使用<code>&#123;&#125;</code>将具有相同等级的内容扩入其中，成组处理</p>
+<h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p>使用<code>&#123;&#125;</code>将具有相同等级的内容扩入其中，成组处理</p>
 <p>举例：<code>10^&#123;1-n&#125;</code>效果为 $10^{1-n}$​​​​ ，而<code>10^1-n</code>效果为 $10^1-n$​​​</p>
-<h2 id="括号">括号</h2>
-<p>小括号：<code>()</code>效果为 $()$</p>
+<h2 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h2><p>小括号：<code>()</code>效果为 $()$</p>
 <p>中括号：<code>[]</code>效果为 $[]$</p>
 <p>尖括号：<code>\langle,\rangle</code>效果为 $\langle$</p>
 <ul>
@@ -798,8 +790,7 @@
 <ul>
 <li>而<code>\left(\frac&#123;x&#125;&#123;y&#125;\right)</code>效果为 $\left(\frac{x}{y}\right)$</li>
 </ul>
-<h2 id="求和、极限与积分">求和、极限与积分</h2>
-<p>求和：<code>\sum</code></p>
+<h2 id="求和、极限与积分"><a href="#求和、极限与积分" class="headerlink" title="求和、极限与积分"></a>求和、极限与积分</h2><p>求和：<code>\sum</code></p>
 <ul>
 <li>举例：<code>\sum_&#123;i=1&#125;^n&#123;a_i&#125;</code>效果为 $\sum_{i=1}^n{a_i}$</li>
 </ul>
@@ -808,16 +799,14 @@
 <ul>
 <li>举例：<code>\int_0^\infty&#123;fxdx&#125;</code>效果为 $\int_0^\infty{fxdx}$</li>
 </ul>
-<h2 id="分式与根式">分式与根式</h2>
-<p>分式(fractions)：<code>\frac&#123;公式1&#125;&#123;公式2&#125;</code>效果为 $\frac{公式1}{公式2}$</p>
+<h2 id="分式与根式"><a href="#分式与根式" class="headerlink" title="分式与根式"></a>分式与根式</h2><p>分式(fractions)：<code>\frac&#123;公式1&#125;&#123;公式2&#125;</code>效果为 $\frac{公式1}{公式2}$</p>
 <p>根式：<code>\sqrt[x]&#123;y&#125;</code>效果为 $\sqrt[x]{y}$</p>
-<h2 id="特殊函数">特殊函数</h2>
-<p><code>\函数名</code></p>
+<h2 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h2><p><code>\函数名</code></p>
 <p>举例：</p>
 <p><code>\sin x</code>：$\sin x$</p>
 <p><code>\ln x</code>：$\ln x$</p>
 <p><code>\max(A,B,C)</code>：$\max(A,B,C)$</p>
-<h2 id="特殊符号">特殊符号</h2>
+<h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -884,26 +873,23 @@
 </tr>
 </tbody>
 </table>
-<h2 id="空格">空格</h2>
-<blockquote>
+</div>
+<h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><blockquote>
 <p>LaTeX语法本身会忽略空格的存在</p>
 </blockquote>
 <p>小空格：<code>a\ b</code>效果为 $a\ b$</p>
 <p>4格空格：<code>a\quad b</code>效果为 $a\quad b$</p>
-<h2 id="矩阵">矩阵</h2>
-<h3 id="基本语法">基本语法</h3>
-<p>起始标记<code>\begin&#123;matrix&#125;``，结束标记``\end&#123;matrix&#125;</code></p>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>起始标记<code>\begin&#123;matrix&#125;``，结束标记``\end&#123;matrix&#125;</code></p>
 <p>每一行末尾标记<code>\\</code>，行间元素之间以<code>&amp;</code>分隔</p>
 <p>举例</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;matrix&#125;</span><br><span class="line"><span class="number">1</span>&amp;<span class="number">0</span>&amp;<span class="number">0</span>\\\\</span><br><span class="line"><span class="number">0</span>&amp;<span class="number">1</span>&amp;<span class="number">0</span>\\\\</span><br><span class="line"><span class="number">0</span>&amp;<span class="number">0</span>&amp;<span class="number">1</span></span><br><span class="line">\end&#123;matrix&#125;$$</span><br></pre></td></tr></table></figure>
 <p>效果为</p>
-<p>$$\begin{matrix}<br>
-1&amp;0&amp;0\\<br>
-0&amp;1&amp;0\\<br>
-0&amp;0&amp;1<br>
-\end{matrix}$$​​​</p>
-<h3 id="矩阵边框">矩阵边框</h3>
-<p>在起始、结束标记处用下列词替换<code>matrix</code></p>
+<p><script type="math/tex">\begin{matrix}
+1&0&0\\\\
+0&1&0\\\\
+0&0&1
+\end{matrix}</script>​​​</p>
+<h3 id="矩阵边框"><a href="#矩阵边框" class="headerlink" title="矩阵边框"></a>矩阵边框</h3><p>在起始、结束标记处用下列词替换<code>matrix</code></p>
 <ul>
 <li><code>pmatrix</code>：小括号边框</li>
 <li><code>bmatrix</code>：中括号边框</li>
@@ -911,21 +897,19 @@
 <li><code>vmatrix</code>：单竖线边框</li>
 <li><code>Vmatrix</code>：双竖线边框</li>
 </ul>
-<h3 id="省略元素">省略元素</h3>
-<p>横省略号：<code>\cdots</code></p>
+<h3 id="省略元素"><a href="#省略元素" class="headerlink" title="省略元素"></a>省略元素</h3><p>横省略号：<code>\cdots</code></p>
 <p>竖省略号：<code>\vdots</code></p>
 <p>斜省略号：<code>\ddots</code></p>
 <p>举例</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;bmatrix&#125;</span><br><span class="line">&#123;a_&#123;<span class="number">11</span>&#125;&#125;&amp;&#123;a_&#123;<span class="number">12</span>&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;<span class="number">1n</span>&#125;&#125;\\\\</span><br><span class="line">&#123;a_&#123;<span class="number">21</span>&#125;&#125;&amp;&#123;a_&#123;<span class="number">22</span>&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;<span class="number">2n</span>&#125;&#125;\\\\</span><br><span class="line">&#123;\vdots&#125;&amp;&#123;\vdots&#125;&amp;&#123;\ddots&#125;&amp;&#123;\vdots&#125;\\\\</span><br><span class="line">&#123;a_&#123;m1&#125;&#125;&amp;&#123;a_&#123;m2&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;mn&#125;&#125;</span><br><span class="line">\end&#123;bmatrix&#125;$$</span><br></pre></td></tr></table></figure>
 <p>效果为</p>
-<p>$$\begin{bmatrix}<br>
-{a_{11}}&amp;{a_{12}}&amp;{\cdots}&amp;{a_{1n}}\\<br>
-{a_{21}}&amp;{a_{22}}&amp;{\cdots}&amp;{a_{2n}}\\<br>
-{\vdots}&amp;{\vdots}&amp;{\ddots}&amp;{\vdots}\\<br>
-{a_{m1}}&amp;{a_{m2}}&amp;{\cdots}&amp;{a_{mn}}<br>
-\end{bmatrix}$$​​​​</p>
-<h3 id="阵列">阵列</h3>
-<p>需要array环境：起始、结束处以<code>&#123;array&#125;</code>声明</p>
+<p><script type="math/tex">\begin{bmatrix}
+{a_{11}}&{a_{12}}&{\cdots}&{a_{1n}}\\\\
+{a_{21}}&{a_{22}}&{\cdots}&{a_{2n}}\\\\
+{\vdots}&{\vdots}&{\ddots}&{\vdots}\\\\
+{a_{m1}}&{a_{m2}}&{\cdots}&{a_{mn}}
+\end{bmatrix}</script>​​​​</p>
+<h3 id="阵列"><a href="#阵列" class="headerlink" title="阵列"></a>阵列</h3><p>需要array环境：起始、结束处以<code>&#123;array&#125;</code>声明</p>
 <p>对齐方式：在<code>&#123;array&#125;</code>后以<code>&#123;&#125;</code>逐行统一声明</p>
 <ul>
 <li>左对齐：<code>l</code>；居中：<code>c</code>；右对齐：<code>r</code></li>
@@ -935,22 +919,17 @@
 <p>举例</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;array&#125;&#123;c|lll&#125;</span><br><span class="line">&#123;↓&#125;&amp;&#123;a&#125;&amp;&#123;b&#125;&amp;&#123;c&#125;\\\\</span><br><span class="line">\hline</span><br><span class="line">&#123;R_1&#125;&amp;&#123;c&#125;&amp;&#123;b&#125;&amp;&#123;a&#125;\\\\</span><br><span class="line">&#123;R_2&#125;&amp;&#123;b&#125;&amp;&#123;c&#125;&amp;&#123;c&#125;</span><br><span class="line">\end&#123;array&#125;$$</span><br></pre></td></tr></table></figure>
 <p>效果为</p>
-<p>$$\begin{array}{c|lll}<br>
-{↓}&amp;{a}&amp;{b}&amp;{c}\\<br>
-\hline<br>
-{R_1}&amp;{c}&amp;{b}&amp;{a}\\<br>
-{R_2}&amp;{b}&amp;{c}&amp;{c}<br>
-\end{array}$$​​​​​​</p>
-<h3 id="方程组">方程组</h3>
-<p>需要cases环境：起始、结束处以<code>&#123;cases&#125;</code>声明</p>
+<p><script type="math/tex">\begin{array}{c|lll}
+{↓}&{a}&{b}&{c}\\\\
+\hline
+{R_1}&{c}&{b}&{a}\\\\
+{R_2}&{b}&{c}&{c}
+\end{array}</script>​​​​​​</p>
+<h3 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h3><p>需要cases环境：起始、结束处以<code>&#123;cases&#125;</code>声明</p>
 <p>举例</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;cases&#125;</span><br><span class="line">a_1x+b_1y+c_1z=d_1\\\\</span><br><span class="line">a_2x+b_2y+c_2z=d_2\\\\</span><br><span class="line">a_3x+b_3y+c_3z=d_3</span><br><span class="line">\end&#123;cases&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<p>$$\begin{cases}<br>
-a_1x+b_1y+c_1z=d_1\\<br>
-a_2x+b_2y+c_2z=d_2\\<br>
-a_3x+b_3y+c_3z=d_3<br>
-\end{cases}<br>
-$$​​​​</p>
+<p>$$\begin{cases}<br>a_1x+b_1y+c_1z=d_1\\<br>a_2x+b_2y+c_2z=d_2\\<br>a_3x+b_3y+c_3z=d_3<br>\end{cases}</p>
+<p>$$​​​​</p>
 
 
         <hr>
@@ -1100,7 +1079,7 @@ $$​​​​</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%A7%88"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">快速导览</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%97%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">算式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AC%A6%E5%8F%B7"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">符号</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">希腊字母</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%91%88%E7%8E%B0%E4%BD%8D%E7%BD%AE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">呈现位置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D-2"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">希腊字母</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%97%E6%AF%8D%E4%BF%AE%E9%A5%B0"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">字母修饰</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">上下标</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9F%A2%E9%87%8F"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">矢量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">字体</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E7%BB%84"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">分组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8B%AC%E5%8F%B7"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">括号</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B1%82%E5%92%8C%E3%80%81%E6%9E%81%E9%99%90%E4%B8%8E%E7%A7%AF%E5%88%86"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">求和、极限与积分</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E5%BC%8F%E4%B8%8E%E6%A0%B9%E5%BC%8F"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">分式与根式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">特殊函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">特殊符号</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%A9%BA%E6%A0%BC"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">空格</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">矩阵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-nav-number">12.1.</span> <span class="toc-nav-text">基本语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E8%BE%B9%E6%A1%86"><span class="toc-nav-number">12.2.</span> <span class="toc-nav-text">矩阵边框</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9C%81%E7%95%A5%E5%85%83%E7%B4%A0"><span class="toc-nav-number">12.3.</span> <span class="toc-nav-text">省略元素</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%98%B5%E5%88%97"><span class="toc-nav-number">12.4.</span> <span class="toc-nav-text">阵列</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-nav-number">12.5.</span> <span class="toc-nav-text">方程组</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%A7%88"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">快速导览</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%97%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">算式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AC%A6%E5%8F%B7"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">符号</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">希腊字母</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%91%88%E7%8E%B0%E4%BD%8D%E7%BD%AE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">呈现位置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D-1"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">希腊字母</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%97%E6%AF%8D%E4%BF%AE%E9%A5%B0"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">字母修饰</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">上下标</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9F%A2%E9%87%8F"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">矢量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">字体</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E7%BB%84"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">分组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8B%AC%E5%8F%B7"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">括号</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B1%82%E5%92%8C%E3%80%81%E6%9E%81%E9%99%90%E4%B8%8E%E7%A7%AF%E5%88%86"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">求和、极限与积分</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E5%BC%8F%E4%B8%8E%E6%A0%B9%E5%BC%8F"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">分式与根式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">特殊函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">特殊符号</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%A9%BA%E6%A0%BC"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">空格</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">矩阵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-nav-number">12.1.</span> <span class="toc-nav-text">基本语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E8%BE%B9%E6%A1%86"><span class="toc-nav-number">12.2.</span> <span class="toc-nav-text">矩阵边框</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9C%81%E7%95%A5%E5%85%83%E7%B4%A0"><span class="toc-nav-number">12.3.</span> <span class="toc-nav-text">省略元素</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%98%B5%E5%88%97"><span class="toc-nav-number">12.4.</span> <span class="toc-nav-text">阵列</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-nav-number">12.5.</span> <span class="toc-nav-text">方程组</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -1241,7 +1220,7 @@ $$​​​​</p>
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.7k</span>
+          站点总字数：<span class="post-count">440.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

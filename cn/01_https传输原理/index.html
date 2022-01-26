@@ -233,6 +233,17 @@
           
           
           <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
@@ -254,15 +265,6 @@
           
           
           
-          <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -273,8 +275,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -421,7 +421,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                768
+                767
               </span> 
               字
             </span>
@@ -486,13 +486,10 @@
 
         <blockquote>
 <p>同系列文章请查看：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview">Github：pre-interview</a></p>
-</blockquote>
-<blockquote>
 <p>超文本传输协议HTTP协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</p>
-<p>为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，HTTPS在HTTP的基础上加入了SSL协议，SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
+<p>　　为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，HTTPS在HTTP的基础上加入了SSL协议，SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
 </blockquote>
-<h2 id="HTTP与HTTPS区别">HTTP与HTTPS区别</h2>
-<p>HTTP协议传输的数据都是未加密的，也就是<strong>明文</strong>的，因此使用HTTP协议传输隐私信息非常不安全，为了保证这些隐私数据能加密传输，于是网景公司设计了<strong>SSL</strong>（Secure Sockets Layer）协议用于对HTTP协议传输的数据进行加密，从而就诞生了HTTPS。简单来说，HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</p>
+<h2 id="HTTP与HTTPS区别"><a href="#HTTP与HTTPS区别" class="headerlink" title="HTTP与HTTPS区别"></a>HTTP与HTTPS区别</h2><p>HTTP协议传输的数据都是未加密的，也就是<strong>明文</strong>的，因此使用HTTP协议传输隐私信息非常不安全，为了保证这些隐私数据能加密传输，于是网景公司设计了<strong>SSL</strong>（Secure Sockets Layer）协议用于对HTTP协议传输的数据进行加密，从而就诞生了HTTPS。简单来说，HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</p>
 <p>HTTPS和HTTP的区别主要如下：</p>
 <ul>
 <li>https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。</li>
@@ -500,19 +497,13 @@
 <li>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是<strong>80</strong>，后者是<strong>443</strong>。</li>
 <li>http的连接很简单，是<strong>无状态</strong>的；HTTPS协议是由<strong>SSL+HTTP</strong>协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</li>
 </ul>
-<h2 id="深入：HTTPS传输原理">深入：HTTPS传输原理</h2>
-<ul>
+<h2 id="深入：HTTPS传输原理"><a href="#深入：HTTPS传输原理" class="headerlink" title="深入：HTTPS传输原理"></a>深入：HTTPS传输原理</h2><ul>
 <li>非对称加密建立HTTPS连接</li>
 <li>然后使用对称加密进行报文的收发</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/https1.png" alt="image-20211111123546328"></p>
-<h3 id="非对称加密是如何利用公钥私钥解决安全问题的？">非对称加密是如何利用公钥私钥解决安全问题的？</h3>
-<p>【1】客户端有私钥A + 公钥A； 服务器有私钥B + 公钥B<br>
-【2】规则——私钥A+公钥A = 密钥对A（公钥A加密的内容只有私钥A可以解密！）<br>
-【3】为了建立安全的通信道路（不被坏人篡改、冒名顶替（窃听就木有办法辣，不过也不怕！我们这个是非对称加密！被窃听了也不会被破解的）），客户端把手里的公钥发送给服务器<br>
-【4】服务器使用拿到的公钥A进行重要报文（也就是图解HTTP提到的 “<strong>稍后的共享密钥加密中要使用的密钥</strong>”）的加密，之后再发给客户端<br>
-【5】客户端手里有私钥A，直接解密这个重要报文，安全地获得共享密钥</p>
-<p>另外还可以使用数字证书解决公开密钥的传输问题</p>
+<h3 id="非对称加密是如何利用公钥私钥解决安全问题的？"><a href="#非对称加密是如何利用公钥私钥解决安全问题的？" class="headerlink" title="非对称加密是如何利用公钥私钥解决安全问题的？"></a>非对称加密是如何利用公钥私钥解决安全问题的？</h3><p>【1】客户端有私钥A + 公钥A； 服务器有私钥B + 公钥B<br>【2】规则——私钥A+公钥A = 密钥对A（公钥A加密的内容只有私钥A可以解密！）<br>【3】为了建立安全的通信道路（不被坏人篡改、冒名顶替（窃听就木有办法辣，不过也不怕！我们这个是非对称加密！被窃听了也不会被破解的）），客户端把手里的公钥发送给服务器<br>【4】服务器使用拿到的公钥A进行重要报文（也就是图解HTTP提到的 “<strong>稍后的共享密钥加密中要使用的密钥</strong>”）的加密，之后再发给客户端<br>【5】客户端手里有私钥A，直接解密这个重要报文，安全地获得共享密钥</p>
+<p>另外还可以使用数字证书解决公开密钥的传输问题 </p>
 <p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/https2.png" alt=""></p>
 
 
@@ -804,7 +795,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.7k</span>
+          站点总字数：<span class="post-count">440.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

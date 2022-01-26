@@ -233,6 +233,17 @@
           
           
           <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
@@ -254,15 +265,6 @@
           
           
           
-          <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -273,8 +275,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -421,7 +421,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                703
+                700
               </span> 
               字
             </span>
@@ -487,29 +487,22 @@
         <blockquote>
 <p>同系列文章请查看：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview">Github：pre-interview</a></p>
 </blockquote>
-<h2 id="原题">原题</h2>
-<blockquote>
+<h2 id="原题"><a href="#原题" class="headerlink" title="原题"></a>原题</h2><blockquote>
 <p>源码：<a target="_blank" rel="noopener" href="https://github.com/yesmore">01_一道function面试题.js</a></p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">5</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName() <span class="comment">// 2</span></span><br><span class="line">getName() <span class="comment">// 5 -&gt; 4 this=&gt;window</span></span><br><span class="line">Foo().getName(); <span class="comment">// 5 -&gt; 1</span></span><br><span class="line">getName(); <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Foo.getName(); <span class="comment">// 2</span></span><br><span class="line"><span class="keyword">new</span> Foo().getName() <span class="comment">// 3</span></span><br><span class="line"><span class="keyword">new</span> <span class="keyword">new</span> Foo().getName() <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
-<h2 id="分析">分析</h2>
-<h3 id="Foo-getName-2">Foo.getName() - 2</h3>
-<p>本质：<strong>执行Foo函数上的静态方法</strong></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="Foo-getName-2"><a href="#Foo-getName-2" class="headerlink" title="Foo.getName() - 2"></a>Foo.getName() - 2</h3><p>本质：<strong>执行Foo函数上的静态方法</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数Foo的静态方法 -&gt; 函数对象上的方法/属性</span></span><br><span class="line">Foo.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="getName-4">getName() - 4</h3>
-<p>执行：</p>
+<h3 id="getName-4"><a href="#getName-4" class="headerlink" title="getName() - 4"></a>getName() - 4</h3><p>执行：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 给全局变量赋值为一个匿名函数</span></span><br><span class="line"><span class="comment">// GO &#123;&#125;</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 全局预编译</span></span><br><span class="line"><span class="comment"> * GO &#123;</span></span><br><span class="line"><span class="comment"> *   getName: undefined -&gt; </span></span><br><span class="line"><span class="comment"> *   function getName () &#123;&#125; -&gt;</span></span><br><span class="line"><span class="comment"> *   function () &#123; console.log(4); &#125; </span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42667613/article/details/118212614">JS预编译及全局对象GO和活动对象AO</a></p>
 </blockquote>
-<h3 id="Foo-getName-1">Foo().getName() - 1</h3>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 全局变量赋值</span></span><br><span class="line">  <span class="comment">// 若Foo没有执行，下面的赋值不会进行</span></span><br><span class="line">  getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 直接执行Foo，this -&gt; window</span></span><br><span class="line">  <span class="comment">// new Foo， this -&gt; Foo object</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span> <span class="comment">// window</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Foo-getName-1"><a href="#Foo-getName-1" class="headerlink" title="Foo().getName() - 1"></a>Foo().getName() - 1</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 全局变量赋值</span></span><br><span class="line">  <span class="comment">// 若Foo没有执行，下面的赋值不会进行</span></span><br><span class="line">  getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 直接执行Foo，this -&gt; window</span></span><br><span class="line">  <span class="comment">// new Foo， this -&gt; Foo object</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span> <span class="comment">// window</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>执行过程：</p>
 <p><em>Foo() -&gt; this -&gt; window -&gt; window.getName() 重新赋值成 1</em></p>
-<h3 id="getName-2-1">getName() * 2 - 1</h3>
-<p>被重新赋值了: window.getName() = 1 =&gt; getName() = 1</p>
-<h3 id="new-Foo-getName-2">new Foo.getName() - 2</h3>
-<p>注意区别 <code>new Foo()</code></p>
+<h3 id="getName-2-1"><a href="#getName-2-1" class="headerlink" title="getName() * 2 - 1"></a>getName() * 2 - 1</h3><p>被重新赋值了: window.getName() = 1 =&gt; getName() = 1</p>
+<h3 id="new-Foo-getName-2"><a href="#new-Foo-getName-2" class="headerlink" title="new Foo.getName() - 2"></a>new Foo.getName() - 2</h3><p>注意区别 <code>new Foo()</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数Foo的静态方法 -&gt; 函数对象上的方法/属性</span></span><br><span class="line">Foo.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这里的 <code>new</code> 没有实质作用，将函数改为如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数Foo的静态方法 -&gt; 函数对象上的方法/属性</span></span><br><span class="line">Foo.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -518,10 +511,9 @@
 <p>Foo.getName {} 对象</p>
 <p>指向实例化的新对象</p>
 </blockquote>
-<p>此时回顾到第一种情况 [Foo.getName() - 2](#Foo.getName() - 2) ，该静态方法也被调用了，那么此时的 this 就会指向谁调用它的对象上，即 <code>Foo</code> 调用了getName 方法，this 指向 Foo 函数对象上，打印结果如下：</p>
+<p>此时回顾到第一种情况 <a href="#Foo.getName(">Foo.getName() - 2</a> - 2) ，该静态方法也被调用了，那么此时的 this 就会指向谁调用它的对象上，即 <code>Foo</code> 调用了getName 方法，this 指向 Foo 函数对象上，打印结果如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ƒ <span class="function"><span class="title">Foo</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="comment">// 全局变量赋值</span></span><br><span class="line">  <span class="comment">// 若Foo没有执行，下面的赋值不会进行</span></span><br><span class="line">  getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 直接执行Foo，this -&gt; window</span></span><br><span class="line">  <span class="comment">// new Foo， this -&gt; Foo object</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span> …</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="new-new-Foo-getName-3">new new Foo().getName() - 3</h3>
-<p>拆分一下：</p>
+<h3 id="new-new-Foo-getName-3"><a href="#new-new-Foo-getName-3" class="headerlink" title="new new Foo().getName() - 3"></a>new new Foo().getName() - 3</h3><p>拆分一下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> Foo() <span class="comment">// 实例化对象 foo，继承了原型属性上的方法</span></span><br><span class="line">foo.getName() -&gt; Foo.prototype.getName()</span><br></pre></td></tr></table></figure>
 <p>即执行下面的函数：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 扩展函数原型上的方法</span></span><br><span class="line"><span class="comment">// 调用：var foo = new Foo(); -&gt; foo.getName</span></span><br><span class="line"><span class="comment">// 或 new Foo.getName</span></span><br><span class="line">Foo.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -530,19 +522,14 @@
 <blockquote>
 <p>Uncaught TypeError: (intermediate value) is not a constructor</p>
 </blockquote>
-<h2 id="总结">总结</h2>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li><strong>Foo.getName()</strong> 调用 <code>Foo</code> 函数上的<strong>静态方法</strong></li>
+<li><strong>Foo().getName()</strong> 调用 <code>Foo</code> <strong>返回值</strong>下（window）的  getName 方法</li>
+</ul>
 <ul>
-<li>
-<p><strong>Foo.getName()</strong> 调用 <code>Foo</code> 函数上的<strong>静态方法</strong></p>
+<li><p><strong>new Foo.getName()</strong> 实例化了 <code>Foo</code> 函数上的<strong>静态方法</strong></p>
 </li>
-<li>
-<p><strong>Foo().getName()</strong> 调用 <code>Foo</code> <strong>返回值</strong>下（window）的  getName 方法</p>
-</li>
-<li>
-<p><strong>new Foo.getName()</strong> 实例化了 <code>Foo</code> 函数上的<strong>静态方法</strong></p>
-</li>
-<li>
-<p><strong>new Foo().getName()</strong>  实例化了 <code>Foo</code> 构造函数再调用 getName 方法</p>
+<li><p><strong>new Foo().getName()</strong>  实例化了 <code>Foo</code> 构造函数再调用 getName 方法</p>
 </li>
 </ul>
 <blockquote>
@@ -838,7 +825,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.7k</span>
+          站点总字数：<span class="post-count">440.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
