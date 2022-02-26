@@ -235,9 +235,7 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -246,7 +244,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -265,6 +265,10 @@
           
           
           
+          
+          
+          
+          
           <li>
             <a href="/tags/">
               
@@ -273,10 +277,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -462,6 +462,52 @@
   <!-- top end -->
   
 
+  <a href="/cn/13-使用Matrix4变换矩阵实现三角形复合变换-RotatedTranslatedTriangle/">
+    <h1 class="post-title">
+      【WebGL之巅】13-使用Matrix4变换矩阵实现三角形复合变换
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+对应《WebGL编程指南》代码：14-RotatedTranslatedTriangle
+要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、复合变换
+
+
+步骤
+1.将三角形沿着X轴平移一段距离
+2.旋转三角形
+知识点
+一、模型变换
+建立下面的等式：
+​	&lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-27
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/12-使用Matrix4变换矩阵实现三角形旋转、平移、缩放-RotatedTriangle-Matrix4/">
     <h1 class="post-title">
       【WebGL之巅】12-使用Matrix4变换矩阵实现三角形旋转、平移、缩放
@@ -475,8 +521,10 @@
 要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象
 
 
-知识点一、矩阵变换库cuon-matrix.jsOpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
-cuon-matrix.js在其......
+知识点
+一、矩阵变换库cuon-matrix.js
+OpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
+cuon-matrix.js......
     </div>
   </a>
   
@@ -516,8 +564,14 @@ cuon-matrix.js在其......
 要点：矩阵和矢量的乘法、矩阵变换（旋转矩阵、平移矩阵、缩放矩阵）、gl.uniformMatrix4fv
 
 
-知识点一、矩阵和矢量的乘法矩阵示例：
-​    $\begin{bmatrix}​    8 &amp; 3 &amp; 0 \\​    4 &amp; 3 &amp; 6 \\​    3 &a......
+知识点
+一、矩阵和矢量的乘法
+矩阵示例：
+​	$
+\begin{bmatrix}
+​	8 &amp; 3 &amp; 0 \\
+​	4 &amp; 3 &amp; 6 \\
+​	3 &amp; 2 ......
     </div>
   </a>
   
@@ -552,7 +606,8 @@ cuon-matrix.js在其......
       
     </h3>
     <div class="post-content-preview">
-      👋 链友申请在此页评论区留下您的 [BlogTitle]、[BlogLink] 即可，博主会在三日内给予回复，感谢！
+      👋 链友申请
+在此页评论区留下您的 [BlogTitle]、[BlogLink] 即可，博主会在三日内给予回复，感谢！
 123示例：- BlogTitle：快乐码原- BlogLink：https://yesmore.cc
 ...
     </div>
@@ -592,10 +647,13 @@ cuon-matrix.js在其......
 要点：旋转变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
-步骤目的：将三角形逆时针旋转90度
+步骤
+目的：将三角形逆时针旋转90度
 计算90度的正余弦值 → 传给顶点着色器uniform变量
-知识点一、正旋转​    ①描述旋转操作：绕Z轴，逆时针旋转β角度。
-​    ②关于“逆时针”的约定：如果β是正值......
+知识点
+一、正旋转
+​	①描述旋转操作：绕Z轴，逆时针旋转β角度。
+​	②关于“逆时针”的约定：如果β是正值，观察......
     </div>
   </a>
   
@@ -635,14 +693,19 @@ cuon-matrix.js在其......
 要点：平移变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
-目的将一个三角形向上和向右平移0.5个单位
-知识点一、逐顶点操作​    为顶点坐标的每个分量加上一个常量就可以实现
-二、矢量的加法​    方便的矢量相加运算是GLSL ES提供的特性之一
-
+目的
+将一个三角形向上和向右平移0.5个单位
+知识点
+一、逐顶点操作
+​	为顶点坐标的每个分量加上一个常量就可以实现
+二、矢量的加法
+​	方便的矢量相加运算是GLSL ES提供的特性之一
 
 
 
 矢量
+值
+
 ......
     </div>
   </a>
@@ -684,7 +747,8 @@ cuon-matrix.js在其......
 复习：【WebGL之巅】07-绘制三角形
 
 
-实例12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596......
+实例
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859......
     </div>
   </a>
   
@@ -726,49 +790,8 @@ cuon-matrix.js在其......
 参考：《WebGL编程指南》p82~84讲解
 
 
-实例1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-25
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/06-绘制三个点-MultiPoints/">
-    <h1 class="post-title">
-      【WebGL之巅】06-绘制三个点
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：06-MultiPoints
-要点：缓冲区对象、gl.drawArrays、缓冲区对象向着色器传入多个顶点的数据的5个步骤
-复习：03-绘制一个点_v2_attribute变量
-
-
-绘制步骤获取WebGL上下文 → 初始化着色器 → 设置点的坐标信息 → 设置&lt;canvas&gt;背景色 → 清空&lt;canvas&gt; → 绘制
-知识点一、缓冲区......
+实例
+1234567891011121314151617&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; ......
     </div>
   </a>
   
@@ -913,7 +936,7 @@ cuon-matrix.js在其......
     
     
     
-    <a href="/tags/#开源项目" title="开源项目" rel="6"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
+    <a href="/tags/#开源项目" title="开源项目" rel="7"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
     
     
     
@@ -929,7 +952,7 @@ cuon-matrix.js在其......
     
     
     
-    <a href="/tags/#NodeJs" title="NodeJs" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
+    <a href="/tags/#NodeJs" title="NodeJs" rel="5"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
     
     
     
@@ -961,11 +984,11 @@ cuon-matrix.js在其......
     
     
     
-    <a href="/tags/#Ajax" title="Ajax" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Ajax</a>
-    
-    
-    
     <a href="/tags/#websocket" title="websocket" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
+    
+    
+    
+    <a href="/tags/#Ajax" title="Ajax" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Ajax</a>
     
     
     
@@ -981,11 +1004,15 @@ cuon-matrix.js在其......
     
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
+    <a href="/tags/#脚手架" title="脚手架" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 脚手架</a>
     
     
     
     <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
     
     
     
@@ -1111,6 +1138,10 @@ cuon-matrix.js在其......
 <div class="widget">
   <ul style="padding-left: 0;">
     
+    <a href="../../der-cli/">
+      <li style="list-style: none;">Der Cli</li>
+    </a>
+    
     <a href="../../23_ES6%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85/">
       <li style="list-style: none;">ES6深拷贝函数封装</li>
     </a>
@@ -1127,10 +1158,6 @@ cuon-matrix.js在其......
       <li style="list-style: none;">lookupGetter</li>
     </a>
     
-    <a href="../../19_%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E9%97%AE%E9%A2%98/">
-      <li style="list-style: none;">JS稀疏数组遍历问题</li>
-    </a>
-    
   </ul>
 </div>
 
@@ -1140,9 +1167,9 @@ cuon-matrix.js在其......
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（140） </a></h5>
+<h5><a href="/archives/">归档（141） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1215,12 +1242,16 @@ cuon-matrix.js在其......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#知识扫盲">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
     </a>
     
     <a href="/categories/#链友">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#知识扫盲">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
     <a href="/categories/#免费api">
@@ -1231,12 +1262,16 @@ cuon-matrix.js在其......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
     </a>
     
+    <a href="/categories/#Nginx">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
+    </a>
+    
     <a href="/categories/#Electron">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
-    <a href="/categories/#Nginx">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Hexo">
@@ -1251,12 +1286,12 @@ cuon-matrix.js在其......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
     <a href="/categories/#Linux">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Linux</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Demo">
@@ -1443,7 +1478,7 @@ cuon-matrix.js在其......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.4k</span>
+          站点总字数：<span class="post-count">443.3k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

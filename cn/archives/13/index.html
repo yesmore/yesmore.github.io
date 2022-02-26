@@ -235,9 +235,7 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -246,7 +244,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -265,6 +265,10 @@
           
           
           
+          
+          
+          
+          
           <li>
             <a href="/tags/">
               
@@ -273,10 +277,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -462,6 +462,49 @@
   <!-- top end -->
   
 
+  <a href="/cn/19-颜色与纹理-使用多幅纹理-MultiTexture/">
+    <h1 class="post-title">
+      【WebGL之巅】19-颜色与纹理-使用多幅纹理
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      对应《WebGL编程指南》代码：21-MultiTexture
+要点：纹理映射、多个纹理单元使用
+
+知识点
+一、区别单个纹理单元
+1、片元着色器能够访问两个纹理
+2、最终的片元颜色由两个纹理上的纹素颜色共同决定
+3、initTextures(gl, n)函数创建了两个纹理对象
+12345678910111213141516171819202122232425function initText......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-07-30
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/Websocket/">
     <h1 class="post-title">
       WebSocket介绍与实战开发
@@ -473,11 +516,12 @@
       思考：这种网页版的聊天功能应该如何去实现？？
 
 websocket介绍
+
 WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。
 websocket是一种持久协议，http是非持久协议
 
 现在很多网站都有实时推送的需求，比如聊天，客服咨询等
-早期没有websocket时，通过ajax轮询，由于http......
+早期没有websocket时，通过ajax轮询，由于htt......
     </div>
   </a>
   
@@ -514,7 +558,11 @@ websocket是一种持久协议，http是非持久协议
 要点：浏览器渲染原理（简介、渲染机制）、浏览器存储（cookie、LocalStorage、sessionStorage、IndexedDB）
 
 
-浏览器渲染原理简介引入
+浏览器渲染原理
+简介
+引入
+
+
 输入网址进入网页的三个阶段
 
 http请求阶段
@@ -524,16 +572,20 @@ http响应阶段
 
 
 补充
+
+
 进程Process
 
 一个运行的程序/浏览器页面
 
 
+
 线程Thread
+
 
 进程内的子任务
 
-可多个线程同时进行，实际是轮流执行......
+可多个线程同时进行......
     </div>
   </a>
   
@@ -573,8 +625,11 @@ http响应阶段
 要点：纹理映射、纹理坐标
 
 
-知识点一、纹理映射​        概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
-​        作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA......
+知识点
+一、纹理映射
+​		概念：将一张图像（像帖纸）映射（帖）到一个几何图形的表面上去。此时这张图片又可以称为纹理图像或纹理(texture)。
+​		作用：根据纹理图像，为之前光栅化后的每个元素涂上合适的颜色。组成纹理图像的像素又被称为纹素，每一个纹素都使用RGB或RGBA格式编码。
+二、纹理......
     </div>
   </a>
   
@@ -614,8 +669,10 @@ http响应阶段
 要点：【WebGL之巅】17-颜色与纹理-绘制三个不同颜色的顶点、gl.drawArrays、几何形状的装配和光栅化
 
 
-知识点一、几何形状的装配和光栅化在顶点着色器和片元着色器之间，有这样两个步骤：
-​        图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的......
+知识点
+一、几何形状的装配和光栅化
+在顶点着色器和片元着色器之间，有这样两个步骤：
+​		图形装配过程：这一步是将两个孤立的顶点坐标装配成几何图形。几何图形的类比由gl.drawArrays的第一个参......
     </div>
   </a>
   
@@ -655,7 +712,9 @@ http响应阶段
 要点：绘制三个不同color的点、交错组织
 
 
-知识点一、varying变量12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_Col......
+知识点
+一、varying变量
+12345678910111213141516var VSHADER_SOURCE =    &#x27;attribute vec4 a_Position;\n&#x27; +    &#x27;attribute vec4 a_C......
     </div>
   </a>
   
@@ -695,11 +754,13 @@ http响应阶段
 要点：绘制三个不同size的点、交错组织
 
 
-知识点一、回顾—将顶点坐标传入着色器步骤1.创建缓冲区对象
+知识点
+一、回顾—将顶点坐标传入着色器步骤
+1.创建缓冲区对象
 2.将缓冲区对象绑定到target上
 3.向缓存对象写入数据
 4.将缓冲区对象分配给a_Postion变量(attribute变量)
-5.连接......
+5.......
     </div>
   </a>
   
@@ -740,52 +801,11 @@ http响应阶段
 tips：当前页含有动画示例，Tag Cloud可能会失效。
 
 
-知识点一、动画原理基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
+知识点
+一、动画原理
+基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
 为了生成动画，需要两个关键机制：
-​    机制一：在规定时刻反复调用......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-07-27
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#WebGL" title="WebGL"><i class="fa fa-tag" style="color: aqua;"></i> WebGL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/13-使用Matrix4变换矩阵实现三角形复合变换-RotatedTranslatedTriangle/">
-    <h1 class="post-title">
-      【WebGL之巅】13-使用Matrix4变换矩阵实现三角形复合变换
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-对应《WebGL编程指南》代码：14-RotatedTranslatedTriangle
-要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、复合变换
-
-
-步骤1.将三角形沿着X轴平移一段距离
-2.旋转三角形
-知识点一、模型变换建立下面的等式：
-​    &lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
+​	机制一：在规定时刻反复调用同......
     </div>
   </a>
   
@@ -930,7 +950,7 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
     
     
     
-    <a href="/tags/#开源项目" title="开源项目" rel="6"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
+    <a href="/tags/#开源项目" title="开源项目" rel="7"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
     
     
     
@@ -946,7 +966,7 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
     
     
     
-    <a href="/tags/#NodeJs" title="NodeJs" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
+    <a href="/tags/#NodeJs" title="NodeJs" rel="5"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
     
     
     
@@ -978,11 +998,11 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
     
     
     
-    <a href="/tags/#Ajax" title="Ajax" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Ajax</a>
-    
-    
-    
     <a href="/tags/#websocket" title="websocket" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
+    
+    
+    
+    <a href="/tags/#Ajax" title="Ajax" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Ajax</a>
     
     
     
@@ -998,11 +1018,15 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
     
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
+    <a href="/tags/#脚手架" title="脚手架" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 脚手架</a>
     
     
     
     <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
     
     
     
@@ -1128,6 +1152,10 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 <div class="widget">
   <ul style="padding-left: 0;">
     
+    <a href="../../der-cli/">
+      <li style="list-style: none;">Der Cli</li>
+    </a>
+    
     <a href="../../23_ES6%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85/">
       <li style="list-style: none;">ES6深拷贝函数封装</li>
     </a>
@@ -1144,10 +1172,6 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
       <li style="list-style: none;">lookupGetter</li>
     </a>
     
-    <a href="../../19_%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E9%97%AE%E9%A2%98/">
-      <li style="list-style: none;">JS稀疏数组遍历问题</li>
-    </a>
-    
   </ul>
 </div>
 
@@ -1157,9 +1181,9 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（140） </a></h5>
+<h5><a href="/archives/">归档（141） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1232,12 +1256,16 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#知识扫盲">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
     </a>
     
     <a href="/categories/#链友">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#知识扫盲">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
     <a href="/categories/#免费api">
@@ -1248,12 +1276,16 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
     </a>
     
+    <a href="/categories/#Nginx">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
+    </a>
+    
     <a href="/categories/#Electron">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
-    <a href="/categories/#Nginx">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Hexo">
@@ -1268,12 +1300,12 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
     <a href="/categories/#Linux">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Linux</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Demo">
@@ -1460,7 +1492,7 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.4k</span>
+          站点总字数：<span class="post-count">443.3k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

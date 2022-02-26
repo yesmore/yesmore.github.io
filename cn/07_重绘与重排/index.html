@@ -235,9 +235,7 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -246,7 +244,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -265,6 +265,10 @@
           
           
           
+          
+          
+          
+          
           <li>
             <a href="/tags/">
               
@@ -273,10 +277,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -487,22 +487,28 @@
         <blockquote>
 <p>同系列文章请查看：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview">Github：pre-interview</a></p>
 </blockquote>
-<h2 id="重排-Reflow-与重绘-Repaint"><a href="#重排-Reflow-与重绘-Repaint" class="headerlink" title="重排(Reflow)与重绘(Repaint)"></a>重排(Reflow)与重绘(Repaint)</h2><p>必要前置知识：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview/blob/main/src/06_%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86.md">06_浏览器渲染原理</a></p>
+<h2 id="重排-Reflow-与重绘-Repaint">重排(Reflow)与重绘(Repaint)</h2>
+<p>必要前置知识：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview/blob/main/src/06_%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86.md">06_浏览器渲染原理</a></p>
 <p>补充瞻仰巨佬：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000013662126">从输入URL到页面加载的过程？如何由一道题完善自己的前端知识体系！</a></p>
-<h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>浏览器下载完页面所有的资源后，就要开始构建DOM树，与此同时还会构建渲染树(Render Tree)。（其实在构建渲染树之前，和DOM树同期会构建Style Tree。DOM树与Style Tree合并为渲染树）。</p>
-<p><strong>DOM树：</strong>表示页面的结构<br><strong>渲染树：</strong>表示页面的节点如何显示</p>
+<h2 id="概览">概览</h2>
+<p>浏览器下载完页面所有的资源后，就要开始构建DOM树，与此同时还会构建渲染树(Render Tree)。（其实在构建渲染树之前，和DOM树同期会构建Style Tree。DOM树与Style Tree合并为渲染树）。</p>
+<p>**DOM树：**表示页面的结构<br>
+**渲染树：**表示页面的节点如何显示</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/webkit.png" alt=""></p>
 <p>一旦渲染树构建完成，就要开始绘制（paint）页面元素了。</p>
 <p>当DOM的变化引发了元素几何属性的变化，比如<code>改变元素的宽高</code>，<code>元素的位置</code>，导致浏览器不得不重新计算<strong>元素的几何属性</strong>，并<strong>重新构建渲染树</strong>，这个过程称为“<strong>重排</strong>”。完成重排后，要<strong>将重新构建的渲染树渲染到屏幕上</strong>，这个过程就是“<strong>重绘</strong>”。</p>
 <ul>
-<li><p><strong>重排</strong>(Reflow)</p>
+<li>
+<p><strong>重排</strong>(Reflow)</p>
 <p>当渲染树的一部分必须更新并且节点的尺寸发生了变化，浏览器会使渲染树中受到影响的部分失效，并重新构造渲染树。</p>
 </li>
-<li><p><strong>重绘</strong>(Repaint)</p>
+<li>
+<p><strong>重绘</strong>(Repaint)</p>
 <p>是在一个元素的外观被改变所触发的浏览器行为，浏览器会根据元素的新属性重新绘制，使元素呈现新的外观。比如改变某个元素的背景色、文字颜色、边框颜色等等。</p>
 </li>
 </ul>
-<h2 id="重排触发机制"><a href="#重排触发机制" class="headerlink" title="重排触发机制"></a>重排触发机制</h2><p>重排发生的根本原理就是<strong>元素的几何属性</strong>发生了改变，那么我们就从能够改变元素几何属性的角度入手：</p>
+<h2 id="重排触发机制">重排触发机制</h2>
+<p>重排发生的根本原理就是<strong>元素的几何属性</strong>发生了改变，那么我们就从能够改变元素几何属性的角度入手：</p>
 <ul>
 <li>添加或删除可见的DOM元素</li>
 <li>元素位置改变</li>
@@ -514,7 +520,8 @@
 <li>激活伪类(:hover)</li>
 <li>transition对宽高的处理，在整个transition的每一帧中，浏览器都要去重新布局，绘制页面(参考)</li>
 </ul>
-<h2 id="重绘触发机制"><a href="#重绘触发机制" class="headerlink" title="重绘触发机制"></a>重绘触发机制</h2><ul>
+<h2 id="重绘触发机制">重绘触发机制</h2>
+<ul>
 <li>当 render tree 中的一些元素需要更新属性，而这些属性只是影响元素的外观、风格，而不会影响布局的，比如 background-color，则称之为重绘</li>
 <li>改变字体</li>
 <li>增加或者移除样式表</li>
@@ -527,7 +534,8 @@
 <blockquote>
 <p><strong>重绘不一定需要重排（比如颜色的改变），重排必然导致重绘（比如改变网页位置）</strong></p>
 </blockquote>
-<h2 id="如何进行性能优化"><a href="#如何进行性能优化" class="headerlink" title="如何进行性能优化"></a>如何进行性能优化</h2><p>重绘和重排的开销是非常昂贵的，如果我们不停的在改变页面的布局，就会造成浏览器耗费大量的开销在进行页面的计算，这样的话，我们页面在用户使用起来，就会出现明显的卡顿。现在的浏览器其实已经对重排进行了优化，比如如下代码：</p>
+<h2 id="如何进行性能优化">如何进行性能优化</h2>
+<p>重绘和重排的开销是非常昂贵的，如果我们不停的在改变页面的布局，就会造成浏览器耗费大量的开销在进行页面的计算，这样的话，我们页面在用户使用起来，就会出现明显的卡顿。现在的浏览器其实已经对重排进行了优化，比如如下代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.div&#x27;</span>);</span><br><span class="line">div.style.width = <span class="string">&#x27;200px&#x27;</span>;</span><br><span class="line">div.style.background = <span class="string">&#x27;red&#x27;</span>;</span><br><span class="line">div.style.height = <span class="string">&#x27;300px&#x27;</span>;</span><br></pre></td></tr></table></figure>
 <p>比较久远的浏览器，这段代码会触发页面2次重排，在分别设置宽高的时候，触发2次.</p>
 <p>当代的浏览器对此进行了优化，这种思路类似于现在流行的MVVM框架使用的虚拟DOM，对改变的DOM节点进行依赖收集，确认没有改变的节点，就进行一次更新。但是浏览器针对重排的优化虽然思路和虚拟DOM接近，但是还是有本质的区别。大多数浏览器通过<strong>队列化修改并批量执行</strong>来优化重排过程。也就是说上面那段代码其实在现在的浏览器优化下，只构成一次重排。</p>
@@ -538,14 +546,17 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">offsetTop, offsetLeft，...</span><br><span class="line">scrollTop, scrollLeft, ...</span><br><span class="line">clientTop, clientLeft, ...</span><br><span class="line">getComputedStyle() (currentStyle <span class="keyword">in</span> IE)</span><br></pre></td></tr></table></figure>
 <p>为什么造成优化失效呢？仔细看这些属性，都是需要实时回馈给用户的几何属性或者是布局属性，当然不能再依靠浏览器的优化，因此浏览器不得不立即执行渲染队列中的“待处理变化”，并随之触发重排返回正确的值。</p>
 <p>接下来深入的介绍几种性能优化的小TIPS</p>
-<h3 id="最小化重绘和重排"><a href="#最小化重绘和重排" class="headerlink" title="最小化重绘和重排"></a>最小化重绘和重排</h3><p>既然重排&amp;重绘是会影响页面的性能，尤其是糟糕的JS代码更会将重排带来的性能问题放大。既然如此，我们首先想到的就是减少重排重绘。</p>
-<h4 id="改变样式"><a href="#改变样式" class="headerlink" title="改变样式"></a>改变样式</h4><p>考虑下面这个例子：</p>
+<h3 id="最小化重绘和重排">最小化重绘和重排</h3>
+<p>既然重排&amp;重绘是会影响页面的性能，尤其是糟糕的JS代码更会将重排带来的性能问题放大。既然如此，我们首先想到的就是减少重排重绘。</p>
+<h4 id="改变样式">改变样式</h4>
+<p>考虑下面这个例子：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.el&#x27;</span>);</span><br><span class="line">el.style.borderLeft = <span class="string">&#x27;1px&#x27;</span>;</span><br><span class="line">el.style.borderRight = <span class="string">&#x27;2px&#x27;</span>;</span><br><span class="line">el.style.padding = <span class="string">&#x27;5px&#x27;</span>;</span><br></pre></td></tr></table></figure>
 <p>这个例子其实和上面那个例子是一回事儿，在最糟糕的情况下，会触发浏览器三次重排。然鹅更高效的方式就是合并所有的改变一次处理。这样就只会修改DOM节点一次，比如改为<code>使用cssText属性</code>实现：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.el&#x27;</span>);</span><br><span class="line">el.style.cssText = <span class="string">&#x27;border-left: 1px; border-right: 2px; padding: 5px&#x27;</span>;</span><br></pre></td></tr></table></figure>
 <p>沿着这个思路，聪明的老铁一定就说了，你直接改个类名不也妥妥的。没错，还有一种减少重排的方法就是切换类名，而不是使用内联样式的cssText方法。使用切换类名就变成了这样：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// css </span></span><br><span class="line">.active &#123;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    border-left: 1px;</span><br><span class="line">    border-right: 2px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.el&#x27;</span>);</span><br><span class="line">el.className = <span class="string">&#x27;active&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="批量修改DOM"><a href="#批量修改DOM" class="headerlink" title="批量修改DOM"></a>批量修改DOM</h4><p>如果我们需要对DOM元素进行多次修改，怎么去减少重排和重绘的次数呢？</p>
+<h4 id="批量修改DOM">批量修改DOM</h4>
+<p>如果我们需要对DOM元素进行多次修改，怎么去减少重排和重绘的次数呢？</p>
 <p>有的同学又要说了，利用上面修改样式的方法不就行了吗。回过头看一下造成页面重排的几个要点里，可以明确的看到，造成元素几何属性发生改变就会触发重排，现在需要增加10个节点，必然涉及到DOM的修改，这个时候就需要利用批量修改DOM这种优化方式了，这里也能看到，改变样式最小化重绘和重排这种优化方式适用于单个存在的节点。</p>
 <p>批量修改DOM元素的核心思想是：</p>
 <ul>
@@ -574,10 +585,12 @@
 <p><strong>3）将原始元素拷贝到一个独立的节点中，操作这个节点，然后覆盖原始元素</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> old = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#mylist&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> clone = old.cloneNode(<span class="literal">true</span>);</span><br><span class="line">appendNode(clone, data);</span><br><span class="line">old.parentNode.replaceChild(clone, old);</span><br></pre></td></tr></table></figure>
 <p>可以看到这种方法也是只有一次重排。总的来说，使用文档片段，可以操作更少的DOM（对比使用克隆节点），最小化重排重绘次数。</p>
-<h4 id="缓存布局信息"><a href="#缓存布局信息" class="headerlink" title="缓存布局信息"></a>缓存布局信息</h4><p>缓存布局信息这个概念，在《高性能JavaScript》DOM性能优化中，多次提到类似的思想.</p>
+<h4 id="缓存布局信息">缓存布局信息</h4>
+<p>缓存布局信息这个概念，在《高性能JavaScript》DOM性能优化中，多次提到类似的思想.</p>
 <p>比如我现在要得到页面ul节点下面的100个li节点，最好的办法就是第一次获取后就保存起来，减少DOM的访问以提升性能，缓存布局信息也是同样的概念。</p>
 <p>前面有讲到，当访问诸如<code>offsetLeft</code>，<code>clientTop</code>这种属性时，会冲破浏览器自有的优化————通过队列化修改和批量运行的方法，减少重排/重绘版次。所以我们应该尽量减少对布局信息的查询次数，查询时，将其赋值给局部变量，使用局部变量参与计算。</p>
-<p>看以下样例：<br>将元素div向右下方平移，每次移动1px，起始位置100px, 100px。性能糟糕的代码：</p>
+<p>看以下样例：<br>
+将元素div向右下方平移，每次移动1px，起始位置100px, 100px。性能糟糕的代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div.style.left = <span class="number">1</span> + div.offsetLeft + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">div.style.top = <span class="number">1</span> + div.offsetTop + <span class="string">&#x27;px&#x27;</span>;</span><br></pre></td></tr></table></figure>
 <p>这样造成的问题就是，每次都会访问div的offsetLeft，造成浏览器强制刷新渲染队列以获取最新的offsetLeft值。更好的办法就是，将这个值保存下来，避免重复取值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">current = div.offsetLeft;</span><br><span class="line">div.style.left = <span class="number">1</span> + ++current + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">div.style.top = <span class="number">1</span> + ++current + <span class="string">&#x27;px&#x27;</span>;</span><br></pre></td></tr></table></figure>
@@ -871,7 +884,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.4k</span>
+          站点总字数：<span class="post-count">443.3k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

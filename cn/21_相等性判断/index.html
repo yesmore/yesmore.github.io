@@ -235,9 +235,7 @@
           
           
           <li>
-            <a href="/archives/">
-              
-              归档
+            <a href="/algorithms/">
               
               
             </a>
@@ -246,7 +244,9 @@
           
           
           <li>
-            <a href="/algorithms/">
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -265,6 +265,10 @@
           
           
           
+          
+          
+          
+          
           <li>
             <a href="/tags/">
               
@@ -273,10 +277,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -421,7 +421,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                959
+                956
               </span> 
               字
             </span>
@@ -487,7 +487,9 @@
         <blockquote>
 <p>同系列文章请查看：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview">Github：pre-interview</a></p>
 </blockquote>
-<h1 id="相等性判断"><a href="#相等性判断" class="headerlink" title="相等性判断"></a>相等性判断</h1><h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p><strong>四种判断相等的方法</strong>：</p>
+<h1>相等性判断</h1>
+<h3 id="概览">概览</h3>
+<p><strong>四种判断相等的方法</strong>：</p>
 <ul>
 <li>全等：===</li>
 <li>等于：==</li>
@@ -498,12 +500,13 @@
 <ul>
 <li>严格相等： === Strict Equality</li>
 <li>非严格（抽象相等/非约束） 相等：== Loose Equality</li>
-<li>Object.is(v1, v2) ES6：判断两个参数是否是同一个值</li>
+<li><a target="_blank" rel="noopener" href="http://Object.is">Object.is</a>(v1, v2) ES6：判断两个参数是否是同一个值</li>
 </ul>
 <blockquote>
 <p>Loose（自由的，不受限制的）</p>
 </blockquote>
-<h3 id="严格相等"><a href="#严格相等" class="headerlink" title="严格相等"></a>严格相等</h3><p><strong>严格相等特性</strong>：</p>
+<h3 id="严格相等">严格相等</h3>
+<p><strong>严格相等特性</strong>：</p>
 <ul>
 <li>1）不进行<a href="">隐式类型转换</a></li>
 <li>2）类型、值相同</li>
@@ -526,7 +529,6 @@
 <summary><strong>面试题：什么情况下 a !== a 成立？</strong></summary>
     <p>答：a = NaN </p>    
 </details>   
-
 <ul>
 <li>5）+0 === -0  // true</li>
 <li>6）+Infinity 与 -Infinity不相等（无穷）</li>
@@ -534,13 +536,14 @@
 <blockquote>
 <p>Infinity  === Infinity // true</p>
 </blockquote>
-<p><details></p>
-<p><summary><strong>面试题：什么情况下 a === a - 1 成立？</strong></summary><br>    <p>答：a = Infinity </p><br>&lt;/details&gt;   </p>
-<ul>
-<li>7）全等对结果的预测更加清晰明确（不进行隐式转换）</li>
-<li>8）全等在不隐式类型转换的前提下，更快</li>
-</ul>
-<h3 id="非严格相等"><a href="#非严格相等" class="headerlink" title="非严格相等"></a>非严格相等</h3><blockquote>
+<details>
+<summary><strong>面试题：什么情况下 a === a - 1 成立？</strong></summary>
+    <p>答：a = Infinity </p>    
+</details>   
+- 7）全等对结果的预测更加清晰明确（不进行隐式转换）
+- 8）全等在不隐式类型转换的前提下，更快
+<h3 id="非严格相等">非严格相等</h3>
+<blockquote>
 <p>Abstract equality</p>
 </blockquote>
 <p><strong>非严格相等特性</strong>：</p>
@@ -549,7 +552,7 @@
 <li>2）<strong>转换以后还是用严格相等来进行比较</strong></li>
 </ul>
 <blockquote>
-<p>关于隐式类型转换在非严格相等中的比较规律详见 MDN：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#非严格相等">非严格相等 <code>==</code></a></p>
+<p>关于隐式类型转换在非严格相等中的比较规律详见 MDN：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#%E9%9D%9E%E4%B8%A5%E6%A0%BC%E7%9B%B8%E7%AD%89">非严格相等 <code>==</code></a></p>
 </blockquote>
 <ul>
 <li>3）任何对象都与 undefined null 不相等</li>
@@ -565,15 +568,20 @@
 <ul>
 <li>4）非严格相等不一定比严格相等差</li>
 </ul>
-<h3 id="零值相等（same-value-zero）"><a href="#零值相等（same-value-zero）" class="headerlink" title="零值相等（same-value-zero）"></a>零值相等（same-value-zero）</h3><blockquote>
+<h3 id="零值相等（same-value-zero）">零值相等（same-value-zero）</h3>
+<blockquote>
 <p>+0 === -0</p>
 </blockquote>
-<h3 id="同值相等（same-value）"><a href="#同值相等（same-value）" class="headerlink" title="同值相等（same-value）"></a>同值相等（same-value）</h3><h4 id="1）-0-0"><a href="#1）-0-0" class="headerlink" title="1）-0 !== +0"></a>1）-0 !== +0</h4><p>证明：</p>
+<h3 id="同值相等（same-value）">同值相等（same-value）</h3>
+<h4 id="1）-0-0">1）-0 !== +0</h4>
+<p>证明：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;myZero&#x27;</span>, &#123;</span><br><span class="line">  value: -<span class="number">0</span>,</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  configurable: <span class="literal">false</span>,</span><br><span class="line">  enumerable: <span class="literal">false</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// +0/0 抛出异常，不能重新定义myZero属性，证明 +0与-0是不相等的值</span></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;myZero&#x27;</span>, &#123;</span><br><span class="line">  value: +<span class="number">0</span>,</span><br><span class="line">&#125;) </span><br><span class="line"></span><br><span class="line"><span class="comment">// 报错：</span></span><br><span class="line">Uncaught <span class="built_in">TypeError</span>: Cannot redefine property: myZero</span><br><span class="line">    at <span class="built_in">Function</span>.defineProperty (&lt;anonymous&gt;)</span><br><span class="line">    at 相等性判断.js:<span class="number">10</span></span><br></pre></td></tr></table></figure>
-<h4 id="2）NaN-NaN"><a href="#2）NaN-NaN" class="headerlink" title="2）NaN === NaN"></a>2）NaN === NaN</h4><p>用相同方法证明：</p>
+<h4 id="2）NaN-NaN">2）NaN === NaN</h4>
+<p>用相同方法证明：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;myNaN&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="literal">NaN</span>,</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  configurable: <span class="literal">false</span>,</span><br><span class="line">  enumerable: <span class="literal">false</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;myNaN&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="literal">NaN</span>,</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 不报错</span></span><br></pre></td></tr></table></figure>
-<p><strong>注意：同值相等的底层实现是基于 Object.is()（ES6） 实现，ES5并没有暴露JS引擎的同值相等方法</strong>。</p>
-<h4 id="3）Object-is"><a href="#3）Object-is" class="headerlink" title="3）Object.is()"></a>3）Object.is()</h4><blockquote>
+<p><strong>注意：同值相等的底层实现是基于 <a target="_blank" rel="noopener" href="http://Object.is">Object.is</a>()（ES6） 实现，ES5并没有暴露JS引擎的同值相等方法</strong>。</p>
+<h4 id="3）Object-is">3）<a target="_blank" rel="noopener" href="http://Object.is">Object.is</a>()</h4>
+<blockquote>
 <p>实现了同值相等</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="string">&#x27;1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cpis = <span class="built_in">Object</span>.is(a, b)</span><br><span class="line"><span class="built_in">console</span>.log(cpis)  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
@@ -590,7 +598,8 @@
 <ul>
 <li>不进行隐式转换</li>
 </ul>
-<h4 id="手写-Object-is-方法"><a href="#手写-Object-is-方法" class="headerlink" title="手写 Object.is 方法"></a>手写 Object.is 方法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.myIs = <span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (a === b) &#123;</span><br><span class="line">    <span class="comment">// 两者都为0，返回 true</span></span><br><span class="line">    <span class="comment">// 若分别为-0、+0，则Infinity !== -Infinity，返回 false</span></span><br><span class="line">    <span class="comment">// 1 / +0 = Infinity</span></span><br><span class="line">    <span class="comment">// 1 / -0 = -Infinity</span></span><br><span class="line">    <span class="keyword">return</span> (a !== <span class="number">0</span>) || (<span class="number">1</span> / a === <span class="number">1</span> / b)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 排除 NaN 情况</span></span><br><span class="line">  <span class="keyword">return</span> a !== a &amp;&amp; b !== b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(<span class="number">1</span>, <span class="number">1</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(&#123;&#125;, &#123;&#125;)) <span class="comment">// false</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(obj, obj)) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(+<span class="number">0</span>, -<span class="number">0</span>)) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(<span class="literal">NaN</span>, <span class="literal">NaN</span>)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="手写-Object-is-方法">手写 <a target="_blank" rel="noopener" href="http://Object.is">Object.is</a> 方法</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.myIs = <span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (a === b) &#123;</span><br><span class="line">    <span class="comment">// 两者都为0，返回 true</span></span><br><span class="line">    <span class="comment">// 若分别为-0、+0，则Infinity !== -Infinity，返回 false</span></span><br><span class="line">    <span class="comment">// 1 / +0 = Infinity</span></span><br><span class="line">    <span class="comment">// 1 / -0 = -Infinity</span></span><br><span class="line">    <span class="keyword">return</span> (a !== <span class="number">0</span>) || (<span class="number">1</span> / a === <span class="number">1</span> / b)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 排除 NaN 情况</span></span><br><span class="line">  <span class="keyword">return</span> a !== a &amp;&amp; b !== b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(<span class="number">1</span>, <span class="number">1</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(&#123;&#125;, &#123;&#125;)) <span class="comment">// false</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(obj, obj)) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(+<span class="number">0</span>, -<span class="number">0</span>)) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.myIs(<span class="literal">NaN</span>, <span class="literal">NaN</span>)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
 
         <hr>
@@ -740,7 +749,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E7%9B%B8%E7%AD%89%E6%80%A7%E5%88%A4%E6%96%AD"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">相等性判断</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A6%82%E8%A7%88"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">概览</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%A5%E6%A0%BC%E7%9B%B8%E7%AD%89"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">严格相等</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9D%9E%E4%B8%A5%E6%A0%BC%E7%9B%B8%E7%AD%89"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">非严格相等</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9B%B6%E5%80%BC%E7%9B%B8%E7%AD%89%EF%BC%88same-value-zero%EF%BC%89"><span class="toc-nav-number">1.0.4.</span> <span class="toc-nav-text">零值相等（same-value-zero）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8C%E5%80%BC%E7%9B%B8%E7%AD%89%EF%BC%88same-value%EF%BC%89"><span class="toc-nav-number">1.0.5.</span> <span class="toc-nav-text">同值相等（same-value）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%EF%BC%89-0-0"><span class="toc-nav-number">1.0.5.1.</span> <span class="toc-nav-text">1）-0 !&#x3D;&#x3D; +0</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%EF%BC%89NaN-NaN"><span class="toc-nav-number">1.0.5.2.</span> <span class="toc-nav-text">2）NaN &#x3D;&#x3D;&#x3D; NaN</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%EF%BC%89Object-is"><span class="toc-nav-number">1.0.5.3.</span> <span class="toc-nav-text">3）Object.is()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%89%8B%E5%86%99-Object-is-%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.0.5.4.</span> <span class="toc-nav-text">手写 Object.is 方法</span></a></li></ol></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">相等性判断</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A6%82%E8%A7%88"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">概览</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%A5%E6%A0%BC%E7%9B%B8%E7%AD%89"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">严格相等</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9D%9E%E4%B8%A5%E6%A0%BC%E7%9B%B8%E7%AD%89"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">非严格相等</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9B%B6%E5%80%BC%E7%9B%B8%E7%AD%89%EF%BC%88same-value-zero%EF%BC%89"><span class="toc-nav-number">1.0.4.</span> <span class="toc-nav-text">零值相等（same-value-zero）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8C%E5%80%BC%E7%9B%B8%E7%AD%89%EF%BC%88same-value%EF%BC%89"><span class="toc-nav-number">1.0.5.</span> <span class="toc-nav-text">同值相等（same-value）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%EF%BC%89-0-0"><span class="toc-nav-number">1.0.5.1.</span> <span class="toc-nav-text">1）-0 !&#x3D;&#x3D; +0</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%EF%BC%89NaN-NaN"><span class="toc-nav-number">1.0.5.2.</span> <span class="toc-nav-text">2）NaN &#x3D;&#x3D;&#x3D; NaN</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%EF%BC%89Object-is"><span class="toc-nav-number">1.0.5.3.</span> <span class="toc-nav-text">3）Object.is()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%89%8B%E5%86%99-Object-is-%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.0.5.4.</span> <span class="toc-nav-text">手写 Object.is 方法</span></a></li></ol></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -881,7 +890,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.4k</span>
+          站点总字数：<span class="post-count">443.3k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

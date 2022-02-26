@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/der-cli/">
+  <title>
+    
+      Der Cli - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+           -->
+
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <li>
+            <a href="/cn/Diary">杂记</a>
+          </li>
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/tags/#开源项目">开源项目</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function () {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#开源项目" title="开源项目"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
+              
+              <a class="tag" href="/tags/#NodeJs" title="NodeJs"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
+              
+              <a class="tag" href="/tags/#脚手架" title="脚手架"><i class="fa fa-tag" style="color: aqua;"></i> 脚手架</a>
+              
+            </div>
+            <h2>Der Cli</h2>
+            <h3 class="subheading" style="font-size: 21px;">⚡der-cli 是一个提升前端开发效率的轻量脚手架工具.</h3>
+            <span class="meta">
+              By 大Van家 on
+              2022-02-26
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                10
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                2.7k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p align="center">
+	<img width='100px' src='logo-der.png' alt='der'/>
+</p>
+<p align="center">
+    <a href="https://www.npmjs.org/package/@der-cli/core" target='_blank'>
+    	<img src="https://img.shields.io/npm/v/@der-cli/core">
+    </a>
+    <a href="https://npmcharts.com/compare/@der-cli/core?minimal=true" target='_blank'>
+    	<img src="https://img.shields.io/npm/dt/@der-cli/core">
+    </a>
+    <img src="https://img.shields.io/github/stars/der-cli/der-cli.svg?logo=github" alt="star"/><br>
+	<img src="https://img.shields.io/github/license/der-cli/der-cli" alt="GPL"/>
+</p>
+<p align="center">⚡𝓓𝓮𝓻 - A scaffolding tool for FE</p>
+<h3 id="What-is-𝓓𝓮𝓻">What is 𝓓𝓮𝓻?</h3>
+<ul>
+<li>A <strong>scaffolding tool</strong> to improve development efficiency for the front end, build with <strong>Node.js</strong>.</li>
+<li>一个提升前端开发效率的脚手架工具。</li>
+</ul>
+<h2 id="𝓓𝓮𝓻’s-Feature">𝓓𝓮𝓻’s Feature</h2>
+<img width='300px' src='der.png' alt='der'/>
+<ul>
+<li>😎 专一性: 专注于前端<strong>模板</strong>与<strong>自动化发布功能</strong>;</li>
+<li>⚡ 高性能: 基于 Node.js 多进程执行任务, 并配合本地缓存;</li>
+<li>🔨 扩展性: 基于 Class 式编程，功能扩展更便捷;</li>
+<li>🔥 规范化: 使用 <strong>Lerna</strong> 工具架构仓库, 优化工作流程;</li>
+<li>🔰 安全性: 所有私人信息以本地缓存保存.</li>
+</ul>
+<h2 id="𝓓𝓮𝓻-can-do">𝓓𝓮𝓻 can do</h2>
+<ul>
+<li>[x] Create a new project</li>
+<li>[x] Auto commit &amp; create a remote repo(github/gitee)</li>
+<li>[x] Version control</li>
+<li>[x] Specification submission code</li>
+<li>[ ] then…</li>
+</ul>
+<h2 id="Quick-Start">Quick Start</h2>
+<h4 id="本地安装">本地安装</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install @der-cli/core -g</span></span><br></pre></td></tr></table></figure>
+<h4 id="初始化项目">初始化项目</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mikdir mytest</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mytest</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init test-demo</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 根据步骤创建</span></span><br></pre></td></tr></table></figure>
+<h4 id="提交-初始化-Github-Gitee">提交 &amp; 初始化 Github/Gitee</h4>
+<blockquote>
+<p>该命令会在本地初始化 <code>.git</code> , 且提交代码至远程仓库。</p>
+</blockquote>
+<blockquote>
+<p>注意：<code>der go</code> 会将代码提交至项目<strong>同名</strong>远程仓库中(package.json的name属性值)，若远程仓库不存在，则会自动创建，这需要你提前准备好你的远程仓库 APP Token, 详见  <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#App-Token">docs: App Token</a>.</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go</span></span><br></pre></td></tr></table></figure>
+<p>发布 tag</p>
+<blockquote>
+<p>该命令会删除当前版本开发分支并创建同版本 tag 分支，然后提交至远程仓库</p>
+<p>例: dev/1.0.1 =&gt; release/1.0.1，详见 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#Git-Flow-%E8%87%AA%E5%8A%A8%E5%8C%96">docs: Git_Flow</a>.</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go -release</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go -re</span></span><br></pre></td></tr></table></figure>
+<h2 id="More">More</h2>
+<h4 id="清空脚手架本地缓存">清空脚手架本地缓存</h4>
+<blockquote>
+<p>关于脚手架缓存，详见 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#Cache-%E7%BC%93%E5%AD%98">docs: Cache 缓存</a>.</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Default: clean all</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean --all</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or just clean dependencies</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean --dep</span></span><br></pre></td></tr></table></figure>
+<h4 id="DEBUG-模式">DEBUG 模式</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der --debug</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der -d</span></span><br></pre></td></tr></table></figure>
+<p>更多命令 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md">详情</a></p>
+<h4 id="调试本地包">调试本地包</h4>
+<p>see <a href="./Documents.md">docs</a></p>
+<h2 id="TODO">TODO</h2>
+<ul>
+<li>[ ] Add test:BDD tests</li>
+<li>[ ] Reconstruction with TS</li>
+<li>[ ] Add feat:add page(may)</li>
+</ul>
+<h2 id="Documents-说明文档">Documents 说明文档</h2>
+<blockquote>
+<h4 id="Goodbye-context-switching">Goodbye, context switching.</h4>
+<h4 id="Hello-terminal">Hello, terminal.</h4>
+</blockquote>
+<h3 id="需求-使用场景">需求 &amp; 使用场景</h3>
+<blockquote>
+<p>所有需求与场景仅限解决本人日常开发问题，如果你有与本人同样的需求，那么此脚手架工具应该能解决你的一些问题。</p>
+</blockquote>
+<p>关于为什么要设计这个脚手架，当然是有需求，<s>没有需求的产品都是耍流氓</s>，那具体需求是啥？且看小y娓娓道来~</p>
+<h4 id="项目初始化">项目初始化</h4>
+<p>首先，作为一个前端，需要学的东西有亿点点多，特别是现在框架横行的时代，光初始化一个项目就杂七杂八多得一匹，什么 <code>vue create xxx</code>  <code>create-react-app</code> <code>npx create-nuxt-app</code> <code>yarn create vite</code> 那简直太多了，不专门拿个小本本记上谁背得住，这些是开发一个稍微正经一点的项目的必备阶段，要是每次都要去搜一下怎么初始化也太浪费时间了，于是，<code>der-cli</code> 的第一个需求来了：<strong>初始化任意前端项目, 并且可以后续自由扩展</strong>。</p>
+<p>初始化什么样的前端项目呢？</p>
+<p>答：当然是想怎样就怎样！不仅是平时个人开发经常使用的模板，还可以把官方的标准模板也加上去，当然一般来说普通的标准模板不满足开发需求，所以脚手架主要会提供一些配置完善的模板，具体有多完善可以参考<a target="_blank" rel="noopener" href="https://github.com/study-vue3/fast-vue3">这个模板</a>…开个玩笑，有这模板的一半完善都ok，主要包括一些webpack配置、路由、ESlint、Store等等基本配置，能实现一个完整的、能跑起来的小demo，这就是<code>der-cli</code> 对 <code>init</code> 功能的定义。</p>
+<h4 id="发布项目">发布项目</h4>
+<p>初始化过后，就该认认真真(<s>划水水摸鱼鱼</s>)写代码了，写到一半，<s>群友提醒你做提肛运动了</s>，那你是不是该保存一下代码，咋个保存？相信大部分人都将代码放在Github或者Gitee上吧，那你又要去上面先创建个仓库，然后add remote，然后时候你也许会熟练的在terminal里面敲上了三个命令: <code>git add .</code>  <code>git commit -m 'feat:add a bug'</code>  <code>git push</code> ，也许是打开文件夹，找到当前项目，然后打开 TortoiseGit，点点点提交走人，但是我懒了，我就不想点三下，我就点一下，想搞定所有，那需求不就来了： <code>der-cli</code> <strong>能通过一个命令完成仓库初始化本地/远程仓库、提交代码、创建分支、发布分支</strong>。</p>
+<p>这就是 <code>der go [-re] </code> 的意义（<s>提高效率才不是为了摸鱼</s>）</p>
+<p>一般开发中，整个流水线基本流程可包括 <code>初始化 -&gt; 开发 -&gt; 代码测试 -&gt; 代码发布 -&gt; 项目部署 </code>， <code>der-cli</code> 在整个 <a href="">workflow</a> 中，占据了 <strong>初始化</strong>、<strong>代码发布</strong> 两个流程。</p>
+<p>不管是独立开发还是团队开发，<strong>打通项目流程，完成闭环</strong> 是提升后期开发效率的必需事项，<code>der-cli</code>让你从初始化到项目发布Tag一步到位，可以专注于代码逻辑编写。</p>
+<p>当然，一些 <a href="">github action</a> 也可以完成自动发布tag的功能，为什么不选择它们呢？ <code>der-cli</code>  把 一些 workflow 流程放到了客户端来完成，只需要全局安装了此脚手架，那么在所有项目中都能够使用这个 workflow，如果是使用类似 <a href="">github action</a> 的话，需要给每个项目都写一份 yaml 作为 workflow 配置，这让开发者的工作有了一定的重复，当然 workflow 的可定制性非常强大，是鄙人小小脚手架不可比拟滴，所以  <code>der-cli</code>  主要还是面向一些简单的、独立开发者的项目而定制的脚手架。</p>
+<h3 id="架构设计">架构设计</h3>
+<p><code>der-cli</code> 采用单仓库多工具包模式开发，使用 <a target="_blank" rel="noopener" href="https://github.com/lerna/lerna">Lerna</a> 管理工作流程，前端流行的开源库Babel、React等也采用了这种架构模式，每一个包都能单独下载使用，且方便管理与维护。</p>
+<p>更多架构设计请查看 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/assets/learn-der-cli/der-cli%E6%9E%B6%E6%9E%84%E6%96%B9%E6%A1%88.md">der-cli架构方案</a>.</p>
+<h3 id="Git-Flow-自动化">Git Flow 自动化</h3>
+<p>Git工作流程自动化。</p>
+<p>简单来说，就是代替了手动执行 <code>git add </code>、<code>git commit</code>、<code>git checkout</code> 、<code>git push</code> 等命令，通过 <code>der go</code> 以及 <code>der go -re</code> 完成了初始化仓库、代码提交、发布版本等操作，这对有一定 git 操作经验的用户来说很容易理解，即使你是新手也完全可以使用此脚手架来完成你的项目规范发布。</p>
+<p>下面详细介绍其执行流程。</p>
+<h4 id="Git-Flow-Prepare阶段">Git Flow - Prepare阶段</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-prepare.png" alt="gitflow-Commit"></p>
+<h4 id="Git-Flow-Init阶段">Git Flow - Init阶段</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-init.png" alt="gitflow-init"></p>
+<h4 id="Git-Flow-Commit阶段">Git Flow - Commit阶段</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-todo.png" alt="gitflow-Finish"></p>
+<h4 id="Git-Flow-Finish阶段">Git Flow - Finish阶段</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-finish.png" alt="gitflow-finish"></p>
+<h4 id="Git-Flow-命令">Git Flow 命令</h4>
+<ul>
+<li>
+<p><code>der go</code>  提交代码到远程仓库:</p>
+<ul>
+<li>Prepare</li>
+<li>Init</li>
+<li>Commit</li>
+</ul>
+</li>
+<li>
+<p><code>der go -re</code>  提交代码到远程仓库并发布Tag:</p>
+<ul>
+<li>Prepare</li>
+<li>Init</li>
+<li>Commit</li>
+<li>Finish</li>
+</ul>
+</li>
+</ul>
+<h3 id="Cache-缓存">Cache 缓存</h3>
+<p><code>der-cli</code> 为了提高运行效率，在初始化应用以及自动发布时都采用了<strong>缓存机制</strong>，充分利用了客户端应用本地机制。但这不需要你提供 <code>root</code> 环境，<code>der-cli</code> 与其他脚手架工具遵循同样的原则: no-root，这在一定程度上能保护你的电脑文件不被误操作从而引起不必要的错误。</p>
+<p><code>der-cli</code> 缓存文件默认位于：<code>C:\users\[hostname]\der-cli\</code></p>
+<p>下面将解释 <code>der-cli</code> 缓存文件的位置及作用。</p>
+<h4 id="git">.git</h4>
+<p>Located at <code>C:\users\[hostname]\der-cli\.git</code></p>
+<p>用于缓存 Git 操作信息，这些信息将用于代码提交、创建远程仓库、发布分支，是 [Git Flow](#Git Flow) 流程的<strong>必要</strong>缓存。<strong>建议</strong>不要随意删除。</p>
+<h5 id="APP-Token">APP Token</h5>
+<p>在本地缓存 <code>.git</code> 目录下，有一个名为 <code>.git_token</code> 的文件，用于保存 Github / Gitee 的 <a href="">App Token</a> 信息，这将用于 [Git Flow](#Git Flow 自动化) 流程。包括以下值：</p>
+<ul>
+<li>xxxxxxxxxxxxxxxxxxxxxx (随机字符串)</li>
+</ul>
+<p>App Token 需要用户手动生成，生成地址：</p>
+<ul>
+<li>Github: <a target="_blank" rel="noopener" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></li>
+<li>Gitee: <a target="_blank" rel="noopener" href="https://gitee.com/profile/personal_access_tokens">https://gitee.com/profile/personal_access_tokens</a></li>
+</ul>
+<blockquote>
+<p>由于 App Token 仅在创建时可见，这需要你<strong>自己在本地备份一个 Token 信息</strong>，以免当脚手架缓存文件被误删后，能快速找回；如果不这样做，也不是不行，你就需要重新在上面的链接中重新生成一个 Token.</p>
+</blockquote>
+<h5 id="Git-Server">Git Server</h5>
+<p>以 <code>.git_server</code> 文件保存的信息，用于确认远程仓库平台，包括以下值：</p>
+<ul>
+<li>Github</li>
+<li>Gitee</li>
+</ul>
+<h5 id="Git-Own">Git Own</h5>
+<p>以 <code>.git_own</code> 文件保存，用于确认仓库所属类型，包括以下值：</p>
+<ul>
+<li>user 表示该仓库所属个人用户</li>
+<li>org 表示该仓库所属于一个组织</li>
+</ul>
+<h5 id="Git-Login">Git Login</h5>
+<p>以 <code>.git_login</code> 文件保存，用于保存仓库拥有者名称，包括以下值：</p>
+<ul>
+<li>Github name or Gitee name</li>
+</ul>
+<h4 id="dependencies">dependencies</h4>
+<p>Located at <code>C:\users\[hostname]\der-cli\dependencies</code></p>
+<p>用于缓存项目依赖文件，包括 <code>der-cli</code> 源码文件。</p>
+<p>每次运行 (任意命令) 时，脚手架会在启动阶段检查脚手架源码版本，当发现新版本时，会自动更新 npm。</p>
+<blockquote>
+<p>建议国内用户切换淘宝镜像源:</p>
+<p><code>npm config set registry https://registry.npmjs.org/</code></p>
+</blockquote>
+<h4 id="template">template</h4>
+<p>Located at <code>C:\users\[hostname]\der-cli\template</code></p>
+<p>用于缓存 项目/组件模板 源码。</p>
+<p>当用户选中某个模板，在其 <code>init</code> 阶段时，脚手架会自动检测其 npm 发布版本，若发现有更新，则会自动更新为最新版。</p>
+<h3 id="Commands-命令">Commands 命令</h3>
+<h4 id="init-初始化项目">init 初始化项目</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mikdir mytest</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mytest</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init test-demo</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project --debug</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project --force</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project -d -f</span></span><br></pre></td></tr></table></figure>
+<h4 id="go-提交代码">go 提交代码</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新缓存信息: 平台、token</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go --refreshServer --refreshToken</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新缓存信息: 平台、token、仓库类型</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go --refreshServer --refreshToken --refreshOwn</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go -d -rs -rt -ro</span></span><br></pre></td></tr></table></figure>
+<h4 id="go-发布代码">go 发布代码</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go -re</span></span><br></pre></td></tr></table></figure>
+<h4 id="More-2">More</h4>
+<h5 id="clean-清空本地缓存">clean 清空本地缓存</h5>
+<blockquote>
+<p>关于脚手架缓存，详见 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#Cache">docs: Cache</a>.</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Default: clean all</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean --all</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or just clean dependencies</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean --dep</span></span><br></pre></td></tr></table></figure>
+<h5 id="debug-模式">debug 模式</h5>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der --debug</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der -d</span></span><br></pre></td></tr></table></figure>
+<p>更多命令 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Commands.md">详情</a>.</p>
+<h3 id="本地开发">本地开发</h3>
+<p>TODO</p>
+<h3 id="Other">Other</h3>
+<h4 id="env">env</h4>
+<p><code>der-cli</code> 支持客户端环境变量设置，一般情况不需要关注环境变量。</p>
+<p>但如果你想开发本项目或其他需求，可以在你的主机自定义一些变量，通过修改 <code>.env</code> 文件即可。<code>.env</code> 文件位于<code>C:\users\[hostname]\</code>路径下，即 <code>C:\users\[hostname]\der-cli\.env</code> ，若你的主机没有这个文件，手动创建即可，设置好后保存，<code>der-cli</code> 会自动读取这些变量。</p>
+<p>下面是一些环境变量示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Some environment variables example, you<span class="string">&#x27;d better not change them.</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> C:/Users/hostname/.env</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 脚手架调试模式 [info / verbose]</span></span><br><span class="line">DER_CLI_LOG_LEVEL = &#x27;info&#x27;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 脚手架工作区 [本地]</span></span><br><span class="line">DER_CLI_TARGET_PATH = &#x27;\\der-cli\\commands\\init&#x27;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 脚手架缓存本地缓存目录名</span></span><br><span class="line">DER_CLI_HOME = &#x27;.der-cli&#x27; || &#x27;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 脚手架缓存本地缓存地址</span></span><br><span class="line">DER_CLI_HOME_PATH = &#x27;C:\\Users\\hostname\\.der-cli&#x27;</span><br></pre></td></tr></table></figure>
+<p>同 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/.env-example">.env-example</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md">https://github.com/der-cli/der-cli/blob/master/Documents.md</a>)</p>
+<h2 id="Q-A">Q &amp; A</h2>
+<h4 id="1-执行完初始化后，可以直接提交代码吗？">1.执行完初始化后，可以直接提交代码吗？</h4>
+<p>答：可以。前提是准备好你的<a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#App-Token">docs: App Token</a>.</p>
+<h2 id="License">License</h2>
+<p><a href="LICENSE">GPL</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/23_ES6深拷贝函数封装/" data-toggle="tooltip" data-placement="top" title="ES6深拷贝函数封装">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Der Cli&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/der-cli/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Sat Feb 26 2022 10:52:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#What-is-%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">What is 𝓓𝓮𝓻?</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB%E2%80%99s-Feature"><span class="toc-nav-number"></span> <span class="toc-nav-text">𝓓𝓮𝓻’s Feature</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB-can-do"><span class="toc-nav-number"></span> <span class="toc-nav-text">𝓓𝓮𝓻 can do</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Quick-Start"><span class="toc-nav-number"></span> <span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">本地安装</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">初始化项目</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%8F%90%E4%BA%A4-%E5%88%9D%E5%A7%8B%E5%8C%96-Github-Gitee"><span class="toc-nav-number">0.3.</span> <span class="toc-nav-text">提交 &amp; 初始化 Github&#x2F;Gitee</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#More"><span class="toc-nav-number"></span> <span class="toc-nav-text">More</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B8%85%E7%A9%BA%E8%84%9A%E6%89%8B%E6%9E%B6%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">清空脚手架本地缓存</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#DEBUG-%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">DEBUG 模式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%B0%83%E8%AF%95%E6%9C%AC%E5%9C%B0%E5%8C%85"><span class="toc-nav-number">0.3.</span> <span class="toc-nav-text">调试本地包</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#TODO"><span class="toc-nav-number"></span> <span class="toc-nav-text">TODO</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Documents-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3"><span class="toc-nav-number"></span> <span class="toc-nav-text">Documents 说明文档</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Goodbye-context-switching"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">Goodbye, context switching.</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Hello-terminal"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">Hello, terminal.</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9C%80%E6%B1%82-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">需求 &amp; 使用场景</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">项目初始化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8F%91%E5%B8%83%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">发布项目</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">架构设计</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-Flow-%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Git Flow 自动化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Prepare%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Git Flow - Prepare阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Init%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Git Flow - Init阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Commit%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Git Flow - Commit阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Finish%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Git Flow - Finish阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">Git Flow 命令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cache-%E7%BC%93%E5%AD%98"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Cache 缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#git"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">.git</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#APP-Token"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">APP Token</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Server"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">Git Server</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Own"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">Git Own</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Login"><span class="toc-nav-number">4.1.4.</span> <span class="toc-nav-text">Git Login</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#dependencies"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">dependencies</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#template"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">template</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Commands-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Commands 命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#init-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">init 初始化项目</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#go-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">go 提交代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#go-%E5%8F%91%E5%B8%83%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">go 发布代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#More-2"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">More</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#clean-%E6%B8%85%E7%A9%BA%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">clean 清空本地缓存</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#debug-%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">5.4.2.</span> <span class="toc-nav-text">debug 模式</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">本地开发</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Other"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Other</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#env"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">env</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Q-A"><span class="toc-nav-number"></span> <span class="toc-nav-text">Q &amp; A</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E6%89%A7%E8%A1%8C%E5%AE%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E5%90%97%EF%BC%9F"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">1.执行完初始化后，可以直接提交代码吗？</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#License"><span class="toc-nav-number"></span> <span class="toc-nav-text">License</span></a>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#开源项目" title="开源项目">开源项目</a>
+            
+            <a class="tag" href="/tags/#NodeJs" title="NodeJs">NodeJs</a>
+            
+            <a class="tag" href="/tags/#脚手架" title="脚手架">脚手架</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://yesmore.cc" target="_blank">快乐码原</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2022
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">443.3k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='y,e,s,m,o,r,e,c,c' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/der-cli/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
