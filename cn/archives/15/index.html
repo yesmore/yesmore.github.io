@@ -224,6 +224,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archives/">
               
               归档
@@ -244,17 +255,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -262,10 +262,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -277,6 +273,10 @@
               
             </a>
           </li>
+          
+          
+          
+          
           
           
           
@@ -475,10 +475,8 @@
 要点：注册js事件、匿名函数、坐标转换、g_points.push()
 
 
-知识点
-一、为何使用匿名函数？
-先看示例：
-1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Positio......
+知识点一、为何使用匿名函数？先看示例：
+1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Position)......
     </div>
   </a>
   
@@ -519,12 +517,11 @@
 
 
 知识点
-
 为何使用匿名函数？
 
 先看示例：
 1234// 注册鼠标点击事件响应函数(匿名函數)canvas.onmousedown = function(event)&#123;    click(event, gl, canvas, a_Position);&#125;;
-当你要画一个点时，需要传入三个变......
+当你要画一个点时，需要传入三个变量......
     </div>
   </a>
   
@@ -565,11 +562,8 @@
 
 
 知识点
-
-
-位置信息的传输
-方式1：attribute变量，传输与顶点相关的数据
-方式2：unif......
+位置信息的传输方式1：attribute变量，传输与顶点相关的数据
+方式2：uniform......
     </div>
   </a>
   
@@ -610,7 +604,6 @@
 
 
 步骤
-
 获取&lt;canvas&gt;元素
 获取WebGL上下文
 初始化着色器
@@ -619,10 +612,7 @@
 绘图
 
 知识点
-
-
-着色器
-顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是......
+着色器顶点着色器：用来描述顶点特性（位置、颜色等）的程序。顶点是指二维或......
     </div>
   </a>
   
@@ -662,22 +652,17 @@
 
 
 步骤
-
 获取&lt;canvas&gt;元素
 获取webgl绘图上下文
 设置背景色
 清空&lt;canvas&gt;
 
 知识点
-
-
 gl.cleanColor()的参数
-
 
 一旦指定了背景色，背景色就会驻存在WebGL系统中，在下次调用clearColor前不会改变
 
-
-若想显示webgl调试错误，在调用getWebGLCo......
+若想显示webgl调试错误，在调用getWebGLContext......
     </div>
   </a>
   
@@ -900,14 +885,6 @@ gl.cleanColor()的参数
   <div class="tags">
     
     
-    <a href="/tags/#preInterview" title="preInterview" rel="19"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
-    
-    
-    
-    <a href="/tags/#面试" title="面试" rel="23"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
-    
-    
-    
     <a href="/tags/#JavaScript" title="JavaScript" rel="81"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     
@@ -916,11 +893,23 @@ gl.cleanColor()的参数
     
     
     
+    <a href="/tags/#preInterview" title="preInterview" rel="19"><i class="fa fa-tag" style="color: aqua;"></i> preInterview</a>
+    
+    
+    
+    <a href="/tags/#面试" title="面试" rel="23"><i class="fa fa-tag" style="color: aqua;"></i> 面试</a>
+    
+    
+    
     <a href="/tags/#算法" title="算法" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
     
     
     <a href="/tags/#LeetCode" title="LeetCode" rel="7"><i class="fa fa-tag" style="color: aqua;"></i> LeetCode</a>
+    
+    
+    
+    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
     
     
     
@@ -933,10 +922,6 @@ gl.cleanColor()的参数
     
     
     <a href="/tags/#开源项目" title="开源项目" rel="6"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
-    
-    
-    
-    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
     
     
     
@@ -988,6 +973,10 @@ gl.cleanColor()的参数
     
     
     
+    <a href="/tags/#websocket" title="websocket" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
+    
+    
+    
     <a href="/tags/#建站指南" title="建站指南" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 建站指南</a>
     
     
@@ -1001,10 +990,6 @@ gl.cleanColor()的参数
     
     
     <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
-    <a href="/tags/#websocket" title="websocket" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> websocket</a>
     
     
     
@@ -1178,12 +1163,12 @@ gl.cleanColor()的参数
 <div class="widget">
   <ul style="padding-left: 0;">
     <!-- 
-    <a href="/categories/#面试">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
-    </a>
-    
     <a href="/categories/#JavaScript">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#面试">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 面试</li>
     </a>
     
     <a href="/categories/#WebGL">
@@ -1198,12 +1183,12 @@ gl.cleanColor()的参数
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
     </a>
     
-    <a href="/categories/#Vue">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
-    </a>
-    
     <a href="/categories/#杂记">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 杂记</li>
+    </a>
+    
+    <a href="/categories/#Vue">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
     </a>
     
     <a href="/categories/#Browser">
@@ -1230,20 +1215,20 @@ gl.cleanColor()的参数
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Web安全</li>
     </a>
     
-    <a href="/categories/#建站指南">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
-    </a>
-    
     <a href="/categories/#websocket">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> websocket</li>
     </a>
     
-    <a href="/categories/#链友">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    <a href="/categories/#建站指南">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
     <a href="/categories/#知识扫盲">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
+    </a>
+    
+    <a href="/categories/#链友">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
     </a>
     
     <a href="/categories/#免费api">
@@ -1254,12 +1239,12 @@ gl.cleanColor()的参数
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
     </a>
     
-    <a href="/categories/#Nginx">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
-    </a>
-    
     <a href="/categories/#Electron">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
+    </a>
+    
+    <a href="/categories/#Nginx">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
     <a href="/categories/#Hexo">
@@ -1274,12 +1259,12 @@ gl.cleanColor()的参数
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
-    <a href="/categories/#Linux">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Linux</li>
-    </a>
-    
     <a href="/categories/#Demo">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
+    <a href="/categories/#Linux">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Linux</li>
     </a>
     
     <a href="/categories/#Demo">
@@ -1466,7 +1451,7 @@ gl.cleanColor()的参数
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.7k</span>
+          站点总字数：<span class="post-count">440.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

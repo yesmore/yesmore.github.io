@@ -224,6 +224,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archives/">
               
               归档
@@ -244,17 +255,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -262,10 +262,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -277,6 +273,10 @@
               
             </a>
           </li>
+          
+          
+          
+          
           
           
           
@@ -487,10 +487,9 @@
         <blockquote>
 <p>同系列文章请查看：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview">Github：pre-interview</a></p>
 </blockquote>
-<h1>Diff算法</h1>
-<p>提到这个算法，就必须说一下关于<code>Key</code>的事情了。</p>
+<h1 id="Diff算法"><a href="#Diff算法" class="headerlink" title="Diff算法"></a>Diff算法</h1><p>提到这个算法，就必须说一下关于<code>Key</code>的事情了。</p>
 <p>其实每个组件中的每个标签都会有一个key, 只不过有的必须显示的指定，有的可以隐藏。</p>
-<p>如果生成的render出来后就<strong>不会改变里面的内容，那么你不需要指定key</strong>（不指定key时，React也会生成一个默认的标识）,或者将index作为key，只要key不重复即可。</p>
+<p> 如果生成的render出来后就<strong>不会改变里面的内容，那么你不需要指定key</strong>（不指定key时，React也会生成一个默认的标识）,或者将index作为key，只要key不重复即可。</p>
 <p>但是如果你的标签是动态的，是有可能刷新的，就必须显示的指定key。上面案使用map进行便利的时候就必须指定Key:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.state.num.map((n,index)&#x3D;&gt;&#123;</span><br><span class="line">	return &lt;div className&#x3D;&quot;news&quot; key&#x3D;&#123;index&#125; &gt;新闻&#123;n&#125;&lt;&#x2F;div&gt;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>这个地方虽然显示的指定了key，但是<strong>官网并不推荐使用Index作为Key去使用</strong>；</p>
@@ -504,54 +503,47 @@
 <p>我们通过修改State来控制对象的添加。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick&#x3D;&#123;this.addObject&#125;&gt;点击增加对象&lt;&#x2F;button&gt;</span><br><span class="line">addObject &#x3D; () &#x3D;&gt;&#123;</span><br><span class="line">    let &#123;person&#125; &#x3D; this.state;</span><br><span class="line">    const p &#x3D; &#123;id:(person.length+1),name:&quot;王五&quot;,age:20&#125;;</span><br><span class="line">    this.setState(&#123;person:[p,...person]&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如下动图所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/addObject.gif" alt="原始对象数组"></p>
-<p>这样看，虽然完成了功能。但是其实存在效率上的问题，	我们先来看一下两个前后组件状态的变化：</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/addObject.gif" alt="原始对象数组"> </p>
+<p>这样看，虽然完成了功能。但是其实存在效率上的问题，    我们先来看一下两个前后组件状态的变化：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/1611800988496.png" alt="组件状态的变化"></p>
 <p>我们发现，组件第一个变成了王五，张三和李四都移下去了。因为我们使用Index作为Key，这三个标签的key也就发生了改变【张三原本的key是0，现在变成了1，李四的key原本是1，现在变成了2，王五变成了0】在组件更新状态重新渲染的时候，就出现了问题：</p>
 <p>因为react是通过key来比较组件标签是否一致的，拿这个案例来说：</p>
 <p>首先，状态更新导致组件标签更新，react根据Key，判断旧的虚拟DOM和新的虚拟DOM是否一致</p>
 <p>key = 0 的时候 旧的虚拟DOM 内容是张三  新的虚拟DOM为王五 ，react认为内容改变，从而重新创建新的真实DOM.</p>
 <p>key = 1 的时候 旧的虚拟DOM 内容是李四，新的虚拟DOM为张三，react认为内容改变，从而重新创建新的真实DOM</p>
-<p>key = 2 的时候 旧的虚拟DOM没有，创建新的真实DOM</p>
+<p>key = 2 的时候 旧的虚拟DOM没有，创建新的真实DOM </p>
 <p>这样原本有两个虚拟DOM可以复用，但都没有进行复用，完完全全的都是新创建的；这就导致效率极大的降低。</p>
 <p>其实这是因为我们将新创建的对象放在了首位，如果放在最后其实是没有问题的，但是因为官方并不推荐使用Index作为key值，我们推荐使用id作为key值。从而完全避免这样的情况。</p>
-<h3 id="虚拟DOM中key的作用">虚拟DOM中key的作用</h3>
-<p>1). 简单的说: key是虚拟DOM对象的标识, 在更新显示时key起着极其重要的作用。</p>
+<h3 id="虚拟DOM中key的作用"><a href="#虚拟DOM中key的作用" class="headerlink" title="虚拟DOM中key的作用"></a>虚拟DOM中key的作用</h3><p>1). 简单的说: key是虚拟DOM对象的标识, 在更新显示时key起着极其重要的作用。</p>
 <p>2). 详细的说: 当状态中的数据发生变化时，react会根据 <strong>新数据</strong> 生成 <strong>新的虚拟DOM</strong>，随后React进行 新虚拟DOM 与 旧虚拟DOM 的<strong>diff比较</strong>，比较规则如下：</p>
 <p><strong>a</strong>. 旧虚拟DOM中找到了与新虚拟DOM相同的key：</p>
 <ul>
-<li>
-<p>若虚拟DOM中内容没变, 直接使用之前的真实DOM</p>
+<li><p>若虚拟DOM中内容没变, 直接使用之前的真实DOM</p>
 </li>
-<li>
-<p>若虚拟DOM中内容变了, 则生成新的真实DOM，随后替换掉页面中之前的真实DOM</p>
+<li><p>若虚拟DOM中内容变了, 则生成新的真实DOM，随后替换掉页面中之前的真实DOM</p>
 </li>
 </ul>
 <p><strong>b</strong>. 旧虚拟DOM中未找到与新虚拟DOM相同的key</p>
 <ul>
 <li>根据数据创建新的真实DOM，随后渲染到到页面</li>
 </ul>
-<h3 id="用index作为key可能会引发的问题">用index作为key可能会引发的问题</h3>
-<p>1）若对数据进行:逆序添加、逆序删除等破坏顺序操作:</p>
+<h3 id="用index作为key可能会引发的问题"><a href="#用index作为key可能会引发的问题" class="headerlink" title="用index作为key可能会引发的问题"></a>用index作为key可能会引发的问题</h3><p>1）若对数据进行:逆序添加、逆序删除等破坏顺序操作:</p>
 <p>会产生没有必要的真实DOM更新  界面效果没问题,但效率低。</p>
 <p>2）如果结构中还包含输入类的DOM:</p>
 <p>会产生错误DOM更新   界面有问题。</p>
 <p>3）注意! 如果不存在对数据的逆序添加、逆序删除等破坏顺序操作，仅用于渲染列表用于展示，使用index作为key是没有问题的。</p>
-<h3 id="开发如何选择key">开发如何选择key?</h3>
-<p>最好使用每一条数据的唯一标识作为key 比如id，手机号，身份证号；</p>
+<h3 id="开发如何选择key"><a href="#开发如何选择key" class="headerlink" title="开发如何选择key?"></a>开发如何选择key?</h3><p>最好使用每一条数据的唯一标识作为key 比如id，手机号，身份证号；</p>
 <p>如果确定只是简单的展示数据，用Index也是可以的</p>
 <p><strong>而这个判断key的比较规则就是Diff算法</strong></p>
 <p>Diff算法其实就是react生成的新虚拟DOM和以前的旧虚拟DOM的比较规则：</p>
 <ul>
-<li>
-<p>如果旧的虚拟DOM中找到了与新虚拟DOM相同的key:</p>
+<li><p>如果旧的虚拟DOM中找到了与新虚拟DOM相同的key:</p>
 <ul>
 <li>如果内容没有变化，就直接只用之前旧的真实DOM</li>
-<li>如果内容发生了变化，就生成新的真实DOM</li>
+<li>如果内容发生了变化，就生成新的真实DOM            </li>
 </ul>
 </li>
-<li>
-<p>如果旧的虚拟DOM中没有找到了与新虚拟DOM相同的key:</p>
+<li><p>如果旧的虚拟DOM中没有找到了与新虚拟DOM相同的key:</p>
 <ul>
 <li>根据数据创建新的真实的DOM,随后渲染到页面上</li>
 </ul>
@@ -706,7 +698,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Diff算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%99%9A%E6%8B%9FDOM%E4%B8%ADkey%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">虚拟DOM中key的作用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%94%A8index%E4%BD%9C%E4%B8%BAkey%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">用index作为key可能会引发的问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9key"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">开发如何选择key?</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Diff%E7%AE%97%E6%B3%95"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Diff算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%99%9A%E6%8B%9FDOM%E4%B8%ADkey%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">虚拟DOM中key的作用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%94%A8index%E4%BD%9C%E4%B8%BAkey%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">用index作为key可能会引发的问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9key"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">开发如何选择key?</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -847,7 +839,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">440.7k</span>
+          站点总字数：<span class="post-count">440.4k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
