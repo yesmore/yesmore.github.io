@@ -1250,13 +1250,6 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/Electron/</loc>
-    <lastmod>2022-04-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yesmore.cc/tags/MySQL/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
@@ -1265,6 +1258,13 @@
   
   <url>
     <loc>https://yesmore.cc/tags/Eggjs/</loc>
+    <lastmod>2022-04-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/tags/Electron/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1469,7 +1469,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Electron/</loc>
+    <loc>https://yesmore.cc/categories/Vue/Eggjs/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1483,7 +1483,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Vue/Eggjs/</loc>
+    <loc>https://yesmore.cc/categories/Electron/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1511,7 +1511,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Electron/Demo/</loc>
+    <loc>https://yesmore.cc/categories/Vue/Eggjs/Demo/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1525,7 +1525,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Vue/Eggjs/Demo/</loc>
+    <loc>https://yesmore.cc/categories/Electron/Demo/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

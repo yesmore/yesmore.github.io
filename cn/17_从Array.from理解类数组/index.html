@@ -221,8 +221,6 @@
 
           <!-- 
           
-          
-          
           <li>
             <a href="/about/">
               
@@ -231,6 +229,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archives/">
               
-              分类
+              归档
               
               
             </a>
@@ -255,9 +255,9 @@
           
           
           <li>
-            <a href="/archives/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -487,29 +487,24 @@
         <blockquote>
 <p>同系列文章请查看：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview">Github：pre-interview</a></p>
 </blockquote>
-<h2 id="从Array-from理解类数组">从Array.from理解类数组</h2>
-<blockquote>
+<h2 id="从Array-from理解类数组"><a href="#从Array-from理解类数组" class="headerlink" title="从Array.from理解类数组"></a>从Array.from理解类数组</h2><blockquote>
 <p>Array.from：允许在 JavaScript 集合(如: 数组、类数组对象、或者是字符串、map 、set 等可迭代对象) 上进行有用的转换。</p>
 </blockquote>
 <p>执行下面的程序：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="number">0</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="number">1</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="number">2</span>: <span class="number">3</span>,</span><br><span class="line">  length: <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newArr = <span class="built_in">Array</span>.from(obj);</span><br><span class="line"><span class="built_in">console</span>.log(newArr); <span class="comment">// &gt; (3) [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
-<h3 id="length：2">length：2</h3>
-<p>把 obj.length 属性修改为 <strong>2</strong>：</p>
+<h3 id="length：2"><a href="#length：2" class="headerlink" title="length：2"></a>length：2</h3><p>把 obj.length 属性修改为 <strong>2</strong>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="number">0</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="number">1</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="number">2</span>: <span class="number">3</span>,</span><br><span class="line">  length: <span class="number">2</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newArr = <span class="built_in">Array</span>.from(obj);</span><br><span class="line"><span class="built_in">console</span>.log(newArr); <span class="comment">// &gt; (2) [1, 2]</span></span><br></pre></td></tr></table></figure>
 <p>结论：<strong>length</strong> 决定了 <strong>Array.from</strong> 最终返回的新数组长度，需要剪裁掉。</p>
-<h3 id="length：4">length：4</h3>
-<p>如果 length 为 <strong>4</strong> 呢？</p>
+<h3 id="length：4"><a href="#length：4" class="headerlink" title="length：4"></a>length：4</h3><p>如果 length 为 <strong>4</strong> 呢？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="number">0</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="number">1</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="number">2</span>: <span class="number">3</span>,</span><br><span class="line">  length: <span class="number">4</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newArr = <span class="built_in">Array</span>.from(obj);</span><br><span class="line"><span class="built_in">console</span>.log(newArr); <span class="comment">// &gt; (2) [1, 2, 3, undefind]</span></span><br></pre></td></tr></table></figure>
 <p>所以，补全上面的结论：</p>
 <p><strong>length</strong> 决定了 <strong>Array.from</strong> 最终返回的新数组长度，需要剪裁掉或补齐（undefined）。</p>
-<h3 id="length：0">length：0</h3>
-<p>如果去掉 length 属性呢？</p>
+<h3 id="length：0"><a href="#length：0" class="headerlink" title="length：0"></a>length：0</h3><p>如果去掉 length 属性呢？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="number">0</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="number">1</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="number">2</span>: <span class="number">3</span>,</span><br><span class="line">  <span class="comment">// length: 4</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newArr = <span class="built_in">Array</span>.from(obj);</span><br><span class="line"><span class="built_in">console</span>.log(newArr); <span class="comment">// &gt; []</span></span><br></pre></td></tr></table></figure>
 <p>可以看出，在obj转为Array时，等价于 <code>length: 0</code>；</p>
 <p><strong>为什么不报错呢</strong>？</p>
 <p>类数组的理解：是由 <strong>obj</strong> 伪装成<strong>类似于数组的一种位类型</strong>，所以不是JS的固有数据类型，并没有语法要求类数组必须含有某属性或方法，在类数组中定义 length 属性只是一种规范</p>
-<h3 id="加深理解：push">加深理解：push</h3>
-<p>将程序修改为如下：</p>
+<h3 id="加深理解：push"><a href="#加深理解：push" class="headerlink" title="加深理解：push"></a>加深理解：push</h3><p>将程序修改为如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="number">0</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="number">1</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="number">2</span>: <span class="number">3</span>,</span><br><span class="line">  push: [].push</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.push(<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(obj);</span><br></pre></td></tr></table></figure>
 <p><code>push: [].push</code> 继承了数组的 push 方法；</p>
 <p>打印结果：</p>
@@ -521,13 +516,11 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">obj.push(<span class="number">4</span>)</span><br><span class="line"><span class="comment">// length: 1</span></span><br></pre></td></tr></table></figure>
 <p>打印结果中的 <code>0: 4</code> 是如何出现的？</p>
 <p><code>0: 1 -&gt; 0: 4</code> 替换后的结果。</p>
-<h2 id="Array-from">Array.from</h2>
-<p>定义一个 obj</p>
+<h2 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from"></a>Array.from</h2><p>定义一个 obj</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="number">0</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="number">1</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="number">2</span>: <span class="number">3</span>,</span><br><span class="line">  length: <span class="number">3</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>假如想要生成以下数组：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        student: No<span class="number">.1</span>,</span><br><span class="line">        order: <span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        student: No<span class="number">.2</span>,</span><br><span class="line">        order: <span class="number">1</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        student: No<span class="number">.3</span>,</span><br><span class="line">        order: <span class="number">2</span></span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<h4 id="实现">实现</h4>
-<p>常规思路：</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>常规思路：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先转数组</span></span><br><span class="line"><span class="keyword">const</span> newArr = <span class="built_in">Array</span>.from(obj)</span><br><span class="line"><span class="keyword">const</span> data = newArr.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    student: <span class="string">&#x27;No.&#x27;</span> + item,</span><br><span class="line">    order: index,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(data)</span><br></pre></td></tr></table></figure>
 <p>emmm怎么做没啥大问题，但是又有点问题，问题就是暴露了你根本<strong>不熟悉</strong> <code>Array.from</code> 方法，因为它还有第二个参数：</p>
 <blockquote>
@@ -828,7 +821,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">443.3k</span>
+          站点总字数：<span class="post-count">443.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

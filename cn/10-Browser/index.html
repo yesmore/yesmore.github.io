@@ -221,8 +221,6 @@
 
           <!-- 
           
-          
-          
           <li>
             <a href="/about/">
               
@@ -231,6 +229,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archives/">
               
-              分类
+              归档
               
               
             </a>
@@ -255,9 +255,9 @@
           
           
           <li>
-            <a href="/archives/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -488,12 +488,8 @@
 <p>要点：浏览器渲染原理（简介、渲染机制）、浏览器存储（cookie、LocalStorage、sessionStorage、IndexedDB）</p>
 </blockquote>
 <span id="more"></span>
-<h1>浏览器渲染原理</h1>
-<h2 id="简介">简介</h2>
-<h3 id="引入">引入</h3>
-<ul>
-<li>
-<p>输入网址进入网页的三个阶段</p>
+<h1 id="浏览器渲染原理"><a href="#浏览器渲染原理" class="headerlink" title="浏览器渲染原理"></a>浏览器渲染原理</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><ul>
+<li><p>输入网址进入网页的三个阶段</p>
 <ul>
 <li>http请求阶段</li>
 <li>http响应阶段</li>
@@ -501,107 +497,82 @@
 </ul>
 </li>
 </ul>
-<h3 id="补充">补充</h3>
-<ul>
-<li>
-<p>进程Process</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><ul>
+<li><p>进程Process</p>
 <ul>
 <li>一个运行的程序/浏览器页面</li>
 </ul>
 </li>
-<li>
-<p>线程Thread</p>
+<li><p>线程Thread</p>
 <ul>
-<li>
-<p>进程内的子任务</p>
+<li><p>进程内的子任务</p>
 <ul>
 <li>可多个线程同时进行，实际是轮流执行</li>
 </ul>
 </li>
-<li>
-<p>程序做的不同的事</p>
+<li><p>程序做的不同的事</p>
 </li>
 </ul>
 </li>
-<li>
-<p>栈内存Stack</p>
+<li><p>栈内存Stack</p>
 <ul>
 <li>提供一个环境执行代码</li>
 </ul>
 </li>
-<li>
-<p>堆内存Heap</p>
+<li><p>堆内存Heap</p>
 </li>
-<li>
-<p>cpu</p>
+<li><p>cpu</p>
 <ul>
-<li>
-<p>单核cpu执行多任务</p>
+<li><p>单核cpu执行多任务</p>
 <ul>
 <li>操作系统轮流让各个任务交替执行</li>
 </ul>
 </li>
-<li>
-<p>多核cpu执行多任务</p>
+<li><p>多核cpu执行多任务</p>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="知识补充">知识补充</h3>
-<h2 id="浏览器渲染机制">浏览器渲染机制</h2>
-<h3 id="过程">过程</h3>
-<ul>
-<li>
-<p>DOM树渲染</p>
+<h3 id="知识补充"><a href="#知识补充" class="headerlink" title="知识补充"></a>知识补充</h3><h2 id="浏览器渲染机制"><a href="#浏览器渲染机制" class="headerlink" title="浏览器渲染机制"></a>浏览器渲染机制</h2><h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><ul>
+<li><p>DOM树渲染</p>
 <ul>
 <li>①输入网址→②发送请求Request→③服务器返回index源代码→④Response响应阶段→⑤浏览器拿到代码→⑥在内存条开辟一块栈内存，提供执行环境；同时分配一个主线程，从上到下执行代码（进栈执行，执行完毕出栈）→⑦浏览器开辟等待队列</li>
 <li>第一次自上而下执行完，只生成DOM树</li>
 </ul>
 </li>
-<li>
-<p>解析CSS，生成CSSOM树</p>
+<li><p>解析CSS，生成CSSOM树</p>
 </li>
-<li>
-<p>结合DOM树与CSSOM树，生成 Render Tree渲染树</p>
-</li>
-<li>
-<p>Layout回流</p>
+<li>结合DOM树与CSSOM树，生成 Render Tree渲染树</li>
+<li><p>Layout回流</p>
 <ul>
 <li>根据生成的渲染数，计算它们在设备视口内的确切位置和大小</li>
 </ul>
 </li>
-<li>
-<p>Painting重绘</p>
+<li><p>Painting重绘</p>
 <ul>
 <li>根据渲染树以及回流得到的几何信息，得到节点的绝对像素</li>
 </ul>
 </li>
-<li>
-<p>Display</p>
+<li><p>Display</p>
 <ul>
 <li>将像素发送给GPU，展示在页面上</li>
 </ul>
 </li>
 </ul>
-<h3 id="分解剖析">分解剖析</h3>
-<ul>
-<li>
-<p>②Request请求阶段</p>
+<h3 id="分解剖析"><a href="#分解剖析" class="headerlink" title="分解剖析"></a>分解剖析</h3><ul>
+<li><p>②Request请求阶段</p>
 <ul>
 <li>DNS解析、TCP协议三次握手，四次挥手，Https与http区别</li>
 </ul>
 </li>
-<li>
-<p>④Response响应阶段</p>
+<li><p>④Response响应阶段</p>
 <ul>
 <li>HTTP状态码，304缓存，HTTP报名</li>
 </ul>
 </li>
-<li>
-<p>⑥</p>
+<li><p>⑥</p>
 <ul>
-<li>
-<p>link、img、script等情况</p>
+<li><p>link、img、script等情况</p>
 <ul>
 <li>需要额外加载外部资源请求时</li>
 <li>都会单独开辟新的子线程去加载资源文件，主线程继续向下执行</li>
@@ -609,14 +580,10 @@
 </li>
 </ul>
 </li>
-<li>
-<p>⑦TASK QUEUE任务队列</p>
+<li><p>⑦TASK QUEUE任务队列</p>
 <ul>
-<li>
-<p>存放子线程</p>
-</li>
-<li>
-<p>事件循环  event loop</p>
+<li>存放子线程</li>
+<li><p>事件循环  event loop</p>
 <ul>
 <li>主任务执行完后，到任务队列中找子线程，执行，执行完毕后，又到任务队列找下一个子线程，直到全部完成</li>
 <li>微任务</li>
@@ -625,34 +592,28 @@
 </li>
 </ul>
 </li>
-<li>
-<p>回流</p>
+<li><p>回流</p>
 <ul>
-<li>
-<p>定义</p>
+<li><p>定义</p>
 <ul>
 <li>根据生成的渲染数，计算它们在设备视口内的确切位置和大小</li>
 </ul>
 </li>
-<li>
-<p>触发</p>
+<li><p>触发</p>
 <ul>
 <li>元素的大小或位置发生了变化（当页面布局和几何信息发生变化的时候），触发了重新布局，导致渲染树重新计算布局和渲染</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>重绘</p>
+<li><p>重绘</p>
 <ul>
-<li>
-<p>定义</p>
+<li><p>定义</p>
 <ul>
 <li>根据渲染树以及回流得到的几何信息，得到节点的绝对像素</li>
 </ul>
 </li>
-<li>
-<p>触发</p>
+<li><p>触发</p>
 <ul>
 <li>如outline、visbility、color、bg-color</li>
 <li>元素样式的改变，但宽高、大小、位置都不变</li>
@@ -660,18 +621,15 @@
 </li>
 </ul>
 </li>
-<li>
-<p>l问题</p>
+<li><p>l问题</p>
 <ul>
 <li>link与@import的区别</li>
 <li>事件循环机制下的js同步异步编程（宏任务与微任务）</li>
 </ul>
 </li>
 </ul>
-<h3 id="性能优化浅谈">性能优化浅谈</h3>
-<ul>
-<li>
-<p>一、减少http请求次数和大小</p>
+<h3 id="性能优化浅谈"><a href="#性能优化浅谈" class="headerlink" title="性能优化浅谈"></a>性能优化浅谈</h3><ul>
+<li><p>一、减少http请求次数和大小</p>
 <ul>
 <li>如：link（css）</li>
 <li>资源合并压缩</li>
@@ -679,48 +637,36 @@
 <li>所有音视频走流文件</li>
 </ul>
 </li>
-<li>
-<p>二、DNS缓存</p>
+<li><p>二、DNS缓存</p>
 </li>
-<li>
-<p>三、避免回流和重绘</p>
+<li><p>三、避免回流和重绘</p>
 <ul>
-<li>
-<p>样式集中改变</p>
+<li><p>样式集中改变</p>
 <ul>
-<li>
-<p>box.style.cssText = …</p>
-</li>
-<li>
-<p>创建一个类</p>
+<li>box.style.cssText = ..</li>
+<li><p>创建一个类</p>
 <ul>
 <li>box.className = ‘newclass’</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>分离读写操作</p>
+<li><p>分离读写操作</p>
 <ul>
-<li>
-<p>原理</p>
+<li><p>原理</p>
 <ul>
 <li>将 操作 与 获取 节点分离，减少破坏渲染等待队列</li>
 </ul>
 </li>
-<li>
-<p>现代的浏览器都有渲染队列的机制</p>
+<li><p>现代的浏览器都有渲染队列的机制</p>
 </li>
-<li>
-<p>offsetTop、clientTop、scrollTop、</p>
+<li><p>offsetTop、clientTop、scrollTop、</p>
 </li>
 </ul>
 </li>
-<li>
-<p>避免操作DOM</p>
+<li><p>避免操作DOM</p>
 <ul>
-<li>
-<p>vue、react</p>
+<li><p>vue、react</p>
 <ul>
 <li>数据影响视图</li>
 <li>mvvm、mvc、virtual dom、dom diff</li>
@@ -728,56 +674,42 @@
 </li>
 </ul>
 </li>
-<li>
-<p>缓存布局信息</p>
+<li><p>缓存布局信息</p>
 <ul>
 <li>本质：分离读写</li>
 </ul>
 </li>
-<li>
-<p>批量处理</p>
+<li><p>批量处理</p>
 <ul>
-<li>
-<p>文档碎片</p>
+<li><p>文档碎片</p>
 <ul>
 <li>frg = document.createDocumentFragment（）</li>
 <li>容器</li>
 </ul>
 </li>
-<li>
-<p>实例</p>
+<li><p>实例</p>
 <ul>
-<li>
-<p>用js添加li节点</p>
+<li><p>用js添加li节点</p>
 <ul>
-<li>
-<p>原方法</p>
+<li><p>原方法</p>
 <ul>
 <li>多次循环遍历创建，循环一次触发一次回流</li>
 </ul>
 </li>
-<li>
-<p>新方法</p>
+<li><p>新方法</p>
 <ul>
-<li>
-<p>将创建的li放到文档碎片中</p>
-</li>
-<li>
-<p>循环结束后通过文档碎片一次性将节点添加到文档中</p>
-</li>
-<li>
-<p>最后销毁容器</p>
+<li>将创建的li放到文档碎片中</li>
+<li>循环结束后通过文档碎片一次性将节点添加到文档中</li>
+<li><p>最后销毁容器</p>
 <ul>
 <li>frg = null</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>新新方法</p>
+<li><p>新新方法</p>
 <ul>
-<li>
-<p>摸板字符串</p>
+<li><p>摸板字符串</p>
 <ul>
 <li>拼串</li>
 </ul>
@@ -790,60 +722,43 @@
 </li>
 </ul>
 </li>
-<li>
-<p>动画效果应用到position属性为absolute或fixed的元素上（脱离文档流）</p>
+<li><p>动画效果应用到position属性为absolute或fixed的元素上（脱离文档流）</p>
 <ul>
-<li>
-<p>本质</p>
+<li><p>本质</p>
 <ul>
 <li>并未脱离回流，只是在另一层进行小回流</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>CSS3硬件加速（GPU加速）</p>
+<li><p>CSS3硬件加速（GPU加速）</p>
 <ul>
 <li>transform、opacity、filters这些属性会触发硬件加速，不引发回流和重绘</li>
 </ul>
 </li>
-<li>
-<p>⑧   牺牲平滑度换取</p>
+<li><p>⑧   牺牲平滑度换取</p>
 </li>
-<li>
-<p>⑨  避免table布局和使用css的JavaScript表达式</p>
-</li>
+<li>⑨  避免table布局和使用css的JavaScript表达式</li>
 </ul>
 </li>
 </ul>
-<h1>浏览器存储</h1>
-<h2 id="前言">前言</h2>
-<p>随着移动网络的发展与演化，我们手机上现在除了有原生 App，还能跑“WebApp”——它即开即用，用完即走。一个优秀的 WebApp 甚至可以拥有和原生 App 媲美的功能和体验。WebApp 优异的性能表现，有一部分原因要归功于浏览器存储技术的提升。cookie存储数据的功能已经很难满足开发所需，逐渐被WebStorage、IndexedDB所取代，本文将介绍这几种存储方式的差异和优缺点。</p>
-<h2 id="一、Cookie">一、Cookie</h2>
-<h3 id="1-Cookie的来源">1.Cookie的来源</h3>
-<p><strong>Cookie 的本职工作并非本地存储，而是“维持状态”</strong>。<br>
-因为<strong>HTTP协议是无状态的，HTTP协议自身不对请求和响应之间的通信状态进行保存</strong>，通俗来说，服务器不知道用户上一次做了什么，这严重阻碍了交互式Web应用程序的实现。在典型的网上购物场景中，用户浏览了几个页面，买了一盒饼干和两瓶饮料。最后结帐时，由于HTTP的无状态性，不通过额外的手段，服务器并不知道用户到底买了什么，于是就诞生了Cookie。它就是用来绕开HTTP的无状态性的“额外手段”之一。服务器可以设置或读取Cookies中包含信息，借此维护用户跟服务器会话中的状态。</p>
+<h1 id="浏览器存储"><a href="#浏览器存储" class="headerlink" title="浏览器存储"></a>浏览器存储</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着移动网络的发展与演化，我们手机上现在除了有原生 App，还能跑“WebApp”——它即开即用，用完即走。一个优秀的 WebApp 甚至可以拥有和原生 App 媲美的功能和体验。WebApp 优异的性能表现，有一部分原因要归功于浏览器存储技术的提升。cookie存储数据的功能已经很难满足开发所需，逐渐被WebStorage、IndexedDB所取代，本文将介绍这几种存储方式的差异和优缺点。</p>
+<h2 id="一、Cookie"><a href="#一、Cookie" class="headerlink" title="一、Cookie"></a>一、Cookie</h2><h3 id="1-Cookie的来源"><a href="#1-Cookie的来源" class="headerlink" title="1.Cookie的来源"></a>1.Cookie的来源</h3><p><strong>Cookie 的本职工作并非本地存储，而是“维持状态”</strong>。<br>因为<strong>HTTP协议是无状态的，HTTP协议自身不对请求和响应之间的通信状态进行保存</strong>，通俗来说，服务器不知道用户上一次做了什么，这严重阻碍了交互式Web应用程序的实现。在典型的网上购物场景中，用户浏览了几个页面，买了一盒饼干和两瓶饮料。最后结帐时，由于HTTP的无状态性，不通过额外的手段，服务器并不知道用户到底买了什么，于是就诞生了Cookie。它就是用来绕开HTTP的无状态性的“额外手段”之一。服务器可以设置或读取Cookies中包含信息，借此维护用户跟服务器会话中的状态。</p>
 <p>我们可以把Cookie 理解为一个存储在浏览器里的一个小小的文本文件，它附着在 HTTP 请求上，在浏览器和服务器之间“飞来飞去”。它可以携带用户信息，当服务器检查 Cookie 的时候，便可以获取到客户端的状态。</p>
 <p>在刚才的购物场景中，当用户选购了第一项商品，服务器在向用户发送网页的同时，还发送了一段Cookie，记录着那项商品的信息。当用户访问另一个页面，浏览器会把Cookie发送给服务器，于是服务器知道他之前选购了什么。用户继续选购饮料，服务器就在原来那段Cookie里追加新的商品信息。结帐时，服务器读取发送来的Cookie就行了。</p>
-<h3 id="2-什么是Cookie及应用场景">2.什么是Cookie及应用场景</h3>
-<p><strong>Cookie指某些网站为了辨别用户身份而储存在用户本地终端上的数据(通常经过加密)。 cookie是服务端生成，客户端进行维护和存储</strong>。通过cookie,可以让服务器知道请求是来源哪个客户端，就可以进行客户端状态的维护，比如登陆后刷新，请求头就会携带登陆时response header中的set-cookie,Web服务器接到请求时也能读出cookie的值，根据cookie值的内容就可以判断和恢复一些用户的信息状态。</p>
+<h3 id="2-什么是Cookie及应用场景"><a href="#2-什么是Cookie及应用场景" class="headerlink" title="2.什么是Cookie及应用场景"></a>2.什么是Cookie及应用场景</h3><p><strong>Cookie指某些网站为了辨别用户身份而储存在用户本地终端上的数据(通常经过加密)。 cookie是服务端生成，客户端进行维护和存储</strong>。通过cookie,可以让服务器知道请求是来源哪个客户端，就可以进行客户端状态的维护，比如登陆后刷新，请求头就会携带登陆时response header中的set-cookie,Web服务器接到请求时也能读出cookie的值，根据cookie值的内容就可以判断和恢复一些用户的信息状态。</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/88a1801d209eabf4b1db25fed4ab204c.png" alt=""></p>
 <p>如上图所示，<strong>Cookie 以键值对的形式存在</strong>。</p>
 <p>典型的应用场景有：</p>
 <ul>
-<li>
-<p>记住密码，下次自动登录。</p>
+<li><p>记住密码，下次自动登录。</p>
 </li>
-<li>
-<p>购物车功能。</p>
+<li><p>购物车功能。</p>
 </li>
-<li>
-<p>记录用户浏览数据，进行商品（广告）推荐。</p>
+<li><p>记录用户浏览数据，进行商品（广告）推荐。</p>
 </li>
 </ul>
-<h3 id="3-Cookie的原理及生成方式">3.Cookie的原理及生成方式</h3>
-<p>Cookie的原理<br>
-<img src="https://img-blog.csdnimg.cn/img_convert/c897430d72b08689ed182f9f18f89654.png" alt=""></p>
+<h3 id="3-Cookie的原理及生成方式"><a href="#3-Cookie的原理及生成方式" class="headerlink" title="3.Cookie的原理及生成方式"></a>3.Cookie的原理及生成方式</h3><p>Cookie的原理<br><img src="https://img-blog.csdnimg.cn/img_convert/c897430d72b08689ed182f9f18f89654.png" alt=""></p>
 <p>第一次访问网站的时候，浏览器发出请求，服务器响应请求后，会在响应头里面添加一个Set-Cookie选项，将cookie放入到响应请求中，在浏览器第二次发请求的时候，会通过Cookie请求头部将Cookie信息发送给服务器，服务端会辨别用户身份，另外，Cookie的过期时间、域、路径、有效期、适用站点都可以根据需要来指定。</p>
 <p>Cookie的生成方式主要有两种：</p>
 <ul>
@@ -861,10 +776,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.cookie&#x3D;&#39;age&#x3D;20;domain&#x3D;.baidu.com&#39;</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/367a3e55cd823fa8c6490a8bbe3d47f8.png" alt=""></p>
 <p>从上图中我们可以得出：</p>
-<p><strong>Domain 标识指定了哪些域名可以接受Cookie</strong>。如果没有设置domain，就会自动绑定到执行语句的当前域。<br>
-如果设置为”.baidu.com”,则所有以”<a target="_blank" rel="noopener" href="http://baidu.com">baidu.com</a>”结尾的域名都可以访问该Cookie，所以在掘金社区上读取不到第三条代码存储Cookie值。</p>
-<h3 id="4-Cookie的缺陷">4.Cookie的缺陷</h3>
-<ul>
+<p><strong>Domain 标识指定了哪些域名可以接受Cookie</strong>。如果没有设置domain，就会自动绑定到执行语句的当前域。<br>如果设置为”.baidu.com”,则所有以”baidu.com”结尾的域名都可以访问该Cookie，所以在掘金社区上读取不到第三条代码存储Cookie值。</p>
+<h3 id="4-Cookie的缺陷"><a href="#4-Cookie的缺陷" class="headerlink" title="4.Cookie的缺陷"></a>4.Cookie的缺陷</h3><ul>
 <li>Cookie 不够大</li>
 </ul>
 <p>Cookie的大小限制在4KB左右，对于复杂的存储需求来说是不够用的。当 Cookie 超过 4KB 时，它将面临被裁切的命运。这样看来，Cookie 只能用来存取少量的信息。此外很多浏览器对一个站点的cookie个数也是有限制的。</p>
@@ -877,68 +790,48 @@
 <ul>
 <li>由于在HTTP请求中的Cookie是明文传递的，所以安全性成问题，除非用HTTPS。</li>
 </ul>
-<h3 id="5-Cookie与安全">5.Cookie与安全</h3>
-<p>对于 cookie 来说，我们还需要注意安全性。<br>
-<img src="https://img-blog.csdnimg.cn/img_convert/c2b2ddaa96d796e5305a99a1d826ef0a.png" alt=""></p>
-<p>HttpOnly 不支持读写，浏览器不允许脚本操作document.cookie去更改cookie，<br>
-所以为避免跨域脚本 (XSS) 攻击，通过JavaScript的 Document.cookie API无法访问带有 HttpOnly 标记的Cookie，它们只应该发送给服务端。如果包含服务端 Session 信息的 Cookie 不想被客户端 JavaScript 脚本调用，那么就应该为其设置 HttpOnly 标记。</p>
+<h3 id="5-Cookie与安全"><a href="#5-Cookie与安全" class="headerlink" title="5.Cookie与安全"></a>5.Cookie与安全</h3><p>对于 cookie 来说，我们还需要注意安全性。<br><img src="https://img-blog.csdnimg.cn/img_convert/c2b2ddaa96d796e5305a99a1d826ef0a.png" alt=""></p>
+<p>HttpOnly 不支持读写，浏览器不允许脚本操作document.cookie去更改cookie，<br>所以为避免跨域脚本 (XSS) 攻击，通过JavaScript的 Document.cookie API无法访问带有 HttpOnly 标记的Cookie，它们只应该发送给服务端。如果包含服务端 Session 信息的 Cookie 不想被客户端 JavaScript 脚本调用，那么就应该为其设置 HttpOnly 标记。</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Set</span>-Cookie: id=a<span class="number">3</span>fWa; Expires=Wed, <span class="number">21</span> Oct <span class="number">2015</span> <span class="number">07</span>:<span class="number">28</span>:<span class="number">00</span> GMT; Secure; HttpOnly</span><br></pre></td></tr></table></figure>
 <p>标记为 Secure 的Cookie只应通过被HTTPS协议加密过的请求发送给服务端。但即便设置了 Secure 标记，敏感信息也不应该通过Cookie传输，因为Cookie有其固有的不安全性，Secure 标记也无法提供确实的安全保障。</p>
 <p>为了弥补 Cookie 的局限性，让“专业的人做专业的事情”，Web Storage 出现了。</p>
-<p><strong>HTML5中新增了本地存储的解决方案----Web Storage，它分成两类：sessionStorage和localStorage</strong>。这样有了WebStorage后，cookie能只做它应该做的事情了——作为客户端与服务器交互的通道，保持客户端状态。</p>
-<h2 id="二、LocalStorage">二、LocalStorage</h2>
-<h3 id="1-LocalStorage的特点">1.LocalStorage的特点</h3>
-<ul>
+<p><strong>HTML5中新增了本地存储的解决方案——Web Storage，它分成两类：sessionStorage和localStorage</strong>。这样有了WebStorage后，cookie能只做它应该做的事情了——作为客户端与服务器交互的通道，保持客户端状态。</p>
+<h2 id="二、LocalStorage"><a href="#二、LocalStorage" class="headerlink" title="二、LocalStorage"></a>二、LocalStorage</h2><h3 id="1-LocalStorage的特点"><a href="#1-LocalStorage的特点" class="headerlink" title="1.LocalStorage的特点"></a>1.LocalStorage的特点</h3><ul>
 <li>保存的数据长期存在，下一次访问该网站的时候，网页可以直接读取以前保存的数据。</li>
 <li>大小为5M左右</li>
 <li>仅在客户端使用，不和服务端进行通信</li>
 <li>接口封装较好</li>
 </ul>
 <p>基于上面的特点，LocalStorage可以作为浏览器本地缓存方案，用来提升网页首屏渲染速度(根据第一请求返回时，将一些不变信息直接存储在本地)。</p>
-<h3 id="2-存入-读取数据">2.存入/读取数据</h3>
-<p>localStorage保存的数据，以“键值对”的形式存在。也就是说，每一项数据都有一个键名和对应的值。所有的数据都是以文本格式保存。<br>
-存入数据使用setItem方法。它接受两个参数，第一个是键名，第二个是保存的数据。<br>
-<code>localStorage.setItem(&quot;key&quot;,&quot;value&quot;);</code><br>
-读取数据使用getItem方法。它只有一个参数，就是键名。<br>
-<code>var valueLocal = localStorage.getItem(&quot;key&quot;);</code></p>
+<h3 id="2-存入-读取数据"><a href="#2-存入-读取数据" class="headerlink" title="2.存入/读取数据"></a>2.存入/读取数据</h3><p>localStorage保存的数据，以“键值对”的形式存在。也就是说，每一项数据都有一个键名和对应的值。所有的数据都是以文本格式保存。<br>存入数据使用setItem方法。它接受两个参数，第一个是键名，第二个是保存的数据。<br><code>localStorage.setItem(&quot;key&quot;,&quot;value&quot;);</code><br>读取数据使用getItem方法。它只有一个参数，就是键名。<br><code>var valueLocal = localStorage.getItem(&quot;key&quot;);</code></p>
 <p>具体步骤，请看下面的例子：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">if</span>(<span class="built_in">window</span>.localStorage)&#123;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">localStorage</span>.setItem（<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;world&#x27;</span>）</span></span><br><span class="line"><span class="javascript">  <span class="built_in">localStorage</span>.setItem（“gender<span class="string">&#x27;,&#x27;</span>female<span class="string">&#x27;）</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;name&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;gender&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> name=<span class="built_in">localStorage</span>.getItem(<span class="string">&#x27;name&#x27;</span>)</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> gender=<span class="built_in">localStorage</span>.getItem(<span class="string">&#x27;gender&#x27;</span>)</span></span><br><span class="line"><span class="javascript"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;name&#x27;</span>).innerHTML=name</span></span><br><span class="line"><span class="javascript"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;gender&#x27;</span>).innerHTML=gender</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="3-使用场景">3.使用场景</h3>
-<p>LocalStorage在存储方面没有什么特别的限制，理论上 Cookie 无法胜任的、可以用简单的键值对来存取的数据存储任务，都可以交给 LocalStorage 来做。</p>
-<p>这里给大家举个例子，考虑到 LocalStorage 的特点之一是持久，有时我们更倾向于用它来存储一些内容稳定的资源。比如图片内容丰富的电商网站会用它来存储 Base64 格式的图片字符串：<br>
-<img src="https://img-blog.csdnimg.cn/img_convert/d08269c01185f35b26be3750c8be86f2.png" alt=""></p>
-<h2 id="三、sessionStorage">三、sessionStorage</h2>
-<p>sessionStorage保存的数据用于浏览器的一次会话，当会话结束（通常是该窗口关闭），数据被清空；sessionStorage 特别的一点在于，<strong>即便是相同域名下的两个页面，只要它们不在同一个浏览器窗口中打开，那么它们的 sessionStorage 内容便无法共享</strong>；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。除了保存期限的长短不同，SessionStorage的属性和方法与LocalStorage完全一样。</p>
-<h3 id="1-sessionStorage的特点">1.sessionStorage的特点</h3>
-<ul>
+<h3 id="3-使用场景"><a href="#3-使用场景" class="headerlink" title="3.使用场景"></a>3.使用场景</h3><p>LocalStorage在存储方面没有什么特别的限制，理论上 Cookie 无法胜任的、可以用简单的键值对来存取的数据存储任务，都可以交给 LocalStorage 来做。</p>
+<p>这里给大家举个例子，考虑到 LocalStorage 的特点之一是持久，有时我们更倾向于用它来存储一些内容稳定的资源。比如图片内容丰富的电商网站会用它来存储 Base64 格式的图片字符串：<br><img src="https://img-blog.csdnimg.cn/img_convert/d08269c01185f35b26be3750c8be86f2.png" alt=""></p>
+<h2 id="三、sessionStorage"><a href="#三、sessionStorage" class="headerlink" title="三、sessionStorage"></a>三、sessionStorage</h2><p>sessionStorage保存的数据用于浏览器的一次会话，当会话结束（通常是该窗口关闭），数据被清空；sessionStorage 特别的一点在于，<strong>即便是相同域名下的两个页面，只要它们不在同一个浏览器窗口中打开，那么它们的 sessionStorage 内容便无法共享</strong>；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。除了保存期限的长短不同，SessionStorage的属性和方法与LocalStorage完全一样。</p>
+<h3 id="1-sessionStorage的特点"><a href="#1-sessionStorage的特点" class="headerlink" title="1.sessionStorage的特点"></a>1.sessionStorage的特点</h3><ul>
 <li>会话级别的浏览器存储</li>
 <li>大小为5M左右</li>
 <li>仅在客户端使用，不和服务端进行通信</li>
 <li>接口封装较好</li>
 </ul>
 <p>基于上面的特点，sessionStorage 可以有效对表单信息进行维护，比如刷新时，表单信息不丢失。</p>
-<h3 id="2-使用场景">2.使用场景</h3>
-<p>sessionStorage 更适合用来存储生命周期和它同步的会话级别的信息。这些信息只适用于当前会话，当你开启新的会话时，它也需要相应的更新或释放。比如微博的 sessionStorage就主要是存储你本次会话的浏览足迹：<br>
-<img src="https://img-blog.csdnimg.cn/img_convert/766e8aa98048064132011e2f3683bcd1.png" alt=""></p>
+<h3 id="2-使用场景"><a href="#2-使用场景" class="headerlink" title="2.使用场景"></a>2.使用场景</h3><p>sessionStorage 更适合用来存储生命周期和它同步的会话级别的信息。这些信息只适用于当前会话，当你开启新的会话时，它也需要相应的更新或释放。比如微博的 sessionStorage就主要是存储你本次会话的浏览足迹：<br><img src="https://img-blog.csdnimg.cn/img_convert/766e8aa98048064132011e2f3683bcd1.png" alt=""></p>
 <p>lasturl 对应的就是你上一次访问的 URL 地址，这个地址是即时的。当你切换 URL 时，它随之更新，当你关闭页面时，留着它也确实没有什么意义了，干脆释放吧。这样的数据用 sessionStorage 来处理再合适不过。</p>
-<h3 id="3-sessionStorage-、localStorage-和-cookie-之间的区别">3.sessionStorage 、localStorage 和 cookie 之间的区别</h3>
-<ul>
+<h3 id="3-sessionStorage-、localStorage-和-cookie-之间的区别"><a href="#3-sessionStorage-、localStorage-和-cookie-之间的区别" class="headerlink" title="3.sessionStorage 、localStorage 和 cookie 之间的区别"></a>3.sessionStorage 、localStorage 和 cookie 之间的区别</h3><ul>
 <li>共同点：都是保存在浏览器端，且都遵循同源策略。</li>
 <li>不同点：在于生命周期与作用域的不同</li>
 </ul>
-<p>作用域：localStorage只要在相同的协议、相同的主机名、相同的端口下，就能读取/修改到同一份localStorage数据。sessionStorage比localStorage更严苛一点，除了协议、主机名、端口外，还要求在同一窗口（也就是浏览器的标签页）下<br>
-<img src="https://img-blog.csdnimg.cn/img_convert/30482461b261171ee843eb9f98c6b30d.png" alt=""></p>
+<p>作用域：localStorage只要在相同的协议、相同的主机名、相同的端口下，就能读取/修改到同一份localStorage数据。sessionStorage比localStorage更严苛一点，除了协议、主机名、端口外，还要求在同一窗口（也就是浏览器的标签页）下<br><img src="https://img-blog.csdnimg.cn/img_convert/30482461b261171ee843eb9f98c6b30d.png" alt=""></p>
 <p>生命周期：localStorage 是持久化的本地存储，存储在其中的数据是永远不会过期的，使其消失的唯一办法是手动删除；而 sessionStorage 是临时性的本地存储，它是会话级别的存储，当会话结束（页面被关闭）时，存储内容也随之被释放。</p>
 <p>Web Storage 是一个从定义到使用都非常简单的东西。它使用键值对的形式进行存储，这种模式有点类似于对象，却甚至连对象都不是——<strong>它只能存储字符串</strong>，要想得到对象，我们还需要先对字符串进行一轮解析。</p>
 <p>说到底，Web Storage 是对 Cookie 的拓展，它只能用于存储少量的简单数据。当遇到大规模的、结构复杂的数据时，Web Storage 也爱莫能助了。这时候我们就要清楚我们的终极大 boss——IndexedDB！</p>
-<h2 id="四、IndexedDB">四、IndexedDB</h2>
-<p>IndexedDB 是一种低级API，<strong>用于客户端存储大量结构化数据(包括文件和blobs)</strong>。该API使用索引来实现对该数据的高性能搜索。IndexedDB 是一个运行在浏览器上的非关系型数据库。既然是数据库了，那就不是 5M、10M 这样小打小闹级别了。理论上来说，IndexedDB 是没有存储上限的（一般来说不会小于 250M）。它不仅可以存储字符串，还可以存储二进制数据。</p>
-<h3 id="1-IndexedDB的特点">1.IndexedDB的特点</h3>
-<ul>
+<h2 id="四、IndexedDB"><a href="#四、IndexedDB" class="headerlink" title="四、IndexedDB"></a>四、IndexedDB</h2><p>IndexedDB 是一种低级API，<strong>用于客户端存储大量结构化数据(包括文件和blobs)</strong>。该API使用索引来实现对该数据的高性能搜索。IndexedDB 是一个运行在浏览器上的非关系型数据库。既然是数据库了，那就不是 5M、10M 这样小打小闹级别了。理论上来说，IndexedDB 是没有存储上限的（一般来说不会小于 250M）。它不仅可以存储字符串，还可以存储二进制数据。</p>
+<h3 id="1-IndexedDB的特点"><a href="#1-IndexedDB的特点" class="headerlink" title="1.IndexedDB的特点"></a>1.IndexedDB的特点</h3><ul>
 <li>键值对储存。</li>
 </ul>
-<p>IndexedDB 内部采用对象仓库（object store）存放数据。所有类型的数据都可以直接存入，包括 JavaScript 对象。对象仓库中，数据以&quot;键值对&quot;的形式保存，每一个数据记录都有对应的主键，主键是独一无二的，不能有重复，否则会抛出一个错误。</p>
+<p>IndexedDB 内部采用对象仓库（object store）存放数据。所有类型的数据都可以直接存入，包括 JavaScript 对象。对象仓库中，数据以”键值对”的形式保存，每一个数据记录都有对应的主键，主键是独一无二的，不能有重复，否则会抛出一个错误。</p>
 <ul>
 <li>异步</li>
 </ul>
@@ -959,40 +852,34 @@
 <li>支持二进制储存。</li>
 </ul>
 <p>IndexedDB 不仅可以储存字符串，还可以储存二进制数据（ArrayBuffer 对象和 Blob 对象）。</p>
-<h3 id="2-IndexedDB的常见操作">2.IndexedDB的常见操作</h3>
-<p>在IndexedDB大部分操作并不是我们常用的调用方法，返回结果的模式，而是请求——响应的模式。</p>
+<h3 id="2-IndexedDB的常见操作"><a href="#2-IndexedDB的常见操作" class="headerlink" title="2.IndexedDB的常见操作"></a>2.IndexedDB的常见操作</h3><p>在IndexedDB大部分操作并不是我们常用的调用方法，返回结果的模式，而是请求——响应的模式。</p>
 <ul>
-<li>建立打开IndexedDB ----<code>window.indexedDB.open(&quot;testDB&quot;)</code></li>
+<li>建立打开IndexedDB ——<code>window.indexedDB.open(&quot;testDB&quot;)</code></li>
 </ul>
-<p>这条指令并不会返回一个DB对象的句柄，我们得到的是一个<code>IDBOpenDBRequest</code>对象，而我们希望得到的DB对象在其result属性中<br>
-<img src="https://img-blog.csdnimg.cn/img_convert/a442775ca09c62b34a95977420a6a14d.png" alt=""></p>
+<p>这条指令并不会返回一个DB对象的句柄，我们得到的是一个<code>IDBOpenDBRequest</code>对象，而我们希望得到的DB对象在其result属性中<br><img src="https://img-blog.csdnimg.cn/img_convert/a442775ca09c62b34a95977420a6a14d.png" alt=""></p>
 <p>除了result，IDBOpenDBRequest接口定义了几个重要属性:</p>
 <p>onerror: 请求失败的回调函数句柄</p>
 <p>onsuccess:请求成功的回调函数句柄</p>
 <p>onupgradeneeded:请求数据库版本变化句柄</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">openDB</span>(<span class="params">name</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> request=<span class="built_in">window</span>.indexedDB.open(name)<span class="comment">//建立打开IndexedDB</span></span></span><br><span class="line"><span class="javascript">request.onerror=<span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript"><span class="built_in">console</span>.log(<span class="string">&#x27;open indexdb error&#x27;</span>)</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="javascript">request.onsuccess=<span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">myDB.db=e.target.result<span class="comment">//这是一个 IDBDatabase对象，这就是IndexedDB对象</span></span></span><br><span class="line"><span class="javascript"><span class="built_in">console</span>.log(myDB.db)<span class="comment">//此处就可以获取到db实例</span></span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="javascript"><span class="keyword">var</span> myDB=&#123;</span></span><br><span class="line"><span class="javascript">name:<span class="string">&#x27;testDB&#x27;</span>,</span></span><br><span class="line"><span class="javascript">version:<span class="string">&#x27;1&#x27;</span>,</span></span><br><span class="line"><span class="javascript">db:<span class="literal">null</span></span></span><br><span class="line">&#125;</span><br><span class="line">openDB(myDB.name)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>控制台得到一个 IDBDatabase对象，这就是IndexedDB对象<br>
-<img src="https://img-blog.csdnimg.cn/img_convert/07eb89f08b4feb1b018735dc77e3f75a.png" alt=""></p>
+<p>控制台得到一个 IDBDatabase对象，这就是IndexedDB对象<br><img src="https://img-blog.csdnimg.cn/img_convert/07eb89f08b4feb1b018735dc77e3f75a.png" alt=""></p>
 <ul>
-<li>关闭IndexedDB----<code>indexdb.close()</code></li>
+<li>关闭IndexedDB——<code>indexdb.close()</code></li>
 </ul>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title">closeDB</span>(db)&#123;</span><br><span class="line">    db.close();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <ul>
-<li>删除IndexedDB----<code>window.indexedDB.deleteDatabase(indexdb)</code></li>
+<li>删除IndexedDB——<code>window.indexedDB.deleteDatabase(indexdb)</code></li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteDB</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  indexedDB.deleteDatabase(name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="3-WebStorage、cookie-和-IndexedDB之间的区别">3.WebStorage、cookie 和 IndexedDB之间的区别</h3>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3af7807f9d0222b50d94a1afa72070b9.png" alt=""></p>
+<h3 id="3-WebStorage、cookie-和-IndexedDB之间的区别"><a href="#3-WebStorage、cookie-和-IndexedDB之间的区别" class="headerlink" title="3.WebStorage、cookie 和 IndexedDB之间的区别"></a>3.WebStorage、cookie 和 IndexedDB之间的区别</h3><p><img src="https://img-blog.csdnimg.cn/img_convert/3af7807f9d0222b50d94a1afa72070b9.png" alt=""></p>
 <p>从上表可以看到，cookie 已经不建议用于存储。如果没有大量数据存储需求的话，可以使用 localStorage 和 sessionStorage 。对于不怎么改变的数据尽量使用 localStorage 存储，否则可以用 sessionStorage 存储。</p>
-<h2 id="总结">总结</h2>
-<p>正是浏览器存储、缓存技术的出现和发展，为我们的前端应用带来了无限的转机。近年来基于存储、缓存技术的第三方库层出不绝，此外还衍生出了 PWA 这样优秀的 Web 应用模型。总结下本文几个核心观点：</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>正是浏览器存储、缓存技术的出现和发展，为我们的前端应用带来了无限的转机。近年来基于存储、缓存技术的第三方库层出不绝，此外还衍生出了 PWA 这样优秀的 Web 应用模型。总结下本文几个核心观点：</p>
 <ul>
 <li>Cookie 的本职工作并非本地存储，而是“维持状态”</li>
 <li>Web Storage 是 HTML5 专门为浏览器存储而提供的数据存储机制，不与服务端发生通信</li>
 <li>IndexedDB 用于客户端存储大量结构化数据</li>
 </ul>
-<h2 id="扩展阅读">扩展阅读</h2>
-<ul>
+<h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://juejin.im/post/59d1f59bf265da06700b0934">把cookie聊清楚</a></li>
 <li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/dolphinX/p/3415761.html">HTML5本地存储——IndexedDB（一：基本使用）</a></li>
 <li><a target="_blank" rel="noopener" href="http://jerryzou.com/posts/cookie-and-web-storage/">详说 Cookie, LocalStorage 与 SessionStorage</a></li>
@@ -1149,7 +1036,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">浏览器渲染原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">引入</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">补充</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">知识补充</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%9C%BA%E5%88%B6"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">浏览器渲染机制</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">过程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E8%A7%A3%E5%89%96%E6%9E%90"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">分解剖析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B5%85%E8%B0%88"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">性能优化浅谈</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">浏览器存储</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81Cookie"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">一、Cookie</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-Cookie%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">1.Cookie的来源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E4%BB%80%E4%B9%88%E6%98%AFCookie%E5%8F%8A%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">2.什么是Cookie及应用场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-Cookie%E7%9A%84%E5%8E%9F%E7%90%86%E5%8F%8A%E7%94%9F%E6%88%90%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">3.Cookie的原理及生成方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-Cookie%E7%9A%84%E7%BC%BA%E9%99%B7"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">4.Cookie的缺陷</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-Cookie%E4%B8%8E%E5%AE%89%E5%85%A8"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">5.Cookie与安全</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81LocalStorage"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">二、LocalStorage</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-LocalStorage%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">1.LocalStorage的特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E5%AD%98%E5%85%A5-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">2.存入&#x2F;读取数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">3.使用场景</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81sessionStorage"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">三、sessionStorage</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-sessionStorage%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">1.sessionStorage的特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">2.使用场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-sessionStorage-%E3%80%81localStorage-%E5%92%8C-cookie-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">2.4.3.</span> <span class="toc-nav-text">3.sessionStorage 、localStorage 和 cookie 之间的区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81IndexedDB"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">四、IndexedDB</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-IndexedDB%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">1.IndexedDB的特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-IndexedDB%E7%9A%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">2.IndexedDB的常见操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-WebStorage%E3%80%81cookie-%E5%92%8C-IndexedDB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">2.5.3.</span> <span class="toc-nav-text">3.WebStorage、cookie 和 IndexedDB之间的区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">总结</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">扩展阅读</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">浏览器渲染原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">引入</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">补充</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">知识补充</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%9C%BA%E5%88%B6"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">浏览器渲染机制</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">过程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E8%A7%A3%E5%89%96%E6%9E%90"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">分解剖析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B5%85%E8%B0%88"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">性能优化浅谈</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AD%98%E5%82%A8"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">浏览器存储</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81Cookie"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">一、Cookie</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-Cookie%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">1.Cookie的来源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E4%BB%80%E4%B9%88%E6%98%AFCookie%E5%8F%8A%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">2.什么是Cookie及应用场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-Cookie%E7%9A%84%E5%8E%9F%E7%90%86%E5%8F%8A%E7%94%9F%E6%88%90%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">3.Cookie的原理及生成方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-Cookie%E7%9A%84%E7%BC%BA%E9%99%B7"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">4.Cookie的缺陷</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-Cookie%E4%B8%8E%E5%AE%89%E5%85%A8"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">5.Cookie与安全</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81LocalStorage"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">二、LocalStorage</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-LocalStorage%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">1.LocalStorage的特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E5%AD%98%E5%85%A5-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">2.存入&#x2F;读取数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">3.使用场景</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81sessionStorage"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">三、sessionStorage</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-sessionStorage%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">1.sessionStorage的特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">2.使用场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-sessionStorage-%E3%80%81localStorage-%E5%92%8C-cookie-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">2.4.3.</span> <span class="toc-nav-text">3.sessionStorage 、localStorage 和 cookie 之间的区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81IndexedDB"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">四、IndexedDB</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-IndexedDB%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">1.IndexedDB的特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-IndexedDB%E7%9A%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">2.IndexedDB的常见操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-WebStorage%E3%80%81cookie-%E5%92%8C-IndexedDB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">2.5.3.</span> <span class="toc-nav-text">3.WebStorage、cookie 和 IndexedDB之间的区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">总结</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">扩展阅读</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -1290,7 +1177,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">443.3k</span>
+          站点总字数：<span class="post-count">443.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
