@@ -224,17 +224,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/archives/">
               
               归档
@@ -255,17 +244,13 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -281,6 +266,21 @@
           
           
           
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
           
            -->
 
@@ -498,10 +498,8 @@
 <p><strong>3.</strong> <strong>弱类型</strong></p>
 <p>弱类型是指一个变量可以被赋予不同数据类型的值。这也是一个既灵活又可怕的特性，编写代码的时候非常方便，不用考虑变量的数据类型，但这也很容易出现 bug，调试起来会变得相当困难。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = []</span><br><span class="line">...</span><br><span class="line">tmp = <span class="literal">null</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">// tmp 到底会变成什么？</span></span><br></pre></td></tr></table></figure>
-<p>为了解决上面 3 个问题，开源社区提供了解决方案——TypeScript。它是基于 JavaScript 的语法糖，也就是说 TypeScript 代码没有单独的运行环境，需要编译成 JavaScript 代码之后才能运行。<br>
-从它的名字不难看出，它的核心特性是类型“Type”。具体工作原理就是在代码编译阶段进行类型检测，这样就能在代码部署运行之前及时发现问题。</p>
-<h3 id="类型与接口">类型与接口</h3>
-<p>TypeScript 让 JavaScript 变成了<strong>静态强类型*<em>*</em>、变量</strong>需要严格声明的语言，为此定义了两个重要概念：<strong>类型（type）**和**接口（interface）</strong>。</p>
+<p>为了解决上面 3 个问题，开源社区提供了解决方案——TypeScript。它是基于 JavaScript 的语法糖，也就是说 TypeScript 代码没有单独的运行环境，需要编译成 JavaScript 代码之后才能运行。<br>从它的名字不难看出，它的核心特性是类型“Type”。具体工作原理就是在代码编译阶段进行类型检测，这样就能在代码部署运行之前及时发现问题。</p>
+<h3 id="类型与接口"><a href="#类型与接口" class="headerlink" title="类型与接口"></a>类型与接口</h3><p>TypeScript 让 JavaScript 变成了<strong>静态强类型\</strong>*<em>、变量<strong>需要严格声明的语言，为此定义了两个重要概念：</strong>类型（type）*<em>和**接口（interface）</em></em>。</p>
 <p>TypeScript 在 JavaScript 原生类型的基础上进行了扩展，但为了和基础类型对象进行区分，采用了小写的形式，比如 Number 类型对应的是 number。类型之间可以互相组合形成新的类型。</p>
 <p>一些数据类型在前面第 07 课时中已经提过，这里不再赘述。下面补充一下 TypeScript 扩展的类型。</p>
 <p><strong>1.</strong> <strong>元组</strong></p>
@@ -524,47 +522,37 @@
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> u: <span class="string">&#x27;a&#x27;</span>|<span class="string">&#x27;b&#x27;</span>|<span class="string">&#x27;c&#x27;</span></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">if</span>(u === <span class="string">&#x27;a&#x27;</span>) &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (u === <span class="string">&#x27;b&#x27;</span>) &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> trmp: <span class="built_in">never</span> = u <span class="comment">// Type &#x27;&quot;c&quot;&#x27; is not assignable to type &#x27;never&#x27;.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>接口的作用和类型非常相似，在大多数情况下可以通用，只存在一些细小的区别（比如同名接口可以自动合并，而类型不能；在编译器中将鼠标悬停在接口上显示的是接口名称，悬停在类型上显示的是字面量类型），最明显的区别还是在写法上。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 声明 */</span></span><br><span class="line"><span class="keyword">interface</span> IA &#123;</span><br><span class="line">  id: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> TA = &#123;</span><br><span class="line">  id: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 继承 */</span></span><br><span class="line"><span class="keyword">interface</span> IA2 <span class="keyword">extends</span> IA &#123;</span><br><span class="line">    name: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> TA2 = TA &amp; &#123; <span class="attr">name</span>: <span class="built_in">string</span> &#125;</span><br><span class="line"><span class="comment">/* 实现 */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="title">implements</span> <span class="title">IA</span> </span>&#123;</span><br><span class="line">    id: <span class="built_in">string</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A2</span> <span class="title">implements</span> <span class="title">TA</span> </span>&#123;</span><br><span class="line">    id: <span class="built_in">string</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="类型抽象">类型抽象</h3>
-<p><strong>泛型</strong>是对类型的一种抽象，一般用于函数，能让调用者动态地指定部分数据类型。这一点和 any 类型有些像，对于类型的定义具有不确定性，可以指代多种类型，但最大区别在于泛型可以对函数成员或类成员产生约束关系。</p>
+<h3 id="类型抽象"><a href="#类型抽象" class="headerlink" title="类型抽象"></a>类型抽象</h3><p><strong>泛型</strong>是对类型的一种抽象，一般用于函数，能让调用者动态地指定部分数据类型。这一点和 any 类型有些像，对于类型的定义具有不确定性，可以指代多种类型，但最大区别在于泛型可以对函数成员或类成员产生约束关系。</p>
 <p>下面代码是 react 的钩子函数 useState 的类型定义，就用到了泛型。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">useState</span>&lt;<span class="title">S</span>&gt;(<span class="params">initialState: S | (() =&gt; S)</span>): [<span class="title">S</span>, <span class="title">Dispatch</span>&lt;<span class="title">SetStateAction</span>&lt;<span class="title">S</span>&gt;&gt;]</span>;</span><br></pre></td></tr></table></figure>
-<p>这段代码中 S 称为<strong>泛型变量</strong>。从这个定义可看出，useState 可以接收任何类型的参数或回调函数，但返回的元组数据第一个值必定和参数类型或者回调函数返回值类型相同，都为 S。<br>
-如果使用 any 类型来取代泛型，那么我们只能知道允许传入任何参数或回调函数，而无法知道返回值与入参的对应关系。</p>
-<p>在使用泛型的时候，我们可以通过尖括号来手动指定泛型变量的类型，这个指定操作称之为**类型断言，**也可以不指定，让 TypeScript 自行推断类型。比如下面的代码就通过类型断言，将范型变量指定为 string 类型。</p>
+<p>这段代码中 S 称为<strong>泛型变量</strong>。从这个定义可看出，useState 可以接收任何类型的参数或回调函数，但返回的元组数据第一个值必定和参数类型或者回调函数返回值类型相同，都为 S。<br>如果使用 any 类型来取代泛型，那么我们只能知道允许传入任何参数或回调函数，而无法知道返回值与入参的对应关系。</p>
+<p>在使用泛型的时候，我们可以通过尖括号来手动指定泛型变量的类型，这个指定操作称之为<strong>类型断言，</strong>也可以不指定，让 TypeScript 自行推断类型。比如下面的代码就通过类型断言，将范型变量指定为 string 类型。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [id, setId] = useState&lt;<span class="built_in">string</span>&gt;(<span class="string">&#x27;&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="类型组合">类型组合</h3>
-<p>类型组合就是把现有的多种类型叠加到一起，组合成一种新的类型，具体有两种方式。</p>
-<h4 id="交叉"><strong>交叉</strong></h4>
-<p>交叉就是将多个类型合并为一个类型，操作符为 “&amp;” 。下面的代码定义了一个 Admin 类型，它同时是类型 Student 和类型 Teacher 的交叉类型。 就是说 Admin 类型的对象同时拥有了这 2 种类型的成员。</p>
+<h3 id="类型组合"><a href="#类型组合" class="headerlink" title="类型组合"></a>类型组合</h3><p>类型组合就是把现有的多种类型叠加到一起，组合成一种新的类型，具体有两种方式。</p>
+<h4 id="交叉"><a href="#交叉" class="headerlink" title="交叉"></a><strong>交叉</strong></h4><p>交叉就是将多个类型合并为一个类型，操作符为 “&amp;” 。下面的代码定义了一个 Admin 类型，它同时是类型 Student 和类型 Teacher 的交叉类型。 就是说 Admin 类型的对象同时拥有了这 2 种类型的成员。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Admin = Student &amp; Teacher</span><br></pre></td></tr></table></figure>
-<h4 id="联合"><strong>联合</strong></h4>
-<p>联合就是表示符合多种类型中的任意一个，不同类型通过操作符“|”连接。下面代码定义的类型是 AorB，表示该类型值可以是类型 A，也可以是类型 B。</p>
+<h4 id="联合"><a href="#联合" class="headerlink" title="联合"></a><strong>联合</strong></h4><p>联合就是表示符合多种类型中的任意一个，不同类型通过操作符“|”连接。下面代码定义的类型是 AorB，表示该类型值可以是类型 A，也可以是类型 B。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> A = &#123;</span><br><span class="line">  a: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> B = &#123;</span><br><span class="line">  b: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> AorB = A | B</span><br></pre></td></tr></table></figure>
 <p>对于联合类型 AorB，我们能够确定的是它包含了 A 和 B 中共有的成员。如果我们想确切地了解值是否为类型 A，只能通过检查值的方法是否存在来进行判断。例如，下面的变量 v 属于 AorB 类型，在需要确认其具体类型时，先将变量 v 的类型断言为 A，然后再调用其属性 a 进行判断。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v: AorB</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">if</span> ((&lt;A&gt;v).a) &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  (&lt;B&gt;v).b</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="类型引用">类型引用</h3>
-<h4 id="索引">索引</h4>
-<p>索引类型的目的是让 TypeScript 编译器检查出使用了动态属性名的类型，需要通过<strong>索引类型查询</strong>和<strong>索引类型访问</strong>来实现。</p>
+<h3 id="类型引用"><a href="#类型引用" class="headerlink" title="类型引用"></a>类型引用</h3><h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>索引类型的目的是让 TypeScript 编译器检查出使用了动态属性名的类型，需要通过<strong>索引类型查询</strong>和<strong>索引类型访问</strong>来实现。</p>
 <p>下面的示例代码实现了一个简单的函数 getValue ，传入对象和对象属性名获取对应的值。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getValue</span>&lt;<span class="title">T</span>, <span class="title">K</span> <span class="title">extends</span> <span class="title">keyof</span> <span class="title">T</span>&gt;(<span class="params">o: T, name: K</span>): <span class="title">T</span>[<span class="title">K</span>] </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> o[name]; <span class="comment">// o[name] is of type T[K]</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> com = &#123;</span><br><span class="line">    name: <span class="string">&#x27;lagou&#x27;</span>,</span><br><span class="line">    id: <span class="number">123</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> id: <span class="built_in">number</span> = getValue(com, <span class="string">&#x27;id&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> no = getValue(com, <span class="string">&#x27;no&#x27;</span>) <span class="comment">//报错：Argument of type &#x27;&quot;no&quot;&#x27; is not assignable to parameter of type &#x27;&quot;id&quot; | &quot;name&quot;&#x27;.</span></span><br></pre></td></tr></table></figure>
 <p>其中，泛型变量 K 继承了泛型变量 T 的属性名联合，这里的 keyof 就是索引类型查询操作符；返回值 T[K] 就是索引访问操作符的使用方式。</p>
 <p>前面提到的 Pick 类型就是通过索引类型来实现的。</p>
-<h4 id="映射">映射</h4>
-<p>映射类型是指从已有类型中创建新的类型。TypeScript 预定义了一些类型，比如最常用的 Pick 和 Omit。</p>
+<h4 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h4><p>映射类型是指从已有类型中创建新的类型。TypeScript 预定义了一些类型，比如最常用的 Pick 和 Omit。</p>
 <p>下面是 Pick 类型的使用示例及源码，可以看到类型 Pick 从类型 task 中选择属性 “title” 和 “description” 生成了新的类型 simpleTask。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Pick&lt;T, K <span class="keyword">extends</span> keyof T&gt; = &#123;</span><br><span class="line">  [P <span class="keyword">in</span> K]: T[P];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">interface</span> task &#123;</span><br><span class="line">  title: <span class="built_in">string</span>;</span><br><span class="line">  description: <span class="built_in">string</span>;</span><br><span class="line">  status: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> simpleTask = Pick&lt;task, <span class="string">&#x27;title&#x27;</span> | <span class="string">&#x27;description&#x27;</span>&gt;<span class="comment">// &#123;title: string;description: string&#125;</span></span><br></pre></td></tr></table></figure>
 <p>类型 Pick 的实现，先用到了索引类型查询，获取了类型 T 的属性名联合 K，然后通过操作符 in 对其进行遍历，同时又用到了索引类型访问来表示属性值。</p>
 <p>由于篇幅所限，更多的预定义类型这里就不一一讲解了，对实现原理感兴趣的同学可以参看其<a target="_blank" rel="noopener" href="https://github.com/microsoft/TypeScript/blob/master/lib/lib.es5.d.ts">源码</a>。</p>
-<h3 id="实践：编写类型声明">实践：编写类型声明</h3>
-<p>结合上面所说的内容，再通过一个例子来加深理解。我们以第 03 课时的代码 2 的 debounce 函数为例，为这段代码添加类型声明，转换成 TeypScript 语法。</p>
+<h3 id="实践：编写类型声明"><a href="#实践：编写类型声明" class="headerlink" title="实践：编写类型声明"></a>实践：编写类型声明</h3><p>结合上面所说的内容，再通过一个例子来加深理解。我们以第 03 课时的代码 2 的 debounce 函数为例，为这段代码添加类型声明，转换成 TeypScript 语法。</p>
 <p>需要添加类型声明的地方通常是<strong>变量和函数</strong>。</p>
 <p>首先给函数 debounce 添加类型，包括参数类型和返回值类型。参数类型使用泛型变量，在调用函数 debounce 的时候手动指定，泛型变量有 3 个：函数 T 、函数 T 的返回值 U 和 函数 T 的参数 V。</p>
 <p>然后是变量 timeout ，当定时器存在时它的值为 number，定时器不存在时值为 null。</p>
 <p>最后按照之前定义的泛型变量给函数 debounced 和函数 flush 添加类型声明。</p>
 <p>具体代码如下：</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> debounce = <span class="xml"><span class="tag">&lt;<span class="name">T</span> <span class="attr">extends</span> <span class="attr">Function</span>, <span class="attr">U</span>, <span class="attr">V</span> <span class="attr">extends</span> <span class="attr">any</span>[]&gt;</span>(func: T, wait: number = 0) =&gt; &#123;</span></span><br><span class="line"><span class="xml">  let timeout: number | null = null</span></span><br><span class="line"><span class="xml">  let args: V</span></span><br><span class="line">  function debounced(...arg: V): Promise&lt;U&gt; &#123;</span><br><span class="line">    args = arg</span><br><span class="line">    if(timeout) &#123;</span><br><span class="line">      clearTimeout(timeout)</span><br><span class="line">      timeout = null</span><br><span class="line">    &#125;</span><br><span class="line">    // 以 Promise 的形式返回函数执行结果</span><br><span class="line">    return new Promise((res, rej) =&gt; &#123;</span><br><span class="line">      timeout = setTimeout(async () =&gt; &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          const result: U = await func.apply(this, args)</span><br><span class="line">          res(result)</span><br><span class="line">        &#125; catch(e) &#123;</span><br><span class="line">          rej(e)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, wait)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  // 允许取消</span><br><span class="line">  function cancel() &#123;</span><br><span class="line">    clearTimeout(timeout)</span><br><span class="line">    timeout = null</span><br><span class="line">  &#125;</span><br><span class="line">  // 允许立即执行</span><br><span class="line">  function flush(): U &#123;</span><br><span class="line">    cancel()</span><br><span class="line">    return func.apply(this, args)</span><br><span class="line">  &#125;</span><br><span class="line">  debounced.cancel = cancel</span><br><span class="line">  debounced.flush = flush</span><br><span class="line">  return debounced</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="总结">总结</h3>
-<p>这一课时重点讲述了如何通过 TypeScript 来解决 JavaScript 的类型问题，TypeScript 在原有的基础类型上进行了扩展，理解 TypeScript 的基本类型并不难，重点需要掌握如何通过泛型来对类型进行抽象，如何通过组合及引用来对已有的类型创建新的类型。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这一课时重点讲述了如何通过 TypeScript 来解决 JavaScript 的类型问题，TypeScript 在原有的基础类型上进行了扩展，理解 TypeScript 的基本类型并不难，重点需要掌握如何通过泛型来对类型进行抽象，如何通过组合及引用来对已有的类型创建新的类型。</p>
 <p>思考题：TypeScript 能较好地解决编译时类型校验的问题，但无法对运行时的数据（比如通过 AJAX 请求获得的数据）进行校验，你能想到有什么好的方法解决这个问题吗？</p>
 
 
@@ -856,7 +844,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">443.3k</span>
+          站点总字数：<span class="post-count">443.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

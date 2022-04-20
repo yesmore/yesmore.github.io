@@ -224,17 +224,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/archives/">
               
               归档
@@ -255,17 +244,13 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
           </li>
-          
-          
-          
-          
           
           
           
@@ -281,6 +266,21 @@
           
           
           
+          
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
           
            -->
 
@@ -473,10 +473,7 @@
       对应《WebGL编程指南》第八章 36-LightedCube、37-LightedCube_animation、38-LightedCube_ambient
 要点：光源类型（平行光、点光源光）、反射类型（漫反射、环境反射）、根据光线和表面的方向计算入射角、法向量
 
-知识点
-一、光照原理
-1.1 引入——着色与阴影
-现实世界中的物体被光纤照射时，会反射一部分光。只有当反射光线进入你的眼睛时，......
+知识点一、光照原理1.1 引入——着色与阴影现实世界中的物体被光纤照射时，会反射一部分光。只有当反射光线进入你的眼睛时，你才能......
     </div>
   </a>
   
@@ -514,10 +511,7 @@
       对应《WebGL编程指南》第七章 33-HelloCubes、34-ColoredCube
 要点：立方体及其顶点坐标、gl.drawElements()
 
-知识点
-一、立方体
-1.1 目的
-迄今为止，本教程通过绘制一些简单的三角形，展示了 WebGL 的诸多特性。你对绘制三维对象的基础只是应该已经有了足够的了解。下面，我们就来绘制如下图所示的立方体。其8个顶点的颜色分别为白色、品红色、红色、......
+知识点一、立方体1.1 目的迄今为止，本教程通过绘制一些简单的三角形，展示了 WebGL 的诸多特性。你对绘制三维对象的基础只是应该已经有了足够的了解。下面，我们就来绘制如下图所示的立方体。其8个顶点的颜色分别为白色、品红色、红色、黄色、......
     </div>
   </a>
   
@@ -555,10 +549,8 @@
       对应《WebGL编程指南》第七章 31-DepthBuffer、32-Zfighting
 要点：对象的前后关系、隐藏面消除、深度冲突
 
-知识点
-一、正确处理对象的前后关系
-目前为止，已经掌握编写代码移动视点，设置可视空间，从不同的角度观察三维对象，处理三角形缺一角的情况。但是，仍然还存在一个问题：在移动视点的过程中，有时候前面的三角形会“躲”到后面的三角形之后，这一节将会研究这一问题。
-1.......
+知识点一、正确处理对象的前后关系目前为止，已经掌握编写代码移动视点，设置可视空间，从不同的角度观察三维对象，处理三角形缺一角的情况。但是，仍然还存在一个问题：在移动视点的过程中，有时候前面的三角形会“躲”到后面的三角形之后，这一节将会研究这一问题。
+1.1 ......
     </div>
   </a>
   
@@ -596,9 +588,7 @@
       对应《WebGL编程指南》第七章 28-perspectiveview，29-perspectiveview_mvp，30-perspectiveview_mvpMatrix
 要点：可视空间（透视投影）、模型视图投影矩阵
 
-知识点
-一、可视空间（投影透视）
-在正射投影的可视空间中，不管三角形与视点的距离是远是近，它由多大，那么画出来就有多大。为了打破这条限制，我们可以使用透视投影可视空间，它......
+知识点一、可视空间（投影透视）在正射投影的可视空间中，不管三角形与视点的距离是远是近，它由多大，那么画出来就有多大。为了打破这条限制，我们可以使用透视投影可视空间，它将使......
     </div>
   </a>
   
@@ -633,17 +623,15 @@
       
     </h3>
     <div class="post-content-preview">
-      ​		应对现在数据可视化的趋势，越来越多企业需要在很多场景(营销数据，生产数据，用户数据)下使用，可视化图表来展示体现数据，让数据更加直观，数据特点更加突出。
-​		该笔记基于完成一个静态可视化面板项目。预览地址：http://dsj.aoau.top
+      ​        应对现在数据可视化的趋势，越来越多企业需要在很多场景(营销数据，生产数据，用户数据)下使用，可视化图表来展示体现数据，让数据更加直观，数据特点更加突出。 
+​        该笔记基于完成一个静态可视化面板项目。预览地址：http://dsj.aoau.top
 
-01-使用技术
-完成该项目需要具备以下知识：
+01-使用技术完成该项目需要具备以下知识：
 
 div + css 布局
 flex 布局
 Less
-原生js + jquery 使用
-re......
+原生js + ......
     </div>
   </a>
   
@@ -681,10 +669,8 @@ re......
       对应《WebGL编程指南》第七章 26-OrthoView、27-LookAtTrianglesWithKeys_ViewVolume
 要点：可视空间（正射类型、透视投影）、可视范围（正射类型）、盒状可视空间
 
-知识点
-一、可视范围（正射类型）
-​		回顾：在上一节的最后一个示例程序中，当视点在极左或极右的位置时，三角形会缺少一部分。
-​		三角形缺了一角的原因是，我们没有指定可视范围，即实......
+知识点一、可视范围（正射类型）​        回顾：在上一节的最后一个示例程序中，当视点在极左或极右的位置时，三角形会缺少一部分。
+​        三角形缺了一角的原因是，我们没......
     </div>
   </a>
   
@@ -722,10 +708,7 @@ re......
       对应《WebGL编程指南》第七章 22-LookAtTriangles、23-LookAtRotatedTriangles、24-LookAtRotatedTriangles_mvMatrix、25-LookAtTrianglesWithKeys
 要点：视点和视线、景深、观察者视图、模型视图矩阵
 
-知识点
-一、立方体由三角形构成
-1.1 深度
-​		之前讨论过，三维物体也是由二维图形（特别是......
+知识点一、立方体由三角形构成1.1 深度​        之前讨论过，三维物体也是由二维图形（......
     </div>
   </a>
   
@@ -762,17 +745,14 @@ re......
     <div class="post-content-preview">
       对应《WebGL编程指南》第六章 GLSL ES
 
-总览
-本章知识点：
+总览本章知识点：
 1、数据、变量和变量类型
 2、矢量、矩阵、结构体、数组、采样器（纹理）
 3、运算、程序流、函数
 4、attribute、uniform和varying变量
 5、精度限定词
 6、预处理和指令
-回顾
-基本着色器代码
-1234567891011121314151617181920212223//顶点着色器程序var VSHAD......
+回顾基本着色器代码1234567891011121314151617181920212223//顶点着色器程序var VSHADER_......
     </div>
   </a>
   
@@ -897,6 +877,10 @@ re......
     
     
     
+    <a href="/tags/#Browser" title="Browser" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
+    
+    
+    
     <a href="/tags/#算法" title="算法" rel="14"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
     
     
@@ -921,11 +905,15 @@ re......
     
     
     
-    <a href="/tags/#Browser" title="Browser" rel="4"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
+    <a href="/tags/#Echarts" title="Echarts" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Echarts</a>
     
     
     
     <a href="/tags/#前端进阶" title="前端进阶" rel="21"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+    
+    
+    
+    <a href="/tags/#CSS" title="CSS" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> CSS</a>
     
     
     
@@ -934,6 +922,14 @@ re......
     
     
     <a href="/tags/#NodeJs" title="NodeJs" rel="5"><i class="fa fa-tag" style="color: aqua;"></i> NodeJs</a>
+    
+    
+    
+    <a href="/tags/#mobile" title="mobile" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> mobile</a>
+    
+    
+    
+    <a href="/tags/#HTML" title="HTML" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> HTML</a>
     
     
     
@@ -946,6 +942,10 @@ re......
     
     
     <a href="/tags/#操作系统" title="操作系统" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 操作系统</a>
+    
+    
+    
+    <a href="/tags/#TypeScript" title="TypeScript" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> TypeScript</a>
     
     
     
@@ -997,30 +997,6 @@ re......
     
     
     
-    <a href="/tags/#免费Api" title="免费Api" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> 免费Api</a>
-    
-    
-    
-    <a href="/tags/#MySQL" title="MySQL" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> MySQL</a>
-    
-    
-    
-    <a href="/tags/#Eggjs" title="Eggjs" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Eggjs</a>
-    
-    
-    
-    <a href="/tags/#Electron" title="Electron" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Electron</a>
-    
-    
-    
-    <a href="/tags/#mobile" title="mobile" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> mobile</a>
-    
-    
-    
-    <a href="/tags/#HTML" title="HTML" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> HTML</a>
-    
-    
-    
     <a href="/tags/#Uniapp" title="Uniapp" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Uniapp</a>
     
     
@@ -1033,19 +1009,23 @@ re......
     
     
     
-    <a href="/tags/#Echarts" title="Echarts" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Echarts</a>
+    <a href="/tags/#免费Api" title="免费Api" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> 免费Api</a>
     
     
     
-    <a href="/tags/#CSS" title="CSS" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> CSS</a>
+    <a href="/tags/#MySQL" title="MySQL" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> MySQL</a>
     
     
     
-    <a href="/tags/#TypeScript" title="TypeScript" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> TypeScript</a>
+    <a href="/tags/#Eggjs" title="Eggjs" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Eggjs</a>
     
     
     
     <a href="/tags/#React" title="React" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
+    
+    
+    
+    <a href="/tags/#Electron" title="Electron" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Electron</a>
     
     
   </div>
@@ -1171,6 +1151,10 @@ re......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> WebGL</li>
     </a>
     
+    <a href="/categories/#Browser">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
+    </a>
+    
     <a href="/categories/#算法">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 算法</li>
     </a>
@@ -1187,12 +1171,24 @@ re......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
     </a>
     
+    <a href="/categories/#Echarts">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Echarts</li>
+    </a>
+    
     <a href="/categories/#Browser">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
     </a>
     
+    <a href="/categories/#CSS">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> CSS</li>
+    </a>
+    
     <a href="/categories/#Demo">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
+    <a href="/categories/#HTML">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> HTML</li>
     </a>
     
     <a href="/categories/#Math">
@@ -1201,6 +1197,10 @@ re......
     
     <a href="/categories/#操作系统">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 操作系统</li>
+    </a>
+    
+    <a href="/categories/#TypeScript">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> TypeScript</li>
     </a>
     
     <a href="/categories/#Python">
@@ -1223,36 +1223,28 @@ re......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
     </a>
     
-    <a href="/categories/#链友">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
-    </a>
-    
     <a href="/categories/#知识扫盲">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
-    <a href="/categories/#免费api">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
+    <a href="/categories/#链友">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
     </a>
     
-    <a href="/categories/#Eggjs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
+    <a href="/categories/#Uniapp">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Uniapp</li>
+    </a>
+    
+    <a href="/categories/#Hexo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
     </a>
     
     <a href="/categories/#Nginx">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
     </a>
     
-    <a href="/categories/#Electron">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#Hexo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
+    <a href="/categories/#免费api">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
     </a>
     
     <a href="/categories/#NodeJs">
@@ -1263,40 +1255,48 @@ re......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
-    <a href="/categories/#Linux">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Linux</li>
+    <a href="/categories/#Eggjs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
     </a>
     
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    <a href="/categories/#React">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
     </a>
     
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#Browser">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
-    </a>
-    
-    <a href="/categories/#HTML">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> HTML</li>
+    <a href="/categories/#Electron">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
     <a href="/categories/#Hexo">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
     </a>
     
-    <a href="/categories/#Uniapp">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Uniapp</li>
+    <a href="/categories/#MongDB">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> MongDB</li>
     </a>
     
     <a href="/categories/#建站指南">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#MongDB">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> MongDB</li>
+    <a href="/categories/#Linux">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Linux</li>
+    </a>
+    
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
+    <a href="/categories/#JavaScript">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Nodejs">
@@ -1307,28 +1307,8 @@ re......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
-    <a href="/categories/#Echarts">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Echarts</li>
-    </a>
-    
-    <a href="/categories/#CSS">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> CSS</li>
-    </a>
-    
-    <a href="/categories/#TypeScript">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> TypeScript</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#React">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
-    </a>
-    
-    <a href="/categories/#JavaScript">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
      -->
     <a href="https://cantunsee.space/" target="_blank">
@@ -1455,7 +1435,7 @@ re......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">443.3k</span>
+          站点总字数：<span class="post-count">443.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
