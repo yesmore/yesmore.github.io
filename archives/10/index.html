@@ -233,9 +233,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/categories/">
               
-              关于
+              分类
               
               
             </a>
@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
@@ -265,6 +265,8 @@
           
           
           
+          
+          
           <li>
             <a href="/tags/">
               
@@ -273,8 +275,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -462,6 +462,51 @@
   <!-- top end -->
   
 
+  <a href="/cn/JavaScript-dateTime/">
+    <h1 class="post-title">
+      Javascript时间＆日期处理终极解决方案
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      要点：JavaScript日期格式化方案总结、最新消息（QQ/weChat）日期排序算法
+
+一、Date类型在讲述常见日期问题之前，先梳理一下Date类型的方法。 
+ECMAScript中的Date类型使用自UTC（Coordinated in Universal Time，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。
+1.1 常用方法列表
+
+
+
+方法
+描述
+
+
+......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-08-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/Algorithm-String/">
     <h1 class="post-title">
       【数据结构与算法】字符串（JavaScript版详解）
@@ -473,18 +518,13 @@
       要点：字符串、常见字符串方法
 先知：
 
-一、串
-1.1 定义
-串（string） 是由零个或多个字符组成的有限序列，又名叫 字符串
-1.2 串的逻辑结构
-串 的逻辑结构和线性表很相似，不同之处在于串针对的是字符集，也就是串中的元素都是字符。
+一、串1.1 定义串（string） 是由零个或多个字符组成的有限序列，又名叫 字符串
+1.2 串的逻辑结构串 的逻辑结构和线性表很相似，不同之处在于串针对的是字符集，也就是串中的元素都是字符。
 因此，对于串的基本操作与线性表是有很大差别的：
-
 
 线性表更关注的是单个元素的操作，比如查找一个元素，插入或删除一个元素；
 
-
-但串中更多的是查找子串位......
+但串中更多的是查找子串位置，得到指......
     </div>
   </a>
   
@@ -522,13 +562,11 @@
       要点：基本队列、优先队列、双端队列、循环队列、对应练习
 先知：队列（Queue）是一种运算受限的线性表，特点：先进先出。(FIFO：First In First Out)
 
-一、认识队列
-1.1 定义
-队列（Queue）是一种运算受限的线性表，特点：先进先出。(FIFO：First In First Out)
+一、认识队列1.1 定义队列（Queue）是一种运算受限的线性表，特点：先进先出。(FIFO：First In First Out)
 受限之处：
 
 只允许在表的前端（front）进行删除操作。
-只允许在表的后端（re......
+只允许在表的后端（rear......
     </div>
   </a>
   
@@ -566,10 +604,8 @@
       要点：栈（顺序栈、链栈）概念、栈结构的5大应用
 先知：数组是一个线性结构，并且可以在数组的任意位置插入和删除元素。但是有时候，我们为了实现某些功能，必须对这种任意性加以限制。栈和队列就是比较常见的受限的线性结构。
 
-一、什么是栈
-1.1 栈
-栈（stack）是一种运算受限的线性表：
-1、LIFO（last in first out）表示就是后进入的元素，第一个弹出栈空间。类似于自动餐托盘，最......
+一、什么是栈1.1 栈栈（stack）是一种运算受限的线性表：
+1、LIFO（last in first out）表示就是后进入的元素，第一个弹出栈空间。类似于自动餐托盘，最后放......
     </div>
   </a>
   
@@ -606,15 +642,11 @@
     <div class="post-content-preview">
       要点：双向链表详解
 
-单向链表和双向链表
-一、单向链表
-只能从头遍历到尾或者从尾遍历到头（一般从头到尾）。
+单向链表和双向链表一、单向链表只能从头遍历到尾或者从尾遍历到头（一般从头到尾）。
 链表相连的过程是单向的，实现原理是上一个节点中有指向下一个节点的引用。
 单向链表有一个比较明显的缺点：可以轻松到达下一个节点，但回到前一个节点很难，在实际开发中, 经常会遇到需要回到上一个节点的情况。
-二、双向链表
-双向链表特点：
-既可以从头遍历到尾，也可以从尾遍历到头。
-链表相连的过......
+二、双向链表双向链表特点：既可以从头遍历到尾，也可以从尾遍历到头。
+链表相连的过程是双向......
     </div>
   </a>
   
@@ -651,15 +683,10 @@
     <div class="post-content-preview">
       要点：单链表详解、JavaScript单链表方法的封装
 
-认识链表
-一、链表和数组
-链表和数组一样，可以用于存储一系列的元素，但是链表和数组的实现机制完全不同。
-1.1 数组
-数组特点：
-存储多个元素，数组（或列表）可能是最常用的数据结构。
+认识链表一、链表和数组链表和数组一样，可以用于存储一系列的元素，但是链表和数组的实现机制完全不同。
+1.1 数组数组特点：存储多个元素，数组（或列表）可能是最常用的数据结构。
 几乎每一种编程语言都有默认实现数组结构，提供了一个便利的 [] 语法来访问数组元素。
-数组缺点：
-数组的创建需要申请一段连续的内存空间(一整块内存)，并......
+数组缺点：数组的创建需要申请一段连续的内存空间(一整块内存)，并且大小是固......
     </div>
   </a>
   
@@ -697,14 +724,12 @@
       要点：线性表知识点汇总
 
 
-一、线性表的定义
-由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。
+一、线性表的定义由n(n≥O)个数据特性相同的元素构成的有限序列称为线性表。
 
-二、线性表的特点
-1、线性表中元素的个数n(n≥O)定义为线性表的长度，n=O时称为空表。
+二、线性表的特点1、线性表中元素的个数n(n≥O)定义为线性表的长度，n=O时称为空表。
 2、将非空的线性表(n&gt;O)记作(a1，a2，a3，…，an)；
 3、这里的数据元素$a_i (1≤i≤n)$​​​只是个抽象的符号，其具体含义在不同情况下可以不同；
-4、在非空的线性表......
+4、在非空的线性表，有......
     </div>
   </a>
   
@@ -741,62 +766,13 @@
     <div class="post-content-preview">
       要点：JavaScript数组、操作数组的方法
 
-几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。
-数组通常情况下用于存储一系列同一种数据类型的值。
-但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。
+几乎所有的编程语言都原生支持数组类型，因为数组是最简单的内存数据结构。数组通常情况下用于存储一系列同一种数据类型的值。但在 JavaScript 里，数组中可以保存不同类型的值。但我们还是要遵守最佳实践，别这么做（大多数语言都没这个能力）。
 
 汇总：
 不改变原数组的方法(8个):
 ES5：
 
-join、toLocateString、toS......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-08-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
-    
-    <a href="/tags/#算法" title="算法"><i class="fa fa-tag" style="color: aqua;"></i> 算法</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Algorithm-guide/">
-    <h1 class="post-title">
-      【数据结构与算法】数据结构与算法前言、复杂度
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      要点：数据结构与算法、复杂度、程序运行的效率
-程序 = 数据结构 + 算法
-
-数据结构
-一、数据结构的定义
-官方定义：无
-民间定义：
-
-
-“数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义相关的函数来给出。” — 《数据结构、算法与应用》
-
-
-“数据结构是 ADT（抽象数据类型 Abstract Data Type）的物理实现。” — 《数据......
+join、toLocateString、toStr......
     </div>
   </a>
   
@@ -933,6 +909,10 @@ join、toLocateString、toS......
     
     
     
+    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
+    
+    
+    
     <a href="/tags/#Vue" title="Vue" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Vue</a>
     
     
@@ -942,10 +922,6 @@ join、toLocateString、toS......
     
     
     <a href="/tags/#开源项目" title="开源项目" rel="7"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
-    
-    
-    
-    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
     
     
     
@@ -989,6 +965,14 @@ join、toLocateString、toS......
     
     
     
+    <a href="/tags/#Web安全" title="Web安全" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
+    
+    
+    
+    <a href="/tags/#知识扫盲" title="知识扫盲" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
+    
+    
+    
     <a href="/tags/#TypeScript" title="TypeScript" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> TypeScript</a>
     
     
@@ -998,14 +982,6 @@ join、toLocateString、toS......
     
     
     <a href="/tags/#爬虫" title="爬虫" rel="13"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-    
-    
-    <a href="/tags/#Web安全" title="Web安全" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
-    
-    
-    
-    <a href="/tags/#知识扫盲" title="知识扫盲" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
     
     
     
@@ -1029,15 +1005,15 @@ join、toLocateString、toS......
     
     
     
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
     <a href="/tags/#脚手架" title="脚手架" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 脚手架</a>
     
     
     
     <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
-    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
     
     
     
@@ -1057,6 +1033,10 @@ join、toLocateString、toS......
     
     
     
+    <a href="/tags/#React" title="React" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
+    
+    
+    
     <a href="/tags/#MySQL" title="MySQL" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> MySQL</a>
     
     
@@ -1069,7 +1049,7 @@ join、toLocateString、toS......
     
     
     
-    <a href="/tags/#React" title="React" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
+    <a href="/tags/#software" title="software" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> software</a>
     
     
   </div>
@@ -1139,6 +1119,10 @@ join、toLocateString、toS......
 <div class="widget">
   <ul style="padding-left: 0;">
     
+    <a href="../../cn/%E9%80%9A%E4%BF%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%9C%9F%E6%9C%AB%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/">
+      <li style="list-style: none;">《通信软件设计》期末考点总结</li>
+    </a>
+    
     <a href="../../cn/der-cli/">
       <li style="list-style: none;">Der Cli</li>
     </a>
@@ -1155,10 +1139,6 @@ join、toLocateString、toS......
       <li style="list-style: none;">相等性判断</li>
     </a>
     
-    <a href="../../cn/20_lookupGetter/">
-      <li style="list-style: none;">lookupGetter</li>
-    </a>
-    
   </ul>
 </div>
 
@@ -1168,9 +1148,9 @@ join、toLocateString、toS......
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（141） </a></h5>
+<h5><a href="/archives/">归档（142） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1207,20 +1187,16 @@ join、toLocateString、toS......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
     </a>
     
-    <a href="/categories/#Vue">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
-    </a>
-    
     <a href="/categories/#杂记">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 杂记</li>
     </a>
     
-    <a href="/categories/#Echarts">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Echarts</li>
+    <a href="/categories/#Vue">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
     </a>
     
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    <a href="/categories/#Echarts">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Echarts</li>
     </a>
     
     <a href="/categories/#Browser">
@@ -1229,6 +1205,10 @@ join、toLocateString、toS......
     
     <a href="/categories/#CSS">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> CSS</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#HTML">
@@ -1243,6 +1223,10 @@ join、toLocateString、toS......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 操作系统</li>
     </a>
     
+    <a href="/categories/#Web安全">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Web安全</li>
+    </a>
+    
     <a href="/categories/#TypeScript">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> TypeScript</li>
     </a>
@@ -1251,36 +1235,52 @@ join、toLocateString、toS......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
     </a>
     
-    <a href="/categories/#Web安全">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Web安全</li>
-    </a>
-    
     <a href="/categories/#websocket">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> websocket</li>
-    </a>
-    
-    <a href="/categories/#建站指南">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#链友">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
-    </a>
-    
-    <a href="/categories/#Hexo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
     </a>
     
     <a href="/categories/#知识扫盲">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
+    <a href="/categories/#建站指南">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
+    </a>
+    
+    <a href="/categories/#链友">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
+    </a>
+    
+    <a href="/categories/#Hexo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
+    </a>
+    
     <a href="/categories/#Uniapp">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Uniapp</li>
+    </a>
+    
+    <a href="/categories/#免费api">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
+    </a>
+    
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
+    </a>
+    
+    <a href="/categories/#React">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
+    </a>
+    
+    <a href="/categories/#Eggjs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
+    </a>
+    
+    <a href="/categories/#Electron">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
     <a href="/categories/#Nginx">
@@ -1299,8 +1299,28 @@ join、toLocateString、toS......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
+    <a href="/categories/#software">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> software</li>
+    </a>
+    
     <a href="/categories/#MongDB">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> MongDB</li>
+    </a>
+    
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
+    </a>
+    
+    <a href="/categories/#JavaScript">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Linux">
@@ -1313,42 +1333,6 @@ join、toLocateString、toS......
     
     <a href="/categories/#Demo">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#免费api">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
-    </a>
-    
-    <a href="/categories/#Eggjs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
-    </a>
-    
-    <a href="/categories/#Electron">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
-    </a>
-    
-    <a href="/categories/#React">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#JavaScript">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
     </a>
     
     <a href="/categories/#Demo">
@@ -1479,7 +1463,7 @@ join、toLocateString、toS......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">443.3k</span>
+          站点总字数：<span class="post-count">445.2k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

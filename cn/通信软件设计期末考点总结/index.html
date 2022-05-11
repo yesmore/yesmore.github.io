@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+
+  <!-- Baidu Tongji -->
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="快乐码原是一个个人博客，包含了博主平时开发遇到的问题以及学习笔记；博主沉迷于算法、前端、爬虫，爱好广泛。"/>
+  <meta name="keyword" content="快乐码原，web，App，Python，Linux，WebGL，网站，小程序，爬虫，学习博客，建模"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://yesmore.cc/cn/通信软件设计期末考点总结/">
+  <title>
+    
+      《通信软件设计》期末考点总结 - 快乐码原 | 大Van家
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'yesmore/yesmoreforchat'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">快乐码原</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          <!-- 
+          
+          
+          
+          <li>
+            <a href="/algorithms/">
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+           -->
+
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <li>
+            <a href="/archives">归档</a>
+          </li>
+          <li>
+            <a href="/cn/Diary">杂记</a>
+          </li>
+          <li>
+            <a href="/algorithms">算法</a>
+          </li>
+          <li>
+            <a href="/tags/#开源项目">开源项目</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function () {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/bg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io//img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#software" title="software"><i class="fa fa-tag" style="color: aqua;"></i> software</a>
+              
+            </div>
+            <h2>《通信软件设计》期末考点总结</h2>
+            <h3 class="subheading" style="font-size: 21px;">就亿点点，轻轻松松的辣~</h3>
+            <span class="meta">
+              By 大Van家 on
+              2022-05-12
+            </span>
+            
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              阅读时间 <span class="post-count">
+                7
+              </span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              文章共 
+              <span class="post-count">
+                2.2k
+              </span> 
+              字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <blockquote>
+<p>纯手打总结知识点，欢迎纠错、补充</p>
+</blockquote>
+<h2 id="一、概念题"><a href="#一、概念题" class="headerlink" title="一、概念题"></a>一、概念题</h2><h3 id="1-通信"><a href="#1-通信" class="headerlink" title="1.通信"></a>1.通信</h3><p>通信 (Communication)就是<strong>信息的传递</strong>，是指由一地向另一地进行信息的传输与交换，其目的是传输消息。</p>
+<p>把A地的信息在B地近似重现、把A地的信息传输到B地、靠协议实现的传输</p>
+<h3 id="2-信息"><a href="#2-信息" class="headerlink" title="2.信息"></a>2.信息</h3><p>指 <strong>音讯 、 消息 、 通讯 系统传输和 处理 的对象</strong>，泛指人类社会 传播 的一切 内容 。</p>
+<h3 id="3-硬件"><a href="#3-硬件" class="headerlink" title="3.硬件"></a>3.硬件</h3><p>是 计算机硬件 的简称，是指 <strong>计算机系统 中由电子，机械和光电 元件 等组成的各种物理装置的总称</strong>。. 这些物理装置按 系统结构 的要求构成一个有机整体为 计算机软件 运行提供物质基础。. 简而言之，硬件的功能是输入并存储 程序 和数据，以及 执行程序 把 数据 加工成可以利用的形式。. 从外观上来看，微机由 主机 箱和 外部设备 组成。.</p>
+<h3 id="4-操作系统"><a href="#4-操作系统" class="headerlink" title="4.操作系统"></a>4.操作系统</h3><p>操作系统（operating system，简称OS）是管理<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/计算机硬件/5459592">计算机硬件</a>与<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/软件/12053">软件</a>资源的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/计算机程序/3220205">计算机程序</a>。操作系统需要处理如管理与<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/配置/2394679">配置</a><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/内存/103614">内存</a>、决定<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/系统资源/974435">系统资源</a>供需的优先次序、控制<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/输入设备/10823368">输入设备</a>与<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/输出设备/10823333">输出设备</a>、操作网络与管理<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/文件系统/4827215">文件系统</a>等基本事务。操作系统也提供一个让用户与系统<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/交互/6964417">交互</a>操作的界面。</p>
+<h3 id="5-软件"><a href="#5-软件" class="headerlink" title="5.软件"></a>5.软件</h3><p>包括<strong>程序</strong>、<strong>数据</strong>及其相关<strong>文档</strong>的完整<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=集合&amp;spm=1001.2101.3001.7020">集合</a></p>
+<h3 id="13-通信软件"><a href="#13-通信软件" class="headerlink" title="13.通信软件"></a>13.通信软件</h3><p>是指<strong>实现通信协议的软件</strong></p>
+<ul>
+<li>完成数据/信息传输与交换的软件</li>
+<li>完成数据/信息产生与应用的软件</li>
+<li>实现网络中的管理/计费的软件</li>
+</ul>
+<p>特征：</p>
+<ul>
+<li>线程设计：多终端通信</li>
+<li>协议体系：协议栈与报文传递</li>
+<li>通信协议：状态机与协议</li>
+<li>报文协议：协议解析与处理</li>
+<li>字节与报文协议：数据接收与报文识别</li>
+<li>操作系统内核：需要硬件驱动程序的支持</li>
+<li>计算机的IO接口：需要通信硬件的支持</li>
+</ul>
+<h3 id="6-应用软件"><a href="#6-应用软件" class="headerlink" title="6.应用软件"></a>6.应用软件</h3><p>应用软件（Application）是和系统软件相对应的，是用户可以使用的各种<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/程序设计语言/2317999">程序设计语言</a>，以及用各种程序设计语言编制的应用程序的集合，分为应用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/软件包">软件包</a>和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/用户程序/7450916">用户程序</a>。应用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/软件包">软件包</a>是利用计算机解决某类问题而设计的程序的集合，多供用户使用。</p>
+<p>应用软件是为满足用户不同领域、不同问题的应用需求而提供的那部分软件。 它可以拓宽计算机系统的应用领域，放大硬件的功能。</p>
+<h3 id="7-APP"><a href="#7-APP" class="headerlink" title="7.APP"></a>7.APP</h3><p>指<strong>智能手机的第三方应用程序</strong>。</p>
+<p>主要指的都是ios mac android等系统下的应用软件。</p>
+<h3 id="8-编程语言"><a href="#8-编程语言" class="headerlink" title="8.编程语言"></a>8.编程语言</h3><p>编程语言（programming language）可以简单的理解为一种计算机和人都能识别的语言。一种计算机语言让程序员能够准确地定义计算机所需要使用的数据，并精确地定义在不同情况下所应当采取的行动。</p>
+<p>计算机编程语言主要包括汇编语言、机器语言以及高级语言</p>
+<h3 id="9-编辑"><a href="#9-编辑" class="headerlink" title="9.编辑"></a>9.编辑</h3><h3 id="10-编译"><a href="#10-编译" class="headerlink" title="10.编译"></a>10.编译</h3><p>编译就是<strong>把高级语言变成计算机可以识别的2进制语言</strong>，计算机只认识1和0，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/编译程序/8290180">编译程序</a>把人们熟悉的语言换成2进制的；将源代码一次性转换成目标代码的过程。</p>
+<p>1、利用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/编译程序/8290180">编译程序</a>从源语言编写的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/源程序/9752646">源程序</a>产生<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/目标程序/8082041">目标程序</a>的过程。</p>
+<p>2、用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/编译程序/8290180">编译程序</a>产生<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/目标程序/8082041">目标程序</a>的动作</p>
+<h3 id="11-脚本"><a href="#11-脚本" class="headerlink" title="11.脚本"></a>11.脚本</h3><p>使用一种特定的描述性 语言 ，依据一定的 格式 编写的 可执行文件</p>
+<h3 id="12-解释执行"><a href="#12-解释执行" class="headerlink" title="12.解释执行"></a>12.解释执行</h3><p>编译：将源代码一次性转换成目标代码的过程</p>
+<p>解释：将源代码逐条转换成目标代码同时逐条运行的过程。</p>
+<p>执行解释过程的程序叫做解释器</p>
+<h3 id="14-命令"><a href="#14-命令" class="headerlink" title="14.命令"></a>14.命令</h3><p>计算机命令：指计算机的快捷指令</p>
+<ul>
+<li><p>命令是应用程序(Application)向操作系统(OS)的交流。</p>
+</li>
+<li><p>指令是操作系统给CPU的处理信息。</p>
+</li>
+<li><p>计算机指令包括计算机命令。</p>
+</li>
+</ul>
+<h3 id="15-指令"><a href="#15-指令" class="headerlink" title="15.指令"></a>15.指令</h3><p>指令是<strong>控制计算机执行的命令</strong>，它由操作码和地址码组成。</p>
+<p>指令是<strong>计算机能实现的基本操作，是指挥机器工作的指示和命令</strong>，指令均为二进制数形式；指令由操作码和地址码组成，操作码告诉计算机执行什么操作，地址码告诉计算机到哪个存储单元地址中读取参与操作的数据。</p>
+<h3 id="16-程序"><a href="#16-程序" class="headerlink" title="16.程序"></a>16.程序</h3><p>程序是<strong>一组计算机能识别和执行的指令</strong>，是若干指令或命令的集合，运行于电子计算机上，满足人们某种需求的信息化工具。</p>
+<h3 id="17-通信程序"><a href="#17-通信程序" class="headerlink" title="17.通信程序"></a>17.通信程序</h3><p>利用通信协议编写的具有通信功能的程序</p>
+<h3 id="18-数据"><a href="#18-数据" class="headerlink" title="18.数据"></a>18.数据</h3><p><strong>程序</strong>文件中包含的 变量初值 和程序使用的 字面常量值 。</p>
+<h3 id="19-数据结构"><a href="#19-数据结构" class="headerlink" title="19.数据结构"></a>19.数据结构</h3><p>相互之间存在一种或多种特定关系的数据元素的集合</p>
+<h3 id="20-缓冲区（缓存）"><a href="#20-缓冲区（缓存）" class="headerlink" title="20.缓冲区（缓存）"></a>20.缓冲区（缓存）</h3><p><strong>内存空间的一部分</strong>。也就是说，在内存空间中预留了一定的存储空间，这些存储空间用来缓冲输入或输出的数据，这部分预留的空间就叫做缓冲区。缓冲区根据其对应的是输入设备还是输出设备，分为输入缓冲区和输出缓冲区。</p>
+<h3 id="21-变量"><a href="#21-变量" class="headerlink" title="21.变量"></a>21.变量</h3><p>没有固定的值，可以改变的数；在程序运行时其值可以改变的量</p>
+<h3 id="22-函数"><a href="#22-函数" class="headerlink" title="22.函数"></a>22.函数</h3><p>函数是指<strong>一段可以直接被另一段程序或代码引用的程序或代码</strong>。 也叫做子程序、（OOP中）方法。</p>
+<h3 id="23-子程序"><a href="#23-子程序" class="headerlink" title="23.子程序"></a>23.子程序</h3><p>是一个<strong>大型程序中的某部份代码，由一个或多个语句块组成</strong>。 它负责完成某项特定任务，而且相较于其他代码，具备相对的独立性。</p>
+<p>所有的高级语言中都有子程序这个概念，用子程序实现模块的功能。 在 C语言 中，子程序是由一个主函数和若干个函数构成的</p>
+<h3 id="24-队列"><a href="#24-队列" class="headerlink" title="24.队列"></a>24.队列</h3><p>队列是一种特殊的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/线性表/3228081">线性表</a>，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作，和栈一样，队列是一种操作受限制的线性表。进行插入操作的端称为队尾，进行删除操作的端称为队头。</p>
+<h3 id="25-进程"><a href="#25-进程" class="headerlink" title="25.进程"></a>25.进程</h3><p>进程（Process）是计算机中的<strong>程序关于某数据集合上的一次运行活动</strong>，是系统进行资源分配和调度的基本单位，是 操作系统 结构的基础。</p>
+<p>进程是线程的容器。 程序是指令、数据及其组织形式的描述，进程是程序的实体。</p>
+<p>一个程序就是一个进程，每个进程至少1个线程</p>
+<h3 id="26-线程"><a href="#26-线程" class="headerlink" title="26.线程"></a>26.线程</h3><p><strong>线程在程序中是独立的、并发的执行流。</strong></p>
+<p>进程仅负责为各个线程提供所需的资源，真正执行任务的是线程，而不是进程。</p>
+<h3 id="27-通信线程"><a href="#27-通信线程" class="headerlink" title="27.通信线程"></a>27.通信线程</h3><h3 id="28-阻塞-非阻塞"><a href="#28-阻塞-非阻塞" class="headerlink" title="28.阻塞/非阻塞"></a>28.阻塞/非阻塞</h3><p><strong>阻塞</strong>和<strong>非阻塞</strong>指的是调用者（<strong>程序</strong>）在等待返回结果（或输入）时的状态。</p>
+<ul>
+<li><p>阻塞时，在调用结果返回前，当前线程会被<strong>挂起</strong>，并在得到结果之后返回。</p>
+</li>
+<li><p>非阻塞时，如果不能立刻得到结果，则该调用者不会阻塞当前线程。因此对应非阻塞的情况，调用者需要定时轮询查看处理状态。</p>
+</li>
+</ul>
+<h3 id="29-文件"><a href="#29-文件" class="headerlink" title="29.文件"></a>29.文件</h3><h3 id="30-设备文件"><a href="#30-设备文件" class="headerlink" title="30.设备文件"></a>30.设备文件</h3><h3 id="31-硬件接口"><a href="#31-硬件接口" class="headerlink" title="31.硬件接口"></a>31.硬件接口</h3><h3 id="32-通信线路"><a href="#32-通信线路" class="headerlink" title="32.通信线路"></a>32.通信线路</h3><h3 id="33-通信硬件接口"><a href="#33-通信硬件接口" class="headerlink" title="33.通信硬件接口"></a>33.通信硬件接口</h3><h3 id="34-路由"><a href="#34-路由" class="headerlink" title="34.路由"></a>34.路由</h3><h3 id="35-路由表"><a href="#35-路由表" class="headerlink" title="35.路由表"></a>35.路由表</h3><h2 id="二、状态机"><a href="#二、状态机" class="headerlink" title="二、状态机"></a>二、状态机</h2><p>有一个文本文件需要传输，但接收方不知道文件长度。这是用你的学号后2位作为文件结束，请设计一个识别文件结束的状态机。比如学号是35<br><img src="1.png" alt="img"></p>
+<h2 id="三、MAVLINK"><a href="#三、MAVLINK" class="headerlink" title="三、MAVLINK"></a>三、MAVLINK</h2><p>MAVLINK (报文的定义和封装 \ 看PPT)</p>
+<h2 id="四、实验"><a href="#四、实验" class="headerlink" title="四、实验"></a>四、实验</h2><p>这几个程序 已经很短了，但是里面有很多含义的。希望主句看懂</p>
+<p>短到只有 几行，最长是长度帧，也是100行 左右</p>
+<p>问答 和 写程序</p>
+<p>写 状态机程序、写报文结构程序</p>
+<h3 id="实验1"><a href="#实验1" class="headerlink" title="实验1"></a>实验1</h3><h3 id="实验2"><a href="#实验2" class="headerlink" title="实验2"></a>实验2</h3><h3 id="实验3"><a href="#实验3" class="headerlink" title="实验3"></a>实验3</h3>
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/der-cli/" data-toggle="tooltip" data-placement="top" title="Der Cli">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    Tips: 
+    
+      Please indicate the source and original author when reprinting or quoting this article.
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=《通信软件设计》期末考点总结&body=Hi,I found this website and thought you might like it https://yesmore.cc/cn/通信软件设计期末考点总结/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '023394a5cc676891115f',
+      clientSecret: '06373a7dc70dc35f5d7441845ec9ec6c275514e5',
+      repo: 'gitblogv2',
+      owner: 'yesmore',
+      admin: 'yesmore',
+      id: 'Thu May 12 2022 07:52:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E5%BF%B5%E9%A2%98"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、概念题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E9%80%9A%E4%BF%A1"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.通信</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2.信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-%E7%A1%AC%E4%BB%B6"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">3.硬件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">4.操作系统</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-%E8%BD%AF%E4%BB%B6"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">5.软件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#13-%E9%80%9A%E4%BF%A1%E8%BD%AF%E4%BB%B6"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">13.通信软件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">6.应用软件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-APP"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">7.APP</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">8.编程语言</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#9-%E7%BC%96%E8%BE%91"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">9.编辑</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#10-%E7%BC%96%E8%AF%91"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">10.编译</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#11-%E8%84%9A%E6%9C%AC"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">11.脚本</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#12-%E8%A7%A3%E9%87%8A%E6%89%A7%E8%A1%8C"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">12.解释执行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#14-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">1.14.</span> <span class="toc-nav-text">14.命令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#15-%E6%8C%87%E4%BB%A4"><span class="toc-nav-number">1.15.</span> <span class="toc-nav-text">15.指令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#16-%E7%A8%8B%E5%BA%8F"><span class="toc-nav-number">1.16.</span> <span class="toc-nav-text">16.程序</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#17-%E9%80%9A%E4%BF%A1%E7%A8%8B%E5%BA%8F"><span class="toc-nav-number">1.17.</span> <span class="toc-nav-text">17.通信程序</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#18-%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">1.18.</span> <span class="toc-nav-text">18.数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#19-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.19.</span> <span class="toc-nav-text">19.数据结构</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#20-%E7%BC%93%E5%86%B2%E5%8C%BA%EF%BC%88%E7%BC%93%E5%AD%98%EF%BC%89"><span class="toc-nav-number">1.20.</span> <span class="toc-nav-text">20.缓冲区（缓存）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#21-%E5%8F%98%E9%87%8F"><span class="toc-nav-number">1.21.</span> <span class="toc-nav-text">21.变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#22-%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.22.</span> <span class="toc-nav-text">22.函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#23-%E5%AD%90%E7%A8%8B%E5%BA%8F"><span class="toc-nav-number">1.23.</span> <span class="toc-nav-text">23.子程序</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#24-%E9%98%9F%E5%88%97"><span class="toc-nav-number">1.24.</span> <span class="toc-nav-text">24.队列</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#25-%E8%BF%9B%E7%A8%8B"><span class="toc-nav-number">1.25.</span> <span class="toc-nav-text">25.进程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#26-%E7%BA%BF%E7%A8%8B"><span class="toc-nav-number">1.26.</span> <span class="toc-nav-text">26.线程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#27-%E9%80%9A%E4%BF%A1%E7%BA%BF%E7%A8%8B"><span class="toc-nav-number">1.27.</span> <span class="toc-nav-text">27.通信线程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#28-%E9%98%BB%E5%A1%9E-%E9%9D%9E%E9%98%BB%E5%A1%9E"><span class="toc-nav-number">1.28.</span> <span class="toc-nav-text">28.阻塞&#x2F;非阻塞</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#29-%E6%96%87%E4%BB%B6"><span class="toc-nav-number">1.29.</span> <span class="toc-nav-text">29.文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#30-%E8%AE%BE%E5%A4%87%E6%96%87%E4%BB%B6"><span class="toc-nav-number">1.30.</span> <span class="toc-nav-text">30.设备文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#31-%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">1.31.</span> <span class="toc-nav-text">31.硬件接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#32-%E9%80%9A%E4%BF%A1%E7%BA%BF%E8%B7%AF"><span class="toc-nav-number">1.32.</span> <span class="toc-nav-text">32.通信线路</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#33-%E9%80%9A%E4%BF%A1%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">1.33.</span> <span class="toc-nav-text">33.通信硬件接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#34-%E8%B7%AF%E7%94%B1"><span class="toc-nav-number">1.34.</span> <span class="toc-nav-text">34.路由</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#35-%E8%B7%AF%E7%94%B1%E8%A1%A8"><span class="toc-nav-number">1.35.</span> <span class="toc-nav-text">35.路由表</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、状态机</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81MAVLINK"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、MAVLINK</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%AE%9E%E9%AA%8C"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、实验</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C1"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">实验1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C2"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">实验2</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C3"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">实验3</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#software" title="software">software</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://yesmore.cc" target="_blank">快乐码原</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+
+      
+    </div>
+  </div> 
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yesmore">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          大Van家
+          2022
+
+          <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
+          <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
+          站点总字数：<span class="post-count">445.2k</span>
+          <!-- <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/mouseclick.js"  content='y,e,s,m,o,r,e,c,c' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "yesmore";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/通信软件设计期末考点总结/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://yesmore.cc/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/yesmore/yesmore.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

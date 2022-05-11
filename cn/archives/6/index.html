@@ -233,9 +233,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/categories/">
               
-              关于
+              分类
               
               
             </a>
@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
@@ -265,6 +265,8 @@
           
           
           
+          
+          
           <li>
             <a href="/tags/">
               
@@ -273,8 +275,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -462,6 +462,42 @@
   <!-- top end -->
   
 
+  <a href="/cn/FrontEndAdvanced-Compile/">
+    <h1 class="post-title">
+      【前端进阶】从Webpack源码分析代码编译流程以及合理搭建前端项目
+    </h1>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      要点：
+Webpack源码解析Node.js 的出现，越来越多前端自动化工具涌现出来，包括早期的 Grunt、Gulp 以及现在流行的 webpack。随着这些工具的功能愈发强大，其重要性也在不断提升，成熟的框架都已经将这些工具封装成专用的命令行工具，比如 angular-cli 和 vue-cli。这一课时我们将继续承接前面课程的“硬核”风格，通过分析 webpack(5.0.0-beta......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    By 大Van家 on
+    2021-09-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
+    
+    <a href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/FrontEndAdvanced-performance-optimization/">
     <h1 class="post-title">
       【前端进阶】前端性能优化
@@ -472,9 +508,8 @@
     <div class="post-content-preview">
       要点：
 性能是前端领域关注度非常高的话题，因为页面性能的好坏会直接影响用户体验。为了不断提升用户体验，前端工程师往往会对页面性能不断改进，而这个改进的过程就叫性能优化。这一讲我们就详细探究性能优化相关的内容。
-一、性能指标
-什么是性能？性能是指程序的运行速度，而前端性能是指页面的响应速度，提到速度必然离不开一个变量，那就是时间。所以我们会看到性能指标都是以时间为单位来测量的。
-前端性能的指标......
+一、性能指标什么是性能？性能是指程序的运行速度，而前端性能是指页面的响应速度，提到速度必然离不开一个变量，那就是时间。所以我们会看到性能指标都是以时间为单位来测量的。
+前端性能的指标有......
     </div>
   </a>
   
@@ -510,11 +545,9 @@
     </h3>
     <div class="post-content-preview">
       要点：组件、前端路由、组件间通信。
-组件
-不同框架、工具对组件的定义和实现各不相同，但可以用一句话来概括它们对组件的定义： 组件就是基于视图的模块 。
+组件不同框架、工具对组件的定义和实现各不相同，但可以用一句话来概括它们对组件的定义： 组件就是基于视图的模块 。
 组件的核心任务就是将数据渲染到视图并监听用户在视图上的操作。这一课时，我们以主流的 Vue 2.6 和 React 16.13 的源码为例，讲解较为复杂的数据渲染到视图的实现过程。
-一、视图
-虽然 Vue 和 React 在编写组件视图的方式......
+一、视图虽然 Vue 和 React 在编写组件视图的方式上有......
     </div>
   </a>
   
@@ -588,11 +621,10 @@
     </h3>
     <div class="post-content-preview">
       要点：同源策略、跨域解决方案
-浏览器的同源策略（Same Origin Policy）
-源（Origin）是由 URL 中协议、主机名（域名 domain）以及端口共同组成的部分。在下面的网址中，源由协议 https、主机名 kaiwu.lagou.com 和默认端口 443 共同组成。
+浏览器的同源策略（Same Origin Policy）源（Origin）是由 URL 中协议、主机名（域名 domain）以及端口共同组成的部分。在下面的网址中，源由协议 https、主机名 kaiwu.lagou.com 和默认端口 443 共同组成。
 
 URL 中的源
-如果两个 URL 的源相同，我们就称之为同源。下面的 3 个 URL 和示例 URL ......
+如果两个 URL 的源相同，我们就称之为同源。下面的 3 个 URL 和示例 URL 都......
     </div>
   </a>
   
@@ -631,9 +663,8 @@ URL 中的源
     <div class="post-content-preview">
       要点：Promise
 HTTP（HyperText Transfer Protocol，超文本传输协议）是浏览器与服务端之间最主要的通信协议，这一课时主要分析 HTTP 及其相关协议的特点。
-HTTP/0.9
-1991 年 HTTP 正式诞生，当时的版本是 0.9，从名字可以看出，该协议的作用是传输超文本内容 HTML。
-协议定义了客户端发起请求、服务端响应请求的通信模式。请求报文内容只有 ......
+HTTP/0.91991 年 HTTP 正式诞生，当时的版本是 0.9，从名字可以看出，该协议的作用是传输超文本内容 HTML。
+协议定义了客户端发起请求、服务端响应请求的通信模式。请求报文内容只有 1......
     </div>
   </a>
   
@@ -672,9 +703,8 @@ HTTP/0.9
     <div class="post-content-preview">
       要点：Promise
 Promise、async/await 已经逐渐成为主流的异步处理方式，所以了解其实现原理非常重要。这一j节就来讲讲 Promise 和 async/await 的实现。
-一、Promise/A+ 规范
-在编写 Promise 之前，我们必须了解 Promise/A+ 规范。由于内容较长，下面我总结了几点，更详细的内容可以查阅 Promise/A+ 规范。
-Promis......
+一、Promise/A+ 规范在编写 Promise 之前，我们必须了解 Promise/A+ 规范。由于内容较长，下面我总结了几点，更详细的内容可以查阅 Promise/A+ 规范。
+Promise......
     </div>
   </a>
   
@@ -710,8 +740,7 @@ Promis......
     </h3>
     <div class="post-content-preview">
       这一节从编译过程和内存管理两个方面带你来探索 JavaScript 引擎的工作机制。
-一、编译过程
-在“加餐1：手写 CSS 预处理器”中提过编译器的基本工作流程，大体上包括 3 个步骤：解析（Parsing）、转换（Transformation）及代码生成（Code Generation），JavaScript 引擎与之相比大体上也遵循这个过程，可分为解析、解释和优化 3 个步骤。下面我们......
+一、编译过程在“加餐1：手写 CSS 预处理器”中提过编译器的基本工作流程，大体上包括 3 个步骤：解析（Parsing）、转换（Transformation）及代码生成（Code Generation），JavaScript 引擎与之相比大体上也遵循这个过程，可分为解析、解释和优化 3 个步骤。下面我们就......
     </div>
   </a>
   
@@ -724,45 +753,6 @@ Promis......
     <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     <a href="/tags/#Browser" title="Browser"><i class="fa fa-tag" style="color: aqua;"></i> Browser</a>
-    
-    <a href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/FrontEndAdvanced-JsShort/">
-    <h1 class="post-title">
-      【前端进阶】JavaScript的缺点
-    </h1>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      随着前端快速发展，JavaScript 语言的设计缺陷在大型项目中逐渐显露。
-第 10 课时提到的模块问题就是其中之一，但庆幸的是，ES6 模块在原生层面解决了这个问题，不同环境下的兼容性问题也可以由工具转化代码来解决。
-这一课时要提到的类型问题，是一个需要依赖第三方规范和工具来解决的缺陷。JavaScript 的类型问题具体表现在下面 3 个方面。
-1. 类型声明
-前面在第 08 课时中已......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    By 大Van家 on
-    2021-09-09
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JavaScript" title="JavaScript"><i class="fa fa-tag" style="color: aqua;"></i> JavaScript</a>
     
     <a href="/tags/#前端进阶" title="前端进阶"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
     
@@ -889,6 +879,10 @@ Promis......
     
     
     
+    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
+    
+    
+    
     <a href="/tags/#Vue" title="Vue" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Vue</a>
     
     
@@ -898,10 +892,6 @@ Promis......
     
     
     <a href="/tags/#开源项目" title="开源项目" rel="7"><i class="fa fa-tag" style="color: aqua;"></i> 开源项目</a>
-    
-    
-    
-    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
     
     
     
@@ -945,6 +935,14 @@ Promis......
     
     
     
+    <a href="/tags/#Web安全" title="Web安全" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
+    
+    
+    
+    <a href="/tags/#知识扫盲" title="知识扫盲" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
+    
+    
+    
     <a href="/tags/#TypeScript" title="TypeScript" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> TypeScript</a>
     
     
@@ -954,14 +952,6 @@ Promis......
     
     
     <a href="/tags/#爬虫" title="爬虫" rel="13"><i class="fa fa-tag" style="color: aqua;"></i> 爬虫</a>
-    
-    
-    
-    <a href="/tags/#Web安全" title="Web安全" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> Web安全</a>
-    
-    
-    
-    <a href="/tags/#知识扫盲" title="知识扫盲" rel="3"><i class="fa fa-tag" style="color: aqua;"></i> 知识扫盲</a>
     
     
     
@@ -985,15 +975,15 @@ Promis......
     
     
     
+    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
+    
+    
+    
     <a href="/tags/#脚手架" title="脚手架" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 脚手架</a>
     
     
     
     <a href="/tags/#Hexo" title="Hexo" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Hexo</a>
-    
-    
-    
-    <a href="/tags/#链友" title="链友" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 链友</a>
     
     
     
@@ -1013,6 +1003,10 @@ Promis......
     
     
     
+    <a href="/tags/#React" title="React" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
+    
+    
+    
     <a href="/tags/#MySQL" title="MySQL" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> MySQL</a>
     
     
@@ -1025,7 +1019,7 @@ Promis......
     
     
     
-    <a href="/tags/#React" title="React" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
+    <a href="/tags/#software" title="software" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> software</a>
     
     
   </div>
@@ -1095,6 +1089,10 @@ Promis......
 <div class="widget">
   <ul style="padding-left: 0;">
     
+    <a href="../../%E9%80%9A%E4%BF%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%9C%9F%E6%9C%AB%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/">
+      <li style="list-style: none;">《通信软件设计》期末考点总结</li>
+    </a>
+    
     <a href="../../der-cli/">
       <li style="list-style: none;">Der Cli</li>
     </a>
@@ -1111,10 +1109,6 @@ Promis......
       <li style="list-style: none;">相等性判断</li>
     </a>
     
-    <a href="../../20_lookupGetter/">
-      <li style="list-style: none;">lookupGetter</li>
-    </a>
-    
   </ul>
 </div>
 
@@ -1124,9 +1118,9 @@ Promis......
         <!-- Archives -->
 
 <!-- <h5><a href="/archives/">archives</a></h5> -->
-<h5><a href="/archives/">归档（141） </a></h5>
+<h5><a href="/archives/">归档（142） </a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/07/">July 2021</a><span class="archive-list-count">44</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1163,20 +1157,16 @@ Promis......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
     </a>
     
-    <a href="/categories/#Vue">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
-    </a>
-    
     <a href="/categories/#杂记">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 杂记</li>
     </a>
     
-    <a href="/categories/#Echarts">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Echarts</li>
+    <a href="/categories/#Vue">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
     </a>
     
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    <a href="/categories/#Echarts">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Echarts</li>
     </a>
     
     <a href="/categories/#Browser">
@@ -1185,6 +1175,10 @@ Promis......
     
     <a href="/categories/#CSS">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> CSS</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#HTML">
@@ -1199,6 +1193,10 @@ Promis......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 操作系统</li>
     </a>
     
+    <a href="/categories/#Web安全">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Web安全</li>
+    </a>
+    
     <a href="/categories/#TypeScript">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> TypeScript</li>
     </a>
@@ -1207,36 +1205,52 @@ Promis......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Python</li>
     </a>
     
-    <a href="/categories/#Web安全">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Web安全</li>
-    </a>
-    
     <a href="/categories/#websocket">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> websocket</li>
-    </a>
-    
-    <a href="/categories/#建站指南">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#链友">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
-    </a>
-    
-    <a href="/categories/#Hexo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
     </a>
     
     <a href="/categories/#知识扫盲">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 知识扫盲</li>
     </a>
     
+    <a href="/categories/#建站指南">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
+    </a>
+    
+    <a href="/categories/#链友">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 链友</li>
+    </a>
+    
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
+    </a>
+    
+    <a href="/categories/#Hexo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Hexo</li>
+    </a>
+    
     <a href="/categories/#Uniapp">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Uniapp</li>
+    </a>
+    
+    <a href="/categories/#免费api">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
+    </a>
+    
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
+    </a>
+    
+    <a href="/categories/#React">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
+    </a>
+    
+    <a href="/categories/#Eggjs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
+    </a>
+    
+    <a href="/categories/#Electron">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
     </a>
     
     <a href="/categories/#Nginx">
@@ -1255,8 +1269,28 @@ Promis......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
+    <a href="/categories/#software">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> software</li>
+    </a>
+    
     <a href="/categories/#MongDB">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> MongDB</li>
+    </a>
+    
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
+    </a>
+    
+    <a href="/categories/#JavaScript">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Linux">
@@ -1269,42 +1303,6 @@ Promis......
     
     <a href="/categories/#Demo">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#免费api">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
-    </a>
-    
-    <a href="/categories/#Eggjs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
-    </a>
-    
-    <a href="/categories/#Electron">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Electron</li>
-    </a>
-    
-    <a href="/categories/#React">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
-    </a>
-    
-    <a href="/categories/#NodeJs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#JavaScript">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
     </a>
     
     <a href="/categories/#Demo">
@@ -1435,7 +1433,7 @@ Promis......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">443.3k</span>
+          站点总字数：<span class="post-count">445.2k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
