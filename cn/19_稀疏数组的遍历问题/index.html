@@ -246,6 +246,19 @@
           
           
           <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
             <a href="/algorithms/">
               
               
@@ -254,14 +267,7 @@
           
           
           
-          <li>
-            <a href="/categories/">
-              
-              分类
-              
-              
-            </a>
-          </li>
+          
           
           
           
@@ -273,12 +279,6 @@
               
             </a>
           </li>
-          
-          
-          
-          
-          
-          
           
           
           
@@ -421,7 +421,7 @@
             <span class="meta">
               文章共 
               <span class="post-count">
-                417
+                419
               </span> 
               字
             </span>
@@ -487,9 +487,10 @@
         <blockquote>
 <p>同系列文章请查看：<a target="_blank" rel="noopener" href="https://github.com/yesmore/pre-interview">Github：pre-interview</a></p>
 </blockquote>
-<h2 id="JS稀疏数组遍历问题"><a href="#JS稀疏数组遍历问题" class="headerlink" title="JS稀疏数组遍历问题"></a>JS稀疏数组遍历问题</h2><p>前置知识：</p>
+<h2 id="JS稀疏数组遍历问题">JS稀疏数组遍历问题</h2>
+<p>前置知识：</p>
 <ul>
-<li>JavaScript并没有常规的数组，所有的数组其实就是个对象，只不过会自动管理一些”数字”属性和length属性罢了。</li>
+<li>JavaScript并没有常规的数组，所有的数组其实就是个对象，只不过会自动管理一些&quot;数字&quot;属性和length属性罢了。</li>
 <li><strong>JavaScript中的数组根本没有索引，因为索引应该是数字，而JavaScript中数组的索引其实是字符串</strong>：arr[1]其实就是arr[“1”]，给arr[“1000”] = 1，arr.length也会自动变为1001。</li>
 <li><strong>JavaScript中的对象就是字符串到任意值的键值对。注意键只能是字符串</strong>。</li>
 </ul>
@@ -502,9 +503,10 @@
 <p>分别使用 <code>find</code> 和 <code>forEach</code> 方法遍历数组：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, , , <span class="number">2</span>, <span class="number">3</span>, , , <span class="number">4</span>, , , , , , , <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, , , <span class="number">8</span>]</span><br><span class="line"></span><br><span class="line">arr.find(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;find: &#x27;</span> + item);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">arr.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;forEach: &#x27;</span> + item);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>打印结果：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/9D_K`GB_9PLI[L3I4WBE83N.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/9D_K%60GB_9PLI%5BL3I4WBE83N.png" alt=""></p>
 <p>为什么forEach忽略了空元素，而find不会忽略？</p>
-<h4 id="arr-find"><a href="#arr-find" class="headerlink" title="arr.find()"></a>arr.find()</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, , , <span class="number">2</span>, <span class="number">3</span>, , , <span class="number">4</span>, , , , , , , <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, , , <span class="number">8</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> item = arr.find(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> index === <span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(item); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<h4 id="arr-find">arr.find()</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, , , <span class="number">2</span>, <span class="number">3</span>, , , <span class="number">4</span>, , , , , , , <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, , , <span class="number">8</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> item = arr.find(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> index === <span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(item); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
 <p>在上面的程序中，使用了find来返回数组索引为1的元素，如果稀疏数组中的空元素（undefined）被忽略了的话，那就应该打印 <strong>2</strong>，既然如此 arr 不就相当于是 <code>[1,2,3,4,5,6,7,8]</code> 了吗？这显然是不合理的。这里要从find方法的目的来分析原因。</p>
 <p>那为什么 forEach 会忽略空元素？这也要从 forEach 本身作用来看，forEach 的设计目的只是用来遍历数组</p>
 
@@ -797,7 +799,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">445.4k</span>
+          站点总字数：<span class="post-count">445.7k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
