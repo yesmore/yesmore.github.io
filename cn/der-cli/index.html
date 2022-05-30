@@ -222,17 +222,6 @@
           <!-- 
           
           <li>
-            <a href="/archives/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/algorithms/">
               
               
@@ -241,12 +230,23 @@
           
           
           
-          
-          
           <li>
             <a href="/about/">
               
               关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/archives/">
+              
+              归档
               
               
             </a>
@@ -487,16 +487,16 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p align="center">
-    <img width='100px' src='logo-der.png' alt='der'/>
+	<img width='100px' src='logo-der.png' alt='der'/>
 </p>
-
 <p align="center">⚡𝓓𝓮𝓻 - A scaffolding tool for FE</p>
-
-<h3 id="What-is-𝓓𝓮𝓻"><a href="#What-is-𝓓𝓮𝓻" class="headerlink" title="What is 𝓓𝓮𝓻?"></a>What is 𝓓𝓮𝓻?</h3><ul>
+<h3 id="What-is-𝓓𝓮𝓻">What is 𝓓𝓮𝓻?</h3>
+<ul>
 <li>A <strong>scaffolding tool</strong> to improve development efficiency for the front end, build with <strong>Node.js</strong>.</li>
 <li>一个提升前端开发效率的脚手架工具。</li>
 </ul>
-<h2 id="𝓓𝓮𝓻’s-Feature"><a href="#𝓓𝓮𝓻’s-Feature" class="headerlink" title="𝓓𝓮𝓻’s Feature"></a>𝓓𝓮𝓻’s Feature</h2><p><img width='300px' src='der.png' alt='der'/></p>
+<h2 id="𝓓𝓮𝓻’s-Feature">𝓓𝓮𝓻’s Feature</h2>
+<img width='300px' src='der.png' alt='der'/>
 <ul>
 <li>😎 专一性: 专注于前端<strong>模板</strong>与<strong>自动化发布功能</strong>;</li>
 <li>⚡ 高性能: 基于 Node.js 多进程执行任务, 并配合本地缓存;</li>
@@ -504,70 +504,97 @@
 <li>🔥 规范化: 使用 <strong>Lerna</strong> 工具架构仓库, 优化工作流程;</li>
 <li>🔰 安全性: 所有私人信息以本地缓存保存.</li>
 </ul>
-<h2 id="𝓓𝓮𝓻-can-do"><a href="#𝓓𝓮𝓻-can-do" class="headerlink" title="𝓓𝓮𝓻 can do"></a>𝓓𝓮𝓻 can do</h2><ul>
+<h2 id="𝓓𝓮𝓻-can-do">𝓓𝓮𝓻 can do</h2>
+<ul>
 <li>[x] Create a new project</li>
 <li>[x] Auto commit &amp; create a remote repo(github/gitee)</li>
 <li>[x] Version control</li>
 <li>[x] Specification submission code</li>
 <li>[ ] then…</li>
 </ul>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h4 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install @der-cli/core -g</span></span><br></pre></td></tr></table></figure>
-<h4 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mikdir mytest</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mytest</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init test-demo</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 根据步骤创建</span></span><br></pre></td></tr></table></figure>
-<h4 id="提交-amp-初始化-Github-Gitee"><a href="#提交-amp-初始化-Github-Gitee" class="headerlink" title="提交 &amp; 初始化 Github/Gitee"></a>提交 &amp; 初始化 Github/Gitee</h4><blockquote>
+<h2 id="Quick-Start">Quick Start</h2>
+<h4 id="本地安装">本地安装</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install @der-cli/core -g</span></span><br></pre></td></tr></table></figure>
+<h4 id="初始化项目">初始化项目</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mikdir mytest</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mytest</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init test-demo</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 根据步骤创建</span></span><br></pre></td></tr></table></figure>
+<h4 id="提交-初始化-Github-Gitee">提交 &amp; 初始化 Github/Gitee</h4>
+<blockquote>
 <p>该命令会在本地初始化 <code>.git</code> , 且提交代码至远程仓库。</p>
+</blockquote>
+<blockquote>
 <p>注意：<code>der go</code> 会将代码提交至项目<strong>同名</strong>远程仓库中(package.json的name属性值)，若远程仓库不存在，则会自动创建，这需要你提前准备好你的远程仓库 APP Token, 详见  <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#App-Token">docs: App Token</a>.</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go</span></span><br></pre></td></tr></table></figure>
 <p>发布 tag</p>
 <blockquote>
 <p>该命令会删除当前版本开发分支并创建同版本 tag 分支，然后提交至远程仓库</p>
-<p>例: dev/1.0.1 =&gt; release/1.0.1，详见 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#Git-Flow-自动化">docs: Git_Flow</a>.</p>
+<p>例: dev/1.0.1 =&gt; release/1.0.1，详见 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#Git-Flow-%E8%87%AA%E5%8A%A8%E5%8C%96">docs: Git_Flow</a>.</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go -release</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go -re</span></span><br></pre></td></tr></table></figure>
-<h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><h4 id="清空脚手架本地缓存"><a href="#清空脚手架本地缓存" class="headerlink" title="清空脚手架本地缓存"></a>清空脚手架本地缓存</h4><blockquote>
-<p>关于脚手架缓存，详见 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#Cache-缓存">docs: Cache 缓存</a>.</p>
+<h2 id="More">More</h2>
+<h4 id="清空脚手架本地缓存">清空脚手架本地缓存</h4>
+<blockquote>
+<p>关于脚手架缓存，详见 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#Cache-%E7%BC%93%E5%AD%98">docs: Cache 缓存</a>.</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Default: clean all</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean --all</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or just clean dependencies</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean --dep</span></span><br></pre></td></tr></table></figure>
-<h4 id="DEBUG-模式"><a href="#DEBUG-模式" class="headerlink" title="DEBUG 模式"></a>DEBUG 模式</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der --debug</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der -d</span></span><br></pre></td></tr></table></figure>
+<h4 id="DEBUG-模式">DEBUG 模式</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der --debug</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der -d</span></span><br></pre></td></tr></table></figure>
 <p>更多命令 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md">详情</a></p>
-<h4 id="调试本地包"><a href="#调试本地包" class="headerlink" title="调试本地包"></a>调试本地包</h4><p>see <a href="./Documents.md">docs</a></p>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<h4 id="调试本地包">调试本地包</h4>
+<p>see <a href="./Documents.md">docs</a></p>
+<h2 id="TODO">TODO</h2>
+<ul>
 <li>[ ] Add test:BDD tests</li>
 <li>[ ] Reconstruction with TS</li>
 <li>[ ] Add feat:add page(may)</li>
 </ul>
-<h2 id="Documents-说明文档"><a href="#Documents-说明文档" class="headerlink" title="Documents 说明文档"></a>Documents 说明文档</h2><blockquote>
-<h4 id="Goodbye-context-switching"><a href="#Goodbye-context-switching" class="headerlink" title="Goodbye, context switching."></a>Goodbye, context switching.</h4><h4 id="Hello-terminal"><a href="#Hello-terminal" class="headerlink" title="Hello, terminal."></a>Hello, terminal.</h4></blockquote>
-<h3 id="需求-amp-使用场景"><a href="#需求-amp-使用场景" class="headerlink" title="需求 &amp; 使用场景"></a>需求 &amp; 使用场景</h3><blockquote>
+<h2 id="Documents-说明文档">Documents 说明文档</h2>
+<blockquote>
+<h4 id="Goodbye-context-switching">Goodbye, context switching.</h4>
+<h4 id="Hello-terminal">Hello, terminal.</h4>
+</blockquote>
+<h3 id="需求-使用场景">需求 &amp; 使用场景</h3>
+<blockquote>
 <p>所有需求与场景仅限解决本人日常开发问题，如果你有与本人同样的需求，那么此脚手架工具应该能解决你的一些问题。</p>
 </blockquote>
-<p>关于为什么要设计这个脚手架，当然是有需求，<del>没有需求的产品都是耍流氓</del>，那具体需求是啥？且看小y娓娓道来~</p>
-<h4 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h4><p>首先，作为一个前端，需要学的东西有亿点点多，特别是现在框架横行的时代，光初始化一个项目就杂七杂八多得一匹，什么 <code>vue create xxx</code>  <code>create-react-app</code> <code>npx create-nuxt-app</code> <code>yarn create vite</code> 那简直太多了，不专门拿个小本本记上谁背得住，这些是开发一个稍微正经一点的项目的必备阶段，要是每次都要去搜一下怎么初始化也太浪费时间了，于是，<code>der-cli</code> 的第一个需求来了：<strong>初始化任意前端项目, 并且可以后续自由扩展</strong>。</p>
+<p>关于为什么要设计这个脚手架，当然是有需求，<s>没有需求的产品都是耍流氓</s>，那具体需求是啥？且看小y娓娓道来~</p>
+<h4 id="项目初始化">项目初始化</h4>
+<p>首先，作为一个前端，需要学的东西有亿点点多，特别是现在框架横行的时代，光初始化一个项目就杂七杂八多得一匹，什么 <code>vue create xxx</code>  <code>create-react-app</code> <code>npx create-nuxt-app</code> <code>yarn create vite</code> 那简直太多了，不专门拿个小本本记上谁背得住，这些是开发一个稍微正经一点的项目的必备阶段，要是每次都要去搜一下怎么初始化也太浪费时间了，于是，<code>der-cli</code> 的第一个需求来了：<strong>初始化任意前端项目, 并且可以后续自由扩展</strong>。</p>
 <p>初始化什么样的前端项目呢？</p>
 <p>答：当然是想怎样就怎样！不仅是平时个人开发经常使用的模板，还可以把官方的标准模板也加上去，当然一般来说普通的标准模板不满足开发需求，所以脚手架主要会提供一些配置完善的模板，具体有多完善可以参考<a target="_blank" rel="noopener" href="https://github.com/study-vue3/fast-vue3">这个模板</a>…开个玩笑，有这模板的一半完善都ok，主要包括一些webpack配置、路由、ESlint、Store等等基本配置，能实现一个完整的、能跑起来的小demo，这就是<code>der-cli</code> 对 <code>init</code> 功能的定义。</p>
-<h4 id="发布项目"><a href="#发布项目" class="headerlink" title="发布项目"></a>发布项目</h4><p>初始化过后，就该认认真真(<del>划水水摸鱼鱼</del>)写代码了，写到一半，<del>群友提醒你做提肛运动了</del>，那你是不是该保存一下代码，咋个保存？相信大部分人都将代码放在Github或者Gitee上吧，那你又要去上面先创建个仓库，然后add remote，然后时候你也许会熟练的在terminal里面敲上了三个命令: <code>git add .</code>  <code>git commit -m &#39;feat:add a bug&#39;</code>  <code>git push</code> ，也许是打开文件夹，找到当前项目，然后打开 TortoiseGit，点点点提交走人，但是我懒了，我就不想点三下，我就点一下，想搞定所有，那需求不就来了： <code>der-cli</code> <strong>能通过一个命令完成仓库初始化本地/远程仓库、提交代码、创建分支、发布分支</strong>。 </p>
-<p>这就是 <code>der go [-re]</code> 的意义（<del>提高效率才不是为了摸鱼</del>）</p>
-<p>一般开发中，整个流水线基本流程可包括 <code>初始化 -&gt; 开发 -&gt; 代码测试 -&gt; 代码发布 -&gt; 项目部署</code>， <code>der-cli</code> 在整个 <a href="">workflow</a> 中，占据了 <strong>初始化</strong>、<strong>代码发布</strong> 两个流程。</p>
+<h4 id="发布项目">发布项目</h4>
+<p>初始化过后，就该认认真真(<s>划水水摸鱼鱼</s>)写代码了，写到一半，<s>群友提醒你做提肛运动了</s>，那你是不是该保存一下代码，咋个保存？相信大部分人都将代码放在Github或者Gitee上吧，那你又要去上面先创建个仓库，然后add remote，然后时候你也许会熟练的在terminal里面敲上了三个命令: <code>git add .</code>  <code>git commit -m 'feat:add a bug'</code>  <code>git push</code> ，也许是打开文件夹，找到当前项目，然后打开 TortoiseGit，点点点提交走人，但是我懒了，我就不想点三下，我就点一下，想搞定所有，那需求不就来了： <code>der-cli</code> <strong>能通过一个命令完成仓库初始化本地/远程仓库、提交代码、创建分支、发布分支</strong>。</p>
+<p>这就是 <code>der go [-re] </code> 的意义（<s>提高效率才不是为了摸鱼</s>）</p>
+<p>一般开发中，整个流水线基本流程可包括 <code>初始化 -&gt; 开发 -&gt; 代码测试 -&gt; 代码发布 -&gt; 项目部署 </code>， <code>der-cli</code> 在整个 <a href="">workflow</a> 中，占据了 <strong>初始化</strong>、<strong>代码发布</strong> 两个流程。</p>
 <p>不管是独立开发还是团队开发，<strong>打通项目流程，完成闭环</strong> 是提升后期开发效率的必需事项，<code>der-cli</code>让你从初始化到项目发布Tag一步到位，可以专注于代码逻辑编写。</p>
 <p>当然，一些 <a href="">github action</a> 也可以完成自动发布tag的功能，为什么不选择它们呢？ <code>der-cli</code>  把 一些 workflow 流程放到了客户端来完成，只需要全局安装了此脚手架，那么在所有项目中都能够使用这个 workflow，如果是使用类似 <a href="">github action</a> 的话，需要给每个项目都写一份 yaml 作为 workflow 配置，这让开发者的工作有了一定的重复，当然 workflow 的可定制性非常强大，是鄙人小小脚手架不可比拟滴，所以  <code>der-cli</code>  主要还是面向一些简单的、独立开发者的项目而定制的脚手架。</p>
-<h3 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h3><p><code>der-cli</code> 采用单仓库多工具包模式开发，使用 <a target="_blank" rel="noopener" href="https://github.com/lerna/lerna">Lerna</a> 管理工作流程，前端流行的开源库Babel、React等也采用了这种架构模式，每一个包都能单独下载使用，且方便管理与维护。</p>
-<p>更多架构设计请查看 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/assets/learn-der-cli/der-cli架构方案.md">der-cli架构方案</a>.</p>
-<h3 id="Git-Flow-自动化"><a href="#Git-Flow-自动化" class="headerlink" title="Git Flow 自动化"></a>Git Flow 自动化</h3><p>Git工作流程自动化。</p>
-<p>简单来说，就是代替了手动执行 <code>git add</code>、<code>git commit</code>、<code>git checkout</code> 、<code>git push</code> 等命令，通过 <code>der go</code> 以及 <code>der go -re</code> 完成了初始化仓库、代码提交、发布版本等操作，这对有一定 git 操作经验的用户来说很容易理解，即使你是新手也完全可以使用此脚手架来完成你的项目规范发布。</p>
+<h3 id="架构设计">架构设计</h3>
+<p><code>der-cli</code> 采用单仓库多工具包模式开发，使用 <a target="_blank" rel="noopener" href="https://github.com/lerna/lerna">Lerna</a> 管理工作流程，前端流行的开源库Babel、React等也采用了这种架构模式，每一个包都能单独下载使用，且方便管理与维护。</p>
+<p>更多架构设计请查看 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/assets/learn-der-cli/der-cli%E6%9E%B6%E6%9E%84%E6%96%B9%E6%A1%88.md">der-cli架构方案</a>.</p>
+<h3 id="Git-Flow-自动化">Git Flow 自动化</h3>
+<p>Git工作流程自动化。</p>
+<p>简单来说，就是代替了手动执行 <code>git add </code>、<code>git commit</code>、<code>git checkout</code> 、<code>git push</code> 等命令，通过 <code>der go</code> 以及 <code>der go -re</code> 完成了初始化仓库、代码提交、发布版本等操作，这对有一定 git 操作经验的用户来说很容易理解，即使你是新手也完全可以使用此脚手架来完成你的项目规范发布。</p>
 <p>下面详细介绍其执行流程。</p>
-<h4 id="Git-Flow-Prepare阶段"><a href="#Git-Flow-Prepare阶段" class="headerlink" title="Git Flow - Prepare阶段"></a>Git Flow - Prepare阶段</h4><p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-prepare.png" alt="gitflow-Commit"></p>
-<h4 id="Git-Flow-Init阶段"><a href="#Git-Flow-Init阶段" class="headerlink" title="Git Flow - Init阶段"></a>Git Flow - Init阶段</h4><p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-init.png" alt="gitflow-init"></p>
-<h4 id="Git-Flow-Commit阶段"><a href="#Git-Flow-Commit阶段" class="headerlink" title="Git Flow - Commit阶段"></a>Git Flow - Commit阶段</h4><p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-todo.png" alt="gitflow-Finish"></p>
-<h4 id="Git-Flow-Finish阶段"><a href="#Git-Flow-Finish阶段" class="headerlink" title="Git Flow - Finish阶段"></a>Git Flow - Finish阶段</h4><p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-finish.png" alt="gitflow-finish"></p>
-<h4 id="Git-Flow-命令"><a href="#Git-Flow-命令" class="headerlink" title="Git Flow 命令"></a>Git Flow 命令</h4><ul>
-<li><p><code>der go</code>  提交代码到远程仓库:</p>
+<h4 id="Git-Flow-Prepare阶段">Git Flow - Prepare阶段</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-prepare.png" alt="gitflow-Commit"></p>
+<h4 id="Git-Flow-Init阶段">Git Flow - Init阶段</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-init.png" alt="gitflow-init"></p>
+<h4 id="Git-Flow-Commit阶段">Git Flow - Commit阶段</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-todo.png" alt="gitflow-Finish"></p>
+<h4 id="Git-Flow-Finish阶段">Git Flow - Finish阶段</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/yesmore/img/img/gitflow-finish.png" alt="gitflow-finish"></p>
+<h4 id="Git-Flow-命令">Git Flow 命令</h4>
+<ul>
+<li>
+<p><code>der go</code>  提交代码到远程仓库:</p>
 <ul>
 <li>Prepare</li>
 <li>Init</li>
 <li>Commit</li>
 </ul>
 </li>
-<li><p><code>der go -re</code>  提交代码到远程仓库并发布Tag:</p>
+<li>
+<p><code>der go -re</code>  提交代码到远程仓库并发布Tag:</p>
 <ul>
 <li>Prepare</li>
 <li>Init</li>
@@ -576,12 +603,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="Cache-缓存"><a href="#Cache-缓存" class="headerlink" title="Cache 缓存"></a>Cache 缓存</h3><p><code>der-cli</code> 为了提高运行效率，在初始化应用以及自动发布时都采用了<strong>缓存机制</strong>，充分利用了客户端应用本地机制。但这不需要你提供 <code>root</code> 环境，<code>der-cli</code> 与其他脚手架工具遵循同样的原则: no-root，这在一定程度上能保护你的电脑文件不被误操作从而引起不必要的错误。</p>
+<h3 id="Cache-缓存">Cache 缓存</h3>
+<p><code>der-cli</code> 为了提高运行效率，在初始化应用以及自动发布时都采用了<strong>缓存机制</strong>，充分利用了客户端应用本地机制。但这不需要你提供 <code>root</code> 环境，<code>der-cli</code> 与其他脚手架工具遵循同样的原则: no-root，这在一定程度上能保护你的电脑文件不被误操作从而引起不必要的错误。</p>
 <p><code>der-cli</code> 缓存文件默认位于：<code>C:\users\[hostname]\der-cli\</code></p>
 <p>下面将解释 <code>der-cli</code> 缓存文件的位置及作用。</p>
-<h4 id="git"><a href="#git" class="headerlink" title=".git"></a>.git</h4><p>Located at <code>C:\users\[hostname]\der-cli\.git</code></p>
-<p>用于缓存 Git 操作信息，这些信息将用于代码提交、创建远程仓库、发布分支，是 <a href="#Git Flow">Git Flow</a> 流程的<strong>必要</strong>缓存。<strong>建议</strong>不要随意删除。</p>
-<h5 id="APP-Token"><a href="#APP-Token" class="headerlink" title="APP Token"></a>APP Token</h5><p>在本地缓存 <code>.git</code> 目录下，有一个名为 <code>.git_token</code> 的文件，用于保存 Github / Gitee 的 <a href="">App Token</a> 信息，这将用于 <a href="#Git Flow 自动化">Git Flow</a> 流程。包括以下值：</p>
+<h4 id="git">.git</h4>
+<p>Located at <code>C:\users\[hostname]\der-cli\.git</code></p>
+<p>用于缓存 Git 操作信息，这些信息将用于代码提交、创建远程仓库、发布分支，是 [Git Flow](#Git Flow) 流程的<strong>必要</strong>缓存。<strong>建议</strong>不要随意删除。</p>
+<h5 id="APP-Token">APP Token</h5>
+<p>在本地缓存 <code>.git</code> 目录下，有一个名为 <code>.git_token</code> 的文件，用于保存 Github / Gitee 的 <a href="">App Token</a> 信息，这将用于 [Git Flow](#Git Flow 自动化) 流程。包括以下值：</p>
 <ul>
 <li>xxxxxxxxxxxxxxxxxxxxxx (随机字符串)</li>
 </ul>
@@ -591,50 +621,68 @@
 <li>Gitee: <a target="_blank" rel="noopener" href="https://gitee.com/profile/personal_access_tokens">https://gitee.com/profile/personal_access_tokens</a></li>
 </ul>
 <blockquote>
-<p>由于 App Token 仅在创建时可见，这需要你<strong>自己在本地备份一个 Token 信息</strong>，以免当脚手架缓存文件被误删后，能快速找回；如果不这样做，也不是不行，你就需要重新在上面的链接中重新生成一个 Token. </p>
+<p>由于 App Token 仅在创建时可见，这需要你<strong>自己在本地备份一个 Token 信息</strong>，以免当脚手架缓存文件被误删后，能快速找回；如果不这样做，也不是不行，你就需要重新在上面的链接中重新生成一个 Token.</p>
 </blockquote>
-<h5 id="Git-Server"><a href="#Git-Server" class="headerlink" title="Git Server"></a>Git Server</h5><p>以 <code>.git_server</code> 文件保存的信息，用于确认远程仓库平台，包括以下值：</p>
+<h5 id="Git-Server">Git Server</h5>
+<p>以 <code>.git_server</code> 文件保存的信息，用于确认远程仓库平台，包括以下值：</p>
 <ul>
-<li>Github </li>
-<li>Gitee </li>
+<li>Github</li>
+<li>Gitee</li>
 </ul>
-<h5 id="Git-Own"><a href="#Git-Own" class="headerlink" title="Git Own"></a>Git Own</h5><p>以 <code>.git_own</code> 文件保存，用于确认仓库所属类型，包括以下值：</p>
+<h5 id="Git-Own">Git Own</h5>
+<p>以 <code>.git_own</code> 文件保存，用于确认仓库所属类型，包括以下值：</p>
 <ul>
 <li>user 表示该仓库所属个人用户</li>
 <li>org 表示该仓库所属于一个组织</li>
 </ul>
-<h5 id="Git-Login"><a href="#Git-Login" class="headerlink" title="Git Login"></a>Git Login</h5><p>以 <code>.git_login</code> 文件保存，用于保存仓库拥有者名称，包括以下值：</p>
+<h5 id="Git-Login">Git Login</h5>
+<p>以 <code>.git_login</code> 文件保存，用于保存仓库拥有者名称，包括以下值：</p>
 <ul>
 <li>Github name or Gitee name</li>
 </ul>
-<h4 id="dependencies"><a href="#dependencies" class="headerlink" title="dependencies"></a>dependencies</h4><p>Located at <code>C:\users\[hostname]\der-cli\dependencies</code></p>
+<h4 id="dependencies">dependencies</h4>
+<p>Located at <code>C:\users\[hostname]\der-cli\dependencies</code></p>
 <p>用于缓存项目依赖文件，包括 <code>der-cli</code> 源码文件。</p>
 <p>每次运行 (任意命令) 时，脚手架会在启动阶段检查脚手架源码版本，当发现新版本时，会自动更新 npm。</p>
 <blockquote>
 <p>建议国内用户切换淘宝镜像源:</p>
 <p><code>npm config set registry https://registry.npmjs.org/</code></p>
 </blockquote>
-<h4 id="template"><a href="#template" class="headerlink" title="template"></a>template</h4><p>Located at <code>C:\users\[hostname]\der-cli\template</code></p>
+<h4 id="template">template</h4>
+<p>Located at <code>C:\users\[hostname]\der-cli\template</code></p>
 <p>用于缓存 项目/组件模板 源码。</p>
 <p>当用户选中某个模板，在其 <code>init</code> 阶段时，脚手架会自动检测其 npm 发布版本，若发现有更新，则会自动更新为最新版。</p>
-<h3 id="Commands-命令"><a href="#Commands-命令" class="headerlink" title="Commands 命令"></a>Commands 命令</h3><h4 id="init-初始化项目"><a href="#init-初始化项目" class="headerlink" title="init 初始化项目"></a>init 初始化项目</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mikdir mytest</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mytest</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init test-demo</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project --debug</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project --force</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project -d -f</span></span><br></pre></td></tr></table></figure>
-<h4 id="go-提交代码"><a href="#go-提交代码" class="headerlink" title="go 提交代码"></a>go 提交代码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新缓存信息: 平台、token</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go --refreshServer --refreshToken</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新缓存信息: 平台、token、仓库类型</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go --refreshServer --refreshToken --refreshOwn</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go -d -rs -rt -ro</span></span><br></pre></td></tr></table></figure>
-<h4 id="go-发布代码"><a href="#go-发布代码" class="headerlink" title="go 发布代码"></a>go 发布代码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go -re</span></span><br></pre></td></tr></table></figure>
-<h4 id="More-1"><a href="#More-1" class="headerlink" title="More"></a>More</h4><h5 id="clean-清空本地缓存"><a href="#clean-清空本地缓存" class="headerlink" title="clean 清空本地缓存"></a>clean 清空本地缓存</h5><blockquote>
+<h3 id="Commands-命令">Commands 命令</h3>
+<h4 id="init-初始化项目">init 初始化项目</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mikdir mytest</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mytest</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init test-demo</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project --debug</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project --force</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der init my-project -d -f</span></span><br></pre></td></tr></table></figure>
+<h4 id="go-提交代码">go 提交代码</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新缓存信息: 平台、token</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go --refreshServer --refreshToken</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新缓存信息: 平台、token、仓库类型</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go --refreshServer --refreshToken --refreshOwn</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der go -d -rs -rt -ro</span></span><br></pre></td></tr></table></figure>
+<h4 id="go-发布代码">go 发布代码</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der go -re</span></span><br></pre></td></tr></table></figure>
+<h4 id="More-2">More</h4>
+<h5 id="clean-清空本地缓存">clean 清空本地缓存</h5>
+<blockquote>
 <p>关于脚手架缓存，详见 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#Cache">docs: Cache</a>.</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Default: clean all</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean --all</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> or just clean dependencies</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der clean --dep</span></span><br></pre></td></tr></table></figure>
-<h5 id="debug-模式"><a href="#debug-模式" class="headerlink" title="debug 模式"></a>debug 模式</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der --debug</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der -d</span></span><br></pre></td></tr></table></figure>
+<h5 id="debug-模式">debug 模式</h5>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> der --debug</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> der -d</span></span><br></pre></td></tr></table></figure>
 <p>更多命令 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Commands.md">详情</a>.</p>
-<h3 id="本地开发"><a href="#本地开发" class="headerlink" title="本地开发"></a>本地开发</h3><p>TODO</p>
-<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><h4 id="env"><a href="#env" class="headerlink" title="env"></a>env</h4><p><code>der-cli</code> 支持客户端环境变量设置，一般情况不需要关注环境变量。</p>
+<h3 id="本地开发">本地开发</h3>
+<p>TODO</p>
+<h3 id="Other">Other</h3>
+<h4 id="env">env</h4>
+<p><code>der-cli</code> 支持客户端环境变量设置，一般情况不需要关注环境变量。</p>
 <p>但如果你想开发本项目或其他需求，可以在你的主机自定义一些变量，通过修改 <code>.env</code> 文件即可。<code>.env</code> 文件位于<code>C:\users\[hostname]\</code>路径下，即 <code>C:\users\[hostname]\der-cli\.env</code> ，若你的主机没有这个文件，手动创建即可，设置好后保存，<code>der-cli</code> 会自动读取这些变量。</p>
 <p>下面是一些环境变量示例：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Some environment variables example, you<span class="string">&#x27;d better not change them.</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> C:/Users/hostname/.env</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 脚手架调试模式 [info / verbose]</span></span><br><span class="line">DER_CLI_LOG_LEVEL = &#x27;info&#x27;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 脚手架工作区 [本地]</span></span><br><span class="line">DER_CLI_TARGET_PATH = &#x27;\\der-cli\\commands\\init&#x27;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 脚手架缓存本地缓存目录名</span></span><br><span class="line">DER_CLI_HOME = &#x27;.der-cli&#x27; || &#x27;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 脚手架缓存本地缓存地址</span></span><br><span class="line">DER_CLI_HOME_PATH = &#x27;C:\\Users\\hostname\\.der-cli&#x27;</span><br></pre></td></tr></table></figure>
 <p>同 <a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/.env-example">.env-example</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md">https://github.com/der-cli/der-cli/blob/master/Documents.md</a>)</p>
-<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><h4 id="1-执行完初始化后，可以直接提交代码吗？"><a href="#1-执行完初始化后，可以直接提交代码吗？" class="headerlink" title="1.执行完初始化后，可以直接提交代码吗？"></a>1.执行完初始化后，可以直接提交代码吗？</h4><p>答：可以。前提是准备好你的<a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#App-Token">docs: App Token</a>.</p>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p><a href="LICENSE">GPL</a></p>
+<h2 id="Q-A">Q &amp; A</h2>
+<h4 id="1-执行完初始化后，可以直接提交代码吗？">1.执行完初始化后，可以直接提交代码吗？</h4>
+<p>答：可以。前提是准备好你的<a target="_blank" rel="noopener" href="https://github.com/der-cli/der-cli/blob/master/Documents.md#App-Token">docs: App Token</a>.</p>
+<h2 id="License">License</h2>
+<p><a href="LICENSE">GPL</a></p>
 
 
         <hr>
@@ -784,7 +832,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#What-is-%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">What is 𝓓𝓮𝓻?</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB%E2%80%99s-Feature"><span class="toc-nav-number"></span> <span class="toc-nav-text">𝓓𝓮𝓻’s Feature</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB-can-do"><span class="toc-nav-number"></span> <span class="toc-nav-text">𝓓𝓮𝓻 can do</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Quick-Start"><span class="toc-nav-number"></span> <span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">本地安装</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">初始化项目</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%8F%90%E4%BA%A4-amp-%E5%88%9D%E5%A7%8B%E5%8C%96-Github-Gitee"><span class="toc-nav-number">0.3.</span> <span class="toc-nav-text">提交 &amp; 初始化 Github&#x2F;Gitee</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#More"><span class="toc-nav-number"></span> <span class="toc-nav-text">More</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B8%85%E7%A9%BA%E8%84%9A%E6%89%8B%E6%9E%B6%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">清空脚手架本地缓存</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#DEBUG-%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">DEBUG 模式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%B0%83%E8%AF%95%E6%9C%AC%E5%9C%B0%E5%8C%85"><span class="toc-nav-number">0.3.</span> <span class="toc-nav-text">调试本地包</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#TODO"><span class="toc-nav-number"></span> <span class="toc-nav-text">TODO</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Documents-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3"><span class="toc-nav-number"></span> <span class="toc-nav-text">Documents 说明文档</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Goodbye-context-switching"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">Goodbye, context switching.</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Hello-terminal"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">Hello, terminal.</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9C%80%E6%B1%82-amp-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">需求 &amp; 使用场景</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">项目初始化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8F%91%E5%B8%83%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">发布项目</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">架构设计</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-Flow-%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Git Flow 自动化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Prepare%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Git Flow - Prepare阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Init%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Git Flow - Init阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Commit%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Git Flow - Commit阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Finish%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Git Flow - Finish阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">Git Flow 命令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cache-%E7%BC%93%E5%AD%98"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Cache 缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#git"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">.git</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#APP-Token"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">APP Token</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Server"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">Git Server</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Own"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">Git Own</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Login"><span class="toc-nav-number">4.1.4.</span> <span class="toc-nav-text">Git Login</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#dependencies"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">dependencies</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#template"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">template</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Commands-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Commands 命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#init-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">init 初始化项目</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#go-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">go 提交代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#go-%E5%8F%91%E5%B8%83%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">go 发布代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#More-1"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">More</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#clean-%E6%B8%85%E7%A9%BA%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">clean 清空本地缓存</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#debug-%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">5.4.2.</span> <span class="toc-nav-text">debug 模式</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">本地开发</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Other"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Other</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#env"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">env</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Q-amp-A"><span class="toc-nav-number"></span> <span class="toc-nav-text">Q &amp; A</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E6%89%A7%E8%A1%8C%E5%AE%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E5%90%97%EF%BC%9F"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">1.执行完初始化后，可以直接提交代码吗？</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#License"><span class="toc-nav-number"></span> <span class="toc-nav-text">License</span></a>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#What-is-%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">What is 𝓓𝓮𝓻?</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB%E2%80%99s-Feature"><span class="toc-nav-number"></span> <span class="toc-nav-text">𝓓𝓮𝓻’s Feature</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%F0%9D%93%93%F0%9D%93%AE%F0%9D%93%BB-can-do"><span class="toc-nav-number"></span> <span class="toc-nav-text">𝓓𝓮𝓻 can do</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Quick-Start"><span class="toc-nav-number"></span> <span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">本地安装</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">初始化项目</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%8F%90%E4%BA%A4-%E5%88%9D%E5%A7%8B%E5%8C%96-Github-Gitee"><span class="toc-nav-number">0.3.</span> <span class="toc-nav-text">提交 &amp; 初始化 Github&#x2F;Gitee</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#More"><span class="toc-nav-number"></span> <span class="toc-nav-text">More</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%B8%85%E7%A9%BA%E8%84%9A%E6%89%8B%E6%9E%B6%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">清空脚手架本地缓存</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#DEBUG-%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">DEBUG 模式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%B0%83%E8%AF%95%E6%9C%AC%E5%9C%B0%E5%8C%85"><span class="toc-nav-number">0.3.</span> <span class="toc-nav-text">调试本地包</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#TODO"><span class="toc-nav-number"></span> <span class="toc-nav-text">TODO</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Documents-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3"><span class="toc-nav-number"></span> <span class="toc-nav-text">Documents 说明文档</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Goodbye-context-switching"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">Goodbye, context switching.</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Hello-terminal"><span class="toc-nav-number">0.2.</span> <span class="toc-nav-text">Hello, terminal.</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9C%80%E6%B1%82-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">需求 &amp; 使用场景</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">项目初始化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8F%91%E5%B8%83%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">发布项目</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">架构设计</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-Flow-%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Git Flow 自动化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Prepare%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Git Flow - Prepare阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Init%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Git Flow - Init阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Commit%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Git Flow - Commit阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-Finish%E9%98%B6%E6%AE%B5"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Git Flow - Finish阶段</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Git-Flow-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">Git Flow 命令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cache-%E7%BC%93%E5%AD%98"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Cache 缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#git"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">.git</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#APP-Token"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">APP Token</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Server"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">Git Server</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Own"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">Git Own</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Git-Login"><span class="toc-nav-number">4.1.4.</span> <span class="toc-nav-text">Git Login</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#dependencies"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">dependencies</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#template"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">template</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Commands-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Commands 命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#init-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">init 初始化项目</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#go-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">go 提交代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#go-%E5%8F%91%E5%B8%83%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">go 发布代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#More-2"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">More</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#clean-%E6%B8%85%E7%A9%BA%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">clean 清空本地缓存</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#debug-%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">5.4.2.</span> <span class="toc-nav-text">debug 模式</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">本地开发</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Other"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Other</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#env"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">env</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Q-A"><span class="toc-nav-number"></span> <span class="toc-nav-text">Q &amp; A</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E6%89%A7%E8%A1%8C%E5%AE%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E5%90%97%EF%BC%9F"><span class="toc-nav-number">0.1.</span> <span class="toc-nav-text">1.执行完初始化后，可以直接提交代码吗？</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#License"><span class="toc-nav-number"></span> <span class="toc-nav-text">License</span></a>
         
         </div>
       </aside>
@@ -927,7 +975,7 @@
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">448.3k</span>
+          站点总字数：<span class="post-count">443.6k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
