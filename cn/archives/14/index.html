@@ -230,19 +230,6 @@
           
           
           
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/about/">
               
@@ -267,6 +254,21 @@
           
           
           
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
           
           
           
@@ -279,8 +281,6 @@
               
             </a>
           </li>
-          
-          
           
            -->
 
@@ -476,11 +476,9 @@
 tips：当前页含有动画示例，Tag Cloud可能会失效。
 
 
-知识点
-一、动画原理
-基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
+知识点一、动画原理基本原理：不断擦除和重绘三角形，并且每次重绘时轻微改变其角度
 为了生成动画，需要两个关键机制：
-​	机制一：在规定时刻反复调用同......
+​    机制一：在规定时刻反复调用......
     </div>
   </a>
   
@@ -520,13 +518,10 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象、复合变换
 
 
-步骤
-1.将三角形沿着X轴平移一段距离
+步骤1.将三角形沿着X轴平移一段距离
 2.旋转三角形
-知识点
-一、模型变换
-建立下面的等式：
-​	&lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
+知识点一、模型变换建立下面的等式：
+​    &lt;“平移后旋转”后的坐标&gt; = &lt;旋转矩阵&gt; X (&lt;平移矩阵&gt; X &......
     </div>
   </a>
   
@@ -566,10 +561,8 @@ tips：当前页含有动画示例，Tag Cloud可能会失效。
 要点：矩阵变换库（cuon-matrix.js 本书专用）、Matrix4对象
 
 
-知识点
-一、矩阵变换库cuon-matrix.js
-OpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
-cuon-matrix.js......
+知识点一、矩阵变换库cuon-matrix.jsOpenGL中提供了一系列有用的函数来创建变换矩阵，而WebGL没有，本书作者编写了一套函数库（cuon-matrix.js）解决这个问题。
+cuon-matrix.js在其......
     </div>
   </a>
   
@@ -609,14 +602,8 @@ cuon-matrix.js......
 要点：矩阵和矢量的乘法、矩阵变换（旋转矩阵、平移矩阵、缩放矩阵）、gl.uniformMatrix4fv
 
 
-知识点
-一、矩阵和矢量的乘法
-矩阵示例：
-​	$
-\begin{bmatrix}
-​	8 &amp; 3 &amp; 0 \\
-​	4 &amp; 3 &amp; 6 \\
-​	3 &amp; 2 ......
+知识点一、矩阵和矢量的乘法矩阵示例：
+​    $\begin{bmatrix}​    8 &amp; 3 &amp; 0 \\​    4 &amp; 3 &amp; 6 \\​    3 &a......
     </div>
   </a>
   
@@ -651,8 +638,7 @@ cuon-matrix.js......
       
     </h3>
     <div class="post-content-preview">
-      👋 链友申请
-在此页评论区留下您的 [BlogTitle]、[BlogLink] 即可，博主会在三日内给予回复，感谢！
+      👋 链友申请在此页评论区留下您的 [BlogTitle]、[BlogLink] 即可，博主会在三日内给予回复，感谢！
 123示例：- BlogTitle：快乐码原- BlogLink：https://yesmore.cc
 ...
     </div>
@@ -692,13 +678,10 @@ cuon-matrix.js......
 要点：旋转变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
-步骤
-目的：将三角形逆时针旋转90度
+步骤目的：将三角形逆时针旋转90度
 计算90度的正余弦值 → 传给顶点着色器uniform变量
-知识点
-一、正旋转
-​	①描述旋转操作：绕Z轴，逆时针旋转β角度。
-​	②关于“逆时针”的约定：如果β是正值，观察......
+知识点一、正旋转​    ①描述旋转操作：绕Z轴，逆时针旋转β角度。
+​    ②关于“逆时针”的约定：如果β是正值......
     </div>
   </a>
   
@@ -738,19 +721,14 @@ cuon-matrix.js......
 要点：平移变换、gl.uniform4f()、gl.getUniformLocation()、矢量的加法
 
 
-目的
-将一个三角形向上和向右平移0.5个单位
-知识点
-一、逐顶点操作
-​	为顶点坐标的每个分量加上一个常量就可以实现
-二、矢量的加法
-​	方便的矢量相加运算是GLSL ES提供的特性之一
+目的将一个三角形向上和向右平移0.5个单位
+知识点一、逐顶点操作​    为顶点坐标的每个分量加上一个常量就可以实现
+二、矢量的加法​    方便的矢量相加运算是GLSL ES提供的特性之一
+
 
 
 
 矢量
-值
-
 ......
     </div>
   </a>
@@ -792,8 +770,7 @@ cuon-matrix.js......
 复习：【WebGL之巅】07-绘制三角形
 
 
-实例
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859......
+实例12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596......
     </div>
   </a>
   
@@ -930,10 +907,6 @@ cuon-matrix.js......
     
     
     
-    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
-    
-    
-    
     <a href="/tags/#Vue" title="Vue" rel="2"><i class="fa fa-tag" style="color: aqua;"></i> Vue</a>
     
     
@@ -946,11 +919,15 @@ cuon-matrix.js......
     
     
     
-    <a href="/tags/#前端进阶" title="前端进阶" rel="21"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
+    <a href="/tags/#杂记" title="杂记" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 杂记</a>
     
     
     
     <a href="/tags/#Echarts" title="Echarts" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Echarts</a>
+    
+    
+    
+    <a href="/tags/#前端进阶" title="前端进阶" rel="21"><i class="fa fa-tag" style="color: aqua;"></i> 前端进阶</a>
     
     
     
@@ -1026,11 +1003,11 @@ cuon-matrix.js......
     
     
     
-    <a href="/tags/#脚手架" title="脚手架" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 脚手架</a>
-    
-    
-    
     <a href="/tags/#software" title="software" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> software</a>
+    
+    
+    
+    <a href="/tags/#脚手架" title="脚手架" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> 脚手架</a>
     
     
     
@@ -1058,6 +1035,10 @@ cuon-matrix.js......
     
     
     
+    <a href="/tags/#React" title="React" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
+    
+    
+    
     <a href="/tags/#MySQL" title="MySQL" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> MySQL</a>
     
     
@@ -1067,10 +1048,6 @@ cuon-matrix.js......
     
     
     <a href="/tags/#Electron" title="Electron" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> Electron</a>
-    
-    
-    
-    <a href="/tags/#React" title="React" rel="1"><i class="fa fa-tag" style="color: aqua;"></i> React</a>
     
     
   </div>
@@ -1208,28 +1185,28 @@ cuon-matrix.js......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> LeetCode</li>
     </a>
     
-    <a href="/categories/#杂记">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 杂记</li>
-    </a>
-    
     <a href="/categories/#Vue">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Vue</li>
     </a>
     
-    <a href="/categories/#Browser">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
+    <a href="/categories/#杂记">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 杂记</li>
     </a>
     
     <a href="/categories/#Echarts">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Echarts</li>
     </a>
     
-    <a href="/categories/#CSS">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> CSS</li>
+    <a href="/categories/#Browser">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Browser</li>
     </a>
     
     <a href="/categories/#Demo">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    </a>
+    
+    <a href="/categories/#CSS">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> CSS</li>
     </a>
     
     <a href="/categories/#HTML">
@@ -1264,12 +1241,12 @@ cuon-matrix.js......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 建站指南</li>
     </a>
     
-    <a href="/categories/#NodeJs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
-    </a>
-    
     <a href="/categories/#software">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> software</li>
+    </a>
+    
+    <a href="/categories/#NodeJs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
     </a>
     
     <a href="/categories/#链友">
@@ -1296,12 +1273,16 @@ cuon-matrix.js......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> 免费api</li>
     </a>
     
-    <a href="/categories/#Eggjs">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
+    <a href="/categories/#React">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
     </a>
     
     <a href="/categories/#Nginx">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Nginx</li>
+    </a>
+    
+    <a href="/categories/#Eggjs">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Eggjs</li>
     </a>
     
     <a href="/categories/#Electron">
@@ -1310,10 +1291,6 @@ cuon-matrix.js......
     
     <a href="/categories/#Demo">
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
-    </a>
-    
-    <a href="/categories/#React">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> React</li>
     </a>
     
     <a href="/categories/#Hexo">
@@ -1332,8 +1309,8 @@ cuon-matrix.js......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> NodeJs</li>
     </a>
     
-    <a href="/categories/#Demo">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
+    <a href="/categories/#JavaScript">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
     </a>
     
     <a href="/categories/#Linux">
@@ -1344,8 +1321,8 @@ cuon-matrix.js......
       <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
-    <a href="/categories/#JavaScript">
-      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> JavaScript</li>
+    <a href="/categories/#Demo">
+      <li style="list-style: none;"><i class="fa fa-book" style="color: aqua;"></i> Demo</li>
     </a>
     
     <a href="/categories/#Nodejs">
@@ -1484,7 +1461,7 @@ cuon-matrix.js......
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">449.4k</span>
+          站点总字数：<span class="post-count">449.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

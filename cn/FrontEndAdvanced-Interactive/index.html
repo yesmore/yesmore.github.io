@@ -230,19 +230,6 @@
           
           
           
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/about/">
               
@@ -267,6 +254,21 @@
           
           
           
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
           
           
           
@@ -279,8 +281,6 @@
               
             </a>
           </li>
-          
-          
           
            -->
 
@@ -488,8 +488,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET https:<span class="comment">//lagou.com/a</span></span><br></pre></td></tr></table></figure>
 <p>对于浏览器而言，可以通过头部字段 Content-Type 轻松判断出来，然后进行对应的逻辑处理。但对于工程师而言是不可读的，不知道 /a 代表什么。</p>
 <p>解决这个问题的方法就是制定一种规范，让请求具有语义化，这种规范就是我们常说的 <strong>API 设计规范</strong>。下面就来介绍前后端通信中出现过的 3 种 API 规范。</p>
-<h3 id="RPC—远程过程调用">RPC—远程过程调用</h3>
-<p>RPC（Remote Procedure Call，远程过程调用）常用于后端服务进程之间的通信。“远程”指的是不同服务器上的进程，“过程调用”里的“过程”可以理解为“函数”，这种接口设计和函数命名很相似，名称为<strong>动宾结构短语</strong>，类似下面的样子。</p>
+<h3 id="RPC—远程过程调用"><a href="#RPC—远程过程调用" class="headerlink" title="RPC—远程过程调用"></a>RPC—远程过程调用</h3><p>RPC（Remote Procedure Call，远程过程调用）常用于后端服务进程之间的通信。“远程”指的是不同服务器上的进程，“过程调用”里的“过程”可以理解为“函数”，这种接口设计和函数命名很相似，名称为<strong>动宾结构短语</strong>，类似下面的样子。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /getUsers</span><br><span class="line">POST /deleteUser</span><br><span class="line">POST /createUser</span><br></pre></td></tr></table></figure>
 <p>可能有的前端工程师对 RPC 比较陌生，但在 Web 开发早期，编写页面逻辑的工作由后端（或全栈）工程师完成，自然而然的，RPC 风格就被移植到了前后端通信中。</p>
 <p>从接口命名上不难看出，RPC 风格和我们平常编写模块的思路很像，提供了一个函数作为接口，供其他模块调用。这明显是站在后端工程师的视角而设置的：为了像在本地调用一个函数那样调用远程的代码。</p>
@@ -498,13 +497,10 @@
 <li><strong>紧耦合</strong>：当前端工程师需要获取或修改某个数据时，他有可能需要先调用接口 A ，再调用接口 B，这种调用需要对系统非常熟悉，让前端工程师熟悉后端逻辑和代码显然是难以办到的。</li>
 <li><strong>冗余</strong>：把执行动作写在 URL 上实际是冗余的，因为 HTTP 的 Method 头部可以表示不同的动作行为。</li>
 </ul>
-<h3 id="REST—表现层状态转换">REST—表现层状态转换</h3>
-<p>REST（Representational State Transfer），即表现层状态转换 。</p>
-<h4 id="什么是“表现层”？">什么是“表现层”？</h4>
-<p>在理解“表现层”之前，我们先理解另一个概念“资源”。资源指的是一个实体信息，一个文本文件、一段 JSON 数据都可以称为资源。</p>
+<h3 id="REST—表现层状态转换"><a href="#REST—表现层状态转换" class="headerlink" title="REST—表现层状态转换"></a>REST—表现层状态转换</h3><p>REST（Representational State Transfer），即表现层状态转换 。</p>
+<h4 id="什么是“表现层”？"><a href="#什么是“表现层”？" class="headerlink" title="什么是“表现层”？"></a>什么是“表现层”？</h4><p>在理解“表现层”之前，我们先理解另一个概念“资源”。资源指的是一个实体信息，一个文本文件、一段 JSON 数据都可以称为资源。</p>
 <p>而一个资源可以有不同的呈现形式，比如一份数据可以是 XML 格式，也可以是 JSON 格式，这种呈现形式叫作“<strong>表现层（Representation）</strong>”。</p>
-<h4 id="什么又是“状态转移”？">什么又是“状态转移”？</h4>
-<p>当用户通过浏览器访问网站时，通常会涉及状态的变化，比如登录。</p>
+<h4 id="什么又是“状态转移”？"><a href="#什么又是“状态转移”？" class="headerlink" title="什么又是“状态转移”？"></a>什么又是“状态转移”？</h4><p>当用户通过浏览器访问网站时，通常会涉及状态的变化，比如登录。</p>
 <p>HTTP 本身是无状态的，因此，如果客户端想要操作服务器，则必须通过某种手段让服务器发生“状态转移（State Transfer）”。而这种转移是建立在表现层之上的，即“表现层状态转移”。</p>
 <p>REST 的核心要点有两个，那就是<strong>资源</strong>和<strong>方法。</strong></p>
 <p>REST 的 URL 指向某个或某类资源，所以不再是类似 RPC 的动宾结构，而是名词。比如像下面这些都是 REST 的设计风格，通常，当 URL 的路径以 ID 结尾则表示指代某个资源，无 ID 则指向一类资源。路径分隔符表示资源之间的嵌套关系。</p>
@@ -520,8 +516,7 @@
 <li><strong>数据冗余</strong>。前端对网络请求性能是比较敏感的，所以传输的数据量尽可能小，但 REST API 在设计好之后，返回的字段值是固定的。所以很容易出现这样一个场景，对于后端工程师而言，为了减少代码修改，会尽可能地在返回结果中添加更多的字段；对于前端工程师而言，使用数据的场景往往是多变的，即使是调用同一个 API，在不同场景下也只会用到某些特定的字段。所以不可避免地产生数据冗余，从而造成带宽浪费，影响用户体验。</li>
 </ul>
 <p>如果要改进上述不足，该怎样定义 API 规范呢？</p>
-<h3 id="GraphQL—图表查询语言">GraphQL—图表查询语言</h3>
-<p>我们再次将关注点从资源转移到 API 的调用者上，从调用者的角度来思考 API 设计。对于调用者而言，最关心的不是资源和方法，而是响应内容。在前后端的交互中，请求体和响应内容一般都采用 JSON 格式。下面是 GitHub REST API 的响应内容示例，由于响应内容字段太多，只截取了部分字段。</p>
+<h3 id="GraphQL—图表查询语言"><a href="#GraphQL—图表查询语言" class="headerlink" title="GraphQL—图表查询语言"></a>GraphQL—图表查询语言</h3><p>我们再次将关注点从资源转移到 API 的调用者上，从调用者的角度来思考 API 设计。对于调用者而言，最关心的不是资源和方法，而是响应内容。在前后端的交互中，请求体和响应内容一般都采用 JSON 格式。下面是 GitHub REST API 的响应内容示例，由于响应内容字段太多，只截取了部分字段。</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;id&quot;</span>: <span class="number">1296269</span>,</span><br><span class="line">  <span class="attr">&quot;stargazers_count&quot;</span>: <span class="number">80</span>,</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Hello-World&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;full_name&quot;</span>: <span class="string">&quot;octocat/Hello-World&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;owner&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;login&quot;</span>: <span class="string">&quot;octocat&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;id&quot;</span>: <span class="number">1</span>，</span><br><span class="line">    <span class="string">&quot;avatar_url&quot;</span>: <span class="string">&quot;https://github.com/images/error/octocat_happy.gif&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>假设上面的响应内容是前端所需要的内容，现在来思考一个问题，该如何告诉后端所期望得到的数据结构呢？</p>
 <p>如果只考虑对 JSON 数据的描述，其实已经有现成的规范来实现了，即用 JSON-Schema 来描述上面的 JSON 数据，代码如下：</p>
@@ -533,34 +528,25 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">id</span></span><br><span class="line">  <span class="string">stargazers_count</span></span><br><span class="line">  <span class="string">name</span></span><br><span class="line">  <span class="string">full_name</span></span><br><span class="line">  <span class="string">owner</span> &#123;</span><br><span class="line">    <span class="string">login</span></span><br><span class="line">    <span class="string">id</span></span><br><span class="line">    <span class="string">avatar_url</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然而这个结构已经是最基础的 GraphQL 查询语句了，当然 GraphQL 并不止如此，还有更多的高级功能，比如参数变量、片段。下面就来介绍一下 GraphQL。</p>
 <p>GraphQL（Graph Query Language） 是图表查询语言，在 REST 规范中，请求路径表示资源之间的嵌套关系，那么很容易形成树型结构，如下图所示。</p>
-<p><img src="Ciqc1F8WoxOAdBPEAACqLbjGIac092.png" alt="6.png"><br>
-REST 风格的树结构 API</p>
+<p><img src="Ciqc1F8WoxOAdBPEAACqLbjGIac092.png" alt="6.png"><br>REST 风格的树结构 API</p>
 <p>GraphQL 中不同类型之间的关联关系通过图来表示。下面是一张通过 GraphQL 工具生成的示例图，描述了不同类型之间的关系。</p>
-<p><img src="CgqCHl8Wo1WAearCAANIR7MjhAg120.png" alt="Drawing 1.png"><br>
-GraphQL Voyager 示例图</p>
+<p><img src="CgqCHl8Wo1WAearCAANIR7MjhAg120.png" alt="Drawing 1.png"><br>GraphQL Voyager 示例图</p>
 <p>虽然 GraphQL 的设计理念和 REST 有较大差别，而且还上升到了“语言”层面，但核心概念其实就两个：<strong>查询语句和模式</strong>，分别对应 API 的调用者和提供者。</p>
 <p>GraphQL 的查询语句提供了 3 种操作：查询（Query）、变更（Mutation）和订阅（Subscription）。查询是最常用的操作，变更操作次之，订阅操作则使用场景就比较少了。</p>
 <p>下面重点介绍一下查询操作中 3 个常用的高级功能。</p>
-<h4 id="别名（Aliases）">别名（Aliases）</h4>
-<p>别名看上去是一个锦上添花的功能，但在开发中也会起到非常重要的作用。考虑一个场景，前端通过请求 GET /user/:uid 获取一个关于用户信息的 JSON 对象，并使用了返回结果中的 name 字段。如果后端调整了接口数据，将 name 字段改成了 username，那么对于前端来说只能被动地修改代码；而如果使用 GraphQL，只需要修改查询的别名即可。</p>
+<h4 id="别名（Aliases）"><a href="#别名（Aliases）" class="headerlink" title="别名（Aliases）"></a>别名（Aliases）</h4><p>别名看上去是一个锦上添花的功能，但在开发中也会起到非常重要的作用。考虑一个场景，前端通过请求 GET /user/:uid 获取一个关于用户信息的 JSON 对象，并使用了返回结果中的 name 字段。如果后端调整了接口数据，将 name 字段改成了 username，那么对于前端来说只能被动地修改代码；而如果使用 GraphQL，只需要修改查询的别名即可。</p>
 <p>下面是一个使用别名将 GitHub GraphQL API 的 createdAt 改为 createdTime 的代码示例。</p>
 <p><img src="CgqCHl8Wo1-AA9T0AABKgupgzvE288.png" alt="Drawing 2.png"></p>
-<h4 id="片段（Fragments）">片段（Fragments）</h4>
-<p>如果我们在查询中有重复的数据结构，可以通过片段来对它们进行抽象。下面是一个使用 GitHub GraphQL API 来查询当前仓库第一位 star 用户和最后一位 star 用户的例子。将 StargazerEdge 类型的部分字段抽取成了 Fragment，然后在查询中通过扩展符“…”来使用。</p>
+<h4 id="片段（Fragments）"><a href="#片段（Fragments）" class="headerlink" title="片段（Fragments）"></a>片段（Fragments）</h4><p>如果我们在查询中有重复的数据结构，可以通过片段来对它们进行抽象。下面是一个使用 GitHub GraphQL API 来查询当前仓库第一位 star 用户和最后一位 star 用户的例子。将 StargazerEdge 类型的部分字段抽取成了 Fragment，然后在查询中通过扩展符“…”来使用。</p>
 <p><img src="Ciqc1F8Wo2eAWQKRAABuxFd9qHg398.png" alt="Drawing 3.png"></p>
-<h4 id="内省（Introspection）">内省（Introspection）</h4>
-<p>调用 REST API 非常依赖文档，但 GraphQL 则不需要，因为它提供了一个内省系统来描述后端定义的类型。比如我要通过 GitHub GraphQL API 来查询某个仓库的 star 数量，可以先通过查询 __schema 字段来向 GraphQL 询问哪些类型是可用的。因为每个查询的根类型总是有 __schema 字段的。</p>
-<p><img src="Ciqc1F8Wo2-AT2HWAACaIf1oGHY694.png" alt="Drawing 4.png"><br>
-__schema 查询根类型</p>
+<h4 id="内省（Introspection）"><a href="#内省（Introspection）" class="headerlink" title="内省（Introspection）"></a>内省（Introspection）</h4><p>调用 REST API 非常依赖文档，但 GraphQL 则不需要，因为它提供了一个内省系统来描述后端定义的类型。比如我要通过 GitHub GraphQL API 来查询某个仓库的 star 数量，可以先通过查询 <strong>schema 字段来向 GraphQL 询问哪些类型是可用的。因为每个查询的根类型总是有 </strong>schema 字段的。</p>
+<p><img src="Ciqc1F8Wo2-AT2HWAACaIf1oGHY694.png" alt="Drawing 4.png"><br>__schema 查询根类型</p>
 <p>通过搜索和查看描述信息 description 字段可以发现，其提供了一个 Repository 类型。</p>
-<p><img src="Ciqc1F8Wo32ARrwHAAAO3toZwNE658.png" alt="Drawing 5.png"><br>
-在返回的模式中找到 “Repository” 类型定义</p>
+<p><img src="Ciqc1F8Wo32ARrwHAAAO3toZwNE658.png" alt="Drawing 5.png"><br>在返回的模式中找到 “Repository” 类型定义</p>
 <p>然后再通过 __type 来查看 Repository 类型的字段，找到和 star 有关的 stargazers 字段描述，发现这个字段属于 StargazerConnection 类型，以此类推继续查找，后面的嵌套子类型查找过程就不一一截图了。</p>
-<p><img src="CgqCHl8Wo4aAR-jZAACPhMdzzyI323.png" alt="Drawing 6.png"><br>
-通过 __type 查找 Repository 类型字段</p>
+<p><img src="CgqCHl8Wo4aAR-jZAACPhMdzzyI323.png" alt="Drawing 6.png"><br>通过 __type 查找 Repository 类型字段</p>
 <p>最终通过下面的查询语句获得了第一页的查询结果。</p>
-<p><img src="CgqCHl8Wo46Act65AAB9YZfeB7U087.png" alt="Drawing 7.png"><br>
-查询 Repository 的前100 个关注者</p>
+<p><img src="CgqCHl8Wo46Act65AAB9YZfeB7U087.png" alt="Drawing 7.png"><br>查询 Repository 的前100 个关注者</p>
 <p>后端的模式与 Mongoose 及 JSON-Schema 的模式有些类似，都是通过声明数据类型来定义数据结构的。数据类型又可以分为默认的标量类型，如 Int、String 及自定义的对象类型。下面是一个类型声明的例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type User&#123;</span><br><span class="line">  id: ID!</span><br><span class="line">  name: String!</span><br><span class="line">  books: [Book!]!</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这段代码定义了一个 User 类型，包含 3 个字段：ID 类型的 id 字段，String 类型的 name 字段以及 Book 类型列表 的 books 字段。其中 ID 和 String 为标量类型，Book 为对象类型，惊叹号表示字段值不能为 null。</p>
@@ -570,15 +556,14 @@ __schema 查询根类型</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> schemaStr = <span class="string">`</span></span><br><span class="line"><span class="string">type Hero &#123;</span></span><br><span class="line"><span class="string">  id: String</span></span><br><span class="line"><span class="string">  name: String</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"># 根类型</span></span><br><span class="line"><span class="string">type Query &#123;</span></span><br><span class="line"><span class="string">  hero(id: String, name: String): [Hero]</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">`</span></span><br><span class="line"><span class="keyword">const</span> resolver = &#123;</span><br><span class="line">  <span class="function"><span class="title">hero</span>(<span class="params">&#123;id=<span class="string">&#x27;hello&#x27;</span>, name=<span class="string">&#x27;world&#x27;</span>&#125;</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(id &amp;&amp; name) &#123;</span><br><span class="line">      <span class="keyword">return</span> [...data.hero, &#123;id, name&#125;]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> data.hero</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>总体而言，GraphQL 在弥补 REST 不足的同时也有所增强，表现在：</p>
 <ul>
-<li><strong>高聚合</strong>。GraphQL 提倡将系统所有请求路径都聚合在一起形成一个统一的地址，并使用 POST 方法来提交查询语句，比如 GitHub 使用的请求地址就是：<a target="_blank" rel="noopener" href="https://api.github.com/graphql%E3%80%82">https://api.github.com/graphql。</a></li>
+<li><strong>高聚合</strong>。GraphQL 提倡将系统所有请求路径都聚合在一起形成一个统一的地址，并使用 POST 方法来提交查询语句，比如 GitHub 使用的请求地址就是：<a target="_blank" rel="noopener" href="https://api.github.com/graphql。">https://api.github.com/graphql。</a></li>
 <li><strong>无冗余</strong>。后端会根据查询语句来返回值，不会出现冗余字段。</li>
 <li><strong>类型校验</strong>。由于有模式的存在，可以轻松实现对响应结果及查询语句进行校验。</li>
 <li><strong>代码即文档</strong>。内省功能可以直接查询模式，无须查询文档也可以通过命名及描述信息来进行查询。</li>
 </ul>
 <p>对于前端而言，GraphQL 提供了一种基于特定语言的查询模式，让前端可以随心所欲地获得想要的数据类型，是相当友好的；而对于后端而言，把数据的查询结果编写成 REST API 还是 GraphQL 的解析器，工作量相差不大，最大的问题是带来的收益可能无法抵消学习和改造成本。这在很大程度上增加了 GraphQL 的推广难度。</p>
 <p>所以 GraphQL 的大多数实际使用场景分为两类，一类是前端工程师主导的新项目，后端采用 Node.js 来实现，用 GraphQL 来替代 REST；另一类就是将 Node.js 服务器作为中转服务器，为前端提供一个 GraphQL 查询，但实际上仍然是调用后端的 REST API 来获取数据。</p>
-<h3 id="总结">总结</h3>
-<p>从 RPC 到 REST 再到 GraphQL，可以看到 API 规范上的一些明显变化。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>从 RPC 到 REST 再到 GraphQL，可以看到 API 规范上的一些明显变化。</p>
 <ul>
 <li>关注点发生了明显的转移。从 API 的提供者，到 API 数据，再到 API 的使用者。</li>
 <li>语义化的特性更加明显。从最初通过路径命名的方式，到利用 HTTP 头部字段 Method，再到直接定义新的查询语言。</li>
@@ -876,7 +861,7 @@ __schema 查询根类型</p>
 
           <span style="margin-left: 5px;margin-right: 10px; border-right: 1px solid grey;"></span>
           <i class="fa fa-quote-right" style="color: rgb(231, 43, 43);"></i> 
-          站点总字数：<span class="post-count">449.4k</span>
+          站点总字数：<span class="post-count">449.1k</span>
           <!-- <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
