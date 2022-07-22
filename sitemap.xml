@@ -1194,13 +1194,6 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/tags/TypeScript/</loc>
-    <lastmod>2022-07-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yesmore.cc/tags/Python/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
@@ -1209,6 +1202,13 @@
   
   <url>
     <loc>https://yesmore.cc/tags/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2022-07-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yesmore.cc/tags/TypeScript/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1455,14 +1455,14 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/TypeScript/</loc>
+    <loc>https://yesmore.cc/categories/Python/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/Python/</loc>
+    <loc>https://yesmore.cc/categories/TypeScript/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1532,6 +1532,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/categories/JavaScript/NodeJs/</loc>
+    <lastmod>2022-07-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/categories/%E5%85%8D%E8%B4%B9api/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
@@ -1539,7 +1546,7 @@
   </url>
   
   <url>
-    <loc>https://yesmore.cc/categories/JavaScript/NodeJs/</loc>
+    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/Nginx/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1554,13 +1561,6 @@
   
   <url>
     <loc>https://yesmore.cc/categories/Vue/Eggjs/</loc>
-    <lastmod>2022-07-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/Nginx/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1609,6 +1609,13 @@
   </url>
   
   <url>
+    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/Nginx/Linux/</loc>
+    <lastmod>2022-07-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yesmore.cc/categories/React/JavaScript/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
@@ -1617,13 +1624,6 @@
   
   <url>
     <loc>https://yesmore.cc/categories/Vue/Eggjs/Demo/</loc>
-    <lastmod>2022-07-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yesmore.cc/categories/%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/Nginx/Linux/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
